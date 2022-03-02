@@ -24,9 +24,12 @@ $(SRC_AUTO_BIND): $(NXDC_FILES)
 # project source
 VSRCS = $(shell find $(abspath ./vsrc) -name "*.v")
 CSRCS = $(shell find $(abspath ./csrc) -name "*.c" -or -name "*.cc" -or -name "*.cpp")
+XINGK_WAVE ?= 0
+ifeq ($(XINGK_WAVE),0)
 CSRCS += $(SRC_AUTO_BIND)
-CSRCS_wave =  $(shell find $(abspath ./csrc) -name "*.c" -or -name "*.cc" -or -name "*.cpp")
+else
 
+endif
 # rules for NVBoard
 include $(NVBOARD_HOME)/scripts/nvboard.mk 
 
@@ -42,18 +45,11 @@ $(BIN): $(VSRCS) $(CSRCS) $(NVBOARD_ARCHIVE)
 		-top $(TOPNAME) $^ \
 		$(addprefix -CFLAGS , $(CFLAGS)) $(addprefix -LDFLAGS , $(LDFLAGS))\
 		--Mdir $(OBJ_DIR) -exe -o $(abspath $(BIN))
-run: sim $(BIN)
+run: sim 
 
-waves: sim $(VSRCS) $(CSRCS_wave) $(NVBOARD_ARCHIVE)
-	@rm -rf $(OBJ_DIR)
-#	@echo " $(VERILATOR) $(VERILATOR_CFLAGS)  -top $(TOPNAME) $^ $(addprefix -CFLAGS , $(CFLAGS)) $(addprefix -LDFLAGS , $(LDFLAGS)) --Mdir $(OBJ_DIR) -exe -o $(abspath $(BIN)) "
-	$(VERILATOR) $(VERILATOR_CFLAGS) \
-		-top $(TOPNAME) $^ \
-		$(addprefix -CFLAGS , $(CFLAGS)) $(addprefix -LDFLAGS , $(LDFLAGS))\
-		--Mdir $(OBJ_DIR) -exe -o $(abspath $(BIN))
 	
 
-sim:
+sim:$(BIN)
 	$(call git_commit, "sim RTL") # DO NOT REMOVE THIS LINE!!!
 	@echo "commit ------------------ yes or no you must to see"
 	@$^

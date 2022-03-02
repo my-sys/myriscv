@@ -12,7 +12,7 @@
 # if IS_WAVE_OR_NVBOARD 
 
 static vluint64_t riscv_sim_time = 0;
-VerilatedContext* contexp = NULL;
+VerilatedContext* contextp = NULL;
 VerilatedVcdC* tfp = NULL;
 
 static Vsoc_riscv_zhoutao_top* top;
@@ -24,7 +24,7 @@ void step_and_dump_wave(){
 }
 
 void sim_init(){
-    contextp = new VerilatedContex;
+    contextp = new VerilatedContext;
     tfp = new VerilatedVcdC;
     top = new Vsoc_riscv_zhoutao_top;
     contextp->traceEverOn(true);
