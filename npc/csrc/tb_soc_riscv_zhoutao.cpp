@@ -6,7 +6,7 @@
 #include "Vsoc_riscv_zhoutao_top.h"
 #include <nvboard.h>
 #define MAX_RISCV_SIM_TIME 2000
-#define IS_WAVE_OR_NVBOARD 1
+#define IS_WAVE_OR_NVBOARD 0
 static vluint64_t riscv_sim_time = 0;
 static TOP_NAME dut;
 
