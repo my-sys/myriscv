@@ -23,7 +23,7 @@ static void reset(int n){
     dut.rst = 0;
 }
 int main(int argc, char** argv,char** cnv){
-#ifdef IS_WAVE_OR_NVBOARD 
+#if IS_WAVE_OR_NVBOARD 
     VerilatedContext* contextp = new VerilatedContext;
     Verilated::commandArgs(argc, argv);
     Vsoc_riscv_zhoutao_top* top = new Vsoc_riscv_zhoutao_top(contextp);
