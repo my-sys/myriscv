@@ -15,6 +15,8 @@ default: $(BIN)
 $(shell mkdir -p $(BUILD_DIR)) 
 
 # constraint file
+
+#if 
 SRC_AUTO_BIND = $(abspath $(BUILD_DIR)/auto_bind.cpp) 
 $(SRC_AUTO_BIND): $(NXDC_FILES)
 	python3 $(NVBOARD_HOME)/scripts/auto_pin_bind.py $^ $@
@@ -23,6 +25,7 @@ $(SRC_AUTO_BIND): $(NXDC_FILES)
 VSRCS = $(shell find $(abspath ./vsrc) -name "*.v")
 CSRCS = $(shell find $(abspath ./csrc) -name "*.c" -or -name "*.cc" -or -name "*.cpp")
 CSRCS += $(SRC_AUTO_BIND)
+CSRCS_wave =  $(shell find $(abspath ./csrc) -name "*.c" -or -name "*.cc" -or -name "*.cpp")
 
 # rules for NVBoard
 include $(NVBOARD_HOME)/scripts/nvboard.mk 
@@ -33,15 +36,24 @@ CFLAGS += $(INCFLAGS) -DTOP_NAME="\"V$(TOPNAME)\""
 LDFLAGS += -lSDL2 -lSDL2_image
 
 $(BIN): $(VSRCS) $(CSRCS) $(NVBOARD_ARCHIVE)
-#	@rm -rf $(OBJ_DIR)
-	@echo " $(VERILATOR) $(VERILATOR_CFLAGS)  -top $(TOPNAME) $^ $(addprefix -CFLAGS , $(CFLAGS)) $(addprefix -LDFLAGS , $(LDFLAGS)) --Mdir $(OBJ_DIR) -exe -o $(abspath $(BIN)) "
+	@rm -rf $(OBJ_DIR)
+#	@echo " $(VERILATOR) $(VERILATOR_CFLAGS)  -top $(TOPNAME) $^ $(addprefix -CFLAGS , $(CFLAGS)) $(addprefix -LDFLAGS , $(LDFLAGS)) --Mdir $(OBJ_DIR) -exe -o $(abspath $(BIN)) "
 	$(VERILATOR) $(VERILATOR_CFLAGS) \
 		-top $(TOPNAME) $^ \
 		$(addprefix -CFLAGS , $(CFLAGS)) $(addprefix -LDFLAGS , $(LDFLAGS))\
 		--Mdir $(OBJ_DIR) -exe -o $(abspath $(BIN))
-run: sim 
+run: sim $(BIN)
 
-sim:$(BIN)
+waves: sim $(VSRCS) $(CSRCS_wave) $(NVBOARD_ARCHIVE)
+	@rm -rf $(OBJ_DIR)
+#	@echo " $(VERILATOR) $(VERILATOR_CFLAGS)  -top $(TOPNAME) $^ $(addprefix -CFLAGS , $(CFLAGS)) $(addprefix -LDFLAGS , $(LDFLAGS)) --Mdir $(OBJ_DIR) -exe -o $(abspath $(BIN)) "
+	$(VERILATOR) $(VERILATOR_CFLAGS) \
+		-top $(TOPNAME) $^ \
+		$(addprefix -CFLAGS , $(CFLAGS)) $(addprefix -LDFLAGS , $(LDFLAGS))\
+		--Mdir $(OBJ_DIR) -exe -o $(abspath $(BIN))
+	
+
+sim:
 	$(call git_commit, "sim RTL") # DO NOT REMOVE THIS LINE!!!
 	@echo "commit ------------------ yes or no you must to see"
 	@$^
