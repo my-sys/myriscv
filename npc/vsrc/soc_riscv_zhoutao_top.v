@@ -1,14 +1,12 @@
 module soc_riscv_zhoutao_top
 (
-    input    a,
-    input    b,
-    input    s,
+    input [3:0]   a,
+    input [1:0]   s,
     output   y
 );
 
-m_mux21 m_mux21_1(
+mux41b m_mux41b_1(
     .a(a),
-    .b(b),
     .s(s),
     .y(y)
 );

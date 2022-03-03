@@ -55,6 +55,7 @@ sim:$(BIN)
 	@$^
 clean:
 	rm -rf $(BUILD_DIR)
+	rm waveform.vcd
 
 .PHONY: clean run 
 

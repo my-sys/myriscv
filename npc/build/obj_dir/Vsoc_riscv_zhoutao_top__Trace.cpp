@@ -23,20 +23,36 @@ void Vsoc_riscv_zhoutao_top___024root__traceChgSub0(Vsoc_riscv_zhoutao_top___024
     if (false && oldp) {}  // Prevent unused
     // Body
     {
-        tracep->chgBit(oldp+0,(vlSelf->a));
-        tracep->chgBit(oldp+1,(vlSelf->b));
-        tracep->chgBit(oldp+2,(vlSelf->s));
-        tracep->chgBit(oldp+3,(vlSelf->y));
+        if (VL_UNLIKELY(vlSelf->__Vm_traceActivity[1U])) {
+            tracep->chgSData(oldp+0,(vlSelf->soc_riscv_zhoutao_top__DOT__m_mux41b_1__DOT____Vcellinp__i0____pinNumber4),12);
+            tracep->chgCData(oldp+1,(vlSelf->soc_riscv_zhoutao_top__DOT__m_mux41b_1__DOT__i0__DOT__i0__DOT__pair_list[0]),3);
+            tracep->chgCData(oldp+2,(vlSelf->soc_riscv_zhoutao_top__DOT__m_mux41b_1__DOT__i0__DOT__i0__DOT__pair_list[1]),3);
+            tracep->chgCData(oldp+3,(vlSelf->soc_riscv_zhoutao_top__DOT__m_mux41b_1__DOT__i0__DOT__i0__DOT__pair_list[2]),3);
+            tracep->chgCData(oldp+4,(vlSelf->soc_riscv_zhoutao_top__DOT__m_mux41b_1__DOT__i0__DOT__i0__DOT__pair_list[3]),3);
+            tracep->chgCData(oldp+5,(vlSelf->soc_riscv_zhoutao_top__DOT__m_mux41b_1__DOT__i0__DOT__i0__DOT__key_list[0]),2);
+            tracep->chgCData(oldp+6,(vlSelf->soc_riscv_zhoutao_top__DOT__m_mux41b_1__DOT__i0__DOT__i0__DOT__key_list[1]),2);
+            tracep->chgCData(oldp+7,(vlSelf->soc_riscv_zhoutao_top__DOT__m_mux41b_1__DOT__i0__DOT__i0__DOT__key_list[2]),2);
+            tracep->chgCData(oldp+8,(vlSelf->soc_riscv_zhoutao_top__DOT__m_mux41b_1__DOT__i0__DOT__i0__DOT__key_list[3]),2);
+            tracep->chgBit(oldp+9,(vlSelf->soc_riscv_zhoutao_top__DOT__m_mux41b_1__DOT__i0__DOT__i0__DOT__data_list[0]));
+            tracep->chgBit(oldp+10,(vlSelf->soc_riscv_zhoutao_top__DOT__m_mux41b_1__DOT__i0__DOT__i0__DOT__data_list[1]));
+            tracep->chgBit(oldp+11,(vlSelf->soc_riscv_zhoutao_top__DOT__m_mux41b_1__DOT__i0__DOT__i0__DOT__data_list[2]));
+            tracep->chgBit(oldp+12,(vlSelf->soc_riscv_zhoutao_top__DOT__m_mux41b_1__DOT__i0__DOT__i0__DOT__data_list[3]));
+            tracep->chgBit(oldp+13,(vlSelf->soc_riscv_zhoutao_top__DOT__m_mux41b_1__DOT__i0__DOT__i0__DOT__lut_out));
+            tracep->chgBit(oldp+14,(vlSelf->soc_riscv_zhoutao_top__DOT__m_mux41b_1__DOT__i0__DOT__i0__DOT__hit));
+        }
+        tracep->chgCData(oldp+15,(vlSelf->a),4);
+        tracep->chgCData(oldp+16,(vlSelf->s),2);
+        tracep->chgBit(oldp+17,(vlSelf->y));
     }
 }
 
 void Vsoc_riscv_zhoutao_top___024root__traceCleanup(void* voidSelf, VerilatedVcd* /*unused*/) {
-    VlUnpacked<CData/*0:0*/, 1> __Vm_traceActivity;
     Vsoc_riscv_zhoutao_top___024root* const __restrict vlSelf = static_cast<Vsoc_riscv_zhoutao_top___024root*>(voidSelf);
     Vsoc_riscv_zhoutao_top__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     // Body
     {
         vlSymsp->__Vm_activity = false;
-        __Vm_traceActivity[0U] = 0U;
+        vlSymsp->TOP.__Vm_traceActivity[0U] = 0U;
+        vlSymsp->TOP.__Vm_traceActivity[1U] = 0U;
     }
 }
