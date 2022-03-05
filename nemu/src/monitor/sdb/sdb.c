@@ -3,6 +3,7 @@
 #include <readline/readline.h>
 #include <readline/history.h>
 #include "sdb.h"
+#include "isa.h"
 
 static int is_batch_mode = false;
 
@@ -55,7 +56,7 @@ static int cmd_si(char *args){
 }
 
 static int cmd_info(char *args){
-
+    isa_reg_display(); 
     return 0;
 }
 
