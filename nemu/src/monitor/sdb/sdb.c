@@ -44,7 +44,7 @@ static int cmd_si(char *args){
         cpu_exec(1);
         return 0;
     }
-    printf("ok!\n");
+   
     int num = atoi(args);
     if(num<=0){
         printf("you maybe input a illegal number!!!!\n");
