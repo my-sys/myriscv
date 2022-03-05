@@ -28,13 +28,54 @@ static char* rl_gets() {
 }
 
 static int cmd_c(char *args) {
+  // -1 is the max number?? uint---- zhoutao
   cpu_exec(-1);
   return 0;
 }
 
 
 static int cmd_q(char *args) {
-  return -1;
+    
+    return -1;
+}
+
+static int cmd_si(char *args){
+    if(args == NULL){
+        cpu_exec(1);
+        return 0;
+    }
+    int num = atoi(args);
+    if(num<=0){
+        printf("you maybe input a illegal number!!!!");
+        return -1;
+    }
+    cpu_exec(num);
+    return 0;
+}
+
+static int cmd_info(char *args){
+
+    return 0;
+}
+
+static int cmd_x(char *args){
+
+    return 0;
+}
+
+static int cmd_p(char *args){
+
+    return 0;
+}
+
+static int cmd_w(char *args){
+
+    return 0;
+}
+
+static int cmd_d(char *args){
+
+    return 0;
 }
 
 static int cmd_help(char *args);
@@ -47,6 +88,13 @@ static struct {
   { "help", "Display informations about all supported commands", cmd_help },
   { "c", "Continue the execution of the program", cmd_c },
   { "q", "Exit NEMU", cmd_q },
+  { "si", "si [N],Step through n instructions and stop. defalt N = 1", cmd_si},
+  { "info", "info SUBCMD,printf the registers' status info r, printf the watchpoint  info w", cmd_info},
+  { "x", "x N EXPR,scan memory. Evaluate the expression EXPR, using the result as the starting memory address, output \
+      N consecutive 4-bytes in hexadecimal", cmd_x },
+  { "p", "p EXPR, Evaluate the expression EXPR", cmd_p },
+  { "w", "w EXPR, set watchpoint , It means stopping the program when the expression EXPR has changed!",cmd_w },
+  { "d", "d N, delete the watchpoint whoes number is N !", cmd_d },
 
   /* TODO: Add more commands */
 
@@ -115,7 +163,7 @@ void sdb_mainloop() {
       }
     }
 
-    if (i == NR_CMD) { printf("Unknown command_xx '%s'\n", cmd); }
+    if (i == NR_CMD) { printf("Unknown command '%s'\n", cmd); }
   }
 }
 
