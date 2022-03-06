@@ -56,6 +56,10 @@ static int cmd_si(char *args){
 }
 
 static int cmd_info(char *args){
+    if(args == NULL ){
+        printf("You must follow the format strictly!!!! not have more space and .etc !!!!\n");
+        return 0;
+    }
     if(strncmp("r",args,1)==0){
          isa_reg_display(); 
          return 0;
