@@ -96,7 +96,7 @@ static int cmd_x(char *args){
     for(int i =0; i < num; i++){
 
         word_t value =  paddr_read(paddr + i*4, 4);
-        printf("vaddr: %lx, value: %lx \n",paddr + i*4, value);
+        printf("paddr: %lx, value: %lx \n",paddr + i*4, value);
     }
     return 0;
 }
