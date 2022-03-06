@@ -3,7 +3,7 @@
 #include <readline/readline.h>
 #include <readline/history.h>
 #include "sdb.h"
-#include "isa.h"
+#include <memory/vaddr.h>
 
 static int is_batch_mode = false;
 
@@ -56,12 +56,40 @@ static int cmd_si(char *args){
 }
 
 static int cmd_info(char *args){
-    isa_reg_display(); 
+    if(strncmp("r",args,1)==0){
+         isa_reg_display(); 
+         return 0;
+    }
+    if(strncmp("w",args,1)==0){
+        
+        return 0;
+    }
+    printf("You must follow the format strictly!!!! not have more space and .etc !!!!\n");
     return 0;
 }
 
 static int cmd_x(char *args){
+    char *str_num = strtok(args, " ");
+    int num = atoi(str_num);
+    if(num <= 0){
+        printf("You must follow the format strictly !!! error input!!! \n");
+        return 0;
+    }
+    char *str_addr = strtok(NULL," ");
+    word_t vaddr = strtoul(str_addr,NULL,16); 
+    if(vaddr == 0){
+        if(strncmp(str_addr,"0x00000000",10)!=0){
+            printf("You must follow the format strictly !!! error input!!! \n");
+            return 0;
+         }
+    }
+    // It maybe read the virtual memory not the physical memory ????
+    printf("The virtual memory scan ~~~~~\n");
+    for(int i =0; i < num; i++){
 
+        word_t value =  vaddr_read(vaddr + i*4, 4);
+        printf("vaddr: %lx, value: %lx \n",vaddr + i*4, value);
+    }
     return 0;
 }
 
