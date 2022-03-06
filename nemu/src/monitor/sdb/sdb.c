@@ -73,6 +73,10 @@ static int cmd_info(char *args){
 }
 
 static int cmd_x(char *args){
+    if(args == NULL ){
+        printf("You must follow the format strictly!!!!\n");
+        return 0;
+    }
     char *str_num = strtok(args, " ");
     int num = atoi(str_num);
     if(num <= 0){
