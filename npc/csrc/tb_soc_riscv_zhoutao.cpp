@@ -40,30 +40,48 @@ void sim_exit(){
 }
 int main(int argc, char** argv,char** cnv){
     sim_init();
-
+    top->clk=0b0;step_and_dump_wave();
+    top->clk=0b1;  top->reset=0b1; top->in=0b1; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     top->reset=0b1; top->in=0b1; step_and_dump_wave();
-
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     top->reset=0b1; top->in=0b1; step_and_dump_wave();
-    top->reset=0b1; top->in=0b1; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     top->reset=0b0; top->in=0b1; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     top->reset=0b0; top->in=0b1; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     top->reset=0b0; top->in=0b1; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     top->reset=0b0; top->in=0b1; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     top->reset=0b0; top->in=0b1; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     top->reset=0b0; top->in=0b1; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
 
     top->reset=0b0; top->in=0b0; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     top->reset=0b0; top->in=0b1; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     top->reset=0b0; top->in=0b0; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     top->reset=0b0; top->in=0b0; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     top->reset=0b0; top->in=0b1; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
 
 
     top->reset=0b0; top->in=0b0; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     top->reset=0b0; top->in=0b0; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     top->reset=0b0; top->in=0b0; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     top->reset=0b0; top->in=0b0; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     top->reset=0b0; top->in=0b1; step_and_dump_wave();
+    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
     sim_exit();
 
    /* VerilatedContext* contextp = new VerilatedContext;
