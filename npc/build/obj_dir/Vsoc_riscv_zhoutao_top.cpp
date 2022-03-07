@@ -10,9 +10,10 @@
 
 Vsoc_riscv_zhoutao_top::Vsoc_riscv_zhoutao_top(VerilatedContext* _vcontextp__, const char* _vcname__)
     : vlSymsp{new Vsoc_riscv_zhoutao_top__Syms(_vcontextp__, _vcname__, this)}
-    , a{vlSymsp->TOP.a}
-    , s{vlSymsp->TOP.s}
-    , y{vlSymsp->TOP.y}
+    , clk{vlSymsp->TOP.clk}
+    , in{vlSymsp->TOP.in}
+    , reset{vlSymsp->TOP.reset}
+    , out{vlSymsp->TOP.out}
     , rootp{&(vlSymsp->TOP)}
 {
 }
