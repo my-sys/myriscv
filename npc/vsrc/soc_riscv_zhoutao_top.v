@@ -30,7 +30,7 @@ wire [3:0] C;
 always @(posedge clk)begin
     if(reset)begin
         clrn <= 1'b0;
-        select <= 8'd15;
+        select <= 8'b1111_1111;
         nextdata_n <= 1'b1;
         count <= 7'd0;
         cnt <= 1'b0;
@@ -83,7 +83,7 @@ ps2_keyboard ps2_keybpard_1(
 /* verilator lint_off UNUSED */
 digital_led digital_led_1(
     .clk(clk),
-    .data_in({digital_data[31:4],4'd5}),
+    .data_in({4'd0,4'd1,4'd2,4'd3,4'd15,4'd9,4'd10,4'd5}),
     .select(select), //select digital led to show
     .seg0_o(seg0_o),
     .seg1_o(seg1_o),
