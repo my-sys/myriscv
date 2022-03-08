@@ -1973,11 +1973,13 @@ void Vsoc_riscv_zhoutao_top___024root___settle__TOP__1(Vsoc_riscv_zhoutao_top___
         = (0xfU & (vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_7__DOT__i0__DOT__pair_list
                    [0xfU] >> 8U));
     vlSelf->soc_riscv_zhoutao_top__DOT____Vcellinp__digital_led_1__data_in 
-        = (((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__A) 
-            << 0x10U) | (((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__B) 
-                          << 0xcU) | (((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__C) 
-                                       << 8U) | (0xffU 
-                                                 & vlSelf->soc_riscv_zhoutao_top__DOT__digital_data))));
+        = ((0xf0000U & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__count) 
+                        << 0x10U)) | (((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__B) 
+                                       << 0xcU) | (
+                                                   ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__C) 
+                                                    << 8U) 
+                                                   | (0xffU 
+                                                      & vlSelf->soc_riscv_zhoutao_top__DOT__digital_data))));
     vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_0__DOT__i0__DOT__hit 
         = ((0xfU & vlSelf->soc_riscv_zhoutao_top__DOT____Vcellinp__digital_led_1__data_in) 
            == vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_0__DOT__i0__DOT__key_list
