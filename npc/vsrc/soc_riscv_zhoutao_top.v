@@ -51,14 +51,15 @@ always @(posedge clk)begin
                     clrn <= 1'b0;
                     select <= 0;
                     nextdata_n <= 1'b1;
+                    cnt <= 1'b0;
                 end 
             end 
         end else if(overflow) begin
             clrn <= 1'b0;
-            cnt <= 1'b0;
+            
         end else begin
             clrn <= 1'b1;
-            cnt <= 1'b0;
+            
         end 
     end 
 end 
