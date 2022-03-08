@@ -151,7 +151,7 @@ void Vsoc_riscv_zhoutao_top___024root__traceInitSub0(Vsoc_riscv_zhoutao_top___02
         tracep->declBus(c+483,"soc_riscv_zhoutao_top digital_led_1 decode_data_1 DATA_LEN", false,-1, 31,0);
         tracep->declBus(c+416,"soc_riscv_zhoutao_top digital_led_1 decode_data_1 out", false,-1, 7,0);
         tracep->declBus(c+431,"soc_riscv_zhoutao_top digital_led_1 decode_data_1 key", false,-1, 3,0);
-        tracep->declArray(c+484,"soc_riscv_zhoutao_top digital_led_1 decode_data_1 lut", false,-1, 191,0);
+        tracep->declArray(c+494,"soc_riscv_zhoutao_top digital_led_1 decode_data_1 lut", false,-1, 191,0);
         tracep->declBus(c+481,"soc_riscv_zhoutao_top digital_led_1 decode_data_1 i0 NR_KEY", false,-1, 31,0);
         tracep->declBus(c+482,"soc_riscv_zhoutao_top digital_led_1 decode_data_1 i0 KEY_LEN", false,-1, 31,0);
         tracep->declBus(c+483,"soc_riscv_zhoutao_top digital_led_1 decode_data_1 i0 DATA_LEN", false,-1, 31,0);
@@ -159,7 +159,7 @@ void Vsoc_riscv_zhoutao_top___024root__traceInitSub0(Vsoc_riscv_zhoutao_top___02
         tracep->declBus(c+416,"soc_riscv_zhoutao_top digital_led_1 decode_data_1 i0 out", false,-1, 7,0);
         tracep->declBus(c+431,"soc_riscv_zhoutao_top digital_led_1 decode_data_1 i0 key", false,-1, 3,0);
         tracep->declBus(c+491,"soc_riscv_zhoutao_top digital_led_1 decode_data_1 i0 default_out", false,-1, 7,0);
-        tracep->declArray(c+484,"soc_riscv_zhoutao_top digital_led_1 decode_data_1 i0 lut", false,-1, 191,0);
+        tracep->declArray(c+494,"soc_riscv_zhoutao_top digital_led_1 decode_data_1 i0 lut", false,-1, 191,0);
         tracep->declBus(c+492,"soc_riscv_zhoutao_top digital_led_1 decode_data_1 i0 PAIR_LEN", false,-1, 31,0);
         {int i; for (i=0; i<16; i++) {
                 tracep->declBus(c+52+i*1,"soc_riscv_zhoutao_top digital_led_1 decode_data_1 i0 pair_list", true,(i+0), 11,0);}}
@@ -175,7 +175,7 @@ void Vsoc_riscv_zhoutao_top___024root__traceInitSub0(Vsoc_riscv_zhoutao_top___02
         tracep->declBus(c+483,"soc_riscv_zhoutao_top digital_led_1 decode_data_2 DATA_LEN", false,-1, 31,0);
         tracep->declBus(c+417,"soc_riscv_zhoutao_top digital_led_1 decode_data_2 out", false,-1, 7,0);
         tracep->declBus(c+434,"soc_riscv_zhoutao_top digital_led_1 decode_data_2 key", false,-1, 3,0);
-        tracep->declArray(c+484,"soc_riscv_zhoutao_top digital_led_1 decode_data_2 lut", false,-1, 191,0);
+        tracep->declArray(c+494,"soc_riscv_zhoutao_top digital_led_1 decode_data_2 lut", false,-1, 191,0);
         tracep->declBus(c+481,"soc_riscv_zhoutao_top digital_led_1 decode_data_2 i0 NR_KEY", false,-1, 31,0);
         tracep->declBus(c+482,"soc_riscv_zhoutao_top digital_led_1 decode_data_2 i0 KEY_LEN", false,-1, 31,0);
         tracep->declBus(c+483,"soc_riscv_zhoutao_top digital_led_1 decode_data_2 i0 DATA_LEN", false,-1, 31,0);
@@ -183,7 +183,7 @@ void Vsoc_riscv_zhoutao_top___024root__traceInitSub0(Vsoc_riscv_zhoutao_top___02
         tracep->declBus(c+417,"soc_riscv_zhoutao_top digital_led_1 decode_data_2 i0 out", false,-1, 7,0);
         tracep->declBus(c+434,"soc_riscv_zhoutao_top digital_led_1 decode_data_2 i0 key", false,-1, 3,0);
         tracep->declBus(c+491,"soc_riscv_zhoutao_top digital_led_1 decode_data_2 i0 default_out", false,-1, 7,0);
-        tracep->declArray(c+484,"soc_riscv_zhoutao_top digital_led_1 decode_data_2 i0 lut", false,-1, 191,0);
+        tracep->declArray(c+494,"soc_riscv_zhoutao_top digital_led_1 decode_data_2 i0 lut", false,-1, 191,0);
         tracep->declBus(c+492,"soc_riscv_zhoutao_top digital_led_1 decode_data_2 i0 PAIR_LEN", false,-1, 31,0);
         {int i; for (i=0; i<16; i++) {
                 tracep->declBus(c+100+i*1,"soc_riscv_zhoutao_top digital_led_1 decode_data_2 i0 pair_list", true,(i+0), 11,0);}}
@@ -199,7 +199,7 @@ void Vsoc_riscv_zhoutao_top___024root__traceInitSub0(Vsoc_riscv_zhoutao_top___02
         tracep->declBus(c+483,"soc_riscv_zhoutao_top digital_led_1 decode_data_3 DATA_LEN", false,-1, 31,0);
         tracep->declBus(c+418,"soc_riscv_zhoutao_top digital_led_1 decode_data_3 out", false,-1, 7,0);
         tracep->declBus(c+437,"soc_riscv_zhoutao_top digital_led_1 decode_data_3 key", false,-1, 3,0);
-        tracep->declArray(c+484,"soc_riscv_zhoutao_top digital_led_1 decode_data_3 lut", false,-1, 191,0);
+        tracep->declArray(c+494,"soc_riscv_zhoutao_top digital_led_1 decode_data_3 lut", false,-1, 191,0);
         tracep->declBus(c+481,"soc_riscv_zhoutao_top digital_led_1 decode_data_3 i0 NR_KEY", false,-1, 31,0);
         tracep->declBus(c+482,"soc_riscv_zhoutao_top digital_led_1 decode_data_3 i0 KEY_LEN", false,-1, 31,0);
         tracep->declBus(c+483,"soc_riscv_zhoutao_top digital_led_1 decode_data_3 i0 DATA_LEN", false,-1, 31,0);
@@ -207,7 +207,7 @@ void Vsoc_riscv_zhoutao_top___024root__traceInitSub0(Vsoc_riscv_zhoutao_top___02
         tracep->declBus(c+418,"soc_riscv_zhoutao_top digital_led_1 decode_data_3 i0 out", false,-1, 7,0);
         tracep->declBus(c+437,"soc_riscv_zhoutao_top digital_led_1 decode_data_3 i0 key", false,-1, 3,0);
         tracep->declBus(c+491,"soc_riscv_zhoutao_top digital_led_1 decode_data_3 i0 default_out", false,-1, 7,0);
-        tracep->declArray(c+484,"soc_riscv_zhoutao_top digital_led_1 decode_data_3 i0 lut", false,-1, 191,0);
+        tracep->declArray(c+494,"soc_riscv_zhoutao_top digital_led_1 decode_data_3 i0 lut", false,-1, 191,0);
         tracep->declBus(c+492,"soc_riscv_zhoutao_top digital_led_1 decode_data_3 i0 PAIR_LEN", false,-1, 31,0);
         {int i; for (i=0; i<16; i++) {
                 tracep->declBus(c+148+i*1,"soc_riscv_zhoutao_top digital_led_1 decode_data_3 i0 pair_list", true,(i+0), 11,0);}}
@@ -223,7 +223,7 @@ void Vsoc_riscv_zhoutao_top___024root__traceInitSub0(Vsoc_riscv_zhoutao_top___02
         tracep->declBus(c+483,"soc_riscv_zhoutao_top digital_led_1 decode_data_4 DATA_LEN", false,-1, 31,0);
         tracep->declBus(c+419,"soc_riscv_zhoutao_top digital_led_1 decode_data_4 out", false,-1, 7,0);
         tracep->declBus(c+440,"soc_riscv_zhoutao_top digital_led_1 decode_data_4 key", false,-1, 3,0);
-        tracep->declArray(c+484,"soc_riscv_zhoutao_top digital_led_1 decode_data_4 lut", false,-1, 191,0);
+        tracep->declArray(c+494,"soc_riscv_zhoutao_top digital_led_1 decode_data_4 lut", false,-1, 191,0);
         tracep->declBus(c+481,"soc_riscv_zhoutao_top digital_led_1 decode_data_4 i0 NR_KEY", false,-1, 31,0);
         tracep->declBus(c+482,"soc_riscv_zhoutao_top digital_led_1 decode_data_4 i0 KEY_LEN", false,-1, 31,0);
         tracep->declBus(c+483,"soc_riscv_zhoutao_top digital_led_1 decode_data_4 i0 DATA_LEN", false,-1, 31,0);
@@ -231,7 +231,7 @@ void Vsoc_riscv_zhoutao_top___024root__traceInitSub0(Vsoc_riscv_zhoutao_top___02
         tracep->declBus(c+419,"soc_riscv_zhoutao_top digital_led_1 decode_data_4 i0 out", false,-1, 7,0);
         tracep->declBus(c+440,"soc_riscv_zhoutao_top digital_led_1 decode_data_4 i0 key", false,-1, 3,0);
         tracep->declBus(c+491,"soc_riscv_zhoutao_top digital_led_1 decode_data_4 i0 default_out", false,-1, 7,0);
-        tracep->declArray(c+484,"soc_riscv_zhoutao_top digital_led_1 decode_data_4 i0 lut", false,-1, 191,0);
+        tracep->declArray(c+494,"soc_riscv_zhoutao_top digital_led_1 decode_data_4 i0 lut", false,-1, 191,0);
         tracep->declBus(c+492,"soc_riscv_zhoutao_top digital_led_1 decode_data_4 i0 PAIR_LEN", false,-1, 31,0);
         {int i; for (i=0; i<16; i++) {
                 tracep->declBus(c+196+i*1,"soc_riscv_zhoutao_top digital_led_1 decode_data_4 i0 pair_list", true,(i+0), 11,0);}}
@@ -247,7 +247,7 @@ void Vsoc_riscv_zhoutao_top___024root__traceInitSub0(Vsoc_riscv_zhoutao_top___02
         tracep->declBus(c+483,"soc_riscv_zhoutao_top digital_led_1 decode_data_5 DATA_LEN", false,-1, 31,0);
         tracep->declBus(c+420,"soc_riscv_zhoutao_top digital_led_1 decode_data_5 out", false,-1, 7,0);
         tracep->declBus(c+443,"soc_riscv_zhoutao_top digital_led_1 decode_data_5 key", false,-1, 3,0);
-        tracep->declArray(c+484,"soc_riscv_zhoutao_top digital_led_1 decode_data_5 lut", false,-1, 191,0);
+        tracep->declArray(c+494,"soc_riscv_zhoutao_top digital_led_1 decode_data_5 lut", false,-1, 191,0);
         tracep->declBus(c+481,"soc_riscv_zhoutao_top digital_led_1 decode_data_5 i0 NR_KEY", false,-1, 31,0);
         tracep->declBus(c+482,"soc_riscv_zhoutao_top digital_led_1 decode_data_5 i0 KEY_LEN", false,-1, 31,0);
         tracep->declBus(c+483,"soc_riscv_zhoutao_top digital_led_1 decode_data_5 i0 DATA_LEN", false,-1, 31,0);
@@ -255,7 +255,7 @@ void Vsoc_riscv_zhoutao_top___024root__traceInitSub0(Vsoc_riscv_zhoutao_top___02
         tracep->declBus(c+420,"soc_riscv_zhoutao_top digital_led_1 decode_data_5 i0 out", false,-1, 7,0);
         tracep->declBus(c+443,"soc_riscv_zhoutao_top digital_led_1 decode_data_5 i0 key", false,-1, 3,0);
         tracep->declBus(c+491,"soc_riscv_zhoutao_top digital_led_1 decode_data_5 i0 default_out", false,-1, 7,0);
-        tracep->declArray(c+484,"soc_riscv_zhoutao_top digital_led_1 decode_data_5 i0 lut", false,-1, 191,0);
+        tracep->declArray(c+494,"soc_riscv_zhoutao_top digital_led_1 decode_data_5 i0 lut", false,-1, 191,0);
         tracep->declBus(c+492,"soc_riscv_zhoutao_top digital_led_1 decode_data_5 i0 PAIR_LEN", false,-1, 31,0);
         {int i; for (i=0; i<16; i++) {
                 tracep->declBus(c+244+i*1,"soc_riscv_zhoutao_top digital_led_1 decode_data_5 i0 pair_list", true,(i+0), 11,0);}}
@@ -271,7 +271,7 @@ void Vsoc_riscv_zhoutao_top___024root__traceInitSub0(Vsoc_riscv_zhoutao_top___02
         tracep->declBus(c+483,"soc_riscv_zhoutao_top digital_led_1 decode_data_6 DATA_LEN", false,-1, 31,0);
         tracep->declBus(c+421,"soc_riscv_zhoutao_top digital_led_1 decode_data_6 out", false,-1, 7,0);
         tracep->declBus(c+446,"soc_riscv_zhoutao_top digital_led_1 decode_data_6 key", false,-1, 3,0);
-        tracep->declArray(c+484,"soc_riscv_zhoutao_top digital_led_1 decode_data_6 lut", false,-1, 191,0);
+        tracep->declArray(c+494,"soc_riscv_zhoutao_top digital_led_1 decode_data_6 lut", false,-1, 191,0);
         tracep->declBus(c+481,"soc_riscv_zhoutao_top digital_led_1 decode_data_6 i0 NR_KEY", false,-1, 31,0);
         tracep->declBus(c+482,"soc_riscv_zhoutao_top digital_led_1 decode_data_6 i0 KEY_LEN", false,-1, 31,0);
         tracep->declBus(c+483,"soc_riscv_zhoutao_top digital_led_1 decode_data_6 i0 DATA_LEN", false,-1, 31,0);
@@ -279,7 +279,7 @@ void Vsoc_riscv_zhoutao_top___024root__traceInitSub0(Vsoc_riscv_zhoutao_top___02
         tracep->declBus(c+421,"soc_riscv_zhoutao_top digital_led_1 decode_data_6 i0 out", false,-1, 7,0);
         tracep->declBus(c+446,"soc_riscv_zhoutao_top digital_led_1 decode_data_6 i0 key", false,-1, 3,0);
         tracep->declBus(c+491,"soc_riscv_zhoutao_top digital_led_1 decode_data_6 i0 default_out", false,-1, 7,0);
-        tracep->declArray(c+484,"soc_riscv_zhoutao_top digital_led_1 decode_data_6 i0 lut", false,-1, 191,0);
+        tracep->declArray(c+494,"soc_riscv_zhoutao_top digital_led_1 decode_data_6 i0 lut", false,-1, 191,0);
         tracep->declBus(c+492,"soc_riscv_zhoutao_top digital_led_1 decode_data_6 i0 PAIR_LEN", false,-1, 31,0);
         {int i; for (i=0; i<16; i++) {
                 tracep->declBus(c+292+i*1,"soc_riscv_zhoutao_top digital_led_1 decode_data_6 i0 pair_list", true,(i+0), 11,0);}}
@@ -295,7 +295,7 @@ void Vsoc_riscv_zhoutao_top___024root__traceInitSub0(Vsoc_riscv_zhoutao_top___02
         tracep->declBus(c+483,"soc_riscv_zhoutao_top digital_led_1 decode_data_7 DATA_LEN", false,-1, 31,0);
         tracep->declBus(c+422,"soc_riscv_zhoutao_top digital_led_1 decode_data_7 out", false,-1, 7,0);
         tracep->declBus(c+449,"soc_riscv_zhoutao_top digital_led_1 decode_data_7 key", false,-1, 3,0);
-        tracep->declArray(c+484,"soc_riscv_zhoutao_top digital_led_1 decode_data_7 lut", false,-1, 191,0);
+        tracep->declArray(c+494,"soc_riscv_zhoutao_top digital_led_1 decode_data_7 lut", false,-1, 191,0);
         tracep->declBus(c+481,"soc_riscv_zhoutao_top digital_led_1 decode_data_7 i0 NR_KEY", false,-1, 31,0);
         tracep->declBus(c+482,"soc_riscv_zhoutao_top digital_led_1 decode_data_7 i0 KEY_LEN", false,-1, 31,0);
         tracep->declBus(c+483,"soc_riscv_zhoutao_top digital_led_1 decode_data_7 i0 DATA_LEN", false,-1, 31,0);
@@ -303,7 +303,7 @@ void Vsoc_riscv_zhoutao_top___024root__traceInitSub0(Vsoc_riscv_zhoutao_top___02
         tracep->declBus(c+422,"soc_riscv_zhoutao_top digital_led_1 decode_data_7 i0 out", false,-1, 7,0);
         tracep->declBus(c+449,"soc_riscv_zhoutao_top digital_led_1 decode_data_7 i0 key", false,-1, 3,0);
         tracep->declBus(c+491,"soc_riscv_zhoutao_top digital_led_1 decode_data_7 i0 default_out", false,-1, 7,0);
-        tracep->declArray(c+484,"soc_riscv_zhoutao_top digital_led_1 decode_data_7 i0 lut", false,-1, 191,0);
+        tracep->declArray(c+494,"soc_riscv_zhoutao_top digital_led_1 decode_data_7 i0 lut", false,-1, 191,0);
         tracep->declBus(c+492,"soc_riscv_zhoutao_top digital_led_1 decode_data_7 i0 PAIR_LEN", false,-1, 31,0);
         {int i; for (i=0; i<16; i++) {
                 tracep->declBus(c+340+i*1,"soc_riscv_zhoutao_top digital_led_1 decode_data_7 i0 pair_list", true,(i+0), 11,0);}}
@@ -347,6 +347,7 @@ void Vsoc_riscv_zhoutao_top___024root__traceFullSub0(Vsoc_riscv_zhoutao_top___02
     if (false && vlSelf) {}  // Prevent unused
     Vsoc_riscv_zhoutao_top__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VlWide<6>/*191:0*/ __Vtemp518;
+    VlWide<6>/*191:0*/ __Vtemp519;
     vluint32_t* const oldp = tracep->oldp(vlSymsp->__Vm_baseCode);
     if (false && oldp) {}  // Prevent unused
     // Body
@@ -843,16 +844,23 @@ void Vsoc_riscv_zhoutao_top___024root__traceFullSub0(Vsoc_riscv_zhoutao_top___02
         tracep->fullIData(oldp+481,(0x10U),32);
         tracep->fullIData(oldp+482,(4U),32);
         tracep->fullIData(oldp+483,(8U),32);
-        __Vtemp518[0U] = 0x5ee79f71U;
-        __Vtemp518[1U] = 0x7b7cc39dU;
-        __Vtemp518[2U] = 0x83f96fafU;
-        __Vtemp518[3U] = 0x6d67d707U;
-        __Vtemp518[4U] = 0xb34f4665U;
-        __Vtemp518[5U] = 0x3f10625U;
+        __Vtemp518[0U] = 0x7ae9ef8eU;
+        __Vtemp518[1U] = 0xfb3ec9cdU;
+        __Vtemp518[2U] = 0x8fc96faeU;
+        __Vtemp518[3U] = 0xb66be7e0U;
+        __Vtemp518[4U] = 0xa3f24665U;
+        __Vtemp518[5U] = 0xfc1602dU;
         tracep->fullWData(oldp+484,(__Vtemp518),192);
         tracep->fullIData(oldp+490,(0U),32);
         tracep->fullCData(oldp+491,(0U),8);
         tracep->fullIData(oldp+492,(0xcU),32);
         tracep->fullIData(oldp+493,(0x10U),32);
+        __Vtemp519[0U] = 0x5ee79f71U;
+        __Vtemp519[1U] = 0x7b7cc39dU;
+        __Vtemp519[2U] = 0x83f96fafU;
+        __Vtemp519[3U] = 0x6d67d707U;
+        __Vtemp519[4U] = 0xb34f4665U;
+        __Vtemp519[5U] = 0x3f10625U;
+        tracep->fullWData(oldp+494,(__Vtemp519),192);
     }
 }
