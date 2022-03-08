@@ -134,5 +134,7 @@ int main(int argc, char** argv,char** cnv){
         single_cycle();
         
     }
+    printf("error\n");
+    return 0;
 }
 #endif 
