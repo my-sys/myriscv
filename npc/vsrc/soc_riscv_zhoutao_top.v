@@ -42,6 +42,7 @@ always @(posedge clk)begin
                 count <= count + 1'b1;
                 cnt <= 1'b1;
                 nextdata_n <= 1'b0;
+                select <= 8'b00001111;
             end else begin
                 digital_data[19:16] <= A;
                 digital_data[11:8]<= C;
