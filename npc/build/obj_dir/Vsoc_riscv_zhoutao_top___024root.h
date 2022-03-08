@@ -116,6 +116,7 @@ VL_MODULE(Vsoc_riscv_zhoutao_top___024root) {
     // LOCAL VARIABLES
     CData/*0:0*/ soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT____Vlvbound1;
     CData/*0:0*/ __Vclklast__TOP__clk;
+    IData/*31:0*/ soc_riscv_zhoutao_top__DOT____Vcellinp__digital_led_1__data_in;
     VlUnpacked<CData/*0:0*/, 2> __Vm_traceActivity;
 
     // INTERNAL VARIABLES

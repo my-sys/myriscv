@@ -438,66 +438,67 @@ void Vsoc_riscv_zhoutao_top___024root__traceChgSub0(Vsoc_riscv_zhoutao_top___024
             tracep->chgCData(oldp+409,(vlSelf->soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__ps2_clk_sync),3);
             tracep->chgBit(oldp+410,((IData)((4U == 
                                               (6U & (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__ps2_clk_sync))))));
-            tracep->chgCData(oldp+411,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg0_line),8);
-            tracep->chgCData(oldp+412,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg1_line),8);
-            tracep->chgCData(oldp+413,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg2_line),8);
-            tracep->chgCData(oldp+414,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg3_line),8);
-            tracep->chgCData(oldp+415,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg4_line),8);
-            tracep->chgCData(oldp+416,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg5_line),8);
-            tracep->chgCData(oldp+417,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg6_line),8);
-            tracep->chgCData(oldp+418,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg7_line),8);
-            tracep->chgCData(oldp+419,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg0),8);
-            tracep->chgCData(oldp+420,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg1),8);
-            tracep->chgCData(oldp+421,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg2),8);
-            tracep->chgCData(oldp+422,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg3),8);
-            tracep->chgCData(oldp+423,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg4),8);
-            tracep->chgCData(oldp+424,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg5),8);
-            tracep->chgCData(oldp+425,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg6),8);
-            tracep->chgCData(oldp+426,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg7),8);
-            tracep->chgCData(oldp+427,((0xfU & vlSelf->soc_riscv_zhoutao_top__DOT__digital_data)),4);
-            tracep->chgCData(oldp+428,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_0__DOT__i0__DOT__lut_out),8);
-            tracep->chgBit(oldp+429,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_0__DOT__i0__DOT__hit));
-            tracep->chgCData(oldp+430,((0xfU & (vlSelf->soc_riscv_zhoutao_top__DOT__digital_data 
+            tracep->chgIData(oldp+411,(vlSelf->soc_riscv_zhoutao_top__DOT____Vcellinp__digital_led_1__data_in),32);
+            tracep->chgCData(oldp+412,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg0_line),8);
+            tracep->chgCData(oldp+413,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg1_line),8);
+            tracep->chgCData(oldp+414,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg2_line),8);
+            tracep->chgCData(oldp+415,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg3_line),8);
+            tracep->chgCData(oldp+416,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg4_line),8);
+            tracep->chgCData(oldp+417,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg5_line),8);
+            tracep->chgCData(oldp+418,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg6_line),8);
+            tracep->chgCData(oldp+419,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg7_line),8);
+            tracep->chgCData(oldp+420,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg0),8);
+            tracep->chgCData(oldp+421,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg1),8);
+            tracep->chgCData(oldp+422,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg2),8);
+            tracep->chgCData(oldp+423,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg3),8);
+            tracep->chgCData(oldp+424,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg4),8);
+            tracep->chgCData(oldp+425,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg5),8);
+            tracep->chgCData(oldp+426,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg6),8);
+            tracep->chgCData(oldp+427,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg7),8);
+            tracep->chgCData(oldp+428,((0xfU & vlSelf->soc_riscv_zhoutao_top__DOT____Vcellinp__digital_led_1__data_in)),4);
+            tracep->chgCData(oldp+429,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_0__DOT__i0__DOT__lut_out),8);
+            tracep->chgBit(oldp+430,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_0__DOT__i0__DOT__hit));
+            tracep->chgCData(oldp+431,((0xfU & (vlSelf->soc_riscv_zhoutao_top__DOT____Vcellinp__digital_led_1__data_in 
                                                 >> 4U))),4);
-            tracep->chgCData(oldp+431,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_1__DOT__i0__DOT__lut_out),8);
-            tracep->chgBit(oldp+432,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_1__DOT__i0__DOT__hit));
-            tracep->chgCData(oldp+433,((0xfU & (vlSelf->soc_riscv_zhoutao_top__DOT__digital_data 
+            tracep->chgCData(oldp+432,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_1__DOT__i0__DOT__lut_out),8);
+            tracep->chgBit(oldp+433,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_1__DOT__i0__DOT__hit));
+            tracep->chgCData(oldp+434,((0xfU & (vlSelf->soc_riscv_zhoutao_top__DOT____Vcellinp__digital_led_1__data_in 
                                                 >> 8U))),4);
-            tracep->chgCData(oldp+434,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_2__DOT__i0__DOT__lut_out),8);
-            tracep->chgBit(oldp+435,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_2__DOT__i0__DOT__hit));
-            tracep->chgCData(oldp+436,((0xfU & (vlSelf->soc_riscv_zhoutao_top__DOT__digital_data 
+            tracep->chgCData(oldp+435,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_2__DOT__i0__DOT__lut_out),8);
+            tracep->chgBit(oldp+436,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_2__DOT__i0__DOT__hit));
+            tracep->chgCData(oldp+437,((0xfU & (vlSelf->soc_riscv_zhoutao_top__DOT____Vcellinp__digital_led_1__data_in 
                                                 >> 0xcU))),4);
-            tracep->chgCData(oldp+437,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_3__DOT__i0__DOT__lut_out),8);
-            tracep->chgBit(oldp+438,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_3__DOT__i0__DOT__hit));
-            tracep->chgCData(oldp+439,((0xfU & (vlSelf->soc_riscv_zhoutao_top__DOT__digital_data 
+            tracep->chgCData(oldp+438,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_3__DOT__i0__DOT__lut_out),8);
+            tracep->chgBit(oldp+439,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_3__DOT__i0__DOT__hit));
+            tracep->chgCData(oldp+440,((0xfU & (vlSelf->soc_riscv_zhoutao_top__DOT____Vcellinp__digital_led_1__data_in 
                                                 >> 0x10U))),4);
-            tracep->chgCData(oldp+440,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_4__DOT__i0__DOT__lut_out),8);
-            tracep->chgBit(oldp+441,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_4__DOT__i0__DOT__hit));
-            tracep->chgCData(oldp+442,((0xfU & (vlSelf->soc_riscv_zhoutao_top__DOT__digital_data 
+            tracep->chgCData(oldp+441,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_4__DOT__i0__DOT__lut_out),8);
+            tracep->chgBit(oldp+442,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_4__DOT__i0__DOT__hit));
+            tracep->chgCData(oldp+443,((0xfU & (vlSelf->soc_riscv_zhoutao_top__DOT____Vcellinp__digital_led_1__data_in 
                                                 >> 0x14U))),4);
-            tracep->chgCData(oldp+443,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_5__DOT__i0__DOT__lut_out),8);
-            tracep->chgBit(oldp+444,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_5__DOT__i0__DOT__hit));
-            tracep->chgCData(oldp+445,((0xfU & (vlSelf->soc_riscv_zhoutao_top__DOT__digital_data 
+            tracep->chgCData(oldp+444,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_5__DOT__i0__DOT__lut_out),8);
+            tracep->chgBit(oldp+445,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_5__DOT__i0__DOT__hit));
+            tracep->chgCData(oldp+446,((0xfU & (vlSelf->soc_riscv_zhoutao_top__DOT____Vcellinp__digital_led_1__data_in 
                                                 >> 0x18U))),4);
-            tracep->chgCData(oldp+446,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_6__DOT__i0__DOT__lut_out),8);
-            tracep->chgBit(oldp+447,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_6__DOT__i0__DOT__hit));
-            tracep->chgCData(oldp+448,((vlSelf->soc_riscv_zhoutao_top__DOT__digital_data 
+            tracep->chgCData(oldp+447,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_6__DOT__i0__DOT__lut_out),8);
+            tracep->chgBit(oldp+448,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_6__DOT__i0__DOT__hit));
+            tracep->chgCData(oldp+449,((vlSelf->soc_riscv_zhoutao_top__DOT____Vcellinp__digital_led_1__data_in 
                                         >> 0x1cU)),4);
-            tracep->chgCData(oldp+449,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_7__DOT__i0__DOT__lut_out),8);
-            tracep->chgBit(oldp+450,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_7__DOT__i0__DOT__hit));
+            tracep->chgCData(oldp+450,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_7__DOT__i0__DOT__lut_out),8);
+            tracep->chgBit(oldp+451,(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_7__DOT__i0__DOT__hit));
         }
-        tracep->chgBit(oldp+451,(vlSelf->clk));
-        tracep->chgBit(oldp+452,(vlSelf->reset));
-        tracep->chgBit(oldp+453,(vlSelf->ps2_clk));
-        tracep->chgBit(oldp+454,(vlSelf->ps2_data));
-        tracep->chgCData(oldp+455,(vlSelf->seg0_o),8);
-        tracep->chgCData(oldp+456,(vlSelf->seg1_o),8);
-        tracep->chgCData(oldp+457,(vlSelf->seg2_o),8);
-        tracep->chgCData(oldp+458,(vlSelf->seg3_o),8);
-        tracep->chgCData(oldp+459,(vlSelf->seg4_o),8);
-        tracep->chgCData(oldp+460,(vlSelf->seg5_o),8);
-        tracep->chgCData(oldp+461,(vlSelf->seg6_o),8);
-        tracep->chgCData(oldp+462,(vlSelf->seg7_o),8);
+        tracep->chgBit(oldp+452,(vlSelf->clk));
+        tracep->chgBit(oldp+453,(vlSelf->reset));
+        tracep->chgBit(oldp+454,(vlSelf->ps2_clk));
+        tracep->chgBit(oldp+455,(vlSelf->ps2_data));
+        tracep->chgCData(oldp+456,(vlSelf->seg0_o),8);
+        tracep->chgCData(oldp+457,(vlSelf->seg1_o),8);
+        tracep->chgCData(oldp+458,(vlSelf->seg2_o),8);
+        tracep->chgCData(oldp+459,(vlSelf->seg3_o),8);
+        tracep->chgCData(oldp+460,(vlSelf->seg4_o),8);
+        tracep->chgCData(oldp+461,(vlSelf->seg5_o),8);
+        tracep->chgCData(oldp+462,(vlSelf->seg6_o),8);
+        tracep->chgCData(oldp+463,(vlSelf->seg7_o),8);
     }
 }
 

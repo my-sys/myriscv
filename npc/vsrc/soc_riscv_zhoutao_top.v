@@ -84,7 +84,7 @@ ps2_keyboard ps2_keybpard_1(
 digital_led digital_led_1(
     .clk(clk),
    // .data_in({4'd0,4'd1,4'd2,4'd3,4'd15,4'd9,4'd10,4'd5}),
-    .data_in(digital_data),
+    .data_in({12'd0,A,B,C,digital_data[7:0]}),
     .select(select), //select digital led to show
     .seg0_o(seg0_o),
     .seg1_o(seg1_o),
