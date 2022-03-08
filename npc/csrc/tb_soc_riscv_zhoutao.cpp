@@ -6,7 +6,7 @@
 #include "Vsoc_riscv_zhoutao_top.h"
 #include <nvboard.h>
 #define MAX_RISCV_SIM_TIME 2000
-#define IS_WAVE_OR_NVBOARD 1
+#define IS_WAVE_OR_NVBOARD 0
 
 
 # if IS_WAVE_OR_NVBOARD 
@@ -117,9 +117,9 @@ static void single_cycle() {
 }
 
 static void reset(int n){
-    dut.rst = 1;
+    dut.reset = 1;
     while(n--)single_cycle();
-    dut.rst = 0;
+    dut.reset = 0;
 }
 
 

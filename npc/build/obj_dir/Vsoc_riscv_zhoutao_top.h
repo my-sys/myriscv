@@ -28,9 +28,17 @@ class Vsoc_riscv_zhoutao_top VL_NOT_FINAL {
     // The application code writes and reads these signals to
     // propagate new values into/out from the Verilated model.
     VL_IN8(&clk,0,0);
-    VL_IN8(&in,0,0);
     VL_IN8(&reset,0,0);
-    VL_OUT8(&out,0,0);
+    VL_IN8(&ps2_clk,0,0);
+    VL_IN8(&ps2_data,0,0);
+    VL_OUT8(&seg0_o,7,0);
+    VL_OUT8(&seg1_o,7,0);
+    VL_OUT8(&seg2_o,7,0);
+    VL_OUT8(&seg3_o,7,0);
+    VL_OUT8(&seg4_o,7,0);
+    VL_OUT8(&seg5_o,7,0);
+    VL_OUT8(&seg6_o,7,0);
+    VL_OUT8(&seg7_o,7,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.

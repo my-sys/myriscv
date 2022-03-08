@@ -40,7 +40,7 @@ module MuxKey #(NR_KEY = 2, KEY_LEN = 1, DATA_LEN = 1)(
     input [NR_KEY*(KEY_LEN + DATA_LEN)-1:0] lut 
 )/* verilator lint_off DECLFILENAME */;
 
-MuxKeyInternal #(.NR_KEY(NR_KEY), .KEY_LEN(KEY_LEN), .DATA_LEN(DATA_LEN), .HAS_DEFAULT(0)) i0 (out, key, 1'b0, lut);
+MuxKeyInternal #(.NR_KEY(NR_KEY), .KEY_LEN(KEY_LEN), .DATA_LEN(DATA_LEN), .HAS_DEFAULT(0)) i0 (out, key, {DATA_LEN{1'b0}}, lut);
 endmodule 
 
 module MuxKeyWithDefault #(NR_KEY = 2, KEY_LEN = 1, DATA_LEN = 1)(

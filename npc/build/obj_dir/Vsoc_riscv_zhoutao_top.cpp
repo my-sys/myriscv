@@ -11,9 +11,17 @@
 Vsoc_riscv_zhoutao_top::Vsoc_riscv_zhoutao_top(VerilatedContext* _vcontextp__, const char* _vcname__)
     : vlSymsp{new Vsoc_riscv_zhoutao_top__Syms(_vcontextp__, _vcname__, this)}
     , clk{vlSymsp->TOP.clk}
-    , in{vlSymsp->TOP.in}
     , reset{vlSymsp->TOP.reset}
-    , out{vlSymsp->TOP.out}
+    , ps2_clk{vlSymsp->TOP.ps2_clk}
+    , ps2_data{vlSymsp->TOP.ps2_data}
+    , seg0_o{vlSymsp->TOP.seg0_o}
+    , seg1_o{vlSymsp->TOP.seg1_o}
+    , seg2_o{vlSymsp->TOP.seg2_o}
+    , seg3_o{vlSymsp->TOP.seg3_o}
+    , seg4_o{vlSymsp->TOP.seg4_o}
+    , seg5_o{vlSymsp->TOP.seg5_o}
+    , seg6_o{vlSymsp->TOP.seg6_o}
+    , seg7_o{vlSymsp->TOP.seg7_o}
     , rootp{&(vlSymsp->TOP)}
 {
 }
