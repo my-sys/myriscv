@@ -3,7 +3,7 @@ NXDC_FILES = constr/top.nxdc
 INC_PATH ?=
 
 VERILATOR = verilator
-VERILATOR_CFLAGS += -MMD --build -cc -Wall --trace --gdb \
+VERILATOR_CFLAGS += -MMD --build -cc -Wall --trace  \
 								-O3 --x-assign fast --x-initial fast --noassert
 
 BUILD_DIR = ./build
@@ -35,7 +35,7 @@ include $(NVBOARD_HOME)/scripts/nvboard.mk
 
 # rules for verilator
 INCFLAGS = $(addprefix -I, $(INC_PATH))
-CFLAGS += $(INCFLAGS) -DTOP_NAME="\"V$(TOPNAME)\"" 
+CFLAGS += $(INCFLAGS) -DTOP_NAME="\"V$(TOPNAME)\"" -g 
 LDFLAGS += -lSDL2 -lSDL2_image
 
 $(BIN): $(VSRCS) $(CSRCS) $(NVBOARD_ARCHIVE)
