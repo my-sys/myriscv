@@ -153,7 +153,7 @@ VL_INLINE_OPT void Vsoc_riscv_zhoutao_top___024root___sequent__TOP__2(Vsoc_riscv
                    | (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__data));
             __Vdly__soc_riscv_zhoutao_top__DOT__cnt = 1U;
             vlSelf->soc_riscv_zhoutao_top__DOT__nextdata_n = 0U;
-            vlSelf->soc_riscv_zhoutao_top__DOT__select = 0xfU;
+            vlSelf->soc_riscv_zhoutao_top__DOT__select = 0x1fU;
         }
     } else if (vlSelf->soc_riscv_zhoutao_top__DOT__overflow) {
         vlSelf->soc_riscv_zhoutao_top__DOT__clrn = 0U;
