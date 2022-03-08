@@ -14,7 +14,7 @@ module soc_riscv_zhoutao_top
     output [7:0]seg6_o,
     output [7:0]seg7_o 
 );
-
+/* verilator lint_off UNUSED */
 reg clrn;
 reg [7:0] select;
 reg nextdata_n; 
@@ -80,9 +80,10 @@ ps2_keyboard ps2_keybpard_1(
     .overflow(overflow)
 
 );
+/* verilator lint_off UNUSED */
 digital_led digital_led_1(
     .clk(clk),
-    .data_in(digital_data),
+    .data_in({digital_data[31:4],4'd5}),
     .select(select), //select digital led to show
     .seg0_o(seg0_o),
     .seg1_o(seg1_o),
