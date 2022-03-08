@@ -30,7 +30,7 @@ wire [3:0] C;
 always @(posedge clk)begin
     if(reset)begin
         clrn <= 1'b0;
-        select <= 8'd0;
+        select <= 8'd15;
         nextdata_n <= 1'b1;
         count <= 7'd0;
         cnt <= 1'b0;

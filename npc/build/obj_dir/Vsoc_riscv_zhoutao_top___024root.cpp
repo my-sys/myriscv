@@ -126,7 +126,7 @@ VL_INLINE_OPT void Vsoc_riscv_zhoutao_top___024root___sequent__TOP__2(Vsoc_riscv
     }
     if (vlSelf->reset) {
         vlSelf->soc_riscv_zhoutao_top__DOT__clrn = 0U;
-        vlSelf->soc_riscv_zhoutao_top__DOT__select = 0U;
+        vlSelf->soc_riscv_zhoutao_top__DOT__select = 0xfU;
         vlSelf->soc_riscv_zhoutao_top__DOT__nextdata_n = 1U;
         __Vdly__soc_riscv_zhoutao_top__DOT__count = 0U;
         __Vdly__soc_riscv_zhoutao_top__DOT__cnt = 0U;
