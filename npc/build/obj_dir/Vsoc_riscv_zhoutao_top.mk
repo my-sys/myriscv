@@ -37,7 +37,6 @@ VM_MODPREFIX = Vsoc_riscv_zhoutao_top
 VM_USER_CFLAGS = \
 	-I/home/xingk/ysyx-workbench/nvboard/include \
 	-DTOP_NAME=Vsoc_riscv_zhoutao_top \
-	-g \
 
 # User LDLIBS (from -LDFLAGS on Verilator command line)
 VM_USER_LDLIBS = \
