@@ -27,6 +27,7 @@ reg cnt;
 wire [3:0] A;
 wire [3:0] B;
 wire [3:0] C;
+reg[7:0] data_temp;
 always @(posedge clk)begin
     if(reset)begin
         clrn <= 1'b0;
@@ -35,6 +36,7 @@ always @(posedge clk)begin
         count <= 7'd0;
         cnt <= 1'b0;
         digital_data <= 32'd0;
+        data_temp <= 8'd0;
     end else begin
         if(ready && !overflow)begin
             if(cnt == 0)begin 
@@ -44,10 +46,11 @@ always @(posedge clk)begin
                 nextdata_n <= 1'b0;
                 select <= 8'b00011111;
             end else begin
+                data_temp <= data;
                 digital_data[19:16] <= A;
                 digital_data[11:8]<= C;
                 digital_data[15:12]<= B;
-                if(data == 8'hf0)begin
+                if(data_temp == 8'hf0)begin
                     clrn <= 1'b0;
                     select <= 0;
                     nextdata_n <= 1'b1;

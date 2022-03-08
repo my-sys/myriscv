@@ -46,6 +46,7 @@ VL_MODULE(Vsoc_riscv_zhoutao_top___024root) {
         CData/*3:0*/ soc_riscv_zhoutao_top__DOT__A;
         CData/*3:0*/ soc_riscv_zhoutao_top__DOT__B;
         CData/*3:0*/ soc_riscv_zhoutao_top__DOT__C;
+        CData/*7:0*/ soc_riscv_zhoutao_top__DOT__data_temp;
         CData/*2:0*/ soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__w_ptr;
         CData/*2:0*/ soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__r_ptr;
         CData/*3:0*/ soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__count;
@@ -98,9 +99,9 @@ VL_MODULE(Vsoc_riscv_zhoutao_top___024root) {
         VlUnpacked<CData/*3:0*/, 16> soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_3__DOT__i0__DOT__key_list;
         VlUnpacked<CData/*7:0*/, 16> soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_3__DOT__i0__DOT__data_list;
         VlUnpacked<SData/*11:0*/, 16> soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_4__DOT__i0__DOT__pair_list;
-        VlUnpacked<CData/*3:0*/, 16> soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_4__DOT__i0__DOT__key_list;
     };
     struct {
+        VlUnpacked<CData/*3:0*/, 16> soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_4__DOT__i0__DOT__key_list;
         VlUnpacked<CData/*7:0*/, 16> soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_4__DOT__i0__DOT__data_list;
         VlUnpacked<SData/*11:0*/, 16> soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_5__DOT__i0__DOT__pair_list;
         VlUnpacked<CData/*3:0*/, 16> soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__decode_data_5__DOT__i0__DOT__key_list;

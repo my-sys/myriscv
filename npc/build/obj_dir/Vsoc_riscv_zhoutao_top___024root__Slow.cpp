@@ -3443,6 +3443,7 @@ void Vsoc_riscv_zhoutao_top___024root___ctor_var_reset(Vsoc_riscv_zhoutao_top___
     vlSelf->soc_riscv_zhoutao_top__DOT__A = 0;
     vlSelf->soc_riscv_zhoutao_top__DOT__B = 0;
     vlSelf->soc_riscv_zhoutao_top__DOT__C = 0;
+    vlSelf->soc_riscv_zhoutao_top__DOT__data_temp = 0;
     vlSelf->soc_riscv_zhoutao_top__DOT____Vcellinp__digital_led_1__data_in = 0;
     vlSelf->soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__buffer = 0;
     for (int __Vi0=0; __Vi0<8; ++__Vi0) {

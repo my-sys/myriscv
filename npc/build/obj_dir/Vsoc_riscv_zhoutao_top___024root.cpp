@@ -16,6 +16,7 @@ VL_INLINE_OPT void Vsoc_riscv_zhoutao_top___024root___sequent__TOP__2(Vsoc_riscv
     CData/*7:0*/ soc_riscv_zhoutao_top__DOT__BCD_1__DOT____Vconcswap2;
     CData/*6:0*/ __Vdly__soc_riscv_zhoutao_top__DOT__count;
     CData/*0:0*/ __Vdly__soc_riscv_zhoutao_top__DOT__cnt;
+    CData/*7:0*/ __Vdly__soc_riscv_zhoutao_top__DOT__data_temp;
     CData/*2:0*/ __Vdly__soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__ps2_clk_sync;
     CData/*2:0*/ __Vdly__soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__r_ptr;
     CData/*0:0*/ __Vdly__soc_riscv_zhoutao_top__DOT__ready;
@@ -28,6 +29,7 @@ VL_INLINE_OPT void Vsoc_riscv_zhoutao_top___024root___sequent__TOP__2(Vsoc_riscv
     // Body
     __Vdly__soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__ps2_clk_sync 
         = vlSelf->soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__ps2_clk_sync;
+    __Vdly__soc_riscv_zhoutao_top__DOT__data_temp = vlSelf->soc_riscv_zhoutao_top__DOT__data_temp;
     __Vdly__soc_riscv_zhoutao_top__DOT__cnt = vlSelf->soc_riscv_zhoutao_top__DOT__cnt;
     __Vdly__soc_riscv_zhoutao_top__DOT__count = vlSelf->soc_riscv_zhoutao_top__DOT__count;
     __Vdly__soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__count 
@@ -131,6 +133,7 @@ VL_INLINE_OPT void Vsoc_riscv_zhoutao_top___024root___sequent__TOP__2(Vsoc_riscv
         __Vdly__soc_riscv_zhoutao_top__DOT__count = 0U;
         __Vdly__soc_riscv_zhoutao_top__DOT__cnt = 0U;
         vlSelf->soc_riscv_zhoutao_top__DOT__digital_data = 0U;
+        __Vdly__soc_riscv_zhoutao_top__DOT__data_temp = 0U;
     } else if (((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__ready) 
                 & (~ (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__overflow)))) {
         if (vlSelf->soc_riscv_zhoutao_top__DOT__cnt) {
@@ -140,12 +143,14 @@ VL_INLINE_OPT void Vsoc_riscv_zhoutao_top___024root___sequent__TOP__2(Vsoc_riscv
                        << 0x10U) | (((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__B) 
                                      << 0xcU) | ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__C) 
                                                  << 8U))));
-            if ((0xf0U == (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__data))) {
+            if ((0xf0U == (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__data_temp))) {
                 vlSelf->soc_riscv_zhoutao_top__DOT__clrn = 0U;
                 vlSelf->soc_riscv_zhoutao_top__DOT__select = 0U;
                 vlSelf->soc_riscv_zhoutao_top__DOT__nextdata_n = 1U;
                 __Vdly__soc_riscv_zhoutao_top__DOT__cnt = 0U;
             }
+            __Vdly__soc_riscv_zhoutao_top__DOT__data_temp 
+                = vlSelf->soc_riscv_zhoutao_top__DOT__data;
         } else {
             __Vdly__soc_riscv_zhoutao_top__DOT__count 
                 = (0x7fU & ((IData)(1U) + (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__count)));
@@ -161,6 +166,7 @@ VL_INLINE_OPT void Vsoc_riscv_zhoutao_top___024root___sequent__TOP__2(Vsoc_riscv
             (1U & (~ (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__overflow)));
     }
     vlSelf->soc_riscv_zhoutao_top__DOT__cnt = __Vdly__soc_riscv_zhoutao_top__DOT__cnt;
+    vlSelf->soc_riscv_zhoutao_top__DOT__data_temp = __Vdly__soc_riscv_zhoutao_top__DOT__data_temp;
     vlSelf->soc_riscv_zhoutao_top__DOT__ready = __Vdly__soc_riscv_zhoutao_top__DOT__ready;
     vlSelf->soc_riscv_zhoutao_top__DOT__overflow = __Vdly__soc_riscv_zhoutao_top__DOT__overflow;
     vlSelf->soc_riscv_zhoutao_top__DOT__data = vlSelf->soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__fifo
