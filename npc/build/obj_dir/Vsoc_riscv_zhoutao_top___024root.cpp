@@ -73,10 +73,14 @@ VL_INLINE_OPT void Vsoc_riscv_zhoutao_top___024root___sequent__TOP__2(Vsoc_riscv
         }
         if ((IData)((4U == (6U & (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__ps2_clk_sync))))) {
             if ((0xaU == (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__count))) {
-                if ((((~ (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__buffer)) 
-                      & (IData)(vlSelf->ps2_data)) 
-                     & VL_REDXOR_32((0x1ffU & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__buffer) 
-                                               >> 1U))))) {
+                if (VL_UNLIKELY((((~ (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__buffer)) 
+                                  & (IData)(vlSelf->ps2_data)) 
+                                 & VL_REDXOR_32((0x1ffU 
+                                                 & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__buffer) 
+                                                    >> 1U)))))) {
+                    VL_WRITEF("recieve %x\n",8,(0xffU 
+                                                & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__buffer) 
+                                                   >> 1U)));
                     __Vdlyvval__soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__fifo__v0 
                         = (0xffU & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__buffer) 
                                     >> 1U));
