@@ -164,29 +164,21 @@ void Vsoc_riscv_zhoutao_top___024root___settle__TOP__1(Vsoc_riscv_zhoutao_top___
     vlSelf->soc_riscv_zhoutao_top__DOT__data = vlSelf->soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__fifo
         [vlSelf->soc_riscv_zhoutao_top__DOT__ps2_keybpard_1__DOT__r_ptr];
     vlSelf->seg0_o = ((1U & (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__select))
-                       ? (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg0)
-                       : 0U);
+                       ? 0U : (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg0));
     vlSelf->seg1_o = ((2U & (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__select))
-                       ? (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg1)
-                       : 0U);
+                       ? 0U : (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg1));
     vlSelf->seg2_o = ((4U & (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__select))
-                       ? (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg2)
-                       : 0U);
+                       ? 0U : (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg2));
     vlSelf->seg3_o = ((8U & (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__select))
-                       ? (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg3)
-                       : 0U);
+                       ? 0U : (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg3));
     vlSelf->seg4_o = ((0x10U & (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__select))
-                       ? (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg4)
-                       : 0U);
+                       ? 0U : (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg4));
     vlSelf->seg5_o = ((0x20U & (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__select))
-                       ? (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg5)
-                       : 0U);
+                       ? 0U : (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg5));
     vlSelf->seg6_o = ((0x40U & (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__select))
-                       ? (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg6)
-                       : 0U);
+                       ? 0U : (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg6));
     vlSelf->seg7_o = ((0x80U & (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__select))
-                       ? (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg7)
-                       : 0U);
+                       ? 0U : (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__digital_led_1__DOT__seg7));
     vlSelf->soc_riscv_zhoutao_top__DOT__A = 0U;
     vlSelf->soc_riscv_zhoutao_top__DOT__B = 0U;
     vlSelf->soc_riscv_zhoutao_top__DOT__C = 0U;

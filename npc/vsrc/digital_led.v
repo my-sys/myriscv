@@ -33,14 +33,14 @@ reg [7:0]seg5;
 reg [7:0]seg6;
 reg [7:0]seg7;
 
-assign seg0_o = select[0] ? seg0 : 8'd0;
-assign seg1_o = select[1] ? seg1 : 8'd0;
-assign seg2_o = select[2] ? seg2 : 8'd0;
-assign seg3_o = select[3] ? seg3 : 8'd0;
-assign seg4_o = select[4] ? seg4 : 8'd0;
-assign seg5_o = select[5] ? seg5 : 8'd0;
-assign seg6_o = select[6] ? seg6 : 8'd0;
-assign seg7_o = select[7] ? seg7 : 8'd0;
+assign seg0_o = ~select[0] ? seg0 : 8'd0;
+assign seg1_o = ~select[1] ? seg1 : 8'd0;
+assign seg2_o = ~select[2] ? seg2 : 8'd0;
+assign seg3_o = ~select[3] ? seg3 : 8'd0;
+assign seg4_o = ~select[4] ? seg4 : 8'd0;
+assign seg5_o = ~select[5] ? seg5 : 8'd0;
+assign seg6_o = ~select[6] ? seg6 : 8'd0;
+assign seg7_o = ~select[7] ? seg7 : 8'd0;
 
 always @(posedge clk)begin
     seg0 <= seg0_line;
