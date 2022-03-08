@@ -830,7 +830,7 @@ void Vsoc_riscv_zhoutao_top___024root__traceFullSub0(Vsoc_riscv_zhoutao_top___02
         tracep->fullIData(oldp+476,(8U),32);
         __Vtemp511[0U] = 0x7ae9ef8eU;
         __Vtemp511[1U] = 0xfb3ec9cdU;
-        __Vtemp511[2U] = 0x8fc96faeU;
+        __Vtemp511[2U] = 0x8fc9f6aeU;
         __Vtemp511[3U] = 0xb66be7e0U;
         __Vtemp511[4U] = 0xa3f24665U;
         __Vtemp511[5U] = 0xfc1602dU;
