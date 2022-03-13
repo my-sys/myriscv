@@ -1,6 +1,6 @@
 TOPNAME=soc_riscv_zhoutao_top
 NXDC_FILES = constr/top.nxdc
-INC_PATH ?=
+INC_PATH ?= ./include
 
 VERILATOR = verilator
 VERILATOR_CFLAGS += -MMD --build -cc -Wall --trace --debug --gdb \

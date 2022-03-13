@@ -6,7 +6,7 @@
 #include "Vsoc_riscv_zhoutao_top.h"
 #include <nvboard.h>
 #define MAX_RISCV_SIM_TIME 2000
-#define IS_WAVE_OR_NVBOARD 0
+#define IS_WAVE_OR_NVBOARD 1
 
 
 # if IS_WAVE_OR_NVBOARD 
@@ -14,6 +14,13 @@
 static vluint64_t riscv_sim_time = 0;
 VerilatedContext* contextp = NULL;
 VerilatedVcdC* tfp = NULL;
+
+
+class Incentive_source{
+    public:
+        bool 
+}
+
 
 static Vsoc_riscv_zhoutao_top* top;
 
@@ -38,50 +45,20 @@ void sim_exit(){
     delete top;
     delete contextp;
 }
+
 int main(int argc, char** argv,char** cnv){
     sim_init();
+    
     top->clk=0b0;step_and_dump_wave();
-    top->clk=0b1;  top->reset=0b1; top->in=0b1; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-    top->reset=0b1; top->in=0b1; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-    top->reset=0b1; top->in=0b1; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-    top->reset=0b0; top->in=0b1; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-    top->reset=0b0; top->in=0b1; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-    top->reset=0b0; top->in=0b1; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-    top->reset=0b0; top->in=0b1; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-    top->reset=0b0; top->in=0b1; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-    top->reset=0b0; top->in=0b1; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
+    int i =0;
+    while(i<= 1000){
+        top->clk=~top->clk;
+        i++;
+        if(top->clk == 1){
 
-    top->reset=0b0; top->in=0b0; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-    top->reset=0b0; top->in=0b1; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-    top->reset=0b0; top->in=0b0; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-    top->reset=0b0; top->in=0b0; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-    top->reset=0b0; top->in=0b1; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-
-
-    top->reset=0b0; top->in=0b0; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-    top->reset=0b0; top->in=0b0; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-    top->reset=0b0; top->in=0b0; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-    top->reset=0b0; top->in=0b0; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
-    top->reset=0b0; top->in=0b1; step_and_dump_wave();
-    top->clk=0b0;step_and_dump_wave();top->clk=0b1;
+        }
+        step_and_dump_wave();
+    }    
     sim_exit();
 
    /* VerilatedContext* contextp = new VerilatedContext;

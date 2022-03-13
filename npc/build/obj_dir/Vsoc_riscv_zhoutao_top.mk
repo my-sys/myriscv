@@ -35,6 +35,7 @@ VM_PREFIX = Vsoc_riscv_zhoutao_top
 VM_MODPREFIX = Vsoc_riscv_zhoutao_top
 # User CFLAGS (from -CFLAGS on Verilator command line)
 VM_USER_CFLAGS = \
+	-I./include \
 	-I/home/xingk/ysyx-workbench/nvboard/include \
 	-DTOP_NAME=Vsoc_riscv_zhoutao_top \
 
@@ -47,6 +48,7 @@ VM_USER_LDLIBS = \
 # User .cpp files (from .cpp's on Verilator command line)
 VM_USER_CLASSES = \
 	auto_bind \
+	excitation_signal \
 	tb_soc_riscv_zhoutao \
 
 # User .cpp directories (from .cpp's on Verilator command line)
@@ -65,6 +67,8 @@ include $(VERILATOR_ROOT)/include/verilated.mk
 VPATH += $(VM_USER_DIR)
 
 auto_bind.o: /home/xingk/ysyx-workbench/npc/build/auto_bind.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+excitation_signal.o: /home/xingk/ysyx-workbench/npc/csrc/excitation_signal.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 tb_soc_riscv_zhoutao.o: /home/xingk/ysyx-workbench/npc/csrc/tb_soc_riscv_zhoutao.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
