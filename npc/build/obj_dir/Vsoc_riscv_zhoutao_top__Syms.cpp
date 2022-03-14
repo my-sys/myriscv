@@ -8,12 +8,14 @@
 // FUNCTIONS
 Vsoc_riscv_zhoutao_top__Syms::~Vsoc_riscv_zhoutao_top__Syms()
 {
+    delete __Vm_threadPoolp;
 }
 
 Vsoc_riscv_zhoutao_top__Syms::Vsoc_riscv_zhoutao_top__Syms(VerilatedContext* contextp, const char* namep,Vsoc_riscv_zhoutao_top* modelp)
     : VerilatedSyms{contextp}
     // Setup internal state of the Syms class
     , __Vm_modelp(modelp)
+    , __Vm_threadPoolp(new VlThreadPool(_vm_contextp__, 1, 0))
     // Setup module instances
     , TOP(namep)
 {

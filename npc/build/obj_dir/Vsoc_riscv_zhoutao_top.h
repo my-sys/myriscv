@@ -9,6 +9,7 @@
 #define VERILATED_VSOC_RISCV_ZHOUTAO_TOP_H_  // guard
 
 #include "verilated_heavy.h"
+#include "verilated_threads.h"
 
 class Vsoc_riscv_zhoutao_top__Syms;
 class Vsoc_riscv_zhoutao_top___024root;
