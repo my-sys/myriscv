@@ -85,6 +85,9 @@ void Vsoc_riscv_zhoutao_top::eval_step() {
 #endif  // VL_DEBUG
     // Initialize
     if (VL_UNLIKELY(!vlSymsp->__Vm_didInit)) _eval_initial_loop(vlSymsp);
+    // MTask 0 start
+    VL_DEBUG_IF(VL_DBG_MSGF("MTask0 starting\n"););
+    Verilated::mtaskId(0);
     // Evaluate till stable
     int __VclockLoop = 0;
     QData __Vchange = 1;
@@ -106,6 +109,8 @@ void Vsoc_riscv_zhoutao_top::eval_step() {
             __Vchange = Vsoc_riscv_zhoutao_top___024root___change_request(&(vlSymsp->TOP));
         }
     } while (VL_UNLIKELY(__Vchange));
+    Verilated::endOfThreadMTask(vlSymsp->__Vm_evalMsgQp);
+    Verilated::endOfEval(vlSymsp->__Vm_evalMsgQp);
 }
 
 //============================================================

@@ -4,7 +4,7 @@ INC_PATH ?= ./include
 
 VERILATOR = verilator
 VERILATOR_CFLAGS += -MMD --build -cc -Wall --trace --debug --gdb \
-								-O3 --x-assign fast --x-initial fast --noassert
+								-O3 --x-assign fast --x-initial fast --noassert --threads 1
 
 BUILD_DIR = ./build
 OBJ_DIR = $(BUILD_DIR)/obj_dir 

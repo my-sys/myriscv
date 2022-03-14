@@ -12,7 +12,7 @@ VM_COVERAGE = 0
 # Parallel builds?  0/1 (from --output-split)
 VM_PARALLEL_BUILDS = 0
 # Threaded output mode?  0/1/N threads (from --threads)
-VM_THREADS = 0
+VM_THREADS = 1
 # Tracing output mode?  0/1 (from --trace/--trace-fst)
 VM_TRACE = 1
 # Tracing output mode in FST format?  0/1 (from --trace-fst)
