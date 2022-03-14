@@ -121,7 +121,7 @@ void update_pin(){
 
 int main(int argc, char** argv,char** cnv){
     sim_init();
-    reset();
+    reset(10);
     
     pthread_t tid = 1;
     int ret = pthread_create(&tid, NULL, test_bench, NULL);
