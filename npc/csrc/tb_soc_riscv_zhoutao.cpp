@@ -7,7 +7,7 @@
 #include "Vsoc_riscv_zhoutao_top.h"
 #include <nvboard.h>
 #define MAX_RISCV_SIM_TIME 20000
-#define IS_WAVE_OR_NVBOARD 0
+#define IS_WAVE_OR_NVBOARD 1
 
 
 # if IS_WAVE_OR_NVBOARD 
