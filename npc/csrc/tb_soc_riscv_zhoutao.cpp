@@ -67,13 +67,19 @@ void delay_clk(int n){
     while((riscv_sim_time - temp_count < n)&& (riscv_sim_time <MAX_RISCV_SIM_TIME));
 }
 
+bool OddOnes(uint8_t temp){
+    temp = temp ^(temp >> 1);
+    temp = temp ^(temp >> 2);
+    temp = temp ^(temp >> 4);
+    return temp & 1;
+}
 void kbd_sencode(uint8_t code){
     bool send_buffer[11];
     send_buffer[0] = 0;
     for(int j = 0 ; j<8; j++){
         send_buffer[j] = (code>>j) & 1;
     }
-    send_buffer[9] = (^code);
+    send_buffer[9] =~(OddOnes(code));
     send_buffer[10] = 1;
     for(int i = 0; i<11;i++){
         map_pin[1] = send_buffer[i];
@@ -104,7 +110,7 @@ void* test_bench(void *){
    kbd_sencode(0xF0);
    kbd_sencode(0x1B);
    delay_clk(20);
-
+   return 0;
 }
 
 void update_pin(){
