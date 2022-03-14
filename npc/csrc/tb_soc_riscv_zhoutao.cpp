@@ -73,7 +73,7 @@ void kbd_sencode(uint8_t code){
     for(int j = 0 ; j<8; j++){
         send_buffer[j] = (code>>j) & 1;
     }
-    send_buffer[9] = ~(^code);
+    send_buffer[9] = (^code);
     send_buffer[10] = 1;
     for(int i = 0; i<11;i++){
         map_pin[1] = send_buffer[i];
@@ -84,7 +84,7 @@ void kbd_sencode(uint8_t code){
     }
 }
 
-void* test_bench(){
+void* test_bench(void *){
     // 设置激励信号的值
    // while(riscv_sim_time < MAX_RISCV_SIM_TIME){
         
