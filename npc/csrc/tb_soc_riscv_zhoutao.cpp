@@ -10,13 +10,10 @@
 #define IS_WAVE_OR_NVBOARD 1
 
 
-# if IS_WAVE_OR_NVBOARD 
-#include <pthread.h>      
+# if IS_WAVE_OR_NVBOARD      
 static vluint64_t riscv_sim_time = 0;
 VerilatedContext* contextp = NULL;
 VerilatedVcdC* tfp = NULL;
-
-static uint64_t map_pin[100];
 
 static Vsoc_riscv_zhoutao_top* top;
 
@@ -42,98 +39,51 @@ void sim_exit(){
     delete contextp;
 }
 
-void reset(int n){
-    top->reset = 0;
-    top->clk = 0;
-    step_and_dump_wave();
-    top->clk = 1;
-    step_and_dump_wave();
-    while(n--){
-        top->clk = 0;
-        step_and_dump_wave();
-        top->clk = 1;
-        step_and_dump_wave();
-    }
-    top->reset = 0;
-    top->clk = 0;
-    step_and_dump_wave();
-    top->clk = 1;
-    step_and_dump_wave();
-
-}
-
-void delay_clk(int n){
-    uint64_t temp_count = riscv_sim_time;
-    while((riscv_sim_time - temp_count < n)&& (riscv_sim_time <MAX_RISCV_SIM_TIME));
-}
-
-bool OddOnes(uint8_t temp){
-    temp = temp ^(temp >> 1);
-    temp = temp ^(temp >> 2);
-    temp = temp ^(temp >> 4);
-    return temp & 1;
-}
-void kbd_sencode(uint8_t code){
-    bool send_buffer[11];
-    send_buffer[0] = 0;
-    for(int j = 0 ; j<8; j++){
-        send_buffer[j] = (code>>j) & 1;
-    }
-    send_buffer[9] =~(OddOnes(code));
-    send_buffer[10] = 1;
-    for(int i = 0; i<11;i++){
-        map_pin[1] = send_buffer[i];
-        delay_clk(3);
-        map_pin[0] = 0;
-        delay_clk(3);
-        map_pin[0] = 1;
-    }
-}
-
-void* test_bench(void *){
-    // 设置激励信号的值
-   // while(riscv_sim_time < MAX_RISCV_SIM_TIME){
-        
-   // }
-
-   delay_clk(20);
-   kbd_sencode(0x1c);
-   delay_clk(20);
-   kbd_sencode(0xf0);
-   delay_clk(20);
-   kbd_sencode(0x1c);
-   delay_clk(40);
-   kbd_sencode(0x1B);
-   delay_clk(20);
-   kbd_sencode(0x1B);
-   delay_clk(20);
-   kbd_sencode(0xF0);
-   kbd_sencode(0x1B);
-   delay_clk(20);
-   return 0;
-}
-
-void update_pin(){
-    // 更新激励信号的值
-    top->ps2_clk = map_pin[0];
-    top->ps2_data = map_pin[1];
-}
-
 int main(int argc, char** argv,char** cnv){
     sim_init();
-    reset(10);
-    
-    pthread_t tid = 1;
-    int ret = pthread_create(&tid, NULL, test_bench, NULL);
-    while(riscv_sim_time < MAX_RISCV_SIM_TIME){
-        update_pin();
-        top->clk = 0;
-        step_and_dump_wave();
-        top->clk = 1;
-        step_and_dump_wave();
-        riscv_sim_time ++;
-    } 
-    pthread_exit(NULL);
+    Vtest_tb * tb = new Vtest_tb;
+    top->clk = 0;
+    tb->clk = top->clk;
+    top->eval_step();
+    tb->eval_step();
+    top->eval_end_step();
+    tb->eval_end_step();
+    contextp->timeInc(1);
+    tfp->dump(contextp->time());
+
+    for(int i =0 ; i<10; i++){
+        top->clk ~= top->clk;
+        top->reset = 1;
+        tb->clk = top->clk;
+        
+    top->eval_step();
+    tb->eval_step();
+    top->eval_end_step();
+    tb->eval_end_step();
+    contextp->timeInc(1);
+    tfp->dump(contextp->time());
+    }
+    top->reset = 0;
+    tb->reset = top->reset;
+    top->eval_step();
+    tb->eval_step();
+    top->eval_end_step();
+    tb->eval_end_step();
+    contextp->timeInc(1);
+    tfp->dump(contextp->time());
+    while(i <= 10000){
+        top->clk = ~top->clk;
+        top->ps2_clk = tb->ps2_clk;
+        top->ps2_data = tb->ps2_data;
+        tb->clk = top->clk;
+    top->eval_step();
+    tb->eval_step();
+    top->eval_end_step();
+    tb->eval_end_step();
+    contextp->timeInc(1);
+    tfp->dump(contextp->time());
+    }
+
     sim_exit();
     
     /*top->clk=0b0;step_and_dump_wave();
