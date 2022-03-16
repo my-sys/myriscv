@@ -35,7 +35,7 @@ void Vsoc_riscv_zhoutao_top___024root___initial__TOP__1(Vsoc_riscv_zhoutao_top__
     __Vtemp1[0U] = 0x2e62696eU;
     __Vtemp1[1U] = 0x74656d70U;
     __Vtemp1[2U] = 0x2e2fU;
-    VL_READMEM_N(true, 24, 300001, 0, VL_CVT_PACK_STR_NW(3, __Vtemp1)
+    VL_READMEM_N(false, 24, 300001, 0, VL_CVT_PACK_STR_NW(3, __Vtemp1)
                  ,  &(vlSelf->soc_riscv_zhoutao_top__DOT__vga_mem1__DOT__vga_mem)
                  , 0, ~0ULL);
 }
