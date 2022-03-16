@@ -30,12 +30,13 @@ void Vsoc_riscv_zhoutao_top___024root___initial__TOP__1(Vsoc_riscv_zhoutao_top__
     Vsoc_riscv_zhoutao_top__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vsoc_riscv_zhoutao_top___024root___initial__TOP__1\n"); );
     // Variables
-    VlWide<3>/*95:0*/ __Vtemp1;
+    VlWide<4>/*127:0*/ __Vtemp1;
     // Body
-    __Vtemp1[0U] = 0x64617461U;
-    __Vtemp1[1U] = 0x656d702eU;
-    __Vtemp1[2U] = 0x2e2f74U;
-    VL_READMEM_N(true, 24, 300001, 0, VL_CVT_PACK_STR_NW(3, __Vtemp1)
+    __Vtemp1[0U] = 0x2e686578U;
+    __Vtemp1[1U] = 0x74757265U;
+    __Vtemp1[2U] = 0x2f706963U;
+    __Vtemp1[3U] = 0x2eU;
+    VL_READMEM_N(true, 24, 300001, 0, VL_CVT_PACK_STR_NW(4, __Vtemp1)
                  ,  &(vlSelf->soc_riscv_zhoutao_top__DOT__vga_mem1__DOT__vga_mem)
                  , 0, ~0ULL);
 }
