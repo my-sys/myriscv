@@ -36,7 +36,7 @@ static int cmd_c(char *args) {
 
 
 static int cmd_q(char *args) {
-    printf("nemu quit!\n");
+    printf("nemu quit!!!\n");
     return 255;
 }
 
