@@ -61,22 +61,24 @@ void Vsoc_riscv_zhoutao_top___024root___settle__TOP__3(Vsoc_riscv_zhoutao_top___
                     - (IData)(0x24U))) : 0U) ? ((0x61a80U 
                                                  >= 
                                                  (0x7ffffU 
-                                                  & (((((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
-                                                         ? 
-                                                        (0x3ffU 
-                                                         & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
-                                                            - (IData)(0x24U)))
-                                                         : 0U) 
-                                                       << 7U) 
+                                                  & (((IData)(0x27fU) 
                                                       + 
-                                                      (((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
-                                                         ? 
-                                                        (0x3ffU 
-                                                         & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
-                                                            - (IData)(0x24U)))
-                                                         : 0U) 
-                                                       << 9U)) 
-                                                     + 
+                                                      ((((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
+                                                          ? 
+                                                         (0x3ffU 
+                                                          & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
+                                                             - (IData)(0x24U)))
+                                                          : 0U) 
+                                                        << 7U) 
+                                                       + 
+                                                       (((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
+                                                          ? 
+                                                         (0x3ffU 
+                                                          & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
+                                                             - (IData)(0x24U)))
+                                                          : 0U) 
+                                                        << 9U))) 
+                                                     - 
                                                      ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__h_valid)
                                                        ? 
                                                       (0x3ffU 
@@ -86,22 +88,24 @@ void Vsoc_riscv_zhoutao_top___024root___settle__TOP__3(Vsoc_riscv_zhoutao_top___
                                                  ? 
                                                 vlSelf->soc_riscv_zhoutao_top__DOT__vga_mem1__DOT__vga_mem
                                                 [(0x7ffffU 
-                                                  & (((((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
-                                                         ? 
-                                                        (0x3ffU 
-                                                         & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
-                                                            - (IData)(0x24U)))
-                                                         : 0U) 
-                                                       << 7U) 
+                                                  & (((IData)(0x27fU) 
                                                       + 
-                                                      (((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
-                                                         ? 
-                                                        (0x3ffU 
-                                                         & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
-                                                            - (IData)(0x24U)))
-                                                         : 0U) 
-                                                       << 9U)) 
-                                                     + 
+                                                      ((((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
+                                                          ? 
+                                                         (0x3ffU 
+                                                          & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
+                                                             - (IData)(0x24U)))
+                                                          : 0U) 
+                                                        << 7U) 
+                                                       + 
+                                                       (((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
+                                                          ? 
+                                                         (0x3ffU 
+                                                          & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
+                                                             - (IData)(0x24U)))
+                                                          : 0U) 
+                                                        << 9U))) 
+                                                     - 
                                                      ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__h_valid)
                                                        ? 
                                                       (0x3ffU 
@@ -109,40 +113,34 @@ void Vsoc_riscv_zhoutao_top___024root___settle__TOP__3(Vsoc_riscv_zhoutao_top___
                                                           - (IData)(0x91U)))
                                                        : 0U)))]
                                                  : 0U)
-          : ((0x61a80U >= (0x7ffffU & (((IData)(0x27fU) 
-                                        + ((((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
-                                              ? (0x3ffU 
-                                                 & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
-                                                    - (IData)(0x24U)))
-                                              : 0U) 
-                                            << 7U) 
-                                           + (((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
-                                                ? (0x3ffU 
-                                                   & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
-                                                      - (IData)(0x24U)))
-                                                : 0U) 
-                                              << 9U))) 
-                                       - ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__h_valid)
+          : ((0x61a80U >= (0x7ffffU & (((((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
+                                           ? (0x3ffU 
+                                              & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
+                                                 - (IData)(0x24U)))
+                                           : 0U) << 7U) 
+                                        + (((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
+                                             ? (0x3ffU 
+                                                & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
+                                                   - (IData)(0x24U)))
+                                             : 0U) 
+                                           << 9U)) 
+                                       + ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__h_valid)
                                            ? (0x3ffU 
                                               & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__x_cnt) 
                                                  - (IData)(0x91U)))
                                            : 0U))))
               ? vlSelf->soc_riscv_zhoutao_top__DOT__vga_mem1__DOT__vga_mem
-             [(0x7ffffU & (((IData)(0x27fU) + ((((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
-                                                  ? 
-                                                 (0x3ffU 
-                                                  & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
-                                                     - (IData)(0x24U)))
-                                                  : 0U) 
-                                                << 7U) 
-                                               + (((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
-                                                    ? 
-                                                   (0x3ffU 
-                                                    & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
-                                                       - (IData)(0x24U)))
-                                                    : 0U) 
-                                                  << 9U))) 
-                           - ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__h_valid)
+             [(0x7ffffU & (((((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
+                               ? (0x3ffU & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
+                                            - (IData)(0x24U)))
+                               : 0U) << 7U) + (((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
+                                                 ? 
+                                                (0x3ffU 
+                                                 & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
+                                                    - (IData)(0x24U)))
+                                                 : 0U) 
+                                               << 9U)) 
+                           + ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__h_valid)
                                ? (0x3ffU & ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__x_cnt) 
                                             - (IData)(0x91U)))
                                : 0U)))] : 0U));
