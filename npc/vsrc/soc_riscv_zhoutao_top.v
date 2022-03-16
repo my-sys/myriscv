@@ -2,20 +2,20 @@ module soc_riscv_zhoutao_top
 (
     input clk,
     input reset,
-    output [9:0]  h_addr,
-    output [9:0]  v_addr,
     output        hsync,
     output        vsync,
     output        valid,
     output [7:0]  vga_r,
     output [7:0]  vga_g,
     output [7:0]  vga_b 
-);
+)/* verilator lint_off DECLFILENAME */;
 
+wire [9:0] h_addr;
+wire [9:0] v_addr;
 wire [23:0]vga_data;
-mem vga_mem(
-    .h_addr(h_addr),
-    .v_addr(v_addr),
+mem vga_mem1(
+    .h_addr({9'h0,h_addr}),
+    .v_addr({9'h0,v_addr}),
     .vga_data(vga_data)
 );
 vga_ctrl vga_ctrl1(
@@ -31,20 +31,18 @@ vga_ctrl vga_ctrl1(
     .vga_g(vga_g),
     .vga_b(vga_b)
 );
-
+endmodule;
 module mem(
-    input [9:0] h_addr,
-    input [9:0] v_addr,
+    input [18:0] h_addr,
+    input [18:0] v_addr,
     output [23:0] vga_data 
-)
+);
 
 reg [23:0] vga_mem[300000:0];
 initial begin
-    $readmemh("temp.bin",vag_mem);
+    $readmemh("temp.bin",vga_mem);
 end 
-wire[24:0] temp;
-assign temp = (vaddr << 7) + (vaddr << 9) + h_addr;
-assign vga_data = vga[temp];
+assign vga_data = vga_mem[(v_addr << 7) + (v_addr << 9) + h_addr];
 endmodule 
 /*
 reg clrn;
@@ -149,4 +147,3 @@ FSM_bin FSM_bin_1(
     .led(led)
 );*/
 
-endmodule

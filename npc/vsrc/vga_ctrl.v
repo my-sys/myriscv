@@ -27,7 +27,7 @@ reg [9:0] y_cnt;
 wire      h_valid;
 wire      v_valid;
 
-always @(posedge reset or posedge pclk)begin
+always @(posedge pclk)begin
     if(reset == 1'b1)begin
         x_cnt <= 1;
     end else begin
@@ -62,4 +62,7 @@ assign valid = h_valid & v_valid;
 assign h_addr = h_valid ? (x_cnt - 10'd145) : {10{1'b0}};
 assign v_addr = v_valid ? (y_cnt - 10'd36) : {10{1'b0}};
 
+assign vga_r = vga_data[23:16];
+assign vga_g = vga_data[15:8];
+assign vga_b = vga_data[7:0];
 endmodule 
