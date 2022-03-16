@@ -42,7 +42,7 @@ reg [23:0] vga_mem[400000:0];
 initial begin
     $readmemh("./temp.data",vga_mem);
 end 
-assign vga_data = (v_addr[0] == 1'b0)? vga_mem[(v_addr << 7) + (v_addr << 9) + h_addr]:vga_mem[(v_addr << 7) + (v_addr << 9) + 639 - h_addr];
+assign vga_data = (v_addr[0] == 1'b0)? vga_mem[(v_addr << 7) + (v_addr << 9) + h_addr]:0;
 //assign vga_data = vga_mem[v_addr*639 + h_addr];
 //
 //assign vga_data = vga_mem[(h_addr << 9)+ v_addr];
