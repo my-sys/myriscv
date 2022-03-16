@@ -36,7 +36,7 @@ void Vsoc_riscv_zhoutao_top___024root___initial__TOP__1(Vsoc_riscv_zhoutao_top__
     __Vtemp1[1U] = 0x74757265U;
     __Vtemp1[2U] = 0x2f706963U;
     __Vtemp1[3U] = 0x2eU;
-    VL_READMEM_N(true, 24, 300001, 0, VL_CVT_PACK_STR_NW(4, __Vtemp1)
+    VL_READMEM_N(true, 24, 400001, 0, VL_CVT_PACK_STR_NW(4, __Vtemp1)
                  ,  &(vlSelf->soc_riscv_zhoutao_top__DOT__vga_mem1__DOT__vga_mem)
                  , 0, ~0ULL);
 }
@@ -57,7 +57,7 @@ void Vsoc_riscv_zhoutao_top___024root___settle__TOP__3(Vsoc_riscv_zhoutao_top___
     vlSelf->valid = ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__h_valid) 
                      & (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid));
     vlSelf->soc_riscv_zhoutao_top__DOT__vga_data = 
-        ((0x493e0U >= (0x7ffffU & (((((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
+        ((0x61a80U >= (0x7ffffU & (((((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
                                        ? (0x3ffU & 
                                           ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
                                            - (IData)(0x24U)))
@@ -131,7 +131,7 @@ void Vsoc_riscv_zhoutao_top___024root___ctor_var_reset(Vsoc_riscv_zhoutao_top___
     vlSelf->vga_g = 0;
     vlSelf->vga_b = 0;
     vlSelf->soc_riscv_zhoutao_top__DOT__vga_data = 0;
-    for (int __Vi0=0; __Vi0<300001; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<400001; ++__Vi0) {
         vlSelf->soc_riscv_zhoutao_top__DOT__vga_mem1__DOT__vga_mem[__Vi0] = 0;
     }
     vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__x_cnt = 0;

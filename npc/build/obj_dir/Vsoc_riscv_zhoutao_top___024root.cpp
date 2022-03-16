@@ -48,7 +48,7 @@ VL_INLINE_OPT void Vsoc_riscv_zhoutao_top___024root___sequent__TOP__2(Vsoc_riscv
     vlSelf->valid = ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__h_valid) 
                      & (IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid));
     vlSelf->soc_riscv_zhoutao_top__DOT__vga_data = 
-        ((0x493e0U >= (0x7ffffU & (((((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
+        ((0x61a80U >= (0x7ffffU & (((((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__v_valid)
                                        ? (0x3ffU & 
                                           ((IData)(vlSelf->soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt) 
                                            - (IData)(0x24U)))

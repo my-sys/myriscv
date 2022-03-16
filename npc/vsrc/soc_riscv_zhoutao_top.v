@@ -38,7 +38,7 @@ module mem(
     output [23:0] vga_data 
 );
 
-reg [23:0] vga_mem[300000:0];
+reg [23:0] vga_mem[400000:0];
 initial begin
     $readmemh("./picture.hex",vga_mem);
 end 

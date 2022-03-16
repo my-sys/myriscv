@@ -34,7 +34,7 @@ VL_MODULE(Vsoc_riscv_zhoutao_top___024root) {
     SData/*9:0*/ soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__x_cnt;
     SData/*9:0*/ soc_riscv_zhoutao_top__DOT__vga_ctrl1__DOT__y_cnt;
     IData/*23:0*/ soc_riscv_zhoutao_top__DOT__vga_data;
-    VlUnpacked<IData/*23:0*/, 300001> soc_riscv_zhoutao_top__DOT__vga_mem1__DOT__vga_mem;
+    VlUnpacked<IData/*23:0*/, 400001> soc_riscv_zhoutao_top__DOT__vga_mem1__DOT__vga_mem;
 
     // LOCAL VARIABLES
     CData/*0:0*/ __Vclklast__TOP__clk;
