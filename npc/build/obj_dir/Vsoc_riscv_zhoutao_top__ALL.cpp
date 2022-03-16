@@ -3,7 +3,6 @@
 #include "Vsoc_riscv_zhoutao_top.cpp"
 #include "Vsoc_riscv_zhoutao_top___024root.cpp"
 #include "Vsoc_riscv_zhoutao_top__Trace.cpp"
-#include "Vsoc_riscv_zhoutao_top__ConstPool_0.cpp"
 #include "Vsoc_riscv_zhoutao_top___024root__Slow.cpp"
 #include "Vsoc_riscv_zhoutao_top__Syms.cpp"
 #include "Vsoc_riscv_zhoutao_top__Trace__Slow.cpp"
