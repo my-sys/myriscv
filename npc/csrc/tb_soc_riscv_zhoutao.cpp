@@ -6,8 +6,9 @@
 #include <verilated_vcd_c.h>
 #include "Vsoc_riscv_zhoutao_top.h"
 #include <nvboard.h>
+#include "Vtest_tb.h
 #define MAX_RISCV_SIM_TIME 20000
-#define IS_WAVE_OR_NVBOARD 1
+#define IS_WAVE_OR_NVBOARD 0
 
 
 # if IS_WAVE_OR_NVBOARD      

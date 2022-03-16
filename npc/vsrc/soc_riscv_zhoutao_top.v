@@ -2,19 +2,51 @@ module soc_riscv_zhoutao_top
 (
     input clk,
     input reset,
-    input ps2_clk,
-    input ps2_data,
-
-    output [7:0]seg0_o,
-    output [7:0]seg1_o,
-    output [7:0]seg2_o,
-    output [7:0]seg3_o,
-    output [7:0]seg4_o,
-    output [7:0]seg5_o,
-    output [7:0]seg6_o,
-    output [7:0]seg7_o 
+    output [9:0]  h_addr,
+    output [9:0]  v_addr,
+    output        hsync,
+    output        vsync,
+    output        valid,
+    output [7:0]  vga_r,
+    output [7:0]  vga_g,
+    output [7:0]  vga_b 
 );
-/* verilator lint_off UNUSED */
+
+wire [23:0]vga_data;
+mem vga_mem(
+    .h_addr(h_addr),
+    .v_addr(v_addr),
+    .vga_data(vga_data)
+);
+vga_ctrl vga_ctrl1(
+    .pclk(clk),
+    .reset(reset),
+    .vga_data(vga_data),
+    .h_addr(h_addr),
+    .v_addr(v_addr),
+    .hsync(hsync),
+    .vsync(vsync),
+    .valid(valid),
+    .vga_r(vga_r),
+    .vga_g(vga_g),
+    .vga_b(vga_b)
+);
+
+module mem(
+    input [9:0] h_addr,
+    input [9:0] v_addr,
+    output [23:0] vga_data 
+)
+
+reg [23:0] vga_mem[300000:0];
+initial begin
+    $readmemh("temp.bin",vag_mem);
+end 
+wire[24:0] temp;
+assign temp = (vaddr << 7) + (vaddr << 9) + h_addr;
+assign vga_data = vga[temp];
+endmodule 
+/*
 reg clrn;
 reg [7:0] select;
 reg nextdata_n; 
@@ -84,7 +116,7 @@ ps2_keyboard ps2_keybpard_1(
     .overflow(overflow)
 
 );
-/* verilator lint_off UNUSED */
+
 digital_led digital_led_1(
     .clk(clk),
    // .data_in({4'd0,4'd1,4'd2,4'd3,4'd15,4'd9,4'd10,4'd5}),
@@ -98,7 +130,7 @@ digital_led digital_led_1(
     .seg5_o(seg5_o),
     .seg6_o(seg6_o),
     .seg7_o(seg7_o)
-);
+);*/
 /* 
 FSM_bin FSM_bin_1(
     .clk(clk),
