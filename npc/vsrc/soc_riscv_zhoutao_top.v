@@ -40,7 +40,7 @@ module mem(
 
 reg [23:0] vga_mem[300000:0];
 initial begin
-    $readmemb("./temp.bin",vga_mem);
+    $readmemh("./temp.data",vga_mem);
 end 
 assign vga_data = vga_mem[(v_addr << 7) + (v_addr << 9) + h_addr];
 endmodule 
