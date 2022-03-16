@@ -36,8 +36,8 @@ static int cmd_c(char *args) {
 
 
 static int cmd_q(char *args) {
-    printf("nemu quit!!!\n");
-    return -1;
+    //printf("nemu quit!!!\n");
+    return 255;
 }
 
 static int cmd_si(char *args){
@@ -197,7 +197,7 @@ void sdb_mainloop() {
     for (i = 0; i < NR_CMD; i ++) {
       if (strcmp(cmd, cmd_table[i].name) == 0) {
         if (cmd_table[i].handler(args) < 0) { return; }
-        if (cmd_table[i].handler(args)== 255){ exit(0);};
+        if (cmd_table[i].handler(args)== 255){printf("nemu quit!!!\n"); exit(0);};
         break;
       }
     }
