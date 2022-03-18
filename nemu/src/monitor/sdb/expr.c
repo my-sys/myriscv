@@ -85,18 +85,17 @@ static bool make_token(char *e) {
          */
         
         switch (rules[i].token_type) {
-          case '+':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = '+';break;
-          case '-':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = '-';break;
-          case '*':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = '*';break;
-          case '/':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = '/';break;
-          case '(':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = '(';break;
-          case ')':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = ')';break;
-          case TK_NUM:strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = TK_NUM;break;
+          case '+':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = '+';nr_token++;break;
+          case '-':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = '-';nr_token++;break;
+          case '*':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = '*';nr_token++;break;
+          case '/':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = '/';nr_token++;break;
+          case '(':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = '(';nr_token++;break;
+          case ')':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = ')';nr_token++;break;
+          case TK_NUM:strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = TK_NUM;nr_token++;break;
           case TK_NOTYPE:break;
-          case TK_EQ:strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = TK_EQ;break;
+          case TK_EQ:strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = TK_EQ;nr_token++;break;
           default: assert(0);
         }
-        nr_token++;
         break;
       }
     }
