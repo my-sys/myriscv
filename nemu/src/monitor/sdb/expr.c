@@ -130,10 +130,12 @@ uint32_t find_poistion_main_operator(uint32_t p , uint32_t q){
     while(p < q){
         if(tokens[p].type == '+' || tokens[p].type == '-'){
             if(count == 0 ){
+                main_operator_type = tokens[p].type;
                 position = p;
             }
         }else if(tokens[p].type == '*' || tokens[p].type == '/'){
             if(count == 0 && main_operator_type != '-'&& main_operator_type != '+'){
+                main_operator_type = tokens[p].type;
                 position = p;
             }
         }else if(tokens[p].type == '('){
