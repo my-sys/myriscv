@@ -7,7 +7,7 @@
 
 enum {
   TK_NOTYPE = 256, TK_EQ,
-
+  TK_NUM,
   /* TODO: Add more token types */
 
 };
@@ -20,9 +20,15 @@ static struct rule {
   /* TODO: Add more rules.
    * Pay attention to the precedence level of different rules.
    */
-
+  {"\\*",'*'},
+  {"\\/",'/'},
+  {"\\-",'-'},
+  {"\\)",')'},
+  {"\\(",'('},
+  {"[0-9]+",TK_NUM},
   {" +", TK_NOTYPE},    // spaces
-  {"\\+", '+'},         // plus
+ // {"\\\+", '+'},         // plus
+  {"\\+",'+'}, 
   {"==", TK_EQ},        // equal
 };
 
@@ -61,7 +67,6 @@ static bool make_token(char *e) {
   regmatch_t pmatch;
 
   nr_token = 0;
-
   while (e[position] != '\0') {
     /* Try all rules one by one. */
     for (i = 0; i < NR_REGEX; i ++) {
@@ -78,11 +83,20 @@ static bool make_token(char *e) {
          * to record the token in the array `tokens'. For certain types
          * of tokens, some extra actions should be performed.
          */
-
+        
         switch (rules[i].token_type) {
-          default: TODO();
+          case '+':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = '+';break;
+          case '-':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = '-';break;
+          case '*':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = '*';break;
+          case '/':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = '/';break;
+          case '(':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = '(';break;
+          case ')':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = ')';break;
+          case TK_NUM:strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = TK_NUM;break;
+          case TK_NOTYPE:break;
+          case TK_EQ:strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].type = TK_EQ;break;
+          default: assert(0);
         }
-
+        nr_token++;
         break;
       }
     }
@@ -96,6 +110,71 @@ static bool make_token(char *e) {
   return true;
 }
 
+bool check_parentheses(uint32_t p, uint32_t q){
+    int count = 0;
+    if(tokens[p].type !='('|| tokens[p].type != ')'){return false;}
+    while(p <= q){
+        if(tokens[p].type == '(')count++;
+        else if(tokens[p].type ==')')count--;
+        else {};
+        if(count <0)return false;
+        p++;
+    }
+    if(count == 0){return true;}
+    else return false;
+}
+
+uint32_t find_poistion_main_operator(uint32_t p , uint32_t q){
+    int main_operator_type = 0;
+    int count = 0;
+    uint32_t position = 0;
+    while(p < q){
+        if(tokens[p].type == '+' || tokens[p].type == '-'){
+            if(count == 0 && (main_operator_type != '*' && main_operator_type != '/')){
+                position = p;
+            }
+        }else if(tokens[p].type == '*' || tokens[p].type == '/'){
+            if(count == 0){
+                position = p;
+            }
+        }else if(tokens[p].type == '('){
+            count ++;
+        }else if(tokens[p].type == ')'){
+            count --;
+        }
+        p++;
+    }
+    return position;
+}
+
+word_t eval(uint32_t p, uint32_t q){
+    if (p > q){
+        printf("Bad expression \n");
+        return 0;
+    }
+    else if (p == q){
+
+        return atol(tokens[p].str);
+    }
+    else if (check_parentheses(p,q) == true){
+        return eval(p + 1, q - 1);
+    }
+    else {
+        uint32_t op = find_poistion_main_operator(p,q);
+        int op_type = tokens[op].type;
+        word_t val1 = eval(p, op - 1);
+        word_t val2 = eval(op + 1, q);
+        
+        switch (op_type) {
+            case '+': return val1 + val2;
+            case '-': return val1 - val2;
+            case '*': return val1 * val2;
+            case '/': return val1 / val2;
+            default: assert(0);
+        }
+
+    }
+}
 
 word_t expr(char *e, bool *success) {
   if (!make_token(e)) {
@@ -104,7 +183,7 @@ word_t expr(char *e, bool *success) {
   }
 
   /* TODO: Insert codes to evaluate the expression. */
-  TODO();
-
-  return 0;
+  //TODO();
+  return eval(0,nr_token - 1);
+  //return 0;
 }
