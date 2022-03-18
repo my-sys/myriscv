@@ -111,7 +111,7 @@ static bool make_token(char *e) {
 
 bool check_parentheses(uint32_t p, uint32_t q){
     int count = 0;
-    if(tokens[p].type !='('|| tokens[p].type != ')'){return false;}
+    if(tokens[p].type !='('|| tokens[q].type != ')'){return false;}
     while(p <= q){
         if(tokens[p].type == '(')count++;
         else if(tokens[p].type ==')')count--;
