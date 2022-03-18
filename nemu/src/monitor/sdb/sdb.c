@@ -107,6 +107,7 @@ static int cmd_p(char *args){
     if(success == true){
         printf("expr: %s , value: %lx \n",args,value);
     }else {
+        printf("%lx \n",value);
         printf("error expr !!!! \n");
     }
 
