@@ -102,7 +102,7 @@ static int cmd_x(char *args){
 }
 
 static int cmd_p(char *args){
-    bool success;
+    bool success = true;
     word_t value =  expr(args, &success);
     if(success == true){
         printf("expr: %s , value: %lx \n",args,value);
