@@ -26,6 +26,7 @@ int main(int argc, char *argv[]) {
  if(success){
      printf("%lu \n",temp_num);
  }*/
+ init_regex();
  FILE *fptr;
  if((fptr = fopen("./tools/gen-expr/input","r"))==NULL){
      printf("Error! can not open the file");
