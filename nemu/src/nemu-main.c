@@ -19,12 +19,12 @@ int main(int argc, char *argv[]) {
 
  // return is_exit_status_bad();
  //
- //char c[1000] = {};
+ char c[1000] = {};
  FILE *fptr;
  if((fptr = fopen("../tools/gen-expr/input","r"))==NULL){
      printf("Error! can not open the file");
      return -1;
- }/*
+ }
  
      while(fscanf(fptr,"%[^\n]", c)!=EOF){
      fgetc(fptr);
@@ -45,6 +45,6 @@ int main(int argc, char *argv[]) {
      }
      memset(c,'\0',sizeof(c));
  }
- if(fptr!=NULL){fclose(fptr);}*/ 
+ if(fptr!=NULL){fclose(fptr);}
  return 0;
 }
