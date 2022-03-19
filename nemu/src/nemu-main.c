@@ -24,9 +24,9 @@ int main(int argc, char *argv[]) {
  if((fptr = fopen("../tools/gen-expr/input","r"))==NULL){
      printf("Error! can not open the file");
      return -1;
- }
+ }/*
  
- /*while(fscanf(fptr,"%[^\n]", c)!=EOF){
+     while(fscanf(fptr,"%[^\n]", c)!=EOF){
      fgetc(fptr);
      char *str_num = strtok(c," ");
      word_t num = strtoul(str_num,NULL,10);
