@@ -118,6 +118,7 @@ bool check_parentheses(uint32_t p, uint32_t q){
         else if(tokens[p].type ==')')count--;
         else {};
         if(count <0)return false;
+        if(count == 0 && p!=q){return false;}
         p++;
     }
     if(count == 0){return true;}
