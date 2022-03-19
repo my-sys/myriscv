@@ -34,6 +34,7 @@ int main(int argc, char *argv[]) {
  }
  
      while(fscanf(fptr,"%[^\n]", c)!=EOF){
+     printf("input expr %s\n",c);
      fgetc(fptr);
      char *str_num = strtok(c," ");
      word_t num = strtoul(str_num,NULL,10);
@@ -41,12 +42,12 @@ int main(int argc, char *argv[]) {
      bool success = true;
      word_t temp_num = expr(expr_str, &success);
      if(success){
-        printf("input expr %s\n",c);
+       // printf("input expr %s\n",c);
         if(num == temp_num){printf("%lu, %lu, true\n",num,temp_num);}
         else{printf("%lu, %lu, false",num,temp_num);} 
         printf("--------------------------------------------------------\n");
      }else{
-        printf("input expr %s\n",c);
+       // printf("input expr %s\n",c);
         printf("Can not evaluate!!!!\n");
         printf("--------------------------------------------------------\n");
      }
