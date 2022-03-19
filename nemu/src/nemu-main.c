@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
      fgetc(fptr);
      char *str_num = strtok(c," ");
      word_t num = strtoul(str_num,NULL,10);
-     char *expr_str = strtok(NULL," ");
+     char *expr_str = c + strlen(str_num) + 1;
      bool success = true;
      word_t temp_num = expr(expr_str, &success);
      if(success){
