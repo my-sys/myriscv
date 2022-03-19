@@ -21,6 +21,7 @@ int main(int argc, char *argv[]) {
  char c[1000] = {};
  strcpy(c,"((  700* 221/ 778*194))");
  bool success = true;
+ init_regex();
  word_t temp_num = expr(c,&success);
  if(success){
      printf("%lu \n",temp_num);
