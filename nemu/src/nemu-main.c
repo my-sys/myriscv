@@ -44,6 +44,6 @@ int main(int argc, char *argv[]) {
      }
      memset(c,'\0',sizeof(c));
  }
-
+ if(fptr!=NULL){fclose(fptr);}
  return 0;
 }
