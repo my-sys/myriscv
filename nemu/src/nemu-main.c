@@ -1,7 +1,5 @@
 #include <common.h>
-//#include <stdio.h>
 #include "./monitor/sdb/sdb.h"
-#include <regex.h>
 void init_monitor(int, char *[]);
 void am_init_monitor();
 void engine_start();
