@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
  //
  //char c[1000] = {};
  FILE *fptr;
- if((fptr = fopen("~/ysyx-workbench/nemu/tools/gen-expr/input","r"))==NULL){
+ if((fptr = fopen("../tools/gen-expr/input","r"))==NULL){
      printf("Error! can not open the file");
      return -1;
  }
