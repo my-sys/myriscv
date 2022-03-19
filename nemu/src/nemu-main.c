@@ -19,14 +19,14 @@ int main(int argc, char *argv[]) {
  // return is_exit_status_bad();
  //
  char c[1000] = {};
- strcpy(c,"((  700* 221/ 778*194))");
+ /*strcpy(c,"((  700* 221/ 778*194))");
  bool success = true;
  init_regex();
  word_t temp_num = expr(c,&success);
  if(success){
      printf("%lu \n",temp_num);
- }
-/* FILE *fptr;
+ }*/
+ FILE *fptr;
  if((fptr = fopen("./tools/gen-expr/input","r"))==NULL){
      printf("Error! can not open the file");
      return -1;
@@ -51,7 +51,7 @@ int main(int argc, char *argv[]) {
      }
      memset(c,'\0',sizeof(c));
  }
- if(fptr!=NULL){fclose(fptr);}*/
+ if(fptr!=NULL){fclose(fptr);}
 
  return 0;
 }
