@@ -48,7 +48,7 @@ void gen_rand_op(){
 static int gen_count =0;
 
 static void gen_rand_expr() {
-    if(gen_count >=10){
+    if(gen_count >=3){
         gen_count = 0;
         gen_num();
         return;
