@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
  // return is_exit_status_bad();
  //
  char c[1000] = {};
- strcpy(c," (  89)");
+ strcpy(c,"    816/    98+   26 ");
  bool success = true;
  init_regex();
  word_t temp_num = expr(c,&success);
