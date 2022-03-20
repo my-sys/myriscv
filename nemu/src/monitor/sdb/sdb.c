@@ -105,9 +105,9 @@ static int cmd_p(char *args){
     bool success = true;
     word_t value =  expr(args, &success);
     if(success == true){
-        printf("expr: %s , value: %lx \n",args,value);
+        printf("expr: %s , value: 0x%lx \n",args,value);
     }else {
-        printf("%lx \n",value);
+        printf("0x%lx \n",value);
         printf("error expr !!!! \n");
     }
 
