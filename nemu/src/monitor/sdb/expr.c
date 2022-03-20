@@ -83,7 +83,7 @@ static bool make_token(char *e) {
       if (pcre_exec(re[i],NULL, e + position, strlen(e+position),0,0,ovector,3) > 0 && ovector[0] == 0) {
         char *substr_start = e + position;
         int substr_len = ovector[1]-ovector[0];
-
+        assert(substr_len<=31);
         Log("match rules[%d] = \"%s\" at position %d with len %d: %.*s",
             i, rules[i].regex, position, substr_len, substr_len, substr_start);
 
@@ -95,19 +95,19 @@ static bool make_token(char *e) {
          */
         
         switch (rules[i].token_type) {
-          case '+':strncpy(tokens[nr_token].str,substr_start,31);tokens[nr_token].str[31]='\0';tokens[nr_token].type = '+';nr_token++;break;
-          case '-':strncpy(tokens[nr_token].str,substr_start,31);tokens[nr_token].str[31]='\0';tokens[nr_token].type = '-';nr_token++;break;
-          case '*':strncpy(tokens[nr_token].str,substr_start,31);tokens[nr_token].str[31]='\0';tokens[nr_token].type = '*';nr_token++;break;
-          case '/':strncpy(tokens[nr_token].str,substr_start,31);tokens[nr_token].str[31]='\0';tokens[nr_token].type = '/';nr_token++;break;
-          case '(':strncpy(tokens[nr_token].str,substr_start,31);tokens[nr_token].str[31]='\0';tokens[nr_token].type = '(';nr_token++;break;
-          case ')':strncpy(tokens[nr_token].str,substr_start,31);tokens[nr_token].str[31]='\0';tokens[nr_token].type = ')';nr_token++;break;
-          case TK_NUM:strncpy(tokens[nr_token].str,substr_start,31);tokens[nr_token].str[31]='\0';tokens[nr_token].type = TK_NUM;nr_token++;break;
+          case '+':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].str[substr_len]='\0';tokens[nr_token].type = '+';nr_token++;break;
+          case '-':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].str[substr_len]='\0';tokens[nr_token].type = '-';nr_token++;break;
+          case '*':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].str[substr_len]='\0';tokens[nr_token].type = '*';nr_token++;break;
+          case '/':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].str[substr_len]='\0';tokens[nr_token].type = '/';nr_token++;break;
+          case '(':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].str[substr_len]='\0';tokens[nr_token].type = '(';nr_token++;break;
+          case ')':strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].str[substr_len]='\0';tokens[nr_token].type = ')';nr_token++;break;
+          case TK_NUM:strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].str[substr_len]='\0';tokens[nr_token].type = TK_NUM;nr_token++;break;
           case TK_NOTYPE:break;
-          case TK_EQ:strncpy(tokens[nr_token].str,substr_start,31);tokens[nr_token].str[31]='\0';tokens[nr_token].type = TK_EQ;nr_token++;break;
-          case TK_NEQ:strncpy(tokens[nr_token].str,substr_start,31);tokens[nr_token].str[31]='\0';tokens[nr_token].type = TK_NEQ;nr_token++;break;
-          case TK_AND:strncpy(tokens[nr_token].str,substr_start,31);tokens[nr_token].str[31]='\0';tokens[nr_token].type = TK_AND;nr_token++;break;
-          case TK_HEX_NUM:strncpy(tokens[nr_token].str,substr_start,31);tokens[nr_token].str[31]='\0';tokens[nr_token].type = TK_HEX_NUM;nr_token++;break;
-          case TK_REG:strncpy(tokens[nr_token].str,substr_start,31);tokens[nr_token].str[31]='\0';tokens[nr_token].type = TK_REG;nr_token++;break; 
+          case TK_EQ:strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].str[substr_len]='\0';tokens[nr_token].type = TK_EQ;nr_token++;break;
+          case TK_NEQ:strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].str[substr_len]='\0';tokens[nr_token].type = TK_NEQ;nr_token++;break;
+          case TK_AND:strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].str[substr_len]='\0';tokens[nr_token].type = TK_AND;nr_token++;break;
+          case TK_HEX_NUM:strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].str[substr_len]='\0';tokens[nr_token].type = TK_HEX_NUM;nr_token++;break;
+          case TK_REG:strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].str[substr_len]='\0';tokens[nr_token].type = TK_REG;nr_token++;break; 
 
           default: assert(0);
         }
