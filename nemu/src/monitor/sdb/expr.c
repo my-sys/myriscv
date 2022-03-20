@@ -35,7 +35,7 @@ static struct rule {
   {"!=", TK_NEQ},
   {"&&", TK_AND},
   {"0x[0-9]+",TK_HEX_NUM},
-  {"(\\*)[a-z]?(?:[0-9]|[1-9][0-9])",TK_REG},
+  {"(?<=\\$)[a-z]?(?:[0-9]|[1-9][0-9])",TK_REG},
 };
 
 #define NR_REGEX ARRLEN(rules)
