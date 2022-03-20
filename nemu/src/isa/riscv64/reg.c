@@ -20,5 +20,17 @@ void isa_reg_display() {
 }
 
 word_t isa_reg_str2val(const char *s, bool *success) {
-  return 0;
+    for(int i = 0; i<32; i++){
+        if(strcmp(s,regs[i])==0){
+            *success = true;
+            return gpr(i);        
+        };
+    }
+    int temp = atoi(s);
+    if(temp>0 && temp<=31){
+        *success = true;
+        return gpr(temp);
+    }
+    *success = false;
+    return 0;
 }
