@@ -8,17 +8,17 @@ int is_exit_status_bad();
 int main(int argc, char *argv[]) {
   /* Initialize the monitor. */
 #ifdef CONFIG_TARGET_AM
-//  am_init_monitor();
+  am_init_monitor();
 #else
-//  init_monitor(argc, argv);
+  init_monitor(argc, argv);
 #endif
 
   /* Start engine. */
-//  engine_start();
+  engine_start();
 
- // return is_exit_status_bad();
+  return is_exit_status_bad();
  //
- char c[1000] = {};
+// char c[1000] = {};
  /*strcpy(c,"    816/    98+   26 ");
  bool success = true;
  init_regex();
@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
  if(success){
      printf("%lu \n",temp_num);
  }*/ 
- init_regex();
+/* init_regex();
  FILE *fptr;
  if((fptr = fopen("./tools/gen-expr/input","r"))==NULL){
      printf("Error! can not open the file");
@@ -55,5 +55,5 @@ int main(int argc, char *argv[]) {
  }
  if(fptr!=NULL){fclose(fptr);}
 
- return 0;
+ return 0;*/
 }
