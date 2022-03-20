@@ -51,7 +51,7 @@ void init_regex() {
   int ret;
 
   for (i = 0; i < NR_REGEX; i ++) {
-    ret = regcomp(&re[i], rules[i].regex, REG_EXTENDED);
+    ret = regcomp(&re[i], rules[i].regex, 0);//REG_EXTENDED
     if (ret != 0) {
       regerror(ret, &re[i], error_msg, 128);
       printf("%d \n",ret);
