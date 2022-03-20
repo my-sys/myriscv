@@ -7,8 +7,7 @@
  * change the POSIX regex to PCRE
  */
 #include <sys/types.h>
-//#include <regex.h>
-#include <pcre.h>
+#include <regex.h>
 #include <memory/paddr.h>
 enum {
   TK_NOTYPE = 256, TK_EQ,
@@ -44,20 +43,22 @@ static struct rule {
 
 #define NR_REGEX ARRLEN(rules)
 
-static pcre* re[NR_REGEX] = {};
+static regex_t re[NR_REGEX] = {};
 
 /* Rules are used for many times.
  * Therefore we compile them only once before any usage.
  */
 void init_regex() {
   int i;
-  const char* error_msg;
-  int erroffset;
-  
+  char error_msg[128];
+  int ret;
+
   for (i = 0; i < NR_REGEX; i ++) {
-    re[i] = pcre_compile(rules[i].regex,0,&error_msg,&erroffset,NULL);
+    ret = regcomp(&re[i], "[a-z]?(?:[0-9]|[1-9][0-9])$", REG_EXTENDED);
       // ret = regcomp(&re[i], rules[i].regex, REG_EXTENDED);//REG_EXTENDED
-    if (re[i] == NULL) {
+    if (ret != 0) {
+      regerror(ret, &re[i], error_msg, 128);
+      printf("%d \n",ret);
       panic("regex compilation failed: %s\n%s", error_msg, rules[i].regex);
     }
   }
@@ -74,14 +75,15 @@ static int nr_token __attribute__((used))  = 0;
 static bool make_token(char *e) {
   int position = 0;
   int i;
+  regmatch_t pmatch;
   nr_token = 0;
-  int ovector[3];
+
   while (e[position] != '\0') {
     /* Try all rules one by one. */
     for (i = 0; i < NR_REGEX; i ++) {
-      if (pcre_exec(re[i],NULL, e + position, strlen(e+position),0,0,ovector,3) > 0 && ovector[0] == 0) {
+      if (regexec(&re[i], e + position, 1, &pmatch, 0) == 0 && pmatch.rm_so == 0) {
         char *substr_start = e + position;
-        int substr_len = ovector[1]-ovector[0];
+        int substr_len = pmatch.rm_eo;
 
         Log("match rules[%d] = \"%s\" at position %d with len %d: %.*s",
             i, rules[i].regex, position, substr_len, substr_len, substr_start);
