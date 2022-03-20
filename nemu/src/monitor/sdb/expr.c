@@ -35,7 +35,7 @@ static struct rule {
   {"!=", TK_NEQ},
   {"&&", TK_AND},
   {"0x[0-9]+",TK_HEX_NUM},
-  {"[\\$][a-z]?(?:[0-9]|[1-9][0-9])",TK_REG},
+  {"\\$[a-z]?(?:[0-9]|[1-9][0-9])",TK_REG},
 };
 
 #define NR_REGEX ARRLEN(rules)
@@ -54,6 +54,7 @@ void init_regex() {
     ret = regcomp(&re[i], rules[i].regex, REG_EXTENDED);
     if (ret != 0) {
       regerror(ret, &re[i], error_msg, 128);
+      printf("%d \n",ret);
       panic("regex compilation failed: %s\n%s", error_msg, rules[i].regex);
     }
   }
