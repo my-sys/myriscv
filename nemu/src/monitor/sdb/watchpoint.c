@@ -8,6 +8,7 @@ typedef struct watchpoint {
 
   /* TODO: Add more members if necessary */
   char expr_str[500];
+  word_t old_value;
 } WP;
 
 static WP wp_pool[NR_WP] = {};
@@ -53,17 +54,25 @@ void free_wp(WP *wp){
     }
     wp->next = NULL;
     memset(wp->expr_str,'\0',sizeof(wp->expr_str));
+    wp->old_value = 0;
     wp->next = free_;
     free_ = wp;
 }
 
 void create_watchpoint(char *str){
+    bool success = false;
+    word_t temp_value = expr(str,&success);
+    if(success == false){
+        printf("expr is invalid!!\n");
+        return;
+    }
     WP *new_temp = new_wp();
     if(new_temp == NULL){
         printf("set watchpoint failed !!\n");
         return;
     }else{
         strcpy(new_temp->expr_str,str);
+        new_temp->old_value = temp_value;
     }
     if(head == NULL){
         head = new_temp;
@@ -101,6 +110,27 @@ void display_watchpoint(){
         printf("%d  watchpoint  keep y  %s\n",temp->NO,temp->expr_str);
         temp = temp->next;
     }
+}
+
+bool calculate_watchpoint(){
+    WP *temp = head;
+    word_t value;
+    bool success = false;
+    while(temp !=NULL){
+        success = false;
+       value =  expr(temp->expr_str,&success);
+       assert(success == true);
+       if(temp->old_value != value){
+           printf("Watchpoint %d: %s \n",temp->NO,temp->expr_str);
+
+           printf("Old value = 0x%lx \n",temp->old_value);
+           printf("New value = 0x%lx \n",value);
+           temp->old_value = value;
+           return true;
+       }
+       temp = temp->next;
+    }
+    return false;
 }
 /* TODO: Implement the functionality of watchpoint */
 
