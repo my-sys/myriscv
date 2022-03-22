@@ -65,7 +65,7 @@ static int cmd_info(char *args){
          return 0;
     }
     if(strncmp("w",args,1)==0){
-        
+        display_watchpoint();
         return 0;
     }
     printf("You must follow the format strictly!!!! not have more space and .etc !!!!\n");
@@ -115,12 +115,18 @@ static int cmd_p(char *args){
 }
 
 static int cmd_w(char *args){
-    
+    create_watchpoint(args);    
     return 0;
 }
 
 static int cmd_d(char *args){
-
+    int num = atoi(args);
+    // exits risks when num = 0; really!
+    if(num >=32){
+        printf("error input \n");
+        return 0;
+    }
+    delete_watchpoint(num);
     return 0;
 }
 

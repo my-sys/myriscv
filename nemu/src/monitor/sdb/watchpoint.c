@@ -31,6 +31,7 @@ WP* new_wp(){
     }
     WP* temp = free_;
     free_ = free_->next;
+    temp->next = NULL;
     return temp;    
 }
 
@@ -54,6 +55,51 @@ void free_wp(WP *wp){
     memset(wp->expr_str,'\0',sizeof(wp->expr_str));
     wp->next = free_;
     free_ = wp;
+}
+
+void create_watchpoint(char *str){
+    WP *new_temp = new_wp();
+    if(new_temp == NULL){
+        printf("set watchpoint failed !!\n");
+        return;
+    }else{
+        strcpy(new_temp->expr_str,str);
+    }
+    if(head == NULL){
+        head = new_temp;
+    }else{
+        WP * temp = head;
+        while(temp->next != NULL){
+            temp = temp->next;
+        }
+        temp->next = new_temp;
+    }
+    printf("Successful!! Watchpoint %d: %s \n",new_temp->NO,new_temp->expr_str);
+    return;
+}
+
+void delete_watchpoint(int No){
+    WP * temp = head;
+    while(temp != NULL){
+        if(temp->NO == No)break;
+        else{
+            temp = temp->next;
+        }
+    }
+    if(temp == NULL){
+        printf("No %d is not in watchpints now!!\n",No);
+    }else{
+        free_wp(temp);
+        printf("Watchpoint No %d is deleted successfully !!!\n",No);
+    }
+}
+
+void display_watchpoint(){
+    printf("Num  Type     Disp  Enb  What \n");
+    WP *temp = head;
+    while(temp != NULL){
+        printf("%d  watchpoint  keep y  %s\n",temp->NO,temp->expr_str);
+    }
 }
 /* TODO: Implement the functionality of watchpoint */
 
