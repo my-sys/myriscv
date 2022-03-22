@@ -99,6 +99,7 @@ void display_watchpoint(){
     WP *temp = head;
     while(temp != NULL){
         printf("%d  watchpoint  keep y  %s\n",temp->NO,temp->expr_str);
+        temp = temp->next;
     }
 }
 /* TODO: Implement the functionality of watchpoint */
