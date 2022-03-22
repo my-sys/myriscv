@@ -60,7 +60,7 @@ void free_wp(WP *wp){
 }
 
 void create_watchpoint(char *str){
-    bool success = false;
+    bool success = true;
     word_t temp_value = expr(str,&success);
     if(success == false){
         printf("expr is invalid!!\n");
