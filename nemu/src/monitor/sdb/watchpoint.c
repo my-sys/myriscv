@@ -115,9 +115,9 @@ void display_watchpoint(){
 bool calculate_watchpoint(){
     WP *temp = head;
     word_t value;
-    bool success = false;
+    bool success = true;
     while(temp !=NULL){
-        success = false;
+       success = true;
        value =  expr(temp->expr_str,&success);
        assert(success == true);
        if(temp->old_value != value){
