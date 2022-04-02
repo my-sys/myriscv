@@ -145,7 +145,7 @@ image: image-dep
 archive: $(ARCHIVE)
 image-dep: $(OBJS) am $(LIBS)
 	@echo \# Creating image [$(ARCH)]
-	@echo "xingk" BIN_PATH
+	@echo "xingk" $(BIN_PATH)
 .PHONY: image image-dep archive run $(LIBS)
 
 ### Clean a single project (remove `build/`)
