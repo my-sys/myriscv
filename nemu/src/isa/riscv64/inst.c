@@ -25,17 +25,8 @@ enum {
 static word_t immI(uint32_t i) { return SEXT(BITS(i, 31, 20), 12); }
 static word_t immU(uint32_t i) { return SEXT(BITS(i, 31, 12), 20) << 12; }
 static word_t immS(uint32_t i) { return (SEXT(BITS(i, 31, 25), 7) << 5) | BITS(i, 11, 7); }
-static word_t immJ(uint32_t i) { return SEXT(BITS(i,31,31) << 19 | BITS(i,30,21) | BITS(i,20,20)<<10 | BITS(i,19,12)<<11,20)<<1;}
-static word_t immB(uint32_t i) { int64_t k =  SEXT(BITS(i,31,31)<<11 | BITS(i,30,25)<<4 | BITS(i,11,8) | BITS(i,10,10)<<10,12); 
-printf(" immB value = 0x%lx \n",k);
-k = k <<1;
-printf("hah 0x%llx \n",BITS(i,31,31)<<11 | BITS(i,30,25)<<4 | BITS(i,11,8) | BITS(i,10,10)<<10);
-printf("xxx 0x%llx \n",BITS(i,31,31)<<11 | BITS(i,30,25)<<4 | BITS(i,11,8));
-printf("i <<11 value =0x%llx \n", BITS(i,31,31));
-printf(" i value = 0x%x \n",i);
-printf(" immB value = 0x%lx \n",k);
-return k;
-}
+static word_t immJ(uint32_t i) { return SEXT((BITS(i,31,31) << 19 | BITS(i,30,21) | BITS(i,20,20)<<10 | BITS(i,19,12)<<11),20)<<1;}
+static word_t immB(uint32_t i) { return SEXT((BITS(i,31,31)<<11 | BITS(i,30,25)<<4 | BITS(i,11,8) | BITS(i,7,7)<<10),12);}
 
 static void decode_operand(Decode *s, word_t *dest, word_t *src1, word_t *src2, word_t *csr_addr, word_t *csr_value, int type) {
   uint32_t i = s->isa.inst.val;
