@@ -73,6 +73,11 @@ static Token tokens[1000] __attribute__((used)) = {};
 static int nr_token __attribute__((used))  = 0;
 
 static bool make_token(char *e) {
+    if(e == NULL){
+        printf("no expr,you may input error!!!\n");
+        return 0;
+
+    }
   int position = 0;
   int i;
   nr_token = 0;
