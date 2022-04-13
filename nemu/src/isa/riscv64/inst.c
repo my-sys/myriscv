@@ -30,7 +30,7 @@ static word_t immB(uint32_t i) { int64_t k =  SEXT(BITS(i,31,31)<<11 | BITS(i,30
 printf(" immB value = 0x%lx \n",k);
 k = k <<1;
 printf("hah 0x%llx \n",BITS(i,31,31)<<11 | BITS(i,30,25)<<4 | BITS(i,11,8) | BITS(i,10,10)<<10);
-printf("xxx 0x%llx \n",BITS(i,31,31)<<11 | BITS(i,30,25)<<4);
+printf("xxx 0x%llx \n",BITS(i,31,31)<<11 | BITS(i,30,25)<<4 | BITS(i,11,8));
 printf("i <<11 value =0x%llx \n", BITS(i,31,31));
 printf(" i value = 0x%x \n",i);
 printf(" immB value = 0x%lx \n",k);
