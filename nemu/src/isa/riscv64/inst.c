@@ -29,6 +29,7 @@ static word_t immJ(uint32_t i) { return SEXT(BITS(i,31,31) << 19 | BITS(i,30,21)
 static word_t immB(uint32_t i) { int64_t k =  SEXT(BITS(i,31,31)<<11 | BITS(i,30,25)<<4 | BITS(i,11,8) | BITS(i,10,10)<<10,12); 
 printf(" immB value = 0x%lx \n",k);
 k = k <<1;
+printf(" i value = 0x%x \n",i);
 printf(" immB value = 0x%lx \n",k);
 return k;
 }
