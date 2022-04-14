@@ -145,7 +145,7 @@ static struct {
   { "c", "Continue the execution of the program", cmd_c },
   { "q", "Exit NEMU", cmd_q },
   { "si", "si [N],Step through n instructions and stop. defalt N = 1", cmd_si},
-  { "info", "info SUBCMD,printf the registers' status info r, printf the watchpoint  info w", cmd_info},
+  { "info", "info SUBCMD,printf the registers' status info r, printf the watchpoint  info w, printf csr info csr", cmd_info},
   { "x", "x N EXPR,scan memory. Evaluate the expression EXPR, using the result as the starting memory address, output \
       N consecutive 4-bytes in hexadecimal", cmd_x },
   { "p", "p EXPR, Evaluate the expression EXPR", cmd_p },
