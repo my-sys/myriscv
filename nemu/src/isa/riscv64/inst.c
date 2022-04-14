@@ -34,7 +34,7 @@ static void decode_operand(Decode *s, word_t *dest, word_t *src1, word_t *src2, 
   int rs1 = BITS(i, 19, 15);
   int rs2 = BITS(i, 24, 20);
   int csr = BITS(i, 31,20);
-  uint32_t q = 5;
+  uint32_t q = 10;
   printf("test 0x%lx, value = 0x%lx\n", SEXT(BITS(q,3,1),3),USEXT(BITS(q,3,1),3));
   destR(rd);
   *csr_addr = csr;
