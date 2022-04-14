@@ -19,6 +19,14 @@ void isa_reg_display() {
     printf("$28(t3) = %lx, $29(t4) = %lx, $30(t5) = %lx, $31(t6) = %lx \n",gpr(28),gpr(29),gpr(30),gpr(31));
 }
 
+void isa_csr_reg_display() {
+    printf("--- Display CSR REG ---\n");
+    printf("mstatus: 0x%lx, misa: 0x%lx \n", csr(0x300),csr(0x301));
+    printf("mie: 0x%lx, mtvec: 0x%lx \n", csr(0x304),csr(0x305));
+    printf("mepc: 0x%lx, mcause: 0x%lx \n",csr(0x341),csr(0x342));
+    printf("mtval: 0x%lx, mip: 0x%lx \n",csr(0x343),csr(0x345));
+}
+
 word_t isa_reg_str2val(const char *s, bool *success) {
     s = s + 1;
     for(int i = 0; i<32; i++){

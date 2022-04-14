@@ -68,6 +68,10 @@ static int cmd_info(char *args){
         display_watchpoint();
         return 0;
     }
+    if(strncmp("csr",args,3)==0){
+        isa_csr_reg_display();
+        return 0;
+    }
     printf("You must follow the format strictly!!!! not have more space and .etc !!!!\n");
     return 0;
 }
