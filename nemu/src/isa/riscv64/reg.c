@@ -43,5 +43,7 @@ word_t isa_csr_reg_str2val(const char *s, bool *success){
     if(s != NULL){
         *success = true;
     }
-    return csr(i);
+    if(i<0 || i>31)return 0;
+
+    return cpu.csr[i];
 }
