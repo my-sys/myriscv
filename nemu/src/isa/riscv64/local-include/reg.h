@@ -48,7 +48,6 @@ static inline int check_reg_idx(int idx) {
 }
 
 static inline int check_csr_idx(int idx) {
-    assert(0);
     int ret = -1;
     for( int i =0;i< CSR_NUMBER; i++ ){
         if(csr_maps[i].csr_addr == idx){ret = csr_maps[i].csr_map_idx;break;}

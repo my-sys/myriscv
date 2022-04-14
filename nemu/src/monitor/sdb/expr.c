@@ -13,7 +13,7 @@
 enum {
   TK_NOTYPE = 256, TK_EQ,
   TK_NUM,TK_HEX_NUM,TK_REG,
-  TK_DEREF,TK_NEQ,TK_AND,
+  TK_DEREF,TK_NEQ,TK_AND,TK_CSR_REG,
   /* TODO: Add more token types */
 
 };
@@ -41,6 +41,7 @@ static struct rule {
   {"0x[0-9]+",TK_HEX_NUM},
   {"[0-9]+",TK_NUM},
   {"\\$[a-z]?(?:[0-9]|[1-9][0-9])",TK_REG},
+  {"\\$csr_(?:[12][0-9]|[0-9]|30|31)",TK_CSR_REG}
 };
 
 #define NR_REGEX ARRLEN(rules)
@@ -113,7 +114,7 @@ static bool make_token(char *e) {
           case TK_AND:strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].str[substr_len]='\0';tokens[nr_token].type = TK_AND;nr_token++;break;
           case TK_HEX_NUM:strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].str[substr_len]='\0';tokens[nr_token].type = TK_HEX_NUM;nr_token++;break;
           case TK_REG:strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].str[substr_len]='\0';tokens[nr_token].type = TK_REG;nr_token++;break; 
-
+          case TK_CSR_REG:strncpy(tokens[nr_token].str,substr_start,substr_len);tokens[nr_token].str[substr_len]='\0';tokens[nr_token].type = TK_CSR_REG;nr_token++;break;
           default: assert(0);
         }
         break;
@@ -203,6 +204,15 @@ word_t eval(uint32_t p, uint32_t q){
         }else if(tokens[p].type == TK_REG){
             bool success = false;
             word_t temp =  isa_reg_str2val(tokens[p].str,&success);
+            if(success == false){
+                assert(0);
+                return 0;
+            }else{
+                return temp;
+            }
+        }else if(tokens[p].type == TK_CSR_REG){
+            bool success = false;
+            word_t temp = isa_csr_reg_str2val(tokens[p].str,&success);
             if(success == false){
                 assert(0);
                 return 0;

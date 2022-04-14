@@ -36,3 +36,12 @@ word_t isa_reg_str2val(const char *s, bool *success) {
     *success = false;
     return 0;
 }
+
+word_t isa_csr_reg_str2val(const char *s, bool *success){
+    s = s+5;
+    int i = atoi(s);
+    if(s != NULL){
+        *success = true;
+    }
+    return csr(i);
+}
