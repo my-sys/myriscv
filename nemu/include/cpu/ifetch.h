@@ -2,7 +2,7 @@
 
 #include <memory/vaddr.h>
 
-int xingk_inst_num = 0;
+extern int xingk_inst_num;
 static inline uint32_t inst_fetch(vaddr_t *pc, int len) {
   uint32_t inst = vaddr_ifetch(*pc, len);
   (*pc) += len;
