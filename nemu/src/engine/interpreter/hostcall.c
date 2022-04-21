@@ -18,6 +18,7 @@ void invalid_inst(vaddr_t thispc) {
   temp[1] = inst_fetch(&pc, 4);
 
   uint8_t *p = (uint8_t *)temp;
+  printf("The inst has run :%d number\n",get_run_inst_num());
   printf("invalid opcode(PC = " FMT_WORD "):\n"
       "\t%02x %02x %02x %02x %02x %02x %02x %02x ...\n"
       "\t%08x %08x...\n",
