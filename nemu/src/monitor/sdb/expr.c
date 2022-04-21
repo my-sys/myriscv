@@ -232,7 +232,8 @@ word_t eval(uint32_t p, uint32_t q){
     else {
         uint32_t op = find_poistion_main_operator(p,q);
         int op_type = tokens[op].type;
-        word_t val1 = eval(p, op - 1);
+        word_t val1 = 0;
+        if(op != 0)val1 = eval(p, op - 1);
         word_t val2 = eval(op + 1, q);
         
         switch (op_type) {
