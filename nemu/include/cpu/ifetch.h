@@ -9,7 +9,7 @@ static inline uint32_t inst_fetch(vaddr_t *pc, int len) {
   return inst;
 }
 
-int get_run_inst_num(){
+static inline int get_run_inst_num(){
     return xingk_inst_num;
 }
 #endif
