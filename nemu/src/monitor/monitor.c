@@ -32,7 +32,7 @@ static char *img_file = NULL;
 static int difftest_port = 1234;
 
 static long load_img() {
-  char *temp_xingk = "/home/xingk/ysyx-workbench/am-kernels/tests/cpu-tests/prime-riscv64-nemu.bin";
+  char *temp_xingk = "/home/xingk/ysyx-workbench/am-kernels/tests/cpu-tests/build/prime-riscv64-nemu.bin";
   img_file = temp_xingk;
   if (img_file == NULL) {
     Log("No image is given. Use the default build-in image.");
