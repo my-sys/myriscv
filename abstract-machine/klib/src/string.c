@@ -186,7 +186,7 @@ char* uitoa(uint32_t value, char *str, int base){
 }
 
 char* gcvt(double value, int n, char* str ){
-    char tbuf[80];
+    /*char tbuf[80];
     char*p = tbuf;
 
     int int_part = (int)value;
@@ -215,7 +215,7 @@ char* gcvt(double value, int n, char* str ){
     *p = '\0';
 
     tbuf[71] = '\0';
-    strcpy(str,tbuf);
+    strcpy(str,tbuf);*/
     return str;
 }
 
