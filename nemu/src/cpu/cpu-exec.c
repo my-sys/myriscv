@@ -71,6 +71,7 @@ static void execute(uint64_t n) {
     strcpy(iringbuf[g_nr_guest_inst%16],s.logbuf); 
     trace_and_difftest(&s, cpu.pc); 
     if (nemu_state.state != NEMU_RUNNING) {
+        printf("tttttttttt\n");
         if(nemu_state.state == NEMU_ABORT){ //iringbuf
             for(int i =0;i<16;i++){
                 if((g_nr_guest_inst%16) == i){
