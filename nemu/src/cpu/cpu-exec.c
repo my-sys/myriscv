@@ -15,6 +15,8 @@ uint64_t g_nr_guest_inst = 0;
 static uint64_t g_timer = 0; // unit: us
 static bool g_print_step = false;
 
+static char iringbuf[16][256] = {0};
+
 void device_update();
 
 static void trace_and_difftest(Decode *_this, vaddr_t dnpc) {
@@ -65,8 +67,21 @@ static void execute(uint64_t n) {
   for (;n > 0; n --) {
     exec_once(&s, cpu.pc);
     g_nr_guest_inst ++;
-    trace_and_difftest(&s, cpu.pc);
-    if (nemu_state.state != NEMU_RUNNING) break;
+// iringbuf ------;
+    strcpy(iringbuf[g_nr_guest_inst%16],s.logbuf); 
+    trace_and_difftest(&s, cpu.pc); 
+    if (nemu_state.state != NEMU_RUNNING) {
+        if(nemu_state.state == NEMU_ABORT){ //iringbuf
+            for(int i =0;i<16;i++){
+                if((g_nr_guest_inst%16) == i){
+                    printf("%s  <----- \n",iringbuf[i]);
+                }else{
+                    printf("%s\n",iringbuf[i]);
+                }
+            }
+        } // iringbuf 
+        break;
+    }
     IFDEF(CONFIG_DEVICE, device_update());
   }
 }
