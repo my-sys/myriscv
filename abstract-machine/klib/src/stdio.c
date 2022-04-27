@@ -6,11 +6,67 @@
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
 
 int printf(const char *fmt, ...) {
-  panic("Not implemented");
-}
+  //panic("Not implemented");
+  char buf[512];
+  int ret = 0;
+  va_list ap;
+  char *temp = buf;  
+  memset(buf, 0, sizeof(buf));
+  va_start(ap,fmt);
+  vsprintf(buf, fmt, ap);
+  va_end(ap);
+
+  while(*temp){
+      putch(*temp);
+      temp++;
+  }
+ return ret;
+} 
 
 int vsprintf(char *out, const char *fmt, va_list ap) {
-  panic("Not implemented");
+  //panic("Not implemented");
+    char* temp = out;
+    va_list args = ap; //parameters
+    for(;*fmt;fmt++){
+        if(*fmt != '%'){
+            *temp++ = *fmt;
+        }else{
+            fmt++;
+            switch(*fmt){
+                case 'd':
+                    itoa(va_arg(args, int),temp,10);
+
+                    temp = temp + strlen(temp);
+                    break;
+                case 'x':
+                    uitoa(va_arg(args, unsigned int),temp,16);
+
+                    temp = temp + strlen(temp);
+                    break;
+
+
+                case 'c':
+                    *temp++ = va_arg(args,int);
+                    break;
+
+                case 's':
+                    *temp = '\0';
+                    strcat(temp, va_arg(args, char *));
+                    temp += strlen(temp);
+                    break;
+
+                case 'f':
+                    gcvt(va_arg(args,double),7, temp);
+                    temp += strlen(temp);
+                    break;
+                default:
+                    break;
+
+            }
+        }
+    }
+    *temp = '\0';
+    return 0;
 }
 
 int sprintf(char *out, const char *fmt, ...) {
