@@ -76,7 +76,7 @@ int sprintf(char *out, const char *fmt, ...) {
  va_start(ap,fmt);
  ret = vsprintf(out, fmt, ap);
  va_end(ap);*/
- return ret;
+ return 0;
 }
 
 int snprintf(char *out, size_t n, const char *fmt, ...) {
