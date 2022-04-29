@@ -38,7 +38,7 @@ static void trace_and_difftest(Decode *_this, vaddr_t dnpc) {
 
 static int  space_num = 2;
 void xingk_ftrace(word_t next_pc, vaddr_t pc, bool flag){
-    char temp_buf[200]={0};
+    char temp_buf[1000]={0};
     char temp[25]={0}; 
     char *p = temp_buf;
     p += snprintf(p,sizeof(temp_buf), FMT_WORD ":", pc);
