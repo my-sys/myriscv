@@ -14,7 +14,7 @@ override ARGS += $(ARGS_DIFF)
 
 ifdef CONFIG_FTRACE
  #  ifneq ($(IMAGE),)
-    ARGS_ELF_XINGK = --ftrace=$(IMAGE).elf
+ #   ARGS_ELF_XINGK = --ftrace=$(IMAGE).elf
     override ARGS += $(ARGS_ELF_XINGK)
  # endif 
 endif 
