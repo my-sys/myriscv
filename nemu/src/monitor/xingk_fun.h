@@ -9,6 +9,7 @@
 #include <assert.h>
 typedef struct{
     uint64_t addr_value;
+    uint64_t size;
     char fun_name[25];
 }value_fun_name;
 extern FILE *ftrace_log_fp ;

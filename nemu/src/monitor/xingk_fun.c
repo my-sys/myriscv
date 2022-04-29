@@ -48,6 +48,7 @@ void init_ftrace(const char *img_elf){
     for(int i = 0; i < num; i++){
         if((symbol_table + i)->st_info == 18){
             fun_name[fun_count].addr_value = (symbol_table + i)->st_value;
+            fun_name[fun_count].size = (symbol_table + i)->st_size;
             strcpy(fun_name[fun_count].fun_name,(char*)((symbol_table + i)->st_name +str_table));
             fun_count++;
         }
@@ -65,7 +66,7 @@ void init_ftrace(const char *img_elf){
 
 void find_fun_name(uint64_t value, char* str_fun_name){
     for(int i = 0; i< fun_count; i++){
-        if(fun_name[i].addr_value == value){
+        if(fun_name[i].addr_value <= value && value < (fun_name[i].addr_value + fun_name[i].size)){
             strcpy(str_fun_name,fun_name[i].fun_name);
             return;
         }
