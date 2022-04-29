@@ -47,9 +47,9 @@ void xingk_ftrace(word_t next_pc, vaddr_t pc, bool flag){
         space_num = space_num+2;
         p += sprintf(p,"   %*s call [%s@0x%lx]",space_num,"",temp,next_pc);
     }else{
+        space_num = space_num - 2;
         p += sprintf(p,"   %*s ret [%s@0x%lx]",space_num,"",temp,next_pc);
         
-        space_num = space_num - 2;
     }
     fprintf(ftrace_log_fp,"%s\n",temp_buf);
     
