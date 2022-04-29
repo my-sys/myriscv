@@ -1,5 +1,6 @@
 #include <isa.h>
 #include <memory/paddr.h>
+#include "xingk_fun.h"
 
 void init_rand();
 void init_log(const char *log_file);
@@ -107,7 +108,10 @@ void init_monitor(int argc, char *argv[]) {
   init_log(log_file);
 
   /* Open the ftrace_log and init */
-  IFDEF(CONFIG_FTRACE,init_ftrace(img_elf));
+ // IFDEF(CONFIG_FTRACE,init_ftrace(img_elf));
+#ifdef CONFIG_FTRACE
+    init_ftrace(img_elf);
+#endif 
 
   /* Initialize memory. */
   init_mem();
