@@ -35,8 +35,8 @@ static int difftest_port = 1234;
 static char *img_elf = NULL;
 static char *ftrace_log = NULL;
 static long load_img() {
-//  char *temp_xingk = "/home/xingk/ysyx-workbench/am-kernels/tests/cpu-tests/build/prime-riscv64-nemu.bin";
- // img_file = temp_xingk;
+  char *temp_xingk = "/home/xingk/ysyx-workbench/am-kernels/tests/cpu-tests/build/recursion-riscv64-nemu.bin";
+  img_file = temp_xingk;
   if (img_file == NULL) {
     Log("No image is given. Use the default build-in image.");
     return 4096; // built-in image size
