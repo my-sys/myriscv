@@ -2,7 +2,8 @@
 #include <cpu/decode.h>
 #include <cpu/difftest.h>
 #include <locale.h>
-#include "../src/monitor/sdb/sdb.h"  
+#include "../src/monitor/sdb/sdb.h"
+#include "../src/monitor/xingk_fun.h"
 /* The assembly code of instructions executed is only output to the screen
  * when the number of instructions executed is less than this value.
  * This is useful when you use the `si' command.
@@ -33,6 +34,25 @@ static void trace_and_difftest(Decode *_this, vaddr_t dnpc) {
   }
 #endif   
 
+}
+
+static int  space_num = 2;
+void xingk_ftrace(word_t next_pc, vaddr_t pc, bool flag){
+    char temp_buf[200]={0};
+    char temp[25]={0};
+    char *p = temp_buf;
+    p += snprintf(p,sizeof(temp_buf), FMT_WORD ":", pc);
+    find_fun_name(next_pc, temp);
+    if(flag){
+        space_num = space_num+2;
+        p += sprintf(p,"   %*s call [%s@0x%lx]",space_num,"",temp,next_pc);
+    }else{
+        space_num = space_num - 2;
+        p += sprintf(p,"   %*s call [%s@0x%lx]",space_num,"",temp,next_pc);
+    }
+    fprintf(ftrace_log_fp,"%s\n",temp_buf);
+    
+    
 }
 
 void xingk_iringbuf(Decode *s, vaddr_t pc){

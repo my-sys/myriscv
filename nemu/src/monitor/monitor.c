@@ -26,11 +26,13 @@ static void welcome() {
 
 void sdb_set_batch_mode();
 
+
 static char *log_file = NULL;
 static char *diff_so_file = NULL;
 static char *img_file = NULL;
 static int difftest_port = 1234;
-
+static char *img_elf = NULL;
+static char *ftrace_log = NULL;
 static long load_img() {
 //  char *temp_xingk = "/home/xingk/ysyx-workbench/am-kernels/tests/cpu-tests/build/prime-riscv64-nemu.bin";
  // img_file = temp_xingk;
@@ -63,6 +65,7 @@ static int parse_args(int argc, char *argv[]) {
     {"port"     , required_argument, NULL, 'p'},
     {"help"     , no_argument      , NULL, 'h'},
     {"ftrace"   , required_argument, NULL, 'f'},
+    {"ftrace_log", required_argument, NULL, 'e'},
     {0          , 0                , NULL,  0 },
   };
   int o;
@@ -75,6 +78,8 @@ static int parse_args(int argc, char *argv[]) {
       case 'p': sscanf(optarg, "%d", &difftest_port); break;
       case 'l': log_file = optarg; break;
       case 'd': diff_so_file = optarg; break;
+      case 'f': img_elf = optarg; break;
+      case 'e': ftrace_log = optarg; break;
       case 1: img_file = optarg;printf("xingk parse_args ----: %s \n",img_file); return optind - 1;
       default:
         printf("Usage: %s [OPTION...] IMAGE [args]\n\n", argv[0]);
@@ -100,6 +105,9 @@ void init_monitor(int argc, char *argv[]) {
 
   /* Open the log file. */
   init_log(log_file);
+
+  /* Open the ftrace_log and init */
+  IFDEF(CONFIG_FTRACE,init_ftrace(img_elf));
 
   /* Initialize memory. */
   init_mem();
