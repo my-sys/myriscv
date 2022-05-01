@@ -3,7 +3,7 @@ FILE *ftrace_log_fp = NULL;
 static value_fun_name fun_name[200] = {};
 static int fun_count = 0;
 void init_ftrace(const char *img_elf){
-    FILE *fp= fopen("/home/xingk/ysyx-workbench/am-kernels/tests/cpu-tests/build/recursion-riscv64-nemu.elf","r");
+    FILE *fp= fopen(img_elf,"r");
     if(fp == NULL){
         printf("Can not open the %s \n",img_elf);
         assert(0);
