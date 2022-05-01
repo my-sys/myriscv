@@ -26,7 +26,9 @@ int printf(const char *fmt, ...) {
 int vsprintf(char *out, const char *fmt, va_list ap) {
   //panic("Not implemented");
     char* temp = out;
-    va_list args = ap; //parameters
+    va_list args; //parameters
+    va_copy(args,ap);
+
     for(;*fmt;fmt++){
         if(*fmt != '%'){
             *temp++ = *fmt;
