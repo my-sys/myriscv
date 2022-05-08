@@ -55,7 +55,7 @@ void xingk_ftrace(word_t next_pc, vaddr_t pc, bool flag){
     
     
 }
-
+#ifdef CONFIG_ITRACE 
 void xingk_iringbuf(Decode *s, vaddr_t pc){
 
   char *p = s->logbuf;
@@ -79,6 +79,7 @@ void xingk_iringbuf(Decode *s, vaddr_t pc){
 
   strcpy(iringbuf[g_nr_guest_inst%16], s->logbuf);
 }
+#endif 
 
 static void exec_once(Decode *s, vaddr_t pc) {
   
