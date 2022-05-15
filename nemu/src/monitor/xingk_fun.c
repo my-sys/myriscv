@@ -49,7 +49,9 @@ void init_ftrace(const char *img_elf){
         if((symbol_table + i)->st_info == 18){
             fun_name[fun_count].addr_value = (symbol_table + i)->st_value;
             fun_name[fun_count].size = (symbol_table + i)->st_size;
+            printf("%s \n",((symbol_table + i)->st_name +str_table) );
             strcpy(fun_name[fun_count].fun_name,(char*)((symbol_table + i)->st_name +str_table));
+            
             fun_count++;
         }
         if(fun_count > 200){printf("fun number is too large \n");assert(0);break;}
