@@ -110,7 +110,9 @@ void init_monitor(int argc, char *argv[]) {
   /* Open the ftrace_log and init */
  // IFDEF(CONFIG_FTRACE,init_ftrace(img_elf));
 #ifdef CONFIG_FTRACE
+    printf("hhhhh\n");
     init_ftrace(img_elf);
+    printf("hhhhh\n");
 #endif 
 
   /* Initialize memory. */
