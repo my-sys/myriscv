@@ -11,6 +11,22 @@ extern "C" {
 
 #define __NATIVE_USE_KLIB__
 
+// 堆区初始化函数 --- xingk 
+struct block{
+    size_t size; // 定义区块大小 8字节
+    int64_t is_free;//
+    struct block *pre;//8字节
+    struct block *next; //指向下一个区块   /*保证堆大小为64位*/
+};
+
+#define BLOCK_SIZE (sizeof(struct block))
+extern struct block *xingk_hbrk;
+void init_heap();
+
+int brk(void* addr);
+
+void* sbrk();
+// 即相关结构体的定义
 // string.h
 void  *memset    (void *s, int c, size_t n);
 void  *memcpy    (void *dst, const void *src, size_t n);

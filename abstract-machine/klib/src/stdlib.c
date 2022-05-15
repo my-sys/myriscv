@@ -3,6 +3,8 @@
 #include <klib-macros.h>
 
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
+struct block *xingk_hbrk;
+typedef struct block Block;
 static unsigned long int next = 1;
 
 int rand(void) {
@@ -29,17 +31,87 @@ int atoi(const char* nptr) {
   return x;
 }
 
+int brk(void* addr){
+
+    return 0;
+}
+
+void* sbrk(intptr_t increment){
+
+    return xingk_hbrk;
+}
+// xingk 初始化堆
+void init_heap(){
+    xingk_hbrk = (void *)ROUNDUP(heap.start, 8);
+    char *end = (void *)ROUNDDOWN(heap.end,8);
+    xingk_hbrk->size = (uintptr_t)end - (uintptr_t)xingk_hbrk;
+    xingk_hbrk->pre = NULL;
+    xingk_hbrk->next = NULL;
+}
+
 void *malloc(size_t size) {
   // On native, malloc() will be called during initializaion of C runtime.
   // Therefore do not call panic() here, else it will yield a dead recursion:
   //   panic() -> putchar() -> (glibc) -> malloc() -> panic()
 #if !(defined(__ISA_NATIVE__) && defined(__NATIVE_USE_KLIB__))
-  panic("Not implemented");
+  //panic("Not implemented");
+  Block *temp;
+  if(size == 0){
+      return NULL;
+  }
+  size_t temp_size = ROUNDUP(size,8);
+  temp = (Block*)xingk_hbrk;
+  while(temp != 0){
+      if(temp->is_free == 0){
+          temp = temp->next;
+          continue;
+      }
+      
+      if(temp->size > temp_size + BLOCK_SIZE &&
+              temp->size <= temp_size + BLOCK_SIZE*2){
+          temp->is_free = 0;
+          return (temp + BLOCK_SIZE);
+      }
+
+      if(temp->size > temp_size + BLOCK_SIZE * 2){
+          // split
+          Block* next = (Block*)(temp + temp_size + BLOCK_SIZE);
+          next->pre = temp;
+          next->next = temp->next;
+          next->is_free = 1;
+          next->size = temp->size - (temp_size + BLOCK_SIZE);
+          return (temp + BLOCK_SIZE);
+      }
+     temp = temp->next;
+
+     
+  }
 #endif
   return NULL;
 }
 
 void free(void *ptr) {
+  Block* temp = (Block*)(ptr - BLOCK_SIZE);
+  if(temp->is_free != 0){
+      return;
+  }
+  temp->is_free = 1;
+  if(temp->pre != NULL && temp->pre->is_free == 1){
+      //merge
+      temp->pre->next = temp->next;
+      if(temp->next != NULL){
+          temp->next->pre = temp->pre;
+      }
+      temp->pre->size += temp->size;
+      temp = temp->pre;
+  }
+
+  if(temp->next != NULL && temp->next->is_free == 1){
+      //merge
+      temp->size += temp->next->size;
+      temp->next = temp->next->next;
+  }
+
 }
 
 #endif
