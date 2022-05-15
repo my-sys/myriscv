@@ -54,14 +54,23 @@ word_t paddr_read(paddr_t addr, int len) {
 #endif 
   IFDEF(CONFIG_DEVICE, return mmio_read(addr, len));
 #ifdef CONFIG_MTRACE  
-  fprintf(mtrace_log_fp, "      !!!!!!! out_of_bound 0x%x\n",addr);
+  fprintf(mtrace_log_fp, "      !!!!!!!  read out_of_bound 0x%x\n",addr);
 #endif 
   out_of_bound(addr);
   return 0;
 }
 
 void paddr_write(paddr_t addr, int len, word_t data) {
+#ifdef CONFIG_MTRACE
+  fprintf(mtrace_log_fp,"== memory write 0x%x\n",addr);
+#endif 
   if (likely(in_pmem(addr))) { pmem_write(addr, len, data); return; }
+#ifdef CONFIG_MTRACE  
+  fprintf(mtrace_log_fp,"** device write 0x%x\n",addr);
+#endif 
   IFDEF(CONFIG_DEVICE, mmio_write(addr, len, data); return);
+#ifdef CONFIG_MTRACE  
+  fprintf(mtrace_log_fp, "      !!!!!!! write out_of_bound 0x%x\n",addr);
+#endif 
   out_of_bound(addr);
 }
