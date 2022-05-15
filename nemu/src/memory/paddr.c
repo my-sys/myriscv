@@ -2,7 +2,7 @@
 #include <memory/paddr.h>
 #include <device/mmio.h>
 #include <isa.h>
-
+#include "../monitor/xingk_fun.h" 
 #if   defined(CONFIG_PMEM_MALLOC)
 static uint8_t *pmem = NULL;
 #else // CONFIG_PMEM_GARRAY
@@ -43,8 +43,19 @@ void init_mem() {
 }
 
 word_t paddr_read(paddr_t addr, int len) {
+//  char temp_buf[500]={};
+ // char *p = temp_buf; 
+#ifdef CONFIG_MTRACE
+  fprintf(mtrace_log_fp,"== memory read 0x%x\n",addr);
+#endif 
   if (likely(in_pmem(addr))) return pmem_read(addr, len);
+#ifdef CONFIG_MTRACE  
+  fprintf(mtrace_log_fp,"** device read 0x%x\n",addr);
+#endif 
   IFDEF(CONFIG_DEVICE, return mmio_read(addr, len));
+#ifdef CONFIG_MTRACE  
+  fprintf(mtrace_log_fp, "      !!!!!!! out_of_bound 0x%x\n",addr);
+#endif 
   out_of_bound(addr);
   return 0;
 }

@@ -1,5 +1,6 @@
 #include "xingk_fun.h"
 FILE *ftrace_log_fp = NULL;
+FILE *mtrace_log_fp = NULL;
 static value_fun_name fun_name[200] = {};
 static int fun_count = 0;
 void init_ftrace(const char *img_elf){
@@ -74,4 +75,12 @@ void find_fun_name(uint64_t value, char* str_fun_name){
         }
     }
     strcpy(str_fun_name,"???");
+}
+
+void init_mtrace(){
+    mtrace_log_fp = fopen("./mtrace_log.txt","w");
+    if(mtrace_log_fp == NULL){
+        printf("Can not open mtrace_log.txt\n");
+        assert(0);
+    }
 }

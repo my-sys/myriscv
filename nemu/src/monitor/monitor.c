@@ -113,7 +113,11 @@ void init_monitor(int argc, char *argv[]) {
     printf("hhhhh\n");
     init_ftrace(img_elf);
     printf("hhhhh\n");
-#endif 
+#endif
+
+#ifdef CONFIG_MTRACE
+   init_mtrace(); 
+#endif  
 
   /* Initialize memory. */
   init_mem();
