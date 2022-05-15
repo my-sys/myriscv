@@ -10,7 +10,7 @@
 typedef struct{
     uint64_t addr_value;
     uint64_t size;
-    char fun_name[25];
+    char fun_name[50];
 }value_fun_name;
 extern FILE *ftrace_log_fp ;
 void init_ftrace(const char *img_elf);
