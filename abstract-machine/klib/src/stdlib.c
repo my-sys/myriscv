@@ -3,7 +3,7 @@
 #include <klib-macros.h>
 
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
-struct block *xingk_hbrk;
+struct block *xingk_hbrk = NULL;
 typedef struct block Block;
 static unsigned long int next = 1;
 
@@ -53,15 +53,19 @@ void *malloc(size_t size) {
   // On native, malloc() will be called during initializaion of C runtime.
   // Therefore do not call panic() here, else it will yield a dead recursion:
   //   panic() -> putchar() -> (glibc) -> malloc() -> panic()
-#if !(defined(__ISA_NATIVE__) && defined(__NATIVE_USE_KLIB__))
+// #if !(defined(__ISA_NATIVE__) && defined(__NATIVE_USE_KLIB__))  --xingk
+#if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
   //panic("Not implemented");
   Block *temp;
   if(size == 0){
       return NULL;
   }
   size_t temp_size = ROUNDUP(size,8);
+  if(xingk_hbrk == NULL){
+    init_heap();
+  }
   temp = (Block*)xingk_hbrk;
-  while(temp != 0){
+  while(temp != NULL){
       if(temp->is_free == 0){
           temp = temp->next;
           continue;
