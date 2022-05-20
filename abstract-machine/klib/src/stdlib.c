@@ -66,6 +66,8 @@ void *malloc(size_t size) {
   if(xingk_hbrk == NULL){
 
     init_heap();
+    printf("heap 0x%d \n", (uint64_t)(heap.start));
+
     printf("heap 0x%x \n", (uint64_t)(heap.start));
   }
   temp = (Block*)xingk_hbrk;
