@@ -41,7 +41,7 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
                     temp = temp + strlen(temp);
                     break;
                 case 'x':
-                    uitoa(va_arg(args, unsigned long int),temp,16);
+                    uitoa(va_arg(args, long),temp,16);
 
                     temp = temp + strlen(temp);
                     break;
