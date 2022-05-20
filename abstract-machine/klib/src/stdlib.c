@@ -67,6 +67,7 @@ void *malloc(size_t size) {
     init_heap();
   }
   temp = (Block*)xingk_hbrk;
+  printf("0x%x\n", temp);
   while(temp != NULL){
       if(temp->is_free == 0){
           temp = temp->next;
