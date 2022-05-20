@@ -101,12 +101,12 @@ void *malloc(size_t size) {
     }
     printf("size %d,\n",size);
     size  = (size_t)ROUNDUP(size, 8);
-    size = size + 10;
+    //size = size + 10;
     printf("size1 %d\n",size);
     char *old = temp_hbrk;
     printf("malloc11 0x%x\n",temp_hbrk);
     temp_hbrk = temp_hbrk + 2;//size
-    printf("malloc22 0x%x\n",temp_hbrk);
+    printf("malloc22 0x%x\n",temp_hbrk + 2);
 //    assert((uintptr_t)heap.start <= (uintptr_t)temp_hbrk && (uintptr_t)temp_hbrk < (uintptr_t)heap.end);
     for (uint64_t *p = (uint64_t *)old; p != (uint64_t *)temp_hbrk; p ++) {
         *p = 0;
