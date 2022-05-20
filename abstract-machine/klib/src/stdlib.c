@@ -69,6 +69,7 @@ void *malloc(size_t size) {
     printf("heap 0x%d \n", (uint64_t)(heap.start));
 
     printf("heap 0x%x \n", (uint64_t)(heap.start));
+    printf("heap 0x%x \n", (uint64_t)(10000));
   }
   temp = (Block*)xingk_hbrk;
   printf("0x%x\n", (uint64_t)temp);
