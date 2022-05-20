@@ -85,7 +85,7 @@ void *malloc(size_t size) {
               temp->size <= temp_size + BLOCK_SIZE*2){
           printf("gggg \n");
           temp->is_free = 0;
-          return (temp + BLOCK_SIZE);
+          return ((void*)temp + BLOCK_SIZE);
       }
 
       if(temp->size > temp_size + BLOCK_SIZE * 2){
@@ -98,7 +98,7 @@ void *malloc(size_t size) {
           next->is_free = 1;
           next->size = temp->size - (temp_size + BLOCK_SIZE);
           printf("malloc zzz  0x%x,  0x%x,0x%x\n",temp, ((void *)temp + BLOCK_SIZE),BLOCK_SIZE);
-          return (temp + BLOCK_SIZE);
+          return ((void*)temp + BLOCK_SIZE);
       }
      temp = temp->next;
      printf("next\n");
