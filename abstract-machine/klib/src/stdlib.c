@@ -99,9 +99,9 @@ void *malloc(size_t size) {
     if(temp_hbrk == NULL){
         temp_hbrk = (void *)ROUNDUP(heap.start, 8);
     }
-
+    printf("size %d,\n",size);
     size  = (size_t)ROUNDUP(size, 8);
-
+    printf("size1 %d\n",size);
     char *old = temp_hbrk;
     temp_hbrk += size;
 //    assert((uintptr_t)heap.start <= (uintptr_t)temp_hbrk && (uintptr_t)temp_hbrk < (uintptr_t)heap.end);
