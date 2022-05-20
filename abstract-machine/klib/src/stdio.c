@@ -40,7 +40,7 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
 
                     temp = temp + strlen(temp);
                     break;
-                case 'x':
+                case 'k':
                     uitoa(va_arg(args, int),temp,16);
 
                     temp = temp + strlen(temp);
