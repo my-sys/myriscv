@@ -73,7 +73,7 @@ void *malloc(size_t size) {
   }
   temp = (Block*)xingk_hbrk;
   printf("0x%x\n", (uint64_t)temp);
-
+  printf("BLOCK_SIZE %d \n", BLOCK_SIZE);
   while(temp != NULL){
       if(temp->is_free == 0){
           temp = temp->next;
