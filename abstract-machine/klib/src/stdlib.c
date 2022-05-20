@@ -104,7 +104,7 @@ void *malloc(size_t size) {
     printf("size1 %d\n",size);
     char *old = temp_hbrk;
     printf("malloc11 0x%x\n",temp_hbrk);
-    temp_hbrk += 1;//size
+    temp_hbrk = temp_hbrk + 2;//size
     printf("malloc22 0x%x\n",temp_hbrk);
 //    assert((uintptr_t)heap.start <= (uintptr_t)temp_hbrk && (uintptr_t)temp_hbrk < (uintptr_t)heap.end);
     for (uint64_t *p = (uint64_t *)old; p != (uint64_t *)temp_hbrk; p ++) {
