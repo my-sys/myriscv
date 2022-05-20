@@ -95,6 +95,7 @@ void *malloc(size_t size) {
           Block* next = (Block*)((void*)temp + temp_size + BLOCK_SIZE);
           next->pre = temp;
           next->next = temp->next;
+          temp->next = next;
           next->is_free = 1;
           next->size = temp->size - (temp_size + BLOCK_SIZE);
           printf("malloc zzz  0x%x,  0x%x,0x%x\n",temp, ((void *)temp + BLOCK_SIZE),BLOCK_SIZE);
