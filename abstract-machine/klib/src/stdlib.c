@@ -109,7 +109,7 @@ void *malloc(size_t size) {
 }
 
 void free(void *ptr) {
-  Block* temp = (Block*)(ptr - BLOCK_SIZE);
+  /*Block* temp = (Block*)(ptr - BLOCK_SIZE);
   if(temp->is_free != 0){
       return;
   }
@@ -128,7 +128,7 @@ void free(void *ptr) {
       //merge
       temp->size += temp->next->size;
       temp->next = temp->next->next;
-  }
+  }*/
 
 }
 
