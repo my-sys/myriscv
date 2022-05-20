@@ -4,7 +4,7 @@
 
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
 struct block *xingk_hbrk = NULL;
-static char *temp_hbrk = NULL;
+ char *temp_hbrk = NULL;
 typedef struct block Block;
 static unsigned long int next = 1;
 
