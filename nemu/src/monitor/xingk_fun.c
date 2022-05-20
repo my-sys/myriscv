@@ -1,7 +1,7 @@
 #include "xingk_fun.h"
 FILE *ftrace_log_fp = NULL;
 FILE *mtrace_log_fp = NULL;
-static value_fun_name fun_name[200] = {};
+static value_fun_name fun_name[2000] = {};
 static int fun_count = 0;
 void init_ftrace(const char *img_elf){
     FILE *fp= fopen(img_elf,"r");
@@ -55,7 +55,7 @@ void init_ftrace(const char *img_elf){
             
             fun_count++;
         }
-        if(fun_count > 200){printf("fun number is too large \n");assert(0);break;}
+        if(fun_count > 2000){printf("fun number is too large \n");assert(0);break;}
     }
     fclose(fp);
 
