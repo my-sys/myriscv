@@ -177,7 +177,7 @@ char* uitoa(uint32_t value, char *str, int base){
         if(value ==0)break;
     }
     temp--;
-    if(temp >= reverse){
+    while(temp >= reverse){
         *str++ = *temp--;
     }
 
