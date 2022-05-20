@@ -4,6 +4,7 @@
 
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
 struct block *xingk_hbrk = NULL;
+static char *temp_hbrk = NULL;
 typedef struct block Block;
 static unsigned long int next = 1;
 
@@ -56,7 +57,7 @@ void *malloc(size_t size) {
 // #if !(defined(__ISA_NATIVE__) && defined(__NATIVE_USE_KLIB__))  --xingk
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
   //panic("Not implemented");
-  Block *temp;
+  /*Block *temp;
   if(size == 0){
       return NULL;
   }
@@ -89,7 +90,20 @@ void *malloc(size_t size) {
      temp = temp->next;
 
      
-  }
+  }*/
+    if(temp_hbrk == NULL){
+        temp_hbrk = (void *)ROUNDUP(heap.start, 8);
+    }
+
+    size  = (size_t)ROUNDUP(size, 8);
+
+    char *old = temp_hbrk;
+    temp_hbrk += size;
+    assert((uintptr_t)heap.start <= (uintptr_t)temp_hbrk && (uintptr_t)temp_hbrk < (uintptr_t)heap.end);
+    for (uint64_t *p = (uint64_t *)old; p != (uint64_t *)temp_hbrk; p ++) {
+        *p = 0;
+    }
+    return old;
 #endif
   return NULL;
 }
