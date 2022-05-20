@@ -91,6 +91,7 @@ void *malloc(size_t size) {
       if(temp->size > temp_size + BLOCK_SIZE * 2){
           printf("KKKKK \n");
           // split
+          temp->is_free = 0;
           Block* next = (Block*)(temp + temp_size + BLOCK_SIZE);
           next->pre = temp;
           next->next = temp->next;
