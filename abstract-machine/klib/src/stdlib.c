@@ -92,7 +92,7 @@ void *malloc(size_t size) {
           printf("KKKKK \n");
           // split
           temp->is_free = 0;
-          Block* next = (Block*)(temp + temp_size + BLOCK_SIZE);
+          Block* next = (Block*)((void*)temp + temp_size + BLOCK_SIZE);
           next->pre = temp;
           next->next = temp->next;
           next->is_free = 1;
