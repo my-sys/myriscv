@@ -48,6 +48,7 @@ void init_heap(){
     xingk_hbrk->size = (uintptr_t)end - (uintptr_t)xingk_hbrk;
     xingk_hbrk->pre = NULL;
     xingk_hbrk->next = NULL;
+    xingk_hbrk->is_free = 1;
 }
 
 void *malloc(size_t size) {
