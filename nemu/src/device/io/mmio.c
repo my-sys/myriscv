@@ -19,6 +19,7 @@ void add_mmio_map(const char *name, paddr_t addr, void *space, uint32_t len, io_
       maps[nr_map].name, maps[nr_map].low, maps[nr_map].high);
 
   nr_map ++;
+  printf("name :%s, addr: 0x%x\n",name,addr);
 }
 
 /* bus interface */
