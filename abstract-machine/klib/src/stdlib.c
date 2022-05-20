@@ -101,7 +101,7 @@ void *malloc(size_t size) {
     }
     printf("size %d,\n",size);
     size  = (size_t)ROUNDUP(size, 8);
-    printf("size1 %d\n",size);
+    printf("size1 %d\n",size+8);
     char *old = temp_hbrk;
     printf("malloc11 0x%x\n",temp_hbrk);
     temp_hbrk = temp_hbrk + 2;//size
