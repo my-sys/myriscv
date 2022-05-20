@@ -86,10 +86,11 @@ void *malloc(size_t size) {
           next->next = temp->next;
           next->is_free = 1;
           next->size = temp->size - (temp_size + BLOCK_SIZE);
+          printf("malloc 0x%x\n",temp+BLOCK_SIZE);
           return (temp + BLOCK_SIZE);
       }
      temp = temp->next;
-
+     
      
   }
    /* if(temp_hbrk == NULL){
