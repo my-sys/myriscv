@@ -99,7 +99,7 @@ void *malloc(size_t size) {
 
     char *old = temp_hbrk;
     temp_hbrk += size;
-    assert((uintptr_t)heap.start <= (uintptr_t)temp_hbrk && (uintptr_t)temp_hbrk < (uintptr_t)heap.end);
+//    assert((uintptr_t)heap.start <= (uintptr_t)temp_hbrk && (uintptr_t)temp_hbrk < (uintptr_t)heap.end);
     for (uint64_t *p = (uint64_t *)old; p != (uint64_t *)temp_hbrk; p ++) {
         *p = 0;
     }
