@@ -96,6 +96,7 @@ void *malloc(size_t size) {
      
      
   }*/
+    printf("lllll 0x%x\n",temp_hbrk);
     if(temp_hbrk == NULL){
         temp_hbrk = (void *)ROUNDUP(heap.start, 8);
         printf("malloc xx 0x%x\n",temp_hbrk);
