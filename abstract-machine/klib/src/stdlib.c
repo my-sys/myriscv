@@ -58,7 +58,7 @@ void *malloc(size_t size) {
 // #if !(defined(__ISA_NATIVE__) && defined(__NATIVE_USE_KLIB__))  --xingk
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
   //panic("Not implemented");
-  /*Block *temp;
+  Block *temp;
   if(size == 0){
       return NULL;
   }
@@ -66,10 +66,10 @@ void *malloc(size_t size) {
   if(xingk_hbrk == NULL){
 
     init_heap();
-    printf("heap 0x%x \n", *(heap.start));
+    printf("heap 0x%x \n", (uint64_t)(heap.start));
   }
   temp = (Block*)xingk_hbrk;
-  printf("0x%x\n", temp);
+  printf("0x%x\n", (uint64_t)temp);
   while(temp != NULL){
       if(temp->is_free == 0){
           temp = temp->next;
@@ -95,8 +95,8 @@ void *malloc(size_t size) {
      temp = temp->next;
      
      
-  }*/
-    printf("lllll 0x%x\n",temp_hbrk);
+  }
+    /*printf("lllll 0x%x\n",temp_hbrk);
     if(temp_hbrk == NULL){
         temp_hbrk = (void *)ROUNDUP(heap.start, 8);
         printf("malloc xx 0x%x\n",temp_hbrk);
@@ -118,7 +118,7 @@ void *malloc(size_t size) {
         *p = 0;
     }
     printf("malloc 0x%x\n",old);
-    return old;
+    return old;*/ 
 #endif
   return NULL;
 }
