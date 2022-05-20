@@ -106,6 +106,7 @@ void *malloc(size_t size) {
     //size = size + 10;
     printf("size1 %d\n",size);
     char *old = temp_hbrk;
+    temp_hbrk = (void *)(temp_hbrk+10);
     printf("malloc11 0x%x\n",temp_hbrk);
     temp_hbrk = temp_hbrk + 100;//size
     printf("malloc22 0x%x\n",temp_hbrk + 2);
