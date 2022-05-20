@@ -73,26 +73,30 @@ void *malloc(size_t size) {
   }
   temp = (Block*)xingk_hbrk;
   printf("0x%x\n", (uint64_t)temp);
+
   while(temp != NULL){
       if(temp->is_free == 0){
           temp = temp->next;
+          printf("malloc abcd \n");
           continue;
       }
       
       if(temp->size > temp_size + BLOCK_SIZE &&
               temp->size <= temp_size + BLOCK_SIZE*2){
+          printf("gggg \n");
           temp->is_free = 0;
           return (temp + BLOCK_SIZE);
       }
 
       if(temp->size > temp_size + BLOCK_SIZE * 2){
+          printf("KKKKK \n");
           // split
           Block* next = (Block*)(temp + temp_size + BLOCK_SIZE);
           next->pre = temp;
           next->next = temp->next;
           next->is_free = 1;
           next->size = temp->size - (temp_size + BLOCK_SIZE);
-          printf("malloc 0x%x\n",temp+BLOCK_SIZE);
+          printf("malloc zzz  0x%x\n",temp+BLOCK_SIZE);
           return (temp + BLOCK_SIZE);
       }
      temp = temp->next;
