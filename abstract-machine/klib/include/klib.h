@@ -45,7 +45,7 @@ char  *itoa      (int value, char *str, int base);
 // stdlib.h
 void   srand     (unsigned int seed);
 int    rand      (void);
-void  *malloc    (size_t size);
+void  *malloc    (size_t size) __attribute__ ((__used__));
 void   free      (void *ptr);
 int    abs       (int x);
 int    atoi      (const char *nptr);
