@@ -55,6 +55,9 @@ void *malloc(size_t size) {
 // #if !(defined(__ISA_NATIVE__) && defined(__NATIVE_USE_KLIB__))  --xingk
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
   size  = (size_t)ROUNDUP(size, 8);
+  if(hbrk == NULL){
+    init_heap();
+  }
   char *old = hbrk;
   hbrk += size;
   printf("0x%x,0x%x,0x%x,size = %d\n",heap.start,hbrk,heap.end,size);
