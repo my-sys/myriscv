@@ -134,26 +134,26 @@ void *malloc(size_t size) {
 }
 
 void free(void *ptr) {
-  Block* temp = (Block*)(ptr - BLOCK_SIZE);
-  if(temp->is_free != 0){
-      return;
-  }
-  temp->is_free = 1;
-  if(temp->pre != NULL && temp->pre->is_free == 1){
-      //merge
-      temp->pre->next = temp->next;
-      if(temp->next != NULL){
-          temp->next->pre = temp->pre;
-      }
-      temp->pre->size += temp->size;
-      temp = temp->pre;
-  }
+  // Block* temp = (Block*)(ptr - BLOCK_SIZE);
+  // if(temp->is_free != 0){
+  //     return;
+  // }
+  // temp->is_free = 1;
+  // if(temp->pre != NULL && temp->pre->is_free == 1){
+  //     //merge
+  //     temp->pre->next = temp->next;
+  //     if(temp->next != NULL){
+  //         temp->next->pre = temp->pre;
+  //     }
+  //     temp->pre->size += temp->size;
+  //     temp = temp->pre;
+  // }
 
-  if(temp->next != NULL && temp->next->is_free == 1){
-      //merge
-      temp->size += temp->next->size;
-      temp->next = temp->next->next;
-  }
+  // if(temp->next != NULL && temp->next->is_free == 1){
+  //     //merge
+  //     temp->size += temp->next->size;
+  //     temp->next = temp->next->next;
+  // }
 
 }
 
