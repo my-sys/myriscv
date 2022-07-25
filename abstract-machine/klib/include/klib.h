@@ -9,7 +9,7 @@
 extern "C" {
 #endif
 
-#define __NATIVE_USE_KLIB__
+//#define __NATIVE_USE_KLIB__
 
 // 堆区初始化函数 --- xingk 
 struct block{
