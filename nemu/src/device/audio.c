@@ -15,7 +15,55 @@ enum {
 static uint8_t *sbuf = NULL;
 static uint32_t *audio_base = NULL;
 
+static uint32_t index_addr = 0;
+static void audio_play(void *userdata, uint8_t *stream, int len) {
+  int count = audio_base[5];
+  int nread = len;
+  if (count < len) nread = count;
+
+  if(index_addr + nread > CONFIG_SB_SIZE){
+    char *src = (char *)sbuf + index_addr;
+    uint32_t temp_count = CONFIG_SB_SIZE - index_addr;
+    strncpy((char *)stream,src,temp_count);
+    src = (char *)sbuf;
+    strncpy((char*)stream,src+temp_count,len - temp_count);
+    index_addr = (index_addr + nread)% CONFIG_SB_SIZE;
+  }else{
+    char * src = (char *)sbuf + index_addr;
+    strncpy((char*)stream,src,nread);
+    index_addr = index_addr + nread;
+  }
+  // int b = 0;
+  // while (b < nread) {
+  //   int n = audio_base[3]; //????
+  //   strncpy(stream,sbuf,nread); //???
+  //   //int n = read(rfd, stream, nread);
+  //   if (n > 0) b += n;
+  // }
+
+  count -= nread;
+  index_addr = index_addr + nread;
+  audio_base[5] = count;
+  if (len > nread) {
+    memset(stream + nread, 0, len - nread);
+  }
+}
+
 static void audio_io_handler(uint32_t offset, int len, bool is_write) {
+  if(is_write && offset == 0x10){
+    SDL_AudioSpec s = {};
+    s.freq = audio_base[0];
+    s.format = AUDIO_S16SYS;
+    s.channels = audio_base[1];
+    s.samples = audio_base[2];
+    s.callback = audio_play;
+    s.userdata = NULL;
+    int ret = SDL_InitSubSystem(SDL_INIT_AUDIO);
+    if (ret == 0) {
+      SDL_OpenAudio(&s, NULL);
+      SDL_PauseAudio(0);
+    } 
+  }
 }
 
 void init_audio() {
@@ -29,4 +77,8 @@ void init_audio() {
 
   sbuf = (uint8_t *)new_space(CONFIG_SB_SIZE);
   add_mmio_map("audio-sbuf", CONFIG_SB_ADDR, sbuf, CONFIG_SB_SIZE, NULL);
+
+
+
+
 }
