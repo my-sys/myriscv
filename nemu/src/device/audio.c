@@ -45,7 +45,7 @@ static void audio_play(void *userdata, uint8_t *stream, int len) {
 
   count -= nread;
   //index_addr = index_addr + nread;
-  audio_base[5] = count;
+  audio_base[5] = audio_base[5] - nread;
   if (len > nread) {
     memset(stream + nread, 0, len - nread);
   }
