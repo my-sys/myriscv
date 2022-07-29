@@ -38,7 +38,7 @@ void __am_audio_play(AM_AUDIO_PLAY_T *ctl) {
   uint32_t count;
   do{
     count = inl(AUDIO_COUNT_ADDR);
-  }while(count+len);
+  }while((count+len)>buf_size);
   //buf 缓冲区循环
   if(index_addr + len > buf_size){
     char * dest = (char *)AUDIO_SBUF_ADDR + index_addr;
