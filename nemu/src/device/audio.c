@@ -24,6 +24,7 @@ static void audio_play(void *userdata, uint8_t *stream, int len) {
   if(index_addr + nread > CONFIG_SB_SIZE){
     char *src = (char *)sbuf + index_addr;
     uint32_t temp_count = CONFIG_SB_SIZE - index_addr;
+    printf("aa size %d,index %d\n",temp_count,index_addr);
     strncpy((char *)stream,src,temp_count);
     src = (char *)sbuf;
     strncpy((char*)stream,src+temp_count,len - temp_count);
