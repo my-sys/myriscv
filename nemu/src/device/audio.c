@@ -64,6 +64,7 @@ static void audio_io_handler(uint32_t offset, int len, bool is_write) {
     if (ret == 0) {
       SDL_OpenAudio(&s, NULL);
       SDL_PauseAudio(0);
+      printf("audio success\n");
     } 
   }
 }
