@@ -61,6 +61,7 @@ static void audio_io_handler(uint32_t offset, int len, bool is_write) {
     s.samples = audio_base[2];
     s.callback = audio_play;
     s.userdata = NULL;
+    printf("%d,%d,%d\n",audio_base[0],audio_base[1],audio_base[2]);
     int ret = SDL_InitSubSystem(SDL_INIT_AUDIO);
     if (ret == 0) {
       SDL_OpenAudio(&s, NULL);
