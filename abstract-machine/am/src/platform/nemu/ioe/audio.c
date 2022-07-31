@@ -9,11 +9,10 @@
 #define AUDIO_INIT_ADDR      (AUDIO_ADDR + 0x10)
 #define AUDIO_COUNT_ADDR     (AUDIO_ADDR + 0x14)
 
-static uint32_t index_addr;
-static uint32_t buf_size;
+static uint32_t index_addr = 0;
+static uint32_t buf_size = 0x10000;
 void __am_audio_init() {
-  index_addr = 0;
-  buf_size = 0x10000;
+
   //buf_size = inl(AUDIO_SBUF_SIZE_ADDR);
 }
 
