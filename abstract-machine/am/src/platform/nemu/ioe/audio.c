@@ -53,8 +53,8 @@ void __am_audio_play(AM_AUDIO_PLAY_T *ctl) {
   //   strncpy(dest,ctl->buf.start,len);
   //   index_addr = index_addr + len;
   // }
-  char * dest = (char *)AUDIO_SBUF_ADDR + index_addr;
-  strncpy(dest,ctl->buf.start,len);
+  uint8_t * dest = (uint8_t *)AUDIO_SBUF_ADDR + index_addr;
+  memcpy(dest,ctl->buf.start,len);
   index_addr = index_addr + len;
   outl(AUDIO_COUNT_ADDR,count+len);
 }
