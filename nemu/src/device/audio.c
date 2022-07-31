@@ -38,10 +38,10 @@ static void audio_play(void *userdata, uint8_t *stream, int len) {
   // if (len > nread) {
   //   memset(stream + nread, 0, len - nread);
   // }
-
-    char * src = (char *)sbuf + index_addr;
-    strncpy((char*)stream,src,len);
-    index_addr = index_addr + len;  
+  char * src = (char *)sbuf + index_addr;
+  strncpy((char*)stream,src,len);
+  index_addr = index_addr + len; 
+  audio_base[5] = audio_base[5] - len; 
 }
 
 static void audio_io_handler(uint32_t offset, int len, bool is_write) {
