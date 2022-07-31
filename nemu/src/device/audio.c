@@ -19,7 +19,6 @@ static uint32_t index_addr = 0;
 pthread_mutex_t mutex;
 static void audio_play(void *userdata, uint8_t *stream, int len) {
   int nread = len;
-  printf("B1\n");
   if (audio_base[5] < len) nread = audio_base[5];
 
   // if(index_addr + nread > CONFIG_SB_SIZE){
@@ -44,9 +43,6 @@ static void audio_play(void *userdata, uint8_t *stream, int len) {
   strncpy((char*)stream,src,nread);
   index_addr = index_addr + nread; 
   audio_base[5] = audio_base[5] - nread;
-  printf("B2\n");
-  
-
 }
 
 static void audio_io_handler(uint32_t offset, int len, bool is_write) {

@@ -39,7 +39,6 @@ void __am_audio_play(AM_AUDIO_PLAY_T *ctl) {
   uint32_t count;
   do{
     count = inl(AUDIO_COUNT_ADDR);
-    printf("A1\n");
   }while((count+len)>buf_size);
   //buf 缓冲区循环
   // if(index_addr + len > buf_size){
@@ -58,5 +57,4 @@ void __am_audio_play(AM_AUDIO_PLAY_T *ctl) {
   strncpy(dest,ctl->buf.start,len);
   index_addr = index_addr + len;
   outl(AUDIO_COUNT_ADDR,count+len);
-  printf("A2\n");
 }
