@@ -63,5 +63,4 @@ void __am_gpu_fbdraw(AM_GPU_FBDRAW_T *ctl) {
   SDL_Rect rect = { .x = x, .y = y };
   SDL_BlitSurface(s, NULL, surface, &rect);
   SDL_FreeSurface(s);
-  printf("kk l\n");
 }
