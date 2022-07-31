@@ -84,7 +84,7 @@ void init_audio() {
     s.samples = 1024;
     s.callback = audio_play;
     s.userdata = NULL;
-    printf("%d,%d,%d\n",audio_base[0],audio_base[1],audio_base[2]);
+    printf("kkk %d,%d,%d\n",audio_base[0],audio_base[1],audio_base[2]);
     int ret = SDL_InitSubSystem(SDL_INIT_AUDIO);
     if (ret == 0) {
       SDL_OpenAudio(&s, NULL);
