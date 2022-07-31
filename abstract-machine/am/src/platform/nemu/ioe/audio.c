@@ -36,9 +36,9 @@ void __am_audio_status(AM_AUDIO_STATUS_T *stat) {
 void __am_audio_play(AM_AUDIO_PLAY_T *ctl) {
   int len = ctl->buf.end - ctl->buf.start;
   uint32_t count;
-  do{
+  //do{
     count = inl(AUDIO_COUNT_ADDR);
-  }while((count+len)>buf_size);
+  //}while((count+len)>buf_size);
   //buf 缓冲区循环
   // if(index_addr + len > buf_size){
   //   char * dest = (char *)AUDIO_SBUF_ADDR + index_addr;
