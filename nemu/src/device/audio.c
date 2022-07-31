@@ -62,12 +62,6 @@ static void audio_io_handler(uint32_t offset, int len, bool is_write) {
       printf("audio success\n");
     } 
   }
-  if(is_write && offset == 0x14){
-    pthread_mutex_unlock(&mutex);
-  }
-  if(!is_write && offset == 0x14){
-    pthread_mutex_lock(&mutex);
-  }
 }
 
 void init_audio() {
