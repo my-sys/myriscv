@@ -19,38 +19,25 @@ static uint32_t index_addr = 0;
 static void audio_play(void *userdata, uint8_t *stream, int len) {
   int count = audio_base[5];
   int nread = len;
-  //printf("count %d,len %d\n",count,len);
   if (count < len) nread = count;
 
   if(index_addr + nread > CONFIG_SB_SIZE){
     char *src = (char *)sbuf + index_addr;
     uint32_t temp_count = CONFIG_SB_SIZE - index_addr;
-    //printf("aa size %d,index %d\n",temp_count,index_addr);
     strncpy((char *)stream,src,temp_count);
     src = (char *)sbuf;
     strncpy((char*)stream+temp_count,src,len - temp_count);
     index_addr = (index_addr + nread)% CONFIG_SB_SIZE;
   }else{
-    //printf("index %d\n",index_addr);
     char * src = (char *)sbuf + index_addr;
     strncpy((char*)stream,src,nread);
     index_addr = index_addr + nread;
   }
-  // int b = 0;
-  // while (b < nread) {
-  //   int n = audio_base[3]; //????
-  //   strncpy(stream,sbuf,nread); //???
-  //   //int n = read(rfd, stream, nread);
-  //   if (n > 0) b += n;
-  // }
-
   count -= nread;
-  //index_addr = index_addr + nread;
   audio_base[5] = audio_base[5] - nread;
   if (len > nread) {
     memset(stream + nread, 0, len - nread);
   }
-  printf("a\n");
 }
 
 static void audio_io_handler(uint32_t offset, int len, bool is_write) {

@@ -40,23 +40,20 @@ void __am_audio_play(AM_AUDIO_PLAY_T *ctl) {
     count = inl(AUDIO_COUNT_ADDR);
   }while((count+len)>buf_size);
   //buf 缓冲区循环
-  if(index_addr + len > buf_size){
-    char * dest = (char *)AUDIO_SBUF_ADDR + index_addr;
-    uint32_t temp_count = buf_size - index_addr;
-    strncpy(dest,ctl->buf.start,temp_count);
-    dest = (char *)AUDIO_SBUF_ADDR;
-    strncpy(dest,ctl->buf.start+temp_count,len - temp_count);
-    index_addr = (index_addr + len)% buf_size;
-  }else{
-    char * dest = (char *)AUDIO_SBUF_ADDR + index_addr;
-    strncpy(dest,ctl->buf.start,len);
-    index_addr = index_addr + len;
-  }
+  // if(index_addr + len > buf_size){
+  //   char * dest = (char *)AUDIO_SBUF_ADDR + index_addr;
+  //   uint32_t temp_count = buf_size - index_addr;
+  //   strncpy(dest,ctl->buf.start,temp_count);
+  //   dest = (char *)AUDIO_SBUF_ADDR;
+  //   strncpy(dest,ctl->buf.start+temp_count,len - temp_count);
+  //   index_addr = (index_addr + len)% buf_size;
+  // }else{
+  //   char * dest = (char *)AUDIO_SBUF_ADDR + index_addr;
+  //   strncpy(dest,ctl->buf.start,len);
+  //   index_addr = index_addr + len;
+  // }
+  char * dest = (char *)AUDIO_SBUF_ADDR + index_addr;
+  strncpy(dest,ctl->buf.start,len);
+  index_addr = index_addr + len;
   outl(AUDIO_COUNT_ADDR,count+len);
-
-  // char * dest = AUDIO_SBUF_ADDR;
-  // uint32_t count = inl(AUDIO_COUNT_ADDR);
-  // strncpy(dest,ctl->buf.start,len);
-  // outl(count+len);
-  //audio_write(ctl->buf.start, len);  
 }
