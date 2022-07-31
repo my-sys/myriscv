@@ -40,6 +40,7 @@ void __am_audio_play(AM_AUDIO_PLAY_T *ctl) {
   do{
     count = inl(AUDIO_COUNT_ADDR);
   }while((count+len)>buf_size);
+  printf("zz\n");
   //buf 缓冲区循环
   if(index_addr + len > buf_size){
     uint8_t * dest = (uint8_t *)AUDIO_SBUF_ADDR + index_addr;

@@ -37,7 +37,6 @@ static void audio_play(void *userdata, uint8_t *stream, int len) {
   if (len > nread) {
     memset(stream + nread, 0, len - nread);
   }
-  printf("AB\n");
   // uint8_t * src = (uint8_t *)sbuf + index_addr;
   // memcpy(stream,src,nread);
   // if (len > nread) {
