@@ -1,7 +1,7 @@
 #include <common.h>
 #include <device/map.h>
 #include <SDL2/SDL.h>
-
+#include <pthread.h>
 enum {
   reg_freq,
   reg_channels,
@@ -16,10 +16,11 @@ static uint8_t *sbuf = NULL;
 static uint32_t *audio_base = NULL;
 
 static uint32_t index_addr = 0;
+pthread_mutex_t mutex;
 static void audio_play(void *userdata, uint8_t *stream, int len) {
-  // int count = audio_base[5];
-  // int nread = len;
-  // if (count < len) nread = count;
+  int nread = len;
+  printf("B1\n");
+  if (audio_base[5] < len) nread = audio_base[5];
 
   // if(index_addr + nread > CONFIG_SB_SIZE){
   //   char *src = (char *)sbuf + index_addr;
@@ -38,10 +39,14 @@ static void audio_play(void *userdata, uint8_t *stream, int len) {
   // if (len > nread) {
   //   memset(stream + nread, 0, len - nread);
   // }
+  
   char * src = (char *)sbuf + index_addr;
-  strncpy((char*)stream,src,len);
-  index_addr = index_addr + len; 
-  audio_base[5] = audio_base[5] - len; 
+  strncpy((char*)stream,src,nread);
+  index_addr = index_addr + nread; 
+  audio_base[5] = audio_base[5] - nread;
+  printf("B2\n");
+  
+
 }
 
 static void audio_io_handler(uint32_t offset, int len, bool is_write) {
@@ -60,6 +65,12 @@ static void audio_io_handler(uint32_t offset, int len, bool is_write) {
       SDL_PauseAudio(0);
       printf("audio success\n");
     } 
+  }
+  if(is_write && offset == 0x14){
+    pthread_mutex_unlock(&mutex);
+  }
+  if(!is_write && offset == 0x14){
+    pthread_mutex_lock(&mutex);
   }
 }
 
