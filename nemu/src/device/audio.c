@@ -21,31 +21,30 @@ static void audio_play(void *userdata, uint8_t *stream, int len) {
   int nread = len;
   if (audio_base[5] < len) nread = audio_base[5];
 
-  // if(index_addr + nread > CONFIG_SB_SIZE){
-  //   char *src = (char *)sbuf + index_addr;
-  //   uint32_t temp_count = CONFIG_SB_SIZE - index_addr;
-  //   strncpy((char *)stream,src,temp_count);
-  //   src = (char *)sbuf;
-  //   strncpy((char*)stream+temp_count,src,len - temp_count);
-  //   index_addr = (index_addr + nread)% CONFIG_SB_SIZE;
-  // }else{
-  //   char * src = (char *)sbuf + index_addr;
-  //   strncpy((char*)stream,src,nread);
-  //   index_addr = index_addr + nread;
-  // }
-  // count -= nread;
-  // audio_base[5] = audio_base[5] - nread;
-  // if (len > nread) {
-  //   memset(stream + nread, 0, len - nread);
-  // }
-  
-  uint8_t * src = (uint8_t *)sbuf + index_addr;
-  memcpy(stream,src,nread);
+  if(index_addr + nread > CONFIG_SB_SIZE){
+    uint8_t *src = (uint8_t *)sbuf + index_addr;
+    uint32_t temp_count = CONFIG_SB_SIZE - index_addr;
+    memcpy((uint8_t *)stream,src,temp_count);
+    src = (uint8_t *)sbuf;
+    memcpy((uint8_t*)stream+temp_count,src,len - temp_count);
+    index_addr = (index_addr + nread)% CONFIG_SB_SIZE;
+  }else{
+    uint8_t * src = (uint8_t *)sbuf + index_addr;
+    memcpy((uint8_t*)stream,src,nread);
+    index_addr = index_addr + nread;
+  }
+  audio_base[5] = audio_base[5] - nread;
   if (len > nread) {
     memset(stream + nread, 0, len - nread);
   }
-  index_addr = index_addr + nread; 
-  audio_base[5] = audio_base[5] - nread;
+  
+  // uint8_t * src = (uint8_t *)sbuf + index_addr;
+  // memcpy(stream,src,nread);
+  // if (len > nread) {
+  //   memset(stream + nread, 0, len - nread);
+  // }
+  // index_addr = index_addr + nread; 
+  //audio_base[5] = audio_base[5] - nread;
 }
 
 static void audio_io_handler(uint32_t offset, int len, bool is_write) {
