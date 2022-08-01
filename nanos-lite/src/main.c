@@ -7,9 +7,9 @@ void init_irq(void);
 void init_fs(void);
 void init_proc(void);
 
-int main() {printf("halo\n");
+int main() {
   extern const char logo[];
-  printf("%s", logo);
+  printf("%s", logo);printf("halo\n");
   Log("'Hello World!' from Nanos-lite");
   Log("Build time: %s, %s", __TIME__, __DATE__);
   
