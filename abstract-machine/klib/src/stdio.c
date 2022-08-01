@@ -7,7 +7,7 @@
 
 int printf(const char *fmt, ...) {
   //panic("Not implemented");
-  char buf[512];
+  char buf[5120];
   int ret = 0;
   va_list ap;
   char *temp = buf;  
@@ -15,10 +15,10 @@ int printf(const char *fmt, ...) {
   va_start(ap,fmt);
   vsprintf(buf, fmt, ap);
   va_end(ap);
-  int i = 0;
-  while(*(temp+i) && i < 510){
+
+  while(*temp){
       putch(*temp);
-      i++;
+      temp++;
   }
  return ret;
 } 
