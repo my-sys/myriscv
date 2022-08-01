@@ -15,10 +15,10 @@ int printf(const char *fmt, ...) {
   va_start(ap,fmt);
   vsprintf(buf, fmt, ap);
   va_end(ap);
-
-  while(*temp){
+  int i = 0;
+  while(*(temp+i) && i < 512){
       putch(*temp);
-      temp++;
+      i++;
   }
  return ret;
 } 
