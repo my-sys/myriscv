@@ -7,7 +7,7 @@
 
 int printf(const char *fmt, ...) {
   //panic("Not implemented");
-  char buf[1024];
+  char buf[2048];
   int ret = 0;
   va_list ap;
   char *temp = buf;  
