@@ -16,7 +16,7 @@ int printf(const char *fmt, ...) {
   vsprintf(buf, fmt, ap);
   va_end(ap);
   int i = 0;
-  while(*(temp+i) && i < 512){
+  while(*(temp+i) && i < 510){
       putch(*temp);
       i++;
   }
