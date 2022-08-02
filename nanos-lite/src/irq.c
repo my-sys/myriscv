@@ -3,10 +3,11 @@
 static Context* do_event(Event e, Context* c) {
   switch (e.event) {
     case EVENT_YIELD : 
-    asm volatile("csrrw t1,mepc,t2 \n\t"
-      "addi t1,t1,4\n\t"
-      "csrrw t1,mepc,t1\n"
-    );
+    // asm volatile("csrrw t1,mepc,t2 \n\t"
+    //   "addi t1,t1,4\n\t"
+    //   "csrrw t1,mepc,t1\n"
+    // );
+    c->mepc = c->mepc + 4;
     printf(" yield1 \n");break;
     default: panic("Unhandled event ID = %d", e.event);
   }
