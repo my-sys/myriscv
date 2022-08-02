@@ -7,7 +7,7 @@ static Context* do_event(Event e, Context* c) {
       "addi t1,t1,4\n\t"
       "csrrw t1,mepc,t1\n"
     );
-    printf(" yield \n");break;
+    printf(" yield1 \n");break;
     default: panic("Unhandled event ID = %d", e.event);
   }
 
