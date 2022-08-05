@@ -172,7 +172,7 @@ char* uitoa(uint32_t value, char *str, int base){
     *temp++ = '\0';
 
     while(value >=0){
-        *temp++ = "0123456789abcdf"[value%base];
+        *temp++ = "0123456789abcdef"[value%base];
         value = value / base;
         if(value ==0)break;
     }

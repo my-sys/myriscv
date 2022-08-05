@@ -32,7 +32,7 @@ static uintptr_t loader(PCB *pcb, const char *filename) {
   Elf64_Ehdr elf_head;
   ramdisk_read(&elf_head,0,sizeof(Elf64_Ehdr));
   //assert(*(uint32_t *)elf_head.e_ident == 0xBadC0de);
-  printf("magic 0x%x\n",0x464c45d);
+  printf("magic 0x%x\n",*(uint32_t *)elf_head.e_ident);
   Elf64_Phdr *phdr = (Elf64_Phdr*)malloc(sizeof(Elf64_Phdr)*elf_head.e_phnum);
   ramdisk_read(phdr,elf_head.e_phoff,sizeof(Elf64_Phdr)*elf_head.e_phnum);
   int idx;
