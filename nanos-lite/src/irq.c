@@ -34,13 +34,15 @@ static Context* do_event(Event e, Context* c) {
     printf(" yield1 \n");break;
     case EVENT_SYSCALL:
     c->mepc = c->mepc + 4;
-    printf(" yield2 \n");
+    
     if(c->gpr[17]== SYS_yield){
+      printf(" yield2 \n");
       yield();
       c->gpr[10] = 0;
 
     }
     if(c->gpr[17]== SYS_exit){
+      printf(" yield3 \n");
       halt(c->gpr[10]);
       c->gpr[10] = 0;
     }
