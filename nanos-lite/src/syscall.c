@@ -47,7 +47,7 @@ void do_syscall(Context *c) {
     case SYS_exit:halt(c->gpr[10]);c->gpr[10] = 0;break;
     case SYS_write:write(a[1],(void *)a[2],a[3]);
         c->gpr[10]=a[3];
-        printf("hello xingk\n");
+        printf("hello xingk %d\n",a[3]);
     break;
     default: panic("Unhandled syscall ID = %d", a[0]);
   }
