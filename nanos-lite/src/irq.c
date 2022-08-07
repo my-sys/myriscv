@@ -1,26 +1,5 @@
 #include <common.h>
-enum {
-  SYS_exit,
-  SYS_yield,
-  SYS_open,
-  SYS_read,
-  SYS_write,
-  SYS_kill,
-  SYS_getpid,
-  SYS_close,
-  SYS_lseek,
-  SYS_brk,
-  SYS_fstat,
-  SYS_time,
-  SYS_signal,
-  SYS_execve,
-  SYS_fork,
-  SYS_link,
-  SYS_unlink,
-  SYS_wait,
-  SYS_times,
-  SYS_gettimeofday
-};
+#include "syscall.h"
 
 static Context* do_event(Event e, Context* c) {
   switch (e.event) {
@@ -35,17 +14,7 @@ static Context* do_event(Event e, Context* c) {
     case EVENT_SYSCALL:
     c->mepc = c->mepc + 4;
     
-    if(c->gpr[17]== SYS_yield){
-      printf(" yield2 \n");
-      yield();
-      c->gpr[10] = 0;
-
-    }
-    if(c->gpr[17]== SYS_exit){
-      printf(" yield3 \n");
-      halt(c->gpr[10]);
-      c->gpr[10] = 0;
-    }
+    do_syscall(c);
     break;
     default: panic("Unhandled event ID = %d", e.event);
   }
