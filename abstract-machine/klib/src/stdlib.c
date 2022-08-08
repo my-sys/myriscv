@@ -40,8 +40,10 @@ int brk(void* addr){
 }
 
 void* sbrk(intptr_t increment){
-
-    return xingk_hbrk;
+  static uintptr_t program_break = 0;
+  intptr_t temp = (intptr_t)heap.start;
+  program_break = program_break + increment;
+  return (void*)temp;
 }
 // xingk 初始化堆
 void init_heap(){

@@ -25,7 +25,7 @@ void init_heap();
 
 int brk(void* addr);
 
-void* sbrk();
+void* sbrk(intptr_t increment);
 // 即相关结构体的定义
 // string.h
 void  *memset    (void *s, int c, size_t n);
