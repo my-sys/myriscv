@@ -38,10 +38,10 @@ int brk(void* addr){
 
     return 0;
 }
-
+extern char _heap_start;
 void* sbrk(intptr_t increment){
-  static uintptr_t program_break = 0;
-  intptr_t temp = (intptr_t)heap.start;
+  static uintptr_t program_break = (uintptr_t)&_heap_start;
+  uintptr_t temp = program_break;
   program_break = program_break + increment;
   return (void*)temp;
 }
