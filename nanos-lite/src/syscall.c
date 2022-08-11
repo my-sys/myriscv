@@ -42,6 +42,7 @@ void do_syscall(Context *c) {
       c->gpr[10]=fs_read(a[1],(void *)a[2],a[3]);
     break;
     case SYS_open:
+      printf("zzzkk \n");
       c->gpr[10]=fs_open((char *)a[1],a[2],a[3]);
     break;
     case SYS_close:
