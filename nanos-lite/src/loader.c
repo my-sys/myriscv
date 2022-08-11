@@ -46,7 +46,7 @@ static uintptr_t loader(PCB *pcb, const char *filename) {
   //   }
   // }  
   // return elf_head.e_entry;
-
+  printf(" loader \n");
   int len;
   int fd = fs_open(filename,0,0);
   Elf64_Ehdr elf_head;
