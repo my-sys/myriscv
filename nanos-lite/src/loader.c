@@ -49,7 +49,7 @@ static uintptr_t loader(PCB *pcb, const char *filename) {
   printf(" loader \n");
   int len;
   int fd = fs_open(filename,0,0);
-  printf(" fs_open \n");
+  printf(" fs_open %d\n",fd);
   Elf64_Ehdr elf_head;
   fs_read(fd,&elf_head,sizeof(Elf64_Ehdr));
   Elf64_Phdr *phdr = (Elf64_Phdr*)malloc(sizeof(Elf64_Phdr)*elf_head.e_phnum);
