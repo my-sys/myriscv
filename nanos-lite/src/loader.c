@@ -52,7 +52,9 @@ static uintptr_t loader(PCB *pcb, const char *filename) {
   printf(" fs_open %d\n",fd);
   Elf64_Ehdr elf_head;
   fs_read(fd,&elf_head,sizeof(Elf64_Ehdr));
+   printf("abcddd \n");
   Elf64_Phdr *phdr = (Elf64_Phdr*)malloc(sizeof(Elf64_Phdr)*elf_head.e_phnum);
+   printf("abcqqd \n");
   len = fs_lseek(fd, elf_head.e_phoff, SEEK_SET);
   if(len <0){printf("error\n");}
   len = fs_read(fd,phdr,sizeof(phdr)*elf_head.e_phnum);
