@@ -32,53 +32,53 @@ static uintptr_t loader(PCB *pcb, const char *filename) {
   // }
 
   /****************** success *************************/
-  Elf64_Ehdr elf_head;
-  ramdisk_read(&elf_head,0,sizeof(Elf64_Ehdr));  
-  assert(*(uint32_t *)elf_head.e_ident == 0x464c457f);
-  //printf("magic 0x%x\n",*(uint32_t *)elf_head.e_ident);
-  Elf64_Phdr *phdr = (Elf64_Phdr*)malloc(sizeof(Elf64_Phdr)*elf_head.e_phnum);
-  ramdisk_read(phdr,elf_head.e_phoff,sizeof(Elf64_Phdr)*elf_head.e_phnum);
-  int idx;
-  for(idx = 0; idx < elf_head.e_phnum; idx++){
-    if(phdr[idx].p_type == PT_LOAD){
-      ramdisk_read((uint8_t *)phdr[idx].p_vaddr,phdr[idx].p_offset,phdr[idx].p_filesz);
-      printf("elf 0x%x, 0x%x,0x%x \n",(uint32_t)phdr[idx].p_vaddr,(uint32_t)phdr[idx].p_filesz,(uint32_t)phdr[idx].p_offset);
-      printf("mem1 0x%x\n",*((uint32_t *)phdr[idx].p_vaddr));
-      memset((uint8_t *)(phdr[idx].p_vaddr + phdr[idx].p_filesz),0,phdr[idx].p_memsz - phdr[idx].p_filesz);
-    }
-  }  
-  printf("loader 0x%x\n",(uint32_t)elf_head.e_entry);
+  // Elf64_Ehdr elf_head;
+  // ramdisk_read(&elf_head,0,sizeof(Elf64_Ehdr));  
+  // assert(*(uint32_t *)elf_head.e_ident == 0x464c457f);
+  // //printf("magic 0x%x\n",*(uint32_t *)elf_head.e_ident);
+  // Elf64_Phdr *phdr = (Elf64_Phdr*)malloc(sizeof(Elf64_Phdr)*elf_head.e_phnum);
+  // ramdisk_read(phdr,elf_head.e_phoff,sizeof(Elf64_Phdr)*elf_head.e_phnum);
+  // int idx;
+  // for(idx = 0; idx < elf_head.e_phnum; idx++){
+  //   if(phdr[idx].p_type == PT_LOAD){
+  //     ramdisk_read((uint8_t *)phdr[idx].p_vaddr,phdr[idx].p_offset,phdr[idx].p_filesz);
+  //     printf("elf 0x%x, 0x%x,0x%x \n",(uint32_t)phdr[idx].p_vaddr,(uint32_t)phdr[idx].p_filesz,(uint32_t)phdr[idx].p_offset);
+  //     printf("mem1 0x%x\n",*((uint32_t *)phdr[idx].p_vaddr));
+  //     memset((uint8_t *)(phdr[idx].p_vaddr + phdr[idx].p_filesz),0,phdr[idx].p_memsz - phdr[idx].p_filesz);
+  //   }
+  // }  
+  // printf("loader 0x%x\n",(uint32_t)elf_head.e_entry);
 
-  return elf_head.e_entry;
+  // return elf_head.e_entry;
 
 
   // printf(" loader \n");
-  // int len;
-  // int fd = fs_open(filename,0,0);
-  // printf(" fs_open %d\n",fd);
-  // Elf64_Ehdr elf_head;
-  // fs_read(fd,&elf_head,sizeof(Elf64_Ehdr));
-  //  printf("abcddd \n");
-  // Elf64_Phdr *phdr = (Elf64_Phdr*)malloc(sizeof(Elf64_Phdr)*elf_head.e_phnum);
-  //  printf("abcqqd \n");
-  // len = fs_lseek(fd, elf_head.e_phoff, SEEK_SET);
-  // if(len <0){printf("error\n");}
-  // len = fs_read(fd,phdr,sizeof(phdr)*elf_head.e_phnum);
-  // int idx;
-  // printf("abcd \n");
-  // for(idx = 0; idx < elf_head.e_phnum; idx++){
-  //   if(phdr[idx].p_type == PT_LOAD){
-  //     fs_lseek(fd, phdr[idx].p_offset, SEEK_SET);
-  //     fs_read(fd,(uint8_t *)phdr[idx].p_vaddr,phdr[idx].p_filesz);
-  //     printf("elf 0x%x, 0x%x,0x%x \n",(uint32_t)phdr[idx].p_vaddr,(uint32_t)phdr[idx].p_filesz,(uint32_t)phdr[idx].p_offset);
-  //     printf("mem1 0x%x,offset 0x%x\n",*((uint32_t *)phdr[idx].p_vaddr),(uint32_t)phdr[idx].p_offset);
-  //     printf("01x%x,size =%d\n",(uint32_t)phdr[idx].p_vaddr,(uint32_t)phdr[idx].p_filesz);
-  //     memset((uint8_t *)(phdr[idx].p_vaddr + phdr[idx].p_filesz),0,phdr[idx].p_memsz - phdr[idx].p_filesz);
-  //   }
-  // }
-  // printf(" loader ok \n");
-  // printf(" jump 0x%x\n",(uint32_t)elf_head.e_entry);
-  // return elf_head.e_entry;
+  int len;
+  int fd = fs_open(filename,0,0);
+  printf(" fs_open %d\n",fd);
+  Elf64_Ehdr elf_head;
+  fs_read(fd,&elf_head,sizeof(Elf64_Ehdr));
+   printf("abcddd \n");
+  Elf64_Phdr *phdr = (Elf64_Phdr*)malloc(sizeof(Elf64_Phdr)*elf_head.e_phnum);
+   printf("abcqqd \n");
+  len = fs_lseek(fd, elf_head.e_phoff, SEEK_SET);
+  if(len <0){printf("error\n");}
+  len = fs_read(fd,phdr,sizeof(Elf64_Phdr)*elf_head.e_phnum);
+  int idx;
+  printf("abcd \n");
+  for(idx = 0; idx < elf_head.e_phnum; idx++){
+    if(phdr[idx].p_type == PT_LOAD){
+      fs_lseek(fd, phdr[idx].p_offset, SEEK_SET);
+      fs_read(fd,(uint8_t *)phdr[idx].p_vaddr,phdr[idx].p_filesz);
+      printf("elf 0x%x, 0x%x,0x%x \n",(uint32_t)phdr[idx].p_vaddr,(uint32_t)phdr[idx].p_filesz,(uint32_t)phdr[idx].p_offset);
+      printf("mem1 0x%x,offset 0x%x\n",*((uint32_t *)phdr[idx].p_vaddr),(uint32_t)phdr[idx].p_offset);
+      printf("01x%x,size =%d\n",(uint32_t)phdr[idx].p_vaddr,(uint32_t)phdr[idx].p_filesz);
+      memset((uint8_t *)(phdr[idx].p_vaddr + phdr[idx].p_filesz),0,phdr[idx].p_memsz - phdr[idx].p_filesz);
+    }
+  }
+  printf(" loader ok \n");
+  printf(" jump 0x%x\n",(uint32_t)elf_head.e_entry);
+  return elf_head.e_entry;
 }
 
 void naive_uload(PCB *pcb, const char *filename) {
