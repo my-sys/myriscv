@@ -4,7 +4,7 @@
 int main() {
   FILE *fp = fopen("/share/files/num", "r+");
   assert(fp);
-  printf("hello \n");
+  printf("hello %d\n",fp->_file);
   fseek(fp, 0, SEEK_END);
   printf("helloz \n");
   long size = ftell(fp);
