@@ -49,7 +49,9 @@ void do_syscall(Context *c) {
       c->gpr[10]=fs_close(a[1]);
     break;
     case SYS_lseek:
+      
       c->gpr[10]=fs_lseek(a[1],a[2],a[3]);
+      printf("seek 0x%x, 0x%x, 0x%x, value = %d\n",a[1],a[2],a[3],c->gpr[10]);
     break;
     default: panic("Unhandled syscall ID = %d", a[0]);
   }
