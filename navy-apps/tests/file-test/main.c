@@ -6,6 +6,7 @@ int main() {
   assert(fp);
   printf("hello \n");
   fseek(fp, 0, SEEK_END);
+  printf("helloz \n");
   long size = ftell(fp);
   assert(size == 5000);
   printf("hello1 \n");
