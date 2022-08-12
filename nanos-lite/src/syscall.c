@@ -44,7 +44,7 @@ void do_syscall(Context *c) {
     case SYS_open:
       
       c->gpr[10]=fs_open((char *)a[1],a[2],a[3]);
-      printf("open 22 %d \n",c->gpr[10]);
+      printf("open 22 %d,%s \n",c->gpr[10],a[1]);
     break;
     case SYS_close:
       c->gpr[10]=fs_close(a[1]);
