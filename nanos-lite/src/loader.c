@@ -69,6 +69,7 @@ static uintptr_t loader(PCB *pcb, const char *filename) {
     }
   }
   printf(" loader ok \n");
+  printf(" jump 0x%x\n",(uint32_t)elf_head.e_entry);
   return elf_head.e_entry;
 }
 
