@@ -42,10 +42,12 @@ static uintptr_t loader(PCB *pcb, const char *filename) {
   for(idx = 0; idx < elf_head.e_phnum; idx++){
     if(phdr[idx].p_type == PT_LOAD){
       ramdisk_read((uint8_t *)phdr[idx].p_vaddr,phdr[idx].p_offset,phdr[idx].p_filesz);
+      printf("mem1 0x%x\n",*((uint32_t *)phdr[idx].p_vaddr));
       memset((uint8_t *)(phdr[idx].p_vaddr + phdr[idx].p_filesz),0,phdr[idx].p_memsz - phdr[idx].p_filesz);
     }
   }  
   printf("loader 0x%x\n",(uint32_t)elf_head.e_entry);
+
   return elf_head.e_entry;
 
 
