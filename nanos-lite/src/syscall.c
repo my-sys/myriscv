@@ -44,7 +44,7 @@ void do_syscall(Context *c) {
     case SYS_open:
       
       c->gpr[10]=fs_open((char *)a[1],a[2],a[3]);
-      printf("open 22 %d,%s \n",c->gpr[10],a[1]);
+      //printf("open 22 %d,%s \n",c->gpr[10],a[1]);
     break;
     case SYS_close:
       c->gpr[10]=fs_close(a[1]);
@@ -52,8 +52,11 @@ void do_syscall(Context *c) {
     case SYS_lseek:
       
       c->gpr[10]=fs_lseek(a[1],a[2],a[3]);
-      printf("seek 0x%x, 0x%x, 0x%x, value = %d\n",a[1],a[2],a[3],c->gpr[10]);
+      //printf("seek 0x%x, 0x%x, 0x%x, value = %d\n",a[1],a[2],a[3],c->gpr[10]);
     break;
-    default: panic("Unhandled syscall ID = %d", a[0]);
+    case SYS_gettimeofday:
+      c->gpr[10]=gettimeofday((struct timeval *)a[1],(struct timezone *)a[2]);
+    break;
+    default: panic("Unhandled syscall ID = %d", (uint32_t)a[0]);
   }
 }

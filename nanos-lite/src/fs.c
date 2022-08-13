@@ -1,5 +1,4 @@
 #include <fs.h>
-
 typedef size_t (*ReadFn) (void *buf, size_t offset, size_t len);
 typedef size_t (*WriteFn) (const void *buf, size_t offset, size_t len);
 
@@ -75,6 +74,15 @@ size_t fs_lseek(int fd, size_t offset, int whence){
 
 int fs_close(int fd){
   file_table[fd].open_offset = 0;
+  return 0;
+}
+
+
+int gettimeofday(struct timeval *tv, struct timezone *tz)
+{
+  uint64_t us = io_read(AM_TIMER_UPTIME).us;
+  tv->tv_sec = us/1000000;
+  tv->tv_usec = us % 1000000;
   return 0;
 }
 
