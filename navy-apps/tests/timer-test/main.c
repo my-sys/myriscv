@@ -10,7 +10,7 @@ int main(){
             
             gettimeofday(&tv_end,NULL);
             temp1 = tv_end.tv_sec*1000000 + tv_end.tv_usec;
-            printf("ha %d\n",tv_end.tv_sec);
+            printf("ha %d\n",temp1-temp);
         }while((temp1-temp) < 500000);
         printf("hello1 \n");
     }
