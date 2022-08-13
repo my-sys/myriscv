@@ -9,7 +9,7 @@ int main(){
         do{
             gettimeofday(&tv_end,NULL);
         }while((tv_end.tv_usec-tv_begin.tv_usec) < 500000);
-        printf("hello \n");
+        printf("hello1 \n");
     }
     
     return 0;
