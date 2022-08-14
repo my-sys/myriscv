@@ -26,7 +26,7 @@ int main(){
             temp1 = NDL_GetTicks();
             //printf("ha %d\n",temp1-temp);
         }while((temp1-temp) < 500);
-        printf("hello1 \n");
+        printf("hello2 \n");
     }   
     return 0;
 }
