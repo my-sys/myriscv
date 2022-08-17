@@ -1,5 +1,4 @@
 #include <common.h>
-#include "syscall.h"
 #include "fs.h"
 size_t write(int fd, void* buf, int count){
   char * temp = buf;
