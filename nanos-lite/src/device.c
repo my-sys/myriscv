@@ -64,7 +64,7 @@ size_t fb_write(const void *buf, size_t offset, size_t len) {
   int w = len >> 16;
   int h = len &0xffff;
   uint32_t * temp = (uint32_t *)buf;
-  printf("fb write ~~~ %x,%d,%d,%d,%x\n",buf,y,w,h,len);
+  printf("fb write ~~~ %x,%d,%d,%d,%x\n",temp,y,w,h,len);
   io_write(AM_GPU_FBDRAW, x, y, temp, w, h, true);
   return w*h;
 }
