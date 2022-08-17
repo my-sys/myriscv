@@ -43,11 +43,11 @@ void NDL_OpenCanvas(int *w, int *h) {
 
 void NDL_DrawRect(uint32_t *pixels, int x, int y, int w, int h) {
   FILE *fp = fopen("/dev/fb","w");
-  size_t temp_xy = x<<16+y;
+  size_t temp_xy = 5<<16+6;
   fseek(fp, temp_xy, SEEK_SET);
   size_t temp_wh = (w<<16) +h;
   printf("%d,%d,%d,%d,%x \n",x,y,w,h,temp_wh);
-  //fwrite(pixels,4,temp_wh,fp);
+  fwrite(pixels,4,temp_wh,fp);
 }
 
 void NDL_OpenAudio(int freq, int channels, int samples) {
