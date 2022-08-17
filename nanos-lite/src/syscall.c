@@ -31,8 +31,9 @@ void do_syscall(Context *c) {
     case SYS_yield:yield();c->gpr[10] = 0;break;
     case SYS_exit:halt(c->gpr[10]);c->gpr[10] = 0;break;
     case SYS_write:
+
         c->gpr[10]=write(a[1],(void *)a[2],a[3]);
-        //printf("hello xingk %d,%d,%d\n",a[1],a[2],a[3]);
+        printf("hello xingk %x,%x,%x\n",(uint32_t)a[1],(uint32_t)a[2],(uint32_t)a[3]);
     break;
     case SYS_brk:
       c->gpr[10]= (uintptr_t) sbrk(a[1]);
