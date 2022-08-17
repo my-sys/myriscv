@@ -46,7 +46,7 @@ void NDL_DrawRect(uint32_t *pixels, int x, int y, int w, int h) {
   size_t temp_xy = x<<16+y;
   fseek(fp, temp_xy, SEEK_SET);
   size_t temp_wh = w<<16 +h;
-  printf("%d,%d,%d,%d \n",x,y,w,h);
+  printf("%d,%d,%d,%d,%x \n",x,y,w,h,temp_wh);
   fwrite(pixels,4,temp_wh,fp);
 }
 
