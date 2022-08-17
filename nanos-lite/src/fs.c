@@ -56,7 +56,7 @@ size_t fs_read(int fd, void *buf, size_t len){
 
 size_t fs_write(int fd, const void *buf, size_t len){
   if(file_table[fd].write != NULL){
-    printf("0x%x\n",(__uint32_t)((uint64_t)&buf));
+    printf("0x%x\n",(__uint32_t)((uint64_t)buf));
     return file_table[fd].write(buf,file_table[fd].open_offset,len);
   }
   size_t size = file_table[fd].size;
