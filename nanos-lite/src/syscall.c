@@ -17,6 +17,7 @@ size_t write(int fd, void* buf, int count){
     }
     return count;    
   }else{
+    printf("write 0x%x\n",(uint32_t)((uint64_t )buf));
     return fs_write(fd,buf, count);
   }
 }
