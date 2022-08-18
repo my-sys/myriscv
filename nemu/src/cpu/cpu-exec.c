@@ -44,10 +44,10 @@ void xingk_ftrace(word_t next_pc, vaddr_t pc, bool flag){
     p += snprintf(p,sizeof(temp_buf), FMT_WORD ":", pc);
     find_fun_name(next_pc, temp);
     if(flag){
-        space_num = space_num+2;
+        //space_num = space_num+2;
         p += sprintf(p,"   %*s call [%s@0x%lx]",space_num,"",temp,next_pc);
     }else{
-        space_num = space_num - 2;
+        //space_num = space_num - 2;
         p += sprintf(p,"   %*s ret [%s@0x%lx]",space_num,"",temp,next_pc);
         
     }
