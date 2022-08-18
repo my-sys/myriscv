@@ -42,7 +42,7 @@ void NDL_OpenCanvas(int *w, int *h) {
 }
 
 void NDL_DrawRect(uint32_t *pixels, int x, int y, int w, int h) {
-  FILE *fp = fopen("/dev/fb","w");
+  FILE *fp = fopen("/dev/fb","r+");
   size_t temp_xy = (5<<x)+y;
   fseek(fp, temp_xy, SEEK_SET);
   size_t temp_wh = (w<<16) +h;
