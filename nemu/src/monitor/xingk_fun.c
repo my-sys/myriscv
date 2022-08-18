@@ -6,7 +6,7 @@ static int fun_count = 0;
 void init_ftrace(const char *img_elf){
     //FILE *fp= fopen(img_elf,"r");
     printf("init_ftrace\n ");
-    FILE *fp= fopen("~/ysyx-workbench/navy-apps/tests/bmp-test/build/bmp-test-riscv64","r");
+    FILE *fp= fopen("/home/xingk/ysyx-workbench/navy-apps/tests/bmp-test/build/bmp-test-riscv64","r");
     if(fp == NULL){
         printf("Can not open the %s \n",img_elf);
         assert(0);
