@@ -1,26 +1,26 @@
 #include <common.h>
 #include "fs.h"
-size_t write(int fd, void* buf, int count){
-  char * temp = buf;
-  // if(fd == 1){
-  //   for(int i = 0; i< count; i++){
-  //     putch(*(temp+i ));
-  //   }
-  // }else if(fd == 2){
-  //   for(int i = 0; i< count; i++){
-  //     putch(*(temp+i ));
-  //   }
-  // }
-  if(fd <=2){
-    for(int i = 0; i< count; i++){
-      putch(*(temp+i ));
-    }
-    return count;    
-  }else{
-    printf("write 0x%x\n",(uint32_t)((uint64_t )buf));
-    return fs_write(fd,buf, count);
-  }
-}
+// size_t write(int fd, void* buf, int count){
+//   char * temp = buf;
+//   // if(fd == 1){
+//   //   for(int i = 0; i< count; i++){
+//   //     putch(*(temp+i ));
+//   //   }
+//   // }else if(fd == 2){
+//   //   for(int i = 0; i< count; i++){
+//   //     putch(*(temp+i ));
+//   //   }
+//   // }
+//   if(fd <=2){
+//     for(int i = 0; i< count; i++){
+//       putch(*(temp+i ));
+//     }
+//     return count;    
+//   }else{
+//     printf("write 0x%x\n",(uint32_t)((uint64_t )buf));
+//     return fs_write(fd,buf, count);
+//   }
+// }
 
 void do_syscall(Context *c) {
   uintptr_t a[4];
@@ -33,7 +33,7 @@ void do_syscall(Context *c) {
     case SYS_exit:halt(c->gpr[10]);c->gpr[10] = 0;break;
     case SYS_write:
 
-        c->gpr[10]=write(a[1],(void *)a[2],a[3]);
+        c->gpr[10]=fs_write(a[1],(void *)a[2],a[3]);
         printf("hello xingk %x,%x,%x\n",(uint32_t)a[1],(uint32_t)a[2],(uint32_t)a[3]);
     break;
     case SYS_brk:
