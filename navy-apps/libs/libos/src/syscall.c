@@ -63,12 +63,13 @@ int _open(const char *path, int flags, mode_t mode) {
 
 int _write(int fd, void *buf, size_t count) {
   //printf("_write %x,%d\n",buf,count);
-  int ret;
-  if(fd != 5){
-     ret = _syscall_(SYS_write,fd,buf,count);
-  }else{
-    ret = _syscall_(SYS_read,fd,buf,count);
-  }
+  int ret = _syscall_(SYS_write,fd,buf,count);
+  // int ret;
+  // if(fd != 5){
+  //    ret = _syscall_(SYS_write,fd,buf,count);
+  // }else{
+  //   ret = _syscall_(SYS_read,fd,buf,count);
+  // }
   
 
   //int ret = _syscall_(SYS_read,fd,buf,count);
