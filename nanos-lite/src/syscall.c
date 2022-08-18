@@ -34,13 +34,13 @@ void do_syscall(Context *c) {
     case SYS_write:
 
         c->gpr[10]=fs_write(a[1],(void *)a[2],a[3]);
-        printf("hello xingk %x,%x,%x\n",(uint32_t)a[1],(uint32_t)a[2],(uint32_t)a[3]);
+        printf("hello xingkw %x,%x,%x\n",(uint32_t)a[1],(uint32_t)a[2],(uint32_t)a[3]);
     break;
     case SYS_brk:
       c->gpr[10]= (uintptr_t) sbrk(a[1]);
     break;
     case SYS_read:
-      printf("hello xingk %x,%x,%x\n",(uint32_t)a[1],(uint32_t)a[2],(uint32_t)a[3]);
+      printf("hello xingkr %x,%x,%x\n",(uint32_t)a[1],(uint32_t)a[2],(uint32_t)a[3]);
       c->gpr[10]=fs_read(a[1],(void *)a[2],a[3]);
     break;
     case SYS_open:
