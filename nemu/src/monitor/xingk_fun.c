@@ -4,7 +4,8 @@ FILE *mtrace_log_fp = NULL;
 static value_fun_name fun_name[2000] = {};
 static int fun_count = 0;
 void init_ftrace(const char *img_elf){
-    FILE *fp= fopen(img_elf,"r");
+    //FILE *fp= fopen(img_elf,"r");
+    FILE *fp= fopen("~/ysyx-workbench/navy-apps/tests/bmp-test/build/bmp-test-riscv64","r");
     if(fp == NULL){
         printf("Can not open the %s \n",img_elf);
         assert(0);
