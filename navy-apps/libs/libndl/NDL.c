@@ -42,17 +42,30 @@ void NDL_OpenCanvas(int *w, int *h) {
 }
 
 void NDL_DrawRect(uint32_t *pixels, int x, int y, int w, int h) {
-  FILE *fp = fopen("/dev/fb","r+");
-  size_t temp_xy = (5<<x)+y;
-  fseek(fp, temp_xy, SEEK_SET);
+  //FILE *fp = fopen("/dev/fb","r+");
+#ifdef __ISA_NATIVE__
+  w = 400 ,h = 300;
+  int i = 0;
+  int fd = open("dev/fb",0);
+  for(i = 0; i<h;i++){
+    lseek(fd,(x+i)*400+y,SEEK_SET);
+    write(fd,(pixels+h*w),w);
+  }
+#else
+  int fd = open("/dev/fb",0);
+  size_t temp_xy = (x<<16)+y;
+  lseek(fd,temp_xy,SEEK_SET);
+  //fseek(fp, temp_xy, SEEK_SET);
   size_t temp_wh = (w<<16) +h;
-  printf("%x,%d,%d,%x \n",(uint32_t)pixels,w,h,temp_wh);
+  //printf("%x,%d,%d,%x \n",(uint32_t)pixels,w,h,temp_wh);
   //fwrite(0x800b9900,4,600,fp);
   //write(5,pixels,800);
-  write(5,pixels,temp_wh);
+  write(fd,pixels,temp_wh);
+#endif
 }
 
 void NDL_OpenAudio(int freq, int channels, int samples) {
+
 }
 
 void NDL_CloseAudio() {
