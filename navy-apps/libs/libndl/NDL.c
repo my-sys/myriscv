@@ -4,6 +4,10 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/time.h>
+
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 static int evtdev = -1;
 static int fbdev = -1;
 static int screen_w = 0, screen_h = 0;
@@ -44,12 +48,12 @@ void NDL_OpenCanvas(int *w, int *h) {
 void NDL_DrawRect(uint32_t *pixels, int x, int y, int w, int h) {
   //FILE *fp = fopen("/dev/fb","r+");
 #ifdef __ISA_NATIVE__
-  w = 400 ,h = 300;
+  //w = 400 ,h = 300;
   int i = 0;
-  int fd = open("dev/fb",0);
+  int fd = open("/dev/fb",0);
   for(i = 0; i<h;i++){
-    lseek(fd,(x+i)*400+y,SEEK_SET);
-    write(fd,(pixels+h*w),w);
+    lseek(fd,((y+i)*400+x)*4,SEEK_SET);
+    write(fd,(uint32_t *)(pixels+i*w),w*4);
   }
 #else
   int fd = open("/dev/fb",0);
