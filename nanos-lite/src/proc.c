@@ -26,7 +26,7 @@ void init_proc() {
 
   // load program here
   //naive_uload(NULL, "/bin/bmp-test");
-  naive_uload(NULL,"/bin/pal");
+  naive_uload(NULL,"/bin/bird");
 }
 
 Context* schedule(Context *prev) {
