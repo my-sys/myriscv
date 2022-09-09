@@ -65,7 +65,7 @@ static uintptr_t loader(PCB *pcb, const char *filename) {
   if(len <0){printf("error\n");}
   len = fs_read(fd,phdr,sizeof(Elf64_Phdr)*elf_head.e_phnum);
   int idx;
-  //printf("abcd \n");
+  printf("abcd \n");
   for(idx = 0; idx < elf_head.e_phnum; idx++){
     if(phdr[idx].p_type == PT_LOAD){
       fs_lseek(fd, phdr[idx].p_offset, SEEK_SET);
