@@ -76,7 +76,7 @@ static uintptr_t loader(PCB *pcb, const char *filename) {
       memset((uint8_t *)(phdr[idx].p_vaddr + phdr[idx].p_filesz),0,phdr[idx].p_memsz - phdr[idx].p_filesz);
     }
   }
-  //printf(" loader ok \n");
+  printf(" loader ok \n");
   //printf(" jump 0x%x\n",(uint32_t)elf_head.e_entry);
   return elf_head.e_entry;
 }
