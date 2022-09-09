@@ -35,16 +35,19 @@ size_t events_read(void *buf, size_t offset, size_t len) {
     temp[2] = ' ';
     strcpy((temp+3),keyname[ev.keycode]);
     ret = 3 + strlen(keyname[ev.keycode]);
-    temp[ret] = '\0';
+    temp[ret] = '\n';
+    temp[ret+1] = '\0';
   }else{
     temp[0] = 'k';
     temp[1] = 'u';
     temp[2] = ' ';
     strcpy((temp+3),keyname[ev.keycode]);
     ret = 3 + strlen(keyname[ev.keycode]);
-    temp[ret] = '\0';
+    temp[ret] = '\n';
+    temp[ret+1] = '\0';
   }
-  return ret + 1;
+  //strlen("event read %s,%d\n",buf,strlen("buf"))
+  return ret + 2;
 }
 
 size_t dispinfo_read(void *buf, size_t offset, size_t len) {

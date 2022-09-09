@@ -7,13 +7,119 @@
 void SDL_BlitSurface(SDL_Surface *src, SDL_Rect *srcrect, SDL_Surface *dst, SDL_Rect *dstrect) {
   assert(dst && src);
   assert(dst->format->BitsPerPixel == src->format->BitsPerPixel);
+  if(src->format->palette==NULL){
+      uint32_t *temp_src = src->pixels;
+      uint32_t *temp_dst = dst->pixels;
+      int w1= src->w;
+      int w2 = dst->w;
+      //printf("w1 %d,w2 %d\n",w1,w2);
+      int src_rect_h = (srcrect != NULL)?srcrect->h:src->h;
+      int src_rect_w = (srcrect != NULL)?srcrect->w:src->w;
+      int src_rect_x = (srcrect != NULL)?srcrect->x:0;
+      int src_rect_y = (srcrect != NULL)?srcrect->y:0;
+
+      int dst_rect_x = (dstrect != NULL)?dstrect->x:0;
+      int dst_rect_y = (dstrect != NULL)?dstrect->y:0;
+      for(int i = 0; i<src_rect_h;i++){
+        for(int j = 0; j<src_rect_w;j++){
+          //*(temp_src+srcrect->x +(srcrect->y + i)*w1+j) = *(temp_dst + dstrect->x + (dstrect->y+i)*w2+j);
+          *(temp_dst + dst_rect_x + (dst_rect_y+i)*w2+j) = *(temp_src+src_rect_x+(src_rect_y + i)*w1+j);
+        }
+      }
+  }else{
+      //printf("SDL_BlitSurface 8_\n");
+      uint8_t *temp_src = src->pixels;
+      uint8_t *temp_dst = dst->pixels;
+      int w1= src->w;
+      int w2 = dst->w;
+      //printf("w1 %d,w2 %d\n",w1,w2);
+      int src_rect_h = (srcrect != NULL)?srcrect->h:src->h;
+      int src_rect_w = (srcrect != NULL)?srcrect->w:src->w;
+      int src_rect_x = (srcrect != NULL)?srcrect->x:0;
+      int src_rect_y = (srcrect != NULL)?srcrect->y:0;
+
+      int dst_rect_x = (dstrect != NULL)?dstrect->x:0;
+      int dst_rect_y = (dstrect != NULL)?dstrect->y:0;
+      for(int i = 0; i<src_rect_h;i++){
+        for(int j = 0; j<src_rect_w;j++){
+          //*(temp_src+srcrect->x +(srcrect->y + i)*w1+j) = *(temp_dst + dstrect->x + (dstrect->y+i)*w2+j);
+          *(temp_dst + dst_rect_x + (dst_rect_y+i)*w2+j) = *(temp_src+src_rect_x+(src_rect_y + i)*w1+j);
+        }
+      }
+
+  }
 }
 
 void SDL_FillRect(SDL_Surface *dst, SDL_Rect *dstrect, uint32_t color) {
+  if(dst->format->palette==NULL){  
+    uint32_t *temp = dst->pixels;
+    int w = dst->w;
+    int h = dst->h;
+    int x = (dstrect!=NULL)?dstrect->x:0;
+    int y = (dstrect!=NULL)?dstrect->y:0;
+    int h1= (dstrect!=NULL)?dstrect->h:h;
+    int w1 = (dstrect!=NULL)?dstrect->w:w;
+    //printf("w = %d, h = %d\n",w,h);
+    for(int i = 0;i<h1;i++){
+      for(int j = 0; j<w1;j++){
+        *(temp+x+(y+i)*w + j)=color;
+      }
+    }
+  }else{
+    //printf("SDL_FillRect 8_\n");
+    uint8_t *temp = dst->pixels;
+    int w = dst->w;
+    int h = dst->h;
+    int x = (dstrect!=NULL)?dstrect->x:0;
+    int y = (dstrect!=NULL)?dstrect->y:0;
+    int h1= (dstrect!=NULL)?dstrect->h:h;
+    int w1 = (dstrect!=NULL)?dstrect->w:w;
+    //printf("w = %d, h = %d\n",w,h);
+    int k;
+    for(k = 0; k < dst->format->palette->ncolors; k++){
+      //if(dst->format->palette->colors[k] == color)break;
+      if(dst->format->palette->colors[k].val == color)break;
+      for(int i = 0;i<h1;i++){
+        for(int j = 0; j<w1;j++){
+          *(temp+x+(y+i)*w + j)=k;
+        }
+      }
+    }
+  }
+
 }
 
 void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
-  NDL_DrawRect(s->pixels,x,y,h,w);
+  if((x+y+w+h) == 0){
+    w = s->w; h = s->h;
+  }
+  uint32_t color_buf[w*h];
+  if(s->format->palette == NULL){
+    uint32_t *temp = s->pixels;
+    for(int i = 0; i < h; i++){
+      for(int j = 0; j < w; j++){
+        color_buf[i*w+j] = *(temp + x + (y+i)* (s->w) + j); 
+      }
+    } 
+  }else{
+    //printf("SDL_UpdateRect 8_\n");
+    uint8_t *temp = s->pixels;
+    for(int i = 0; i < h; i++){
+      for(int j = 0; j < w; j++){
+        //printf("%d,w %d,h %d\n",i,w,h);
+        //printf(" %d,%d,%d\n",i*w+j,*(temp + x + (y+i)* (s->w) + j),s->format->palette->colors[0]);
+        color_buf[i*w+j] = s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val; 
+      }
+    } 
+  }
+  // if((x+y+w+h) == 0){
+  //   NDL_DrawRect(s->pixels,0,0,s->w,s->h);
+  //   //NDL_DrawRect(s->pixels,0,0,336,208);
+  // }else{
+  //   NDL_DrawRect(s->pixels,x,y,w,h);
+  // }
+  //printf("SDL_UpdateRect zz\n");
+  NDL_DrawRect(color_buf,x,y,w,h);
 }
 
 // APIs below are already implemented.

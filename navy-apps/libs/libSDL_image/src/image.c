@@ -12,7 +12,27 @@ SDL_Surface* IMG_Load_RW(SDL_RWops *src, int freesrc) {
 }
 
 SDL_Surface* IMG_Load(const char *filename) {
-  return NULL;
+  //printf(" IMG_Load xingk1\n");
+  FILE *fp = fopen(filename,"r");
+  //printf(" IMG_Load xingk2,%s\n",filename);
+  if(!fp){
+    return NULL;
+  }
+  //printf(" IMG_Load xingk3\n");
+  fseek(fp,0,SEEK_END);
+  //printf(" IMG_Load xingk3\n");
+  int size = ftell(fp);
+  fseek(fp,0,SEEK_SET);
+  //printf(" IMG_Load xingk5\n");
+  uint8_t *buf = SDL_malloc(size);
+  //printf(" IMG_Load xingk6\n");
+  fread(buf,1,size,fp);
+  //printf(" IMG_Load xingk7\n");
+  SDL_Surface *img = STBIMG_LoadFromMemory(buf,size);
+  SDL_free(buf);
+  fclose(fp);
+  //printf(" IMG_Load xingk8\n");
+  return img;
 }
 
 int IMG_isPNG(SDL_RWops *src) {

@@ -20,12 +20,17 @@ uint32_t NDL_GetTicks() {
 }
 
 int NDL_PollEvent(char *buf, int len) {
-  FILE *fp  = fopen("/dev/events","r");
-  int ret = fread(buf,1,len,fp);
+  //FILE *fp  = fopen("/dev/events","r");
+  //int ret = fread(buf,1,len,fp);
+  int fd = open("/dev/events",0);
+  int ret = read(fd,buf,len);
   return ret;
 }
 
 void NDL_OpenCanvas(int *w, int *h) {
+  if(*w == 0 && *h == 0){
+    *w = 400;*h = 300;
+  }
   if (getenv("NWM_APP")) {
     int fbctl = 4;
     fbdev = 5;
@@ -43,6 +48,7 @@ void NDL_OpenCanvas(int *w, int *h) {
     }
     close(fbctl);
   }
+  screen_w = *w;screen_h = *h;
 }
 
 void NDL_DrawRect(uint32_t *pixels, int x, int y, int w, int h) {
@@ -64,7 +70,8 @@ void NDL_DrawRect(uint32_t *pixels, int x, int y, int w, int h) {
   //printf("%x,%d,%d,%x \n",(uint32_t)pixels,w,h,temp_wh);
   //fwrite(0x800b9900,4,600,fp);
   //write(5,pixels,800);
-  write(fd,pixels,temp_wh);
+  int ret = write(fd,pixels,temp_wh);
+  //printf("NDL_DrawRect %d\n",ret);
 #endif
 }
 
