@@ -68,9 +68,10 @@ static uintptr_t loader(PCB *pcb, const char *filename) {
   printf("abcd \n");
   for(idx = 0; idx < elf_head.e_phnum; idx++){
     if(phdr[idx].p_type == PT_LOAD){
+      printf("elf 0x%x, 0x%x,0x%x \n",(uint32_t)phdr[idx].p_vaddr,(uint32_t)phdr[idx].p_filesz,(uint32_t)phdr[idx].p_offset);
       fs_lseek(fd, phdr[idx].p_offset, SEEK_SET);
       fs_read(fd,(uint8_t *)phdr[idx].p_vaddr,phdr[idx].p_filesz);
-      printf("elf 0x%x, 0x%x,0x%x \n",(uint32_t)phdr[idx].p_vaddr,(uint32_t)phdr[idx].p_filesz,(uint32_t)phdr[idx].p_offset);
+      //printf("elf 0x%x, 0x%x,0x%x \n",(uint32_t)phdr[idx].p_vaddr,(uint32_t)phdr[idx].p_filesz,(uint32_t)phdr[idx].p_offset);
       //printf("mem1 0x%x,offset 0x%x\n",*((uint32_t *)phdr[idx].p_vaddr),(uint32_t)phdr[idx].p_offset);
       //printf("01x%x,size =%d\n",(uint32_t)phdr[idx].p_vaddr,(uint32_t)phdr[idx].p_filesz);
       memset((uint8_t *)(phdr[idx].p_vaddr + phdr[idx].p_filesz),0,phdr[idx].p_memsz - phdr[idx].p_filesz);
