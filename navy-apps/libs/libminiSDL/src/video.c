@@ -90,6 +90,7 @@ void SDL_FillRect(SDL_Surface *dst, SDL_Rect *dstrect, uint32_t color) {
 }
 
 void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
+  printf("SDL_UpdateRect \n");
   if((x+y+w+h) == 0){
     w = s->w; h = s->h;
   }
