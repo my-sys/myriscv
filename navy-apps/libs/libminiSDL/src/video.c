@@ -102,7 +102,7 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
       }
     } 
   }else{
-    //printf("SDL_UpdateRect 8_\n");
+    printf("SDL_UpdateRect 8_\n");
     uint8_t *temp = s->pixels;
     for(int i = 0; i < h; i++){
       for(int j = 0; j < w; j++){
@@ -118,7 +118,7 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
   // }else{
   //   NDL_DrawRect(s->pixels,x,y,w,h);
   // }
-  //printf("SDL_UpdateRect zz\n");
+  printf("SDL_UpdateRect zz\n");
   NDL_DrawRect(color_buf,x,y,w,h);
 }
 
