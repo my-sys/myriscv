@@ -95,20 +95,20 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
     w = s->w; h = s->h;
   }
   printf("SDL_UpdateRect 0\n");
-  uint32_t zz;
+  //uint32_t zz;
   uint32_t color_buf[w*h];
   printf("0x%x\n",color_buf);
   printf("SDL_UpdateRect 1\n");
   if(s->format->palette == NULL){
-    printf("SDL_UpdateRect 2\n");
+    //printf("SDL_UpdateRect 2\n");
     uint32_t *temp = s->pixels;
-    printf("SDL_UpdateRect 3 %d,%d\n",w,h);
+    //printf("SDL_UpdateRect 3 %d,%d\n",w,h);
     for(int i = 0; i < h; i++){
       for(int j = 0; j < w; j++){
-        //color_buf[i*w+j] = *(temp + x + (y+i)* (s->w) + j);
-        printf("i %d w %d j %d\n",i,w,j);
-        zz = i*w + j; 
-        color_buf[zz] = 0; 
+        color_buf[i*w+j] = *(temp + x + (y+i)* (s->w) + j);
+        //printf("i %d w %d j %d\n",i,w,j);
+        //zz = i*w + j; 
+        //color_buf[zz] = 0; 
         //color_buf[i*w+j] = 0; 
         //printf("2\n");
       }
