@@ -105,7 +105,7 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
       for(int j = 0; j < w; j++){
         //color_buf[i*w+j] = *(temp + x + (y+i)* (s->w) + j);
         //printf("1 %d\n",i);
-        color_buf[i*w+j] = 0; 
+        //color_buf[i*w+j] = 0; 
         //printf("2\n");
       }
     } 
