@@ -103,7 +103,7 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
     printf("SDL_UpdateRect 2\n");
     uint32_t *temp = s->pixels;
     printf("SDL_UpdateRect 3 %d,%d\n",w,h);
-    printf("s->pixels 0x%x",s->pixels);
+    printf("s->pixels 0x%x \n",s->pixels);
     for(int i = 0; i < h; i++){
       for(int j = 0; j < w; j++){
         color_buf[i*w+j] = *(temp + x + (y+i)* (s->w) + j);
