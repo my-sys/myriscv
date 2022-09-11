@@ -100,11 +100,13 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
   if(s->format->palette == NULL){
     printf("SDL_UpdateRect 2\n");
     uint32_t *temp = s->pixels;
+    printf("SDL_UpdateRect 3\n");
     for(int i = 0; i < h; i++){
       for(int j = 0; j < w; j++){
         color_buf[i*w+j] = *(temp + x + (y+i)* (s->w) + j); 
       }
     } 
+    printf("SDL_UpdateRect 5\n");
   }else{
     printf("SDL_UpdateRect 8_\n");
     uint8_t *temp = s->pixels;
