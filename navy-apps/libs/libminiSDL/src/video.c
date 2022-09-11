@@ -94,7 +94,9 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
   if((x+y+w+h) == 0){
     w = s->w; h = s->h;
   }
+  printf("SDL_UpdateRect 0\n");
   uint32_t color_buf[w*h];
+  printf("SDL_UpdateRect 1\n");
   if(s->format->palette == NULL){
     uint32_t *temp = s->pixels;
     for(int i = 0; i < h; i++){
