@@ -90,21 +90,21 @@ void SDL_FillRect(SDL_Surface *dst, SDL_Rect *dstrect, uint32_t color) {
 }
 
 void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
-  printf("SDL_UpdateRect \n");
+  //printf("SDL_UpdateRect \n");
   if((x+y+w+h) == 0){
     w = s->w; h = s->h;
   }
-  printf("SDL_UpdateRect 0\n");
+  //printf("SDL_UpdateRect 0\n");
   //uint32_t zz;
   //uint32_t color_buf[w*h];
   uint32_t* color_buf = (uint32_t *)malloc(w*h*(sizeof(uint32_t)));
-  printf("0x%x\n",color_buf);
-  printf("SDL_UpdateRect 1\n");
+  //printf("0x%x\n",color_buf);
+  //printf("SDL_UpdateRect 1\n");
   if(s->format->palette == NULL){
-    printf("SDL_UpdateRect 2\n");
+    //printf("SDL_UpdateRect 2\n");
     uint32_t *temp = s->pixels;
-    printf("SDL_UpdateRect 3 %d,%d\n",w,h);
-    printf("s->pixels 0x%x \n",s->pixels);
+    //printf("SDL_UpdateRect 3 %d,%d\n",w,h);
+    //printf("s->pixels 0x%x \n",s->pixels);
     for(int i = 0; i < h; i++){
       for(int j = 0; j < w; j++){
         //printf("i %d w %d j %d\n",i,w,j);
@@ -117,9 +117,9 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
         //printf("2\n");
       }
     } 
-    printf("SDL_UpdateRect 5\n");
+    //printf("SDL_UpdateRect 5\n");
   }else{
-    printf("SDL_UpdateRect 8_\n");
+    //printf("SDL_UpdateRect 8_\n");
     uint8_t *temp = s->pixels;
     for(int i = 0; i < h; i++){
       for(int j = 0; j < w; j++){
@@ -135,7 +135,7 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
   // }else{
   //   NDL_DrawRect(s->pixels,x,y,w,h);
   // }
-  printf("SDL_UpdateRect zz\n");
+  //printf("SDL_UpdateRect zz\n");
   NDL_DrawRect(color_buf,x,y,w,h);
 }
 
