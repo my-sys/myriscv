@@ -80,6 +80,7 @@ void SDL_FillRect(SDL_Surface *dst, SDL_Rect *dstrect, uint32_t color) {
       //if(dst->format->palette->colors[k] == color)break;
       if(dst->format->palette->colors[k].val == color)break;
     }
+    assert(k < dst->format->palette->ncolors);
     for(int i = 0;i<h1;i++){
       for(int j = 0; j<w1;j++){
           *(temp+x+(y+i)*w + j)=k;
