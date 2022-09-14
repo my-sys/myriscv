@@ -64,6 +64,9 @@ void paddr_write(paddr_t addr, int len, word_t data) {
 #ifdef CONFIG_MTRACE
   fprintf(mtrace_log_fp,"== memory write 0x%x\n",addr);
 #endif 
+  if(addr == 0x83041f20){
+    printf("!!!!xingk 0x%x, 0x%lx , pc = 0x%lx",addr,data,cpu.pc);
+  }
   if (likely(in_pmem(addr))) { pmem_write(addr, len, data); return; }
 #ifdef CONFIG_MTRACE  
   fprintf(mtrace_log_fp,"** device write 0x%x\n",addr);
