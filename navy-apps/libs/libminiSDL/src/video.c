@@ -126,7 +126,7 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
       for(int j = 0; j < w; j++){
         //printf("%d,w %d,h %d\n",i,w,h);
         //printf(" %d,%d,%d\n",i*w+j,*(temp + x + (y+i)* (s->w) + j),s->format->palette->colors[0]);
-        color_buf[i*w+j] = s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val; 
+        color_buf[i*w+j] = s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val >> 8; 
       }
     } 
   }
