@@ -137,6 +137,7 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
   // }
   //printf("SDL_UpdateRect zz\n");
   NDL_DrawRect(color_buf,x,y,w,h);
+  free(color_buf);
 }
 
 // APIs below are already implemented.
