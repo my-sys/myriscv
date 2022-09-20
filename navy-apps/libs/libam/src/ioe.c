@@ -1,6 +1,7 @@
 #include <am.h>
 
 bool ioe_init() {
+  printf(" nanvp am test\n");
   return true;
 }
 
