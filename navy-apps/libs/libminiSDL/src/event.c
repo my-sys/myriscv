@@ -9,6 +9,7 @@ static const char *keyname[] = {
 };
 
 int SDL_PushEvent(SDL_Event *ev) {
+  printf("xingk ~~~~~~~~~~~ SDL_PushEvent ~~~~~~~~~~~~~\n");
   return 0;
 }
 
@@ -24,22 +25,24 @@ int SDL_PollEvent(SDL_Event *ev) {
         for(int i = 0; i<256;i++){
           if(strcmp(p,keyname[i]) == 0){
             ev->key.keysym.sym = i;
-            SDL_KeyState[i] = SDL_KEYUP; //xingk 1?
+            SDL_KeyState[i] = 0; //xingk 1?   SDL_KEYUP =1, //与PAL中的定义存在了差异，已仙剑为准。见函数PAL_UpdateKeyboardState()
             break;
           }
         }
+        printf("up \n"); 
       }else if(strcmp(p,"kd") == 0){
         ev->key.type = SDL_KEYDOWN;
         p = strtok(NULL,"\n");
         for(int i = 0; i<256;i++){
           if(strcmp(p,keyname[i]) == 0){
             ev->key.keysym.sym = i;
-            SDL_KeyState[i] = SDL_KEYDOWN; //xingk 1?
+            SDL_KeyState[i] = 1 ; //xingk 1?
             break;
           }
-        }        
+        } 
+        printf("down \n");       
       }
-      printf("aaa \n");
+      
     return 1;
   }
   ev = NULL;
@@ -89,6 +92,7 @@ int SDL_WaitEvent(SDL_Event *event) {
 }
 
 int SDL_PeepEvents(SDL_Event *ev, int numevents, int action, uint32_t mask) {
+  printf("xingk ~~~~~~~~~~~ SDL_PeepEvents ~~~~~~~~~~~~~\n");
   return 0;
 }
 

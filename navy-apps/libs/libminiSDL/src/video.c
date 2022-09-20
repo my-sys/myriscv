@@ -66,6 +66,7 @@ void SDL_FillRect(SDL_Surface *dst, SDL_Rect *dstrect, uint32_t color) {
       }
     }
   }else{
+    //assert(0);
     //printf("SDL_FillRect 8_\n");
     uint8_t *temp = dst->pixels;
     int w = dst->w;
@@ -78,6 +79,7 @@ void SDL_FillRect(SDL_Surface *dst, SDL_Rect *dstrect, uint32_t color) {
     int k;
     for(k = 0; k < dst->format->palette->ncolors; k++){
       //if(dst->format->palette->colors[k] == color)break;
+      color = (color & 0xff0000)>>16 + (color & 0xff )<<16+ color & 0xff00ff00;
       if(dst->format->palette->colors[k].val == color)break;
     }
     assert(k < dst->format->palette->ncolors);

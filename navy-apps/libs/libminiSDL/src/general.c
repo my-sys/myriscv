@@ -17,8 +17,10 @@ int SDL_SetError(const char* fmt, ...) {
 }
 
 int SDL_ShowCursor(int toggle) {
+  printf("xingk ~~~~~~~~~~~ SDL_ShowCursor ~~~~~~~~~~~~~\n");
   return 0;
 }
 
 void SDL_WM_SetCaption(const char *title, const char *icon) {
+  printf("xingk ~~~~~~~~~~~ SDL_WM_SetCaption ~~~~~~~~~~~~~\n");
 }
