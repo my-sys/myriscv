@@ -29,9 +29,10 @@ void init_proc() {
   //naive_uload(NULL,"/bin/nterm");
   //naive_uload(NULL, "/bin/nslider");
   //naive_uload(NULL, "/bin/bird");
-  naive_uload(NULL, "/bin/pal");
+  //naive_uload(NULL, "/bin/pal");
   //naive_uload(NULL,"/bin/menu");  coremark
   //naive_uload(NULL,"/bin/typing-game");
+  naive_uload(NULL,"/bin/dhrystone");
 }
 
 Context* schedule(Context *prev) {
