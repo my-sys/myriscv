@@ -72,6 +72,34 @@ size_t fb_write(const void *buf, size_t offset, size_t len) {
   return w*h;
 }
 
+/*********** 为兼容navy 的AM API 特意设计。不用可删除， libam    xingk **********************/
+/****type
+ * type, 0 代表 ioe_read, ioe_write 
+ * type, 1 代表 ioe_init,
+ * type, 2 代表 halt
+ * 
+ * 
+ * 
+ * */ 
+size_t am_write(const void *buf, size_t type, size_t reg){
+
+  // switch(type){
+  //   case 0: io_write(reg,buf);break;
+  //   case 1: ioe_init();break;
+  //   case 2: halt();break;
+  //   default: ;
+  // }
+  
+  ioe_write(reg,(void *)buf);
+  return 0;
+}
+
+/*********** 为兼容navy 的AM API 特意设计。不用可删除， libam    xingk**********************/
+size_t am_read(void *buf, size_t type, size_t reg){
+  ioe_read(reg,buf);
+  return 0;
+}
+
 void init_device() {
   Log("Initializing devices...");
   ioe_init();
