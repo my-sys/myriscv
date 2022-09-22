@@ -31,7 +31,7 @@ void init_proc() {
   //naive_uload(NULL, "/bin/bird");
   //naive_uload(NULL, "/bin/pal");
   //naive_uload(NULL,"/bin/menu");  coremark
-  naive_uload(NULL,"/bin/coremark");
+  naive_uload(NULL,"/bin/typing-game");
 }
 
 Context* schedule(Context *prev) {
