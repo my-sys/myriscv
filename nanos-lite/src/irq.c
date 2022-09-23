@@ -1,5 +1,5 @@
 #include <common.h>
-
+#include <proc.h>
 static Context* do_event(Event e, Context* c) {
   switch (e.event) {
     case EVENT_YIELD : 
@@ -8,6 +8,7 @@ static Context* do_event(Event e, Context* c) {
 
     //   "csrrw t1,mepc,t1\n"
     // );
+    c = schedule(c);
     c->mepc = c->mepc + 4;
     printf(" yield1 \n");break;
     case EVENT_SYSCALL:

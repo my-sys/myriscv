@@ -19,10 +19,18 @@ void hello_fun(void *arg) {
   }
 }
 
-void init_proc() {
-  switch_boot_pcb();
+void context_kload(PCB *temp_pcb, void (*entry)(void *), void *arg){
+  
+  Area kstack;
+  kstack.end = malloc(1<<15);
+  kstack.start = kstack.end + (1<<15);
+  temp_pcb->cp =kcontext(kstack,entry,NULL);
+}
 
-  Log("Initializing processes...");
+void init_proc() {
+  //switch_boot_pcb();
+
+  //Log("Initializing processes...");
 
   // load program here
   //naive_uload(NULL, "/bin/bmp-test");
@@ -33,9 +41,19 @@ void init_proc() {
   //naive_uload(NULL,"/bin/menu");  coremark
   //naive_uload(NULL,"/bin/typing-game");
   //naive_uload(NULL,"/bin/dhrystone");
-  naive_uload(NULL,"/bin/coremark");
+  //naive_uload(NULL,"/bin/coremark");
+  context_kload(&pcb[0], hello_fun, NULL);
+  switch_boot_pcb();
 }
 
 Context* schedule(Context *prev) {
-  return NULL;
+  // save the context pointer
+  current->cp = prev;
+
+  // always select pcb[0] as the new process
+  current = &pcb[0];
+
+  // then return the new context
+
+  return current->cp;
 }
