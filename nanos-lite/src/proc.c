@@ -13,7 +13,7 @@ void switch_boot_pcb() {
 void hello_fun(void *arg) {
   int j = 1;
   while (1) {
-    Log("Hello World from Nanos-lite with arg '%p' for the %dth time1!", (uintptr_t)arg, j);
+    Log("Hello World from Nanos-lite with arg '%s' for the %dth time1!", (uintptr_t)arg, j);
     j ++;
     yield();
   }
@@ -43,7 +43,7 @@ void init_proc() {
   //naive_uload(NULL,"/bin/dhrystone");
   // naive_uload(NULL,"/bin/coremark");
   context_kload(&pcb[0], hello_fun, "abcd");
-  context_kload(&pcb[1], hello_fun, "zsd ");
+  context_kload(&pcb[1], hello_fun, "cccc");
   switch_boot_pcb();
 }
 
