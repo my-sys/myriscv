@@ -41,7 +41,8 @@ Context *kcontext(Area kstack, void (*entry)(void *), void *arg) {
   //temp->gpr[2] = kstack.start;
   temp->mepc = (uintptr_t)entry;
   temp->mstatus = 0xa00001800; 
-  temp->gpr[10] = (uintptr_t)arg;   
+  temp->gpr[10] = (uintptr_t)arg;
+  temp->gpr[11] = (uintptr_t)arg;    
 //   uintptr_t*  entry_addr =kstack.end;
 //   *entry_addr = entry;
 //   return NULL;
