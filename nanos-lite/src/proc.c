@@ -42,8 +42,10 @@ void init_proc() {
   //naive_uload(NULL,"/bin/typing-game");
   //naive_uload(NULL,"/bin/dhrystone");
   // naive_uload(NULL,"/bin/coremark");
-  context_kload(&pcb[0], hello_fun, "abcd");
-  context_kload(&pcb[1], hello_fun, "cccc");
+  int i = 0;
+  int j = 1;
+  context_kload(&pcb[0], hello_fun, &i);
+  context_kload(&pcb[1], hello_fun, &j);
   switch_boot_pcb();
 }
 
