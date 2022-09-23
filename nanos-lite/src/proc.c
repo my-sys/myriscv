@@ -43,7 +43,7 @@ void init_proc() {
   //naive_uload(NULL,"/bin/dhrystone");
   // naive_uload(NULL,"/bin/coremark");
   context_kload(&pcb[0], hello_fun, "abcd");
-  context_kload(&pcb[0], hello_fun, "zsd ");
+  context_kload(&pcb[1], hello_fun, "zsd ");
   switch_boot_pcb();
 }
 
