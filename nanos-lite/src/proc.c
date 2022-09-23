@@ -42,11 +42,11 @@ void init_proc() {
   //naive_uload(NULL,"/bin/menu");  coremark
   //naive_uload(NULL,"/bin/typing-game");
   //naive_uload(NULL,"/bin/dhrystone");
-  naive_uload(NULL,"/bin/coremark");
+  //naive_uload(NULL,"/bin/coremark");
 
-  // context_kload(&pcb[0], hello_fun, &ii);
-  // context_kload(&pcb[1], hello_fun, &jj);
-  // switch_boot_pcb();
+  context_kload(&pcb[0], hello_fun, &ii);
+  context_kload(&pcb[1], hello_fun, &jj);
+  switch_boot_pcb();
 }
 
 Context* schedule(Context *prev) {
