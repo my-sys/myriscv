@@ -41,9 +41,10 @@ void init_proc() {
   //naive_uload(NULL,"/bin/menu");  coremark
   //naive_uload(NULL,"/bin/typing-game");
   //naive_uload(NULL,"/bin/dhrystone");
-  naive_uload(NULL,"/bin/coremark");
-  //context_kload(&pcb[0], hello_fun, NULL);
-  //switch_boot_pcb();
+  // naive_uload(NULL,"/bin/coremark");
+  context_kload(&pcb[0], hello_fun, "abcd");
+  context_kload(&pcb[0], hello_fun, "zsd ");
+  switch_boot_pcb();
 }
 
 Context* schedule(Context *prev) {
@@ -51,8 +52,8 @@ Context* schedule(Context *prev) {
   current->cp = prev;
 
   // always select pcb[0] as the new process
-  current = &pcb[0];
-
+  //current = &pcb[0];
+  current = (current == &pcb[0] ? &pcb[1] : &pcb[0]);
   // then return the new context
 
   return current->cp;

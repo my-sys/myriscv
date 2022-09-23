@@ -10,11 +10,15 @@ static Context* do_event(Event e, Context* c) {
     // );
     c = schedule(c);
     c->mepc = c->mepc + 4;
-    printf(" yield1 \n");break;
+    //printf(" yield1 \n");
+    break;
     case EVENT_SYSCALL:
     c->mepc = c->mepc + 4;
     //printf(" yield2 \n");
     do_syscall(c);
+    break;
+    case EVENT_IRQ_TIMER:
+
     break;
     default: panic("Unhandled event ID = %d", e.event);
   }
