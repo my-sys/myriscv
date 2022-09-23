@@ -26,7 +26,8 @@ void context_kload(PCB *temp_pcb, void (*entry)(void *), void *arg){
   kstack.start = kstack.end + (1<<15);
   temp_pcb->cp =kcontext(kstack,entry,NULL);
 }
-
+int ii = 0;
+int jj = 1;
 void init_proc() {
   //switch_boot_pcb();
 
@@ -42,10 +43,9 @@ void init_proc() {
   //naive_uload(NULL,"/bin/typing-game");
   //naive_uload(NULL,"/bin/dhrystone");
   // naive_uload(NULL,"/bin/coremark");
-  int i = 0;
-  int j = 1;
-  context_kload(&pcb[0], hello_fun, &i);
-  context_kload(&pcb[1], hello_fun, &j);
+
+  context_kload(&pcb[0], hello_fun, &ii);
+  context_kload(&pcb[1], hello_fun, &jj);
   switch_boot_pcb();
 }
 
