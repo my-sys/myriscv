@@ -13,7 +13,7 @@ void switch_boot_pcb() {
 void hello_fun(void *arg) {
   int j = 1;
   while (1) {
-    Log("Hello World from Nanos-lite with arg '%p' for the %dth time1!", (uintptr_t)arg, 2);
+    Log("Hello World from Nanos-lite with arg '%p' for the %dth time1!", (uintptr_t)5, 2);
     j ++;
     yield();
   }
