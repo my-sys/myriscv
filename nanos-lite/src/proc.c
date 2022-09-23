@@ -24,7 +24,7 @@ void context_kload(PCB *temp_pcb, void (*entry)(void *), void *arg){
   Area kstack;
   kstack.end = malloc(1<<15);
   kstack.start = kstack.end + (1<<15);
-  temp_pcb->cp =kcontext(kstack,entry,NULL);
+  temp_pcb->cp =kcontext(kstack,entry,arg);
 }
 int ii = 0;
 int jj = 1;
