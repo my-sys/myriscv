@@ -13,7 +13,7 @@ void switch_boot_pcb() {
 void hello_fun(void *arg) {
   int j = 1;
   while (1) {
-    Log("Hello World from Nanos-lite with arg '%s' for the %dth time1!", arg, j);
+    Log("Hello World from Nanos-lite with arg '%p' for the %dth time1!", arg, j);
     j ++;
     yield();
   }
@@ -26,8 +26,7 @@ void context_kload(PCB *temp_pcb, void (*entry)(void *), void *arg){
   kstack.start = kstack.end + (1<<15);
   temp_pcb->cp =kcontext(kstack,entry,arg);
 }
-int ii = 0;
-int jj = 1;
+
 void init_proc() {
   //switch_boot_pcb();
 
