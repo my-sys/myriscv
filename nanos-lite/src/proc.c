@@ -41,9 +41,9 @@ void init_proc() {
   //naive_uload(NULL,"/bin/menu");  coremark
   //naive_uload(NULL,"/bin/typing-game");
   //naive_uload(NULL,"/bin/dhrystone");
-  //naive_uload(NULL,"/bin/coremark");
-  context_kload(&pcb[0], hello_fun, NULL);
-  switch_boot_pcb();
+  naive_uload(NULL,"/bin/coremark");
+  // context_kload(&pcb[0], hello_fun, NULL);
+  // switch_boot_pcb();
 }
 
 Context* schedule(Context *prev) {
