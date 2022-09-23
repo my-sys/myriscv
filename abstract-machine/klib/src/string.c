@@ -185,6 +185,44 @@ char* uitoa(uint32_t value, char *str, int base){
 
 }
 
+
+char* ltoa(int64_t value, char *str, int base){
+    char reverse[64];
+    char* temp = reverse;
+    *temp++ = '\0';
+
+    while(value >=0){
+        *temp++ = "0123456789abcdef"[value%base];
+        value = value / base;
+        if(value ==0)break;
+    }
+    temp--;
+    while(temp >= reverse){
+        *str++ = *temp--;
+    }
+
+    return str;
+
+}
+
+char* ultoa(uint64_t value, char *str, int base){
+    char reverse[64];
+    char* temp = reverse;
+    *temp++ = '\0';
+
+    while(value >=0){
+        *temp++ = "0123456789abcdef"[value%base];
+        value = value / base;
+        if(value ==0)break;
+    }
+    temp--;
+    while(temp >= reverse){
+        *str++ = *temp--;
+    }
+
+    return str;
+
+}
 char* gcvt(double value, int n, char* str ){
     /*char tbuf[80];
     char*p = tbuf;

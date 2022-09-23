@@ -61,6 +61,12 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
                     gcvt(va_arg(args,double),7, temp);
                     temp += strlen(temp);
                     break;
+
+                case 'p':
+                    ultoa(va_arg(args,unsigned long int),temp,16);
+
+                    temp = temp + strlen(temp);                    
+                    break;
                 default:
                     break;
 
