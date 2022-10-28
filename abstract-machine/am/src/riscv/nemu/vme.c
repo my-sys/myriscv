@@ -67,6 +67,25 @@ void __am_switch(Context *c) {
 }
 
 void map(AddrSpace *as, void *va, void *pa, int prot) {
+  uintptr_t base = get_satp();
+  uintptr_t* addr1 = base + (((uintptr_t)va)>>30);
+  if((*addr1)&1){
+    uintptr_t* addr2 = (((*addr1)<<2)&0xfffffffffffff000)+((((uintptr_t)va)>>21)&0x1ff);
+    if((*addr2)&1){
+      uintptr_t* addr3 = (((*addr2)<<2)&0xfffffffffffff000)+((((uintptr_t)va)>>12)&0x1ff);
+      *addr3 = ((((uintptr_t)pa)>>12)<<10) + 0xf;
+    }else{
+      uintptr_t* addr3 = (PTE*)pgalloc_f(PGSIZE) + ((((uintptr_t)va)>>12)&0x1ff);
+      *addr2 = ((((uintptr_t)addr3)>>12)<<10) + 1;
+      *addr3 = ((((uintptr_t)pa)>>12)<<10) + 0xf;
+    } 
+  }else{
+    uintptr_t* addr2 = (PTE*)pgalloc_f(PGSIZE) + ((((uintptr_t)va)>>21)&0x1ff);
+    *addr1 = ((((uintptr_t)addr2)>>12)<<10) + 1;
+    uintptr_t* addr3 = (PTE*)pgalloc_f(PGSIZE) + ((((uintptr_t)va)>>12)&0x1ff);
+    *addr2 = ((((uintptr_t)addr3)>>12)<<10) + 1;
+    *addr3 = ((((uintptr_t)pa)>>12)<<10) + 0xf;
+  } 
 }
 
 Context *ucontext(AddrSpace *as, Area kstack, void *entry) {

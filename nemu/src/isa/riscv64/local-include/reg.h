@@ -37,7 +37,8 @@ static struct csr_map{
     {"pmpaddr0",  0x3B0, 22},
     {"pmpaddr1",  0x3B1, 23},
     {"pmpaddr2",  0x3B2, 24},
-    {"pmpaddr3",  0x3B3, 25}
+    {"pmpaddr3",  0x3B3, 25},
+    {"satp",      0x180, 26}
 };
 
 #define CSR_NUMBER (int)(sizeof(csr_maps) / sizeof(csr_maps[0]))

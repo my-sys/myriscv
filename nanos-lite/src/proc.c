@@ -27,6 +27,11 @@ void context_kload(PCB *temp_pcb, void (*entry)(void *), void *arg){
   temp_pcb->cp =kcontext(kstack,entry,arg);
 }
 
+void context_uload(PCB *temp_pcb, char *filename){
+  //naive_uload(temp_pcb,filename);
+  uintptr_t entry = loader(temp_pcb,filename);
+  temp_pcb->cp = ucontext(NULL,,entry);
+}
 void init_proc() {
   //switch_boot_pcb();
 
