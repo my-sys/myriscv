@@ -28,7 +28,7 @@ VERILATOR_FLAGS += --coverage
 
 BIN = $(BUILD_DIR)/$(TOPNAME)
 CFLAGS = -O3 -Wall -I$(INCLUDE_DIR) 
-LDFLAGS = -lSDL2 -ldl
+LDFLAGS = -lSDL2
 $(BIN): verilog $(VSRCS) $(CSRCS) 
 	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) $^  -CFLAGS $(CFLAGS) -LDFLAGS $(LDFLAGS) -I$(BUILD_DIR)
 
