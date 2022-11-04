@@ -39,7 +39,7 @@ test:
 verilog:
 	$(call git_commit, "generate verilog")
 	mkdir -p $(BUILD_DIR)
-	mill chiselModule.runMain top.$(TOPNAME) -td $(BUILD_DIR)
+	mill playground.runMain $(TOPNAME) -td $(BUILD_DIR)
 	@echo "generate verilog success!"
 
 help:
