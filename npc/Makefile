@@ -27,7 +27,7 @@ VERILATOR_FLAGS += --coverage
 #VERILATOR_FLAGS += --gdbbt
 
 BIN = $(BUILD_DIR)/$(TOPNAME)
-CFLAGS = -O3 -std=c++11 -static -g -Wall -I$(INCLUDE_DIR) 
+CFLAGS = -O3  -g -Wall -I$(INCLUDE_DIR) 
 LDFLAGS = -lpthread -lSDL2 -ldl
 $(BIN): verilog $(VSRCS) $(CSRCS) 
 	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) $^ \
