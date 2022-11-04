@@ -30,7 +30,7 @@ BIN = $(BUILD_DIR)/$(TOPNAME)
 CFLAGS = -O3 -Wall -I$(INCLUDE_DIR) 
 LDFLAGS = -lpthread -lSDL2 -ldl
 $(BIN): verilog $(VSRCS) $(CSRCS) 
-	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) $^  -CFLAGS "$(CFLAGS)"" -LDFLAGS "$(LDFLAGS)"" -I$(abspath $(BUILD_DIR))
+	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
 
 test:
 	mill -i __.test
