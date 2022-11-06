@@ -31,8 +31,6 @@ VL_MODULE(Vriscv_soc___024root) {
     // LOCAL SIGNALS
     SData/*15:0*/ riscv_soc__DOT__x;
     SData/*15:0*/ riscv_soc__DOT__y;
-    SData/*15:0*/ riscv_soc__DOT___x_T_1;
-    SData/*15:0*/ riscv_soc__DOT___y_T_1;
 
     // LOCAL VARIABLES
     CData/*0:0*/ riscv_soc__DOT____Vtogcov__clock;
