@@ -53,8 +53,8 @@ clean:
 
 compile:$(BIN) 
 	@echo "--- BUILD ---------"
-	make -j -C $(BUILD_DIR)/obj_dir -f V$(TOPNAME).mk 
-	$(BUILD_DIR)/obj_dir/V$(TOPNAME) +trace
+	make -j -C obj_dir -f V$(TOPNAME).mk 
+	obj_dir/V$(TOPNAME) +trace
 
 run:
 	make verilog 
