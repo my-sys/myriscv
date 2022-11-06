@@ -29,9 +29,7 @@ VERILATOR_FLAGS += --coverage
 BIN = $(BUILD_DIR)/$(TOPNAME)
 CFLAGS = -O3 -Wall -I$(INCLUDE_DIR) 
 LDFLAGS = -lpthread -lSDL2 -ldl
-$(BIN): verilog $(VSRCS) $(CSRCS) 
-#	make verilog
-	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
+
 
 test:
 	mill -i __.test
@@ -41,6 +39,11 @@ verilog:
 	mkdir -p $(BUILD_DIR)
 	mill playground.runMain Zhoutao_top -td $(BUILD_DIR)
 	@echo "generate verilog success!"
+
+
+$(BIN): verilog $(VSRCS) $(CSRCS) 
+#	make verilog
+	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
 
 help:
 	mill -i __.test.runMain Elaborate --help
