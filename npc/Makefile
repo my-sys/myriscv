@@ -41,15 +41,15 @@ verilog:
 	@echo "generate verilog success!"
 
 
-$(BIN): verilog $(VSRCS) $(CSRCS) 
+$(BIN): $(VSRCS) $(CSRCS) 
 #	make verilog
 	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
 
 help:
 	mill -i __.test.runMain Elaborate --help
 
-compile:
-	mill -i __.compile
+compile:$(BIN) 
+#	mill -i __.compile
 
 bsp:
 	mill -i mill.bsp.BSP/install
@@ -65,7 +65,10 @@ clean:
 
 .PHONY: test verilog help compile bsp reformat checkformat clean
 
-sim:$(BIN)
+run:
+	make verilog 
+	make compile
+sim: run
 	$(call git_commit, "sim RTL") # DO NOT REMOVE THIS LINE!!!
 	@echo "Write this Makefile by yourself."
 
