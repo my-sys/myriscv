@@ -29,7 +29,7 @@ class Vriscv_soc__Syms final : public VerilatedSyms {
     Vriscv_soc___024root           TOP;
 
     // COVERAGE
-    uint32_t __Vcoverage[89];
+    uint32_t __Vcoverage[88];
 
     // CONSTRUCTORS
     Vriscv_soc__Syms(VerilatedContext* contextp, const char* namep, Vriscv_soc* modelp);

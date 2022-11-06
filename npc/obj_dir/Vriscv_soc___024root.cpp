@@ -7,10 +7,10 @@
 
 //==========
 
-VL_INLINE_OPT void Vriscv_soc___024root___combo__TOP__2(Vriscv_soc___024root* vlSelf) {
+VL_INLINE_OPT void Vriscv_soc___024root___combo__TOP__1(Vriscv_soc___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     Vriscv_soc__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root___combo__TOP__2\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root___combo__TOP__1\n"); );
     // Body
     if (((IData)(vlSelf->clock) ^ (IData)(vlSelf->riscv_soc__DOT____Vtogcov__clock))) {
         ++(vlSymsp->__Vcoverage[0]);
@@ -219,10 +219,10 @@ VL_INLINE_OPT void Vriscv_soc___024root___combo__TOP__2(Vriscv_soc___024root* vl
     }
 }
 
-VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__4(Vriscv_soc___024root* vlSelf) {
+VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__3(Vriscv_soc___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     Vriscv_soc__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root___sequent__TOP__4\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root___sequent__TOP__3\n"); );
     // Variables
     SData/*15:0*/ __Vdly__riscv_soc__DOT__x;
     SData/*15:0*/ __Vdly__riscv_soc__DOT__y;
@@ -614,9 +614,9 @@ void Vriscv_soc___024root___eval(Vriscv_soc___024root* vlSelf) {
     Vriscv_soc__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root___eval\n"); );
     // Body
-    Vriscv_soc___024root___combo__TOP__2(vlSelf);
+    Vriscv_soc___024root___combo__TOP__1(vlSelf);
     if (((IData)(vlSelf->clock) & (~ (IData)(vlSelf->__Vclklast__TOP__clock)))) {
-        Vriscv_soc___024root___sequent__TOP__4(vlSelf);
+        Vriscv_soc___024root___sequent__TOP__3(vlSelf);
     }
     // Final
     vlSelf->__Vclklast__TOP__clock = vlSelf->clock;

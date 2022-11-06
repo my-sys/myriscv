@@ -39,18 +39,10 @@ void Vriscv_soc___024root::__vlCoverInsert(uint32_t* countp, bool enable, const 
         "hier",std::string(name())+hierp,  "page",pagep,  "comment",commentp,  (linescovp[0] ? "linescov" : ""), linescovp);
 }
 
-void Vriscv_soc___024root___initial__TOP__1(Vriscv_soc___024root* vlSelf) {
+void Vriscv_soc___024root___settle__TOP__2(Vriscv_soc___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     Vriscv_soc__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root___initial__TOP__1\n"); );
-    // Body
-    ++(vlSymsp->__Vcoverage[88]);
-}
-
-void Vriscv_soc___024root___settle__TOP__3(Vriscv_soc___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
-    Vriscv_soc__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root___settle__TOP__3\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root___settle__TOP__2\n"); );
     // Body
     if (((IData)(vlSelf->clock) ^ (IData)(vlSelf->riscv_soc__DOT____Vtogcov__clock))) {
         ++(vlSymsp->__Vcoverage[0]);
@@ -615,7 +607,6 @@ void Vriscv_soc___024root___eval_initial(Vriscv_soc___024root* vlSelf) {
     Vriscv_soc__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root___eval_initial\n"); );
     // Body
-    Vriscv_soc___024root___initial__TOP__1(vlSelf);
     vlSelf->__Vclklast__TOP__clock = vlSelf->clock;
 }
 
@@ -624,7 +615,7 @@ void Vriscv_soc___024root___eval_settle(Vriscv_soc___024root* vlSelf) {
     Vriscv_soc__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root___eval_settle\n"); );
     // Body
-    Vriscv_soc___024root___settle__TOP__3(vlSelf);
+    Vriscv_soc___024root___settle__TOP__2(vlSelf);
 }
 
 void Vriscv_soc___024root___final(Vriscv_soc___024root* vlSelf) {
@@ -752,5 +743,4 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[85]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 51, 11, ".riscv_soc", "v_line/riscv_soc", "else", "54");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[86]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 47, 5, ".riscv_soc", "v_line/riscv_soc", "elsif", "47-49");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[87]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 46, 3, ".riscv_soc", "v_line/riscv_soc", "block", "46");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[88]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 60, 5, ".riscv_soc", "v_line/riscv_soc", "block", "60");
 }
