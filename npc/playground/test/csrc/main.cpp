@@ -1,7 +1,7 @@
 #include <verilated.h>
 #include <verilated_vcd_c.h>
 #include <iostream>
-#include "VZhoutao_top.h"
+#include "Vriscv_soc.h"
 
 #define EN_TRACE 1
 Vriscv_soc *top;
