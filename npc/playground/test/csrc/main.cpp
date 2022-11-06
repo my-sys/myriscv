@@ -21,7 +21,7 @@ void single_cycle(){
     top->clock = 1;
     top->eval();
 #if EN_TRACE
-    top->dump(cycles);
+    m_trace->dump(cycles);
 #endif 
     cycles++;
 }

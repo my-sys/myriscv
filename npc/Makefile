@@ -46,6 +46,7 @@ $(BIN): $(VSRCS) $(CSRCS)
 
 clean:
 	-rm -rf $(BUILD_DIR)
+	-rm -rf obj_dir
 
 #.PHONY: test verilog help compile bsp reformat checkformat clean
 
