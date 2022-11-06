@@ -17,11 +17,13 @@ double sc_time_stamp() {        // Called by $time in Verilog
 void single_cycle(){
     top->clock = 0;
     top->eval();
-
+#if EN_TRACE
+    m_trace->dump(2*cycles);
+#endif 
     top->clock = 1;
     top->eval();
 #if EN_TRACE
-    m_trace->dump(cycles);
+    m_trace->dump(2*cycles + 1);
 #endif 
     cycles++;
 }
