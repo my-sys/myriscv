@@ -1,5 +1,4 @@
 import circt.stage._
-#define SYNTHESIS
 object Zhoutao_top extends App{
     def top = new riscv_soc()
     val useMFC = true 
