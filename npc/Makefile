@@ -25,7 +25,7 @@ VERILATOR_FLAGS += --coverage
 #VERILATOR_FLAGS += --debug
 # Add this trace to get a backtrace in gdb
 #VERILATOR_FLAGS += --gdbbt
-
+VERILATOR_FLAGS += +define+SYNTHESIS
 BIN = $(BUILD_DIR)/$(TOPNAME)
 CFLAGS = -O3 -Wall -I$(INCLUDE_DIR) 
 LDFLAGS = -lpthread -lSDL2 -ldl
