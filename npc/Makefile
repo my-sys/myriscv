@@ -1,5 +1,5 @@
 BUILD_DIR = ./build
-TOPNAME = Zhoutao_top
+TOPNAME = riscv_soc
 export PATH := $(PATH):$(abspath ./utils)
 
 
@@ -39,7 +39,7 @@ test:
 verilog:
 	$(call git_commit, "generate verilog")
 	mkdir -p $(BUILD_DIR)
-	mill playground.runMain $(TOPNAME) -td $(BUILD_DIR)
+	mill playground.runMain Zhoutao_top -td $(BUILD_DIR)
 	@echo "generate verilog success!"
 
 help:
