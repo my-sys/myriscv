@@ -31,8 +31,7 @@ CFLAGS = -O3 -Wall -I$(INCLUDE_DIR)
 LDFLAGS = -lpthread -lSDL2 -ldl
 
 
-test:
-	mill -i __.test
+
 
 verilog:
 	$(call git_commit, "generate verilog")
@@ -45,29 +44,21 @@ $(BIN): $(VSRCS) $(CSRCS)
 #	make verilog
 	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
 
-help:
-	mill -i __.test.runMain Elaborate --help
-
-compile:$(BIN) 
-#	mill -i __.compile
-
-bsp:
-	mill -i mill.bsp.BSP/install
-
-reformat:
-	mill -i __.reformat
-
-checkformat:
-	mill -i __.checkFormat
-
 clean:
 	-rm -rf $(BUILD_DIR)
 
-.PHONY: test verilog help compile bsp reformat checkformat clean
+#.PHONY: test verilog help compile bsp reformat checkformat clean
+
+.PHONY: verilog clean sim run 
+
+compile:$(BIN) 
+	@echo "--- BUILD ---------"
+	make -j -C $(BUILD_DIR)/obj_dir -f V$(TOPNAME).mk 
+	$(BUILD_DIR)/obj_dir/V$(TOPNAME) +trace
 
 run:
 	make verilog 
-	make compile
+	make compile 
 sim: run
 	$(call git_commit, "sim RTL") # DO NOT REMOVE THIS LINE!!!
 	@echo "Write this Makefile by yourself."
@@ -75,3 +66,19 @@ sim: run
 include ../Makefile
 
 #gtkwave waveform.vcd
+#test:
+#	mill -i __.test
+#help:
+#	mill -i __.test.runMain Elaborate --help
+
+#compile:$(BIN) 
+#	mill -i __.compile
+
+#bsp:
+#	mill -i mill.bsp.BSP/install
+
+#reformat:
+#	mill -i __.reformat
+
+#checkformat:
+#	mill -i __.checkFormat
