@@ -3,7 +3,6 @@
 #include <iostream>
 #include "zhoutao.h"
 #include "Vriscv_soc.h"
-#define SYNTHESIS
 #define EN_TRACE 1
 Vriscv_soc *top;
 
