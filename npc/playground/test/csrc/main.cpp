@@ -9,7 +9,7 @@ Vriscv_soc *top;
 VerilatedVcdC *m_trace;
 #endif 
 uint64_t main_time = 0;         // Current simulation time 
-
+uint64_t cycles;
 double sc_time_stamp() {        // Called by $time in Verilog
     return main_time;           // converts to double, to match
 }                               // what SystemC does 
@@ -20,6 +20,10 @@ void single_cycle(){
 
     top->clock = 1;
     top->eval();
+#if EN_TRACE
+    top->dump(cycles);
+#endif 
+    cycles++;
 }
 
 void execute_cycles(int n){
@@ -40,6 +44,7 @@ void reset(int n){
 
 int main(int argc, char** argv){
     top = new Vriscv_soc;
+    cycles = 0;
 #if EN_TRACE
     Verilated::traceEverOn(true);
     m_trace = new VerilatedVcdC;
