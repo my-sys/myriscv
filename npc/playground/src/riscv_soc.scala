@@ -1,6 +1,6 @@
 import chisel3._ 
 
-class GCD extends Module{
+class riscv_soc extends Module{
     val io = IO(new Bundle{
         val value1          = Input(UInt(16.W))
         val value2          = Input(UInt(16.W))

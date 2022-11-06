@@ -4,7 +4,7 @@
 #include "VZhoutao_top.h"
 
 #define EN_TRACE 1
-VZhoutao_top *top;
+Vriscv_soc *top;
 
 #if EN_TRACE
 VerilatedVcdC *m_trace;
@@ -40,7 +40,7 @@ void reset(int n){
 }
 
 int main(int argc, char** argv){
-    top = new VZhoutao_top;
+    top = new Vriscv_soc;
 #if EN_TRACE
     Verilated::traceEverOn(true);
     m_trace = new VerilatedVcdC;
