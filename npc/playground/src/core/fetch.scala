@@ -7,17 +7,29 @@ import chisel3.util._
 //3 "b1111_1111".U
 class Fetch extends Module{
     val io = IO(new Bundle {
-        val in_inst = Input(UInt(32.W))
-        val out_pc   = Output(UInt(64.W))
+        val in = new Bundle{
+            val inst    = Input(UInt(32.W))
+            val next_pc = Input(UInt(64.W))
+            val valid_next_pc = Input(Bool())
+        }
 
-        val out_inst = Output(UInt(32.W))
+        val out = new Bundle{
+            val pc      = Output(UInt(64.W))
+            val inst    = Output(UInt(32.))
+        }        
     })
 
+    //指令的初始执行位置为0x8000_0000 Reset_Vector
     val regPC = RegInit("h8000_0000".U(64.W))
     val regInst = RegInit(0.U(32.W))
-    regPC := regPC + 4.U
-    io.out_pc := regPC 
 
-    regInst := io.in_inst
-    out_inst := regInst
+    when(valid_next_pc){
+        regPC := regPC + 4.U 
+    }.otherwise{
+        regPC := next_pc
+    }
+    
+    regInst := io.in.inst
+    io.out.pc := regPC 
+    io.out.inst := regInst
 }

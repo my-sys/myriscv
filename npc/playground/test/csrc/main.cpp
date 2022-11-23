@@ -1,67 +1,14 @@
-#include <verilated.h>
-#include <verilated_vcd_c.h>
-#include <iostream>
-#include "Vriscv_soc.h"
-#define EN_TRACE 1
-Vriscv_soc *top;
+#include "emulator.h"
 
-#if EN_TRACE
-VerilatedVcdC *m_trace;
-#endif 
-uint64_t main_time = 0;         // Current simulation time 
-uint64_t cycles;
-double sc_time_stamp() {        // Called by $time in Verilog
-    return main_time;           // converts to double, to match
-}                               // what SystemC does 
+static char *diff_so_file = NULL;
+static char *img_file = NULL;
 
-void single_cycle(){
-    top->clock = 0;
-    top->eval();
-#if EN_TRACE
-    m_trace->dump(2*cycles);
-#endif 
-    top->clock = 1;
-    top->eval();
-#if EN_TRACE
-    m_trace->dump(2*cycles + 1);
-#endif 
-    cycles++;
+extern void init_ram(const char* img_file);
+static int parse_args(int argc, char *argv[]){
+
 }
-
-void execute_cycles(int n){
-    //....
-    for(int i = 0; i < n; i++){
-        single_cycle();
-    }
-    //....
-}
-
-void reset(int n){
-    top->reset = 1;
-    for(int i = 0; i<n; i++){
-        single_cycle();
-    }
-    top->reset = 0;
-}
-
 int main(int argc, char** argv){
-    top = new Vriscv_soc;
-    cycles = 0;
-#if EN_TRACE
-    Verilated::traceEverOn(true);
-    m_trace = new VerilatedVcdC;
-    top->trace(m_trace,99);
-    m_trace->open("waveform.vcd");
-#endif
-    reset(3);
-    top->io_value1 = 16;
-    top->io_value2 = 10;
-    top->io_loadingValues = 1;
-    single_cycle();
-    top->io_loadingValues = 0;
-    execute_cycles(5);
-#if EN_TRACE
-    m_trace->close();
-#endif 
-    delete top;
+    
+    init_ram(img_file);
+    
 }

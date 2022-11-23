@@ -1,6 +1,10 @@
 import chisel3._ 
 import chisel3.util._ 
 
+///1 "hff".U
+//2 "o377".U
+//3 "b1111_1111".U
+
 object Inst_type{
     def Type_I  = "b0000".U
     def Type_U  = "b0001".U
