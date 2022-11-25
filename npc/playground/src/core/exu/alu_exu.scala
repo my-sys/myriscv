@@ -98,7 +98,7 @@ class ALU_EXU extends Module with CoreParameters{
 
     val srlw_temp = op_data1(31,0) >> (rs2_data & "h1f".U)
 
-    val sraw_temp      = ((op_data1(31,0)).asSInt >> (rs2_data & 0x1f)).asUInt
+    val sraw_temp      = ((op_data1(31,0)).asSInt >> (rs2_data & "h1f".U)).asUInt
     val w_rs_en :: result_data :: Nil = MuxLookup(io.exuType(5,2),List(false.B,0.U(64.W)), List(
         ALUType.alu_add(5,2)    -> List(true.B,(op_data1 + rs2_data)),
         ALUType.alu_auipc(5,2)  -> List(true.B,(op_pc + op_imm)),
@@ -108,7 +108,7 @@ class ALU_EXU extends Module with CoreParameters{
         ALUType.alu_slt(5,2)    -> List(true.B,(Cat(0.U((XLEN-1).W), s_rs1_l_rs2))),
         ALUType.alu_sltu(5,2)   -> List(true.B,(Cat(0.U((XLEN-1).W), u_rs1_l_rs2))),
         ALUType.alu_sub(5,2)    -> List(true.B,(subresult)),
-        ALUType.alu_subw(5,2)   -> List(true.B,(Mux(subresult(31),Cat(Fill(32,1),subresult(31,0)),Cat(0.U(32.W),subresult(31,0))))),
+        ALUType.alu_subw(5,2)   -> List(true.B,(Mux(subresult(31),Cat(Fill(32,1.U),subresult(31,0)),Cat(0.U(32.W),subresult(31,0))))),
         //  sll        slli 
         ALUType.alu_sll(5,2)    -> List(true.B,(op_data1 << (rs2_data &"h3f".U))),
         //  slliw       sllw 
