@@ -49,7 +49,7 @@ class Decode extends Module with CoreParameters{
     reg_rs2_data        := rs2_data
     reg_dest_rs_addr    := dest_rs_addr
 
-    reg_imm             := ListLookup(instType.asUInt, 0.U, List(
+    reg_imm             := MuxLookup(instType, 0.U, List(
         Inst_type.Type_I    -> (Cat( Fill(52,inst(31)) ,inst(31,25))),  // sign extension
         Inst_type.Type_U    -> (Cat( Fill(32,inst(31)), Cat(inst(31,12),0.U(12.W)) )), // sign extension 
         Inst_type.Type_S    -> (Cat( Fill(52,inst(31)), Cat(inst(31,25),inst(11,7)) )), // sign extension
