@@ -6,6 +6,10 @@ class Decode extends Module with CoreParameters{
         val in      = new Bundle{
             val inst = Input(UInt(InstLen.W))
             val pc   = Input(UInt(XLEN.W))
+
+            val rs_addr         = Input(UInt(RegAddrLen.W))
+            val result_data     = Input(UInt(RegDataLen.W))
+            val w_rs_en         = Input(Bool())
         }
         val out     = new Bundle{
             val rs1_data    = Output(UInt(RegDataLen.W))
@@ -61,4 +65,8 @@ class Decode extends Module with CoreParameters{
     io.out.rs2_data     := reg_rs2_data  
     io.out.imm_data     := reg_imm
     io.out.rs_addr      := reg_dest_rs_addr
+    when(io.in.w_rs_en){
+        reg_file.write(io.in.rs_addr,io.in.result_data)
+    }
+    
 }

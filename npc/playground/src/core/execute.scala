@@ -14,10 +14,11 @@ class Exu extends Module with CoreParameters{
         }
 
         val out = new Bundle{
-            val rs_addr = Output(UInt(RegAddrLen.W))
-            val rs_data    = Output(UInt(RegDataLen.W))
-            val next_pc = Output(UInt(AddrLen.W))
-            val valid_next_pc = Output(Bool())            
+            val rs_addr         = Output(UInt(RegAddrLen.W))
+            val rs_data         = Output(UInt(RegDataLen.W))
+            val w_rs_en         = Output(UInt(Bool()))
+            val next_pc         = Output(UInt(AddrLen.W))
+            val valid_next_pc   = Output(Bool())            
         }
 
     })
@@ -32,10 +33,11 @@ class Exu extends Module with CoreParameters{
 
 
     // 声明一些寄存器，暂存流水线中的数据，这是必须的。
-    val  reg_rs_addr = RegInit(0.U(64.W))
-    val  reg_rs_data = RegInit(0.U(64.W))
-    val  reg_next_pc = RegInit(0.U(64.W))
-    val  reg_valid_next_pc = RegInit(false.B)
+    val  reg_rs_addr        = RegInit(0.U(64.W))
+    val  reg_rs_data        = RegInit(0.U(64.W))
+    val  reg_next_pc        = RegInit(0.U(64.W))
+    val  reg_valid_next_pc  = RegInit(false.B)
+    val  reg_w_rs_en        = RegInit(false.B)
 
 
     val alu_exu = Module(new ALU_EXU())
@@ -53,10 +55,10 @@ class Exu extends Module with CoreParameters{
     ))
 
     // function unit connection
-    alu_exu.io.valid := valid(0)
-    lsu_exu.io.valid := valid(1)
-    csr_exu.io.valid := valid(2)
-    mu_exu.io.valid  := valid(3)
+    //alu_exu.io.valid := valid(0)
+    //lsu_exu.io.valid := valid(1)
+    //csr_exu.io.valid := valid(2)
+    //mu_exu.io.valid  := valid(3)
 
     alu_exu.io.exuType  := exuType 
     alu_exu.io.op_data1 := rs1_data 
@@ -66,20 +68,24 @@ class Exu extends Module with CoreParameters{
 
     // The results of function unit 
     // Mux1H
-    reg_rs_data := MuxCase(0.U,Array(
-        valid(0) -> alu_exu.io.result,
-        valid(1) -> lsu_exu.io.result,
-        valid(2) -> csr_exu.io.result,
-        valid(3) -> mu_exu.io.result
+    val w_rs_en :: rs_data :: Nil = MuxCase(List(false.B,0.U(64.W)),Array(
+        valid(0) -> List(alu_exu.io.w_rs_en,alu_exu.io.result),
+        valid(1) -> List(false.B,lsu_exu.io.result),
+        valid(2) -> List(false.B,csr_exu.io.rd_result),
+        valid(3) -> List(false.B,mu_exu.io.result)
     ))
+
+    reg_rs_data := rs_data
     reg_rs_addr := rs_addr
+    reg_w_rs_en := w_rs_en
     reg_next_pc := alu_exu.io.result_pc
     reg_valid_next_pc := alu_exu.io.next_pc_valid
 
-    io.out.rs_addr := reg_rs_addr
-    io.out.rs_data := reg_rs_data
-    io.out.next_pc := reg_next_pc
-    io.out.valid_next_pc := reg_valid_next_pc
+    io.out.rs_addr          := reg_rs_addr
+    io.out.rs_data          := reg_rs_data
+    io.out.w_rs_en          := reg_w_rs_en
+    io.out.next_pc          := reg_next_pc
+    io.out.valid_next_pc    := reg_valid_next_pc
 }
 
 

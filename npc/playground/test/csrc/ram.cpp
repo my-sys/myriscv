@@ -1,4 +1,4 @@
-#include "common.h"
+#include "ram.h"
 #define RAMSIZE (128 * 1024 * 1024)
 static uint64_t ram[RAMSIZE/sizeof(uint64_t)];
 static uint64_t imgfile_size = 0;
@@ -28,6 +28,11 @@ void init_ram(const char* img_file){
 
     fclose(fp);
 }
+
+uint64_t mem_read(uint64_t addr, int len){
+    // addr , len 要进行额外处理以下。
+    return ram[addr];
+} 
 
 extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, paddr_t waddr, uint64_t wdata, uint8_t wstrb, uint8_t wen){
     *rdata = ram[raddr];

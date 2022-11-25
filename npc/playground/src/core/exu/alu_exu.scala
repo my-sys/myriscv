@@ -61,16 +61,17 @@ object ALUType{
 //应该有多个ALU。少数的CSR ，MU，LSU。
 class ALU_EXU extend Module with CoreParameters{
     io = IO(new Bundle{
-        val valid = Input(Bool())
+        //val valid = Input(Bool())
         val exuType = Input(UInt(ExuTypeLen.W))
         val op_data1 = Input(UInt(RegDataLen.W))
         val op_data2 = Input(UInt(RegDataLen.W))
         val op_imm   = Input(UInt(RegDataLen.W))
         val op_pc    = Input(UInt(AddrLen.W))
 
-        val result_data  = Output(UInt(RegDataLen.W))
-        val result_pc    = Output(UInt(AddrLen.W))
-        val next_pc_valid = Output(Bool())
+        val result_data     = Output(UInt(RegDataLen.W))
+        val result_pc       = Output(UInt(AddrLen.W))
+        val next_pc_valid   = Output(Bool())
+        val w_rs_en         = Output(Bool())
     })
 
     val op_data1 = io.op_data1
@@ -95,45 +96,45 @@ class ALU_EXU extend Module with CoreParameters{
     val srlw_temp = op_data1(31,0) >> (rs2_data & 0x1f)
 
     val sraw_temp      = ((op_data1(31,0)).asSInt >> (rs2_data & 0x1f)).asUInt
-    val result_data = MuxLookup(io.exuType(5,2),0.U, List(
-        ALUType.alu_add(5,2)    -> (op_data1 + rs2_data),
-        ALUType.alu_auipc(5,2)  -> (op_pc + op_imm),
-        ALUType.alu_and(5,2)    -> (op_data1 & rs2_data),
+    val w_rs_en :: result_data :: Nil = MuxLookup(io.exuType(5,2),List(false.B,0.U(64.W)), List(
+        ALUType.alu_add(5,2)    -> List(true.B,(op_data1 + rs2_data)),
+        ALUType.alu_auipc(5,2)  -> List(true.B,(op_pc + op_imm)),
+        ALUType.alu_and(5,2)    -> List(true.B,(op_data1 & rs2_data)),
         
         //  slt     slti 
-        ALUType.alu_slt(5,2)    -> (Cat(0.U((XLEN-1).W), s_rs1_l_rs2)),
-        ALUType.alu_sltu(5,2)   -> (Cat(0.U((XLEN-1).W), u_rs1_l_rs2)),
-        ALUType.alu_sub(5,2)    -> (subresult)
-        ALUType.alu_subw(5,2)   -> (Mux(subresult(31),Cat(Fill(32,1),subresult(31,0)),Cat(0.U(32.W),subresult(31,0))))
+        ALUType.alu_slt(5,2)    -> List(true.B,(Cat(0.U((XLEN-1).W), s_rs1_l_rs2))),
+        ALUType.alu_sltu(5,2)   -> List(true.B,(Cat(0.U((XLEN-1).W), u_rs1_l_rs2))),
+        ALUType.alu_sub(5,2)    -> List(true.B,(subresult)),
+        ALUType.alu_subw(5,2)   -> List(true.B,(Mux(subresult(31),Cat(Fill(32,1),subresult(31,0)),Cat(0.U(32.W),subresult(31,0)))))
         //  sll        slli 
-        ALUType.alu_sll(5,2)    -> (op_data1 << (rs2_data &0x3f)),
+        ALUType.alu_sll(5,2)    -> List(true.B,(op_data1 << (rs2_data &0x3f))),
         //  slliw       sllw 
-        ALUType.alu_sllw(5,2)   -> (Cat(fill(32,sllw_temp(31)),sllw_temp(31,0))),
+        ALUType.alu_sllw(5,2)   -> List(true.B,(Cat(fill(32,sllw_temp(31)),sllw_temp(31,0)))),
 
         //  srl         srli 
-        ALUType.alu_srl(5,2)    -> (op_data1 >> (rs2_data & 0x3f)),
+        ALUType.alu_srl(5,2)    -> List(true.B,(op_data1 >> (rs2_data & 0x3f))),
 
         // srlw         srliw 
-        ALUType.alu_srlw(5,2)   -> (Cat(fill(32,srlw_temp(31)),srlw_temp(31,0))),
+        ALUType.alu_srlw(5,2)   -> List(true.B,(Cat(fill(32,srlw_temp(31)),srlw_temp(31,0)))),
 
         // sra          srai 
-        ALUType.alu_sra(5,2)    -> ((op_data1.asSInt >> (rs2_data & 0x3f)).asUInt),
+        ALUType.alu_sra(5,2)    -> List(true.B,((op_data1.asSInt >> (rs2_data & 0x3f)).asUInt)),
 
         //  sraw        sraiw 
-        ALUType.alu_sraw(5,2)   -> (Cat(fill(32,sraw_temp(31)),sraw_temp(31,0))),
+        ALUType.alu_sraw(5,2)   -> List(true.B,(Cat(fill(32,sraw_temp(31)),sraw_temp(31,0)))),
 
         //  xor         xori 
-        ALUType.alu_xor(5,2)    -> (op_data1 ^ rs2_data)
+        ALUType.alu_xor(5,2)    -> List(true.B,(op_data1 ^ rs2_data)),
 
         // or           ori 
-        ALUType.alu_or(5,2)     -> (op_data1 | rs2_data)
+        ALUType.alu_or(5,2)     -> List(true.B,(op_data1 | rs2_data))
     ))
 
-    val next_pc1 = Cat(1.U(1.W),op_pc + op_imm)
-    val next_pc2 = Cat(0.U(1.W),0.U(64.W)) 
+    val next_pc1 = List(true.B,op_pc + op_imm)
+    val next_pc2 = List(false.B,0.U(64.W)) 
 
     val next_pc_valid :: result_pc :: Nil = MuxLookup(io.exuType(5,1),0.U,List(
-        ALUType.alu_beq(5,1)    -> (Mux(op_data1 ==== op_data2, next_pc1,next_pc2)),
+        ALUType.alu_beq(5,1)    -> (Mux(op_data1 ==== op_data2, next_pc1,next_pc2))),
         ALUType.alu_bge(5,1)    -> (Mux(!s_rs1_l_rs2,next_pc1,next_pc2)),
         ALUType.alu_bgeu(5,1)   -> (Mux(!u_rs1_l_rs2,next_pc1,next_pc2)),
         ALUType.alu_blt(5,1)    -> (Mux(s_rs1_l_rs2,next_pc1,next_pc2)),
@@ -144,4 +145,5 @@ class ALU_EXU extend Module with CoreParameters{
     io.result_data      := result_data
     io.result_pc        := result_pc
     io.next_pc_valid    := next_pc_valid
+    io.w_rs_en          := w_rs_en
 }

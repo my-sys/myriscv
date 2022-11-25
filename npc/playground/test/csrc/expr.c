@@ -1,6 +1,45 @@
 #include <sys/types.h>
 #include <pcre.h>
 #include "common.h"
+#include "emulator.h"
+
+const char *regs[] = {
+  "$0", "ra", "sp", "gp", "tp", "t0", "t1", "t2",
+  "s0", "s1", "a0", "a1", "a2", "a3", "a4", "a5",
+  "a6", "a7", "s2", "s3", "s4", "s5", "s6", "s7",
+  "s8", "s9", "s10", "s11", "t3", "t4", "t5", "t6"
+};
+
+word_t isa_reg_str2val(const char *s, bool *success) {
+    s = s + 1;
+    uint64_t gpr[35];
+    Emulator::get_instance().read_regs(gpr);    
+    for(int i = 0; i<32; i++){
+        if(strcmp(s,regs[i])==0){
+            *success = true;
+            return gpr(i);        
+        };
+    }
+    int temp = atoi(s);
+    if(temp>0 && temp<=31){
+        *success = true;
+        return gpr(temp);
+    }
+    printf("%s \n",s);
+    *success = false;
+    return 0;
+}
+
+word_t isa_csr_reg_str2val(const char *s, bool *success){
+    s = s+5;
+    int i = atoi(s);
+    if(s != NULL){
+        *success = true;
+    }
+    if(i<0 || i>31)return 0;
+
+    return 0;
+}
 
 // 照搬nemu
 enum {

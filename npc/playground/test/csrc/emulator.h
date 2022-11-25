@@ -1,5 +1,5 @@
-#ifndef  __EMULATOR__
-#define  __EMULATOR__
+#ifndef  __EMULATOR_H__
+#define  __EMULATOR_H__
 #include "common.h"
 #include <verilated.h>
 #include <verilated_vcd_c.h>
@@ -26,7 +26,7 @@ public:
         delete top;
     };
     void execute_once();
-    void execute(int n);
+    void execute(uint64_t n);
     void reset(int n);
 }
 
@@ -39,7 +39,8 @@ Emulator::Emulator(){
     m_trace = new VerilatedVcdC;
     top->trace(m_trace,99);
     m_trace->open("waveform.vcd");
-#endif        
+#endif
+
 }
 
 void Emulator::execute_once(){
@@ -56,9 +57,9 @@ void Emulator::execute_once(){
     cycles++;
 }
 
-void Emulator::execute(int n){
+void Emulator::execute(uint64_t n){
     //....
-    for(int i = 0; i < n; i++){
+    for(; n > 0; n--){
         execute_once();
     }
     //....
@@ -70,5 +71,16 @@ void Emulator::reset(int n){
         execute_once();
     }
     top->reset = 0;
+}
+
+void Emulator::read_regs(uint64_t* reg){
+#define REGS(x) reg[x] = top->io_difftest_reg_##x
+    REGS(0);REGS(1);REGS(2);REGS(3);REGS(4);REGS(5);REGS(6);REGS(7);
+    REGS(8);REGS(9);REGS(10);REGS(11);REGS(12);REGS(13);REGS(14);REGS(15);
+    REGS(16);REGS(17);REGS(18);REGS(19);REGS(20);REGS(21);REGS(22);REGS(23);
+    REGS(24);REGS(25);REGS(26);REGS(27);REGS(28);REGS(29);REGS(30);REGS(31);
+#undef REGS(x)
+    reg[32] = top->io_difftest_pc
+    reg[33] = top->io_difftest_inst
 }
 #endif

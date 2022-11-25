@@ -159,7 +159,7 @@ def SFENCE_VMA  = BitPat("b0001001_?????_?????_000_00000_1110011")
         MUL         -> List(Op_type.op_mu,      MUType.mu_mul,       Inst_type.Type_R),
         MULH        -> List(Op_type.op_mu,      MUType.mu_mulh,      Inst_type.Type_R),
         MULHSU      -> List(Op_type.op_mu,      MUType.mu_mulhsu,    Inst_type.Type_R),
-        MULHSU      -> List(Op_type.op_mu,      MUType.mu_mulhu,     Inst_type.Type_R),
+        MULHU       -> List(Op_type.op_mu,      MUType.mu_mulhu,     Inst_type.Type_R),
         MULW        -> List(Op_type.op_mu,      MUType.mu_mulw,      Inst_type.Type_R),
         REM         -> List(Op_type.op_mu,      MUType.mu_rem,       Inst_type.Type_R),
         REMU        -> List(Op_type.op_mu,      MUType.mu_remu,      Inst_type.Type_R),
