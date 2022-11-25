@@ -94,9 +94,9 @@ class ALU_EXU extends Module with CoreParameters{
     //  unsigend rs1 < rs2   must check this flag   
     val s_rs1_l_rs2 = Mux(sub_data1(XLEN-1)^sub_data2(XLEN-1),sub_data1(XLEN-1),subresult(XLEN-1))
 
-    val sllw_temp  = op_data1(31,0) << (rs2_data & 0x1f)
+    val sllw_temp  = op_data1(31,0) << (rs2_data & "h1f".U)
 
-    val srlw_temp = op_data1(31,0) >> (rs2_data & 0x1f)
+    val srlw_temp = op_data1(31,0) >> (rs2_data & "h1f".U)
 
     val sraw_temp      = ((op_data1(31,0)).asSInt >> (rs2_data & 0x1f)).asUInt
     val w_rs_en :: result_data :: Nil = MuxLookup(io.exuType(5,2),List(false.B,0.U(64.W)), List(
@@ -110,18 +110,18 @@ class ALU_EXU extends Module with CoreParameters{
         ALUType.alu_sub(5,2)    -> List(true.B,(subresult)),
         ALUType.alu_subw(5,2)   -> List(true.B,(Mux(subresult(31),Cat(Fill(32,1),subresult(31,0)),Cat(0.U(32.W),subresult(31,0))))),
         //  sll        slli 
-        ALUType.alu_sll(5,2)    -> List(true.B,(op_data1 << (rs2_data &0x3f))),
+        ALUType.alu_sll(5,2)    -> List(true.B,(op_data1 << (rs2_data &"h3f".U))),
         //  slliw       sllw 
         ALUType.alu_sllw(5,2)   -> List(true.B,(Cat(Fill(32,sllw_temp(31)),sllw_temp(31,0)))),
 
         //  srl         srli 
-        ALUType.alu_srl(5,2)    -> List(true.B,(op_data1 >> (rs2_data & 0x3f))),
+        ALUType.alu_srl(5,2)    -> List(true.B,(op_data1 >> (rs2_data & "h3f".U))),
 
         // srlw         srliw 
         ALUType.alu_srlw(5,2)   -> List(true.B,(Cat(Fill(32,srlw_temp(31)),srlw_temp(31,0)))),
 
         // sra          srai 
-        ALUType.alu_sra(5,2)    -> List(true.B,((op_data1.asSInt >> (rs2_data & 0x3f)).asUInt)),
+        ALUType.alu_sra(5,2)    -> List(true.B,((op_data1.asSInt >> (rs2_data & "h3f".U)).asUInt)),
 
         //  sraw        sraiw 
         ALUType.alu_sraw(5,2)   -> List(true.B,(Cat(Fill(32,sraw_temp(31)),sraw_temp(31,0)))),
