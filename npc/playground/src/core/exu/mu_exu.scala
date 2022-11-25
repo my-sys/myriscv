@@ -1,7 +1,7 @@
 import chisel3._ 
 import chisel3.util._ 
 
-object MuType{
+object MUType{
     def mu_div      = "b000000".U 
     def mu_divu     = "b000001".U 
     def mu_divuw    = "b000010".U 
