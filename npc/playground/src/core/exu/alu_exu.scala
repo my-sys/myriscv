@@ -53,7 +53,10 @@ object ALUType{
     def alu_bge     = "b1100_00".U 
     def alu_bgeu    = "b1100_10".U 
     def alu_blt     = "b1101_00".U 
-    def alu_bltu    = "b1101_01".U 
+    def alu_bltu    = "b1101_10".U
+
+    def alu_jal     = "b1110_00".U 
+    def alu_jalr    = "b1110_10".U
     
 }
 
@@ -133,13 +136,16 @@ class ALU_EXU extends Module with CoreParameters{
     val next_pc1 = List(true.B,op_pc + op_imm)
     val next_pc2 = List(false.B,0.U(64.W)) 
 
+    val next_pc3 = List(true.B,(op_data + op_imm) & "hffff_ffff_ffff_fffe".U)
     val next_pc_valid :: result_pc :: Nil = MuxLookup(io.exuType(5,1),List(false.B,0.U(64.W)),List(
         ALUType.alu_beq(5,1)    -> (Mux(op_data1 ==== op_data2, next_pc1,next_pc2)),
         ALUType.alu_bge(5,1)    -> (Mux(!s_rs1_l_rs2,next_pc1,next_pc2)),
         ALUType.alu_bgeu(5,1)   -> (Mux(!u_rs1_l_rs2,next_pc1,next_pc2)),
         ALUType.alu_blt(5,1)    -> (Mux(s_rs1_l_rs2,next_pc1,next_pc2)),
         ALUType.alu_bltu(5,1)   -> (Mux(u_rs1_l_rs2,next_pc1,next_pc2)),
-        ALuType.alu_bne(5,1)    -> (Mux(op_data1 === op_data2,next_pc2,next_pc1))
+        ALuType.alu_bne(5,1)    -> (Mux(op_data1 === op_data2,next_pc2,next_pc1)),
+        ALUType.alu_jal(5,1)    -> (next_pc1),
+        ALUType.alu_jalr(5,1)   -> (next_pc3)
     ))
 
     io.result_data      := result_data
