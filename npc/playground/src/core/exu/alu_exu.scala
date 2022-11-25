@@ -137,7 +137,7 @@ class ALU_EXU extends Module with CoreParameters{
     val next_pc2 = List(false.B,0.U(64.W)) 
 
     val next_pc3 = List(true.B,(op_data1 + op_imm) & "hffff_ffff_ffff_fffe".U)
-    val next_pc_valid :: result_pc :: Nil = MuxLookup(io.exuType(5,1),List(false.B,0.U(64.W)),List(
+    val next_pc_valid :: result_pc :: Nil = ListLookup(io.exuType(5,1),List(false.B,0.U(64.W)),List(
         ALUType.alu_beq(5,1)    -> (Mux(op_data1 === op_data2, next_pc1,next_pc2)),
         ALUType.alu_bge(5,1)    -> (Mux(!s_rs1_l_rs2,next_pc1,next_pc2)),
         ALUType.alu_bgeu(5,1)   -> (Mux(!u_rs1_l_rs2,next_pc1,next_pc2)),
