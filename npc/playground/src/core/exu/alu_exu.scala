@@ -59,7 +59,7 @@ object ALUType{
 
 // ALU 是一个常用的单元，设计它的指令非常多，乘法，除法。存储指令，CSR较少，因此在多个执行单元中
 //应该有多个ALU。少数的CSR ，MU，LSU。
-class ALU_EXU extend Module with CoreParameters{
+class ALU_EXU extends Module with CoreParameters{
     io = IO(new Bundle{
         //val valid = Input(Bool())
         val exuType = Input(UInt(ExuTypeLen.W))
