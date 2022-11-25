@@ -1,7 +1,7 @@
 import chisel3._ 
 import chisel3.util._ 
 
-object CsrType{
+object CSRType{
     def csr_csrrc   = "b00000".U
     def csr_csrrci  = "b00001".U 
     def csr_csrrs   = "b00010".U 
