@@ -71,8 +71,8 @@ class Exu extends Module with CoreParameters{
     val w_rs_en :: rs_data :: Nil = MuxCase(List(false.B,0.U(64.W)),Array(
         valid(0) -> List(alu_exu.io.w_rs_en,alu_exu.io.result_data),
         valid(1) -> List(false.B,0.U(64.W)),
-        valid(2) -> List(false.B,csr_exu.io.rd_result),
-        valid(3) -> List(false.B,mu_exu.io.result_data)
+        valid(2) -> List(false.B,0.U(64.W)),
+        valid(3) -> List(false.B,0.U(64.W))
     ))
 
     reg_rs_data := rs_data
