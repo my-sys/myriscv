@@ -22,6 +22,7 @@ class Decode extends Module with CoreParameters{
         }
     })
 
+    val inst         = io.in.inst
     val reg_rs1_data = RegInit(0.U(64.W))
     val reg_rs2_data = RegInit(0.U(64.W))
     val reg_dest_rs_addr  = RegInit(0.U(64.W))
