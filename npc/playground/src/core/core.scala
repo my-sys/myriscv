@@ -31,7 +31,7 @@ class Core extends Module{
 
     // decode 
     decode.io.in.inst           := fetch.io.out.inst 
-    decode.io.in.pc             := fetch,io.out.pc
+    decode.io.in.pc             := fetch.io.out.pc
 
     // execute 
     execute.io.in.opType        := decode.io.out.opType
