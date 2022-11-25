@@ -54,7 +54,7 @@ class Decode extends Module with CoreParameters{
         Inst_type.Type_J    -> (Cat( fill(44,inst(19)),  Cat(Cat(inst(19,12),inst(20)),Cat(inst(30,19),0.U(1.W))) )), // sign extension
         //Inst_type.Type_R    -> (),
         Inst_type.Type_B    -> (Cat( fill(54,inst(31)), Cat(Cat(inst(7),inst(30,25)), Cat(inst(11,8),0.U(1.W)))  )),
-        Inst_type.Type_CSR  -> (Cat( 0.U(59.W),inst(19,15)),
+        Inst_type.Type_CSR  -> (Cat( 0.U(59.W),inst(19,15))),
         Inst_type.Type_IR   -> (Cat(0.U(58.W),inst(25,20)))
         //Inst_type.Type_N    -> (),
     ))
