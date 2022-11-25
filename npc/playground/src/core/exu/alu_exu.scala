@@ -5,7 +5,7 @@ object ALUType{
     //需要组合一下减轻分量。    6位
     // 第0位用于判断rs2是否为立即数，第1位用于判断是否为进行低位操作。 
     // 
-    val alu_add     = "b000_00".U 
+    def alu_add     = "b000_00".U 
     val alu_addi    = "b000_01".U
     val alu_addw    = "b000_10".U
     val alu_addiw   = "b000_11".U 
