@@ -18,9 +18,11 @@ object MuType{
 }
 
 class MU_EXU extends Module with CoreParameters{
-    val exuType     = Input(UInt(ExuTypeLen.W))
-    val rs1_data    = Input(UInt(RegDataLen.W))
-    val rs2_data    = Input(UInt(RegDataLen.W))
-    val imm_data    = Input(UInt(ImmLen.W))
-    val result_data = Output(UInt(RegDataLen.W))
+    val io = IO(new Bundle{
+        val exuType     = Input(UInt(ExuTypeLen.W))
+        val rs1_data    = Input(UInt(RegDataLen.W))
+        val rs2_data    = Input(UInt(RegDataLen.W))
+        val imm_data    = Input(UInt(ImmLen.W))
+        val result_data = Output(UInt(RegDataLen.W))
+    })
 }   

@@ -2,7 +2,7 @@ import chisel3._
 import chisel3.util._ 
 
 class Exu extends Module with CoreParameters{
-    io = IO(new Bundle{
+    val io = IO(new Bundle{
         val in = new Bundle{
             val opType  = Input(UInt(OpTypeLen.W))
             val exuType = Input(UInt(ExuTypeLen.W))

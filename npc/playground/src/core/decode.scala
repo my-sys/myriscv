@@ -2,7 +2,7 @@ import chisel3._
 import chisel3.util._ 
 
 class Decode extends Module with CoreParameters{
-    io = IO(new Bundle{
+    val io = IO(new Bundle{
         val in      = new Bundle{
             val inst = Input(UInt(InstLen.W))
             val pc   = Input(UInt(XLEN.W))

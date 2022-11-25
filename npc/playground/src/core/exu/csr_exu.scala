@@ -11,7 +11,7 @@ object CsrType{
 }
 
 class CSR_EXU extends Module with CoreParameters{
-    io = IO(new Bundle{
+    val io = IO(new Bundle{
         //val valid       = Input(Bool())
         val exuType     = Input(UInt(ExuTypeLen.W))
         val csr_data    = Input(UInt(CsrDataLen.W))
