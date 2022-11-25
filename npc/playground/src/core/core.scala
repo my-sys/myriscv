@@ -2,7 +2,7 @@ import chisel3._
 import chisel3.util._ 
 
 class Core extends Module{
-    io = IO(new Bundle{
+    val io = IO(new Bundle{
         val in = new Bundle{
             val rdata     = Input(UInt(64.W))
             //val inst     = Input(UInt(32.W))
