@@ -16,7 +16,7 @@ class Core extends Module{
 
             val raddr    = Output(UInt(64.W))
             val wen      = Output(Bool())
-            val wstrb    = output(UInt(8.W))
+            val wstrb    = Output(UInt(8.W))
             //val pc       = Output(UInt(64.W))
         }
     })
