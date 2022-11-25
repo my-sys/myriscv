@@ -68,11 +68,11 @@ class Exu extends Module with CoreParameters{
 
     // The results of function unit 
     // Mux1H
-    val w_rs_en :: rs_data :: Nil = ListCase(Seq(false.B,0.U(64.W)),Array(
-        valid(0) -> Seq(alu_exu.io.w_rs_en,alu_exu.io.result_data),
-        valid(1) -> Seq(false.B,0.U(64.W)),
-        valid(2) -> Seq(false.B,0.U(64.W)),
-        valid(3) -> Seq(false.B,0.U(64.W))
+    val w_rs_en :: rs_data :: Nil = MuxCase((false.B,0.U(64.W)),Array(
+        valid(0) -> (alu_exu.io.w_rs_en,alu_exu.io.result_data),
+        valid(1) -> (false.B,0.U(64.W)),
+        valid(2) -> (false.B,0.U(64.W)),
+        valid(3) -> (false.B,0.U(64.W))
     ))
 
     reg_rs_data := rs_data
