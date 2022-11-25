@@ -112,19 +112,19 @@ class ALU_EXU extends Module with CoreParameters{
         //  sll        slli 
         ALUType.alu_sll(5,2)    -> List(true.B,(op_data1 << (rs2_data &0x3f))),
         //  slliw       sllw 
-        ALUType.alu_sllw(5,2)   -> List(true.B,(Cat(fill(32,sllw_temp(31)),sllw_temp(31,0)))),
+        ALUType.alu_sllw(5,2)   -> List(true.B,(Cat(Fill(32,sllw_temp(31)),sllw_temp(31,0)))),
 
         //  srl         srli 
         ALUType.alu_srl(5,2)    -> List(true.B,(op_data1 >> (rs2_data & 0x3f))),
 
         // srlw         srliw 
-        ALUType.alu_srlw(5,2)   -> List(true.B,(Cat(fill(32,srlw_temp(31)),srlw_temp(31,0)))),
+        ALUType.alu_srlw(5,2)   -> List(true.B,(Cat(Fill(32,srlw_temp(31)),srlw_temp(31,0)))),
 
         // sra          srai 
         ALUType.alu_sra(5,2)    -> List(true.B,((op_data1.asSInt >> (rs2_data & 0x3f)).asUInt)),
 
         //  sraw        sraiw 
-        ALUType.alu_sraw(5,2)   -> List(true.B,(Cat(fill(32,sraw_temp(31)),sraw_temp(31,0)))),
+        ALUType.alu_sraw(5,2)   -> List(true.B,(Cat(Fill(32,sraw_temp(31)),sraw_temp(31,0)))),
 
         //  xor         xori 
         ALUType.alu_xor(5,2)    -> List(true.B,(op_data1 ^ rs2_data)),
