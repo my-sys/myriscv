@@ -99,7 +99,7 @@ class ALU_EXU extends Module with CoreParameters{
     val srlw_temp = op_data1(31,0) >> (rs2_data & "h1f".U)
 
     val sraw_temp      = ((op_data1(31,0)).asSInt >> (rs2_data & "h1f".U)).asUInt
-    val w_rs_en :: result_data :: Nil = ListLookup(io.exuType(5,2),List(false.B,0.U(64.W)), List(
+    val w_rs_en :: result_data :: Nil = ListLookup(io.exuType(5,2),List(false.B,0.U(64.W)), Array(
         ALUType.alu_add(5,2)    -> List(true.B,(op_data1 + rs2_data)),
         ALUType.alu_auipc(5,2)  -> List(true.B,(op_pc + op_imm)),
         ALUType.alu_and(5,2)    -> List(true.B,(op_data1 & rs2_data)),
