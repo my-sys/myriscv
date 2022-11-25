@@ -1,7 +1,7 @@
 import chisel3._ 
 import chisel3.util._ 
 
-object LsuType{
+object LSUType{
     def lsu_ld      = "b000000".U
     def lsu_lb      = "b000001".U
     def lsu_lbu     = "b000010".U
