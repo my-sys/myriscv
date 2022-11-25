@@ -105,7 +105,7 @@ class ALU_EXU extends Module with CoreParameters{
         ALUType.alu_slt(5,2)    -> List(true.B,(Cat(0.U((XLEN-1).W), s_rs1_l_rs2))),
         ALUType.alu_sltu(5,2)   -> List(true.B,(Cat(0.U((XLEN-1).W), u_rs1_l_rs2))),
         ALUType.alu_sub(5,2)    -> List(true.B,(subresult)),
-        ALUType.alu_subw(5,2)   -> List(true.B,(Mux(subresult(31),Cat(Fill(32,1),subresult(31,0)),Cat(0.U(32.W),subresult(31,0)))))
+        ALUType.alu_subw(5,2)   -> List(true.B,(Mux(subresult(31),Cat(Fill(32,1),subresult(31,0)),Cat(0.U(32.W),subresult(31,0))))),
         //  sll        slli 
         ALUType.alu_sll(5,2)    -> List(true.B,(op_data1 << (rs2_data &0x3f))),
         //  slliw       sllw 
