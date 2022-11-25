@@ -68,13 +68,15 @@ class Exu extends Module with CoreParameters{
 
     // The results of function unit 
     // Mux1H
-    val w_rs_en :: rs_data :: Nil = MuxCase((false.B,0.U(64.W)),Array(
-        valid(0) -> (alu_exu.io.w_rs_en,alu_exu.io.result_data),
-        valid(1) -> (false.B,0.U(64.W)),
-        valid(2) -> (false.B,0.U(64.W)),
-        valid(3) -> (false.B,0.U(64.W))
+    val temp_w_en_and_rs_data = MuxCase(0.U(65.W),Array(
+        valid(0) -> Cat(alu_exu.io.w_rs_en.asUInt,alu_exu.io.result_data),
+        valid(1) -> Cat(0.U(1.W),0.U(64.W)),
+        valid(2) -> Cat(0.U(1.W),0.U(64.W)),
+        valid(3) -> Cat(0.U(1.W),0.U(64.W))
     ))
 
+    val w_rs_en = temp_w_en_and_rs_data(64)
+    val rs_data = temp_w_en_and_rs_data(63,0)
     reg_rs_data := rs_data
     reg_rs_addr := rs_addr
     reg_w_rs_en := w_rs_en
