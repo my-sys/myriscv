@@ -1,5 +1,5 @@
 import chisel3._
-import chise3.util._
+import chisel3.util._
 
 object ALUType{
     //需要组合一下减轻分量。    6位
