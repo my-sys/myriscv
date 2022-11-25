@@ -15,6 +15,8 @@ object Inst_type{
     def Type_CSR = "b0101".U
     def Type_IR = "b0100".U
     def Type_N  = "b1100".U
+
+    
 }
 
 object Op_type{
