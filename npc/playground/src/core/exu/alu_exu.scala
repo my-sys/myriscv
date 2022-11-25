@@ -5,58 +5,58 @@ object ALUType{
     //需要组合一下减轻分量。    6位
     // 第0位用于判断rs2是否为立即数，第1位用于判断是否为进行低位操作。 
     // 
-    def alu_add     = "b000_00".U 
-    def alu_addi    = "b000_01".U
-    def alu_addw    = "b000_10".U
-    def alu_addiw   = "b000_11".U 
+    val alu_add     = "b000_00".U 
+    val alu_addi    = "b000_01".U
+    val alu_addw    = "b000_10".U
+    val alu_addiw   = "b000_11".U 
     
 
-    def alu_auipc   = "b001_00".U
+    val alu_auipc   = "b001_00".U
 
-    def alu_and     = "b010_00".U
-    def alu_andi    = "b010_01".U 
+    val alu_and     = "b010_00".U
+    val alu_andi    = "b010_01".U 
     
-    def alu_slt     = "b011_00".U 
-    def alu_slti    = "b011_01".U 
+    val alu_slt     = "b011_00".U 
+    val alu_slti    = "b011_01".U 
      
-    def alu_sltu    = "b100_00".U
-    def alu_sltiu   = "b100_01".U
+    val alu_sltu    = "b100_00".U
+    val alu_sltiu   = "b100_01".U
 
-    def alu_sub     = "b101_00".U
-    def alu_subw    = "b101_10".U
+    val alu_sub     = "b101_00".U
+    val alu_subw    = "b101_10".U
 
-    def alu_sll     = "b110_00".U 
-    def alu_slli    = "b110_01".U     
-    def alu_sllw    = "b110_10".U
-    def alu_slliw   = "b110_11".U
+    val alu_sll     = "b110_00".U 
+    val alu_slli    = "b110_01".U     
+    val alu_sllw    = "b110_10".U
+    val alu_slliw   = "b110_11".U
 
-    def alu_sra     = "b111_00".U 
-    def alu_srai    = "b111_01".U     
-    def alu_sraw    = "b111_10".U
-    def alu_sraiw   = "b111_11".U
+    val alu_sra     = "b111_00".U 
+    val alu_srai    = "b111_01".U     
+    val alu_sraw    = "b111_10".U
+    val alu_sraiw   = "b111_11".U
 
-    def alu_srl     = "b1000_00".U 
-    def alu_srli    = "b1000_01".U 
-    def alu_srlw    = "b1000_10".U 
-    def alu_srliw   = "b1000_11".U
+    val alu_srl     = "b1000_00".U 
+    val alu_srli    = "b1000_01".U 
+    val alu_srlw    = "b1000_10".U 
+    val alu_srliw   = "b1000_11".U
 
 
-    def alu_or      = "b1001_00".U 
-    def alu_ori     = "b1001_01".U 
-    def alu_xor     = "b1010_00".U 
-    def alu_xori    = "b1010_01".U 
+    val alu_or      = "b1001_00".U 
+    val alu_ori     = "b1001_01".U 
+    val alu_xor     = "b1010_00".U 
+    val alu_xori    = "b1010_01".U 
 
 // 分支跳转不在遵循前面的规则，因为其不需要区分立即数，和低位操作。但识别的操作还是不能混淆
 // 这么做的目的主要是减小操作码
-    def alu_beq     = "b1011_00".U 
-    def alu_bne     = "b1011_10".U
-    def alu_bge     = "b1100_00".U 
-    def alu_bgeu    = "b1100_10".U 
-    def alu_blt     = "b1101_00".U 
-    def alu_bltu    = "b1101_10".U
+    val alu_beq     = "b1011_00".U 
+    val alu_bne     = "b1011_10".U
+    val alu_bge     = "b1100_00".U 
+    val alu_bgeu    = "b1100_10".U 
+    val alu_blt     = "b1101_00".U 
+    val alu_bltu    = "b1101_10".U
 
-    def alu_jal     = "b1110_00".U 
-    def alu_jalr    = "b1110_10".U
+    val alu_jal     = "b1110_00".U 
+    val alu_jalr    = "b1110_10".U
     
 }
 
@@ -100,7 +100,7 @@ class ALU_EXU extends Module with CoreParameters{
 
     val sraw_temp      = ((op_data1(31,0)).asSInt >> (rs2_data & "h1f".U)).asUInt
     val w_rs_en :: result_data :: Nil = ListLookup(io.exuType(5,2),List(false.B,0.U(64.W)), Array(
-        ALUType.alu_add.asUInt(5,2)    -> List(true.B,(op_data1 + rs2_data)),
+        ALUType.alu_add(5,2)    -> List(true.B,(op_data1 + rs2_data)),
         ALUType.alu_auipc(5,2)  -> List(true.B,(op_pc + op_imm)),
         ALUType.alu_and(5,2)    -> List(true.B,(op_data1 & rs2_data)),
         
