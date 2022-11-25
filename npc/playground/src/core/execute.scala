@@ -16,7 +16,7 @@ class Exu extends Module with CoreParameters{
         val out = new Bundle{
             val rs_addr         = Output(UInt(RegAddrLen.W))
             val rs_data         = Output(UInt(RegDataLen.W))
-            val w_rs_en         = Output(UInt(Bool()))
+            val w_rs_en         = Output(Bool())
             val next_pc         = Output(UInt(AddrLen.W))
             val valid_next_pc   = Output(Bool())            
         }
