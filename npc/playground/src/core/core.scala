@@ -21,9 +21,9 @@ class Core extends Module{
         }
     })
 
-    val fetch = new Fetch
-    val execute = new Exu
-    val decode = new Decode
+    val fetch = Module(new Fetch)
+    val execute = Module(new Exu)
+    val decode = Module(new Decode)
 
     // fetch
     fetch.io.in.inst            := io.in.rdata 
