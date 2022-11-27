@@ -19,7 +19,7 @@ class riscv_soc extends Module{
 
   // core.decode.reg_file.regfile
   //BoringUtils.bore(VecInit((0 to 31).map(i => core.decode.reg_file.read(i.U))),Seq(io.difftest_reg))
-  BoringUtils.addSource(VecInit((0 to 31).map(i => i.U)),"DIFFTEST_REG")
+  BoringUtils.addSources(VecInit((0 to 31).map(i => i.U)),"DIFFTEST_REG")
 
   //val difftest_reg    = Wire(Vec(32, UInt(64.W)))
   BoringUtils.addSink(io.difftest_reg,"DIFFTEST_REG")
