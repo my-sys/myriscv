@@ -31,16 +31,16 @@ class riscv_soc extends Module{
   val core = Module(new Core)
   val axi_ram = Module(new AXI_RAM)
   val difftest_inst     = WireInit(2.U(64.W))
-  val temp_inst         = core.io.out.raddr
+  //val temp_inst         = core.io.out.raddr
   
   val difftest_reg      = VecInit(Seq.fill(32)(0.U(64.W)))
   val difftest_pc       = WireInit(0.U(64.W))
   
-  BoringUtils.addSource(temp_inst,"DIFFTEST_INST1")
+  //BoringUtils.addSource(temp_inst,"DIFFTEST_INST1")
 
   BoringUtils.addSink(difftest_reg,"DIFFTEST_REG")
   BoringUtils.addSink(difftest_pc,"DIFFTEST_PC")
-  BoringUtils.addSink(difftest_inst,"DIFFTEST_INST1")
+  BoringUtils.addSink(difftest_inst,"DIFFTEST_INST")
   io.difftest_reg     := difftest_reg
   io.difftest_pc      := difftest_pc
   io.difftest_inst    := difftest_inst
