@@ -40,7 +40,7 @@ class Decode extends Module with CoreParameters{
 
     val reg_file        = new RegCtrl
 
-    BoringUtils.addSource(VecInit((0 to 31).map(i => reg_file.read(i.U)))),"DIFFTEST_REG")
+    BoringUtils.addSource(VecInit((0 to 31).map(i => reg_file.read(i.U))),"DIFFTEST_REG")
 
     val rs1_data        = reg_file.read(rs1_addr)
     val rs2_data        = reg_file.read(rs2_addr)
