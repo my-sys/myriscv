@@ -21,7 +21,7 @@ import chisel3.util.experimental.BoringUtils
   //BoringUtils.addSource(VecInit((0 to 31).map(i => i.U)),"DIFFTEST_REG")
   //BoringUtils.bore(core.fetch.regPC,Seq(io.difftest_pc))
   //BoringUtils.bore(core.fetch.regInst,Seq(io.difftest_inst))
-
+  //val difftest_reg    = WireInit(0.U.asTypeOf(Vec(32,UInt(64.W))))
 class riscv_soc extends Module{
   val io = IO(new Bundle{
     val difftest_reg  = Output(Vec(32, UInt(64.W)))
@@ -37,7 +37,7 @@ class riscv_soc extends Module{
   val difftest_pc       = WireInit(0.U(64.W))
   val difftest_inst     = WireInit(2.U(64.W))
   BoringUtils.addSource(temp_inst,"DIFFTEST_INST1")
-  //val difftest_reg    = WireInit(0.U.asTypeOf(Vec(32,UInt(64.W))))
+
   BoringUtils.addSink(difftest_reg,"DIFFTEST_REG")
   BoringUtils.addSink(difftest_pc,"DIFFTEST_PC")
   BoringUtils.addSink(difftest_inst,"DIFFTEST_INST1")
