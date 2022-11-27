@@ -36,6 +36,6 @@ class Fetch extends Module{
     regInst := inst
     io.out.pc := regPC 
     io.out.inst := regInst
-    BoringUtils.addSource(regPC,"DIFFTEST_PC1")
+    BoringUtils.addSource(regPC,"DIFFTEST_PC")
     BoringUtils.addSource(regInst,"DIFFTEST_INST")
 }
