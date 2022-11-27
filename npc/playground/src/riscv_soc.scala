@@ -8,10 +8,19 @@ import chisel3.util.experimental.BoringUtils
 // equal y := x
 // BoringUtils.bore(constant.x, Seq(expect.y))
 
+//  val kk = Wire(UInt(64.W))
+//  kk := 0.U
+//  BoringUtils.addSource(kk,"AABBCC")
+
+//  val zz = Wire(UInt(64.W))
+//  zz := 0.U
+  //BoringUtils.addSink(zz,"AABBCC")
+//  io.difftest_pc := zz
+
 class riscv_soc extends Module{
   val io = IO(new Bundle{
-    //val difftest_reg  = Output(Vec(32, UInt(64.W)))
-    val difftest_pc   = Output(UInt(64.W))
+    val difftest_reg  = Output(Vec(32, UInt(64.W)))
+    //val difftest_pc   = Output(UInt(64.W))
     //val difftest_inst = Output(UInt(32.W))
   })
   val core = Module(new Core)
@@ -21,19 +30,12 @@ class riscv_soc extends Module{
   //BoringUtils.bore(VecInit((0 to 31).map(i => core.decode.reg_file.read(i.U))),Seq(io.difftest_reg))
   //BoringUtils.addSource(VecInit((0 to 31).map(i => i.U)),"DIFFTEST_REG")
 
-  //val difftest_reg    = Wire(Vec(32, UInt(64.W)))
-  //BoringUtils.addSink(difftest_reg,"DIFFTEST_REG1")
-  //io.difftest_reg     := difftest_reg
+  val difftest_reg    = WireInit(Vec(32, 0.U(64.W)))
+  BoringUtils.addSink(difftest_reg,"DIFFTEST_REG")
+  io.difftest_reg     := difftest_reg
   //BoringUtils.bore(core.fetch.regPC,Seq(io.difftest_pc))
   //BoringUtils.bore(core.fetch.regInst,Seq(io.difftest_inst))
-  val kk = Wire(UInt(64.W))
-  kk := 0.U
-  BoringUtils.addSource(kk,"AABBCC")
 
-  val zz = Wire(UInt(64.W))
-  zz := 0.U
-  //BoringUtils.addSink(zz,"AABBCC")
-  io.difftest_pc := zz
   core.io.in.rdata    :=  axi_ram.io.rdata
   axi_ram.io.waddr    :=  core.io.out.waddr 
   axi_ram.io.wdata    :=  core.io.out.wdata
