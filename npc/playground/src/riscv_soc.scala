@@ -14,7 +14,7 @@ class riscv_soc extends Module{
 //    val difftest_pc   = Output(UInt(64.W))
 //    val difftest_inst = Output(UInt(32.W))
 //  })
-  val core = new Core
+  val core = Module(new Core)
   val axi_ram = new AXI_RAM
 
   // core.decode.reg_file.regfile
