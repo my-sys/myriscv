@@ -34,8 +34,8 @@ class riscv_soc extends Module{
 
   val difftest_reg    = VecInit(Seq.fill(32)(0.U(64.W)))
   //val difftest_reg    = WireInit(0.U.asTypeOf(Vec(32,UInt(64.W))))
-  //BoringUtils.addSink(difftest_reg,"DIFFTEST_REG")
-  BoringUtils.bore(VecInit((0 to 31).map(i => core.decode.reg_file.read(i.U))),Seq(difftest_reg))
+  BoringUtils.addSink(difftest_reg,"DIFFTEST_REG")
+  
   io.difftest_reg     := difftest_reg
 
   core.io.in.rdata    :=  axi_ram.io.rdata
