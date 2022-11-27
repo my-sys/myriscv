@@ -1,6 +1,6 @@
 import chisel3._
 import chisel3.util._ 
-
+import chisel3.util.experimental.BoringUtils
 class Decode extends Module with CoreParameters{
     val io = IO(new Bundle{
         val in      = new Bundle{
