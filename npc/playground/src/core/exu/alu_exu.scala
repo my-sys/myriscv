@@ -99,48 +99,48 @@ class ALU_EXU extends Module with CoreParameters{
     val srlw_temp = op_data1(31,0) >> (rs2_data & "h1f".U)
 
     val sraw_temp      = ((op_data1(31,0)).asSInt >> (rs2_data & "h1f".U)).asUInt
-    val temp_result_data = MuxLookup(io.exuType(5,2),0.U, List(
-        ALUType.alu_add(5,2)    -> Cat(0.U(1.W),(op_data1 + rs2_data)),
-        ALUType.alu_auipc(5,2)  -> Cat(0.U(1.W),(op_pc + op_imm)),
-        ALUType.alu_and(5,2)    -> Cat(0.U(1.W),(op_data1 & rs2_data)),
+    val temp_result_data = MuxLookup(io.exuType(5,2),0.U(64.W), List(
+        ALUType.alu_add(5,2)    -> Cat(1.U(1.W),(op_data1 + rs2_data)),
+        ALUType.alu_auipc(5,2)  -> Cat(1.U(1.W),(op_pc + op_imm)),
+        ALUType.alu_and(5,2)    -> Cat(1.U(1.W),(op_data1 & rs2_data)),
         
         //  slt     slti 
-        ALUType.alu_slt(5,2)    -> Cat(0.U(1.W),(Cat(0.U((XLEN-1).W), s_rs1_l_rs2))),
-        ALUType.alu_sltu(5,2)   -> Cat(0.U(1.W),(Cat(0.U((XLEN-1).W), u_rs1_l_rs2))),
-        ALUType.alu_sub(5,2)    -> Cat(0.U(1.W),(subresult)),
-        ALUType.alu_subw(5,2)   -> Cat(0.U(1.W),(Mux(subresult(31),Cat(Fill(32,1.U),subresult(31,0)),Cat(0.U(32.W),subresult(31,0))))),
+        ALUType.alu_slt(5,2)    -> Cat(1.U(1.W),(Cat(0.U((XLEN-1).W), s_rs1_l_rs2))),
+        ALUType.alu_sltu(5,2)   -> Cat(1.U(1.W),(Cat(0.U((XLEN-1).W), u_rs1_l_rs2))),
+        ALUType.alu_sub(5,2)    -> Cat(1.U(1.W),(subresult)),
+        ALUType.alu_subw(5,2)   -> Cat(1.U(1.W),(Mux(subresult(31),Cat(Fill(32,1.U),subresult(31,0)),Cat(0.U(32.W),subresult(31,0))))),
         //  sll        slli 
-        ALUType.alu_sll(5,2)    -> Cat(0.U(1.W),(op_data1 << (rs2_data &"h3f".U))),
+        ALUType.alu_sll(5,2)    -> Cat(1.U(1.W),(op_data1 << (rs2_data &"h3f".U))),
         //  slliw       sllw 
-        ALUType.alu_sllw(5,2)   -> Cat(0.U(1.W),(Cat(Fill(32,sllw_temp(31)),sllw_temp(31,0)))),
+        ALUType.alu_sllw(5,2)   -> Cat(1.U(1.W),(Cat(Fill(32,sllw_temp(31)),sllw_temp(31,0)))),
 
         //  srl         srli 
-        ALUType.alu_srl(5,2)    -> Cat(0.U(1.W),(op_data1 >> (rs2_data & "h3f".U))),
+        ALUType.alu_srl(5,2)    -> Cat(1.U(1.W),(op_data1 >> (rs2_data & "h3f".U))),
 
         // srlw         srliw 
-        ALUType.alu_srlw(5,2)   -> Cat(0.U(1.W),(Cat(Fill(32,srlw_temp(31)),srlw_temp(31,0)))),
+        ALUType.alu_srlw(5,2)   -> Cat(1.U(1.W),(Cat(Fill(32,srlw_temp(31)),srlw_temp(31,0)))),
 
         // sra          srai 
-        ALUType.alu_sra(5,2)    -> Cat(0.U(1.W),((op_data1.asSInt >> (rs2_data & "h3f".U)).asUInt)),
+        ALUType.alu_sra(5,2)    -> Cat(1.U(1.W),((op_data1.asSInt >> (rs2_data & "h3f".U)).asUInt)),
 
         //  sraw        sraiw 
-        ALUType.alu_sraw(5,2)   -> Cat(0.U(1.W),(Cat(Fill(32,sraw_temp(31)),sraw_temp(31,0)))),
+        ALUType.alu_sraw(5,2)   -> Cat(1.U(1.W),(Cat(Fill(32,sraw_temp(31)),sraw_temp(31,0)))),
 
         //  xor         xori 
-        ALUType.alu_xor(5,2)    -> Cat(0.U(1.W),(op_data1 ^ rs2_data)),
+        ALUType.alu_xor(5,2)    -> Cat(1.U(1.W),(op_data1 ^ rs2_data)),
 
         // or           ori 
-        ALUType.alu_or(5,2)     -> Cat(0.U(1.W),(op_data1 | rs2_data))
+        ALUType.alu_or(5,2)     -> Cat(1.U(1.W),(op_data1 | rs2_data))
     ))
 
     val w_rs_en                 = temp_result_data(64)
     val result_data             = temp_result_data(63,0)
 
-    val next_pc1 = List(true.B,op_pc + op_imm)
-    val next_pc2 = List(false.B,0.U(64.W)) 
+    val next_pc1 = Cat(1.U(1.W),op_pc + op_imm)
+    val next_pc2 = Cat(0.U(1.W),0.U(64.W)) 
 
-    val next_pc3 = List(true.B,(op_data1 + op_imm) & "hffff_ffff_ffff_fffe".U)
-    val next_pc_valid :: result_pc :: Nil = ListLookup(io.exuType(5,1),List(false.B,0.U(64.W)),List(
+    val next_pc3 = Cat(1.U(1.W),(op_data1 + op_imm) & "hffff_ffff_ffff_fffe".U)
+    val temp_result_pc  = MuxLookup(io.exuType(5,1),0.U(65.W),List(
         ALUType.alu_beq(5,1)    -> (Mux(op_data1 === op_data2, next_pc1,next_pc2)),
         ALUType.alu_bge(5,1)    -> (Mux(!s_rs1_l_rs2,next_pc1,next_pc2)),
         ALUType.alu_bgeu(5,1)   -> (Mux(!u_rs1_l_rs2,next_pc1,next_pc2)),
@@ -150,6 +150,9 @@ class ALU_EXU extends Module with CoreParameters{
         ALUType.alu_jal(5,1)    -> (next_pc1),
         ALUType.alu_jalr(5,1)   -> (next_pc3)
     ))
+
+    val next_pc_valid   = temp_result_pc(64)
+    val result_pc       = temp_result_pc(63,0)
 
     io.result_data      := result_data
     io.result_pc        := result_pc
