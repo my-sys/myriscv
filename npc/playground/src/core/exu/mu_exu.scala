@@ -25,4 +25,6 @@ class MU_EXU extends Module with CoreParameters{
         val imm_data    = Input(UInt(ImmLen.W))
         val result_data = Output(UInt(RegDataLen.W))
     })
+
+    io.result_data      := 0.U
 }   
