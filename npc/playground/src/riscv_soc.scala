@@ -17,7 +17,7 @@ class riscv_soc extends Module{
   val core = new Core
   val axi_ram = new AXI_RAM
 
-  BoringUtils.bore(core.decode.reg_file,io.difftest_reg)
+  BoringUtils.bore(core.decode.reg_file.regfile,Seq(io.difftest_reg))
   BoringUtils.bore(core.fetch.regPC,io.difftest_pc)
   BoringUtils.bore(core.fetch.regInst,difftest_inst)
   core.io.in.rdata := axi_ram.io.rdata
