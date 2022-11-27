@@ -87,7 +87,7 @@ class ALU_EXU extends Module with CoreParameters{
     // subtraction, All data is assumed to be in the form of complement
     val sub_data1 = op_data1
     val sub_data2 = op_data2
-    val subresult = sub_data1 + (sub_data2 ^ "hffff_ffff_ffff_ffff".U) + 1.U
+    val subresult = sub_data1 + (sub_data2 ^ "h1ffff_ffff_ffff_ffff".U) + 1.U
     
     //  unsigend rs1 < rs2   must check this flag
     val u_rs1_l_rs2 = !subresult(XLEN)   
