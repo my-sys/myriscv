@@ -22,7 +22,7 @@ class riscv_soc extends Module{
   BoringUtils.bore(core.fetch.regPC,Seq(io.difftest_pc))
   BoringUtils.bore(core.fetch.regInst,Seq(difftest_inst))
   core.io.in.rdata := axi_ram.io.rdata
-  core.io.out<>axi_ram  
+  core.io.out<>axi_ram.io  
 
 
 }
