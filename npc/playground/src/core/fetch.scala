@@ -19,6 +19,10 @@ class Fetch extends Module{
         }        
     })
 
+    val inst            = io.in.inst 
+    val next_pc         = io.in.next_pc
+    val valid_next_pc   = io.in.valid_next_pc
+
     //指令的初始执行位置为0x8000_0000 Reset_Vector
     val regPC = RegInit("h8000_0000".U(64.W))
     val regInst = RegInit(0.U(32.W))
@@ -29,7 +33,7 @@ class Fetch extends Module{
         regPC := next_pc
     }
     
-    regInst := io.in.inst
+    regInst := inst
     io.out.pc := regPC 
     io.out.inst := regInst
 }
