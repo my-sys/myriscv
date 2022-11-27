@@ -35,7 +35,7 @@ class riscv_soc extends Module{
   
   val difftest_reg      = VecInit(Seq.fill(32)(0.U(64.W)))
   val difftest_pc       = WireInit(0.U(64.W))
-  val difftest_inst     = WireInit(0.U(64.W))
+  val difftest_inst     = WireInit(2.U(64.W))
   BoringUtils.addSource(temp_inst,"DIFFTEST_INST1")
   //val difftest_reg    = WireInit(0.U.asTypeOf(Vec(32,UInt(64.W))))
   BoringUtils.addSink(difftest_reg,"DIFFTEST_REG")
