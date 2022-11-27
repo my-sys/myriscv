@@ -49,4 +49,10 @@ class Core extends Module{
     decode.io.in.rs_addr        := execute.io.out.rs_addr
     decode.io.in.result_data    := execute.io.out.rs_data
     decode.io.in.w_rs_en        := execute.io.out.w_rs_en
+
+    // 临时
+    io.out.waddr                := 0.U 
+    io.out.wdata                := 0.U
+    io.out.wen                  := false.B 
+    io.out.wstrb                := 1.U
 }
