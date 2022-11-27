@@ -23,4 +23,5 @@ class LSU_EXU extends Module with CoreParameters{
         val imm_data            = Input(UInt(ImmLen.W))
         val address_result      = Output(UInt(RegDataLen.W))
     })
+    io.address_result := 0.U
 }
