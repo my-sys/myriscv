@@ -11,8 +11,8 @@ import chisel3.util._
 class riscv_soc extends Module{
   val io = IO(new Bundle{
     val difftest_reg  = Output(Vec(32, UInt(64.W)))
-    val difftest_pc   = Output(UInt(64.W))
-    val difftest_inst = Output(UInt(32.W))
+    //val difftest_pc   = Output(UInt(64.W))
+    //val difftest_inst = Output(UInt(32.W))
   })
   val core = Module(new Core)
   val axi_ram = Module(new AXI_RAM)
