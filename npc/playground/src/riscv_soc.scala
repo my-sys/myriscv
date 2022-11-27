@@ -27,7 +27,7 @@ class riscv_soc extends Module{
   //BoringUtils.bore(core.fetch.regPC,Seq(io.difftest_pc))
   //BoringUtils.bore(core.fetch.regInst,Seq(io.difftest_inst))
   BoringUtils.addSource(0.U(64.W,"AABBCC")
-  /BoringUtils.addSink(io.difftest_pc,"AABBCC")
+  //BoringUtils.addSink(io.difftest_pc,"AABBCC")
   core.io.in.rdata    :=  axi_ram.io.rdata
   axi_ram.io.waddr    :=  core.io.out.waddr 
   axi_ram.io.wdata    :=  core.io.out.wdata
