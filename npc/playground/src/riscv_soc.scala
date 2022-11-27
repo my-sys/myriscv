@@ -20,7 +20,7 @@ class riscv_soc extends Module{
   // core.decode.reg_file.regfile
   BoringUtils.bore(VecInit((0 to 31).map(i => core.decode.reg_file.read(i.U))),Seq(io.difftest_reg))
   BoringUtils.bore(core.fetch.regPC,Seq(io.difftest_pc))
-  BoringUtils.bore(core.fetch.regInst,Seq(difftest_inst))
+  BoringUtils.bore(core.fetch.regInst,Seq(io.difftest_inst))
   core.io.in.rdata := axi_ram.io.rdata
   core.io.out<>axi_ram.io  
 
