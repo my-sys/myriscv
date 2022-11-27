@@ -2,7 +2,7 @@ import chisel3._
 import chisel3.util._ 
 
 class WriteBack extends Module with CoreParameters{
-    io = IO(new Bundle{
+    val io = IO(new Bundle{
         val in = new Bundle{
            // val rs_addr         = Input(UInt(RegAddrLen.W))
            // val result_data     = Input(UInt(RegDataLen.W))
