@@ -23,10 +23,10 @@ class riscv_soc extends Module{
   //BoringUtils.bore(core.fetch.regPC,Seq(io.difftest_pc))
   //BoringUtils.bore(core.fetch.regInst,Seq(io.difftest_inst))
   core.io.in.rdata    :=  axi_ram.io.rdata
-  core.io.out.waddr   :=  axi_ram.io.waddr  
-  core.io.out.wdata   :=  axi_ram.io.wdata 
-  core.io.out.raddr   :=  axi_ram.io.raddr 
-  core.io.out.wen     :=  axi_ram.io.wen 
-  core.io.out.wstrb   :=  axi_ram.io.wstrb 
+  axi_ram.io.waddr    :=  core.io.out.waddr 
+  axi_ram.io.wdata    :=  core.io.out.wdata
+  axi_ram.io.raddr    :=  core.io.out.raddr
+  axi_ram.io.wen      :=  core.io.out.wen
+  axi_ram.io.wstrb    :=  core.io.out.wstrb 
 
 }
