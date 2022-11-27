@@ -14,8 +14,8 @@ class riscv_soc extends Module{
     val difftest_pc   = Output(UInt(64.W))
     val difftest_inst = Output(UInt(32.W))
   })
-  core = new Core
-  axi_ram = new AXI_RAM
+  val core = new Core
+  val axi_ram = new AXI_RAM
 
   BoringUtils.bore(core.decode.reg_file,io.difftest_reg)
   BoringUtils.bore(core.fetch.regPC,io.difftest_pc)
