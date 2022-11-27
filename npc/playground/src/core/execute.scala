@@ -41,9 +41,9 @@ class Exu extends Module with CoreParameters{
 
 
     val alu_exu = Module(new ALU_EXU())
-    val lsu_exu = Module(new LSU_EXU())
-    val csr_exu = Module(new CSR_EXU())
-    val mu_exu  = Module(new MU_EXU())
+    //val lsu_exu = Module(new LSU_EXU())
+    //val csr_exu = Module(new CSR_EXU())
+    //val mu_exu  = Module(new MU_EXU())
 
     // Choosing the function unit to execute
     val default_valid = "b0000".U
