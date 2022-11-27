@@ -29,7 +29,9 @@ class riscv_soc extends Module{
   val kk = Wire(UInt(64.W))
   kk := 0.U
   BoringUtils.addSource(kk,"AABBCC")
+
   val zz = Wire(UInt(64.W))
+  zz := 0.U
   //BoringUtils.addSink(zz,"AABBCC")
   io.difftest_pc := zz
   core.io.in.rdata    :=  axi_ram.io.rdata
