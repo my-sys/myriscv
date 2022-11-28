@@ -24,8 +24,11 @@ void init_ram(const char* img_file){
         printf("!!!!!!!!!!! img size over the ram !!!!!!!!!!!!!!!!!\n");
     }
     fseek(fp,0,SEEK_SET);
-    fread(ram, imgfile_size/8,8,fp);
-
+    int ret = fread(ram, imgfile_size/8,8,fp);
+	if(ret != 1){
+		printf("error fread\n");
+		assert(0);
+	}
     fclose(fp);
 }
 
@@ -38,9 +41,9 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, paddr_t waddr, uint64_t 
     *rdata = ram[raddr];
     if(wen){
         switch(wstrb){
-            case 0x1: ram[waddr] = (ram[waddr] & 0xffff_ffff_ffff_ff00) | (wdata &0xff);break;
-            case 0x3: ram[waddr] = (ram[waddr] & 0xffff_ffff_ffff_0000) | (wdata &0xffff);break;
-            case 0xf: ram[waddr] = (ram[waddr] & 0xffff_ffff_0000_0000) | (wdata &0xffff_ffff);break;
+            case 0x1: ram[waddr] = (ram[waddr] & 0xffffffffffffff00) | (wdata &0xff);break;
+            case 0x3: ram[waddr] = (ram[waddr] & 0xffffffffffff0000) | (wdata &0xffff);break;
+            case 0xf: ram[waddr] = (ram[waddr] & 0xffffffff00000000) | (wdata &0xffffffff);break;
             case 0xff: ram[waddr] = wdata;break;
             default:  printf("mem write falied is not 8,16,32,64\n");assert(0);
         }

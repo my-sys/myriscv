@@ -7,4 +7,6 @@ void create_watchpoint(char *str);
 void delete_watchpoint(int No);
 void display_watchpoint();
 bool calculate_watchpoint();
+void init_sdb();
+void sdb_mainloop();
 #endif

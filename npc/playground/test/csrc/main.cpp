@@ -1,5 +1,6 @@
 #include "emulator.h"
 #include <getopt.h>
+#include "sdb.h"
 static char *diff_so_file = NULL;
 static char *img_file = NULL;
 static char *log_file = NULL;
@@ -9,7 +10,7 @@ static int parse_args(int argc, char *argv[]){
     const struct option table[] = {
         {"log"      , required_argument, NULL, 'l'},
         {"diff"     , required_argument, NULL, 'd'},
-        {0          ,                  , NULL, 0},
+        {0          , 0                , NULL, 0},
     }
     int opt;
     for(int i =0 ;i<argc;i++){
