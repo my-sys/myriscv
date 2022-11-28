@@ -46,7 +46,9 @@ static int cmd_si(char *args){
         printf("you maybe input a illegal number!!!!\n");
         return 0;
     }
+	printf("cmd_si nmu %d\n",num);
     Emulator::get_instance().execute(num);
+	printf("cmd_si nmu success %d\n",num);
     return 0;
 }
 

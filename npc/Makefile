@@ -22,9 +22,9 @@ VERILATOR_FLAGS += --assert
 # Generate coverage analysis
 VERILATOR_FLAGS += --coverage 
 # Run Verilator in debug mode
-VERILATOR_FLAGS += --debug
+#VERILATOR_FLAGS += --debug
 # Add this trace to get a backtrace in gdb
-VERILATOR_FLAGS += --gdbbt
+#VERILATOR_FLAGS += --gdbbt
 VERILATOR_FLAGS += +define+SYNTHESIS
 
 #VERILATOR_FLAGS += coverage_on  -file "verilator_config.vlt"
@@ -58,7 +58,7 @@ clean:
 
 compile:$(BIN) 
 	@echo "--- BUILD ---------"
-	make -j -C obj_dir -f V$(TOPNAME).mk 
+	make -j3 -C obj_dir -f V$(TOPNAME).mk 
 #	obj_dir/V$(TOPNAME) +trace
 
 run:
