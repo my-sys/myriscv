@@ -24,3 +24,5 @@ run:
 	@echo $(AM_HOME)
 	@echo $(NPC_HOME)
 	$(MAKE) -C $(NPC_HOME) ISA=$(ISA) run IMG=$(IMAGE).bin
+gdb:
+	$(MAKE) -C $(NPC_HOME) ISA=$(ISA) gdb IMG=$(IMAGE).bin

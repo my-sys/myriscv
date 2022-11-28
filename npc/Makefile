@@ -25,6 +25,7 @@ VERILATOR_FLAGS += --coverage
 #VERILATOR_FLAGS += --debug
 # Add this trace to get a backtrace in gdb
 #VERILATOR_FLAGS += --gdbbt
+VERILATOR_FLAGS += --gdb
 VERILATOR_FLAGS += +define+SYNTHESIS
 
 #VERILATOR_FLAGS += coverage_on  -file "verilator_config.vlt"
@@ -65,6 +66,11 @@ run:
 	make verilog 
 	make compile
 	obj_dir/V$(TOPNAME)  $(IMG)
+
+gdb:
+	make verilog 
+	make compile
+	gdb obj_dir/V$(TOPNAME)  $(IMG)	
 # nemu/native.mk
 sim: run
 	$(call git_commit, "sim RTL") # DO NOT REMOVE THIS LINE!!!
