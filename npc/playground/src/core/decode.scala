@@ -16,7 +16,7 @@ class Decode extends Module with CoreParameters{
             val rs1_data    = Output(UInt(RegDataLen.W))
             val rs2_data    = Output(UInt(RegDataLen.W))
             val rs_addr     = Output(UInt(RegAddrLen.W))
-            val imm_data    = Output(UInt(RegAddrLen.W))
+            val imm_data    = Output(UInt(ImmLen.W))
             val opType      = Output(UInt(OpTypeLen.W))
             val exuType     = Output(UInt(ExuTypeLen.W))
             val pc          = Output(UInt(AddrLen.W))
