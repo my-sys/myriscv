@@ -3,6 +3,7 @@
 #include "common.h"
 #include "emulator.h"
 #include "debug.h"
+#include "ram.h"
 const char *regs[] = {
   "$0", "ra", "sp", "gp", "tp", "t0", "t1", "t2",
   "s0", "s1", "a0", "a1", "a2", "a3", "a4", "a5",
@@ -276,7 +277,7 @@ word_t eval(uint32_t p, uint32_t q){
             case TK_EQ: return (val1 == val2)? 1:0;
             case TK_NEQ: return (val1 != val2)? 1:0;
             case TK_AND: return (val1 && val2);
-            case TK_DEREF: return paddr_read(val2, 4);
+            case TK_DEREF: return mem_read(val2, 4);
             default: assert(0);
         }
 
