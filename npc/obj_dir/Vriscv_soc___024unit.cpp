@@ -9,7 +9,7 @@
 
 //==========
 
-extern "C" void ramCtrl(long long raddr, long long* rdata, long long waddr, long long wdata, svBit wstrb, svBit wen);
+extern "C" void ramCtrl(long long raddr, long long* rdata, long long waddr, long long wdata, svLogic wstrb, svBit wen);
 
 VL_INLINE_OPT void Vriscv_soc___024unit____Vdpiimwrap_ramCtrl_TOP____024unit(QData/*63:0*/ raddr, QData/*63:0*/ &rdata, QData/*63:0*/ waddr, QData/*63:0*/ wdata, CData/*0:0*/ wstrb, CData/*0:0*/ wen) {
     VL_DEBUG_IF(VL_DBG_MSGF("+        Vriscv_soc___024unit____Vdpiimwrap_ramCtrl_TOP____024unit\n"); );
@@ -21,7 +21,7 @@ VL_INLINE_OPT void Vriscv_soc___024unit____Vdpiimwrap_ramCtrl_TOP____024unit(QDa
     for (size_t waddr__Vidx = 0; waddr__Vidx < 1; ++waddr__Vidx) waddr__Vcvt = waddr;
     long long wdata__Vcvt;
     for (size_t wdata__Vidx = 0; wdata__Vidx < 1; ++wdata__Vidx) wdata__Vcvt = wdata;
-    svBit wstrb__Vcvt;
+    svLogic wstrb__Vcvt;
     for (size_t wstrb__Vidx = 0; wstrb__Vidx < 1; ++wstrb__Vidx) wstrb__Vcvt = wstrb;
     svBit wen__Vcvt;
     for (size_t wen__Vidx = 0; wen__Vidx < 1; ++wen__Vidx) wen__Vcvt = wen;

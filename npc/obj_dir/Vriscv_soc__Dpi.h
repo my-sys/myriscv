@@ -14,7 +14,7 @@ extern "C" {
 
     // DPI IMPORTS
     // DPI import at /home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v:1:30
-    extern void ramCtrl(long long raddr, long long* rdata, long long waddr, long long wdata, svBit wstrb, svBit wen);
+    extern void ramCtrl(long long raddr, long long* rdata, long long waddr, long long wdata, svLogic wstrb, svBit wen);
 
 #ifdef __cplusplus
 }
