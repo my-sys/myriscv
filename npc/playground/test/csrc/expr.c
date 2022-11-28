@@ -92,7 +92,7 @@ void init_regex() {
     re[i] = pcre_compile(rules[i].regex,0,&error_msg,&erroffset,NULL);
       // ret = regcomp(&re[i], rules[i].regex, REG_EXTENDED);//REG_EXTENDED
     if (re[i] == NULL) {
-      panic("regex compilation failed: %s\n%s", error_msg, rules[i].regex);
+      printf("regex compilation failed: %s\n%s", error_msg, rules[i].regex);
     }
   }
 }
