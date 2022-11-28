@@ -44,6 +44,7 @@ VM_USER_LDLIBS = \
 # User .cpp files (from .cpp's on Verilator command line)
 VM_USER_CLASSES = \
 	difftest \
+	emulator \
 	expr \
 	main \
 	ram \
@@ -65,6 +66,8 @@ include $(VERILATOR_ROOT)/include/verilated.mk
 VPATH += $(VM_USER_DIR)
 
 difftest.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/difftest.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+emulator.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/emulator.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 expr.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/expr.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
