@@ -57,12 +57,12 @@ class Decode extends Module with CoreParameters{
     reg_pc              := pc
 
     reg_imm             := MuxLookup(instType, 0.U, List(
-        Inst_type.Type_I    -> (Cat( Fill(52,inst(31)) ,inst(31,25))),  // sign extension
+        Inst_type.Type_I    -> (Cat( Fill(52,inst(31)) ,inst(31,20))),  // sign extension
         Inst_type.Type_U    -> (Cat( Fill(32,inst(31)), Cat(inst(31,12),0.U(12.W)) )), // sign extension 
         Inst_type.Type_S    -> (Cat( Fill(52,inst(31)), Cat(inst(31,25),inst(11,7)) )), // sign extension
-        Inst_type.Type_J    -> (Cat( Fill(44,inst(19)),  Cat(Cat(inst(19,12),inst(20)),Cat(inst(30,19),0.U(1.W))) )), // sign extension
+        Inst_type.Type_J    -> (Cat( Fill(44,inst(31)),  Cat(Cat(inst(19,12),inst(20)),Cat(inst(30,21),0.U(1.W))) )), // sign extension
         
-        Inst_type.Type_B    -> (Cat( Fill(54,inst(31)), Cat(Cat(inst(7),inst(30,25)), Cat(inst(11,8),0.U(1.W)))  )),
+        Inst_type.Type_B    -> (Cat( Fill(52,inst(31)), Cat(Cat(inst(7),inst(30,25)), Cat(inst(11,8),0.U(1.W)))  )),
         Inst_type.Type_CSR  -> (Cat( 0.U(59.W),inst(19,15))),
         Inst_type.Type_IR   -> (Cat(0.U(58.W),inst(25,20)))
         //Inst_type.Type_N    -> (),

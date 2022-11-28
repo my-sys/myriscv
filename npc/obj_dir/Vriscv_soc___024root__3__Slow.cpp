@@ -37,792 +37,10 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     VlWide<4>/*127:0*/ __Vtemp647;
     VlWide<3>/*95:0*/ __Vtemp660;
     // Body
-    if ((0x2000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__srlw_temp 
-                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp))) {
-        ++(vlSymsp->__Vcoverage[5260]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp 
-            = ((0xfdffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp) 
-               | (0x2000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__srlw_temp));
-    }
-    if ((0x4000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__srlw_temp 
-                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp))) {
-        ++(vlSymsp->__Vcoverage[5261]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp 
-            = ((0xfbffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp) 
-               | (0x4000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__srlw_temp));
-    }
-    if ((0x8000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__srlw_temp 
-                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp))) {
-        ++(vlSymsp->__Vcoverage[5262]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp 
-            = ((0xf7ffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp) 
-               | (0x8000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__srlw_temp));
-    }
-    if ((0x10000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__srlw_temp 
-                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp))) {
-        ++(vlSymsp->__Vcoverage[5263]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp 
-            = ((0xefffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp) 
-               | (0x10000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__srlw_temp));
-    }
-    if ((0x20000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__srlw_temp 
-                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp))) {
-        ++(vlSymsp->__Vcoverage[5264]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp 
-            = ((0xdfffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp) 
-               | (0x20000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__srlw_temp));
-    }
-    if ((0x40000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__srlw_temp 
-                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp))) {
-        ++(vlSymsp->__Vcoverage[5265]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp 
-            = ((0xbfffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp) 
-               | (0x40000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__srlw_temp));
-    }
-    if (((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__srlw_temp 
-          ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp) 
-         >> 0x1fU)) {
-        ++(vlSymsp->__Vcoverage[5266]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp 
-            = ((0x7fffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp) 
-               | (0x80000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__srlw_temp));
-    }
-    if ((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-               ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5267]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xfffffffeU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((2U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-               ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5268]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xfffffffdU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (2U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((4U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-               ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5269]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xfffffffbU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (4U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((8U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-               ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5270]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xfffffff7U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (8U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x10U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                  ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5271]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xffffffefU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x10U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x20U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                  ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5272]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xffffffdfU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x20U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x40U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                  ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5273]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xffffffbfU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x40U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x80U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                  ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5274]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xffffff7fU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x80U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x100U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5275]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xfffffeffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x100U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x200U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5276]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xfffffdffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x200U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x400U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5277]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xfffffbffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x400U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x800U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5278]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xfffff7ffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x800U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x1000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5279]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xffffefffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x1000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x2000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5280]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xffffdfffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x2000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x4000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5281]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xffffbfffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x4000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x8000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5282]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xffff7fffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x8000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x10000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5283]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xfffeffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x10000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x20000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5284]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xfffdffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x20000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x40000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5285]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xfffbffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x40000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x80000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5286]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xfff7ffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x80000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x100000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5287]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xffefffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x100000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x200000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5288]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xffdfffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x200000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x400000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5289]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xffbfffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x400000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x800000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5290]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xff7fffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x800000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x1000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5291]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xfeffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x1000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x2000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5292]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xfdffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x2000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x4000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5293]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xfbffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x4000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x8000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5294]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xf7ffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x8000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x10000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5295]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xefffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x10000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x20000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5296]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xdfffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x20000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((0x40000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp))) {
-        ++(vlSymsp->__Vcoverage[5297]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0xbfffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x40000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if (((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp 
-          ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-         >> 0x1fU)) {
-        ++(vlSymsp->__Vcoverage[5298]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp 
-            = ((0x7fffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp) 
-               | (0x80000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp));
-    }
-    if ((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp) 
-               ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp)))) {
-        ++(vlSymsp->__Vcoverage[5172]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffffffffffeULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | (IData)((IData)((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp)))));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 1U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                           >> 1U))))) {
-        ++(vlSymsp->__Vcoverage[5173]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffffffffffdULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 1U))))) 
-                  << 1U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 2U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                           >> 2U))))) {
-        ++(vlSymsp->__Vcoverage[5174]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffffffffffbULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 2U))))) 
-                  << 2U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 3U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                           >> 3U))))) {
-        ++(vlSymsp->__Vcoverage[5175]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffffffffff7ULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 3U))))) 
-                  << 3U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 4U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                           >> 4U))))) {
-        ++(vlSymsp->__Vcoverage[5176]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffffffffffefULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 4U))))) 
-                  << 4U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 5U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                           >> 5U))))) {
-        ++(vlSymsp->__Vcoverage[5177]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffffffffffdfULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 5U))))) 
-                  << 5U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 6U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                           >> 6U))))) {
-        ++(vlSymsp->__Vcoverage[5178]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffffffffffbfULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 6U))))) 
-                  << 6U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 7U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                           >> 7U))))) {
-        ++(vlSymsp->__Vcoverage[5179]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffffffffff7fULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 7U))))) 
-                  << 7U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 8U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                           >> 8U))))) {
-        ++(vlSymsp->__Vcoverage[5180]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffffffffeffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 8U))))) 
-                  << 8U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 9U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                           >> 9U))))) {
-        ++(vlSymsp->__Vcoverage[5181]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffffffffdffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 9U))))) 
-                  << 9U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0xaU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                             >> 0xaU))))) {
-        ++(vlSymsp->__Vcoverage[5182]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffffffffbffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0xaU))))) 
-                  << 0xaU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0xbU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                             >> 0xbU))))) {
-        ++(vlSymsp->__Vcoverage[5183]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffffffff7ffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0xbU))))) 
-                  << 0xbU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0xcU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                             >> 0xcU))))) {
-        ++(vlSymsp->__Vcoverage[5184]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffffffffefffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0xcU))))) 
-                  << 0xcU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0xdU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                             >> 0xdU))))) {
-        ++(vlSymsp->__Vcoverage[5185]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffffffffdfffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0xdU))))) 
-                  << 0xdU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0xeU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                             >> 0xeU))))) {
-        ++(vlSymsp->__Vcoverage[5186]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffffffffbfffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0xeU))))) 
-                  << 0xeU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0xfU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                             >> 0xfU))))) {
-        ++(vlSymsp->__Vcoverage[5187]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffffffff7fffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0xfU))))) 
-                  << 0xfU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x10U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x10U))))) {
-        ++(vlSymsp->__Vcoverage[5188]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffffffeffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x10U))))) 
-                  << 0x10U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x11U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x11U))))) {
-        ++(vlSymsp->__Vcoverage[5189]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffffffdffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x11U))))) 
-                  << 0x11U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x12U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x12U))))) {
-        ++(vlSymsp->__Vcoverage[5190]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffffffbffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x12U))))) 
-                  << 0x12U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x13U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x13U))))) {
-        ++(vlSymsp->__Vcoverage[5191]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffffff7ffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x13U))))) 
-                  << 0x13U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x14U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x14U))))) {
-        ++(vlSymsp->__Vcoverage[5192]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffffffefffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x14U))))) 
-                  << 0x14U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x15U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x15U))))) {
-        ++(vlSymsp->__Vcoverage[5193]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffffffdfffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x15U))))) 
-                  << 0x15U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x16U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x16U))))) {
-        ++(vlSymsp->__Vcoverage[5194]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffffffbfffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x16U))))) 
-                  << 0x16U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x17U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x17U))))) {
-        ++(vlSymsp->__Vcoverage[5195]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffffff7fffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x17U))))) 
-                  << 0x17U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x18U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x18U))))) {
-        ++(vlSymsp->__Vcoverage[5196]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffffeffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x18U))))) 
-                  << 0x18U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x19U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x19U))))) {
-        ++(vlSymsp->__Vcoverage[5197]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffffdffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x19U))))) 
-                  << 0x19U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x1aU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x1aU))))) {
-        ++(vlSymsp->__Vcoverage[5198]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffffbffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x1aU))))) 
-                  << 0x1aU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x1bU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x1bU))))) {
-        ++(vlSymsp->__Vcoverage[5199]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffff7ffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x1bU))))) 
-                  << 0x1bU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x1cU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x1cU))))) {
-        ++(vlSymsp->__Vcoverage[5200]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffffefffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x1cU))))) 
-                  << 0x1cU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x1dU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x1dU))))) {
-        ++(vlSymsp->__Vcoverage[5201]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffffdfffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x1dU))))) 
-                  << 0x1dU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x1eU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x1eU))))) {
-        ++(vlSymsp->__Vcoverage[5202]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffffbfffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x1eU))))) 
-                  << 0x1eU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x1fU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x1fU))))) {
-        ++(vlSymsp->__Vcoverage[5203]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffff7fffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x1fU))))) 
-                  << 0x1fU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x20U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x20U))))) {
-        ++(vlSymsp->__Vcoverage[5204]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffeffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x20U))))) 
-                  << 0x20U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x21U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x21U))))) {
-        ++(vlSymsp->__Vcoverage[5205]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffdffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x21U))))) 
-                  << 0x21U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x22U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x22U))))) {
-        ++(vlSymsp->__Vcoverage[5206]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffffbffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x22U))))) 
-                  << 0x22U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x23U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x23U))))) {
-        ++(vlSymsp->__Vcoverage[5207]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffff7ffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x23U))))) 
-                  << 0x23U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x24U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x24U))))) {
-        ++(vlSymsp->__Vcoverage[5208]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffefffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x24U))))) 
-                  << 0x24U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x25U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x25U))))) {
-        ++(vlSymsp->__Vcoverage[5209]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffdfffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x25U))))) 
-                  << 0x25U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x26U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x26U))))) {
-        ++(vlSymsp->__Vcoverage[5210]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffffbfffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x26U))))) 
-                  << 0x26U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x27U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x27U))))) {
-        ++(vlSymsp->__Vcoverage[5211]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffff7fffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x27U))))) 
-                  << 0x27U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x28U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x28U))))) {
-        ++(vlSymsp->__Vcoverage[5212]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffeffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x28U))))) 
-                  << 0x28U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x29U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x29U))))) {
-        ++(vlSymsp->__Vcoverage[5213]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffdffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x29U))))) 
-                  << 0x29U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x2aU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x2aU))))) {
-        ++(vlSymsp->__Vcoverage[5214]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffffbffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x2aU))))) 
-                  << 0x2aU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x2bU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x2bU))))) {
-        ++(vlSymsp->__Vcoverage[5215]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffff7ffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x2bU))))) 
-                  << 0x2bU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x2cU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x2cU))))) {
-        ++(vlSymsp->__Vcoverage[5216]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffefffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x2cU))))) 
-                  << 0x2cU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x2dU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x2dU))))) {
-        ++(vlSymsp->__Vcoverage[5217]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffdfffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x2dU))))) 
-                  << 0x2dU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x2eU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x2eU))))) {
-        ++(vlSymsp->__Vcoverage[5218]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fffbfffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x2eU))))) 
-                  << 0x2eU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x2fU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x2fU))))) {
-        ++(vlSymsp->__Vcoverage[5219]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7fff7fffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x2fU))))) 
-                  << 0x2fU));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x30U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x30U))))) {
-        ++(vlSymsp->__Vcoverage[5220]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffeffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x30U))))) 
-                  << 0x30U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x31U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x31U))))) {
-        ++(vlSymsp->__Vcoverage[5221]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffdffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x31U))))) 
-                  << 0x31U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                        >> 0x32U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-                                              >> 0x32U))))) {
-        ++(vlSymsp->__Vcoverage[5222]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
-            = ((0x7ffbffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
-                                                 >> 0x32U))))) 
-                  << 0x32U));
-    }
     if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
                         >> 0x33U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
                                               >> 0x33U))))) {
-        ++(vlSymsp->__Vcoverage[5223]);
+        ++(vlSymsp->__Vcoverage[5218]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
             = ((0x7ff7ffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
                | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
@@ -832,7 +50,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
                         >> 0x34U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
                                               >> 0x34U))))) {
-        ++(vlSymsp->__Vcoverage[5224]);
+        ++(vlSymsp->__Vcoverage[5219]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
             = ((0x7fefffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
                | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
@@ -842,7 +60,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
                         >> 0x35U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
                                               >> 0x35U))))) {
-        ++(vlSymsp->__Vcoverage[5225]);
+        ++(vlSymsp->__Vcoverage[5220]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
             = ((0x7fdfffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
                | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
@@ -852,7 +70,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
                         >> 0x36U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
                                               >> 0x36U))))) {
-        ++(vlSymsp->__Vcoverage[5226]);
+        ++(vlSymsp->__Vcoverage[5221]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
             = ((0x7fbfffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
                | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
@@ -862,7 +80,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
                         >> 0x37U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
                                               >> 0x37U))))) {
-        ++(vlSymsp->__Vcoverage[5227]);
+        ++(vlSymsp->__Vcoverage[5222]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
             = ((0x7f7fffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
                | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
@@ -872,7 +90,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
                         >> 0x38U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
                                               >> 0x38U))))) {
-        ++(vlSymsp->__Vcoverage[5228]);
+        ++(vlSymsp->__Vcoverage[5223]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
             = ((0x7effffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
                | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
@@ -882,7 +100,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
                         >> 0x39U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
                                               >> 0x39U))))) {
-        ++(vlSymsp->__Vcoverage[5229]);
+        ++(vlSymsp->__Vcoverage[5224]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
             = ((0x7dffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
                | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
@@ -892,7 +110,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
                         >> 0x3aU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
                                               >> 0x3aU))))) {
-        ++(vlSymsp->__Vcoverage[5230]);
+        ++(vlSymsp->__Vcoverage[5225]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
             = ((0x7bffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
                | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
@@ -902,7 +120,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
                         >> 0x3bU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
                                               >> 0x3bU))))) {
-        ++(vlSymsp->__Vcoverage[5231]);
+        ++(vlSymsp->__Vcoverage[5226]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
             = ((0x77ffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
                | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
@@ -912,7 +130,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
                         >> 0x3cU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
                                               >> 0x3cU))))) {
-        ++(vlSymsp->__Vcoverage[5232]);
+        ++(vlSymsp->__Vcoverage[5227]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
             = ((0x6fffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
                | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
@@ -922,7 +140,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
                         >> 0x3dU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
                                               >> 0x3dU))))) {
-        ++(vlSymsp->__Vcoverage[5233]);
+        ++(vlSymsp->__Vcoverage[5228]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
             = ((0x5fffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
                | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
@@ -932,7 +150,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
                         >> 0x3eU)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
                                               >> 0x3eU))))) {
-        ++(vlSymsp->__Vcoverage[5234]);
+        ++(vlSymsp->__Vcoverage[5229]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp 
             = ((0x3fffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sllw_temp) 
                | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp 
@@ -1543,19 +761,19 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                              : (IData)(riscv_soc__DOT__core__DOT__decode__DOT___T_314))))))))))))))));
     if ((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[2U] 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_next_pc_valid)))) {
-        ++(vlSymsp->__Vcoverage[4899]);
+        ++(vlSymsp->__Vcoverage[4894]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_next_pc_valid 
             = (1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[2U]);
     }
     if ((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[2U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_pc[2U]))) {
-        ++(vlSymsp->__Vcoverage[5427]);
+        ++(vlSymsp->__Vcoverage[5422]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_pc[2U] 
             = (1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[2U]);
     }
     if ((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc)))) {
-        ++(vlSymsp->__Vcoverage[4835]);
+        ++(vlSymsp->__Vcoverage[4830]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffffffffffeULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | (IData)((IData)((1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U]))));
@@ -1563,7 +781,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 1U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 1U))))) {
-        ++(vlSymsp->__Vcoverage[4836]);
+        ++(vlSymsp->__Vcoverage[4831]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffffffffffdULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1573,7 +791,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 2U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 2U))))) {
-        ++(vlSymsp->__Vcoverage[4837]);
+        ++(vlSymsp->__Vcoverage[4832]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffffffffffbULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1583,7 +801,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 3U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 3U))))) {
-        ++(vlSymsp->__Vcoverage[4838]);
+        ++(vlSymsp->__Vcoverage[4833]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffffffffff7ULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1593,7 +811,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 4U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 4U))))) {
-        ++(vlSymsp->__Vcoverage[4839]);
+        ++(vlSymsp->__Vcoverage[4834]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffffffffffefULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1603,7 +821,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 5U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 5U))))) {
-        ++(vlSymsp->__Vcoverage[4840]);
+        ++(vlSymsp->__Vcoverage[4835]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffffffffffdfULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1613,7 +831,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 6U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 6U))))) {
-        ++(vlSymsp->__Vcoverage[4841]);
+        ++(vlSymsp->__Vcoverage[4836]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffffffffffbfULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1623,7 +841,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 7U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 7U))))) {
-        ++(vlSymsp->__Vcoverage[4842]);
+        ++(vlSymsp->__Vcoverage[4837]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffffffffff7fULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1633,7 +851,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 8U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 8U))))) {
-        ++(vlSymsp->__Vcoverage[4843]);
+        ++(vlSymsp->__Vcoverage[4838]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffffffffeffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1643,7 +861,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 9U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 9U))))) {
-        ++(vlSymsp->__Vcoverage[4844]);
+        ++(vlSymsp->__Vcoverage[4839]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffffffffdffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1653,7 +871,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0xaU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                     >> 0xaU))))) {
-        ++(vlSymsp->__Vcoverage[4845]);
+        ++(vlSymsp->__Vcoverage[4840]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffffffffbffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1663,7 +881,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0xbU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                     >> 0xbU))))) {
-        ++(vlSymsp->__Vcoverage[4846]);
+        ++(vlSymsp->__Vcoverage[4841]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffffffff7ffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1673,7 +891,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0xcU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                     >> 0xcU))))) {
-        ++(vlSymsp->__Vcoverage[4847]);
+        ++(vlSymsp->__Vcoverage[4842]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffffffffefffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1683,7 +901,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0xdU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                     >> 0xdU))))) {
-        ++(vlSymsp->__Vcoverage[4848]);
+        ++(vlSymsp->__Vcoverage[4843]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffffffffdfffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1693,7 +911,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0xeU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                     >> 0xeU))))) {
-        ++(vlSymsp->__Vcoverage[4849]);
+        ++(vlSymsp->__Vcoverage[4844]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffffffffbfffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1703,7 +921,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0xfU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                     >> 0xfU))))) {
-        ++(vlSymsp->__Vcoverage[4850]);
+        ++(vlSymsp->__Vcoverage[4845]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffffffff7fffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1713,7 +931,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0x10U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x10U))))) {
-        ++(vlSymsp->__Vcoverage[4851]);
+        ++(vlSymsp->__Vcoverage[4846]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffffffeffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1723,7 +941,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0x11U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x11U))))) {
-        ++(vlSymsp->__Vcoverage[4852]);
+        ++(vlSymsp->__Vcoverage[4847]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffffffdffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1733,7 +951,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0x12U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x12U))))) {
-        ++(vlSymsp->__Vcoverage[4853]);
+        ++(vlSymsp->__Vcoverage[4848]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffffffbffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1743,7 +961,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0x13U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x13U))))) {
-        ++(vlSymsp->__Vcoverage[4854]);
+        ++(vlSymsp->__Vcoverage[4849]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffffff7ffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1753,7 +971,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0x14U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x14U))))) {
-        ++(vlSymsp->__Vcoverage[4855]);
+        ++(vlSymsp->__Vcoverage[4850]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffffffefffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1763,7 +981,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0x15U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x15U))))) {
-        ++(vlSymsp->__Vcoverage[4856]);
+        ++(vlSymsp->__Vcoverage[4851]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffffffdfffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1773,7 +991,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0x16U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x16U))))) {
-        ++(vlSymsp->__Vcoverage[4857]);
+        ++(vlSymsp->__Vcoverage[4852]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffffffbfffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1783,7 +1001,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0x17U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x17U))))) {
-        ++(vlSymsp->__Vcoverage[4858]);
+        ++(vlSymsp->__Vcoverage[4853]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffffff7fffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1793,7 +1011,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0x18U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x18U))))) {
-        ++(vlSymsp->__Vcoverage[4859]);
+        ++(vlSymsp->__Vcoverage[4854]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffffeffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1803,7 +1021,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0x19U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x19U))))) {
-        ++(vlSymsp->__Vcoverage[4860]);
+        ++(vlSymsp->__Vcoverage[4855]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffffdffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1813,7 +1031,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0x1aU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x1aU))))) {
-        ++(vlSymsp->__Vcoverage[4861]);
+        ++(vlSymsp->__Vcoverage[4856]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffffbffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1823,7 +1041,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0x1bU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x1bU))))) {
-        ++(vlSymsp->__Vcoverage[4862]);
+        ++(vlSymsp->__Vcoverage[4857]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffff7ffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1833,7 +1051,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0x1cU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x1cU))))) {
-        ++(vlSymsp->__Vcoverage[4863]);
+        ++(vlSymsp->__Vcoverage[4858]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffffefffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1843,7 +1061,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0x1dU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x1dU))))) {
-        ++(vlSymsp->__Vcoverage[4864]);
+        ++(vlSymsp->__Vcoverage[4859]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffffdfffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1853,7 +1071,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0x1eU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x1eU))))) {
-        ++(vlSymsp->__Vcoverage[4865]);
+        ++(vlSymsp->__Vcoverage[4860]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffffbfffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1863,7 +1081,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
                 >> 0x1fU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x1fU))))) {
-        ++(vlSymsp->__Vcoverage[4866]);
+        ++(vlSymsp->__Vcoverage[4861]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffff7fffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[0U] 
@@ -1872,7 +1090,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                           >> 0x20U))))) {
-        ++(vlSymsp->__Vcoverage[4867]);
+        ++(vlSymsp->__Vcoverage[4862]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffeffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U]))) 
@@ -1881,7 +1099,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 1U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 0x21U))))) {
-        ++(vlSymsp->__Vcoverage[4868]);
+        ++(vlSymsp->__Vcoverage[4863]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffdffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -1891,7 +1109,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 2U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 0x22U))))) {
-        ++(vlSymsp->__Vcoverage[4869]);
+        ++(vlSymsp->__Vcoverage[4864]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffffbffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -1901,7 +1119,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 3U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 0x23U))))) {
-        ++(vlSymsp->__Vcoverage[4870]);
+        ++(vlSymsp->__Vcoverage[4865]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffff7ffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -1911,7 +1129,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 4U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 0x24U))))) {
-        ++(vlSymsp->__Vcoverage[4871]);
+        ++(vlSymsp->__Vcoverage[4866]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffefffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -1921,7 +1139,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 5U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 0x25U))))) {
-        ++(vlSymsp->__Vcoverage[4872]);
+        ++(vlSymsp->__Vcoverage[4867]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffdfffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -1931,7 +1149,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 6U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 0x26U))))) {
-        ++(vlSymsp->__Vcoverage[4873]);
+        ++(vlSymsp->__Vcoverage[4868]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffffbfffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -1941,7 +1159,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 7U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 0x27U))))) {
-        ++(vlSymsp->__Vcoverage[4874]);
+        ++(vlSymsp->__Vcoverage[4869]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffff7fffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -1951,7 +1169,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 8U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 0x28U))))) {
-        ++(vlSymsp->__Vcoverage[4875]);
+        ++(vlSymsp->__Vcoverage[4870]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffeffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -1961,7 +1179,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 9U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                   >> 0x29U))))) {
-        ++(vlSymsp->__Vcoverage[4876]);
+        ++(vlSymsp->__Vcoverage[4871]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffdffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -1971,7 +1189,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0xaU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                     >> 0x2aU))))) {
-        ++(vlSymsp->__Vcoverage[4877]);
+        ++(vlSymsp->__Vcoverage[4872]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffffbffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -1981,7 +1199,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0xbU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                     >> 0x2bU))))) {
-        ++(vlSymsp->__Vcoverage[4878]);
+        ++(vlSymsp->__Vcoverage[4873]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffff7ffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -1991,7 +1209,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0xcU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                     >> 0x2cU))))) {
-        ++(vlSymsp->__Vcoverage[4879]);
+        ++(vlSymsp->__Vcoverage[4874]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffefffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2001,7 +1219,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0xdU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                     >> 0x2dU))))) {
-        ++(vlSymsp->__Vcoverage[4880]);
+        ++(vlSymsp->__Vcoverage[4875]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffdfffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2011,7 +1229,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0xeU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                     >> 0x2eU))))) {
-        ++(vlSymsp->__Vcoverage[4881]);
+        ++(vlSymsp->__Vcoverage[4876]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffffbfffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2021,7 +1239,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0xfU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                     >> 0x2fU))))) {
-        ++(vlSymsp->__Vcoverage[4882]);
+        ++(vlSymsp->__Vcoverage[4877]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffff7fffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2031,7 +1249,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0x10U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x30U))))) {
-        ++(vlSymsp->__Vcoverage[4883]);
+        ++(vlSymsp->__Vcoverage[4878]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffeffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2041,7 +1259,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0x11U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x31U))))) {
-        ++(vlSymsp->__Vcoverage[4884]);
+        ++(vlSymsp->__Vcoverage[4879]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffdffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2051,7 +1269,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0x12U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x32U))))) {
-        ++(vlSymsp->__Vcoverage[4885]);
+        ++(vlSymsp->__Vcoverage[4880]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfffbffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2061,7 +1279,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0x13U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x33U))))) {
-        ++(vlSymsp->__Vcoverage[4886]);
+        ++(vlSymsp->__Vcoverage[4881]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfff7ffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2071,7 +1289,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0x14U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x34U))))) {
-        ++(vlSymsp->__Vcoverage[4887]);
+        ++(vlSymsp->__Vcoverage[4882]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffefffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2081,7 +1299,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0x15U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x35U))))) {
-        ++(vlSymsp->__Vcoverage[4888]);
+        ++(vlSymsp->__Vcoverage[4883]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffdfffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2091,7 +1309,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0x16U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x36U))))) {
-        ++(vlSymsp->__Vcoverage[4889]);
+        ++(vlSymsp->__Vcoverage[4884]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xffbfffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2101,7 +1319,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0x17U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x37U))))) {
-        ++(vlSymsp->__Vcoverage[4890]);
+        ++(vlSymsp->__Vcoverage[4885]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xff7fffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2111,7 +1329,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0x18U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x38U))))) {
-        ++(vlSymsp->__Vcoverage[4891]);
+        ++(vlSymsp->__Vcoverage[4886]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfeffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2121,7 +1339,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0x19U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x39U))))) {
-        ++(vlSymsp->__Vcoverage[4892]);
+        ++(vlSymsp->__Vcoverage[4887]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfdffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2131,7 +1349,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0x1aU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x3aU))))) {
-        ++(vlSymsp->__Vcoverage[4893]);
+        ++(vlSymsp->__Vcoverage[4888]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xfbffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2141,7 +1359,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0x1bU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x3bU))))) {
-        ++(vlSymsp->__Vcoverage[4894]);
+        ++(vlSymsp->__Vcoverage[4889]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xf7ffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2151,7 +1369,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0x1cU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x3cU))))) {
-        ++(vlSymsp->__Vcoverage[4895]);
+        ++(vlSymsp->__Vcoverage[4890]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xefffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2161,7 +1379,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0x1dU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x3dU))))) {
-        ++(vlSymsp->__Vcoverage[4896]);
+        ++(vlSymsp->__Vcoverage[4891]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xdfffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2171,7 +1389,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0x1eU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x3eU))))) {
-        ++(vlSymsp->__Vcoverage[4897]);
+        ++(vlSymsp->__Vcoverage[4892]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0xbfffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2181,7 +1399,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
                 >> 0x1fU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
                                      >> 0x3fU))))) {
-        ++(vlSymsp->__Vcoverage[4898]);
+        ++(vlSymsp->__Vcoverage[4893]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc 
             = ((0x7fffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_pc) 
                | ((QData)((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[1U] 
@@ -2278,13 +1496,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     }
     if ((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_w_rs_en)))) {
-        ++(vlSymsp->__Vcoverage[4900]);
+        ++(vlSymsp->__Vcoverage[4895]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_w_rs_en 
             = (1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]);
     }
     if ((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data)))) {
-        ++(vlSymsp->__Vcoverage[4771]);
+        ++(vlSymsp->__Vcoverage[4766]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffffffffffeULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | (IData)((IData)((1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U]))));
@@ -2292,7 +1510,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 1U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 1U))))) {
-        ++(vlSymsp->__Vcoverage[4772]);
+        ++(vlSymsp->__Vcoverage[4767]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffffffffffdULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2302,7 +1520,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 2U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 2U))))) {
-        ++(vlSymsp->__Vcoverage[4773]);
+        ++(vlSymsp->__Vcoverage[4768]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffffffffffbULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2312,7 +1530,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 3U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 3U))))) {
-        ++(vlSymsp->__Vcoverage[4774]);
+        ++(vlSymsp->__Vcoverage[4769]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffffffffff7ULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2322,7 +1540,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 4U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 4U))))) {
-        ++(vlSymsp->__Vcoverage[4775]);
+        ++(vlSymsp->__Vcoverage[4770]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffffffffffefULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2332,7 +1550,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 5U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 5U))))) {
-        ++(vlSymsp->__Vcoverage[4776]);
+        ++(vlSymsp->__Vcoverage[4771]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffffffffffdfULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2342,7 +1560,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 6U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 6U))))) {
-        ++(vlSymsp->__Vcoverage[4777]);
+        ++(vlSymsp->__Vcoverage[4772]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffffffffffbfULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2352,7 +1570,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 7U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 7U))))) {
-        ++(vlSymsp->__Vcoverage[4778]);
+        ++(vlSymsp->__Vcoverage[4773]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffffffffff7fULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2362,7 +1580,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 8U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 8U))))) {
-        ++(vlSymsp->__Vcoverage[4779]);
+        ++(vlSymsp->__Vcoverage[4774]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffffffffeffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2372,7 +1590,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 9U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 9U))))) {
-        ++(vlSymsp->__Vcoverage[4780]);
+        ++(vlSymsp->__Vcoverage[4775]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffffffffdffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2382,7 +1600,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0xaU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                     >> 0xaU))))) {
-        ++(vlSymsp->__Vcoverage[4781]);
+        ++(vlSymsp->__Vcoverage[4776]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffffffffbffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2392,7 +1610,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0xbU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                     >> 0xbU))))) {
-        ++(vlSymsp->__Vcoverage[4782]);
+        ++(vlSymsp->__Vcoverage[4777]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffffffff7ffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2402,7 +1620,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0xcU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                     >> 0xcU))))) {
-        ++(vlSymsp->__Vcoverage[4783]);
+        ++(vlSymsp->__Vcoverage[4778]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffffffffefffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2412,7 +1630,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0xdU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                     >> 0xdU))))) {
-        ++(vlSymsp->__Vcoverage[4784]);
+        ++(vlSymsp->__Vcoverage[4779]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffffffffdfffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2422,7 +1640,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0xeU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                     >> 0xeU))))) {
-        ++(vlSymsp->__Vcoverage[4785]);
+        ++(vlSymsp->__Vcoverage[4780]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffffffffbfffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2432,7 +1650,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0xfU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                     >> 0xfU))))) {
-        ++(vlSymsp->__Vcoverage[4786]);
+        ++(vlSymsp->__Vcoverage[4781]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffffffff7fffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2442,7 +1660,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0x10U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x10U))))) {
-        ++(vlSymsp->__Vcoverage[4787]);
+        ++(vlSymsp->__Vcoverage[4782]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffffffeffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2452,7 +1670,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0x11U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x11U))))) {
-        ++(vlSymsp->__Vcoverage[4788]);
+        ++(vlSymsp->__Vcoverage[4783]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffffffdffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2462,7 +1680,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0x12U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x12U))))) {
-        ++(vlSymsp->__Vcoverage[4789]);
+        ++(vlSymsp->__Vcoverage[4784]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffffffbffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2472,7 +1690,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0x13U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x13U))))) {
-        ++(vlSymsp->__Vcoverage[4790]);
+        ++(vlSymsp->__Vcoverage[4785]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffffff7ffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2482,7 +1700,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0x14U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x14U))))) {
-        ++(vlSymsp->__Vcoverage[4791]);
+        ++(vlSymsp->__Vcoverage[4786]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffffffefffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2492,7 +1710,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0x15U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x15U))))) {
-        ++(vlSymsp->__Vcoverage[4792]);
+        ++(vlSymsp->__Vcoverage[4787]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffffffdfffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2502,7 +1720,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0x16U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x16U))))) {
-        ++(vlSymsp->__Vcoverage[4793]);
+        ++(vlSymsp->__Vcoverage[4788]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffffffbfffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2512,7 +1730,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0x17U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x17U))))) {
-        ++(vlSymsp->__Vcoverage[4794]);
+        ++(vlSymsp->__Vcoverage[4789]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffffff7fffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2522,7 +1740,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0x18U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x18U))))) {
-        ++(vlSymsp->__Vcoverage[4795]);
+        ++(vlSymsp->__Vcoverage[4790]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffffeffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2532,7 +1750,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0x19U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x19U))))) {
-        ++(vlSymsp->__Vcoverage[4796]);
+        ++(vlSymsp->__Vcoverage[4791]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffffdffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2542,7 +1760,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0x1aU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x1aU))))) {
-        ++(vlSymsp->__Vcoverage[4797]);
+        ++(vlSymsp->__Vcoverage[4792]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffffbffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2552,7 +1770,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0x1bU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x1bU))))) {
-        ++(vlSymsp->__Vcoverage[4798]);
+        ++(vlSymsp->__Vcoverage[4793]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffff7ffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2562,7 +1780,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0x1cU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x1cU))))) {
-        ++(vlSymsp->__Vcoverage[4799]);
+        ++(vlSymsp->__Vcoverage[4794]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffffefffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2572,7 +1790,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0x1dU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x1dU))))) {
-        ++(vlSymsp->__Vcoverage[4800]);
+        ++(vlSymsp->__Vcoverage[4795]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffffdfffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2582,7 +1800,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0x1eU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x1eU))))) {
-        ++(vlSymsp->__Vcoverage[4801]);
+        ++(vlSymsp->__Vcoverage[4796]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffffbfffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2592,7 +1810,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
                 >> 0x1fU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x1fU))))) {
-        ++(vlSymsp->__Vcoverage[4802]);
+        ++(vlSymsp->__Vcoverage[4797]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffff7fffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U] 
@@ -2601,7 +1819,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                           >> 0x20U))))) {
-        ++(vlSymsp->__Vcoverage[4803]);
+        ++(vlSymsp->__Vcoverage[4798]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffeffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U]))) 
@@ -2610,7 +1828,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 1U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 0x21U))))) {
-        ++(vlSymsp->__Vcoverage[4804]);
+        ++(vlSymsp->__Vcoverage[4799]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffdffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2620,7 +1838,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 2U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 0x22U))))) {
-        ++(vlSymsp->__Vcoverage[4805]);
+        ++(vlSymsp->__Vcoverage[4800]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffffbffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2630,7 +1848,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 3U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 0x23U))))) {
-        ++(vlSymsp->__Vcoverage[4806]);
+        ++(vlSymsp->__Vcoverage[4801]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffff7ffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2640,7 +1858,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 4U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 0x24U))))) {
-        ++(vlSymsp->__Vcoverage[4807]);
+        ++(vlSymsp->__Vcoverage[4802]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffefffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2650,7 +1868,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 5U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 0x25U))))) {
-        ++(vlSymsp->__Vcoverage[4808]);
+        ++(vlSymsp->__Vcoverage[4803]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffdfffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2660,7 +1878,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 6U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 0x26U))))) {
-        ++(vlSymsp->__Vcoverage[4809]);
+        ++(vlSymsp->__Vcoverage[4804]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffffbfffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2670,7 +1888,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 7U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 0x27U))))) {
-        ++(vlSymsp->__Vcoverage[4810]);
+        ++(vlSymsp->__Vcoverage[4805]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffff7fffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2680,7 +1898,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 8U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 0x28U))))) {
-        ++(vlSymsp->__Vcoverage[4811]);
+        ++(vlSymsp->__Vcoverage[4806]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffeffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2690,7 +1908,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 9U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                   >> 0x29U))))) {
-        ++(vlSymsp->__Vcoverage[4812]);
+        ++(vlSymsp->__Vcoverage[4807]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffdffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2700,7 +1918,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0xaU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                     >> 0x2aU))))) {
-        ++(vlSymsp->__Vcoverage[4813]);
+        ++(vlSymsp->__Vcoverage[4808]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffffbffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2710,7 +1928,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0xbU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                     >> 0x2bU))))) {
-        ++(vlSymsp->__Vcoverage[4814]);
+        ++(vlSymsp->__Vcoverage[4809]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffff7ffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2720,7 +1938,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0xcU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                     >> 0x2cU))))) {
-        ++(vlSymsp->__Vcoverage[4815]);
+        ++(vlSymsp->__Vcoverage[4810]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffefffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2730,7 +1948,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0xdU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                     >> 0x2dU))))) {
-        ++(vlSymsp->__Vcoverage[4816]);
+        ++(vlSymsp->__Vcoverage[4811]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffdfffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2740,7 +1958,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0xeU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                     >> 0x2eU))))) {
-        ++(vlSymsp->__Vcoverage[4817]);
+        ++(vlSymsp->__Vcoverage[4812]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffffbfffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2750,7 +1968,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0xfU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                     >> 0x2fU))))) {
-        ++(vlSymsp->__Vcoverage[4818]);
+        ++(vlSymsp->__Vcoverage[4813]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffff7fffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2760,7 +1978,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0x10U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x30U))))) {
-        ++(vlSymsp->__Vcoverage[4819]);
+        ++(vlSymsp->__Vcoverage[4814]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffeffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2770,7 +1988,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0x11U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x31U))))) {
-        ++(vlSymsp->__Vcoverage[4820]);
+        ++(vlSymsp->__Vcoverage[4815]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffdffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2780,7 +1998,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0x12U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x32U))))) {
-        ++(vlSymsp->__Vcoverage[4821]);
+        ++(vlSymsp->__Vcoverage[4816]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfffbffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2790,7 +2008,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0x13U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x33U))))) {
-        ++(vlSymsp->__Vcoverage[4822]);
+        ++(vlSymsp->__Vcoverage[4817]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfff7ffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2800,7 +2018,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0x14U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x34U))))) {
-        ++(vlSymsp->__Vcoverage[4823]);
+        ++(vlSymsp->__Vcoverage[4818]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffefffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2810,7 +2028,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0x15U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x35U))))) {
-        ++(vlSymsp->__Vcoverage[4824]);
+        ++(vlSymsp->__Vcoverage[4819]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffdfffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2820,7 +2038,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0x16U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x36U))))) {
-        ++(vlSymsp->__Vcoverage[4825]);
+        ++(vlSymsp->__Vcoverage[4820]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xffbfffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2830,7 +2048,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0x17U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x37U))))) {
-        ++(vlSymsp->__Vcoverage[4826]);
+        ++(vlSymsp->__Vcoverage[4821]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xff7fffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2840,7 +2058,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0x18U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x38U))))) {
-        ++(vlSymsp->__Vcoverage[4827]);
+        ++(vlSymsp->__Vcoverage[4822]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfeffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2850,7 +2068,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0x19U) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x39U))))) {
-        ++(vlSymsp->__Vcoverage[4828]);
+        ++(vlSymsp->__Vcoverage[4823]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfdffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2860,7 +2078,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0x1aU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x3aU))))) {
-        ++(vlSymsp->__Vcoverage[4829]);
+        ++(vlSymsp->__Vcoverage[4824]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xfbffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2870,7 +2088,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0x1bU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x3bU))))) {
-        ++(vlSymsp->__Vcoverage[4830]);
+        ++(vlSymsp->__Vcoverage[4825]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xf7ffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2880,7 +2098,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0x1cU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x3cU))))) {
-        ++(vlSymsp->__Vcoverage[4831]);
+        ++(vlSymsp->__Vcoverage[4826]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xefffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2890,7 +2108,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0x1dU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x3dU))))) {
-        ++(vlSymsp->__Vcoverage[4832]);
+        ++(vlSymsp->__Vcoverage[4827]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xdfffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2900,7 +2118,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0x1eU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x3eU))))) {
-        ++(vlSymsp->__Vcoverage[4833]);
+        ++(vlSymsp->__Vcoverage[4828]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0xbfffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2910,7 +2128,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if ((1U & ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
                 >> 0x1fU) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
                                      >> 0x3fU))))) {
-        ++(vlSymsp->__Vcoverage[4834]);
+        ++(vlSymsp->__Vcoverage[4829]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data 
             = ((0x7fffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data) 
                | ((QData)((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U] 
@@ -2918,217 +2136,217 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     }
     if ((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5299]);
+        ++(vlSymsp->__Vcoverage[5294]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xfffffffeU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((2U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5300]);
+        ++(vlSymsp->__Vcoverage[5295]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xfffffffdU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (2U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((4U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5301]);
+        ++(vlSymsp->__Vcoverage[5296]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xfffffffbU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (4U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((8U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5302]);
+        ++(vlSymsp->__Vcoverage[5297]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xfffffff7U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (8U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x10U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5303]);
+        ++(vlSymsp->__Vcoverage[5298]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xffffffefU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x10U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x20U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5304]);
+        ++(vlSymsp->__Vcoverage[5299]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xffffffdfU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x20U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x40U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5305]);
+        ++(vlSymsp->__Vcoverage[5300]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xffffffbfU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x40U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x80U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5306]);
+        ++(vlSymsp->__Vcoverage[5301]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xffffff7fU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x80U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x100U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5307]);
+        ++(vlSymsp->__Vcoverage[5302]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xfffffeffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x100U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x200U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5308]);
+        ++(vlSymsp->__Vcoverage[5303]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xfffffdffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x200U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x400U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5309]);
+        ++(vlSymsp->__Vcoverage[5304]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xfffffbffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x400U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x800U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5310]);
+        ++(vlSymsp->__Vcoverage[5305]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xfffff7ffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x800U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x1000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5311]);
+        ++(vlSymsp->__Vcoverage[5306]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xffffefffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x1000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x2000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5312]);
+        ++(vlSymsp->__Vcoverage[5307]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xffffdfffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x2000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x4000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5313]);
+        ++(vlSymsp->__Vcoverage[5308]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xffffbfffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x4000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x8000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5314]);
+        ++(vlSymsp->__Vcoverage[5309]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xffff7fffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x8000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x10000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5315]);
+        ++(vlSymsp->__Vcoverage[5310]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xfffeffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x10000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x20000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5316]);
+        ++(vlSymsp->__Vcoverage[5311]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xfffdffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x20000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x40000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5317]);
+        ++(vlSymsp->__Vcoverage[5312]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xfffbffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x40000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x80000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5318]);
+        ++(vlSymsp->__Vcoverage[5313]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xfff7ffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x80000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x100000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5319]);
+        ++(vlSymsp->__Vcoverage[5314]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xffefffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x100000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x200000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5320]);
+        ++(vlSymsp->__Vcoverage[5315]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xffdfffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x200000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x400000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5321]);
+        ++(vlSymsp->__Vcoverage[5316]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xffbfffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x400000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x800000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5322]);
+        ++(vlSymsp->__Vcoverage[5317]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xff7fffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x800000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x1000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5323]);
+        ++(vlSymsp->__Vcoverage[5318]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xfeffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x1000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x2000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5324]);
+        ++(vlSymsp->__Vcoverage[5319]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xfdffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x2000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x4000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5325]);
+        ++(vlSymsp->__Vcoverage[5320]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xfbffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x4000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x8000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5326]);
+        ++(vlSymsp->__Vcoverage[5321]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xf7ffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x8000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x10000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                         ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5327]);
+        ++(vlSymsp->__Vcoverage[5322]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xefffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x10000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x20000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                         ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5328]);
+        ++(vlSymsp->__Vcoverage[5323]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xdfffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x20000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((0x40000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
                         ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5329]);
+        ++(vlSymsp->__Vcoverage[5324]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0xbfffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x40000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
@@ -3136,224 +2354,224 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if (((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U] 
           ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
          >> 0x1fU)) {
-        ++(vlSymsp->__Vcoverage[5330]);
+        ++(vlSymsp->__Vcoverage[5325]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U] 
             = ((0x7fffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[2U]) 
                | (0x80000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[2U]));
     }
     if ((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5331]);
+        ++(vlSymsp->__Vcoverage[5326]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xfffffffeU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((2U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5332]);
+        ++(vlSymsp->__Vcoverage[5327]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xfffffffdU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (2U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((4U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5333]);
+        ++(vlSymsp->__Vcoverage[5328]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xfffffffbU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (4U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((8U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5334]);
+        ++(vlSymsp->__Vcoverage[5329]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xfffffff7U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (8U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x10U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5335]);
+        ++(vlSymsp->__Vcoverage[5330]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xffffffefU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x10U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x20U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5336]);
+        ++(vlSymsp->__Vcoverage[5331]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xffffffdfU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x20U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x40U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5337]);
+        ++(vlSymsp->__Vcoverage[5332]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xffffffbfU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x40U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x80U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5338]);
+        ++(vlSymsp->__Vcoverage[5333]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xffffff7fU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x80U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x100U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5339]);
+        ++(vlSymsp->__Vcoverage[5334]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xfffffeffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x100U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x200U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5340]);
+        ++(vlSymsp->__Vcoverage[5335]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xfffffdffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x200U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x400U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5341]);
+        ++(vlSymsp->__Vcoverage[5336]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xfffffbffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x400U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x800U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5342]);
+        ++(vlSymsp->__Vcoverage[5337]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xfffff7ffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x800U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x1000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5343]);
+        ++(vlSymsp->__Vcoverage[5338]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xffffefffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x1000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x2000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5344]);
+        ++(vlSymsp->__Vcoverage[5339]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xffffdfffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x2000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x4000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5345]);
+        ++(vlSymsp->__Vcoverage[5340]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xffffbfffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x4000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x8000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5346]);
+        ++(vlSymsp->__Vcoverage[5341]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xffff7fffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x8000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x10000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5347]);
+        ++(vlSymsp->__Vcoverage[5342]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xfffeffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x10000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x20000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5348]);
+        ++(vlSymsp->__Vcoverage[5343]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xfffdffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x20000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x40000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5349]);
+        ++(vlSymsp->__Vcoverage[5344]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xfffbffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x40000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x80000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5350]);
+        ++(vlSymsp->__Vcoverage[5345]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xfff7ffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x80000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x100000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5351]);
+        ++(vlSymsp->__Vcoverage[5346]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xffefffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x100000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x200000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5352]);
+        ++(vlSymsp->__Vcoverage[5347]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xffdfffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x200000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x400000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5353]);
+        ++(vlSymsp->__Vcoverage[5348]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xffbfffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x400000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x800000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5354]);
+        ++(vlSymsp->__Vcoverage[5349]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xff7fffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x800000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x1000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5355]);
+        ++(vlSymsp->__Vcoverage[5350]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xfeffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x1000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x2000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5356]);
+        ++(vlSymsp->__Vcoverage[5351]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xfdffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x2000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x4000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5357]);
+        ++(vlSymsp->__Vcoverage[5352]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xfbffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x4000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x8000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5358]);
+        ++(vlSymsp->__Vcoverage[5353]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xf7ffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x8000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x10000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                         ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5359]);
+        ++(vlSymsp->__Vcoverage[5354]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xefffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x10000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x20000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                         ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5360]);
+        ++(vlSymsp->__Vcoverage[5355]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xdfffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x20000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
     }
     if ((0x40000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
                         ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]))) {
-        ++(vlSymsp->__Vcoverage[5361]);
+        ++(vlSymsp->__Vcoverage[5356]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0xbfffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x40000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
@@ -3361,7 +2579,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if (((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U] 
           ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
          >> 0x1fU)) {
-        ++(vlSymsp->__Vcoverage[5362]);
+        ++(vlSymsp->__Vcoverage[5357]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U] 
             = ((0x7fffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__temp_result_data[3U]) 
                | (0x80000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[3U]));
@@ -3380,14 +2598,14 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     }
     if ((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__opType) 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__opType)))) {
-        ++(vlSymsp->__Vcoverage[5738]);
+        ++(vlSymsp->__Vcoverage[5674]);
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__opType 
             = ((2U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__opType)) 
                | (1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__opType)));
     }
     if ((2U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__opType) 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__opType)))) {
-        ++(vlSymsp->__Vcoverage[5739]);
+        ++(vlSymsp->__Vcoverage[5675]);
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__opType 
             = ((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__opType)) 
                | (2U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__opType)));
@@ -3483,251 +2701,251 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     }
     if ((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType) 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__instType)))) {
-        ++(vlSymsp->__Vcoverage[5740]);
+        ++(vlSymsp->__Vcoverage[5676]);
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__instType 
             = ((0xeU & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__instType)) 
                | (1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType)));
     }
     if ((2U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType) 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__instType)))) {
-        ++(vlSymsp->__Vcoverage[5741]);
+        ++(vlSymsp->__Vcoverage[5677]);
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__instType 
             = ((0xdU & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__instType)) 
                | (2U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType)));
     }
     if ((4U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType) 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__instType)))) {
-        ++(vlSymsp->__Vcoverage[5742]);
+        ++(vlSymsp->__Vcoverage[5678]);
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__instType 
             = ((0xbU & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__instType)) 
                | (4U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType)));
     }
     if ((8U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType) 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__instType)))) {
-        ++(vlSymsp->__Vcoverage[5743]);
+        ++(vlSymsp->__Vcoverage[5679]);
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__instType 
             = ((7U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__instType)) 
                | (8U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType)));
     }
     if ((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[2U] 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__w_rs_en)))) {
-        ++(vlSymsp->__Vcoverage[5029]);
+        ++(vlSymsp->__Vcoverage[5024]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__w_rs_en 
             = (1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[2U]);
     }
     if ((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4964]);
+        ++(vlSymsp->__Vcoverage[4959]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xfffffffeU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((2U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4965]);
+        ++(vlSymsp->__Vcoverage[4960]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xfffffffdU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (2U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((4U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4966]);
+        ++(vlSymsp->__Vcoverage[4961]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xfffffffbU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (4U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((8U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4967]);
+        ++(vlSymsp->__Vcoverage[4962]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xfffffff7U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (8U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x10U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4968]);
+        ++(vlSymsp->__Vcoverage[4963]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xffffffefU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x10U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x20U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4969]);
+        ++(vlSymsp->__Vcoverage[4964]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xffffffdfU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x20U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x40U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4970]);
+        ++(vlSymsp->__Vcoverage[4965]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xffffffbfU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x40U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x80U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4971]);
+        ++(vlSymsp->__Vcoverage[4966]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xffffff7fU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x80U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x100U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4972]);
+        ++(vlSymsp->__Vcoverage[4967]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xfffffeffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x100U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x200U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4973]);
+        ++(vlSymsp->__Vcoverage[4968]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xfffffdffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x200U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x400U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4974]);
+        ++(vlSymsp->__Vcoverage[4969]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xfffffbffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x400U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x800U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4975]);
+        ++(vlSymsp->__Vcoverage[4970]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xfffff7ffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x800U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x1000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4976]);
+        ++(vlSymsp->__Vcoverage[4971]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xffffefffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x1000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x2000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4977]);
+        ++(vlSymsp->__Vcoverage[4972]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xffffdfffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x2000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x4000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4978]);
+        ++(vlSymsp->__Vcoverage[4973]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xffffbfffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x4000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x8000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4979]);
+        ++(vlSymsp->__Vcoverage[4974]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xffff7fffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x8000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x10000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4980]);
+        ++(vlSymsp->__Vcoverage[4975]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xfffeffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x10000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x20000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4981]);
+        ++(vlSymsp->__Vcoverage[4976]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xfffdffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x20000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x40000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4982]);
+        ++(vlSymsp->__Vcoverage[4977]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xfffbffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x40000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x80000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4983]);
+        ++(vlSymsp->__Vcoverage[4978]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xfff7ffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x80000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x100000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4984]);
+        ++(vlSymsp->__Vcoverage[4979]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xffefffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x100000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x200000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4985]);
+        ++(vlSymsp->__Vcoverage[4980]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xffdfffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x200000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x400000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4986]);
+        ++(vlSymsp->__Vcoverage[4981]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xffbfffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x400000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x800000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4987]);
+        ++(vlSymsp->__Vcoverage[4982]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xff7fffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x800000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x1000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4988]);
+        ++(vlSymsp->__Vcoverage[4983]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xfeffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x1000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x2000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4989]);
+        ++(vlSymsp->__Vcoverage[4984]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xfdffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x2000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x4000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4990]);
+        ++(vlSymsp->__Vcoverage[4985]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xfbffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x4000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x8000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4991]);
+        ++(vlSymsp->__Vcoverage[4986]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xf7ffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x8000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x10000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                         ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4992]);
+        ++(vlSymsp->__Vcoverage[4987]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xefffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x10000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x20000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                         ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4993]);
+        ++(vlSymsp->__Vcoverage[4988]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xdfffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x20000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((0x40000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
                         ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]))) {
-        ++(vlSymsp->__Vcoverage[4994]);
+        ++(vlSymsp->__Vcoverage[4989]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0xbfffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x40000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
@@ -3735,224 +2953,224 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if (((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U] 
           ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
          >> 0x1fU)) {
-        ++(vlSymsp->__Vcoverage[4995]);
+        ++(vlSymsp->__Vcoverage[4990]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U] 
             = ((0x7fffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[0U]) 
                | (0x80000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[0U]));
     }
     if ((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[4996]);
+        ++(vlSymsp->__Vcoverage[4991]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xfffffffeU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((2U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[4997]);
+        ++(vlSymsp->__Vcoverage[4992]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xfffffffdU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (2U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((4U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[4998]);
+        ++(vlSymsp->__Vcoverage[4993]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xfffffffbU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (4U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((8U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[4999]);
+        ++(vlSymsp->__Vcoverage[4994]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xfffffff7U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (8U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x10U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5000]);
+        ++(vlSymsp->__Vcoverage[4995]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xffffffefU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x10U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x20U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5001]);
+        ++(vlSymsp->__Vcoverage[4996]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xffffffdfU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x20U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x40U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5002]);
+        ++(vlSymsp->__Vcoverage[4997]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xffffffbfU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x40U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x80U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                   ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5003]);
+        ++(vlSymsp->__Vcoverage[4998]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xffffff7fU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x80U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x100U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5004]);
+        ++(vlSymsp->__Vcoverage[4999]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xfffffeffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x100U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x200U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5005]);
+        ++(vlSymsp->__Vcoverage[5000]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xfffffdffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x200U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x400U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5006]);
+        ++(vlSymsp->__Vcoverage[5001]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xfffffbffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x400U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x800U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5007]);
+        ++(vlSymsp->__Vcoverage[5002]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xfffff7ffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x800U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x1000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5008]);
+        ++(vlSymsp->__Vcoverage[5003]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xffffefffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x1000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x2000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5009]);
+        ++(vlSymsp->__Vcoverage[5004]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xffffdfffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x2000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x4000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5010]);
+        ++(vlSymsp->__Vcoverage[5005]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xffffbfffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x4000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x8000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                     ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5011]);
+        ++(vlSymsp->__Vcoverage[5006]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xffff7fffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x8000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x10000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5012]);
+        ++(vlSymsp->__Vcoverage[5007]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xfffeffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x10000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x20000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5013]);
+        ++(vlSymsp->__Vcoverage[5008]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xfffdffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x20000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x40000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5014]);
+        ++(vlSymsp->__Vcoverage[5009]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xfffbffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x40000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x80000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                      ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5015]);
+        ++(vlSymsp->__Vcoverage[5010]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xfff7ffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x80000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x100000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5016]);
+        ++(vlSymsp->__Vcoverage[5011]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xffefffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x100000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x200000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5017]);
+        ++(vlSymsp->__Vcoverage[5012]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xffdfffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x200000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x400000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5018]);
+        ++(vlSymsp->__Vcoverage[5013]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xffbfffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x400000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x800000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                       ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5019]);
+        ++(vlSymsp->__Vcoverage[5014]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xff7fffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x800000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x1000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5020]);
+        ++(vlSymsp->__Vcoverage[5015]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xfeffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x1000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x2000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5021]);
+        ++(vlSymsp->__Vcoverage[5016]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xfdffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x2000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x4000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5022]);
+        ++(vlSymsp->__Vcoverage[5017]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xfbffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x4000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x8000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                        ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5023]);
+        ++(vlSymsp->__Vcoverage[5018]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xf7ffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x8000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x10000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                         ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5024]);
+        ++(vlSymsp->__Vcoverage[5019]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xefffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x10000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x20000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                         ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5025]);
+        ++(vlSymsp->__Vcoverage[5020]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xdfffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x20000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((0x40000000U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
                         ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]))) {
-        ++(vlSymsp->__Vcoverage[5026]);
+        ++(vlSymsp->__Vcoverage[5021]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0xbfffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x40000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
@@ -3960,14 +3178,14 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     if (((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U] 
           ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
          >> 0x1fU)) {
-        ++(vlSymsp->__Vcoverage[5027]);
+        ++(vlSymsp->__Vcoverage[5022]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U] 
             = ((0x7fffffffU & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[1U]) 
                | (0x80000000U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[1U]));
     }
     if ((1U & (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[2U] 
                ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[2U]))) {
-        ++(vlSymsp->__Vcoverage[5028]);
+        ++(vlSymsp->__Vcoverage[5023]);
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data[2U] 
             = (1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data[2U]);
     }
@@ -4129,7 +3347,6 @@ void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_rs_addr = VL_RAND_RESET_I(5);
     vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_rs_data = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_w_rs_en = VL_RAND_RESET_I(1);
-    vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__decode_io_out_imm_data = VL_RAND_RESET_I(5);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regPC = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst = VL_RAND_RESET_I(32);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT___regPC_T_1 = VL_RAND_RESET_Q(64);
@@ -4196,7 +3413,6 @@ void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__regfile_rs1_data_MPORT_data = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__regfile_rs2_data_MPORT_data = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__reg_dest_rs_addr = VL_RAND_RESET_Q(64);
-    vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__reg_imm = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__opType = VL_RAND_RESET_I(2);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__instType = VL_RAND_RESET_I(4);
     vlSelf->riscv_soc__DOT__axi_ram__DOT__mem_rdata = VL_RAND_RESET_Q(64);
@@ -10081,11 +9297,70 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4687]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1159, 14, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_rs_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4688]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1159, 14, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_rs_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4689]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1159, 14, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_rs_addr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4760]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 14, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4761]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 14, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4762]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 14, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4763]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 14, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4764]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 14, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4557]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4558]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4559]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4560]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4561]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4562]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4563]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4564]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4565]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4566]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4567]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4568]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4569]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4570]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4571]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4572]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4573]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4574]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4575]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4576]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4577]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4578]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4579]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4580]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4581]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4582]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4583]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4584]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4585]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4586]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4587]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4588]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4589]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4590]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4591]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4592]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4593]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4594]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4595]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4596]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4597]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4598]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4599]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4600]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4601]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4602]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4603]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4604]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4605]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4606]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4607]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4608]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4609]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4610]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4611]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4612]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4613]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4614]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4615]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4616]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4617]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4618]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4619]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4620]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1160, 15, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_imm_data[63]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4420]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1161, 14, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_opType[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1161, 14, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_opType[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4422]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1161, 14, ".riscv_soc.core", "v_toggle/Core", "decode_io_out_opType[2]", "");
@@ -12594,12 +11869,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2303]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 17, 14, ".riscv_soc.core.fetch", "v_toggle/Fetch", "regInst[29]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2304]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 17, 14, ".riscv_soc.core.fetch", "v_toggle/Fetch", "regInst[30]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2305]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 17, 14, ".riscv_soc.core.fetch", "v_toggle/Fetch", "regInst[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4765]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 26, 14, ".riscv_soc.core.fetch", "v_line/Fetch", "if", "26-27");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4766]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 26, 15, ".riscv_soc.core.fetch", "v_line/Fetch", "else", "28-29");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4767]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 24, 5, ".riscv_soc.core.fetch", "v_line/Fetch", "elsif", "24-25");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4768]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 31, 5, ".riscv_soc.core.fetch", "v_branch/Fetch", "if", "31-32");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4769]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 31, 6, ".riscv_soc.core.fetch", "v_branch/Fetch", "else", "33-34");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4770]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 23, 3, ".riscv_soc.core.fetch", "v_line/Fetch", "block", "23");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4760]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 26, 14, ".riscv_soc.core.fetch", "v_line/Fetch", "if", "26-27");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4761]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 26, 15, ".riscv_soc.core.fetch", "v_line/Fetch", "else", "28-29");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4762]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 24, 5, ".riscv_soc.core.fetch", "v_line/Fetch", "elsif", "24-25");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4763]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 31, 5, ".riscv_soc.core.fetch", "v_branch/Fetch", "if", "31-32");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4764]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 31, 6, ".riscv_soc.core.fetch", "v_branch/Fetch", "else", "33-34");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4765]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 23, 3, ".riscv_soc.core.fetch", "v_line/Fetch", "block", "23");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[0]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 188, 17, ".riscv_soc.core.execute", "v_toggle/Exu", "clock", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[1]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 189, 17, ".riscv_soc.core.execute", "v_toggle/Exu", "reset", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4420]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 190, 17, ".riscv_soc.core.execute", "v_toggle/Exu", "io_in_opType[0]", "");
@@ -13269,200 +12544,200 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4682]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 214, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_op_pc[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4683]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 214, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_op_pc[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4684]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 214, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_op_pc[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4771]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4772]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4773]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4774]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4775]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4776]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4777]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4778]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4779]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4780]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4781]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4782]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4783]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4784]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4785]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4786]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4787]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4788]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4789]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4790]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4791]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4792]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4793]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4794]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4795]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4796]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4797]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4798]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4799]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4800]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4801]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4802]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4803]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4804]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4805]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4806]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4807]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4808]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4809]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4810]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4811]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4812]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4813]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4814]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4815]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4816]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4817]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4818]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4819]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4820]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4821]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4822]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4823]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4824]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4825]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4826]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4827]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4828]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4829]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4830]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4831]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4832]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4833]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4834]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4835]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4836]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4837]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4838]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4839]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4840]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4841]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4842]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4843]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4844]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4845]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4846]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4847]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4848]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4849]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4850]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4851]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4852]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4853]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4854]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4855]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4856]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4857]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4858]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4859]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4860]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4861]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4862]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4863]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4864]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4865]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4866]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4867]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4868]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4869]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4870]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4871]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4872]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4873]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4874]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4875]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4876]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4877]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4878]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4879]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4880]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4881]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4882]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4883]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4884]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4885]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4886]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4887]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4888]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4889]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4890]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4891]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4892]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4893]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4894]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4895]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4896]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4897]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4898]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4899]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 217, 9, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_next_pc_valid", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4900]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 218, 9, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_w_rs_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4766]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4767]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4768]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4769]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4770]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4771]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4772]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4773]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4774]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4775]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4776]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4777]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4778]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4779]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4780]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4781]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4782]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4783]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4784]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4785]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4786]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4787]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4788]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4789]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4790]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4791]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4792]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4793]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4794]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4795]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4796]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4797]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4798]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4799]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4800]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4801]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4802]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4803]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4804]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4805]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4806]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4807]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4808]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4809]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4810]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4811]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4812]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4813]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4814]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4815]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4816]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4817]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4818]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4819]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4820]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4821]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4822]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4823]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4824]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4825]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4826]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4827]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4828]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4829]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 215, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_data[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4830]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4831]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4832]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4833]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4834]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4835]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4836]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4837]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4838]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4839]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4840]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4841]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4842]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4843]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4844]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4845]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4846]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4847]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4848]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4849]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4850]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4851]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4852]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4853]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4854]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4855]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4856]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4857]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4858]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4859]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4860]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4861]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4862]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4863]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4864]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4865]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4866]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4867]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4868]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4869]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4870]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4871]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4872]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4873]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4874]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4875]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4876]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4877]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4878]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4879]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4880]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4881]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4882]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4883]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4884]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4885]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4886]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4887]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4888]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4889]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4890]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4891]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4892]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4893]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 216, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_result_pc[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4894]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 217, 9, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_next_pc_valid", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4895]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 218, 9, ".riscv_soc.core.execute", "v_toggle/Exu", "alu_exu_io_w_rs_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4690]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4691]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4692]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4693]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4694]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4901]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4902]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4903]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4904]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4905]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4906]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4907]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4908]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4909]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4910]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4911]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4912]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4913]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4914]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4915]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4916]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4917]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4918]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4919]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4920]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4921]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4922]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4923]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4924]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4925]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4926]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4927]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4928]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4929]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4930]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4931]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4932]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4933]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4934]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4935]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4936]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4937]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4938]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4939]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4940]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4941]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4942]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4943]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4944]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4945]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4946]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4947]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4948]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4949]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4950]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4951]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4952]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4953]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4954]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4955]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4956]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4957]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4958]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4959]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4896]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4897]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4898]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4899]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4900]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4901]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4902]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4903]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4904]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4905]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4906]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4907]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4908]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4909]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4910]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4911]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4912]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4913]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4914]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4915]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4916]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4917]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4918]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4919]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4920]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4921]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4922]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4923]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4924]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4925]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4926]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4927]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4928]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4929]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4930]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4931]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4932]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4933]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4934]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4935]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4936]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4937]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4938]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4939]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4940]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4941]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4942]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4943]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4944]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4945]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4946]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4947]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4948]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4949]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4950]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4951]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4952]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4953]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4954]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 219, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_addr[63]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4695]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 220, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4696]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 220, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4697]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 220, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_rs_data[2]", "");
@@ -13593,151 +12868,151 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4418]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 221, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_next_pc[63]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4419]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 222, 8, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_valid_next_pc", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4759]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 223, 8, ".riscv_soc.core.execute", "v_toggle/Exu", "reg_w_rs_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4960]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 226, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "valid[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4961]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 226, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "valid[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4962]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 226, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "valid[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4963]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 226, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "valid[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4964]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4965]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4966]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4967]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4968]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4969]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4970]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4971]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4972]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4973]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4974]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4975]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4976]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4977]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4978]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4979]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4980]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4981]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4982]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4983]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4984]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4985]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4986]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4987]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4988]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4989]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4990]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4991]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4992]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4993]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4994]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4995]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4996]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4997]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4998]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4999]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5000]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5001]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5002]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5003]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5004]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5005]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5006]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5007]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5008]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5009]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5010]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5011]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5012]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5013]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5014]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5015]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5016]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5017]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5018]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5019]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5020]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5021]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5022]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5023]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5024]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5025]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5026]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5027]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5028]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[64]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5029]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 229, 9, ".riscv_soc.core.execute", "v_toggle/Exu", "w_rs_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4964]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4965]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4966]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4967]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4968]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4969]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4970]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4971]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4972]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4973]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4974]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4975]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4976]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4977]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4978]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4979]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4980]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4981]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4982]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4983]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4984]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4985]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4986]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4987]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4988]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4989]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4990]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4991]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4992]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4993]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4994]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4995]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4996]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4997]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4998]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4999]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5000]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5001]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5002]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5003]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5004]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5005]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5006]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5007]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5008]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5009]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5010]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5011]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5012]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5013]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5014]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5015]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5016]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5017]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5018]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5019]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5020]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5021]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5022]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5023]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5024]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5025]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5026]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5027]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5030]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 253, 5, ".riscv_soc.core.execute", "v_branch/Exu", "if", "253-254");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5031]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 253, 6, ".riscv_soc.core.execute", "v_branch/Exu", "else", "255-256");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5032]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 258, 5, ".riscv_soc.core.execute", "v_branch/Exu", "if", "258-259");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5033]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 258, 6, ".riscv_soc.core.execute", "v_branch/Exu", "else", "260-261");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5034]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 263, 5, ".riscv_soc.core.execute", "v_branch/Exu", "if", "263-264");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5035]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 263, 6, ".riscv_soc.core.execute", "v_branch/Exu", "else", "265-266");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5036]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 268, 5, ".riscv_soc.core.execute", "v_branch/Exu", "if", "268-269");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5037]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 268, 6, ".riscv_soc.core.execute", "v_branch/Exu", "else", "270-271");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5038]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 273, 5, ".riscv_soc.core.execute", "v_branch/Exu", "if", "273-274");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5039]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 273, 6, ".riscv_soc.core.execute", "v_branch/Exu", "else", "275-276");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5040]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 252, 3, ".riscv_soc.core.execute", "v_line/Exu", "block", "252");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4955]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 226, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "valid[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4956]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 226, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "valid[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4957]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 226, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "valid[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4958]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 226, 14, ".riscv_soc.core.execute", "v_toggle/Exu", "valid[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4959]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4960]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4961]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4962]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4963]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4964]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4965]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4966]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4967]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4968]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4969]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4970]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4971]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4972]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4973]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4974]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4975]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4976]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4977]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4978]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4979]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4980]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4981]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4982]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4983]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4984]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4985]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4986]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4987]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4988]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4989]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4990]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4991]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4992]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4993]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4994]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4995]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4996]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4997]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4998]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4999]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5000]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5001]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5002]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5003]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5004]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5005]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5006]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5007]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5008]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5009]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5010]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5011]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5012]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5013]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5014]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5015]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5016]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5017]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5018]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5019]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5020]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5021]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5022]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5023]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 228, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "temp_w_en_and_rs_data[64]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5024]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 229, 9, ".riscv_soc.core.execute", "v_toggle/Exu", "w_rs_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4959]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4960]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4961]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4962]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4963]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4964]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4965]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4966]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4967]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4968]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4969]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4970]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4971]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4972]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4973]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4974]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4975]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4976]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4977]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4978]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4979]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4980]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4981]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4982]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4983]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4984]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4985]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4986]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4987]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4988]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4989]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4990]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4991]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4992]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4993]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4994]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4995]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4996]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4997]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4998]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4999]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5000]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5001]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5002]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5003]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5004]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5005]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5006]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5007]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5008]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5009]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5010]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5011]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5012]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5013]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5014]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5015]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5016]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5017]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5018]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5019]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5020]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5021]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5022]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 230, 15, ".riscv_soc.core.execute", "v_toggle/Exu", "rs_data[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5025]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 253, 5, ".riscv_soc.core.execute", "v_branch/Exu", "if", "253-254");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5026]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 253, 6, ".riscv_soc.core.execute", "v_branch/Exu", "else", "255-256");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5027]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 258, 5, ".riscv_soc.core.execute", "v_branch/Exu", "if", "258-259");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5028]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 258, 6, ".riscv_soc.core.execute", "v_branch/Exu", "else", "260-261");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5029]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 263, 5, ".riscv_soc.core.execute", "v_branch/Exu", "if", "263-264");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5030]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 263, 6, ".riscv_soc.core.execute", "v_branch/Exu", "else", "265-266");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5031]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 268, 5, ".riscv_soc.core.execute", "v_branch/Exu", "if", "268-269");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5032]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 268, 6, ".riscv_soc.core.execute", "v_branch/Exu", "else", "270-271");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5033]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 273, 5, ".riscv_soc.core.execute", "v_branch/Exu", "if", "273-274");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5034]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 273, 6, ".riscv_soc.core.execute", "v_branch/Exu", "else", "275-276");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5035]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 252, 3, ".riscv_soc.core.execute", "v_line/Exu", "block", "252");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4423]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 86, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_exuType[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4424]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 86, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_exuType[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4425]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 86, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_exuType[2]", "");
@@ -14000,652 +13275,652 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4682]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 90, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_op_pc[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4683]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 90, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_op_pc[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4684]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 90, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_op_pc[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4771]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4772]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4773]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4774]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4775]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4776]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4777]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4778]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4779]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4780]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4781]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4782]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4783]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4784]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4785]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4786]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4787]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4788]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4789]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4790]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4791]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4792]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4793]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4794]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4795]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4796]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4797]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4798]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4799]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4800]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4801]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4802]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4803]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4804]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4805]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4806]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4807]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4808]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4809]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4810]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4811]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4812]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4813]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4814]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4815]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4816]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4817]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4818]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4819]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4820]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4821]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4822]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4823]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4824]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4825]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4826]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4827]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4828]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4829]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4830]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4831]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4832]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4833]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4834]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4835]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4836]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4837]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4838]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4839]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4840]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4841]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4842]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4843]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4844]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4845]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4846]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4847]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4848]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4849]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4850]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4851]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4852]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4853]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4854]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4855]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4856]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4857]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4858]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4859]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4860]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4861]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4862]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4863]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4864]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4865]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4866]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4867]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4868]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4869]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4870]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4871]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4872]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4873]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4874]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4875]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4876]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4877]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4878]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4879]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4880]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4881]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4882]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4883]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4884]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4885]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4886]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4887]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4888]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4889]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4890]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4891]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4892]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4893]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4894]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4895]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4896]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4897]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4898]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4899]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 93, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_next_pc_valid", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4900]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 94, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_w_rs_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5041]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5042]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5043]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5044]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5045]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5046]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5047]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5048]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5049]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5050]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5051]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5052]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5053]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5054]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5055]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5056]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5057]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5058]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5059]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5060]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5061]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5062]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5063]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5064]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5065]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5066]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5067]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5068]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5069]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5070]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5071]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5072]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5073]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5074]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5075]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5076]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5077]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5078]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5079]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5080]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5081]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5082]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5083]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5084]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5085]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5086]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5087]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5088]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5089]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5090]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5091]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5092]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5093]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5094]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5095]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5096]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5097]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5098]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5099]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5100]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5101]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5102]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5103]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5104]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5105]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5106]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5107]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5108]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5109]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5110]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5111]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5112]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5113]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5114]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5115]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5116]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5117]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5118]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5119]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5120]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5121]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5122]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5123]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5124]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5125]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5126]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5127]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5128]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5129]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5130]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5131]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5132]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5133]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5134]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5135]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5136]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5137]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5138]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5139]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5140]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5141]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5142]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5143]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5144]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5145]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5146]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5147]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5148]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5149]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5150]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5151]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5152]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5153]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5154]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5155]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5156]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5157]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5158]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5159]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5160]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5161]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5162]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5163]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5164]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5165]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5166]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5167]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5168]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5169]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[64]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5170]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 102, 9, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "u_rs1_l_rs2", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5171]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 103, 9, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "s_rs1_l_rs2", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5172]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5173]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5174]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5175]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5176]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5177]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5178]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5179]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5180]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5181]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5182]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5183]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5184]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5185]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5186]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5187]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5188]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5189]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5190]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5191]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5192]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5193]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5194]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5195]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5196]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5197]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5198]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5199]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5200]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5201]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5202]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5203]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5204]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5205]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5206]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5207]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5208]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5209]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5210]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5211]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5212]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5213]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5214]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5215]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5216]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5217]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5218]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5219]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5220]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5221]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5222]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5223]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5224]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5225]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5226]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5227]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5228]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5229]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5230]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5231]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5232]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5233]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5234]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5235]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5236]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5237]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5238]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5239]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5240]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5241]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5242]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5243]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5244]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5245]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5246]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5247]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5248]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5249]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5250]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5251]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5252]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5253]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5254]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5255]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5256]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5257]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5258]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5259]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5260]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5261]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5262]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5263]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5264]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5265]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5266]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5267]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5268]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5269]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5270]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5271]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5272]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5273]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5274]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5275]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5276]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5277]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5278]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5279]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5280]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5281]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5282]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5283]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5284]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5285]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5286]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5287]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5288]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5289]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5290]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5291]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5292]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5293]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5294]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5295]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5296]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5297]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5298]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4771]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4772]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4773]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4774]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4775]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4776]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4777]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4778]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4779]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4780]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4781]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4782]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4783]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4784]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4785]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4786]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4787]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4788]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4789]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4790]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4791]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4792]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4793]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4794]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4795]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4796]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4797]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4798]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4799]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4800]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4801]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4802]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4803]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4804]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4805]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4806]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4807]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4808]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4809]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4810]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4811]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4812]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4813]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4814]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4815]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4816]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4817]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4818]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4819]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4820]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4821]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4822]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4823]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4824]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4825]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4826]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4827]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4828]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4829]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4830]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4831]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4832]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4833]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4834]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5299]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[64]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5300]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[65]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5301]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[66]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5302]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[67]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5303]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[68]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5304]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[69]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5305]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[70]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[71]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5307]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[72]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5308]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[73]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5309]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[74]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5310]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[75]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5311]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[76]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5312]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[77]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5313]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[78]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5314]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[79]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5315]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[80]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5316]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[81]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5317]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[82]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5318]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[83]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5319]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[84]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5320]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[85]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5321]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[86]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5322]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[87]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5323]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[88]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5324]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[89]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5325]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[90]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5326]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[91]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5327]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[92]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5328]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[93]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5329]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[94]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5330]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[95]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5331]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[96]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5332]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[97]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5333]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[98]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5334]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[99]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5335]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[100]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5336]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[101]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5337]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[102]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5338]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[103]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5339]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[104]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5340]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[105]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5341]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[106]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5342]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[107]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5343]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[108]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5344]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[109]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5345]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[110]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5346]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[111]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5347]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[112]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5348]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[113]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5349]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[114]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5350]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[115]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5351]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[116]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5352]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[117]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5353]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[118]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5354]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[119]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5355]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[120]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5356]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[121]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5357]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[122]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5358]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[123]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5359]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[124]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5360]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[125]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5361]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[126]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5362]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[127]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4766]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4767]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4768]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4769]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4770]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4771]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4772]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4773]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4774]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4775]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4776]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4777]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4778]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4779]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4780]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4781]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4782]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4783]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4784]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4785]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4786]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4787]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4788]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4789]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4790]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4791]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4792]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4793]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4794]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4795]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4796]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4797]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4798]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4799]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4800]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4801]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4802]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4803]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4804]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4805]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4806]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4807]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4808]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4809]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4810]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4811]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4812]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4813]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4814]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4815]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4816]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4817]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4818]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4819]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4820]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4821]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4822]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4823]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4824]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4825]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4826]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4827]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4828]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4829]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 91, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_data[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4830]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4831]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4832]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4833]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4834]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4835]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4836]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4837]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4838]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4839]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4840]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4841]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4842]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4843]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4844]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4845]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4846]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4847]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4848]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4849]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4850]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4851]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4852]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4853]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4854]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4855]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4856]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4857]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4858]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4859]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4860]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4861]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4862]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4863]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4864]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4865]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4866]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4867]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4868]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4869]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4870]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4871]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4872]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4873]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4874]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4875]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4876]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4877]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4878]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4879]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4880]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4881]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4882]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4883]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4884]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4885]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4886]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4887]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4888]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4889]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4890]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4891]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4892]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4893]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 92, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_result_pc[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4894]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 93, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_next_pc_valid", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4895]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 94, 17, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "io_w_rs_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5036]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5037]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5038]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5039]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5040]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5041]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5042]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5043]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5044]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5045]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5046]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5047]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5048]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5049]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5050]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5051]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5052]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5053]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5054]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5055]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5056]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5057]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5058]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5059]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5060]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5061]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5062]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5063]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5064]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5065]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5066]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5067]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5068]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5069]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5070]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5071]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5072]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5073]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5074]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5075]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5076]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5077]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5078]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5079]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5080]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5081]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5082]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5083]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5084]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5085]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5086]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5087]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5088]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5089]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5090]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5091]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5092]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5093]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5094]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5095]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5096]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5097]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5098]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5099]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 96, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "rs2_data[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5100]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5101]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5102]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5103]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5104]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5105]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5106]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5107]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5108]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5109]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5110]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5111]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5112]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5113]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5114]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5115]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5116]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5117]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5118]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5119]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5120]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5121]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5122]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5123]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5124]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5125]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5126]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5127]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5128]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5129]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5130]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5131]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5132]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5133]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5134]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5135]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5136]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5137]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5138]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5139]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5140]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5141]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5142]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5143]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5144]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5145]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5146]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5147]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5148]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5149]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5150]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5151]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5152]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5153]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5154]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5155]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5156]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5157]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5158]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5159]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5160]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5161]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5162]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5163]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5164]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 101, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "subresult[64]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5165]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 102, 9, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "u_rs1_l_rs2", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5166]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 103, 9, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "s_rs1_l_rs2", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5167]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5168]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5169]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5170]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5171]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5172]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5173]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5174]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5175]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5176]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5177]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5178]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5179]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5180]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5181]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5182]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5183]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5184]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5185]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5186]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5187]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5188]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5189]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5190]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5191]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5192]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5193]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5194]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5195]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5196]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5197]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5198]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5199]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5200]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5201]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5202]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5203]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5204]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5205]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5206]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5207]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5208]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5209]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5210]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5211]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5212]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5213]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5214]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5215]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5216]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5217]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5218]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5219]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5220]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5221]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5222]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5223]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5224]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5225]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5226]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5227]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5228]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5229]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 105, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sllw_temp[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5230]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5231]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5232]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5233]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5234]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5235]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5236]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5237]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5238]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5239]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5240]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5241]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5242]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5243]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5244]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5245]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5246]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5247]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5248]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5249]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5250]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5251]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5252]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5253]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5254]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5255]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5256]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5257]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5258]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5259]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5260]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5261]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 106, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "srlw_temp[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5262]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5263]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5264]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5265]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5266]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5267]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5268]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5269]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5270]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5271]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5272]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5273]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5274]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5275]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5276]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5277]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5278]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5279]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5280]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5281]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5282]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5283]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5284]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5285]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5286]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5287]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5288]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5289]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5290]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5291]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5292]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5293]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 109, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "sraw_temp[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4766]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4767]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4768]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4769]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4770]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4771]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4772]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4773]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4774]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4775]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4776]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4777]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4778]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4779]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4780]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4781]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4782]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4783]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4784]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4785]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4786]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4787]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4788]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4789]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4790]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4791]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4792]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4793]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4794]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4795]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4796]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4797]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4798]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4799]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4800]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4801]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4802]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4803]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4804]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4805]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4806]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4807]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4808]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4809]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4810]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4811]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4812]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4813]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4814]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4815]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4816]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4817]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4818]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4819]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4820]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4821]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4822]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4823]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4824]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4825]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4826]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4827]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4828]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4829]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5294]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[64]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5295]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[65]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5296]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[66]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5297]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[67]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5298]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[68]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5299]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[69]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5300]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[70]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5301]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[71]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5302]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[72]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5303]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[73]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5304]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[74]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5305]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[75]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[76]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5307]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[77]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5308]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[78]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5309]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[79]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5310]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[80]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5311]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[81]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5312]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[82]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5313]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[83]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5314]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[84]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5315]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[85]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5316]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[86]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5317]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[87]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5318]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[88]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5319]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[89]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5320]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[90]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5321]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[91]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5322]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[92]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5323]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[93]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5324]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[94]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5325]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[95]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5326]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[96]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5327]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[97]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5328]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[98]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5329]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[99]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5330]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[100]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5331]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[101]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5332]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[102]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5333]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[103]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5334]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[104]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5335]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[105]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5336]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[106]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5337]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[107]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5338]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[108]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5339]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[109]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5340]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[110]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5341]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[111]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5342]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[112]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5343]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[113]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5344]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[114]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5345]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[115]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5346]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[116]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5347]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[117]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5348]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[118]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5349]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[119]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5350]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[120]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5351]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[121]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5352]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[122]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5353]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[123]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5354]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[124]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5355]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[125]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5356]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[126]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5357]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 163, 16, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_data[127]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5363]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5364]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5365]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5366]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5367]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5368]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5369]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5370]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5371]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5372]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5373]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5374]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5375]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5376]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5377]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5378]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5379]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5380]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5381]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5382]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5383]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5384]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5385]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5386]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5387]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5388]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5389]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5390]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5391]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5392]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5393]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5394]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5395]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5396]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5397]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5398]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5399]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5400]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5401]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5402]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5403]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5404]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5405]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5406]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5407]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5408]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5409]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5410]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5411]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5412]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5413]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5414]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5415]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5416]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5417]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5418]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5419]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5420]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5422]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5423]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5424]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5425]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[64]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4835]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4836]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4837]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4838]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4839]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4840]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4841]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4842]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4843]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4844]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4845]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4846]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4847]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4848]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4849]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4850]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4851]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4852]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4853]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4854]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4855]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4856]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4857]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4858]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4859]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4860]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4861]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4862]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4863]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4864]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4865]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4866]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4867]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4868]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4869]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4870]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4871]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4872]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4873]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4874]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4875]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4876]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4877]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4878]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4879]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4880]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4881]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4882]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4883]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4884]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4885]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4886]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4887]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4888]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4889]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4890]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4891]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4892]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4893]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4894]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4895]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4896]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4897]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4898]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5427]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[64]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5358]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5359]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5360]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5361]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5362]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5363]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5364]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5365]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5366]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5367]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5368]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5369]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5370]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5371]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5372]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5373]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5374]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5375]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5376]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5377]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5378]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5379]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5380]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5381]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5382]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5383]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5384]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5385]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5386]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5387]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5388]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5389]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5390]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5391]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5392]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5393]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5394]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5395]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5396]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5397]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5398]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5399]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5400]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5401]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5402]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5403]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5404]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5405]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5406]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5407]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5408]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5409]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5410]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5411]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5412]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5413]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5414]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5415]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5416]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5417]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5418]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5419]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5420]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 166, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "next_pc3[64]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4830]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4831]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4832]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4833]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4834]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4835]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4836]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4837]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4838]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4839]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4840]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4841]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4842]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4843]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4844]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4845]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4846]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4847]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4848]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4849]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4850]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4851]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4852]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4853]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4854]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4855]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4856]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4857]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4858]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4859]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4860]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4861]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4862]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4863]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4864]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4865]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4866]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4867]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4868]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4869]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4870]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4871]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4872]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4873]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4874]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4875]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4876]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4877]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4878]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4879]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4880]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4881]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4882]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4883]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4884]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4885]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4886]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4887]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4888]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4889]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4890]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4891]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4892]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4893]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5422]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 181, 15, ".riscv_soc.core.execute.alu_exu", "v_toggle/ALU_EXU", "temp_result_pc[64]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[0]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 334, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "clock", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[1]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 335, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "reset", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2274]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 336, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_in_inst[0]", "");
@@ -14947,11 +14222,70 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4687]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 343, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_rs_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4688]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 343, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_rs_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4689]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 343, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_rs_addr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4760]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4761]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4762]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4763]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4764]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4557]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4558]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4559]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4560]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4561]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4562]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4563]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4564]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4565]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4566]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4567]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4568]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4569]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4570]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4571]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4572]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4573]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4574]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4575]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4576]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4577]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4578]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4579]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4580]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4581]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4582]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4583]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4584]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4585]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4586]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4587]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4588]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4589]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4590]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4591]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4592]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4593]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4594]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4595]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4596]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4597]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4598]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4599]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4600]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4601]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4602]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4603]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4604]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4605]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4606]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4607]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4608]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4609]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4610]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4611]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4612]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4613]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4614]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4615]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4616]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4617]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4618]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4619]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4620]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 344, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_imm_data[63]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4420]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 345, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_opType[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 345, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_opType[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4422]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 345, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_opType[2]", "");
@@ -15025,78 +14359,78 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4682]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 347, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_pc[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4683]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 347, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_pc[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4684]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 347, 17, ".riscv_soc.core.decode", "v_toggle/Decode", "io_out_pc[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 394, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 394, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 395, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 395, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 395, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 395, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 395, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_addr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5428]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5429]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5430]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5431]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5432]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5433]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5434]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5435]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5436]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5437]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5438]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5439]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5440]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5441]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5442]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5443]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5444]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5445]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5446]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5447]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5448]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5449]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5450]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5451]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5452]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5453]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5454]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5455]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5456]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5457]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5458]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5459]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5460]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5461]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5462]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5463]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5464]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5465]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5466]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5467]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5468]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5469]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5470]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5471]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5472]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5473]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5474]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5475]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5476]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5477]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5478]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5479]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5480]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5481]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5482]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5483]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5484]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5485]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5486]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5487]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5488]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5489]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5490]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5491]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 397, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_1_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 398, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_1_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5423]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5424]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5425]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5427]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5428]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5429]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5430]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5431]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5432]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5433]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5434]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5435]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5436]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5437]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5438]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5439]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5440]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5441]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5442]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5443]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5444]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5445]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5446]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5447]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5448]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5449]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5450]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5451]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5452]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5453]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5454]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5455]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5456]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5457]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5458]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5459]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5460]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5461]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5462]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5463]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5464]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5465]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5466]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5467]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5468]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5469]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5470]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5471]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5472]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5473]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5474]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5475]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5476]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5477]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5478]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5479]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5480]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5481]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5482]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5483]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5484]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5485]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5486]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 396, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_data[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 397, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_1_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 398, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_1_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 398, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_1_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 398, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_1_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 398, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_1_addr[3]", "");
@@ -15165,9 +14499,9 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2368]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 399, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_1_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2369]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 399, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_1_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2370]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 399, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_1_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 400, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_2_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 400, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_2_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 401, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_2_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 401, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_2_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 401, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_2_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 401, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_2_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 401, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_2_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 401, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_2_addr[4]", "");
@@ -15235,9 +14569,9 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2432]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 402, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_2_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2433]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 402, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_2_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2434]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 402, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_2_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 403, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_3_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 404, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_3_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 404, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_3_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 403, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_3_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 404, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_3_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 404, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_3_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 404, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_3_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 404, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_3_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 404, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_3_addr[4]", "");
@@ -15305,10 +14639,10 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2496]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 405, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_3_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2497]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 405, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_3_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2498]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 405, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_3_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 406, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_4_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 406, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_4_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 407, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_4_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 407, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_4_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 407, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_4_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 407, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_4_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 407, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_4_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 407, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_4_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2499]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 408, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_4_data[0]", "");
@@ -15375,10 +14709,10 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2560]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 408, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_4_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2561]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 408, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_4_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2562]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 408, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_4_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 409, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_5_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 410, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_5_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 409, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_5_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 410, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_5_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 410, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_5_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 410, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_5_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 410, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_5_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 410, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_5_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 410, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_5_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2563]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 411, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_5_data[0]", "");
@@ -15445,10 +14779,10 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2624]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 411, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_5_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2625]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 411, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_5_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2626]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 411, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_5_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 412, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_6_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 412, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_6_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 413, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_6_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 413, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_6_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 413, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_6_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 413, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_6_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 413, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_6_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 413, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_6_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 413, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_6_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2627]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 414, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_6_data[0]", "");
@@ -15515,10 +14849,10 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2688]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 414, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_6_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2689]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 414, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_6_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2690]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 414, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_6_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 415, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_7_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 416, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_7_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 416, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_7_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 416, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_7_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 415, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_7_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 416, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_7_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 416, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_7_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 416, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_7_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 416, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_7_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 416, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_7_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2691]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 417, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_7_data[0]", "");
@@ -15585,11 +14919,11 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2752]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 417, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_7_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2753]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 417, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_7_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2754]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 417, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_7_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 418, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_8_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 418, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_8_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 419, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_8_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 419, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_8_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 419, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_8_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 419, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_8_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 419, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_8_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 419, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_8_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2755]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 420, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_8_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2756]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 420, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_8_data[1]", "");
@@ -15655,11 +14989,11 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2816]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 420, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_8_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2817]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 420, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_8_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2818]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 420, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_8_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 421, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_9_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 422, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_9_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 421, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_9_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 422, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_9_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 422, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_9_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 422, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_9_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 422, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_9_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 422, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_9_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 422, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_9_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2819]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 423, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_9_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2820]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 423, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_9_data[1]", "");
@@ -15725,11 +15059,11 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2880]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 423, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_9_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2881]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 423, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_9_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2882]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 423, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_9_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 424, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_10_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 424, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_10_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 425, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_10_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 425, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_10_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 425, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_10_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 425, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_10_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 425, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_10_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 425, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_10_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 425, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_10_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2883]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 426, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_10_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2884]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 426, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_10_data[1]", "");
@@ -15795,11 +15129,11 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2944]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 426, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_10_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2945]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 426, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_10_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2946]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 426, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_10_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 427, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_11_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 428, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_11_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 428, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_11_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 427, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_11_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 428, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_11_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 428, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_11_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 428, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_11_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 428, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_11_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 428, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_11_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 428, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_11_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2947]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 429, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_11_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2948]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 429, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_11_data[1]", "");
@@ -15865,11 +15199,11 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3008]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 429, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_11_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3009]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 429, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_11_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3010]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 429, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_11_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 430, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_12_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 430, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_12_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 431, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_12_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 431, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_12_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 431, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_12_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 431, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_12_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 431, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_12_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 431, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_12_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 431, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_12_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3011]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 432, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_12_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3012]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 432, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_12_data[1]", "");
@@ -15935,11 +15269,11 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3072]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 432, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_12_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3073]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 432, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_12_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3074]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 432, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_12_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 433, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_13_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 434, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_13_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 433, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_13_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 434, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_13_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 434, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_13_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 434, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_13_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 434, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_13_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 434, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_13_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 434, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_13_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 434, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_13_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3075]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 435, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_13_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3076]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 435, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_13_data[1]", "");
@@ -16005,11 +15339,11 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3136]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 435, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_13_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3137]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 435, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_13_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3138]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 435, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_13_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 436, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_14_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 436, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_14_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 437, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_14_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 437, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_14_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 437, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_14_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 437, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_14_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 437, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_14_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 437, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_14_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 437, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_14_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 437, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_14_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3139]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 438, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_14_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3140]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 438, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_14_data[1]", "");
@@ -16075,11 +15409,11 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3200]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 438, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_14_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3201]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 438, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_14_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3202]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 438, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_14_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 439, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_15_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 440, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_15_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 440, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_15_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 440, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_15_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 440, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_15_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 439, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_15_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 440, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_15_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 440, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_15_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 440, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_15_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 440, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_15_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 440, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_15_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3203]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 441, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_15_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3204]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 441, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_15_data[1]", "");
@@ -16145,12 +15479,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3264]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 441, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_15_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3265]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 441, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_15_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3266]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 441, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_15_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 442, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_16_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 442, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_16_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 443, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_16_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 443, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_16_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 443, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_16_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 443, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_16_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 443, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_16_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 443, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_16_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3267]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 444, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_16_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3268]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 444, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_16_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3269]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 444, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_16_data[2]", "");
@@ -16215,12 +15549,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3328]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 444, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_16_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3329]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 444, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_16_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3330]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 444, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_16_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 445, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_17_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 446, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_17_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 445, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_17_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 446, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_17_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 446, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_17_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 446, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_17_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 446, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_17_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 446, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_17_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 446, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_17_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3331]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 447, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_17_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3332]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 447, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_17_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3333]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 447, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_17_data[2]", "");
@@ -16285,12 +15619,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3392]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 447, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_17_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3393]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 447, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_17_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3394]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 447, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_17_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 448, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_18_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 448, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_18_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 449, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_18_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 449, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_18_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 449, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_18_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 449, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_18_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 449, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_18_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 449, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_18_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 449, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_18_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3395]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 450, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_18_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3396]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 450, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_18_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3397]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 450, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_18_data[2]", "");
@@ -16355,12 +15689,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3456]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 450, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_18_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3457]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 450, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_18_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3458]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 450, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_18_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 451, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_19_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 452, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_19_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 452, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_19_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 451, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_19_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 452, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_19_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 452, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_19_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 452, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_19_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 452, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_19_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 452, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_19_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 452, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_19_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3459]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 453, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_19_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3460]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 453, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_19_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3461]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 453, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_19_data[2]", "");
@@ -16425,12 +15759,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3520]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 453, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_19_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3521]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 453, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_19_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3522]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 453, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_19_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 454, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_20_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 454, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_20_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 455, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_20_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 455, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_20_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 455, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_20_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 455, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_20_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 455, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_20_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 455, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_20_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 455, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_20_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3523]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 456, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_20_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3524]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 456, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_20_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3525]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 456, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_20_data[2]", "");
@@ -16495,12 +15829,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3584]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 456, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_20_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3585]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 456, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_20_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3586]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 456, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_20_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 457, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_21_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 458, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_21_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 457, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_21_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 458, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_21_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 458, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_21_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 458, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_21_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 458, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_21_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 458, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_21_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 458, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_21_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 458, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_21_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3587]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 459, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_21_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3588]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 459, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_21_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3589]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 459, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_21_data[2]", "");
@@ -16565,12 +15899,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3648]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 459, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_21_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3649]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 459, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_21_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3650]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 459, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_21_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 460, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_22_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 460, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_22_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 461, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_22_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 461, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_22_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 461, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_22_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 461, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_22_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 461, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_22_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 461, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_22_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 461, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_22_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 461, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_22_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3651]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 462, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_22_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3652]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 462, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_22_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3653]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 462, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_22_data[2]", "");
@@ -16635,12 +15969,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3712]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 462, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_22_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3713]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 462, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_22_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3714]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 462, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_22_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 463, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 464, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 464, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 464, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 463, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 464, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 464, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 464, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 464, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 464, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 464, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3715]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 465, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3716]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 465, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3717]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 465, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_data[2]", "");
@@ -16705,12 +16039,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3776]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 465, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3777]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 465, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3778]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 465, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_23_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 466, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_24_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 466, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_24_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 467, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_24_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 467, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_24_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 467, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_24_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 467, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_24_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 467, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_24_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 467, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_24_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 467, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_24_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3779]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 468, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_24_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3780]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 468, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_24_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3781]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 468, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_24_data[2]", "");
@@ -16775,12 +16109,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3840]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 468, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_24_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3841]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 468, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_24_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3842]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 468, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_24_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 469, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_25_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 470, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_25_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 469, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_25_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 470, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_25_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 470, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_25_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 470, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_25_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 470, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_25_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 470, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_25_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 470, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_25_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 470, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_25_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3843]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 471, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_25_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3844]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 471, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_25_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3845]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 471, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_25_data[2]", "");
@@ -16845,12 +16179,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3904]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 471, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_25_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3905]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 471, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_25_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3906]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 471, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_25_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 472, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_26_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 472, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_26_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 473, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_26_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 473, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_26_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 473, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_26_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 473, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_26_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 473, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_26_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 473, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_26_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 473, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_26_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 473, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_26_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3907]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 474, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_26_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3908]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 474, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_26_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3909]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 474, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_26_data[2]", "");
@@ -16915,12 +16249,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3968]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 474, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_26_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3969]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 474, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_26_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3970]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 474, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_26_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 475, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 476, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 476, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 475, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 476, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 476, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 476, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 476, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 476, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 476, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 476, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3971]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 477, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3972]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 477, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[3973]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 477, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_data[2]", "");
@@ -16985,12 +16319,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4032]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 477, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4033]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 477, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4034]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 477, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_27_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 478, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_28_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 478, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_28_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 479, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_28_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 479, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_28_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 479, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_28_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 479, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_28_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 479, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_28_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 479, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_28_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 479, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_28_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 479, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_28_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4035]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 480, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_28_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4036]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 480, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_28_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4037]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 480, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_28_data[2]", "");
@@ -17055,12 +16389,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4096]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 480, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_28_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4097]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 480, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_28_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4098]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 480, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_28_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 481, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 482, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 481, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 482, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 482, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 482, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 482, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 482, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 482, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 482, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 482, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4099]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 483, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4100]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 483, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4101]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 483, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_data[2]", "");
@@ -17125,12 +16459,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4160]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 483, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4161]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 483, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4162]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 483, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_29_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 484, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 484, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 485, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 485, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 485, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 485, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 485, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 485, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 485, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 485, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 485, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4163]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 486, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4164]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 486, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4165]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 486, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_data[2]", "");
@@ -17195,12 +16529,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4224]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 486, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4225]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 486, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4226]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 486, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_30_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 487, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 488, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 488, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 488, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 488, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 488, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 487, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 488, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 488, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 488, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 488, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 488, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_addr[4]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4227]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 489, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4228]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 489, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4229]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 489, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_data[2]", "");
@@ -17265,146 +16599,146 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4288]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 489, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_data[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4289]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 489, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_data[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4290]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 489, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_31_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 490, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 490, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2289]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 491, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2290]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 491, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2291]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 491, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2292]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 491, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2293]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 491, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_addr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5492]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5493]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5494]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5495]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5496]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5497]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5498]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5499]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5500]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5501]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5502]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5503]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5504]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5505]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5506]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5507]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5508]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5509]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5510]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5511]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5512]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5513]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5514]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5515]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5516]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5517]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5518]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5519]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5520]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5521]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5522]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5523]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5524]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5525]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5526]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5527]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5528]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5529]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5530]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5531]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5532]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5533]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5534]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5535]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5536]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5537]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5538]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5539]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5540]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5541]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5542]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5543]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5544]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5545]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5546]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5547]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5548]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5549]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5550]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5551]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5552]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5553]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5554]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5555]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 493, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_en", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5487]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5488]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5489]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5490]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5491]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5492]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5493]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5494]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5495]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5496]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5497]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5498]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5499]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5500]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5501]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5502]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5503]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5504]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5505]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5506]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5507]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5508]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5509]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5510]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5511]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5512]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5513]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5514]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5515]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5516]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5517]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5518]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5519]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5520]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5521]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5522]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5523]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5524]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5525]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5526]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5527]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5528]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5529]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5530]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5531]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5532]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5533]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5534]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5535]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5536]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5537]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5538]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5539]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5540]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5541]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5542]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5543]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5544]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5545]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5546]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5547]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5548]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5549]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5550]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 492, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs1_data_MPORT_data[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 493, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2294]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 494, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2295]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 494, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2296]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 494, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2297]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 494, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2298]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 494, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_addr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5556]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5557]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5558]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5559]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5560]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5561]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5562]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5563]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5564]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5565]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5566]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5567]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5568]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5569]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5570]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5571]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5572]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5573]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5574]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5575]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5576]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5577]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5578]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5579]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5580]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5581]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5582]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5583]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5584]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5585]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5586]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5587]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5588]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5589]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5590]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5591]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5592]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5593]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5594]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5595]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5596]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5597]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5598]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5599]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5600]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5601]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5602]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5603]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5604]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5605]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5606]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5607]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5608]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5609]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5610]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5611]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5612]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5613]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5614]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5615]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5616]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5617]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5618]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5619]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5551]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5552]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5553]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5554]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5555]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5556]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5557]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5558]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5559]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5560]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5561]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5562]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5563]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5564]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5565]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5566]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5567]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5568]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5569]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5570]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5571]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5572]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5573]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5574]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5575]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5576]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5577]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5578]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5579]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5580]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5581]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5582]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5583]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5584]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5585]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5586]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5587]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5588]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5589]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5590]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5591]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5592]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5593]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5594]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5595]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5596]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5597]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5598]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5599]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5600]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5601]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5602]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5603]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5604]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5605]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5606]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5607]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5608]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5609]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5610]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5611]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5612]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5613]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5614]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 495, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_rs2_data_MPORT_data[63]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4695]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 496, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_32_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4696]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 496, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_32_data[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4697]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 496, 15, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_32_data[2]", "");
@@ -17474,7 +16808,7 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4692]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 497, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_32_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4693]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 497, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_32_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4694]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 497, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_32_addr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 498, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_32_mask", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 498, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_32_mask", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4759]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 499, 9, ".riscv_soc.core.decode", "v_toggle/Decode", "regfile_MPORT_32_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4429]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 500, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_rs1_data[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4430]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 500, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_rs1_data[1]", "");
@@ -17609,129 +16943,129 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4687]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4688]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4689]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5620]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5621]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5622]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5623]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5624]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5625]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5626]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5627]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5628]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5629]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5630]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5631]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5632]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5633]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5634]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5635]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5636]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5637]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5638]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5639]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5640]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5641]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5642]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5643]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5644]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5645]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5646]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5647]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5648]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5649]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5650]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5651]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5652]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5653]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5654]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5655]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5656]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5657]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5658]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5659]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5660]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5661]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5662]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5663]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5664]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5665]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5666]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5667]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5668]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5669]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5670]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5671]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5672]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5673]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5674]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5675]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5676]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5677]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5678]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4760]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4761]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4762]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4763]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4764]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5679]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5680]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5681]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5682]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5683]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5684]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5685]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5686]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5687]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5688]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5689]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5690]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5691]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5692]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5693]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5694]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5695]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5696]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5697]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5698]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5699]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5700]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5701]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5702]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5703]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5704]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5705]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5706]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[32]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5707]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[33]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5708]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[34]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5709]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[35]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5710]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[36]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5711]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[37]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5712]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[38]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5713]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[39]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5714]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[40]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5715]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[41]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5716]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[42]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5717]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[43]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5718]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[44]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5719]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[45]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5720]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[46]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5721]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[47]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5722]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[48]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5723]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[49]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5724]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[50]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5725]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[51]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5726]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[52]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5727]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[53]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5728]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[54]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5729]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[55]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5730]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[56]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5731]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[57]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5732]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[58]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5733]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[59]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5734]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[60]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5735]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[61]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5736]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[62]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5737]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5615]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5616]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5617]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5618]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5619]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5620]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5621]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5622]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5623]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5624]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5625]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5626]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5627]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5628]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5629]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5630]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5631]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5632]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5633]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5634]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5635]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5636]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5637]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5638]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5639]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5640]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5641]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5642]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5643]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5644]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5645]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5646]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5647]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5648]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5649]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5650]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5651]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5652]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5653]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5654]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5655]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5656]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5657]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5658]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5659]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5660]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5661]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5662]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5663]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5664]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5665]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5666]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5667]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5668]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5669]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5670]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5671]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5672]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5673]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 502, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_dest_rs_addr[63]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4557]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4558]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4559]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4560]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4561]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4562]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4563]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4564]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4565]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4566]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4567]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4568]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4569]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4570]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4571]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4572]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4573]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4574]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4575]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4576]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4577]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4578]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4579]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4580]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4581]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4582]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4583]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4584]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4585]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4586]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4587]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4588]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4589]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[32]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4590]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[33]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4591]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[34]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4592]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[35]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4593]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[36]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4594]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[37]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4595]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[38]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4596]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[39]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4597]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[40]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4598]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[41]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4599]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[42]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4600]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[43]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4601]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[44]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4602]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[45]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4603]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[46]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4604]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[47]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4605]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[48]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4606]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[49]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4607]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[50]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4608]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[51]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4609]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[52]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4610]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[53]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4611]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[54]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4612]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[55]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4613]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[56]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4614]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[57]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4615]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[58]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4616]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[59]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4617]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[60]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4618]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[61]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4619]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[62]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4620]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 503, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_imm[63]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4420]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 504, 13, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_opType[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 504, 13, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_opType[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4422]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 504, 13, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_opType[2]", "");
@@ -17805,12 +17139,12 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4682]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 506, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_pc[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4683]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 506, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_pc[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[4684]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 506, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "reg_pc[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5738]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 644, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "opType[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5739]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 644, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "opType[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5740]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 777, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "instType[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5741]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 777, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "instType[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5742]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 777, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "instType[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5743]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 777, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "instType[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5674]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 644, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "opType[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5675]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 644, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "opType[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5676]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 777, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "instType[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5677]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 777, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "instType[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5678]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 777, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "instType[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5679]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 777, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "instType[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2294]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 778, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "rs2_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2295]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 778, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "rs2_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2296]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 778, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "rs2_addr[2]", "");
@@ -17826,26 +17160,26 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2283]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 780, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "dest_rs_addr[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2284]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 780, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "dest_rs_addr[3]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2285]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 780, 14, ".riscv_soc.core.decode", "v_toggle/Decode", "dest_rs_addr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5744]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 979, 5, ".riscv_soc.core.decode", "v_branch/Decode", "if", "979-980");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5745]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 979, 6, ".riscv_soc.core.decode", "v_branch/Decode", "else", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5746]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 984, 14, ".riscv_soc.core.decode", "v_line/Decode", "if", "984-985");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5747]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 984, 15, ".riscv_soc.core.decode", "v_line/Decode", "else", "986-987");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5748]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 982, 5, ".riscv_soc.core.decode", "v_line/Decode", "elsif", "982-983");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5749]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 991, 14, ".riscv_soc.core.decode", "v_line/Decode", "if", "991-992");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5750]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 991, 15, ".riscv_soc.core.decode", "v_line/Decode", "else", "993-994");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5751]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 989, 5, ".riscv_soc.core.decode", "v_line/Decode", "elsif", "989-990");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5752]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 996, 5, ".riscv_soc.core.decode", "v_branch/Decode", "if", "996-997");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5753]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 996, 6, ".riscv_soc.core.decode", "v_branch/Decode", "else", "998-999");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5754]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1002, 5, ".riscv_soc.core.decode", "v_branch/Decode", "if", "1002-1003");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5755]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1002, 6, ".riscv_soc.core.decode", "v_branch/Decode", "else", "1004-1005");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5756]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1013, 14, ".riscv_soc.core.decode", "v_line/Decode", "if", "1013-1014");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5757]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1013, 15, ".riscv_soc.core.decode", "v_line/Decode", "else", "1015-1016");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5758]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1011, 14, ".riscv_soc.core.decode", "v_line/Decode", "elsif", "1011-1012");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5759]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1009, 14, ".riscv_soc.core.decode", "v_line/Decode", "elsif", "1009-1010");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5760]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1007, 5, ".riscv_soc.core.decode", "v_line/Decode", "elsif", "1007-1008");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5761]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1018, 5, ".riscv_soc.core.decode", "v_branch/Decode", "if", "1018-1019");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5762]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1018, 6, ".riscv_soc.core.decode", "v_branch/Decode", "else", "1020-1021");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5763]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 978, 3, ".riscv_soc.core.decode", "v_line/Decode", "block", "978,1001");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5680]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 979, 5, ".riscv_soc.core.decode", "v_branch/Decode", "if", "979-980");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5681]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 979, 6, ".riscv_soc.core.decode", "v_branch/Decode", "else", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5682]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 984, 14, ".riscv_soc.core.decode", "v_line/Decode", "if", "984-985");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5683]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 984, 15, ".riscv_soc.core.decode", "v_line/Decode", "else", "986-987");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5684]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 982, 5, ".riscv_soc.core.decode", "v_line/Decode", "elsif", "982-983");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5685]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 991, 14, ".riscv_soc.core.decode", "v_line/Decode", "if", "991-992");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5686]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 991, 15, ".riscv_soc.core.decode", "v_line/Decode", "else", "993-994");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5687]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 989, 5, ".riscv_soc.core.decode", "v_line/Decode", "elsif", "989-990");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5688]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 996, 5, ".riscv_soc.core.decode", "v_branch/Decode", "if", "996-997");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5689]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 996, 6, ".riscv_soc.core.decode", "v_branch/Decode", "else", "998-999");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5690]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1002, 5, ".riscv_soc.core.decode", "v_branch/Decode", "if", "1002-1003");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5691]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1002, 6, ".riscv_soc.core.decode", "v_branch/Decode", "else", "1004-1005");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5692]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1013, 14, ".riscv_soc.core.decode", "v_line/Decode", "if", "1013-1014");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5693]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1013, 15, ".riscv_soc.core.decode", "v_line/Decode", "else", "1015-1016");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5694]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1011, 14, ".riscv_soc.core.decode", "v_line/Decode", "elsif", "1011-1012");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5695]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1009, 14, ".riscv_soc.core.decode", "v_line/Decode", "elsif", "1009-1010");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5696]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1007, 5, ".riscv_soc.core.decode", "v_line/Decode", "elsif", "1007-1008");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5697]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1018, 5, ".riscv_soc.core.decode", "v_branch/Decode", "if", "1018-1019");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5698]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1018, 6, ".riscv_soc.core.decode", "v_branch/Decode", "else", "1020-1021");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5699]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 978, 3, ".riscv_soc.core.decode", "v_line/Decode", "block", "978,1001");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[0]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1329, 17, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "clock", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2210]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1330, 17, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "io_raddr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2211]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1330, 17, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "io_raddr[1]", "");
@@ -18232,7 +17566,7 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1337, 15, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "mem_wdata[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1337, 15, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "mem_wdata[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1337, 15, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "mem_wdata[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1338, 14, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "mem_wstrb[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1338, 14, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "mem_wstrb[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1338, 14, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "mem_wstrb[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1338, 14, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "mem_wstrb[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1338, 14, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "mem_wstrb[3]", "");
@@ -18498,7 +17832,7 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 16, 21, ".riscv_soc.axi_ram.mem", "v_toggle/RAMCtrl", "wdata[61]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 16, 21, ".riscv_soc.axi_ram.mem", "v_toggle/RAMCtrl", "wdata[62]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 16, 21, ".riscv_soc.axi_ram.mem", "v_toggle/RAMCtrl", "wdata[63]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5426]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 17, 21, ".riscv_soc.axi_ram.mem", "v_toggle/RAMCtrl", "wstrb[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5421]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 17, 21, ".riscv_soc.axi_ram.mem", "v_toggle/RAMCtrl", "wstrb[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 17, 21, ".riscv_soc.axi_ram.mem", "v_toggle/RAMCtrl", "wstrb[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 17, 21, ".riscv_soc.axi_ram.mem", "v_toggle/RAMCtrl", "wstrb[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 17, 21, ".riscv_soc.axi_ram.mem", "v_toggle/RAMCtrl", "wstrb[3]", "");
@@ -18507,5 +17841,5 @@ void Vriscv_soc___024root___configure_coverage(Vriscv_soc___024root* vlSelf, boo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 17, 21, ".riscv_soc.axi_ram.mem", "v_toggle/RAMCtrl", "wstrb[6]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 17, 21, ".riscv_soc.axi_ram.mem", "v_toggle/RAMCtrl", "wstrb[7]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2306]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 18, 21, ".riscv_soc.axi_ram.mem", "v_toggle/RAMCtrl", "wen", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5764]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 20, 5, ".riscv_soc.axi_ram.mem", "v_line/RAMCtrl", "block", "20-21");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[5700]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 20, 5, ".riscv_soc.axi_ram.mem", "v_line/RAMCtrl", "block", "20-21");
 }
