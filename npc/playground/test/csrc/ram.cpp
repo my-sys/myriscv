@@ -25,9 +25,9 @@ void init_ram(const char* img_file){
         printf("!!!!!!!!!!! img size over the ram !!!!!!!!!!!!!!!!!\n");
     }
     fseek(fp,0,SEEK_SET);
-    int ret = fread(ram, imgfile_size/8,8,fp);
+    int ret = fread(ram, imgfile_size,1,fp);
 	if(ret != 1){
-		printf("error fread\n");
+		printf("error fread ret %d\n",ret);
 		assert(0);
 	}
     fclose(fp);
@@ -35,11 +35,14 @@ void init_ram(const char* img_file){
 
 uint64_t mem_read(uint64_t addr, int len){
     // addr , len 要进行额外处理以下。
-    return ram[addr];
+	uint64_t real_addr = addr - 0x80000000;
+    return ram[real_addr];
 } 
 
 extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, paddr_t waddr, uint64_t wdata, uint8_t wstrb, uint8_t wen){
-    *rdata = ram[raddr];
+    raddr = raddr - 0x80000000;
+	waddr = waddr - 0x80000000;
+	*rdata = ram[raddr];
     if(wen){
         switch(wstrb){
             case 0x1: ram[waddr] = (ram[waddr] & 0xffffffffffffff00) | (wdata &0xff);break;
