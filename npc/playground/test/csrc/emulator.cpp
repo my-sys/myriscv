@@ -10,7 +10,7 @@ Emulator::Emulator(){
     top->trace(m_trace,99);
     m_trace->open("waveform.vcd");
 #endif
-
+	reset(10);
 };
 
 void Emulator::execute_once(){
