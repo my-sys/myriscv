@@ -85,7 +85,6 @@ VL_MODULE(Vriscv_soc___024root) {
     VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data;
     VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___temp_result_pc_T_24;
     VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc;
-    VlWide<3>/*65:0*/ riscv_soc__DOT__core__DOT__decode__DOT___reg_imm_T_51;
     QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__regPC;
     QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT___regPC_T_1;
     QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__reg_rs_addr;

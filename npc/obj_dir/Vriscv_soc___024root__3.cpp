@@ -17,8 +17,301 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__9(Vriscv_soc___024root* 
     CData/*5:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_247;
     CData/*3:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_314;
     CData/*3:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_329;
-    VlWide<3>/*95:0*/ __Vtemp1332;
     // Body
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x2aU)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x2aU))))) {
+        ++(vlSymsp->__Vcoverage[4333]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xfffffbffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x2aU))))) 
+                  << 0x2aU));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x2bU)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x2bU))))) {
+        ++(vlSymsp->__Vcoverage[4334]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xfffff7ffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x2bU))))) 
+                  << 0x2bU));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x2cU)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x2cU))))) {
+        ++(vlSymsp->__Vcoverage[4335]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xffffefffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x2cU))))) 
+                  << 0x2cU));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x2dU)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x2dU))))) {
+        ++(vlSymsp->__Vcoverage[4336]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xffffdfffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x2dU))))) 
+                  << 0x2dU));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x2eU)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x2eU))))) {
+        ++(vlSymsp->__Vcoverage[4337]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xffffbfffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x2eU))))) 
+                  << 0x2eU));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x2fU)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x2fU))))) {
+        ++(vlSymsp->__Vcoverage[4338]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xffff7fffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x2fU))))) 
+                  << 0x2fU));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x30U)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x30U))))) {
+        ++(vlSymsp->__Vcoverage[4339]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xfffeffffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x30U))))) 
+                  << 0x30U));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x31U)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x31U))))) {
+        ++(vlSymsp->__Vcoverage[4340]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xfffdffffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x31U))))) 
+                  << 0x31U));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x32U)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x32U))))) {
+        ++(vlSymsp->__Vcoverage[4341]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xfffbffffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x32U))))) 
+                  << 0x32U));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x33U)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x33U))))) {
+        ++(vlSymsp->__Vcoverage[4342]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xfff7ffffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x33U))))) 
+                  << 0x33U));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x34U)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x34U))))) {
+        ++(vlSymsp->__Vcoverage[4343]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xffefffffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x34U))))) 
+                  << 0x34U));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x35U)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x35U))))) {
+        ++(vlSymsp->__Vcoverage[4344]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xffdfffffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x35U))))) 
+                  << 0x35U));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x36U)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x36U))))) {
+        ++(vlSymsp->__Vcoverage[4345]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xffbfffffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x36U))))) 
+                  << 0x36U));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x37U)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x37U))))) {
+        ++(vlSymsp->__Vcoverage[4346]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xff7fffffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x37U))))) 
+                  << 0x37U));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x38U)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x38U))))) {
+        ++(vlSymsp->__Vcoverage[4347]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xfeffffffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x38U))))) 
+                  << 0x38U));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x39U)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x39U))))) {
+        ++(vlSymsp->__Vcoverage[4348]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xfdffffffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x39U))))) 
+                  << 0x39U));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x3aU)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x3aU))))) {
+        ++(vlSymsp->__Vcoverage[4349]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xfbffffffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x3aU))))) 
+                  << 0x3aU));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x3bU)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x3bU))))) {
+        ++(vlSymsp->__Vcoverage[4350]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xf7ffffffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x3bU))))) 
+                  << 0x3bU));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x3cU)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x3cU))))) {
+        ++(vlSymsp->__Vcoverage[4351]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xefffffffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x3cU))))) 
+                  << 0x3cU));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x3dU)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x3dU))))) {
+        ++(vlSymsp->__Vcoverage[4352]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xdfffffffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x3dU))))) 
+                  << 0x3dU));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x3eU)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x3eU))))) {
+        ++(vlSymsp->__Vcoverage[4353]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0xbfffffffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x3eU))))) 
+                  << 0x3eU));
+    }
+    if ((1U & ((IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                        >> 0x3fU)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+                                              >> 0x3fU))))) {
+        ++(vlSymsp->__Vcoverage[4354]);
+        vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst 
+            = ((0x7fffffffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__difftest_inst) 
+               | ((QData)((IData)((1U & (IData)(((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)) 
+                                                 >> 0x3fU))))) 
+                  << 0x3fU));
+    }
+    vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_152 
+        = ((0x4033U == (0xfe00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
+            ? 0U : ((0x4013U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
+                     ? 0U : ((0x2004033U == (0xfe00707fU 
+                                             & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
+                              ? 3U : ((0x2005033U == 
+                                       (0xfe00707fU 
+                                        & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
+                                       ? 3U : ((0x200503bU 
+                                                == 
+                                                (0xfe00707fU 
+                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
+                                                ? 3U
+                                                : (
+                                                   (0x200403bU 
+                                                    == 
+                                                    (0xfe00707fU 
+                                                     & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
+                                                    ? 3U
+                                                    : 
+                                                   ((0x2000033U 
+                                                     == 
+                                                     (0xfe00707fU 
+                                                      & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
+                                                     ? 3U
+                                                     : 
+                                                    ((0x2001033U 
+                                                      == 
+                                                      (0xfe00707fU 
+                                                       & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
+                                                      ? 3U
+                                                      : 
+                                                     ((0x2002033U 
+                                                       == 
+                                                       (0xfe00707fU 
+                                                        & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
+                                                       ? 3U
+                                                       : 
+                                                      ((0x2003033U 
+                                                        == 
+                                                        (0xfe00707fU 
+                                                         & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
+                                                        ? 3U
+                                                        : 
+                                                       ((0x200003bU 
+                                                         == 
+                                                         (0xfe00707fU 
+                                                          & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
+                                                         ? 3U
+                                                         : 
+                                                        ((0x2006033U 
+                                                          == 
+                                                          (0xfe00707fU 
+                                                           & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
+                                                          ? 3U
+                                                          : 
+                                                         ((0x2007033U 
+                                                           == 
+                                                           (0xfe00707fU 
+                                                            & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
+                                                           ? 3U
+                                                           : 
+                                                          ((0x200703bU 
+                                                            == 
+                                                            (0xfe00707fU 
+                                                             & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
+                                                            ? 3U
+                                                            : 
+                                                           ((0x200603bU 
+                                                             == 
+                                                             (0xfe00707fU 
+                                                              & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
+                                                             ? 3U
+                                                             : 0U)))))))))))))));
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_284 
         = ((0x2004033U == (0xfe00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
             ? 6U : ((0x2005033U == (0xfe00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))
@@ -2754,95 +3047,6 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__9(Vriscv_soc___024root* 
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__opType 
             = ((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__opType)) 
                | (2U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__opType)));
-    }
-    VL_EXTEND_WQ(66,64, __Vtemp1332, ((3U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType))
-                                       ? ((((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst 
-                                             >> 0x1fU)
-                                             ? 0xfffffffffffffULL
-                                             : 0ULL) 
-                                           << 0xcU) 
-                                          | (QData)((IData)(
-                                                            ((0xfe0U 
-                                                              & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst 
-                                                                 >> 0x14U)) 
-                                                             | (0x1fU 
-                                                                & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst 
-                                                                   >> 7U))))))
-                                       : ((1U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType))
-                                           ? (((QData)((IData)(
-                                                               ((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst 
-                                                                 >> 0x1fU)
-                                                                 ? 0xffffffffU
-                                                                 : 0U))) 
-                                               << 0x20U) 
-                                              | (QData)((IData)(
-                                                                (0xfffff000U 
-                                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst))))
-                                           : ((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType))
-                                               ? ((
-                                                   ((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst 
-                                                     >> 0x1fU)
-                                                     ? 0xfffffffffffffULL
-                                                     : 0ULL) 
-                                                   << 7U) 
-                                                  | (QData)((IData)(
-                                                                    (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst 
-                                                                     >> 0x19U))))
-                                               : 0ULL))));
-    if ((7U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType))) {
-        vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___reg_imm_T_51[0U] 
-            = (((IData)(((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst 
-                          >> 0x1fU) ? 0x3fffffffffffffULL
-                          : 0ULL)) << 0xcU) | ((0x800U 
-                                                & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst 
-                                                   << 4U)) 
-                                               | ((0x7e0U 
-                                                   & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst 
-                                                      >> 0x14U)) 
-                                                  | (0x1eU 
-                                                     & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst 
-                                                        >> 7U)))));
-        vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___reg_imm_T_51[1U] 
-            = (((IData)(((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst 
-                          >> 0x1fU) ? 0x3fffffffffffffULL
-                          : 0ULL)) >> 0x14U) | ((IData)(
-                                                        (((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst 
-                                                           >> 0x1fU)
-                                                           ? 0x3fffffffffffffULL
-                                                           : 0ULL) 
-                                                         >> 0x20U)) 
-                                                << 0xcU));
-        vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___reg_imm_T_51[2U] 
-            = ((IData)((((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst 
-                          >> 0x1fU) ? 0x3fffffffffffffULL
-                          : 0ULL) >> 0x20U)) >> 0x14U);
-    } else {
-        vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___reg_imm_T_51[0U] 
-            = ((2U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType))
-                ? (((IData)(((0x80000U & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)
-                              ? 0xfffffffffffULL : 0ULL)) 
-                    << 0x16U) | ((0x3fc000U & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst 
-                                               << 2U)) 
-                                 | ((0x2000U & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst 
-                                                >> 7U)) 
-                                    | (0x1ffeU & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst 
-                                                  >> 0x12U)))))
-                : __Vtemp1332[0U]);
-        vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___reg_imm_T_51[1U] 
-            = ((2U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType))
-                ? (((IData)(((0x80000U & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)
-                              ? 0xfffffffffffULL : 0ULL)) 
-                    >> 0xaU) | ((IData)((((0x80000U 
-                                           & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)
-                                           ? 0xfffffffffffULL
-                                           : 0ULL) 
-                                         >> 0x20U)) 
-                                << 0x16U)) : __Vtemp1332[1U]);
-        vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___reg_imm_T_51[2U] 
-            = ((2U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType))
-                ? ((IData)((((0x80000U & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regInst)
-                              ? 0xfffffffffffULL : 0ULL) 
-                            >> 0x20U)) >> 0xaU) : __Vtemp1332[2U]);
     }
     if ((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType) 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__instType)))) {
