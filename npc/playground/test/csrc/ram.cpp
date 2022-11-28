@@ -54,4 +54,5 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, paddr_t waddr, uint64_t 
             default:  printf("mem write falied is not 8,16,32,64\n");assert(0);
         }
     }
+	printf(" ramCtrl haha %lx\n",raddr); 
 }
