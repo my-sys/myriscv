@@ -31,6 +31,7 @@ CFLAGS = -O3 -Wall -I$(INCLUDE_DIR)
 LDFLAGS = -lpthread -lSDL2 -ldl
 
 
+IMG ?= 
 
 
 verilog:
@@ -56,11 +57,13 @@ clean:
 compile:$(BIN) 
 	@echo "--- BUILD ---------"
 	make -j -C obj_dir -f V$(TOPNAME).mk 
-	obj_dir/V$(TOPNAME) +trace
+#	obj_dir/V$(TOPNAME) +trace
 
 run:
 	make verilog 
-	make compile 
+	make compile
+	obj_dir/V$(TOPNAME)  $(IMG)
+# nemu/native.mk
 sim: run
 	$(call git_commit, "sim RTL") # DO NOT REMOVE THIS LINE!!!
 	@echo "Write this Makefile by yourself."
