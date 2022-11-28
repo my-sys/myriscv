@@ -3,6 +3,7 @@
 Emulator::Emulator(){
     top = new Vriscv_soc;
     cycles = 0;
+	printf("execute hahazzz ???\n");
 #if EN_TRACE
     Verilated::traceEverOn(true);
     m_trace = new VerilatedVcdC;
