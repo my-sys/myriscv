@@ -82,7 +82,7 @@ void Emulator::read_regs(uint64_t* reg){
     REGS(16);REGS(17);REGS(18);REGS(19);REGS(20);REGS(21);REGS(22);REGS(23);
     REGS(24);REGS(25);REGS(26);REGS(27);REGS(28);REGS(29);REGS(30);REGS(31);
 
-    reg[32] = top->io_difftest_pc
-    reg[33] = top->io_difftest_inst
+    reg[32] = top->io_difftest_pc;
+    reg[33] = top->io_difftest_inst;
 }
 #endif

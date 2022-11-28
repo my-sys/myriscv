@@ -11,7 +11,7 @@ static int parse_args(int argc, char *argv[]){
         {"log"      , required_argument, NULL, 'l'},
         {"diff"     , required_argument, NULL, 'd'},
         {0          , 0                , NULL, 0},
-    }
+    };
     int opt;
     for(int i =0 ;i<argc;i++){
       printf("i= %d, %s\n",i,argv[i]);
