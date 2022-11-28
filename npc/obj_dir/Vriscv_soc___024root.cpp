@@ -1002,8 +1002,8 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__6(Vriscv_soc___024root* 
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__regPC 
         = ((IData)(vlSelf->reset) ? 0x80000000ULL : 
            ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_valid_next_pc)
-             ? vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT___regPC_T_1
-             : vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_next_pc));
+             ? vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_next_pc
+             : vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT___regPC_T_1));
     if ((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc) 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__execute_io_in_pc)))) {
         ++(vlSymsp->__Vcoverage[4621]);

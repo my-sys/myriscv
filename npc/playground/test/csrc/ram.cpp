@@ -40,8 +40,10 @@ uint64_t mem_read(uint64_t addr, int len){
 } 
 
 extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, paddr_t waddr, uint64_t wdata, uint8_t wstrb, uint8_t wen){
-    raddr = raddr - 0x80000000;
-	waddr = waddr - 0x80000000;
+    printf(" ramCtrl %lx\n",raddr); 
+    raddr = (raddr - 0x80000000)>>2;
+	waddr = (waddr - 0x80000000)>>2;
+	
 	*rdata = ram[raddr];
     if(wen){
         switch(wstrb){
