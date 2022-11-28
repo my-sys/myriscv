@@ -17,7 +17,7 @@ module RAMCtrl(
     input [7:0]     wstrb,
     input           wen
 );
-    always @(posedge clok)begin
-        ramCtrl(clock,raddr,rdata,waddr,wdata,wstrb,wen);
+    always @(posedge clock)begin
+        ramCtrl(raddr,rdata,waddr,wdata,wstrb,wen);
     end 
 endmodule
