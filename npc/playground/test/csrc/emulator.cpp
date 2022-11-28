@@ -28,6 +28,7 @@ void Emulator::execute_once(){
 
 void Emulator::execute(uint64_t n){
     //....
+	printf("execute haha ???\n");
     for(; n > 0; n--){
         execute_once();
     }
