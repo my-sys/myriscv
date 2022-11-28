@@ -70,7 +70,7 @@ run:
 gdb:
 	make verilog 
 	make compile
-	obj_dir/V$(TOPNAME)  $(IMG)	
+	gdb obj_dir/V$(TOPNAME) run $(IMG)	
 # nemu/native.mk
 sim: run
 	$(call git_commit, "sim RTL") # DO NOT REMOVE THIS LINE!!!
