@@ -27,7 +27,7 @@ VERILATOR_FLAGS += --coverage
 #VERILATOR_FLAGS += --gdbbt
 VERILATOR_FLAGS += +define+SYNTHESIS
 
-VERILATOR_FLAGS += coverage_on  -file "verilator_config.vlt"
+#VERILATOR_FLAGS += coverage_on  -file "verilator_config.vlt"
 BIN = $(BUILD_DIR)/$(TOPNAME)
 CFLAGS = -O3 -Wall -I$(INCLUDE_DIR) 
 LDFLAGS = -lpthread -lSDL2 -ldl
@@ -45,7 +45,7 @@ verilog:
 
 $(BIN): $(VSRCS) $(CSRCS) 
 #	make verilog
-	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
+	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) verilator_config.vlt $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
 
 clean:
 	-rm -rf $(BUILD_DIR)
