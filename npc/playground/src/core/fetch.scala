@@ -28,9 +28,9 @@ class Fetch extends Module{
     val regInst = RegInit(0.U(32.W))
 
     when(valid_next_pc){
-        regPC := regPC + 4.U 
-    }.otherwise{
         regPC := next_pc
+    }.otherwise{
+        regPC := regPC + 4.U 
     }
     
     regInst := inst
