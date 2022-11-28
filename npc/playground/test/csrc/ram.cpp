@@ -12,7 +12,8 @@ void init_ram(const char* img_file){
         printf("img_file is NULL \n");
         assert(0);
     }
-    FILE *fp = fopen(img_file, "rb+");
+	printf("img_file path : %s\n",img_file);
+    FILE *fp = fopen(img_file, "rb");
     if(fp == NULL){
         printf("can not open %s !!!\n",img_file);
         assert(0);
