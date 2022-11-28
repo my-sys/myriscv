@@ -45,7 +45,7 @@ verilog:
 
 $(BIN): $(VSRCS) $(CSRCS) 
 #	make verilog
-	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) coverage_on verilator_config.vlt $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
+	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) verilator_config.vlt $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
 
 clean:
 	-rm -rf $(BUILD_DIR)
