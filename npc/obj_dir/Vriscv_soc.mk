@@ -35,11 +35,11 @@ VM_PREFIX = Vriscv_soc
 VM_MODPREFIX = Vriscv_soc
 # User CFLAGS (from -CFLAGS on Verilator command line)
 VM_USER_CFLAGS = \
-	-O3 -Wall -I/home/xingk/ysyx-workbench/npc/playground/test/include  \
+	-O3 -Wall -I/home/xingk/ysyx-workbench/npc/playground/test/include  -I/usr/lib/llvm-12/include -std=c++14   -fno-exceptions -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fPIE  \
 
 # User LDLIBS (from -LDFLAGS on Verilator command line)
 VM_USER_LDLIBS = \
-	-lpthread -lSDL2 -ldl -lpcre -lreadline \
+	-lpthread -lSDL2 -ldl -lpcre -lreadline -lLLVM-12 \
 
 # User .cpp files (from .cpp's on Verilator command line)
 VM_USER_CLASSES = \
@@ -50,10 +50,12 @@ VM_USER_CLASSES = \
 	ram \
 	sdb \
 	watchpoint \
+	disasm \
 
 # User .cpp directories (from .cpp's on Verilator command line)
 VM_USER_DIR = \
 	/home/xingk/ysyx-workbench/npc/playground/test/csrc \
+	playground/utils \
 
 
 ### Default rules...
@@ -78,6 +80,8 @@ ram.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/ram.cpp
 sdb.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/sdb.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 watchpoint.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/watchpoint.c
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+disasm.o: playground/utils/disasm.cc
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 
 ### Link rules... (from --exe)

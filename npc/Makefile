@@ -32,7 +32,7 @@ BIN = $(BUILD_DIR)/$(TOPNAME)
 CFLAGS = -O3 -Wall -I$(INCLUDE_DIR) 
 LDFLAGS = -lpthread -lSDL2 -ldl -lpcre -lreadline
 
-CSRCS += ./playground/utils/disasm.cc 
+CSRCS += $(abspath ./playground/utils/disasm.cc) 
 CFLAGS += $(shell llvm-config --cxxflags) -fPIE 
 LDFLAGS += $(shell llvm-config --libs)
 
