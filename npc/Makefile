@@ -2,9 +2,12 @@ BUILD_DIR = ./build
 TOPNAME = riscv_soc
 export PATH := $(PATH):$(abspath ./utils)
 
+CSRCS += $(abspath ./playground/utils/disasm.cc) 
+CFLAGS += $(shell llvm-config --cxxflags) -fPIE 
+LDFLAGS += $(shell llvm-config --libs)
 # project source
 VSRCS = $(shell find $(abspath ./playground/test/vsrc) -name "*.v") $(shell find $(abspath ./build) -name "*.v")
-CSRCS = $(shell find $(abspath ./playground/test/csrc) -name "*.c" -or -name "*.cc" -or -name "*.cpp")
+CSRCS += $(shell find $(abspath ./playground/test/csrc) -name "*.c" -or -name "*.cc" -or -name "*.cpp")
 INCLUDE_DIR = $(abspath ./playground/test/include)
 # Generate C++ in executable form
 VERILATOR_FLAGS += -cc --exe
@@ -29,12 +32,10 @@ VERILATOR_FLAGS += +define+SYNTHESIS
 
 #VERILATOR_FLAGS += coverage_on  -file "verilator_config.vlt"
 BIN = $(BUILD_DIR)/$(TOPNAME)
-CFLAGS = -O3 -Wall -I$(INCLUDE_DIR) 
-LDFLAGS = -lpthread -lSDL2 -ldl -lpcre -lreadline
+CFLAGS += -O3 -Wall -I$(INCLUDE_DIR) 
+LDFLAGS += -lpthread -lSDL2 -ldl -lpcre -lreadline
 
-CSRCS += $(abspath ./playground/utils/disasm.cc) 
-CFLAGS += $(shell llvm-config --cxxflags) -fPIE 
-LDFLAGS += $(shell llvm-config --libs)
+
 
 IMG ?= 
 
