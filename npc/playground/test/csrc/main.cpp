@@ -39,7 +39,7 @@ int main(int argc, char** argv){
     init_sdb();
 
 #ifdef CONFIG_ITRACE
-	extern void init_disasm(const char *triple);
+	//extern void init_disasm(const char *triple);
 	init_disasm("riscv64-pc-linux-gnu");
 #endif
     // init_disasm();
