@@ -1,7 +1,6 @@
 BUILD_DIR = ./build
 TOPNAME = riscv_soc
 export PATH := $(PATH):$(abspath ./utils)
-CONFIG_ITRACE := 1
 
 # project source
 VSRCS = $(shell find $(abspath ./playground/test/vsrc) -name "*.v") $(shell find $(abspath ./build) -name "*.v")
