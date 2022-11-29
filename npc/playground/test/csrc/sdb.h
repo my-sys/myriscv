@@ -9,4 +9,6 @@ void display_watchpoint();
 bool calculate_watchpoint();
 void init_sdb();
 void sdb_mainloop();
+void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte);
+void init_disasm(const char *triple);
 #endif
