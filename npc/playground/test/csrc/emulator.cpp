@@ -1,5 +1,7 @@
 #include "emulator.h"
-
+#include <verilated.h>
+#include <verilated_vcd_c.h>
+#include "Vriscv_soc.h"
 Emulator::Emulator(){
     top = new Vriscv_soc;
     cycles = 0;

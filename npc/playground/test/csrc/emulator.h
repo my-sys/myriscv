@@ -1,8 +1,6 @@
 #ifndef  __EMULATOR_H__
 #define  __EMULATOR_H__
-#include <verilated.h>
-#include <verilated_vcd_c.h>
-#include "Vriscv_soc.h"
+
 #include "common.h"
 #include <iostream>
 #define EN_TRACE 0
