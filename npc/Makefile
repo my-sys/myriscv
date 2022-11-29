@@ -61,6 +61,7 @@ clean:
 
 compile:$(BIN) 
 	@echo "--- BUILD ---------"
+	mkdir obj_dir
 	make -j3 -C obj_dir -f V$(TOPNAME).mk 
 #	obj_dir/V$(TOPNAME) +trace
 
