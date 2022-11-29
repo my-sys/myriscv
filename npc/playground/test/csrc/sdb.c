@@ -22,7 +22,7 @@ static void trace_and_difftest()
     p += snprintf(p, 4, " %02x", inst[i]);
   }
   //extern void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte);
-  disassemble(p, logbuf + sizeof(logbuf) - p, reg[0],inst,4);
+  disassemble(p, logbuf + sizeof(logbuf) - p, 0,inst,4);
   puts(logbuf);
 #endif 
 }
