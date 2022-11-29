@@ -46,7 +46,7 @@ verilog:
 	@echo "generate verilog success!"
 
 
-$(BIN): $(VSRCS) $(CSRCS) 
+#$(BIN): $(VSRCS) $(CSRCS) 
 #	make verilog
 	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) verilator_config.vlt $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
 
@@ -59,7 +59,9 @@ clean:
 
 .PHONY: verilog clean sim run 
 
-compile:$(BIN) 
+compile:$(VSRCS) $(CSRCS) 
+	@echo "------------VERILATE--------------"
+	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) verilator_config.vlt $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
 	@echo "--- BUILD ---------"
 	make -j3 -C obj_dir -f V$(TOPNAME).mk 
 #	obj_dir/V$(TOPNAME) +trace
