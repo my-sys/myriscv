@@ -29,7 +29,7 @@ VERILATOR_FLAGS += --gdb
 VERILATOR_FLAGS += +define+SYNTHESIS
 
 #VERILATOR_FLAGS += coverage_on  -file "verilator_config.vlt"
-BIN = $(BUILD_DIR)/$(TOPNAME)
+BIN = ./obj_dir/V$(TOPNAME)
 CFLAGS = -O3 -Wall -I$(INCLUDE_DIR) 
 LDFLAGS = -lpthread -lSDL2 -ldl -lpcre -lreadline
 
@@ -61,7 +61,6 @@ clean:
 
 compile:$(BIN) 
 	@echo "--- BUILD ---------"
-	mkdir obj_dir
 	make -j3 -C obj_dir -f V$(TOPNAME).mk 
 #	obj_dir/V$(TOPNAME) +trace
 
