@@ -1,6 +1,7 @@
 #ifndef  __EMULATOR_H__
 #define  __EMULATOR_H__
-
+#include "common.h"
+#include <iostream>
 class Vriscv_soc;
 class Emulator{
 private:
