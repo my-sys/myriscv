@@ -17,10 +17,12 @@ static void trace_and_difftest()
   char *p = logbuf;
   p += snprintf(p, sizeof(logbuf), "0x%016lx" ":", reg[0]);
 
-  p += snprintf(p,10, " %lx ",reg[1]);
-  uint32_t inst = reg[1];
+  uint8_t *inst = (uint8_t *)&reg[1];
+  for (i = 0; i < 4; i ++) {
+    p += snprintf(p, 4, " %02x", inst[i]);
+  }
   //extern void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte);
-  disassemble(p, logbuf + sizeof(logbuf) - p, reg[0],(uint8_t *)&(inst),4);
+  disassemble(p, logbuf + sizeof(logbuf) - p, reg[0],inst,4);
   puts(logbuf);
 #endif 
 }
