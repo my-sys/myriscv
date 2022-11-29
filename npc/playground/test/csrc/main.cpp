@@ -6,7 +6,7 @@ static char *img_file = NULL;
 static char *log_file = NULL;
 
 extern void init_ram(const char* img_file);
-extern void init_disasm(const char *triple);
+
 static int parse_args(int argc, char *argv[]){
     const struct option table[] = {
         {"log"      , required_argument, NULL, 'l'},
@@ -38,6 +38,7 @@ int main(int argc, char** argv){
     init_sdb();
 
 #ifdef CONFIG_ITRACE
+	extern void init_disasm(const char *triple);
 	init_disasm("riscv64-pc-linux-gnu");
 #endif
     // init_disasm();
