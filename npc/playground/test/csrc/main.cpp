@@ -6,7 +6,7 @@ static char *img_file = NULL;
 static char *log_file = NULL;
 
 extern void init_ram(const char* img_file);
-void init_disasm(const char *triple);
+extern void init_disasm(const char *triple);
 static int parse_args(int argc, char *argv[]){
     const struct option table[] = {
         {"log"      , required_argument, NULL, 'l'},
