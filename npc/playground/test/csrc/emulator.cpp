@@ -42,6 +42,7 @@ void Emulator::reset(int n){
         execute_once();
     }
     top->reset = 0;
+	printf("kkkzza \n");
 };
 
 void Emulator::read_regs(uint64_t* reg){
