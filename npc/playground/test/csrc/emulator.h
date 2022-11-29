@@ -1,11 +1,7 @@
 #ifndef  __EMULATOR_H__
 #define  __EMULATOR_H__
 
-#include "common.h"
-#include <iostream>
-#include "Vriscv_soc.h"
-#define EN_TRACE 0
-
+class Vriscv_soc;
 class Emulator{
 private:
     Vriscv_soc *top;
