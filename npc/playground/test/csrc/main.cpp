@@ -40,7 +40,7 @@ int main(int argc, char** argv){
 
 #ifdef CONFIG_ITRACE
 	//extern void init_disasm(const char *triple);
-	init_disasm("riscv64-pc-linux-gnu");
+	init_disasm("riscv63""-pc-linux-gnu");
 #endif
     // init_disasm();
     welcome();
