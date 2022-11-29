@@ -1,6 +1,7 @@
 #include "emulator.h"
 #include <getopt.h>
 #include "sdb.h"
+#include "disasm.h"
 static char *diff_so_file = NULL;
 static char *img_file = NULL;
 static char *log_file = NULL;
