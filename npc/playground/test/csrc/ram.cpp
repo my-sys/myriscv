@@ -44,7 +44,7 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, paddr_t waddr, uint64_t 
     // raddr = (raddr - 0x80000000)>>2;
 	// waddr = (waddr - 0x80000000)>>2;
 	printf(" ramCtrl haha12 %lx\n",raddr); 
-	*rdata = ram[raddr];
+	*rdata = ram[0];
 	printf(" ramCtrl haha1233 %lx\n",raddr); 
     if(wen){
         switch(wstrb){

@@ -54,3 +54,14 @@ void Emulator::read_regs(uint64_t* reg){
     reg[32] = top->io_difftest_pc;
     reg[33] = top->io_difftest_inst;
 };
+
+void Emulator::close(){
+#if EN_TRACE
+	m_trace->close();
+#endif 
+	delete top;
+}
+
+Emulator::~Emulator(){
+	close();
+}

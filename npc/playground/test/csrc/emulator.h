@@ -20,14 +20,9 @@ public:
         return instance;
     }
     Emulator();
-    ~Emulator(){
-#if EN_TRACE
-        m_trace->close();
-#endif 
-        delete top;
-    };
     void execute_once();
     void execute(uint64_t n);
+	void close();
     void reset(int n);
 	void read_regs(uint64_t* reg);
 };
