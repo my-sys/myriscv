@@ -20,6 +20,7 @@ public:
         return instance;
     }
     Emulator();
+    ~Emulator();
     void execute_once();
     void execute(uint64_t n);
 	void close();
