@@ -16,7 +16,7 @@ static void trace_and_difftest()
   char *p = logbuf;
   p += snprintf(p, sizeof(logbuf), "0x%016lx" ":", reg[0]);
 
-  p += snprintf(p,10, " %llx ",reg[1]);
+  p += snprintf(p,10, " %lx ",reg[1]);
   
   void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte);
   disassemble(p, logbuf + sizeof(logbuf) - p, reg[0],(uint8_t *)&(reg[2]),4);
