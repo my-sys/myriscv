@@ -5,7 +5,7 @@
 #include <verilated_vcd_c.h>
 #include <iostream>
 #include "Vriscv_soc.h"
-#define EN_TRACE 1
+#define EN_TRACE 0
 
 class Emulator{
 private:
@@ -23,9 +23,10 @@ public:
     ~Emulator();
     void execute_once();
     void execute(uint64_t n);
-	void close();
+    void close();
     void reset(int n);
 	void read_regs(uint64_t* reg);
+	void read_pc_and_inst(uint64_t* reg);
 };
 
 #endif

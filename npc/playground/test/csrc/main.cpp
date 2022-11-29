@@ -6,6 +6,7 @@ static char *img_file = NULL;
 static char *log_file = NULL;
 
 extern void init_ram(const char* img_file);
+void init_disasm(const char *triple);
 static int parse_args(int argc, char *argv[]){
     const struct option table[] = {
         {"log"      , required_argument, NULL, 'l'},
@@ -36,9 +37,13 @@ int main(int argc, char** argv){
     //init_difftest(diff_so_file, img_size, difftest_port);
     init_sdb();
 
+#ifdef CONFIG_ITRACE
+	init_disasm("riscv64-pc-linux-gnu");
+#endif
     // init_disasm();
     welcome();
 
     // start npc debug
     sdb_mainloop();
+
 }

@@ -6,6 +6,24 @@
 void init_regex();
 void init_wp_pool();
 
+
+static void trace_and_difftest()
+{
+#ifdef CONFIG_ITRACE
+  uint64_t reg[2];
+  Emulator::get_instance().read_pc_and_inst(reg);
+  char logbuf[128];
+  char *p = logbuf;
+  p += snprintf(p, sizeof(logbuf), FMT_WORD ":", reg[0]);
+
+  p += snprintf(p,10 " %lx ",reg[1]);
+  
+  void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte);
+  disassemble(p, logbuf + sizeof(logbuf) - p, reg[0],(uint8_t *)&(reg[2]),4);
+  puts(log_buf);
+#endif 
+}
+
 static char* rl_gets() {
   static char *line_read = NULL;
 
@@ -46,9 +64,8 @@ static int cmd_si(char *args){
         printf("you maybe input a illegal number!!!!\n");
         return 0;
     }
-	printf("cmd_si nmu %d\n",num);
     Emulator::get_instance().execute(num);
-	printf("cmd_si nmu success %d\n",num);
+	trace_and_difftest();
     return 0;
 }
 
@@ -243,3 +260,4 @@ void init_sdb() {
   /* Initialize the watchpoint pool. */
   init_wp_pool();
 }
+

@@ -33,6 +33,7 @@ BIN = $(BUILD_DIR)/$(TOPNAME)
 CFLAGS = -O3 -Wall -I$(INCLUDE_DIR) 
 LDFLAGS = -lpthread -lSDL2 -ldl -lpcre -lreadline
 
+include ./playground/utils/filelist.mk
 
 IMG ?= 
 
