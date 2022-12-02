@@ -64,7 +64,6 @@ VL_MODULE(Vriscv_soc___024root) {
     // Anonymous structures to workaround compiler member-count bugs
     struct {
         CData/*0:0*/ riscv_soc__DOT__core__DOT__is_read_mem;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT___io_out_raddr_T;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__is_read_inst;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__tem_reg_is_read_inst;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__tem_reg_is_read_mem;
@@ -104,6 +103,7 @@ VL_MODULE(Vriscv_soc___024root) {
         IData/*31:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp;
         VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data;
         VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc;
+        QData/*63:0*/ riscv_soc__DOT__core_io_out_raddr;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__tem_reg_rdata;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__regPC;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT___regPC_T_1;
@@ -148,11 +148,9 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*0:0*/ riscv_soc__DOT__core__DOT____Vtogcov__i_cache_io_cpu_in_avalid;
         CData/*0:0*/ riscv_soc__DOT__core__DOT____Vtogcov__i_cache_io_cpu_out_rvalid;
         CData/*0:0*/ riscv_soc__DOT__core__DOT____Vtogcov__i_cache_io_cpu_out_w_ok;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT____Vtogcov__i_cache_io_bus_out_raddr;
         CData/*0:0*/ riscv_soc__DOT__core__DOT____Vtogcov__d_cache_io_cpu_in_avalid;
         CData/*0:0*/ riscv_soc__DOT__core__DOT____Vtogcov__d_cache_io_cpu_out_rvalid;
         CData/*0:0*/ riscv_soc__DOT__core__DOT____Vtogcov__d_cache_io_cpu_out_w_ok;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT____Vtogcov__d_cache_io_bus_out_raddr;
         CData/*0:0*/ riscv_soc__DOT__core__DOT____Vtogcov__fetch_io_in_stall;
         CData/*0:0*/ riscv_soc__DOT__core__DOT____Vtogcov__fetch_io_in_valid_next_pc;
         CData/*2:0*/ riscv_soc__DOT__core__DOT____Vtogcov__execute_io_in_opType;
@@ -205,10 +203,10 @@ VL_MODULE(Vriscv_soc___024root) {
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__io_difftest_reg_11;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__io_difftest_reg_12;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__io_difftest_reg_13;
-    };
-    struct {
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__io_difftest_reg_14;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__io_difftest_reg_15;
+    };
+    struct {
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__io_difftest_reg_16;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__io_difftest_reg_17;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__io_difftest_reg_18;
@@ -271,10 +269,10 @@ VL_MODULE(Vriscv_soc___024root) {
         QData/*63:0*/ riscv_soc__DOT__core__DOT____Vtogcov__execute_io_in_rs2_data;
         QData/*63:0*/ riscv_soc__DOT__core__DOT____Vtogcov__execute_io_in_imm_data;
         QData/*63:0*/ riscv_soc__DOT__core__DOT____Vtogcov__execute_io_in_pc;
-    };
-    struct {
         QData/*63:0*/ riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_rs_data;
         QData/*63:0*/ riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_rs2_data;
+    };
+    struct {
         QData/*63:0*/ riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_mem_addr;
         QData/*63:0*/ riscv_soc__DOT__core__DOT____Vtogcov__decode_io_in_result_data;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data;
