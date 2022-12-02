@@ -17,7 +17,9 @@ class Fetch extends Module{
         }
 
         val out = new Bundle{
-            val pc      = Output(UInt(64.W))
+            val pc0     = Output(UInt(64.W))
+			val rvalid	= Output(Bool())
+			val pc1		= output(UInt(64.W))
             val inst    = Output(UInt(32.W))
         }        
     })
@@ -29,10 +31,14 @@ class Fetch extends Module{
 
 // 指令地址自增，与判断下一个指令地址
 // 指令的初始执行位置为0x8000_0000 Reset_Vector
-	val regPC = RegInit("h8000_0000".U(64.W))
-
+	val regPC 		= RegInit("h8000_0000".U(64.W))
+	val pc_valid 	= RegInit(true.B)
 	when(valid&(!io.in.stall)){
-		regPC := Mux(valid_next_pc,next_pc,regPC + 4.U )
+		regPC 		:= Mux(valid_next_pc,next_pc,regPC + 4.U )
+		pc_valid	:= true.B
+	}.otherwise{
+		regPC		:= regPC 
+		pc_valid	:= false.B
 	}
 
 
@@ -45,8 +51,10 @@ class Fetch extends Module{
 		regTempPC	:= regPC
 	}
 
-    io.out.pc := regTempPC 
-    io.out.inst := regInst
+	io.out.pc0 		:= regPC
+    io.out.pc1 		:= regTempPC 
+    io.out.inst 	:= regInst
+	io.out.rvalid	:= pc_valid
     BoringUtils.addSource(regTempPC,"DIFFTEST_PC")
     BoringUtils.addSource(regInst,"DIFFTEST_INST")
 }

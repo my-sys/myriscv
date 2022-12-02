@@ -74,12 +74,12 @@ class WriteBack extends Module with CoreParameters{
 
 	// 根据状态机,进行改变值
 	val ls_idle :: ls_busy :: Nil = Enum(2)
-
+	val reg_mem_avalid			= RegInit(false.B)
 
 	switch(reg_ls_state){
 		is(ls_idle){
 			when(io.in.mem_avalid){
-				reg_ls_state 	:= ls_start
+				reg_ls_state 	:= ls_busy
 				reg_stall 		:= true.B
 				reg_mem_wdata	:= io.in.rs2_data
 				reg_mem_wstrb	:= mem_wstrb

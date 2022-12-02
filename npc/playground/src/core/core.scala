@@ -32,21 +32,21 @@ class Core extends Module{
     // fetch 
 	fetch.io.in.inst 			:= i_cache.io.cpu_out.rdata 
 	fetch.io.in.valid 			:= i_cache.io.cpu_out.rvalid 
-	i_cache.io.cpu_in.addr 		:= fetch.io.out.pc 
-	i_cache.io.cpu_in.avalid		:= fetch.io.out.valid
-	i_cache.io.cpu_in.wdata 		:= 0.U 
+	i_cache.io.cpu_in.addr 		:= fetch.io.out.pc0 
+	i_cache.io.cpu_in.avalid	:= fetch.io.out.rvalid
+	i_cache.io.cpu_in.wdata 	:= 0.U 
 	i_cache.io.cpu_in.is_w 		:= false.B
 	i_cache.io.cpu_in.wstrb		:= 0.U
 
 	write_back.io.in.mem_data 		:= d_cache.io.cpu_out.rdata
-	write_back.io.in.mem_valid 	:= d_cache.io.cpu_out.rvalid
+	write_back.io.in.mem_valid 		:= d_cache.io.cpu_out.rvalid
 	write_back.io.in.w_ok 			:= d_cache.io.cpu_out.w_ok
 
 	d_cache.io.cpu_in.addr			:= write_back.io.out.mem_addr
-	d_cache.io.cpu_in.wdata		:= write_back.io.out.mem_wdata
+	d_cache.io.cpu_in.wdata			:= write_back.io.out.mem_wdata
 	d_cache.io.cpu_in.is_w			:= write_back.io.out.mem_wvalid
 	d_cache.io.cpu_in.avalid		:= write_back.io.out.mem_avalid
-	d_cache.io.cpu_in.wstrb 		:= write_back.io.out.wstrb
+	d_cache.io.cpu_in.wstrb 		:= write_back.io.out.mem_wstrb
 
 //cache与 交互  与访存交互的部分设计。inst和mem，谁访问内存，读取的数据归谁，如何知道读取的数据归自己。
 	io.out.waddr 				:= d_cache.io.bus_out.waddr 
@@ -55,12 +55,12 @@ class Core extends Module{
 	io.out.wstrb 				:= d_cache.io.bus_out.wstrb 
 
 	val is_read_mem 			= d_cache.io.bus_out.avalid & (~d_cache.io.bus_out.wvalid)
-	io.out.raddr 				:= Mux(is_read_mem_or_inst,d_cache.io.bus_out.raddr,i_cache.io.bus_out.raddr)
+	io.out.raddr 				:= Mux(is_read_mem,d_cache.io.bus_out.raddr,i_cache.io.bus_out.raddr)
 	val is_read_inst 			= (~is_read_mem) & i_cache.io.bus_out.avalid 
 
 // 故意打一拍，避免组合逻辑环路。 在完成流水线后，bus和cache都需要修改，先改cache,再该bus 
 	val tem_reg_rdata 			= RegInit(0.U(64.W))
-	tem_reg_rdata				:= io.in.data
+	tem_reg_rdata				:= io.in.rdata
 
 	val tem_reg_is_read_inst	= RegInit(false.B)
 	val tem_reg_is_read_mem 	= RegInit(false.B)
@@ -78,7 +78,7 @@ class Core extends Module{
 
 	// decode 
     decode.io.in.inst           := fetch.io.out.inst 
-    decode.io.in.pc             := fetch.io.out.pc
+    decode.io.in.pc             := fetch.io.out.pc1
 	decode.io.in.stall 			:= write_back.io.out.stall 
     // execute 
     execute.io.in.opType        := decode.io.out.opType
