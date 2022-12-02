@@ -38,7 +38,7 @@ class WriteBack extends Module with CoreParameters{
 
     })
 	// 本级存在的必要性，execute 计算内存地址，wb阶段进行读写。往寄存器写的也需要流到这一级的原因是，指令之间要按顺序执行不能存在越位。
-	val reg_ls_state 		= RegInit(ls_idle) 
+	
 	val reg_stall 			= RegInit(false.B)
 	val reg_mem_wdata		= RegInit(0.U(64.W))
 	val reg_mem_wstrb		= RegInit(0.U(8.W))
@@ -75,7 +75,7 @@ class WriteBack extends Module with CoreParameters{
 	// 根据状态机,进行改变值
 	val ls_idle :: ls_busy :: Nil = Enum(2)
 	val reg_mem_avalid			= RegInit(false.B)
-
+	val reg_ls_state 		= RegInit(ls_idle) 
 	switch(reg_ls_state){
 		is(ls_idle){
 			when(io.in.mem_avalid){
