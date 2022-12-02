@@ -30,33 +30,33 @@ class Core extends Module{
 	val write_back		= Module(new WriteBack)
 //cache 与 CPU 交互
     // fetch 
-	fetch.io.in.inst 			:= i_cache.cpu_out.rdata 
-	fetch.io.in.valid 			:= i_cache.cpu_out.rvalid 
-	i_cache.cpu_in.addr 		:= fetch.io.out.pc 
-	i_cache.cpu_in.avalid		:= fetch.io.out.valid
-	i_cache.cpu_in.wdata 		:= 0.U 
-	i_cache.cpu_in.is_w 		:= false.B
-	i_cache.cpu_in.wstrb		:= 0.U
+	fetch.io.in.inst 			:= i_cache.io.cpu_out.rdata 
+	fetch.io.in.valid 			:= i_cache.io.cpu_out.rvalid 
+	i_cache.io.cpu_in.addr 		:= fetch.io.out.pc 
+	i_cache.io.cpu_in.avalid		:= fetch.io.out.valid
+	i_cache.io.cpu_in.wdata 		:= 0.U 
+	i_cache.io.cpu_in.is_w 		:= false.B
+	i_cache.io.cpu_in.wstrb		:= 0.U
 
-	write_back.in.mem_data 		:= d_cache.cpu_out.rdata
-	write_back.in.mem_valid 	:= d_cache.cpu_out.rvalid
-	write_back.in.w_ok 			:= d_cache.cpu_out.w_ok
+	write_back.io.in.mem_data 		:= d_cache.io.cpu_out.rdata
+	write_back.io.in.mem_valid 	:= d_cache.io.cpu_out.rvalid
+	write_back.io.in.w_ok 			:= d_cache.io.cpu_out.w_ok
 
-	d_cache.cpu_in.addr			:= write_back.out.mem_addr
-	d_cache.cpu_in.wdata		:= write_back.out.mem_wdata
-	d_cache.cpu_in.is_w			:= write_back.out.mem_wvalid
-	d_cache.cpu_in.avalid		:= write_back.out.mem_avalid
-	d_cache.cpu_in.wstrb 		:= write_back.out.wstrb
+	d_cache.io.cpu_in.addr			:= write_back.io.out.mem_addr
+	d_cache.io.cpu_in.wdata		:= write_back.io.out.mem_wdata
+	d_cache.io.cpu_in.is_w			:= write_back.io.out.mem_wvalid
+	d_cache.io.cpu_in.avalid		:= write_back.io.out.mem_avalid
+	d_cache.io.cpu_in.wstrb 		:= write_back.io.out.wstrb
 
 //cache与 交互  与访存交互的部分设计。inst和mem，谁访问内存，读取的数据归谁，如何知道读取的数据归自己。
-	io.out.waddr 				:= d_cache.bus_out.waddr 
-	io.out.wdata 				:= d_cache.bus_out.wdata
-	io.out.wen 					:= d_cache.bus_out.wvalid 
-	io.out.wstrb 				:= d_cache.bus_out.wstrb 
+	io.out.waddr 				:= d_cache.io.bus_out.waddr 
+	io.out.wdata 				:= d_cache.io.bus_out.wdata
+	io.out.wen 					:= d_cache.io.bus_out.wvalid 
+	io.out.wstrb 				:= d_cache.io.bus_out.wstrb 
 
-	val is_read_mem 			= d_cache.bus_out.avalid & (~d_cache.bus_out.wvalid)
-	io.out.raddr 				:= Mux(is_read_mem_or_inst,d_cache.bus_out.raddr,i_cache.bus_out.raddr)
-	val is_read_inst 			= (~is_read_mem) & i_cache.bus_out.avalid 
+	val is_read_mem 			= d_cache.io.bus_out.avalid & (~d_cache.io.bus_out.wvalid)
+	io.out.raddr 				:= Mux(is_read_mem_or_inst,d_cache.io.bus_out.raddr,i_cache.io.bus_out.raddr)
+	val is_read_inst 			= (~is_read_mem) & i_cache.io.bus_out.avalid 
 
 // 故意打一拍，避免组合逻辑环路。 在完成流水线后，bus和cache都需要修改，先改cache,再该bus 
 	val tem_reg_rdata 			= RegInit(0.U(64.W))
@@ -68,11 +68,11 @@ class Core extends Module{
 	tem_reg_is_read_inst		:= is_read_inst
 	tem_reg_is_read_mem			:= is_read_mem
 
-    i_cache.bus_in.data			:= tem_reg_rdata 
-	i_cache.bus_in.valid 		:= tem_reg_is_read_inst
+    i_cache.io.bus_in.data			:= tem_reg_rdata 
+	i_cache.io.bus_in.valid 		:= tem_reg_is_read_inst
 
-	d_cache.bus_in.data 		:= tem_reg_rdata 
-	d_cache.bus_in.valid 		:= tem_reg_is_read_mem
+	d_cache.io.bus_in.data 		:= tem_reg_rdata 
+	d_cache.io.bus_in.valid 		:= tem_reg_is_read_mem
 
 //------------------------------------------------------------------------------ 
 
