@@ -8,8 +8,8 @@ class WriteBack extends Module with CoreParameters{
             val rs_addr         = Input(UInt(RegAddrLen.W))
             val result_data     = Input(UInt(RegDataLen.W))
             val w_rs_en         = Input(Bool())
-			val opType			= Output(UInt(OpTypeLen.W))
-			val exuType			= Output(UInt(ExuTypeLen.W))
+			val opType			= Input(UInt(OpTypeLen.W))
+			val exuType			= Input(UInt(ExuTypeLen.W))
 
 			// from execute     
 			val rs2_data 		= Input(UInt(RegDataLen.W))
