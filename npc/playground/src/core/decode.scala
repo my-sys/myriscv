@@ -52,7 +52,7 @@ class Decode extends Module with CoreParameters{
     val rs2_data        = reg_file.read(rs2_addr)
 
 
-    val imm_data             := MuxLookup(instType, 0.U, List(
+    val imm_data             = MuxLookup(instType, 0.U, List(
         Inst_type.Type_I    -> (Cat( Fill(52,inst(31)) ,inst(31,20))),  // sign extension
         Inst_type.Type_U    -> (Cat( Fill(32,inst(31)), Cat(inst(31,12),0.U(12.W)) )), // sign extension 
         Inst_type.Type_S    -> (Cat( Fill(52,inst(31)), Cat(inst(31,25),inst(11,7)) )), // sign extension
