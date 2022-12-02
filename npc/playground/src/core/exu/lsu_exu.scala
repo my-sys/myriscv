@@ -31,6 +31,6 @@ class LSU_EXU extends Module with CoreParameters{
 	val exuType		= io.exuType
 	val imm_data	= io.imm_data
     io.address_result := (rs1_data + imm_data)
-	io.avalid		= io.valid 
-	io.w_mem_en 	= io.valid & exuType(3)
+	io.avalid		:= io.valid 
+	io.w_mem_en 	:= io.valid & exuType(3)
 }

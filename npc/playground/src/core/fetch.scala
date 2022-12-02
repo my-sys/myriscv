@@ -19,7 +19,7 @@ class Fetch extends Module{
         val out = new Bundle{
             val pc0     = Output(UInt(64.W))
 			val rvalid	= Output(Bool())
-			val pc1		= output(UInt(64.W))
+			val pc1		= Output(UInt(64.W))
             val inst    = Output(UInt(32.W))
         }        
     })
