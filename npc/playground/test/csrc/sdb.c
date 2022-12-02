@@ -53,6 +53,7 @@ static int cmd_c(char *args) {
 
 static int cmd_q(char *args) {
     //printf("nemu quit!!!\n");
+	Emulator::get_instance().close();
     return 255;
 }
 

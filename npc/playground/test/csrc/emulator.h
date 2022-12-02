@@ -2,6 +2,7 @@
 #define  __EMULATOR_H__
 #include "common.h"
 #include <iostream>
+#define EN_TRACE 1
 class Vriscv_soc;
 class Emulator{
 private:
