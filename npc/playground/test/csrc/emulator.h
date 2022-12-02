@@ -4,6 +4,7 @@
 #include <iostream>
 #define EN_TRACE 1
 class Vriscv_soc;
+class VerilatedVcdC;
 class Emulator{
 private:
     Vriscv_soc *top;
