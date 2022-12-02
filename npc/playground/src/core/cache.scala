@@ -2,7 +2,7 @@ import chisel3._
 import chisel3.util._ 
 
 class Cache extends Module{
-	io = IO(new Bundle{
+	val io = IO(new Bundle{
 		val cpu_in = new Bundle{
 			val addr 		= Input(UInt(64.W))
 			val wdata 		= Input(UInt(64.W))
