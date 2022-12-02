@@ -72,5 +72,5 @@ void Emulator::close(){
 }
 
 Emulator::~Emulator(){
-	close();
+	//close();
 }
