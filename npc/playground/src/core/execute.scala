@@ -11,14 +11,25 @@ class Exu extends Module with CoreParameters{
             val imm_data = Input(UInt(ImmLen.W))
             val pc       = Input(UInt(AddrLen.W))
             val rs_addr  = Input(UInt(RegAddrLen.W))
+
+			val stall 	 = Input(Bool())
         }
 
         val out = new Bundle{
             val rs_addr         = Output(UInt(RegAddrLen.W))
             val rs_data         = Output(UInt(RegDataLen.W))
             val w_rs_en         = Output(Bool())
+
+			val opType			= Output(UInt(OpTypeLen.W))
+			val exuType			= Output(UInt(ExuTypeLen.W))
+
+			val rs2_data 		= Output(UInt(RegDataLen.W))
+			val mem_addr		= Output(UInt(AddrLen.W))
+			val mem_avalid		= Output(Bool())
+			val w_mem_en		= Output(Bool())
+
             val next_pc         = Output(UInt(AddrLen.W))
-            val valid_next_pc   = Output(Bool())            
+            val valid_next_pc   = Output(Bool()) 
         }
 
     })
@@ -39,11 +50,33 @@ class Exu extends Module with CoreParameters{
     val  reg_valid_next_pc  = RegInit(false.B)
     val  reg_w_rs_en        = RegInit(false.B)
 
+	val  reg_opType			= RegInit(0.U(OpTypeLen.W))
+	val  reg_exuType		= RegInit(0.U(ExuTypeLen.W))
+	when(!io.in.stall){
+		reg_opType				:= opType
+		reg_exuType				:= exuType
+	}
+
+
+	val  reg_rs2_data 		= RegInit(0.U(RegDataLen.W))
+	
+	when(!io.in.stall){
+		reg_rs2_data			:= rs2_data
+	}
+	
+
+	val  reg_mem_addr 		= RegInit(0.U(AddrLen.W))
+	val  reg_mem_avalid		= RegInit(false.B)
+	val  reg_w_mem_en 		= RegInit(false.B)
 
     val alu_exu = Module(new ALU_EXU())
-    //val lsu_exu = Module(new LSU_EXU())
+    val lsu_exu = Module(new LSU_EXU())
+
     //val csr_exu = Module(new CSR_EXU())
     //val mu_exu  = Module(new MU_EXU())
+
+
+
 
     // Choosing the function unit to execute
     val default_valid = "b0000".U
@@ -53,7 +86,19 @@ class Exu extends Module with CoreParameters{
         Op_type.op_csr     ->  "b0100".U,
         Op_type.op_mu      ->  "b1000".U    
     ))
+//----------------------------LSU ------------------------
+	lsu_exu.io.valid		:= valid(1)
+	lsu_exu.io.exuType		:= exuType
+	lsu_exu.io.rs1_data		:= rs1_data
+	lsu_exu.io.imm_data		:= imm_data 
 
+	when(!io.in.stall){
+		reg_mem_addr			:= lsu_exu.io.address_result
+		reg_mem_avalid			:= lsu_exu.io.avalid
+		reg_w_mem_en			:= lsu_exu.io.w_mem_en		
+	}
+
+//---------------------------------------------------------
     // function unit connection
     //alu_exu.io.valid := valid(0)
     //lsu_exu.io.valid := valid(1)
@@ -77,17 +122,28 @@ class Exu extends Module with CoreParameters{
 
     val w_rs_en = temp_w_en_and_rs_data(64)
     val rs_data = temp_w_en_and_rs_data(63,0)
-    reg_rs_data := rs_data
-    reg_rs_addr := rs_addr
-    reg_w_rs_en := w_rs_en
-    reg_next_pc := alu_exu.io.result_pc
-    reg_valid_next_pc := alu_exu.io.next_pc_valid
+
+	when(!io.in.stall){
+		reg_rs_data := rs_data
+    	reg_rs_addr := rs_addr
+    	reg_w_rs_en := w_rs_en
+    	reg_next_pc := alu_exu.io.result_pc
+    	reg_valid_next_pc := alu_exu.io.next_pc_valid
+	}
+
 
     io.out.rs_addr          := reg_rs_addr
     io.out.rs_data          := reg_rs_data
     io.out.w_rs_en          := reg_w_rs_en
     io.out.next_pc          := reg_next_pc
     io.out.valid_next_pc    := reg_valid_next_pc
+
+	io.out.opType			:= reg_opType
+	io.out.exuType			:= reg_exuType
+	io.out.rs2_data			:= reg_rs2_data
+	io.out.mem_addr			:= reg_mem_addr
+	io.out.mem_avalid		:= reg_mem_avalid
+	io.out.w_mem_en			:= reg_w_mem_en
 }
 
 

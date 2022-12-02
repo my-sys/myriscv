@@ -136,7 +136,7 @@ def SFENCE_VMA  = BitPat("b0001001_?????_?????_000_00000_1110011")
         LBU         -> List(Op_type.op_lsu,     LSUType.lsu_lbu,     Inst_type.Type_I),
         LH          -> List(Op_type.op_lsu,     LSUType.lsu_lh,      Inst_type.Type_I),
         LHU         -> List(Op_type.op_lsu,     LSUType.lsu_lhu,     Inst_type.Type_I),
-        LUI         -> List(Op_type.op_lsu,     LSUType.lsu_lui,     Inst_type.Type_U),
+        LUI         -> List(Op_type.op_alu,     ALUType.alu_lui,     Inst_type.Type_U),
         LW          -> List(Op_type.op_lsu,     LSUType.lsu_lw,      Inst_type.Type_I),
         LWU         -> List(Op_type.op_lsu,     LSUType.lsu_lwu,     Inst_type.Type_I),
         SD          -> List(Op_type.op_lsu,     LSUType.lsu_sd,      Inst_type.Type_S),

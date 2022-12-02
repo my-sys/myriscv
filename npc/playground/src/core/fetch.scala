@@ -9,6 +9,9 @@ class Fetch extends Module{
     val io = IO(new Bundle {
         val in = new Bundle{
             val inst    = Input(UInt(32.W))
+			val valid 	= Input(Bool())
+
+			val stall   = Input(Bool())
             val next_pc = Input(UInt(64.W))
             val valid_next_pc = Input(Bool())
         }
@@ -19,23 +22,31 @@ class Fetch extends Module{
         }        
     })
 
-    val inst            = io.in.inst 
+    val inst            = io.in.inst
+	val valid 			= io.in.valid 
     val next_pc         = io.in.next_pc
     val valid_next_pc   = io.in.valid_next_pc
 
-    //指令的初始执行位置为0x8000_0000 Reset_Vector
-    val regPC = RegInit("h8000_0000".U(64.W))
-    val regInst = RegInit(0.U(32.W))
+// 指令地址自增，与判断下一个指令地址
+// 指令的初始执行位置为0x8000_0000 Reset_Vector
+	val regPC = RegInit("h8000_0000".U(64.W))
 
-    when(valid_next_pc){
-        regPC := next_pc
-    }.otherwise{
-        regPC := regPC + 4.U 
-    }
-    
-    regInst := inst
-    io.out.pc := regPC 
+	when(valid&(!io.in.stall)){
+		regPC := Mux(valid_next_pc,next_pc,regPC + 4.U )
+	}
+
+
+//  指令地址，指令内容传输。
+	val regInst 	= RegInit(0.U(32.W))
+	val regTempPC	= RegInit(0.U(64.W))
+	
+	when(valid&(!io.in.stall)){
+		regInst 	:= inst
+		regTempPC	:= regPC
+	}
+
+    io.out.pc := regTempPC 
     io.out.inst := regInst
-    BoringUtils.addSource(regPC,"DIFFTEST_PC")
+    BoringUtils.addSource(regTempPC,"DIFFTEST_PC")
     BoringUtils.addSource(regInst,"DIFFTEST_INST")
 }

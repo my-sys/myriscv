@@ -57,6 +57,8 @@ object ALUType{
 
     val alu_jal     = "b1110_00".U 
     val alu_jalr    = "b1110_10".U
+
+	val alu_lui 	= "b1111_00".U
     
 }
 
@@ -130,7 +132,9 @@ class ALU_EXU extends Module with CoreParameters{
         ALUType.alu_xor(5,2)    -> Cat(1.U(1.W),(op_data1 ^ rs2_data)),
 
         // or           ori 
-        ALUType.alu_or(5,2)     -> Cat(1.U(1.W),(op_data1 | rs2_data))
+        ALUType.alu_or(5,2)     -> Cat(1.U(1.W),(op_data1 | rs2_data)),
+
+		ALUType.alu_lui(5,2)    -> Cat(1.U(1.W),op_imm)
     ))
 
     val w_rs_en                 = temp_result_data(64)

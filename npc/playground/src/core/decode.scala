@@ -11,6 +11,8 @@ class Decode extends Module with CoreParameters{
             val rs_addr         = Input(UInt(RegAddrLen.W))
             val result_data     = Input(UInt(RegDataLen.W))
             val w_rs_en         = Input(Bool())
+
+			val stall 			= Input(Bool())
         }
         val out     = new Bundle{
             val rs1_data    = Output(UInt(RegDataLen.W))
@@ -49,14 +51,8 @@ class Decode extends Module with CoreParameters{
     val rs1_data        = reg_file.read(rs1_addr)
     val rs2_data        = reg_file.read(rs2_addr)
 
-    reg_opType          := opType
-    reg_exuType         := exuType     
-    reg_rs1_data        := rs1_data
-    reg_rs2_data        := rs2_data
-    reg_dest_rs_addr    := dest_rs_addr
-    reg_pc              := pc
 
-    reg_imm             := MuxLookup(instType, 0.U, List(
+    val imm_data             := MuxLookup(instType, 0.U, List(
         Inst_type.Type_I    -> (Cat( Fill(52,inst(31)) ,inst(31,20))),  // sign extension
         Inst_type.Type_U    -> (Cat( Fill(32,inst(31)), Cat(inst(31,12),0.U(12.W)) )), // sign extension 
         Inst_type.Type_S    -> (Cat( Fill(52,inst(31)), Cat(inst(31,25),inst(11,7)) )), // sign extension
@@ -68,6 +64,16 @@ class Decode extends Module with CoreParameters{
         //Inst_type.Type_N    -> (),
         //Inst_type.Type_R    -> (),
     ))
+	when(!io.in.stall){
+		reg_imm 			:= imm_data
+		reg_opType          := opType
+		reg_exuType         := exuType     
+		reg_rs1_data        := rs1_data
+		reg_rs2_data        := rs2_data
+		reg_dest_rs_addr    := dest_rs_addr
+		reg_pc              := pc		
+	}
+
 
     io.out.opType       := reg_opType 
     io.out.exuType      := reg_exuType 
@@ -76,7 +82,7 @@ class Decode extends Module with CoreParameters{
     io.out.imm_data     := reg_imm
     io.out.rs_addr      := reg_dest_rs_addr
     io.out.pc           := reg_pc
-    when(io.in.w_rs_en){
+    when(io.in.w_rs_en & (!io.in.stall)){
         reg_file.write(io.in.rs_addr,io.in.result_data)
     }
     
