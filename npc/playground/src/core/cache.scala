@@ -27,7 +27,7 @@ class Cache extends Module{
 			val waddr 		= Output(UInt(64.W))
 			val wdata 		= Output(UInt(64.W))
 			val wvalid 		= Output(Bool())
-			val raddr 		= Output(Bool())
+			val raddr 		= Output(UInt(64.W))
 			val avalid 		= Output(Bool())
 			val wstrb		= Output(UInt(8.W))
 		}
