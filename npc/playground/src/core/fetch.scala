@@ -8,7 +8,7 @@ import chisel3.util.experimental.BoringUtils
 class Fetch extends Module{
     val io = IO(new Bundle {
         val in = new Bundle{
-            val inst    = Input(UInt(32.W))
+            val inst    = Input(UInt(64.W))
 			val valid 	= Input(Bool())
 
 			val stall   = Input(Bool())
@@ -47,7 +47,7 @@ class Fetch extends Module{
 	val regTempPC	= RegInit(0.U(64.W))
 	
 	when(valid&(!io.in.stall)){
-		regInst 	:= inst
+		regInst 	:= Mux(regPC(2),inst(63,32),inst(31,0))
 		regTempPC	:= regPC
 	}
 
