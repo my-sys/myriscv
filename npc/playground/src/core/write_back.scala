@@ -45,7 +45,7 @@ class WriteBack extends Module with CoreParameters{
 	val reg_mem_wvalid		= RegInit(false.B)
 	val reg_mem_addr		= RegInit(0.U(64.W))
 
-	val mem_data 			:= MuxLookup(reg_mem_addr(2,0),io.in.mem_data,List(
+	val mem_data 			= MuxLookup(reg_mem_addr(2,0),io.in.mem_data,List(
 		"b000".U 			-> io.in.mem_data,
 		"b001".U 			-> io.in.mem_data(63,8),
 		"b010".U 			-> io.in.mem_data(63,16),
@@ -55,7 +55,7 @@ class WriteBack extends Module with CoreParameters{
 		"b110".U 			-> io.in.mem_data(63,48),
 		"b111".U 			-> io.in.mem_data(63,56)
 	))
-	val mem_data_result		:= MuxLookup(io.in.exuType,0.U(64.W),List(
+	val mem_data_result		= MuxLookup(io.in.exuType,0.U(64.W),List(
 		LSUType.lsu_ld 		-> mem_data,
 		LSUType.lsu_lb 		-> Cat(Fill(56,mem_data(7)),	mem_data(7,0)),
 		LSUType.lsu_lbu 	-> Cat(Fill(56,0.U(1.W)),		mem_data(7,0)),
@@ -65,7 +65,7 @@ class WriteBack extends Module with CoreParameters{
 		LSUType.lsu_lwu 	-> Cat(Fill(32,0.U(1.W)),		mem_data(31,0))
 	))
 
-	val mem_wstrb			:= MuxLookup(io.in.exuType,0.U(64.W),List(
+	val mem_wstrb			= MuxLookup(io.in.exuType,0.U(64.W),List(
 		LSUType.lsu_sb 		-> "b0000_0001".U,
 		LSUType.lsu_sd		-> "b1111_1111".U,
 		LSUType.lsu_sh 		-> "b0000_0011".U,

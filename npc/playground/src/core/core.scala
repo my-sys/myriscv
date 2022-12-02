@@ -54,9 +54,9 @@ class Core extends Module{
 	io.out.wen 					:= d_cache.bus_out.wvalid 
 	io.out.wstrb 				:= d_cache.bus_out.wstrb 
 
-	val is_read_mem 			:= d_cache.bus_out.avalid & (~d_cache.bus_out.wvalid)
+	val is_read_mem 			= d_cache.bus_out.avalid & (~d_cache.bus_out.wvalid)
 	io.out.raddr 				:= Mux(is_read_mem_or_inst,d_cache.bus_out.raddr,i_cache.bus_out.raddr)
-	val is_read_inst 			:= (~is_read_mem) & i_cache.bus_out.avalid 
+	val is_read_inst 			= (~is_read_mem) & i_cache.bus_out.avalid 
 
 // 故意打一拍，避免组合逻辑环路。 在完成流水线后，bus和cache都需要修改，先改cache,再该bus 
 	val tem_reg_rdata 			= RegInit(0.U(64.W))
