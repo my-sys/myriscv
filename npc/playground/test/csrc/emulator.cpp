@@ -37,7 +37,7 @@ void Emulator::execute_once(){
 		printf("execute_once\n");
 		execute_cycle();
 	}
-	//execute_cycle();
+	execute_cycle();
 	cpu.pc = top->io_difftest_pc;
 
 #define REGS(x) cpu.gpr[x] = top->io_difftest_reg_##x
