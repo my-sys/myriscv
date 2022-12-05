@@ -17,6 +17,7 @@ typedef struct{
 } CPU_state;
 
 extern NPCState npc_state;
+extern CPU_state cpu;
 // ----------- log -----------
 
 #define ASNI_FG_BLACK   "\33[1;30m"

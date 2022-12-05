@@ -3,7 +3,6 @@
 #include <readline/history.h>
 #include "emulator.h"
 #include "ram.h"
-#include "disasm.h"
 #include "debug.h"
 void init_regex();
 void init_wp_pool();

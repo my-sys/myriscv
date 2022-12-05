@@ -3,6 +3,9 @@
 #include <verilated_vcd_c.h>
 #include "Vriscv_soc.h"
 #include "difftest.h"
+#include "disasm.h"
+CPU_state cpu = {};
+NPCState npc_state = { .state = NPC_STOP };
 Emulator::Emulator(){
     top = new Vriscv_soc;
     cycles = 0;
@@ -33,6 +36,15 @@ void Emulator::execute_once(){
 	while(top->io_difftest_commit == 0){
 		execute_cycle();
 	}
+	cpu.pc = top->io_difftest_pc;
+
+#define REGS(x) cpu.gpr[x] = top->io_difftest_reg_##x
+    REGS(0);REGS(1);REGS(2);REGS(3);REGS(4);REGS(5);REGS(6);REGS(7);
+    REGS(8);REGS(9);REGS(10);REGS(11);REGS(12);REGS(13);REGS(14);REGS(15);
+    REGS(16);REGS(17);REGS(18);REGS(19);REGS(20);REGS(21);REGS(22);REGS(23);
+    REGS(24);REGS(25);REGS(26);REGS(27);REGS(28);REGS(29);REGS(30);REGS(31);
+#undef REGS(x)
+
 #ifdef CONFIG_DIFFTEST 
 	difftest_step(top->io_difftest_pc);
 #endif
@@ -61,20 +73,22 @@ void Emulator::execute_once(){
 
 void Emulator::checkregs(CPU_state *ref, vaddr_t pc){
 	if(!isa_difftest_checkregs(ref, pc)){
-		npc_state.state = NPC_ABORT;
-		npc_state.state	= pc;
+		npc_state.state 	= NPC_ABORT;
+		npc_state.halt_pc	= pc;
 		isa_reg_display();
 	}
 }
 
 bool Emulator::isa_difftest_checkregs(CPU_state *ref, vaddr_t pc){
-#define gpr(x) top->io_difftest_reg_##x
+
 	if(ref->pc != pc){
 		printf("ref->pc 0x%lx, npc->pc :0x%lx\n",ref->pc,pc);
 		return false;
 	}
+	uint64_t gpr[35];
+	read_regs(gpr);
 	for(int i=0;i<32;i++){
-		if(ref->gpr[i] != gpr(i)){
+		if(ref->gpr[i] != gpr[i]){
 			printf("difftest false \n");
 			return false;
 		}
