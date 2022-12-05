@@ -46,6 +46,9 @@ class WriteBack extends Module with CoreParameters{
 	val reg_mem_wstrb		= RegInit(0.U(8.W))
 	val reg_mem_wvalid		= RegInit(false.B)
 	val reg_mem_addr		= RegInit(0.U(64.W))
+	val reg_rs_addr 		= RegInit(0.U(RegAddrLen.W))
+	val reg_result_data 	= RegInit(0.U(RegDataLen.W))
+	val reg_w_rs_en 		= RegInit(false.B)
 
 	val mem_data 			= MuxLookup(reg_mem_addr(2,0),io.in.mem_data,List(
 		"b000".U 			-> io.in.mem_data,
@@ -107,6 +110,7 @@ class WriteBack extends Module with CoreParameters{
 	reg_inst 					:= io.in.inst 
 	val difftest_inst 			= RegInit(0.U(InstLen.W))
 	val difftest_pc 			= RegInit(0.U(AddrLen.W))
+	
 	when(reg_stall & io.in.w_ok){
 		difftest_inst 	:= reg_inst 
 		difftest_pc		:= reg_pc
@@ -123,9 +127,7 @@ class WriteBack extends Module with CoreParameters{
     BoringUtils.addSource(difftest_inst,"DIFFTEST_INST")
 
     // 暂时还没想好怎么使用这一级
-	val reg_rs_addr 			= RegInit(0.U(RegAddrLen.W))
-	val reg_result_data 		= RegInit(0.U(RegDataLen.W))
-	val reg_w_rs_en 			= RegInit(false.B)
+
 
 	reg_rs_addr 				:= io.in.rs_addr
 	reg_result_data				:= Mux(io.in.mem_valid, mem_data_result, io.in.result_data)
