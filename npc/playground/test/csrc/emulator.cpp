@@ -34,6 +34,7 @@ void Emulator::execute_cycle(){
 
 void Emulator::execute_once(){
 	while(top->io_difftest_commit == 0){
+		printf("execute_once\n");
 		execute_cycle();
 	}
 	//execute_cycle();
