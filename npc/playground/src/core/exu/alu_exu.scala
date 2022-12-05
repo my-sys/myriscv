@@ -5,10 +5,7 @@ object ALUType{
     //需要组合一下减轻分量。    6位
     // 第0位用于判断rs2是否为立即数，第1位用于判断是否为进行低位操作。 
     // 
-    def alu_add     = "b000_00".U 
-    val alu_addi    = "b000_01".U
-    val alu_addw    = "b000_10".U
-    val alu_addiw   = "b000_11".U 
+	// 不应该从全零开始，复位后是全0状态，如果选择使用0作为状态会产生意料之外的情况. 
     
 
     val alu_auipc   = "b001_00".U
@@ -43,22 +40,32 @@ object ALUType{
 
     val alu_or      = "b1001_00".U 
     val alu_ori     = "b1001_01".U 
-    val alu_xor     = "b1010_00".U 
-    val alu_xori    = "b1010_01".U 
 
+    val alu_xor     = "b1010_00".U 
+    val alu_xori    = "b1010_01".U
+
+    def alu_add     = "b1011_00".U 
+    val alu_addi    = "b1011_01".U
+    val alu_addw    = "b1011_10".U
+    val alu_addiw   = "b1011_11".U
+
+	val alu_lui 	= "b1100_00".U
 // 分支跳转不在遵循前面的规则，因为其不需要区分立即数，和低位操作。但识别的操作还是不能混淆
 // 这么做的目的主要是减小操作码
-    val alu_beq     = "b1011_00".U 
-    val alu_bne     = "b1011_10".U
-    val alu_bge     = "b1100_00".U 
-    val alu_bgeu    = "b1100_10".U 
-    val alu_blt     = "b1101_00".U 
-    val alu_bltu    = "b1101_10".U
+    
+	val alu_beq     = "b1101_00".U 
+    val alu_bne     = "b1101_01".U
 
-    val alu_jal     = "b1110_00".U 
-    val alu_jalr    = "b1110_10".U
+    val alu_bge     = "b1101_10".U 
+    val alu_bgeu    = "b1101_11".U 
 
-	val alu_lui 	= "b1111_00".U
+    val alu_blt     = "b1110_00".U 
+    val alu_bltu    = "b1110_01".U
+
+    val alu_jal     = "b1110_10".U 
+    val alu_jalr    = "b1110_11".U
+
+	
     
 }
 
@@ -144,15 +151,15 @@ class ALU_EXU extends Module with CoreParameters{
     val next_pc2 = Cat(0.U(1.W),0.U(64.W)) 
 
     val next_pc3 = Cat(1.U(1.W),(op_data1 + op_imm) & "hffff_ffff_ffff_fffe".U)
-    val temp_result_pc  = MuxLookup(io.exuType(5,1),0.U(65.W),List(
-        ALUType.alu_beq(5,1)    -> (Mux(op_data1 === op_data2, next_pc1,next_pc2)),
-        ALUType.alu_bge(5,1)    -> (Mux(!s_rs1_l_rs2,next_pc1,next_pc2)),
-        ALUType.alu_bgeu(5,1)   -> (Mux(!u_rs1_l_rs2,next_pc1,next_pc2)),
-        ALUType.alu_blt(5,1)    -> (Mux(s_rs1_l_rs2,next_pc1,next_pc2)),
-        ALUType.alu_bltu(5,1)   -> (Mux(u_rs1_l_rs2,next_pc1,next_pc2)),
-        ALUType.alu_bne(5,1)    -> (Mux(op_data1 === op_data2,next_pc2,next_pc1)),
-        ALUType.alu_jal(5,1)    -> (next_pc1),
-        ALUType.alu_jalr(5,1)   -> (next_pc3)
+    val temp_result_pc  = MuxLookup(io.exuType(5,0),0.U(65.W),List(
+        ALUType.alu_beq(5,0)    -> (Mux(op_data1 === op_data2, next_pc1,next_pc2)),
+        ALUType.alu_bge(5,0)    -> (Mux(!s_rs1_l_rs2,next_pc1,next_pc2)),
+        ALUType.alu_bgeu(5,0)   -> (Mux(!u_rs1_l_rs2,next_pc1,next_pc2)),
+        ALUType.alu_blt(5,0)    -> (Mux(s_rs1_l_rs2,next_pc1,next_pc2)),
+        ALUType.alu_bltu(5,0)   -> (Mux(u_rs1_l_rs2,next_pc1,next_pc2)),
+        ALUType.alu_bne(5,0)    -> (Mux(op_data1 === op_data2,next_pc2,next_pc1)),
+        ALUType.alu_jal(5,0)    -> (next_pc1),
+        ALUType.alu_jalr(5,0)   -> (next_pc3)
     ))
 
     val next_pc_valid   = temp_result_pc(64)

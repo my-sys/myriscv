@@ -2,7 +2,6 @@ import chisel3._
 import chisel3.util._ 
 
 object MUType{
-    def mu_div      = "b000000".U 
     def mu_divu     = "b000001".U 
     def mu_divuw    = "b000010".U 
     def mu_divw     = "b000011".U 
@@ -15,6 +14,7 @@ object MUType{
     def mu_remu     = "b001010".U 
     def mu_remuw    = "b001011".U 
     def mu_remw     = "b001100".U
+	def mu_div      = "b001101".U 
 }
 
 class MU_EXU extends Module with CoreParameters{
