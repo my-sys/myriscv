@@ -6,7 +6,7 @@ import chisel3.util._
 //3 "b1111_1111".U
 
 object Inst_type{
-    def Type_I  = "b0000".U
+    def Type_N  = "b0000".U
     def Type_U  = "b0001".U
     def Type_S  = "b0011".U 
     def Type_J  = "b0010".U 
@@ -14,16 +14,15 @@ object Inst_type{
     def Type_B  = "b0111".U
     def Type_CSR = "b0101".U
     def Type_IR = "b0100".U
-    def Type_N  = "b1100".U
-
-    
+    def Type_I  = "b1100".U
 }
 
 object Op_type{
-    def op_alu = "b000".U 
+    def op_n   = "b000".U
     def op_lsu = "b001".U
     def op_csr = "b010".U
     def op_mu  = "b011".U
+	def op_alu = "b100".U 
 }
 object ISA{
     def ADD     = BitPat("b0000000_?????_?????_000_?????_0110011")

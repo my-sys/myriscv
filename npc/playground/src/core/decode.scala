@@ -37,7 +37,7 @@ class Decode extends Module with CoreParameters{
     val reg_pc       = RegInit(0.U(64.W))
 	val reg_inst 	 = RegInit(0.U(32.W))
 
-    val decodefault = List(Op_type.op_alu,ALUType.alu_add,Inst_type.Type_N)
+    val decodefault = List(Op_type.op_n,ALUType.alu_none,Inst_type.Type_N)
     val opType :: exuType :: instType :: Nil = ListLookup(inst, decodefault,ISA.table)
 
     val rs2_addr        = inst(24,20)

@@ -7,7 +7,7 @@ object ALUType{
     // 
 	// 不应该从全零开始，复位后是全0状态，如果选择使用0作为状态会产生意料之外的情况. 
     
-
+	val alu_none 	= "b000_00".U
     val alu_auipc   = "b001_00".U
 
     val alu_and     = "b010_00".U
@@ -108,7 +108,7 @@ class ALU_EXU extends Module with CoreParameters{
     val srlw_temp = op_data1(31,0) >>   rs2_data(4,0)        // (rs2_data & "h1f".U)
 
     val sraw_temp      = ((op_data1(31,0)).asSInt >> (rs2_data & "h1f".U)).asUInt
-    val temp_result_data = MuxLookup(io.exuType(5,2),0.U(64.W), List(
+    val temp_result_data = MuxLookup(io.exuType(5,2),0.U(65.W), List(
         ALUType.alu_add(5,2)    -> Cat(1.U(1.W),(op_data1 + rs2_data)),
         ALUType.alu_auipc(5,2)  -> Cat(1.U(1.W),(op_pc + op_imm)),
         ALUType.alu_and(5,2)    -> Cat(1.U(1.W),(op_data1 & rs2_data)),
