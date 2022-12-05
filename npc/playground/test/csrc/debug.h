@@ -2,7 +2,21 @@
 #define __DEBUG_H__
 
 #include "common.h"
+// --------------- state --------------------
+enum { NPC_RUNNING, NPC_STOP, NPC_END, NPC_ABORT, NPC_QUIT};
+typedef struct{
+	int 		state;
+	vaddr_t		halt_pc;
+	uint32_t 	halt_ret;
+} NPCState;
 
+typedef struct{
+	word_t gpr[32];
+	vaddr_t pc;
+	word_t	csr[32];
+} CPU_state;
+
+extern NPCState npc_state;
 // ----------- log -----------
 
 #define ASNI_FG_BLACK   "\33[1;30m"

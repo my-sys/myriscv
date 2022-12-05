@@ -36,6 +36,8 @@ LDFLAGS = -lpthread -lSDL2 -ldl -lpcre -lreadline
 CFLAGS += $(shell llvm-config --cxxflags) -fPIE 
 LDFLAGS += $(shell llvm-config --libs)
 
+DIFF_REF_SO = $(NEMU_HOME)/build/riscv64-nemu-interpreter-so
+ARGS_DIFF = --diff=$(DIFF_REF_SO)
 IMG ?= 
 
 
@@ -69,12 +71,12 @@ compile:$(VSRCS) $(CSRCS)
 run: 
 	make verilog 
 	make compile
-	obj_dir/V$(TOPNAME)  $(IMG)
+	obj_dir/V$(TOPNAME)  $(ARGS_DIFF) $(IMG)
 
 gdb:
 	make verilog 
 	make compile
-	gdb obj_dir/V$(TOPNAME) run $(IMG)	
+	gdb obj_dir/V$(TOPNAME) run $(ARGS_DIFF) $(IMG)	
 # nemu/native.mk
 sim: run
 	$(call git_commit, "sim RTL") # DO NOT REMOVE THIS LINE!!!

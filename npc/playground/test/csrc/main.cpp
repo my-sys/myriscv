@@ -2,11 +2,12 @@
 #include <getopt.h>
 #include "sdb.h"
 #include "disasm.h"
+#include "difftest.h"
 static char *diff_so_file = NULL;
 static char *img_file = NULL;
 static char *log_file = NULL;
 
-extern void init_ram(const char* img_file);
+extern uint64_t init_ram(const char* img_file);
 
 static int parse_args(int argc, char *argv[]){
     const struct option table[] = {
@@ -33,9 +34,11 @@ void welcome(){
 }
 int main(int argc, char** argv){
     parse_args(argc,argv);
-    init_ram(img_file);
+    uint64_t img_size = init_ram(img_file);
     /* Initialize differential testing. */
-    //init_difftest(diff_so_file, img_size, difftest_port);
+#ifdef CONFIG_DIFFTEST
+    init_difftest(diff_so_file, img_size, 1023);
+#endif
     init_sdb();
 
 #ifdef CONFIG_ITRACE

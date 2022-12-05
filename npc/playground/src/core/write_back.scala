@@ -16,6 +16,8 @@ class WriteBack extends Module with CoreParameters{
             val mem_addr        = Input(UInt(AddrLen.W))
 			val mem_avalid 		= Input(Bool())
             val w_mem_en        = Input(Bool())
+			val pc 				= Input(UInt(AddrLen.W))
+			val inst 			= Input(UInt(InstLen.W))
 
 			// from mem 
 			val mem_data        = Input(UInt(RegDataLen.W))
@@ -97,6 +99,28 @@ class WriteBack extends Module with CoreParameters{
 			}
 		}
 	}
+
+	val difftest_commit 		= RegInit(false.B)
+	val reg_inst 				= RegInit(0.U(InstLen.W))
+	val reg_pc 					= RegInit(0.U(AddrLen.W))
+	reg_pc 						:= io.in.pc 
+	reg_inst 					:= io.in.inst 
+	val difftest_inst 			= RegInit(0.U(InstLen.W))
+	val difftest_pc 			= RegInit(0.U(AddrLen.W))
+	when(reg_stall & io.in.w_ok){
+		difftest_inst 	:= reg_inst 
+		difftest_pc		:= reg_pc
+		difftest_commit := true.B
+	}.elsewhen((!reg_stall) & reg_w_rs_en){
+		difftest_inst 	:= reg_inst 
+		difftest_pc		:= reg_pc		
+		difftest_commit := true.B
+	}.otherwise{
+		difftest_commit := false.B
+	}
+	BoringUtils.addSource(difftest_commit, "DIFFTEST_COMMIT")
+    BoringUtils.addSource(difftest_pc,"DIFFTEST_PC")
+    BoringUtils.addSource(difftest_inst,"DIFFTEST_INST")
 
     // 暂时还没想好怎么使用这一级
 	val reg_rs_addr 			= RegInit(0.U(RegAddrLen.W))

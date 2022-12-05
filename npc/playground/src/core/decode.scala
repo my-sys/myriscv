@@ -22,6 +22,7 @@ class Decode extends Module with CoreParameters{
             val opType      = Output(UInt(OpTypeLen.W))
             val exuType     = Output(UInt(ExuTypeLen.W))
             val pc          = Output(UInt(AddrLen.W))
+			val inst 		= Output(UInt(InstLen.W))
         }
     })
 
@@ -34,6 +35,7 @@ class Decode extends Module with CoreParameters{
     val reg_opType   = RegInit(0.U(OpTypeLen.W))
     val reg_exuType  = RegInit(0.U(ExuTypeLen.W))
     val reg_pc       = RegInit(0.U(64.W))
+	val reg_inst 	 = RegInit(0.U(32.W))
 
     val decodefault = List(Op_type.op_alu,ALUType.alu_add,Inst_type.Type_N)
     val opType :: exuType :: instType :: Nil = ListLookup(inst, decodefault,ISA.table)
@@ -71,7 +73,8 @@ class Decode extends Module with CoreParameters{
 		reg_rs1_data        := rs1_data
 		reg_rs2_data        := rs2_data
 		reg_dest_rs_addr    := dest_rs_addr
-		reg_pc              := pc		
+		reg_pc              := pc
+		reg_inst 			:= inst		
 	}
 
 
@@ -82,6 +85,7 @@ class Decode extends Module with CoreParameters{
     io.out.imm_data     := reg_imm
     io.out.rs_addr      := reg_dest_rs_addr
     io.out.pc           := reg_pc
+	io.out.inst 		:= reg_inst 
     when(io.in.w_rs_en & (!io.in.stall)){
         reg_file.write(io.in.rs_addr,io.in.result_data)
     }

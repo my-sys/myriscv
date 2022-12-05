@@ -4,12 +4,13 @@ import chisel3.util._
 class Exu extends Module with CoreParameters{
     val io = IO(new Bundle{
         val in = new Bundle{
-            val opType  = Input(UInt(OpTypeLen.W))
-            val exuType = Input(UInt(ExuTypeLen.W))
+            val opType   = Input(UInt(OpTypeLen.W))
+            val exuType  = Input(UInt(ExuTypeLen.W))
             val rs1_data = Input(UInt(RegDataLen.W))
             val rs2_data = Input(UInt(RegDataLen.W))
             val imm_data = Input(UInt(ImmLen.W))
             val pc       = Input(UInt(AddrLen.W))
+			val inst 	 = Input(UInt(InstLen.W))
             val rs_addr  = Input(UInt(RegAddrLen.W))
 
 			val stall 	 = Input(Bool())
@@ -22,6 +23,8 @@ class Exu extends Module with CoreParameters{
 
 			val opType			= Output(UInt(OpTypeLen.W))
 			val exuType			= Output(UInt(ExuTypeLen.W))
+			val pc 				= Output(UInt(AddrLen.W))
+			val inst 			= Output(UInt(InstLen.W))
 
 			val rs2_data 		= Output(UInt(RegDataLen.W))
 			val mem_addr		= Output(UInt(AddrLen.W))
@@ -40,6 +43,7 @@ class Exu extends Module with CoreParameters{
     val rs2_data    = io.in.rs2_data
     val imm_data    = io.in.imm_data
     val pc          = io.in.pc 
+	val inst 		= io.in.inst  
     val rs_addr     = io.in.rs_addr
 
 
@@ -52,11 +56,14 @@ class Exu extends Module with CoreParameters{
 
 	val  reg_opType			= RegInit(0.U(OpTypeLen.W))
 	val  reg_exuType		= RegInit(0.U(ExuTypeLen.W))
+	val	 reg_pc 			= RegInit(0.U(AddrLen.W))
+	val  reg_inst 			= RegInit(0.U(InstLen.W))
 	when(!io.in.stall){
 		reg_opType				:= opType
-		reg_exuType				:= exuType
+		reg_exuType				:= exuType 
+		reg_pc 					:= pc 
+		reg_inst 				:= inst
 	}
-
 
 	val  reg_rs2_data 		= RegInit(0.U(RegDataLen.W))
 	
@@ -64,7 +71,6 @@ class Exu extends Module with CoreParameters{
 		reg_rs2_data			:= rs2_data
 	}
 	
-
 	val  reg_mem_addr 		= RegInit(0.U(AddrLen.W))
 	val  reg_mem_avalid		= RegInit(false.B)
 	val  reg_w_mem_en 		= RegInit(false.B)
@@ -139,7 +145,9 @@ class Exu extends Module with CoreParameters{
     io.out.valid_next_pc    := reg_valid_next_pc
 
 	io.out.opType			:= reg_opType
-	io.out.exuType			:= reg_exuType
+	io.out.exuType			:= reg_exuType 
+	io.out.pc 				:= reg_pc
+	io.out.inst 			:= reg_inst 
 	io.out.rs2_data			:= reg_rs2_data
 	io.out.mem_addr			:= reg_mem_addr
 	io.out.mem_avalid		:= reg_mem_avalid

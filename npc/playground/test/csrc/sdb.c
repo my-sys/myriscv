@@ -8,31 +8,6 @@
 void init_regex();
 void init_wp_pool();
 
-
-static void trace_and_difftest()
-{
-#ifdef CONFIG_ITRACE
-  uint64_t reg[2];
-  Emulator::get_instance().read_pc_and_inst(reg);
-  char logbuf[128];
-  char *p = logbuf;
-  p += snprintf(p, sizeof(logbuf), "0x%016lx" ":", reg[0]);
-
-  uint8_t *inst = (uint8_t *)&reg[1];
-  for (int i = 0; i < 4; i ++) {
-    p += snprintf(p, 4, " %02x", inst[i]);
-  }
-  //extern void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte);
-  disassemble(p, logbuf + sizeof(logbuf) - p, reg[0],(uint8_t *)&reg[1],4);
-  puts(logbuf);
-if(reg[1] == 0x100073){
-	Log("npc: %s at pc = " FMT_WORD, ASNI_FMT("HIT GOOD TRAP", ASNI_FG_GREEN) );
-	exit(1);
-}
-  
-#endif 
-}
-
 static char* rl_gets() {
   static char *line_read = NULL;
 
@@ -75,7 +50,6 @@ static int cmd_si(char *args){
         return 0;
     }
     Emulator::get_instance().execute(num);
-	trace_and_difftest();
     return 0;
 }
 

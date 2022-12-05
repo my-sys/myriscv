@@ -86,7 +86,8 @@ class Core extends Module{
     execute.io.in.rs1_data      := decode.io.out.rs1_data
     execute.io.in.rs2_data      := decode.io.out.rs2_data
     execute.io.in.imm_data      := decode.io.out.imm_data
-    execute.io.in.pc            := decode.io.out.pc
+    execute.io.in.pc            := decode.io.out.pc 
+	execute.io.in.inst 			:= decode.io.out.inst 
     execute.io.in.rs_addr       := decode.io.out.rs_addr
 	execute.io.in.stall 		:= write_back.io.out.stall 
 
@@ -104,7 +105,9 @@ class Core extends Module{
 	write_back.io.in.result_data	:= execute.io.out.rs_data
 	write_back.io.in.w_rs_en		:= execute.io.out.w_rs_en
 	write_back.io.in.opType			:= execute.io.out.opType
-	write_back.io.in.exuType		:= execute.io.out.exuType
+	write_back.io.in.exuType		:= execute.io.out.exuType 
+	write_back.io.in.pc 			:= execute.io.out.pc 
+	write_back.io.in.inst 			:= execute.io.out.inst 
 	write_back.io.in.rs2_data		:= execute.io.out.rs2_data
 	write_back.io.in.mem_addr		:= execute.io.out.mem_addr
 	write_back.io.in.mem_avalid		:= execute.io.out.mem_avalid

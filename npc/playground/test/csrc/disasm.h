@@ -1,7 +1,6 @@
 #ifndef __DISASM_H__
 #define __DISASM_H__
 #include "common.h"
-#define CONFIG_ITRACE
 
 #ifdef __cplusplus
 extern "C"{

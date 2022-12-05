@@ -3,11 +3,13 @@
 static uint64_t ram[RAMSIZE/sizeof(uint64_t)];
 static uint64_t imgfile_size = 0;
 
+uint8_t* guest_to_host(paddr_t paddr){ return ram + paddr - 0x80000000;}
+
 uint64_t get_img_size(){
     return imgfile_size;
 }
 
-void init_ram(const char* img_file){
+uint64_t init_ram(const char* img_file){
     if(img_file == NULL){
         printf("img_file is NULL \n");
         assert(0);
@@ -31,6 +33,7 @@ void init_ram(const char* img_file){
 		assert(0);
 	}
     fclose(fp);
+	return imgfile_size;
 }
 
 uint64_t mem_read(uint64_t addr, int len){

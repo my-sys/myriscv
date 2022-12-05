@@ -2,11 +2,10 @@
 #include <verilated.h>
 #include <verilated_vcd_c.h>
 #include "Vriscv_soc.h"
-
+#include "difftest.h"
 Emulator::Emulator(){
     top = new Vriscv_soc;
     cycles = 0;
-	printf("execute hahazzz ???\n");
 #if EN_TRACE
     Verilated::traceEverOn(true);
     m_trace = new VerilatedVcdC;
@@ -16,7 +15,7 @@ Emulator::Emulator(){
 	reset(10);
 };
 
-void Emulator::execute_once(){
+void Emulator::execute_cycle(){
     top->clock = 0;
     top->eval();
 #if EN_TRACE
@@ -27,12 +26,76 @@ void Emulator::execute_once(){
 #if EN_TRACE
     m_trace->dump(2*cycles + 1);
 #endif 
-    cycles++;
+    cycles++;	
+}
+
+void Emulator::execute_once(){
+	while(top->io_difftest_commit == 0){
+		execute_cycle();
+	}
+#ifdef CONFIG_DIFFTEST 
+	difftest_step(top->io_difftest_pc);
+#endif
+
+#ifdef CONFIG_ITRACE
+	uint64_t reg[2];
+	read_pc_and_inst(reg);
+	char logbuf[128];
+	char *p = logbuf;
+	p += snprintf(p, sizeof(logbuf), "0x%016lx" ":", reg[0]);
+
+	uint8_t *inst = (uint8_t *)&reg[1];
+	for (int i = 0; i < 4; i ++) {
+		p += snprintf(p, 4, " %02x", inst[i]);
+	}
+	//extern void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte);
+	disassemble(p, logbuf + sizeof(logbuf) - p, reg[0],(uint8_t *)&reg[1],4);
+	puts(logbuf);
+
+	if(reg[1] == 0x100073){
+		Log("npc: %s at pc = " FMT_WORD, ASNI_FMT("HIT GOOD TRAP", ASNI_FG_GREEN) );
+		exit(1);
+	}
+#endif 
 };
+
+void Emulator::checkregs(CPU_state *ref, vaddr_t pc){
+	if(!isa_difftest_checkregs(ref, pc)){
+		npc_state.state = NPC_ABORT;
+		npc_state.state	= pc;
+		isa_reg_display();
+	}
+}
+
+bool Emulator::isa_difftest_checkregs(CPU_state *ref, vaddr_t pc){
+#define gpr(x) top->io_difftest_reg_##x
+	if(ref->pc != pc){
+		printf("ref->pc 0x%lx, npc->pc :0x%lx\n",ref->pc,pc);
+		return false;
+	}
+	for(int i=0;i<32;i++){
+		if(ref->gpr[i] != gpr(i)){
+			printf("difftest false \n");
+			return false;
+		}
+	}
+	return true;
+}
+
+void Emulator::isa_reg_display(){
+#define gpr(x) top->io_difftest_reg_##x
+    printf("$0($0) = %lx, $1(ra) = %lx, $2(sp) = %lx, $3(gp) = %lx \n",gpr(0),gpr(1),gpr(2),gpr(3));
+    printf("$4(tp) = %lx, $5(t0) = %lx, $6(t1) = %lx, $7(t2) = %lx \n",gpr(4),gpr(5),gpr(6),gpr(7));
+    printf("$8(s0) = %lx, $9(s1) = %lx, $10(a0) = %lx, $11(a1) = %lx \n",gpr(8),gpr(9),gpr(10),gpr(11));
+    printf("$12(a2) = %lx, $13(a3) = %lx, $14(a4) = %lx, $15(a5) = %lx \n",gpr(12),gpr(13),gpr(14),gpr(15));
+    printf("$16(a6) = %lx, $17(a7) = %lx, $18(s2) = %lx, $19(s3) = %lx \n",gpr(16),gpr(17),gpr(18),gpr(19));
+    printf("$20(s4) = %lx, $21(s5) = %lx, $22(s6) = %lx, $23(s7) = %lx \n",gpr(20),gpr(21),gpr(22),gpr(23));
+    printf("$24(s8) = %lx, $25(s9) = %lx, $26(s10) = %lx, $27(s11) = %lx \n",gpr(24),gpr(25),gpr(26),gpr(27));
+    printf("$28(t3) = %lx, $29(t4) = %lx, $30(t5) = %lx, $31(t6) = %lx \n",gpr(28),gpr(29),gpr(30),gpr(31));  
+}
 
 void Emulator::execute(uint64_t n){
     //....
-	printf("execute haha ???\n");
     for(; n > 0; n--){
         execute_once();
     }
@@ -45,7 +108,6 @@ void Emulator::reset(int n){
         execute_once();
     }
     top->reset = 0;
-	printf("kkkzza \n");
 };
 
 void Emulator::read_regs(uint64_t* reg){

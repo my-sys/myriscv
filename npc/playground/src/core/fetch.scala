@@ -55,6 +55,5 @@ class Fetch extends Module{
     io.out.pc1 		:= regTempPC 
     io.out.inst 	:= regInst
 	io.out.rvalid	:= pc_valid
-    BoringUtils.addSource(regTempPC,"DIFFTEST_PC")
-    BoringUtils.addSource(regInst,"DIFFTEST_INST")
+
 }

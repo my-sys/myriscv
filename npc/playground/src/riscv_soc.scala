@@ -27,9 +27,10 @@ import chisel3.util.experimental.BoringUtils
   
 class riscv_soc extends Module{
   val io = IO(new Bundle{
-    val difftest_reg  = Output(Vec(32, UInt(64.W)))
-    val difftest_pc   = Output(UInt(64.W))
-    val difftest_inst = Output(UInt(32.W))
+    val difftest_reg  	= Output(Vec(32, UInt(64.W)))
+    val difftest_pc   	= Output(UInt(64.W))
+    val difftest_inst 	= Output(UInt(32.W))
+	val difftest_commit = Output(Bool())
   })
   val core = Module(new Core)
   val axi_ram = Module(new AXI_RAM)
@@ -38,14 +39,17 @@ class riscv_soc extends Module{
   
   val difftest_reg      = VecInit(Seq.fill(32)(0.U(64.W)))
   val difftest_pc       = WireInit(0.U(64.W))
+  val difftest_commit   = WireInit(false.B)
   
 
   BoringUtils.addSink(difftest_reg,"DIFFTEST_REG")
   BoringUtils.addSink(difftest_pc,"DIFFTEST_PC")
   BoringUtils.addSink(difftest_inst,"DIFFTEST_INST")
+  BoringUtils.addSink(difftest_commit, "DIFFTEST_COMMIT")
   io.difftest_reg     := difftest_reg
   io.difftest_pc      := difftest_pc
-  io.difftest_inst    := difftest_inst
+  io.difftest_inst    := difftest_inst 
+  io.difftest_commit  := difftest_commit
 
   core.io.in.rdata    :=  axi_ram.io.rdata
   
