@@ -3,7 +3,7 @@
 static uint64_t ram[RAMSIZE/sizeof(uint64_t)];
 static uint64_t imgfile_size = 0;
 
-uint8_t* guest_to_host(paddr_t paddr){ return ram + paddr - 0x80000000;}
+uint8_t* guest_to_host(paddr_t paddr){ return (uint8_t *)(ram + paddr - 0x80000000);}
 
 uint64_t get_img_size(){
     return imgfile_size;
