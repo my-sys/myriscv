@@ -33,9 +33,10 @@ void Emulator::execute_cycle(){
 }
 
 void Emulator::execute_once(){
-	while(top->io_difftest_commit == 0){
-		execute_cycle();
-	}
+	// while(top->io_difftest_commit == 0){
+	// 	execute_cycle();
+	// }
+	execute_cycle();
 	cpu.pc = top->io_difftest_pc;
 
 #define REGS(x) cpu.gpr[x] = top->io_difftest_reg_##x
