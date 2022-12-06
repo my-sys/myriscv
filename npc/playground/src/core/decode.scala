@@ -102,7 +102,7 @@ class Decode extends Module with CoreParameters{
 	io.out.rs1_addr		:= reg_rs1_addr
 	io.out.rs2_addr		:= reg_rs2_addr
 
-	val reg_stall 		= regInit(false.B)
+	val reg_stall 		= RegInit(false.B)
 
 	io.out.stall 		:= reg_stall
 	// 处理ld 与其他指令的数据相关问题，引入气泡解决. .
