@@ -6,14 +6,19 @@ class Exu extends Module with CoreParameters{
         val in = new Bundle{
             val opType   = Input(UInt(OpTypeLen.W))
             val exuType  = Input(UInt(ExuTypeLen.W))
+			val rs1_addr = Input(UInt(RegAddrLen.W))
             val rs1_data = Input(UInt(RegDataLen.W))
+			val rs2_addr = Input(UInt(RegAddrLen.W))
             val rs2_data = Input(UInt(RegDataLen.W))
             val imm_data = Input(UInt(ImmLen.W))
             val pc       = Input(UInt(AddrLen.W))
 			val inst 	 = Input(UInt(InstLen.W))
             val rs_addr  = Input(UInt(RegAddrLen.W))
 
-			val stall 	 = Input(Bool())
+			val wb_result_data 	= Input(UInt(RegDataLen.W))
+			val wb_rs_addr	   	= Input(UInt(RegAddrLen.W))
+			val wb_w_rs_en		= Input(Bool())
+			val stall 	 		= Input(Bool())
         }
 
         val out = new Bundle{
@@ -26,6 +31,7 @@ class Exu extends Module with CoreParameters{
 			val pc 				= Output(UInt(AddrLen.W))
 			val inst 			= Output(UInt(InstLen.W))
 
+			val rs2_addr		= Output(UInt(RegAddrLen.W))
 			val rs2_data 		= Output(UInt(RegDataLen.W))
 			val mem_addr		= Output(UInt(AddrLen.W))
 			val mem_avalid		= Output(Bool())
@@ -38,9 +44,11 @@ class Exu extends Module with CoreParameters{
     })
 
     val opType      = io.in.opType
-    val exuType     = io.in.exuType 
-    val rs1_data    = io.in.rs1_data 
-    val rs2_data    = io.in.rs2_data
+    val exuType     = io.in.exuType
+
+//    val rs1_data    = io.in.rs1_data 
+//    val rs2_data    = io.in.rs2_data
+
     val imm_data    = io.in.imm_data
     val pc          = io.in.pc 
 	val inst 		= io.in.inst  
@@ -58,17 +66,26 @@ class Exu extends Module with CoreParameters{
 	val  reg_exuType		= RegInit(0.U(ExuTypeLen.W))
 	val	 reg_pc 			= RegInit(0.U(AddrLen.W))
 	val  reg_inst 			= RegInit(0.U(InstLen.W))
+
+//  解决数据相关冲突 
+	val rs1_data = Mux((reg_rs_addr === io.in.rs1_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs1_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs1_data))
+	val rs2_data = Mux((reg_rs_addr === io.in.rs2_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs2_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs2_data))
 	when(!io.in.stall){
 		reg_opType				:= opType
 		reg_exuType				:= exuType 
 		reg_pc 					:= pc 
 		reg_inst 				:= inst
+	}.otherwise{
+		reg_opType				:= Op_type.op_n
+		reg_exuType				:= ALUType.alu_none
 	}
 
 	val  reg_rs2_data 		= RegInit(0.U(RegDataLen.W))
+	val  reg_rs2_addr 		= RegInit(0.U(RegAddrLen.W))
 	
 	when(!io.in.stall){
 		reg_rs2_data			:= rs2_data
+		reg_rs2_addr			:= io.in.rs2_addr
 	}
 	
 	val  reg_mem_addr 		= RegInit(0.U(AddrLen.W))
@@ -102,6 +119,9 @@ class Exu extends Module with CoreParameters{
 		reg_mem_addr			:= lsu_exu.io.address_result
 		reg_mem_avalid			:= lsu_exu.io.avalid
 		reg_w_mem_en			:= lsu_exu.io.w_mem_en		
+	}.otherwise{
+		reg_mem_avalid			:= false.B
+		reg_w_mem_en			:= false.B
 	}
 
 //---------------------------------------------------------
@@ -135,6 +155,9 @@ class Exu extends Module with CoreParameters{
     	reg_w_rs_en := w_rs_en
     	reg_next_pc := alu_exu.io.result_pc
     	reg_valid_next_pc := alu_exu.io.next_pc_valid
+	}.otherwise{
+		reg_w_rs_en := false.B 
+		reg_valid_next_pc := false.B
 	}
 
 
@@ -149,6 +172,7 @@ class Exu extends Module with CoreParameters{
 	io.out.pc 				:= reg_pc
 	io.out.inst 			:= reg_inst 
 	io.out.rs2_data			:= reg_rs2_data
+	io.out.rs2_addr 		:= reg_rs2_addr
 	io.out.mem_addr			:= reg_mem_addr
 	io.out.mem_avalid		:= reg_mem_avalid
 	io.out.w_mem_en			:= reg_w_mem_en

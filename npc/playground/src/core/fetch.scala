@@ -11,7 +11,8 @@ class Fetch extends Module{
             val inst    = Input(UInt(64.W))
 			val valid 	= Input(Bool())
 
-			val stall   = Input(Bool())
+			val de_stall 	= Input(Bool())
+			val wb_stall   = Input(Bool())
             val next_pc = Input(UInt(64.W))
             val valid_next_pc = Input(Bool())
         }
@@ -29,11 +30,13 @@ class Fetch extends Module{
     val next_pc         = io.in.next_pc
     val valid_next_pc   = io.in.valid_next_pc
 
+	val stall 			= io.in.de_stall | io.in.wb_stall
+
 // 指令地址自增，与判断下一个指令地址
 // 指令的初始执行位置为0x8000_0000 Reset_Vector
 	val regPC 		= RegInit("h8000_0000".U(64.W))
 	val pc_valid 	= RegInit(true.B)
-	when(valid&(!io.in.stall)){
+	when(valid&(!stall)){
 		regPC 		:= Mux(valid_next_pc,next_pc,regPC + 4.U )
 		pc_valid	:= true.B
 	}.otherwise{
@@ -46,9 +49,12 @@ class Fetch extends Module{
 	val regInst 	= RegInit(0.U(32.W))
 	val regTempPC	= RegInit(0.U(64.W))
 	
-	when(valid&(!io.in.stall)){
+	when(valid&(!stall)){
 		regInst 	:= Mux(regPC(2),inst(63,32),inst(31,0))
 		regTempPC	:= regPC
+	}.otherwise{
+		// 生成nop指令  
+		regInst		:= 0.U 
 	}
 
 	io.out.pc0 		:= regPC

@@ -17,12 +17,17 @@ class Decode extends Module with CoreParameters{
         val out     = new Bundle{
             val rs1_data    = Output(UInt(RegDataLen.W))
             val rs2_data    = Output(UInt(RegDataLen.W))
+			val rs1_addr 	= Output(UInt(RegAddrLen.W))
+			val rs2_addr 	= Output(UInt(RegAddrLen.W))
+
             val rs_addr     = Output(UInt(RegAddrLen.W))
             val imm_data    = Output(UInt(ImmLen.W))
             val opType      = Output(UInt(OpTypeLen.W))
             val exuType     = Output(UInt(ExuTypeLen.W))
             val pc          = Output(UInt(AddrLen.W))
 			val inst 		= Output(UInt(InstLen.W))
+
+			val stall 		= Output(Bool())
         }
     })
 
@@ -30,12 +35,14 @@ class Decode extends Module with CoreParameters{
     val pc           = io.in.pc 
     val reg_rs1_data = RegInit(0.U(64.W))
     val reg_rs2_data = RegInit(0.U(64.W))
-    val reg_dest_rs_addr  = RegInit(0.U(64.W))
+    val reg_dest_rs_addr  = RegInit(0.U(RegAddrLen.W))
     val reg_imm      = RegInit(0.U(64.W))
     val reg_opType   = RegInit(0.U(OpTypeLen.W))
     val reg_exuType  = RegInit(0.U(ExuTypeLen.W))
     val reg_pc       = RegInit(0.U(64.W))
 	val reg_inst 	 = RegInit(0.U(32.W))
+	val reg_rs1_addr = RegInit(0.U(RegAddrLen.W))
+	val reg_rs2_addr = RegInit(0.U(RegAddrLen.W))
 
     val decodefault = List(Op_type.op_n,ALUType.alu_none,Inst_type.Type_N)
     val opType :: exuType :: instType :: Nil = ListLookup(inst, decodefault,ISA.table)
@@ -74,7 +81,13 @@ class Decode extends Module with CoreParameters{
 		reg_rs2_data        := rs2_data
 		reg_dest_rs_addr    := dest_rs_addr
 		reg_pc              := pc
-		reg_inst 			:= inst		
+		reg_inst 			:= inst
+		reg_rs1_addr		:= rs1_addr
+		reg_rs2_addr		:= rs2_addr
+	}.otherwise{
+		// 产生nop指令
+		reg_opType			:= Op_type.op_n
+		reg_exuType			:= ALUType.alu_none
 	}
 
 
@@ -86,6 +99,18 @@ class Decode extends Module with CoreParameters{
     io.out.rs_addr      := reg_dest_rs_addr
     io.out.pc           := reg_pc
 	io.out.inst 		:= reg_inst 
+	io.out.rs1_addr		:= reg_rs1_addr
+	io.out.rs2_addr		:= reg_rs2_addr
+
+	val reg_stall 		= regInit(false.B)
+
+	io.out.stall 		:= reg_stall
+	// 处理ld 与其他指令的数据相关问题，引入气泡解决. .
+	when((reg_opType === Op_type.op_lsu)&(!reg_exuType(3))&((reg_dest_rs_addr === rs1_addr) |(reg_dest_rs_addr === rs2_addr))){
+		reg_stall := true.B
+	}.otherwise{
+		reg_stall := false.B
+	}
     when(io.in.w_rs_en & (!io.in.stall)){
         reg_file.write(io.in.rs_addr,io.in.result_data)
     }

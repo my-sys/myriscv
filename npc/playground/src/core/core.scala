@@ -90,10 +90,16 @@ class Core extends Module{
 	execute.io.in.inst 			:= decode.io.out.inst 
     execute.io.in.rs_addr       := decode.io.out.rs_addr
 	execute.io.in.stall 		:= write_back.io.out.stall 
+	execute.io.in.wb_result_data	:= write_back.io.out.result_data
+	execute.io.in.wb_rs_addr		:= write_back.io.out.rs_addr
+	execute.io.in.wb_w_rs_en		:= write_back.io.out.w_rs_en 
+	execute.io.in.rs1_addr			:= decode.io.out.rs1_addr
+	execute.io.in.rs2_addr			:= decode.io.out.rs2_addr
 
     fetch.io.in.next_pc         := execute.io.out.next_pc
     fetch.io.in.valid_next_pc   := execute.io.out.valid_next_pc
-	fetch.io.in.stall 			:= write_back.io.out.stall 
+	fetch.io.in.wb_stall 		:= write_back.io.out.stall 
+	fetch.io.in.de_stall 		:= decode.io.out.stall
     // write-back
 
     decode.io.in.rs_addr        := write_back.io.out.rs_addr
@@ -108,6 +114,7 @@ class Core extends Module{
 	write_back.io.in.exuType		:= execute.io.out.exuType 
 	write_back.io.in.pc 			:= execute.io.out.pc 
 	write_back.io.in.inst 			:= execute.io.out.inst 
+	write_back.io.in.rs2_addr 		:= execute.io.out.rs2_addr
 	write_back.io.in.rs2_data		:= execute.io.out.rs2_data
 	write_back.io.in.mem_addr		:= execute.io.out.mem_addr
 	write_back.io.in.mem_avalid		:= execute.io.out.mem_avalid
