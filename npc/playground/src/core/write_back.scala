@@ -113,17 +113,25 @@ class WriteBack extends Module with CoreParameters{
 	reg_inst 					:= io.in.inst 
 	val difftest_inst 			= RegInit(0.U(InstLen.W))
 	val difftest_pc 			= RegInit(0.U(AddrLen.W))
-	
-	when(reg_stall & io.in.w_ok){
-		difftest_inst 	:= reg_inst 
+	val reg_exuType				= RegInit(0.U(ExuTypeLen.W))
+	reg_exuType					:= io.in.exuType
+	// when(reg_stall & io.in.w_ok){
+	// 	difftest_inst 	:= reg_inst 
+	// 	difftest_pc		:= reg_pc
+	// 	difftest_commit := true.B
+	// }.elsewhen((!reg_stall) & reg_w_rs_en){
+	// 	difftest_inst 	:= reg_inst 
+	// 	difftest_pc		:= reg_pc		
+	// 	difftest_commit := true.B
+	// }.otherwise{
+	// 	difftest_commit := false.B
+	// }
+	when(reg_stall | (reg_exuType === ALUType.alu_none)){
+		difftest_commit := false.B
+	}.otherwise{
+		difftest_inst 	:= reg_inst
 		difftest_pc		:= reg_pc
 		difftest_commit := true.B
-	}.elsewhen((!reg_stall) & reg_w_rs_en){
-		difftest_inst 	:= reg_inst 
-		difftest_pc		:= reg_pc		
-		difftest_commit := true.B
-	}.otherwise{
-		difftest_commit := false.B
 	}
 	BoringUtils.addSource(difftest_commit, "DIFFTEST_COMMIT")
     BoringUtils.addSource(difftest_pc,"DIFFTEST_PC")

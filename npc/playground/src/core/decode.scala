@@ -13,6 +13,7 @@ class Decode extends Module with CoreParameters{
             val w_rs_en         = Input(Bool())
 
 			val stall 			= Input(Bool())
+			val flush 			= Input(Bool())
         }
         val out     = new Bundle{
             val rs1_data    = Output(UInt(RegDataLen.W))
@@ -73,7 +74,7 @@ class Decode extends Module with CoreParameters{
         //Inst_type.Type_N    -> (),
         //Inst_type.Type_R    -> (),
     ))
-	when(!io.in.stall){
+	when(!io.in.flush){
 		reg_imm 			:= imm_data
 		reg_opType          := opType
 		reg_exuType         := exuType     
@@ -91,8 +92,8 @@ class Decode extends Module with CoreParameters{
 	}
 
 
-    io.out.opType       := reg_opType 
-    io.out.exuType      := reg_exuType 
+    io.out.opType       := Mux(io.in.stall,Op_type.op_n,reg_opType) 
+    io.out.exuType      := Mux(io.in.stall,ALUType.alu_none,reg_exuType) 
     io.out.rs1_data     := reg_rs1_data
     io.out.rs2_data     := reg_rs2_data  
     io.out.imm_data     := reg_imm
@@ -111,7 +112,7 @@ class Decode extends Module with CoreParameters{
 	}.otherwise{
 		reg_stall := false.B
 	}
-    when(io.in.w_rs_en & (!io.in.stall)){
+    when(io.in.w_rs_en){
         reg_file.write(io.in.rs_addr,io.in.result_data)
     }
     

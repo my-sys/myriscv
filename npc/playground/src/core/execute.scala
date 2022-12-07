@@ -39,6 +39,7 @@ class Exu extends Module with CoreParameters{
 
             val next_pc         = Output(UInt(AddrLen.W))
             val valid_next_pc   = Output(Bool()) 
+			val flush 			= Output(Bool())
         }
 
     })
@@ -65,12 +66,14 @@ class Exu extends Module with CoreParameters{
 	val  reg_opType			= RegInit(0.U(OpTypeLen.W))
 	val  reg_exuType		= RegInit(0.U(ExuTypeLen.W))
 	val	 reg_pc 			= RegInit(0.U(AddrLen.W))
-	val  reg_inst 			= RegInit(0.U(InstLen.W))
+	val  reg_inst 			= RegInit(0.U(InstLen.W)) 
 
+	// 跳转指令问题，冲刷流水线 
+	val reg_flush = reg_valid_next_pc
 //  解决数据相关冲突 
 	val rs1_data = Mux((reg_rs_addr === io.in.rs1_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs1_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs1_data))
 	val rs2_data = Mux((reg_rs_addr === io.in.rs2_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs2_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs2_data))
-	when(!io.in.stall){
+	when(!reg_flush){
 		reg_opType				:= opType
 		reg_exuType				:= exuType 
 		reg_pc 					:= pc 
@@ -83,7 +86,7 @@ class Exu extends Module with CoreParameters{
 	val  reg_rs2_data 		= RegInit(0.U(RegDataLen.W))
 	val  reg_rs2_addr 		= RegInit(0.U(RegAddrLen.W))
 	
-	when(!io.in.stall){
+	when(!reg_flush){
 		reg_rs2_data			:= rs2_data
 		reg_rs2_addr			:= io.in.rs2_addr
 	}
@@ -115,7 +118,7 @@ class Exu extends Module with CoreParameters{
 	lsu_exu.io.rs1_data		:= rs1_data
 	lsu_exu.io.imm_data		:= imm_data 
 
-	when(!io.in.stall){
+	when(!reg_flush){
 		reg_mem_addr			:= lsu_exu.io.address_result
 		reg_mem_avalid			:= lsu_exu.io.avalid
 		reg_w_mem_en			:= lsu_exu.io.w_mem_en		
@@ -148,8 +151,8 @@ class Exu extends Module with CoreParameters{
 
     val w_rs_en = temp_w_en_and_rs_data(64)
     val rs_data = temp_w_en_and_rs_data(63,0)
-
-	when(!io.in.stall){
+	
+	when(!reg_flush){
 		reg_rs_data := rs_data
     	reg_rs_addr := rs_addr
     	reg_w_rs_en := w_rs_en
@@ -163,19 +166,20 @@ class Exu extends Module with CoreParameters{
 
     io.out.rs_addr          := reg_rs_addr
     io.out.rs_data          := reg_rs_data
-    io.out.w_rs_en          := reg_w_rs_en
+    io.out.w_rs_en          := Mux(io.in.stall,false.B,reg_w_rs_en)
     io.out.next_pc          := reg_next_pc
-    io.out.valid_next_pc    := reg_valid_next_pc
+    io.out.valid_next_pc    := Mux(io.in.stall,false.B,reg_valid_next_pc)
+	io.out.flush 			:= Mux(io.in.stall,false.B,reg_valid_next_pc)
 
-	io.out.opType			:= reg_opType
-	io.out.exuType			:= reg_exuType 
+	io.out.opType			:= Mux(io.in.stall,Op_type.op_n,reg_opType)
+	io.out.exuType			:= Mux(io.in.stall,ALUType.alu_none,reg_exuType) 
 	io.out.pc 				:= reg_pc
 	io.out.inst 			:= reg_inst 
 	io.out.rs2_data			:= reg_rs2_data
 	io.out.rs2_addr 		:= reg_rs2_addr
 	io.out.mem_addr			:= reg_mem_addr
-	io.out.mem_avalid		:= reg_mem_avalid
-	io.out.w_mem_en			:= reg_w_mem_en
+	io.out.mem_avalid		:= Mux(io.in.stall,false.B,reg_mem_avalid)
+	io.out.w_mem_en			:= Mux(io.in.stall,false.B,reg_w_mem_en)
 }
 
 

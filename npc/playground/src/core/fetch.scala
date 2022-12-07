@@ -12,9 +12,10 @@ class Fetch extends Module{
 			val valid 	= Input(Bool())
 
 			val de_stall 	= Input(Bool())
-			val wb_stall   = Input(Bool())
-            val next_pc = Input(UInt(64.W))
+			val wb_stall  	= Input(Bool())
+            val next_pc 	= Input(UInt(64.W))
             val valid_next_pc = Input(Bool())
+			val flush 		= Input(Bool())
         }
 
         val out = new Bundle{
@@ -49,17 +50,27 @@ class Fetch extends Module{
 	val regInst 	= RegInit(0.U(32.W))
 	val regTempPC	= RegInit(0.U(64.W))
 	
-	when(valid&(!stall)){
+	// when(valid&(!stall)){
+	// 	regInst 	:= Mux(regPC(2),inst(63,32),inst(31,0))
+	// 	regTempPC	:= regPC
+	// }.otherwise{
+	// 	// 生成nop指令  
+	// 	regInst		:= 0.U 
+	// }
+	// when(valid & (!io.in.flush)){
+	// 	regInst 	:= Mux(regPC(2),inst(63,32),inst(31,0))
+	// 	regTempPC	:= regPC
+	// }
+	when(!io.in.flush){
 		regInst 	:= Mux(regPC(2),inst(63,32),inst(31,0))
 		regTempPC	:= regPC
 	}.otherwise{
-		// 生成nop指令  
-		regInst		:= 0.U 
+		regInst		:= 0.U
 	}
 
 	io.out.pc0 		:= regPC
     io.out.pc1 		:= regTempPC 
-    io.out.inst 	:= regInst
+    io.out.inst 	:= Mux(stall,0.U,regInst)
 	io.out.rvalid	:= pc_valid
 
 }
