@@ -37,15 +37,25 @@ class Fetch extends Module{
 // 指令的初始执行位置为0x8000_0000 Reset_Vector
 	val regPC 		= RegInit("h8000_0000".U(64.W))
 	val pc_valid 	= RegInit(true.B)
-	when(valid&(!stall)){
-		regPC 		:= Mux(valid_next_pc,next_pc,regPC + 4.U )
-		pc_valid	:= true.B
-	}.otherwise{
-		regPC		:= regPC 
-		pc_valid	:= false.B
-	}
 
 
+	// when((valid&(!stall))|valid_next_pc){
+	// 	regPC 		:= Mux(valid_next_pc,next_pc,regPC + 4.U )
+	// 	pc_valid	:= true.B
+	// }.otherwise{
+	// 	regPC		:= regPC 
+	// 	pc_valid	:= false.B
+	// }
+// 取指部分有些麻烦，反馈的
+	regPC 			:= Mux(valid_next_pc,next_pc,Mux(valid,regPc + 4.U,regPC))
+	pc_valid 		:= Mux(valid,true.B,false.B)
+	// when(valid){
+	// 	regPC 		:= Mux(valid_next_pc,next_pc,regPC+4.U)
+	// 	pc_valid	:= true.B
+	// }.otherwise{
+	// 	regPC 		:= regPC
+	// 	pc_valid    := false.B
+	// }
 //  指令地址，指令内容传输。
 	val regInst 	= RegInit(0.U(32.W))
 	val regTempPC	= RegInit(0.U(64.W))
@@ -72,6 +82,6 @@ class Fetch extends Module{
 	io.out.pc0 		:= regPC
     io.out.pc1 		:= regTempPC 
     io.out.inst 	:= Mux(stall,0.U,regInst)
-	io.out.rvalid	:= pc_valid
+	io.out.rvalid	:= pc_valid & (!stall)
 
 }

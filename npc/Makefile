@@ -68,6 +68,12 @@ compile:$(VSRCS) $(CSRCS)
 	make -j3 -C obj_dir -f V$(TOPNAME).mk 
 #	obj_dir/V$(TOPNAME) +trace
 
+compile1:$(VSRCS) $(CSRCS) 
+	@echo "------------VERILATE--------------"
+	verilator $(VERILATOR_FLAGS) --gdb -top $(TOPNAME) verilator_config.vlt $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
+	@echo "--- BUILD ---------"
+	make -j3 -C obj_dir -f V$(TOPNAME).mk 
+
 run: 
 	make verilog 
 	make compile
@@ -75,8 +81,8 @@ run:
 
 gdb:
 	make verilog 
-	make compile
-	gdb obj_dir/V$(TOPNAME) run $(ARGS_DIFF) $(IMG)	
+	make compile1
+	obj_dir/V$(TOPNAME) $(ARGS_DIFF) $(IMG)	
 # nemu/native.mk
 sim: run
 	$(call git_commit, "sim RTL") # DO NOT REMOVE THIS LINE!!!
