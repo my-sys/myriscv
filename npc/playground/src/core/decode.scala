@@ -44,6 +44,10 @@ class Decode extends Module with CoreParameters{
 	val reg_inst 	 = RegInit(0.U(32.W))
 	val reg_rs1_addr = RegInit(0.U(RegAddrLen.W))
 	val reg_rs2_addr = RegInit(0.U(RegAddrLen.W))
+	
+	val reg_stall 		= RegInit(false.B)
+
+	val stall 			= reg_stall | io.in.stall
 
     val decodefault = List(Op_type.op_n,ALUType.alu_none,Inst_type.Type_N)
     val opType :: exuType :: instType :: Nil = ListLookup(inst, decodefault,ISA.table)
@@ -75,16 +79,16 @@ class Decode extends Module with CoreParameters{
         //Inst_type.Type_R    -> (),
     ))
 	when(!io.in.flush){
-		reg_imm 			:= imm_data
-		reg_opType          := opType
-		reg_exuType         := exuType     
-		reg_rs1_data        := rs1_data
-		reg_rs2_data        := rs2_data
-		reg_dest_rs_addr    := dest_rs_addr
-		reg_pc              := pc
-		reg_inst 			:= inst
-		reg_rs1_addr		:= rs1_addr
-		reg_rs2_addr		:= rs2_addr
+		reg_imm 			:= Mux(stall,reg_imm,imm_data)
+		reg_opType          := Mux(stall,reg_opType,opType)
+		reg_exuType         := Mux(stall,reg_exuType,exuType)     
+		reg_rs1_data        := Mux(stall,reg_rs1_data,rs1_data)
+		reg_rs2_data        := Mux(stall,reg_rs2_data,rs2_data)
+		reg_dest_rs_addr    := Mux(stall,reg_dest_rs_addr,dest_rs_addr)
+		reg_pc              := Mux(stall,reg_pc,pc)
+		reg_inst 			:= Mux(stall,reg_inst,inst)
+		reg_rs1_addr		:= Mux(stall,reg_rs1_addr,rs1_addr)
+		reg_rs2_addr		:= Mux(stall,reg_rs2_addr,rs2_addr)
 	}.otherwise{
 		// 产生nop指令
 		reg_opType			:= Op_type.op_n
@@ -103,15 +107,18 @@ class Decode extends Module with CoreParameters{
 	io.out.rs1_addr		:= reg_rs1_addr
 	io.out.rs2_addr		:= reg_rs2_addr
 
-	val reg_stall 		= RegInit(false.B)
+	
 
 	io.out.stall 		:= reg_stall
 	// 处理ld 与其他指令的数据相关问题，引入气泡解决. .
-	when((reg_opType === Op_type.op_lsu)&(!reg_exuType(3))&((reg_dest_rs_addr === rs1_addr) |(reg_dest_rs_addr === rs2_addr))){
-		reg_stall := true.B
+	val temp_stall     = (reg_opType === Op_type.op_lsu)&(!reg_exuType(3))&((reg_dest_rs_addr === rs1_addr) |(reg_dest_rs_addr === rs2_addr))
+	 			:= 
+	when(!io.in.flush){
+		reg_stall		:= Mux(io.in.stall,reg_stall,temp_stall)
 	}.otherwise{
-		reg_stall := false.B
+		reg_stall		:= false.B
 	}
+
     when(io.in.w_rs_en){
         reg_file.write(io.in.rs_addr,io.in.result_data)
     }

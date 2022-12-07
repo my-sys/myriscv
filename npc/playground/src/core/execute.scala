@@ -46,7 +46,7 @@ class Exu extends Module with CoreParameters{
 
     val opType      = io.in.opType
     val exuType     = io.in.exuType
-
+	val stall 		= io.in.stall 
 //    val rs1_data    = io.in.rs1_data 
 //    val rs2_data    = io.in.rs2_data
 
@@ -74,10 +74,10 @@ class Exu extends Module with CoreParameters{
 	val rs1_data = Mux((reg_rs_addr === io.in.rs1_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs1_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs1_data))
 	val rs2_data = Mux((reg_rs_addr === io.in.rs2_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs2_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs2_data))
 	when(!reg_flush){
-		reg_opType				:= opType
-		reg_exuType				:= exuType 
-		reg_pc 					:= pc 
-		reg_inst 				:= inst
+		reg_opType				:= Mux(stall,reg_opType,opType)
+		reg_exuType				:= Mux(stall,reg_exuType,exuType) 
+		reg_pc 					:= Mux(stall,reg_pc,pc)
+		reg_inst 				:= Mux(stall,reg_inst,inst)
 	}.otherwise{
 		reg_opType				:= Op_type.op_n
 		reg_exuType				:= ALUType.alu_none
@@ -87,8 +87,8 @@ class Exu extends Module with CoreParameters{
 	val  reg_rs2_addr 		= RegInit(0.U(RegAddrLen.W))
 	
 	when(!reg_flush){
-		reg_rs2_data			:= rs2_data
-		reg_rs2_addr			:= io.in.rs2_addr
+		reg_rs2_data			:= Mux(stall,reg_rs2_data,rs2_data)
+		reg_rs2_addr			:= Mux(stall,reg_rs2_addr,io.in.rs2_addr)
 	}
 	
 	val  reg_mem_addr 		= RegInit(0.U(AddrLen.W))
@@ -153,11 +153,11 @@ class Exu extends Module with CoreParameters{
     val rs_data = temp_w_en_and_rs_data(63,0)
 	
 	when(!reg_flush){
-		reg_rs_data := rs_data
-    	reg_rs_addr := rs_addr
-    	reg_w_rs_en := w_rs_en
-    	reg_next_pc := alu_exu.io.result_pc
-    	reg_valid_next_pc := alu_exu.io.next_pc_valid
+		reg_rs_data := Mux(stall,reg_rs_data,rs_data)
+    	reg_rs_addr := Mux(stall,reg_rs_addr,rs_addr)
+    	reg_w_rs_en := Mux(stall,reg_w_rs_en,w_rs_en)
+    	reg_next_pc := Mux(stall,reg_next_pc,alu_exu.io.result_pc)
+    	reg_valid_next_pc := Mux(stall,reg_valid_next_pc,alu_exu.io.next_pc_valid)
 	}.otherwise{
 		reg_w_rs_en := false.B 
 		reg_valid_next_pc := false.B
