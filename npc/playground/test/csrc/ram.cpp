@@ -59,7 +59,7 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, paddr_t waddr, uint64_t 
             case 0x3: ram[waddr] = (ram[waddr] & 0xffffffffffff0000) | (wdata &0xffff);break;
             case 0xf: ram[waddr] = (ram[waddr] & 0xffffffff00000000) | (wdata &0xffffffff);break;
             case 0xff: ram[waddr] = wdata;break;
-            default:  printf("mem write falied is not 8,16,32,64 0x%x\n",wstrb);assert(0);
+            default:  printf("mem write falied is not 8,16,32,64 0x%x\n",wstrb); //assert(0);
         }
     }
 //	printf(" ramCtrl haha %lx\n",raddr); 
