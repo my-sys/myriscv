@@ -94,10 +94,22 @@ class WriteBack extends Module with CoreParameters{
 				reg_mem_wvalid	:= io.in.w_mem_en
 				reg_mem_addr	:= io.in.mem_addr
 				reg_mem_avalid  := true.B
+				
+				reg_rs_addr		:= io.in.rs_addr
+				reg_result_data := 0.u 
+				reg_w_rs_en		:= false.B
+			}.otherwise{
+				reg_rs_addr			:= io.in.rs_addr
+				reg_result_data		:= io.in.result_data
+				reg_w_rs_en			:= io.in.w_rs_en
 			}
 		}
 		is(ls_busy){
 			when(io.in.mem_valid | io.in.w_ok){
+				//reg_rs_addr		:= 
+				reg_result_data	:= mem_data_result
+				reg_w_rs_en		:= Mux(io.in.mem_valid,true.B,false.B)
+
 				reg_ls_state	:= ls_idle
 				reg_stall 		:= false.B
 				reg_mem_avalid  := false.B
@@ -140,13 +152,13 @@ class WriteBack extends Module with CoreParameters{
     // 暂时还没想好怎么使用这一级
 
 
-	reg_rs_addr 				:= io.in.rs_addr
-	reg_result_data				:= Mux(io.in.mem_valid, mem_data_result, io.in.result_data)
-	reg_w_rs_en 				:= Mux(io.in.mem_valid, true.B,   			io.in.w_rs_en)
+	// reg_rs_addr 				:= io.in.rs_addr
+	// reg_result_data				:= Mux(io.in.mem_valid, mem_data_result, io.in.result_data)
+	// reg_w_rs_en 				:= Mux(io.in.mem_valid, true.B,   			io.in.w_rs_en)
 
-	io.out.rs_addr				:= reg_rs_addr
-	io.out.result_data			:= reg_result_data
-	io.out.w_rs_en				:= reg_w_rs_en
+	io.out.rs_addr				:= Mux(reg_stall,0.U,reg_rs_addr)
+	io.out.result_data			:= Mux(reg_stall,0.U,reg_result_data)
+	io.out.w_rs_en				:= Mux(reg_stall,0.U,reg_w_rs_en)
 
 	io.out.mem_wdata			:= reg_mem_wdata
 	io.out.mem_wvalid			:= reg_mem_wvalid
