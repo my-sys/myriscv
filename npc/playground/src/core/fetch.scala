@@ -47,7 +47,7 @@ class Fetch extends Module{
 	// 	pc_valid	:= false.B
 	// }
 // 取指部分有些麻烦，反馈的
-	regPC 			:= Mux(valid_next_pc,next_pc,Mux(valid,regPc + 4.U,regPC))
+	regPC 			:= Mux(valid_next_pc,next_pc,Mux(valid,regPC + 4.U,regPC))
 	pc_valid 		:= Mux(valid,true.B,false.B)
 	// when(valid){
 	// 	regPC 		:= Mux(valid_next_pc,next_pc,regPC+4.U)
