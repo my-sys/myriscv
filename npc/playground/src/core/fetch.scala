@@ -62,10 +62,11 @@ class Fetch extends Module{
 	// 	regTempPC	:= regPC
 	// }
 	when(!io.in.flush){
-		regInst 	:= Mux(regPC(2),inst(63,32),inst(31,0))
-		regTempPC	:= regPC
+		regInst 	:= Mux(valid,Mux(regPC(2),inst(63,32),inst(31,0)),0.U)       //Mux(regPC(2),inst(63,32),inst(31,0))
+		regTempPC	:= Mux(valid,regPC,0.U)
 	}.otherwise{
 		regInst		:= 0.U
+		regTempPC	:= 0.U
 	}
 
 	io.out.pc0 		:= regPC
