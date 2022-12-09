@@ -121,8 +121,8 @@ class WriteBack extends Module with CoreParameters{
 	val difftest_commit 		= RegInit(false.B)
 	val reg_inst 				= RegInit(0.U(InstLen.W))
 	val reg_pc 					= RegInit(0.U(AddrLen.W))
-	reg_pc 						:= io.in.pc 
-	reg_inst 					:= io.in.inst 
+	reg_pc 						:= Mux(reg_stall,reg_pc,io.in.pc) 
+	reg_inst 					:= Mux(reg_stall,reg_inst,io.in.inst) 
 	val difftest_inst 			= RegInit(0.U(InstLen.W))
 	val difftest_pc 			= RegInit(0.U(AddrLen.W))
 	val reg_exuType				= RegInit(0.U(ExuTypeLen.W))
