@@ -59,7 +59,7 @@ class Fetch extends Module{
 		reg_valid  			:= Mux(valid,true.B,reg_valid)
 		temp_reg_inst 		:= Mux(valid,handle_inst,temp_reg_inst)
 		reg_next_pc			:= Mux(flush,next_pc,reg_next_pc)
-		reg_next_pc_valid	:= Mux(flush,next_pc_valid,reg_next_pc_valid)
+		reg_next_pc_valid	:= Mux(flush,valid_next_pc,reg_next_pc_valid)
 	}.otherwise{
 	// 在stall结束后，要观察是否暂存了valid，以及是否刚好到来valid，如果是这两种情况，flush信号不需要继续保存，因为要当场处理了。
 	// 如果没有valid，flush信号应当继续保存，直到valid到来再进行处理。
@@ -69,7 +69,7 @@ class Fetch extends Module{
 			reg_next_pc_valid := false.B
 		}.otherwise{
 			reg_next_pc 		:= Mux(flush,next_pc,reg_next_pc)
-			reg_next_pc_valid	:= Mux(flush,next_pc_valid,reg_next_pc_valid)
+			reg_next_pc_valid	:= Mux(flush,valid_next_pc,reg_next_pc_valid)
 		}
 		reg_valid := false.B
 		temp_reg_inst := 0.U
