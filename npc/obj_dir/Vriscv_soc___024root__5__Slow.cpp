@@ -13,6 +13,8 @@ void Vriscv_soc___024root___configure_coverage_1(Vriscv_soc___024root* vlSelf, b
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root___configure_coverage_1\n"); );
     // Body
     if (false && first) {}  // Prevent unused
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2168]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 2330, 17, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "io_rdata[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2169]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 2330, 17, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "io_rdata[22]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2170]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 2330, 17, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "io_rdata[23]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2171]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 2330, 17, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "io_rdata[24]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2172]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 2330, 17, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "io_rdata[25]", "");
@@ -723,7 +725,7 @@ void Vriscv_soc___024root___configure_coverage_1(Vriscv_soc___024root* vlSelf, b
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2410]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 17, 21, ".riscv_soc.axi_ram.mem", "v_toggle/RAMCtrl", "wstrb[6]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2411]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 17, 21, ".riscv_soc.axi_ram.mem", "v_toggle/RAMCtrl", "wstrb[7]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2403]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 18, 21, ".riscv_soc.axi_ram.mem", "v_toggle/RAMCtrl", "wen", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[7366]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 20, 5, ".riscv_soc.axi_ram.mem", "v_line/RAMCtrl", "block", "20-21");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[7368]), first, "/home/xingk/ysyx-workbench/npc/playground/test/vsrc/ram.v", 20, 5, ".riscv_soc.axi_ram.mem", "v_line/RAMCtrl", "block", "20-21");
 }
 
 void Vriscv_soc___024root___configure_coverage_0(Vriscv_soc___024root* vlSelf, bool first) VL_ATTR_COLD;
