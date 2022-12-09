@@ -64,7 +64,6 @@ VL_MODULE(Vriscv_soc___024root) {
     // LOCAL SIGNALS
     // Anonymous structures to workaround compiler member-count bugs
     struct {
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__fetch_io_out_rvalid;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute_io_out_w_rs_en;
         CData/*5:0*/ riscv_soc__DOT__core__DOT__execute_io_out_exuType;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute_io_out_mem_avalid;
@@ -81,6 +80,10 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*0:0*/ riscv_soc__DOT__core__DOT__tem_reg_is_read_mem;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__stall;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__pc_valid;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__reg_valid;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__reg_next_pc_valid;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__fetch__DOT___reg_next_pc_valid_T;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__fetch__DOT___GEN_2;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__lsu_exu_io_w_mem_en;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__reg_flush;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__reg_w_rs_en;
@@ -98,8 +101,11 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*4:0*/ riscv_soc__DOT__core__DOT__decode__DOT__reg_rs1_addr;
         CData/*4:0*/ riscv_soc__DOT__core__DOT__decode__DOT__reg_rs2_addr;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__decode__DOT__reg_stall;
+        CData/*2:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_180;
         CData/*2:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_195;
+        CData/*5:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_247;
         CData/*5:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_262;
+        CData/*3:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_314;
         CData/*3:0*/ riscv_soc__DOT__core__DOT__decode__DOT__instType;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__decode__DOT__temp_stall;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__decode__DOT___GEN_10;
@@ -116,25 +122,31 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*0:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__difftest_commit;
         CData/*5:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__reg_exuType;
         IData/*31:0*/ riscv_soc__DOT__core__DOT__fetch_io_out_inst;
-        IData/*31:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__regInst;
+        IData/*31:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__reg_inst;
+        IData/*31:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__handle_inst;
+        IData/*31:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__temp_reg_inst;
+        IData/*31:0*/ riscv_soc__DOT__core__DOT__fetch__DOT___reg_inst_T_3;
         IData/*31:0*/ riscv_soc__DOT__core__DOT__execute__DOT__reg_inst;
         VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__temp_w_en_and_rs_data;
+    };
+    struct {
         VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___subresult_T_2;
         IData/*31:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__srlw_temp;
         IData/*31:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sraw_temp;
+        VlWide<3>/*65:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___temp_result_data_T_72;
         VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data;
         VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc;
         IData/*31:0*/ riscv_soc__DOT__core__DOT__decode__DOT__reg_inst;
         IData/*31:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__reg_inst;
         IData/*31:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__difftest_inst;
         QData/*63:0*/ riscv_soc__DOT__core_io_out_raddr;
-    };
-    struct {
         QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back_io_out_result_data;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__tem_reg_rdata;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__regPC;
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT___regPC_T_1;
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__regTempPC;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__reg_next_pc;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT___reg_next_pc_T;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT___regPC_T_3;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu_io_op_data1;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu_io_op_data2;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__reg_rs_addr;
@@ -203,7 +215,8 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*0:0*/ riscv_soc__DOT__core__DOT____Vtogcov__is_read_mem;
         CData/*0:0*/ riscv_soc__DOT__core__DOT____Vtogcov__is_read_inst;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__fetch__DOT____Vtogcov__stall;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__fetch__DOT____Vtogcov__pc_valid;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__fetch__DOT____Vtogcov__reg_valid;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__fetch__DOT____Vtogcov__reg_next_pc_valid;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_next_pc_valid;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_w_rs_en;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__lsu_exu_io_valid;
@@ -233,10 +246,12 @@ VL_MODULE(Vriscv_soc___024root) {
         IData/*31:0*/ riscv_soc__DOT__core__DOT____Vtogcov__fetch_io_out_inst;
         IData/*31:0*/ riscv_soc__DOT__core__DOT____Vtogcov__execute_io_in_inst;
         IData/*31:0*/ riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_inst;
-        IData/*31:0*/ riscv_soc__DOT__core__DOT__fetch__DOT____Vtogcov__regInst;
-        VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data;
+        IData/*31:0*/ riscv_soc__DOT__core__DOT__fetch__DOT____Vtogcov__reg_inst;
     };
     struct {
+        IData/*31:0*/ riscv_soc__DOT__core__DOT__fetch__DOT____Vtogcov__handle_inst;
+        IData/*31:0*/ riscv_soc__DOT__core__DOT__fetch__DOT____Vtogcov__temp_reg_inst;
+        VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__temp_w_en_and_rs_data;
         VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__subresult;
         IData/*31:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__srlw_temp;
         IData/*31:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____Vtogcov__sraw_temp;
@@ -298,11 +313,11 @@ VL_MODULE(Vriscv_soc___024root) {
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_13;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_14;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_15;
+    };
+    struct {
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_16;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_17;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_18;
-    };
-    struct {
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_19;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_20;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_21;
@@ -330,6 +345,7 @@ VL_MODULE(Vriscv_soc___024root) {
         QData/*63:0*/ riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_pc;
         QData/*63:0*/ riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_rs2_data;
         QData/*63:0*/ riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_mem_addr;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT____Vtogcov__reg_next_pc;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_op_data1;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_op_data2;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_result_data;
@@ -346,6 +362,7 @@ VL_MODULE(Vriscv_soc___024root) {
         QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back__DOT____Vtogcov__mem_data_result;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back__DOT____Vtogcov__mem_wstrb;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back__DOT____Vtogcov__reg_pc;
+        QData/*63:0*/ __Vdly__riscv_soc__DOT__core__DOT__fetch__DOT__regPC;
         QData/*63:0*/ __Vdly__riscv_soc__DOT__core__DOT__execute__DOT__reg_rs2_data;
         QData/*63:0*/ __Vdly__riscv_soc__DOT__core__DOT__execute__DOT__reg_rs_data;
         QData/*63:0*/ __Vdly__riscv_soc__DOT__core__DOT__execute__DOT__reg_rs_addr;
