@@ -84,10 +84,11 @@ static void checkregs(CPU_state *ref, vaddr_t pc) {
   }
 }
 
+//pc 是dut当前，npc是dut下一个地址值 
 void difftest_step(vaddr_t pc, vaddr_t npc) {
   CPU_state ref_r;
 
-  if (skip_dut_nr_inst > 0) {
+  if (skip_dut_nr_inst > 0) { //这一步是想让dut追上ref,dut运行，ref不运行 
     ref_difftest_regcpy(&ref_r, DIFFTEST_TO_DUT);
     if (ref_r.pc == npc) {
       skip_dut_nr_inst = 0;
@@ -100,9 +101,9 @@ void difftest_step(vaddr_t pc, vaddr_t npc) {
     return;
   }
 
-  if (is_skip_ref) {
+  if (is_skip_ref) { // 这个是dut运行的一些步，ref无法同步，直接给ref赋值，强行填平区别  
     // to skip the checking of an instruction, just copy the reg state to reference design
-    ref_difftest_regcpy(&cpu, DIFFTEST_TO_REF);
+    ref_difftest_regcpy(&cpu, DIFFTEST_TO_REF); //从此处可以看出赋值给ref.pc 的是下一条将运行的指令
     is_skip_ref = false;
     return;
   }
@@ -110,7 +111,7 @@ void difftest_step(vaddr_t pc, vaddr_t npc) {
   ref_difftest_exec(1);
   ref_difftest_regcpy(&ref_r, DIFFTEST_TO_DUT);
 
-  //checkregs(&ref_r, pc);
+  //checkregs(&ref_r, pc); //这个是用当前指令与ref的下一条指令进行对比，显然与前文冲突，实际的化，应该与下一条指令对比，所以用npc
   checkregs(&ref_r, npc); // ----- xingk
 }
 #else

@@ -15,6 +15,7 @@ void difftest_memcpy(paddr_t addr, void *buf, size_t n, bool direction) {
   }
 }
 
+// npc 中是流水线，进行确定下一条指令，是较为困难的，所以只能用当前指令与当前指令进行对比。
 void difftest_regcpy(void *dut, bool direction) {
   CPU_state* temp = (CPU_state*)dut;
   if(direction == false){ // to dut 

@@ -10,6 +10,8 @@
 #define DIFFTEST_TO_REF 1
 #define DIFFTEST_TO_DUT 0
 
+static uint64_t ref_this_pc = RESET_VECTOR
+
 void (*ref_difftest_memcpy)(paddr_t addr, void *buf, size_t n, bool direction) = NULL;
 void (*ref_difftest_regcpy)(void *dut, bool direction) = NULL;
 void (*ref_difftest_exec)(uint64_t n) = NULL;
@@ -71,6 +73,7 @@ void difftest_step(vaddr_t pc){
 
 	if(skip_dut_nr_inst > 0){
 		ref_difftest_regcpy(&ref_r,DIFFTEST_TO_DUT);
+		// 这里有问题，ref.pc 是下一个pc, 而pc 是当前pc, 跳转指令问题  
 		if(ref_r.pc == pc){
 			skip_dut_nr_inst = 0;
 			Emulator::get_instance().checkregs(&ref_r, pc);
@@ -85,6 +88,7 @@ void difftest_step(vaddr_t pc){
 
 	if (is_skip_ref){
 		// to skip the checking of an instruction, just copy the reg state to reference design
+		// 这里有问题，ref.pc 是下一个pc, 而pc 是当前pc, 跳转指令问题  
 		ref_difftest_regcpy(&cpu, DIFFTEST_TO_REF);
 		is_skip_ref = false;
 		return;
@@ -92,5 +96,9 @@ void difftest_step(vaddr_t pc){
 
 	ref_difftest_exec(1);
 	ref_difftest_regcpy(&ref_r, DIFFTEST_TO_DUT);
+//  原因 流水线中难以获取下一个pc值，只能获取当前pc值，而ref是获取的下一个pc值，这就存在差异，需要进行转换  
+	uint64_t next_pc = ref_r.pc;
+	ref_r.pc = ref_this_pc;
+	ref_this_pc = next_pc;
 	Emulator::get_instance().checkregs(&ref_r, pc);
 }
