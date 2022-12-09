@@ -20293,9 +20293,10 @@ void Vriscv_soc___024root___configure_coverage_0(Vriscv_soc___024root* vlSelf, b
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[7359]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1694, 14, ".riscv_soc.core.write_back", "v_branch/WriteBack", "if", "1694-1695");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[7360]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1694, 15, ".riscv_soc.core.write_back", "v_branch/WriteBack", "else", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[7361]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1692, 5, ".riscv_soc.core.write_back", "v_line/WriteBack", "elsif", "1692-1693");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[7362]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1697, 5, ".riscv_soc.core.write_back", "v_branch/WriteBack", "if", "1697-1698");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[7363]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1697, 6, ".riscv_soc.core.write_back", "v_branch/WriteBack", "else", "1699-1700");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[7364]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1581, 3, ".riscv_soc.core.write_back", "v_line/WriteBack", "block", "1581,1602");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[7362]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1699, 14, ".riscv_soc.core.write_back", "v_branch/WriteBack", "if", "1699-1700");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[7363]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1699, 15, ".riscv_soc.core.write_back", "v_branch/WriteBack", "else", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[7364]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1697, 5, ".riscv_soc.core.write_back", "v_line/WriteBack", "elsif", "1697-1698");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[7365]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 1581, 3, ".riscv_soc.core.write_back", "v_line/WriteBack", "block", "1581,1602");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[0]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 2328, 17, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "clock", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2339]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 2329, 17, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "io_raddr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2340]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 2329, 17, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "io_raddr[1]", "");
@@ -20384,5 +20385,4 @@ void Vriscv_soc___024root___configure_coverage_0(Vriscv_soc___024root* vlSelf, b
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2167]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 2330, 17, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "io_rdata[20]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2168]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 2330, 17, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "io_rdata[21]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2169]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 2330, 17, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "io_rdata[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2170]), first, "/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 2330, 17, ".riscv_soc.axi_ram", "v_toggle/AXI_RAM", "io_rdata[23]", "");
 }
