@@ -126,7 +126,7 @@ class WriteBack extends Module with CoreParameters{
 	val difftest_inst 			= RegInit(0.U(InstLen.W))
 	val difftest_pc 			= RegInit(0.U(AddrLen.W))
 	val reg_exuType				= RegInit(0.U(ExuTypeLen.W))
-	reg_exuType					:= io.in.exuType
+	reg_exuType					:= Mux(reg_stall,reg_exuType,io.in.exuType)
 	// when(reg_stall & io.in.w_ok){
 	// 	difftest_inst 	:= reg_inst 
 	// 	difftest_pc		:= reg_pc
@@ -138,6 +138,7 @@ class WriteBack extends Module with CoreParameters{
 	// }.otherwise{
 	// 	difftest_commit := false.B
 	// }
+
 	when(reg_stall | (reg_exuType === ALUType.alu_none)){
 		difftest_commit := false.B
 	}.otherwise{
