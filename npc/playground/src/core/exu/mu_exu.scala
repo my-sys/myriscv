@@ -96,7 +96,7 @@ class MUL extends Module with CoreParameters{
 		}
 	}
 	io.stall 				:= reg_stall
-	io.result				:= Mux(reg_exuType,reg_result(63,0),reg_result(127,64)) 
+	io.result				:= Mux(reg_exuType === 1.U,reg_result(63,0),reg_result(127,64)) 
 	io.out_valid			:= reg_out_valid
 }
 
