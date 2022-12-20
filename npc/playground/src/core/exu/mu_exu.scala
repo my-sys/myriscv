@@ -42,7 +42,7 @@ class MUL extends Module with CoreParameters{
 
 	// temp_mul2 的长度是67, mul2 为64位，多出1位用于兼容无符号运算， 即65位
 	// 按照基4的Booth，需要最地位添0 故66位，为了满足三等分，高位扩展一位符号位，故67位.
-	val temp_mul2 		= Cat(Fill(1,mul2(64)),Cat(mul2,0.U(1.W)))
+	val temp_mul2 		= Cat(Fill(1,mul_data2(64)),Cat(mul_data2,0.U(1.W)))
 	val reg_stall 		= RegInit(false.B)
 	val reg_cnt 		= RegInit(0.U(5.W))
 	val mul_start :: mul_busy :: mul_end = Enum(3)
