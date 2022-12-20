@@ -48,9 +48,9 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, paddr_t waddr, uint64_t 
 		*rdata = 0;
 		return;
 	}
-	if(waddr == 0x80000138){
-		printf("waddr = 0x80000138,data = %lx\n",wdata);
-	}
+	// if((waddr == 0x80000138) & wen){
+	// 	printf("waddr = 0x80000138,data = %lx\n",wdata);
+	// }
     raddr = (raddr - 0x80000000)>>3;
 	waddr = (waddr - 0x80000000)>>3;
 //	printf(" ramCtrl haha12 %lx\n",raddr); 
@@ -58,10 +58,10 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, paddr_t waddr, uint64_t 
 //	printf(" ramCtrl haha1233 %lx\n",raddr); 
     if(wen){
         switch(wstrb){
-            case 0x1: ram[waddr] = (ram[waddr] & 0xffffffffffffff00) | (wdata &0xff);break;
-            case 0x3: ram[waddr] = (ram[waddr] & 0xffffffffffff0000) | (wdata &0xffff);break;
-            case 0xf: ram[waddr] = (ram[waddr] & 0xffffffff00000000) | (wdata &0xffffffff);break;
-            case 0xff: ram[waddr] = wdata;break;
+            case 0x1: ram[waddr] = (ram[waddr] & 0xffffffffffffff00) | (wdata &0xff); printf("m1: 0x%lx, data: 0x%lx\n",waddr,ram[waddr]);break;
+            case 0x3: ram[waddr] = (ram[waddr] & 0xffffffffffff0000) | (wdata &0xffff);printf("m2: 0x%lx, data: 0x%lx\n",waddr,ram[waddr]);break;
+            case 0xf: ram[waddr] = (ram[waddr] & 0xffffffff00000000) | (wdata &0xffffffff);printf("m3: 0x%lx, data: 0x%lx\n",waddr,ram[waddr]);break;
+            case 0xff: ram[waddr] = wdata;printf("m4: 0x%lx, data: 0x%lx\n",waddr,ram[waddr]);break;
             default:  printf("mem write falied is not 8,16,32,64 0x%x\n",wstrb); 
 					  printf("paddr = 0x%lx,waddr = 0x%lx, wdata = 0x%lx, wstrb = 0x%x,wen = 0x%x\n",
 					  raddr,waddr,wdata,wstrb,wen);//assert(0);
