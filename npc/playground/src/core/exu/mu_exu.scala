@@ -44,7 +44,7 @@ class MUL extends Module with CoreParameters{
 	// 按照基4的Booth，需要最地位添0 故66位，为了满足三等分，高位扩展一位符号位，故67位.
 	val temp_mul2 		= Cat(Fill(1,mul_data2(64)),Cat(mul_data2,0.U(1.W)))
 	val reg_stall 		= RegInit(false.B)
-	val reg_cnt 		= RegInit(0.U(5.W))
+	val reg_cnt 		= RegInit(0.U(6.W))
 	val mul_start :: mul_busy :: mul_end :: Nil = Enum(3)
 	val reg_state 		= RegInit(mul_start)
 	val reg_temp_mul2   = RegInit(0.U(67.W))
