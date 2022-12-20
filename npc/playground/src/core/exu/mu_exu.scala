@@ -193,6 +193,7 @@ class MU_EXU extends Module with CoreParameters{
 	val div = Module(new DIV)
 	val mul = Module(new MUL)
 
+	val exuType 		= io.exuType
 	div.io.rs1_data 	:= io.rs1_data
 	div.io.rs2_data 	:= io.rs2_data
 	div.io.valid 		:= io.in_valid & exuType(4)
