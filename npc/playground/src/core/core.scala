@@ -79,7 +79,7 @@ class Core extends Module{
 	// decode 
     decode.io.in.inst           := fetch.io.out.inst 
     decode.io.in.pc             := fetch.io.out.pc1
-	decode.io.in.stall 			:= write_back.io.out.stall  
+	decode.io.in.stall 			:= write_back.io.out.stall | execute.io.out.stall 
 	decode.io.in.flush 			:= execute.io.out.flush
     // execute 
     execute.io.in.opType        := decode.io.out.opType
@@ -100,6 +100,7 @@ class Core extends Module{
     fetch.io.in.next_pc         := execute.io.out.next_pc
     fetch.io.in.valid_next_pc   := execute.io.out.valid_next_pc
 	fetch.io.in.wb_stall 		:= write_back.io.out.stall 
+	fetch.io.in.ex_stall		:= execute.io.out.stall
 	fetch.io.in.de_stall 		:= decode.io.out.stall 
 	fetch.io.in.flush 			:= execute.io.out.flush 
     // write-back

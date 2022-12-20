@@ -12,7 +12,8 @@ class Fetch extends Module{
 			val valid 	= Input(Bool())
 
 			val de_stall 	= Input(Bool())
-			val wb_stall  	= Input(Bool())
+			val wb_stall  	= Input(Bool()) 
+			val ex_stall	= Input(Bool())
             val next_pc 	= Input(UInt(64.W))
             val valid_next_pc = Input(Bool())
 			val flush 		= Input(Bool())
@@ -31,7 +32,7 @@ class Fetch extends Module{
     val next_pc         = io.in.next_pc
     val valid_next_pc   = io.in.valid_next_pc
 
-	val stall 			= io.in.de_stall | io.in.wb_stall
+	val stall 			= io.in.de_stall | io.in.wb_stall | io.in.ex_stall
 	val flush 			= io.in.flush
 // 指令地址自增，与判断下一个指令地址
 // 指令的初始执行位置为0x8000_0000 Reset_Vector

@@ -533,7 +533,7 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declArray(c+229,"riscv_soc core execute mu_exu mul mul_data2", false,-1, 64,0);
         tracep->declArray(c+232,"riscv_soc core execute mu_exu mul temp_mul2", false,-1, 66,0);
         tracep->declBit(c+202,"riscv_soc core execute mu_exu mul reg_stall", false,-1);
-        tracep->declBus(c+235,"riscv_soc core execute mu_exu mul reg_cnt", false,-1, 4,0);
+        tracep->declBus(c+235,"riscv_soc core execute mu_exu mul reg_cnt", false,-1, 5,0);
         tracep->declBus(c+236,"riscv_soc core execute mu_exu mul reg_state", false,-1, 1,0);
         tracep->declArray(c+237,"riscv_soc core execute mu_exu mul reg_temp_mul2", false,-1, 66,0);
         tracep->declArray(c+240,"riscv_soc core execute mu_exu mul reg_mul1", false,-1, 64,0);
@@ -1014,7 +1014,7 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->fullCData(oldp+228,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType),6);
         tracep->fullWData(oldp+229,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__mul_data2),65);
         tracep->fullWData(oldp+232,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__temp_mul2),67);
-        tracep->fullCData(oldp+235,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_cnt),5);
+        tracep->fullCData(oldp+235,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_cnt),6);
         tracep->fullCData(oldp+236,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_state),2);
         tracep->fullWData(oldp+237,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_temp_mul2),67);
         tracep->fullWData(oldp+240,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_mul1),65);
