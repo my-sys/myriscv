@@ -205,7 +205,7 @@ class MU_EXU extends Module with CoreParameters{
 	mul.io.valid 		:= io.in_valid &(~exuType(4))
 
 	io.stall 		:= div.io.stall | mul.io.stall 
-	io.result 		:= Mux(div.io.out_valid,div.io.result,0.U) | Mux(mul.io.out_valid,mul.io.result,0.U)
+	io.result 		:= Mux(mul.io.out_valid,mul.io.result,0.U)
 	io.out_valid 	:= div.io.out_valid | mul.io.out_valid
 
 }   
