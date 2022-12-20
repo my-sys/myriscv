@@ -38,7 +38,7 @@ uint64_t init_ram(const char* img_file){
 
 uint64_t mem_read(uint64_t addr, int len){
     // addr , len 要进行额外处理以下。
-	uint64_t real_addr = addr - 0x80000000;
+	uint64_t real_addr = (addr - 0x80000000)>>3;
     return ram[real_addr];
 } 
 

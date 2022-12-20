@@ -94,7 +94,8 @@ bool Emulator::isa_difftest_checkregs(CPU_state *ref, vaddr_t pc){
 	read_regs(gpr);
 	for(int i=0;i<32;i++){
 		if(ref->gpr[i] != gpr[i]){
-			printf("difftest false \n");
+			printf("difftest false \n"); 
+			printf("ref gpr[%d] = 0x%lx, gpr[%d] = 0x%lx\n",i,ref->gpr[i],i,gpr[i]);
 			return false;
 		}
 	}
