@@ -45,14 +45,14 @@ class MUL extends Module with CoreParameters{
 	val temp_mul2 		= Cat(Fill(1,mul_data2(64)),Cat(mul_data2,0.U(1.W)))
 	val reg_stall 		= RegInit(false.B)
 	val reg_cnt 		= RegInit(0.U(5.W))
-	val mul_start :: mul_busy :: mul_end = Enum(3)
+	val mul_start :: mul_busy :: mul_end :: Nil = Enum(3)
 	val reg_state 		= RegInit(mul_start)
 	val reg_temp_mul2   = RegInit(0.U(67.W))
 	val reg_mul1		= RegInit(0.U(65.W))
 	val reg_result 		= RegInit(0.U(130.W))
 	val reg_exuType 	= RegInit(0.U(1.W)) 
 	val reg_out_valid	= RegInit(false.B)
-	val pp				= MuxLookUp(reg_temp_mul2(66,64),0.U(65.W),List(
+	val pp				= MuxLookup(reg_temp_mul2(66,64),0.U(65.W),List(
 		"b001".U 	->  (reg_mul1),
 		"b010".U 	-> 	(reg_mul1),
 		"b011".U 	->	(reg_mul1 << 1.U),
