@@ -32,6 +32,11 @@ class MUL extends Module with CoreParameters{
 		val out_valid	= Output(Bool())
 
 	})
+	val exuType		= io.exuType 
+	val rs1_data	= io.rs1_data
+	val rs2_data	= io.rs2_data
+	val valid 		= io.valid
+
 	val mul_data1 = Mux(exuType(2),Cat(Fill(33,rs1_data(31)),rs1_data(31,0)),Mux(exuType(1),Cat(rs1_data(63),rs1_data),Cat(0.U(1.W),rs1_data)))
 	val mul_data2 = Mux(exuType(2),Cat(Fill(33,rs2_data(31)),rs2_data(31,0)),Mux(exuType(0),Cat(rs2_data(63),rs2_data),Cat(0.U(1.W),rs2_data)))	
 
