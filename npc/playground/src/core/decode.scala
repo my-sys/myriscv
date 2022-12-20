@@ -63,9 +63,10 @@ class Decode extends Module with CoreParameters{
     //val temp_inst = WireInit(3.U(32.W))
     //BoringUtils.addSource(temp_inst,"DIFFTEST_INST1")
 	//处理寄存器读写同时进行时的相关问题
-    val rs1_data        = Mux((io.in.rs_addr === rs1_addr)&io.in.w_rs_en, io.in.result_data,reg_file.read(rs1_addr))
-    val rs2_data        = Mux((io.in.rs_addr === rs2_addr)&io.in.w_rs_en, io.in.result_data,reg_file.read(rs2_addr))
-
+    // val rs1_data        = Mux((io.in.rs_addr === rs1_addr)&io.in.w_rs_en, io.in.result_data,reg_file.read(rs1_addr))
+    // val rs2_data        = Mux((io.in.rs_addr === rs2_addr)&io.in.w_rs_en, io.in.result_data,reg_file.read(rs2_addr))
+	val rs1_data		= reg_file.read(rs1_addr)
+	val rs2_data		= reg_file.read(rs2_addr)
 
     val imm_data             = MuxLookup(instType, 0.U, List(
         Inst_type.Type_I    -> (Cat( Fill(52,inst(31)) ,inst(31,20))),  // sign extension

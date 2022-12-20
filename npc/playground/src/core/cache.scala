@@ -35,7 +35,7 @@ class Cache extends Module{
 
 	io.cpu_out.rdata 		:= io.bus_in.data
 	io.cpu_out.rvalid		:= io.bus_in.valid 
-	io.cpu_out.w_ok			:= ~io.bus_in.valid
+	io.cpu_out.w_ok			:= io.cpu_in.is_w
 
 	io.bus_out.waddr 		:= io.cpu_in.addr
 	io.bus_out.wdata		:= io.cpu_in.wdata
