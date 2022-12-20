@@ -83,6 +83,7 @@ class WriteBack extends Module with CoreParameters{
 	val reg_mem_avalid			= RegInit(false.B)
 	val reg_ls_state 		= RegInit(ls_idle) 
 
+	// 处理数据相关问题
 	val rs2_data 		= Mux((io.in.rs2_addr === reg_rs_addr)&reg_w_rs_en,reg_result_data,io.in.rs2_data)
 	switch(reg_ls_state){
 		is(ls_idle){
