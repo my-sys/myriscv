@@ -133,8 +133,9 @@ class DIV extends Module with CoreParameters{
 
 	val reg_state		= RegInit(div_start)
 	val reg_cnt			= RegInit(0.U(7.W))
-	val reg_exuType		= RegInit(0.U(ExuTypeLen.w)) 
-	val reg_out_valid   = RegInit(false.B)
+	val reg_exuType		= RegInit(0.U(ExuTypeLen.W)) 
+	val reg_out_valid   = RegInit(false.B) 
+	val reg_stall 		= RegInit(false.B)
 	switch(reg_state){
 		is(div_start){
 			reg_divisor 	:= divisor
