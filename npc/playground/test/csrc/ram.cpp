@@ -48,9 +48,9 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, paddr_t waddr, uint64_t 
 		*rdata = 0;
 		return;
 	}
-	// if((waddr == 0x80000138) & wen){
-	// 	printf("waddr = 0x80000138,data = %lx\n",wdata);
-	// }
+	if(wen){
+		printf("waddr = 0x%lx,data = %lx, wstrb = 0x%x\n",waddr,wdata,wstrb);
+	}
     raddr = (raddr - 0x80000000)>>3;
 	waddr = (waddr - 0x80000000)>>3;
 //	printf(" ramCtrl haha12 %lx\n",raddr); 
