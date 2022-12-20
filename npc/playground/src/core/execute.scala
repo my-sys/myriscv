@@ -44,9 +44,14 @@ class Exu extends Module with CoreParameters{
 
     })
 
+    val alu_exu = Module(new ALU_EXU())
+    val lsu_exu = Module(new LSU_EXU()) 
+	val mu_exu  = Module(new MU_EXU())
+
+
     val opType      = io.in.opType
     val exuType     = io.in.exuType
-	val stall 		= io.in.stall 
+	val stall 		= io.in.stall | mu_exu.io.stall
 //    val rs1_data    = io.in.rs1_data 
 //    val rs2_data    = io.in.rs2_data
 
@@ -95,8 +100,7 @@ class Exu extends Module with CoreParameters{
 	val  reg_mem_avalid		= RegInit(false.B)
 	val  reg_w_mem_en 		= RegInit(false.B)
 
-    val alu_exu = Module(new ALU_EXU())
-    val lsu_exu = Module(new LSU_EXU())
+
 
     //val csr_exu = Module(new CSR_EXU())
     //val mu_exu  = Module(new MU_EXU())
@@ -139,14 +143,19 @@ class Exu extends Module with CoreParameters{
     alu_exu.io.op_data2 := rs2_data
     alu_exu.io.op_imm   := imm_data
     alu_exu.io.op_pc    := pc
-
+//-----------------------------------------------------------
+//----------------MU EXU -----------------------------------
+	mu_exu.io.exuType		:= exuType 
+	mu_exu.io.rs1_data		:= rs1_data
+	mu_exu.io.rs2_data		:= rs2_data
+	mu_exu.io.in_valid		:= valid(3)
     // The results of function unit 
     // Mux1H
     val temp_w_en_and_rs_data = MuxCase(0.U(65.W),Array(
         valid(0) -> Cat(alu_exu.io.w_rs_en.asUInt,alu_exu.io.result_data),
         valid(1) -> Cat(0.U(1.W),0.U(64.W)),
         valid(2) -> Cat(0.U(1.W),0.U(64.W)),
-        valid(3) -> Cat(0.U(1.W),0.U(64.W))
+        valid(3) -> Cat(mu_exu.io.out_valid,mu_exu.io.result_data)
     ))
 
     val w_rs_en = temp_w_en_and_rs_data(64)
