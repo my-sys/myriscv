@@ -77,7 +77,7 @@ class MUL extends Module with CoreParameters{
 			//reg_mul1
 			//reg_exuType
 			//reg_out_valid
-			reg_result		:= reg_result<<2.U + pp
+			reg_result		:= (reg_result<<2.U) + pp
 			reg_temp_mul2	:= reg_temp_mul2 << 2.U
 			reg_cnt 		:= reg_cnt + 1.U
 			when(reg_cnt === 32.U){
