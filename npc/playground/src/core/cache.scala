@@ -35,6 +35,7 @@ class Cache extends Module{
 
 	io.cpu_out.rdata 		:= io.bus_in.data
 	io.cpu_out.rvalid		:= io.bus_in.valid 
+	// 这里假设 dcache 立即给予响应回答，实际上不一定成立
 	io.cpu_out.w_ok			:= io.cpu_in.is_w
 
 	io.bus_out.waddr 		:= io.cpu_in.addr

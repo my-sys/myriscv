@@ -175,20 +175,20 @@ class Exu extends Module with CoreParameters{
 
     io.out.rs_addr          := reg_rs_addr
     io.out.rs_data          := reg_rs_data
-    io.out.w_rs_en          := Mux(io.in.stall,false.B,reg_w_rs_en)
+    io.out.w_rs_en          := Mux(stall,false.B,reg_w_rs_en)
     io.out.next_pc          := reg_next_pc
-    io.out.valid_next_pc    := Mux(io.in.stall,false.B,reg_valid_next_pc)
-	io.out.flush 			:= Mux(io.in.stall,false.B,reg_valid_next_pc)
+    io.out.valid_next_pc    := Mux(stall,false.B,reg_valid_next_pc)
+	io.out.flush 			:= Mux(stall,false.B,reg_valid_next_pc)
 
-	io.out.opType			:= Mux(io.in.stall,Op_type.op_n,reg_opType)
-	io.out.exuType			:= Mux(io.in.stall,ALUType.alu_none,reg_exuType) 
+	io.out.opType			:= Mux(stall,Op_type.op_n,reg_opType)
+	io.out.exuType			:= Mux(stall,ALUType.alu_none,reg_exuType) 
 	io.out.pc 				:= reg_pc
 	io.out.inst 			:= reg_inst 
 	io.out.rs2_data			:= reg_rs2_data
 	io.out.rs2_addr 		:= reg_rs2_addr
 	io.out.mem_addr			:= reg_mem_addr
-	io.out.mem_avalid		:= Mux(io.in.stall,false.B,reg_mem_avalid)
-	io.out.w_mem_en			:= Mux(io.in.stall,false.B,reg_w_mem_en)
+	io.out.mem_avalid		:= Mux(stall,false.B,reg_mem_avalid)
+	io.out.w_mem_en			:= Mux(stall,false.B,reg_w_mem_en)
 }
 
 
