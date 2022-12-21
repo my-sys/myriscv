@@ -71,6 +71,7 @@ class WriteBack extends Module with CoreParameters{
 		LSUType.lsu_lwu 	-> Cat(Fill(32,0.U(1.W)),		mem_data(31,0))
 	))
 
+	// 写没有处理好，缺少许多种情况
 	val mem_wstrb			= MuxLookup(io.in.exuType,0.U(64.W),List(
 		LSUType.lsu_sb 		-> "b0000_0001".U,
 		LSUType.lsu_sd		-> "b1111_1111".U,
