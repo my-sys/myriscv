@@ -15,54 +15,54 @@ enum {
 static uint8_t *sbuf = NULL;
 static uint32_t *audio_base = NULL;
 
-static uint32_t index_addr = 0;
-pthread_mutex_t mutex;
-static void audio_play(void *userdata, uint8_t *stream, int len) {
-  int nread = len;
-  if (audio_base[5] < len) nread = audio_base[5];
+// static uint32_t index_addr = 0;
+// pthread_mutex_t mutex;
+// static void audio_play(void *userdata, uint8_t *stream, int len) {
+//   int nread = len;
+//   if (audio_base[5] < len) nread = audio_base[5];
 
-  if(index_addr + nread > CONFIG_SB_SIZE){
-    uint8_t *src = (uint8_t *)sbuf + index_addr;
-    uint32_t temp_count = CONFIG_SB_SIZE - index_addr;
-    memcpy((uint8_t *)stream,src,temp_count);
-    src = (uint8_t *)sbuf;
-    memcpy((uint8_t*)stream+temp_count,src,len - temp_count);
-    index_addr = (index_addr + nread)% CONFIG_SB_SIZE;
-  }else{
-    uint8_t * src = (uint8_t *)sbuf + index_addr;
-    memcpy((uint8_t*)stream,src,nread);
-    index_addr = index_addr + nread;
-  }
-  audio_base[5] = audio_base[5] - nread;
-  if (len > nread) {
-    memset(stream + nread, 0, len - nread);
-  }
-  // uint8_t * src = (uint8_t *)sbuf + index_addr;
-  // memcpy(stream,src,nread);
-  // if (len > nread) {
-  //   memset(stream + nread, 0, len - nread);
-  // }
-  // index_addr = index_addr + nread; 
-  //audio_base[5] = audio_base[5] - nread;
-}
+//   if(index_addr + nread > CONFIG_SB_SIZE){
+//     uint8_t *src = (uint8_t *)sbuf + index_addr;
+//     uint32_t temp_count = CONFIG_SB_SIZE - index_addr;
+//     memcpy((uint8_t *)stream,src,temp_count);
+//     src = (uint8_t *)sbuf;
+//     memcpy((uint8_t*)stream+temp_count,src,len - temp_count);
+//     index_addr = (index_addr + nread)% CONFIG_SB_SIZE;
+//   }else{
+//     uint8_t * src = (uint8_t *)sbuf + index_addr;
+//     memcpy((uint8_t*)stream,src,nread);
+//     index_addr = index_addr + nread;
+//   }
+//   audio_base[5] = audio_base[5] - nread;
+//   if (len > nread) {
+//     memset(stream + nread, 0, len - nread);
+//   }
+//   // uint8_t * src = (uint8_t *)sbuf + index_addr;
+//   // memcpy(stream,src,nread);
+//   // if (len > nread) {
+//   //   memset(stream + nread, 0, len - nread);
+//   // }
+//   // index_addr = index_addr + nread; 
+//   //audio_base[5] = audio_base[5] - nread;
+// }
 
 static void audio_io_handler(uint32_t offset, int len, bool is_write) {
-  if(is_write && offset == 0x10){
-    SDL_AudioSpec s = {};
-    s.freq = audio_base[0];
-    s.format = AUDIO_S16SYS;
-    s.channels = audio_base[1];
-    s.samples = audio_base[2];
-    s.callback = audio_play;
-    s.userdata = NULL;
-    printf("%d,%d,%d\n",audio_base[0],audio_base[1],audio_base[2]);
-    int ret = SDL_InitSubSystem(SDL_INIT_AUDIO);
-    if (ret == 0) {
-      SDL_OpenAudio(&s, NULL);
-      SDL_PauseAudio(0);
-      printf("audio success\n");
-    } 
-  }
+//   if(is_write && offset == 0x10){
+//     SDL_AudioSpec s = {};
+//     s.freq = audio_base[0];
+//     s.format = AUDIO_S16SYS;
+//     s.channels = audio_base[1];
+//     s.samples = audio_base[2];
+//     s.callback = audio_play;
+//     s.userdata = NULL;
+//     printf("%d,%d,%d\n",audio_base[0],audio_base[1],audio_base[2]);
+//     int ret = SDL_InitSubSystem(SDL_INIT_AUDIO);
+//     if (ret == 0) {
+//       SDL_OpenAudio(&s, NULL);
+//       SDL_PauseAudio(0);
+//       printf("audio success\n");
+//     } 
+//   }
 }
 
 void init_audio() {
