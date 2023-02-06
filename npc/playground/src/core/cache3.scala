@@ -35,8 +35,6 @@ class Cache extends Module{
 	val sram2_data 		= Module(new S011HD1P_X32Y2D128_BW) // 存放数据
 	val sram4_tag 		= Module(new S011HD1P_X32Y2D128_BW) // 存放Tag，以及控制位
 
-	val cache_idle :: read_cache :: write_cache :: read_mem :: write_mem :: Nil = Enum(5)
-	val reg_cache_state 	= RegInit(cache_idle)
 //--------------------------------- sram1-----------------------
 	sram1_data.WEN 		:= ~(reg_cache_write &(reg_chosen_tag === 0.U))
 	sram1_data.CEN 		:= ~(true.B)
@@ -99,6 +97,9 @@ class Cache extends Module{
 	//Output 
 	val reg_r_ready			= RegInit(false.B)
 
+	val cache_idle :: read_cache :: write_cache :: read_mem :: write_mem :: Nil = Enum(5)
+	val reg_cache_state 	= RegInit(cache_idle)
+
 //------------------------get data from SRAM-------------------------
 
 	val tag_1			= sram1_tag.Q(55,2)
@@ -140,6 +141,7 @@ class Cache extends Module{
 	//Tag-<63,10>	index--<9,4>--- offset--<3,0>
 	switch(reg_cache_state){
 		is(cache_idle){
+			reg_rvalid		:= false.B 
 			when(io.cpu_in.fire()){
 			//-------hold cpu state------
 				reg_wdata		:= io.cpu_in.wdata
@@ -164,32 +166,35 @@ class Cache extends Module{
 			}
 		}
 		is(read_cache){
-			when(hit_1 | hit_2){
-				reg_chosen_tag	:= Mux(hit_1,0.U,1.U)
-				when((hit_1 & tag_valid_1) | (hit_2 & tag_valid_2)){
+			when(hit_1){
+				reg_chosen_tag			:= 0.U
+				when(tag_valid_1){
 					when(reg_is_w){
 						//-----cache
 						reg_cache_write 		:= true.B 
 						reg_cache_wstrb		 	:= cache_wstrb
-						//reg_index
+						//reg_index 
 						//reg_chosen_tag
 						reg_cache_wdata			:= cache_wdata
+
 						reg_cache_state 		:= write_cache
 					}.otherwise{
 						// read data from cache,
-						//-----cpu
-						reg_rdata				:= Mux(hit_1,rdata1,rdata2)
-						reg_rvalid 				:= true.B 
-						when(io.cpu_out.fire()){
+						//-----cpu 
+						reg_rdata				:= rdata1
+						reg_rvalid				:= true.B
+
+						when(io.cpu_out.ready){
 							reg_wready				:= true.B
-							reg_rvalid 				:= false.B
 							reg_cache_state 		:= cache_idle
 						}
+						
 						//-----cache-----
 						//reg_cache_write		:= false.B
 						//-----bus------
 						//reg_w_valid			:= false.B
 						//reg_r_ready			:= false.B
+						
 					}
 				}.otherwise{
 					//----cpu---- 
@@ -204,11 +209,54 @@ class Cache extends Module{
 					reg_w_wstrb 				:= 0.U 
 					reg_w_size					:= 1.U
 					reg_w_valid					:= true.B 
-					when(io.cache_bus.w.fire()){
-						reg_w_valid					:= false.B
-						reg_r_ready 				:= true.B
-						reg_cache_state 			:= read_bus_write_cache
-					}	
+					reg_r_ready 				:= true.B 
+					reg_cache_state 			:= read_bus_write_cache
+					reg_cache_wstrb				:= cache_wstrb //Provide convenience for cache_mask
+				}
+			}.elsewhen(hit_2){
+				reg_chosen_tag			:= 1.U
+				when(tag_valid_2){
+					when(reg_is_w){
+						//-----cache
+						reg_cache_write 		:= true.B 
+						reg_cache_wstrb		 	:= cache_wstrb
+						//reg_index 
+						//reg_chosen_tag
+						reg_cache_wdata			:= cache_wdata
+
+						reg_cache_state 		:= write_cache
+					}.otherwise{
+						// read data from cache,
+						//-----cpu 
+						reg_rdata				:= rdata2
+						reg_rvalid				:= true.B
+						when(io.cpu_out.ready){
+							reg_wready				:= true.B
+							reg_cache_state 		:= cache_idle
+						}
+						
+						//-----cache-----
+						//reg_cache_write		:= false.B
+						//-----bus------
+						//reg_w_valid			:= false.B
+						//reg_r_ready			:= false.B
+						
+					}
+				}.otherwise{
+					//----cpu---- 
+					//reg_rvalid				:= false.B
+					//reg_wready				:= false.B
+					//----cache---
+					//reg_cache_write			:= false.B
+					//----bus-----
+					reg_w_addr(63,4)			:= Cat(reg_tag,reg_index)
+					reg_w_cmd					:= "b10".U 
+					//reg_w_data 				 
+					reg_w_wstrb 				:= 0.U 
+					reg_w_size					:= 1.U
+					reg_w_valid					:= true.B 
+					reg_r_ready 				:= true.B 
+					reg_cache_state 			:= read_bus_write_cache
 					reg_cache_wstrb				:= cache_wstrb //Provide convenience for cache_mask
 				}
 			}.otherwise{
@@ -229,11 +277,9 @@ class Cache extends Module{
 					reg_w_wstrb			:="hff".U 
 					
 					reg_w_valid			:= true.B
-					when(io.cache_bus.w.fire()){
-						reg_w_valid			:= false.B
-						reg_r_ready			:= true.B
-						reg_cache_state 	:= write_bus_read_bus_write_cache
-					}
+					reg_r_ready			:= true.B
+
+					reg_cache_state 	:= write_bus_read_bus_write_cache
 				}.otherwise{
 					reg_chosen_tag 		:= Mux(tag_valid_1,1.U,0.U) // if tag2 invalid, 1.U, if tag1 invalid 0.U
 					//---------cpu-----------------
@@ -248,11 +294,8 @@ class Cache extends Module{
 					reg_w_wstrb			:= 0.U
 					reg_w_size			:= 1.U
 					reg_w_valid			:= true.B
-					when(io.cache_bus.w.fire()){
-						reg_w_valid			:= false.B
-						reg_r_ready			:= true.B
-						reg_cache_state 	:= read_bus_write_cache
-					}
+					reg_r_ready			:= true.B
+					reg_cache_state 	:= read_bus_write_cache
 					reg_cache_wstrb		:= cache_wstrb //Provide convenience for cache_mask
 				}
 			}
@@ -269,17 +312,11 @@ class Cache extends Module{
 						//reg_rvalid		:= false.B 
 						//reg_wready		:= false.B
 						reg_cache_wdata     := (cache_wdata & cache_mask) | (Cat(io.cache_bus.r.rdata,reg_cache_wdata(63,0)) & ~cache_mask)
-						reg_cache_state		:= write_cache
 					}.otherwise{
 						//----cpu---
-						reg_rdata 			:= Mux(reg_offset(3),io.cache_bus.r.rdata,reg_cache_wdata(63,0))
 						reg_rvalid 			:= true.B
 						//reg_wready		:= false.B
 						reg_cache_wdata		:= Cat(io.cache_bus.r.rdata,reg_cache_wdata(63,0))
-						when(io.cpu_out.fire()){
-							reg_rvalid 			:= false.B
-							reg_cache_state		:= write_cache
-						}
 					}
 					//----cache---
 					reg_cache_wstrb		:="hffff".U
@@ -289,9 +326,9 @@ class Cache extends Module{
 					//----bus---
 					reg_w_valid			:= false.B
 					reg_r_ready			:= false.B 
-					
+					reg_cache_state		:= write_cache
 				}
-			}			
+			}
 		}
 		is(write_cache){
 			//------cpu---
@@ -316,20 +353,16 @@ class Cache extends Module{
 				reg_w_wstrb 				:= 0.U
 				reg_w_size					:= 1.U
 				reg_w_valid					:= true.B
-				when(io.cache_bus.w.fire()){
-					reg_w_valid					:= false.B
-					reg_r_ready 				:= true.B
-					reg_cache_state 			:= read_bus_write_cache
-				}
-				
+				reg_r_ready 				:= true.B
+				reg_cache_state 			:= read_bus_write_cache
 				reg_cache_wstrb				:= cache_wstrb //Provide convenience for cache_mask
 			}
-		}		
+		}
 	}
 
 //---------------------------Out------------------------------
 	io.cpu_in.ready			:= reg_wready 
-	io.cpu_out.rdata 		:= reg_rdata  
+	io.cpu_out.rdata 		:= reg_rdata 
 	io.cpu_out.valid 		:= reg_rvalid 
 
 	io.cache_bus.w.addr		:= reg_w_addr 

@@ -34,9 +34,9 @@ class WriteBack extends Module with CoreParameters{
 			val mem_wvalid 		= Output(Bool())
 			val mem_addr 		= Output(UInt(AddrLen.W))
 			val mem_avalid 		= Output(Bool())
-			val mem_wstrb 		= Output(UInt(8.W))
+			val mem_wstrb 		= Output(UInt(64.W))
 
-			val stall 			= Output(Bool())           
+			val stall 			= Output(Bool())
         }
 
     })
@@ -44,7 +44,8 @@ class WriteBack extends Module with CoreParameters{
 	
 	val reg_stall 			= RegInit(false.B)
 	val reg_mem_wdata		= RegInit(0.U(64.W))
-	val reg_mem_wstrb		= RegInit(0.U(8.W))
+	// 
+	val reg_mem_wstrb		= RegInit(0.U(64.W))
 	val reg_mem_wvalid		= RegInit(false.B)
 	val reg_mem_addr		= RegInit(0.U(64.W))
 	val reg_rs_addr 		= RegInit(0.U(RegAddrLen.W))
@@ -73,10 +74,10 @@ class WriteBack extends Module with CoreParameters{
 
 	// 写没有处理好，缺少许多种情况
 	val mem_wstrb			= MuxLookup(io.in.exuType,0.U(64.W),List(
-		LSUType.lsu_sb 		-> "b0000_0001".U,
-		LSUType.lsu_sd		-> "b1111_1111".U,
-		LSUType.lsu_sh 		-> "b0000_0011".U,
-		LSUType.lsu_sw 		-> "b0000_1111".U
+		LSUType.lsu_sb 		-> (("b0000_0001".U) << io.in.mem_addr(2,0)),
+		LSUType.lsu_sd		-> (("b1111_1111".U)<< io.in.mem_addr(2,0)),
+		LSUType.lsu_sh 		-> (("b0000_0011".U)<< io.in.mem_addr(2,0)),
+		LSUType.lsu_sw 		-> (("b0000_1111".U)<< io.in.mem_addr(2,0))
 	))
 
 	// 根据状态机,进行改变值
@@ -165,7 +166,7 @@ class WriteBack extends Module with CoreParameters{
 
 	io.out.mem_wdata			:= reg_mem_wdata
 	io.out.mem_wvalid			:= reg_mem_wvalid
-	io.out.mem_addr				:= reg_mem_addr
+	io.out.mem_addr				:= reg_mem_addr // Cat(reg_mem_addr(63,3),0.U(3.W))
 	io.out.mem_wstrb			:= reg_mem_wstrb
 	io.out.mem_avalid			:= reg_mem_avalid
 

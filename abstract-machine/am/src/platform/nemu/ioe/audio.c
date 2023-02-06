@@ -16,7 +16,8 @@ void __am_audio_init() {
   //buf_size = inl(AUDIO_SBUF_SIZE_ADDR);
 }
 
-void __am_audio_config(AM_AUDIO_CONFIG_T *cfg) {
+void __am_audio_config(AM_AUDIO_CONFIG_T *cfg) { 
+// 是否开启声音，由此决定，开启为true,不开启为false
   cfg->present = false;
   cfg->bufsize = 0x10000;//inl(AUDIO_SBUF_SIZE_ADDR);
 }
