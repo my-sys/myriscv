@@ -97,7 +97,7 @@ class AXI_RAM extends Module{
 			when(io.ram_bus.r.fire()){
 				when(reg_ar_arlen === 0.U){
 					reg_r_valid := false.B 
-					reg_r_last	:= false.B
+					reg_r_rlast	:= false.B
 					reg_r_state	:= r_idle
 				}
 			}
