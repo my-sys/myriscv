@@ -293,7 +293,7 @@ class Cache extends Module{
 						//reg_cache_write		:= true.B
 					}
 				}.otherwise{
-					reg_cache_wdata(63,0)	:= io.cache_bus.r.bits.rdata
+					reg_cache_wdata			:= io.cache_bus.r.bits.rdata << 4.U
 				}
 			}
 			when(io.cache_bus.aw.fire()){
