@@ -122,6 +122,7 @@ class Cache extends Module{
 
 	//0 <--------------> 63
 	for(i <- 0 until 64){
+		// maybe not right generate the hardware circuit
 		when((i.asUInt === reg_index) & (reg_start_operation)){
 			when(hit_1){
 				reg_lru(i) := "b10".U
@@ -219,7 +220,7 @@ class Cache extends Module{
 					//reg_cache_write	:= false.B
 					//-------bus-----------
 					reg_chosen_tag		:= LRU(1) 
-					reg_aw_addr(63,4)	:= Cat(Mux(LRU(1),tag_2,tag_1),reg_index)
+					reg_aw_awaddr(63,4)	:= Cat(Mux(LRU(1),tag_2,tag_1),reg_index)
 					reg_aw_awlen		:= 1.U 
 					reg_cnt				:= 1.U //assistant to count
 					reg_aw_wdata 		:= Mux(LRU(1),rdata2(63,0),rdata1(63,0))
@@ -266,7 +267,7 @@ class Cache extends Module{
 				reg_ar_valid 	:= false.B
 			}
 			when(io.cache_bus.r.fire()){
-				when(io.cache_bus.r.rlast){
+				when(io.cache_bus.r.bits.rlast){
 					reg_rbus_finish			:= true.B
 					when(reg_is_w){
 						//----cpu--
@@ -276,16 +277,16 @@ class Cache extends Module{
 						reg_cache_wstrb		:="hffff".U
 						// ???? is need wait write bus
 						//reg_cache_write		:= true.B
-						reg_cache_wdata     := (cache_wdata & cache_mask) | (Cat(io.cache_bus.r.rdata,reg_cache_wdata(63,0)) & ~cache_mask)
+						reg_cache_wdata     := (cache_wdata & cache_mask) | (Cat(io.cache_bus.r.bits.rdata,reg_cache_wdata(63,0)) & ~cache_mask)
 						//reg_cache_state		:= write_cache
 					}.otherwise{
 						//----cpu---
-						reg_rdata 			:= Mux(reg_offset(3),io.cache_bus.r.rdata,reg_cache_wdata(63,0))
+						reg_rdata 			:= Mux(reg_offset(3),io.cache_bus.r.bits.rdata,reg_cache_wdata(63,0))
 						// ???? is need wait cpu out
 						reg_rvalid 			:= true.B
 						is_need_wait		:= true.B
 						//reg_wready		:= false.B
-						reg_cache_wdata		:= Cat(io.cache_bus.r.rdata,reg_cache_wdata(63,0))
+						reg_cache_wdata		:= Cat(io.cache_bus.r.bits.rdata,reg_cache_wdata(63,0))
 						//reg_cache_state		:= write_cache
 						reg_cache_wstrb		:="hffff".U
 						// ???? is need wait write bus
