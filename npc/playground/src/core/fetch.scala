@@ -28,6 +28,7 @@ class Fetch extends Module{
 			val inst = Output(UInt(32.W))
 		}
 	})
+	val next_pc			= io.in.next_pc
 	val flush 			= io.in.flush
 	val stall 			= io.in.de_stall | io.in.wb_stall | io.in.ex_stall
 	val reg_pc_0 		= RegInit("h8000_0000".U(64.W))
@@ -66,7 +67,7 @@ class Fetch extends Module{
 		when(flush|reg_r_flush){
 			reg_inst 	:= 0.U
 		}.otherwise{
-			reg_inst 	:= Mux(reg_pc_0(2),io.in.r.inst(63,32),io.in.r.inst(31,0))
+			reg_inst 	:= Mux(reg_pc_0(2),io.in.r.bits.inst(63,32),io.in.r.bits.inst(31,0))
 		}
 		reg_r_flush = false.B
 		when(stall){
@@ -77,10 +78,10 @@ class Fetch extends Module{
 		reg_r_ready := Mux(stall,reg_r_ready,true.B)
 	}
 
-	io.out.w.pc_0	:=reg_pc_0
-	io.out.w.valid 	:=reg_w_valid
-	io.out.pc_1		:=Mux(reg_stall,reg_temp_pc_1,reg_pc_1)
-	io.out.inst 	:=Mux(reg_stall,reg_temp_inst,reg_inst)
+	io.out.w.bits.pc_0	:=reg_pc_0
+	io.out.w.valid 		:=reg_w_valid
+	io.out.pc_1			:=Mux(reg_stall,reg_temp_pc_1,reg_pc_1)
+	io.out.inst 		:=Mux(reg_stall,reg_temp_inst,reg_inst)
 	// | reg_pc	|reg_pc_1	|
 	// |		|reg_inst	|
 	//reg_pc := reg_pc + 4.U 
