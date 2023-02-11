@@ -201,7 +201,7 @@ class Cache extends Module{
 					//----cache---
 					//reg_cache_write			:= false.B
 					//----bus-----
-					reg_ar_araddr(63,4)			:= Cat(reg_tag,reg_index)
+					reg_ar_araddr(63,3)			:= Cat(reg_tag,reg_index)
 					reg_ar_arlen				:=1.U 
 					reg_ar_valid				:= true.B
 					reg_r_ready 				:= true.B
