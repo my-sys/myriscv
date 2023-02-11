@@ -67,13 +67,13 @@ class WriteBack extends Module with CoreParameters{
 		"b111".U 			-> io.in.r.bits.mem_data(63,56)
 	))
 	val mem_data_result		= MuxLookup(io.in.exuType,0.U(64.W),List(
-		LSUType.lsu_ld 		-> mem_data,
-		LSUType.lsu_lb 		-> Cat(Fill(56,mem_data(7)),	mem_data(7,0)),
-		LSUType.lsu_lbu 	-> Cat(Fill(56,0.U(1.W)),		mem_data(7,0)),
-		LSUType.lsu_lh		-> Cat(Fill(48,mem_data(15)), 	mem_data(15,0)),
-		LSUType.lsu_lhu 	-> Cat(Fill(48,0.U(1.W)),		mem_data(15,0)),
-		LSUType.lsu_lw 		-> Cat(Fill(32,mem_data(31)),	mem_data(31,0)),
-		LSUType.lsu_lwu 	-> Cat(Fill(32,0.U(1.W)),		mem_data(31,0))
+		LSUType.lsu_ld 		-> mem_r_data,
+		LSUType.lsu_lb 		-> Cat(Fill(56,mem_r_data(7)),	mem_r_data(7,0)),
+		LSUType.lsu_lbu 	-> Cat(Fill(56,0.U(1.W)),		mem_r_data(7,0)),
+		LSUType.lsu_lh		-> Cat(Fill(48,mem_r_data(15)), mem_r_data(15,0)),
+		LSUType.lsu_lhu 	-> Cat(Fill(48,0.U(1.W)),		mem_r_data(15,0)),
+		LSUType.lsu_lw 		-> Cat(Fill(32,mem_r_data(31)),	mem_r_data(31,0)),
+		LSUType.lsu_lwu 	-> Cat(Fill(32,0.U(1.W)),		mem_r_data(31,0))
 	))
 
 	// 写没有处理好，缺少许多种情况
