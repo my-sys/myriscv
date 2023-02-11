@@ -117,7 +117,7 @@ class Cache extends Module{
 
 //------------------------LRU-----------------------
 // 1 bit LRU
-	val reg_lru 			= RegInit(VecInit(Seq.fill(8)(0.U(2.W))))
+	val reg_lru 			= RegInit(VecInit(Seq.fill(64)(0.U(2.W))))
 	val reg_start_operation	= RegInit(false.B)
 
 	//0 <--------------> 63
