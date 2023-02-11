@@ -1,9 +1,9 @@
-import chisel3._
+import chisel3._ 
 import chisel3.util._ 
 import chisel3.util.experimental.BoringUtils
 class WriteBack extends Module with CoreParameters{
-    val io = IO(new Bundle{
-        val in = new Bundle{
+	val io = IO(new Bundle{
+		val in = new Bundle{
 			// from execute
             val rs_addr         = Input(UInt(RegAddrLen.W))
             val result_data     = Input(UInt(RegDataLen.W))
@@ -21,46 +21,50 @@ class WriteBack extends Module with CoreParameters{
 			val inst 			= Input(UInt(InstLen.W))
 
 			// from mem 
-			val mem_data        = Input(UInt(RegDataLen.W))
-			val mem_valid       = Input(Bool())				// A signal to say that data is valid 
-			val w_ok 			= Input(Bool())				// A signal to say write is complete
-        }
-        val out = new Bundle{
-            val rs_addr         = Output(UInt(RegAddrLen.W))
-            val result_data     = Output(UInt(RegDataLen.W))
-            val w_rs_en         = Output(Bool())
-
-			val mem_wdata		= Output(UInt(64.W))
-			val mem_wvalid 		= Output(Bool())
-			val mem_addr 		= Output(UInt(AddrLen.W))
-			val mem_avalid 		= Output(Bool())
-			val mem_wstrb 		= Output(UInt(64.W))
+			val r = Flipped(Decoupled(new Bundle{
+				val mem_data	= Output(UInt(RegDataLen.W))
+				// 01 ---read, 10 ---write
+				val resp 		= Output(UInt(2.W))
+			}))
+		}
+		val out = new Bundle{
+			val rs_addr         = Output(UInt(RegAddrLen.W))
+			val result_data     = Output(UInt(RegDataLen.W))
+			val w_rs_en         = Output(Bool())
 
 			val stall 			= Output(Bool())
-        }
-
-    })
+			val w = Decoupled(new Bundle{
+				val mem_wdata   = Output(UInt(64.W))
+				val mem_addr 	= Output(UInt(AddrLen.W))
+				val is_w 		= Output(Bool())
+				val mem_wstrb 	= Output(UInt(8.W))
+			})
+		}
+	})
 	// 本级存在的必要性，execute 计算内存地址，wb阶段进行读写。往寄存器写的也需要流到这一级的原因是，指令之间要按顺序执行不能存在越位。
-	
-	val reg_stall 			= RegInit(false.B)
-	val reg_mem_wdata		= RegInit(0.U(64.W))
-	// 
-	val reg_mem_wstrb		= RegInit(0.U(64.W))
-	val reg_mem_wvalid		= RegInit(false.B)
-	val reg_mem_addr		= RegInit(0.U(64.W))
-	val reg_rs_addr 		= RegInit(0.U(RegAddrLen.W))
-	val reg_result_data 	= RegInit(0.U(RegDataLen.W))
-	val reg_w_rs_en 		= RegInit(false.B)
 
-	val mem_data 			= MuxLookup(reg_mem_addr(2,0),io.in.mem_data,List(
-		"b000".U 			-> io.in.mem_data,
-		"b001".U 			-> io.in.mem_data(63,8),
-		"b010".U 			-> io.in.mem_data(63,16),
-		"b011".U 			-> io.in.mem_data(63,24),
-		"b100".U 			-> io.in.mem_data(63,32),
-		"b101".U 			-> io.in.mem_data(63,40),
-		"b110".U 			-> io.in.mem_data(63,48),
-		"b111".U 			-> io.in.mem_data(63,56)
+	val reg_stall				= RegInit(false.B)
+
+	val reg_mem_w_wdata			= RegInit(0.U(64.W))
+	val reg_mem_w_wstrb 		= RegInit(0.U(8.W))
+	val reg_mem_w_is_w 			= RegInit(false.B)
+	val reg_mem_w_addr 			= RegInit(0.U(64.W)) 
+	val reg_mem_w_valid 		= RegInit(false.B)
+	val reg_mem_r_ready 		= RegInit(false.B)
+
+	val reg_rs_addr 			= RegInit(0.U(RegAddrLen.W))
+	val reg_result_data 		= RegInit(0.U(RegDataLen.W))
+	val reg_w_rs_en 			= RegInit(false.B) 
+
+	val mem_r_data				= MuxLookup(reg_mem_w_addr(2,0),io.in.r.mem_data,List(
+		"b000".U 			-> io.in.r.mem_data,
+		"b001".U 			-> io.in.r.mem_data(63,8),
+		"b010".U 			-> io.in.r.mem_data(63,16),
+		"b011".U 			-> io.in.r.mem_data(63,24),
+		"b100".U 			-> io.in.r.mem_data(63,32),
+		"b101".U 			-> io.in.r.mem_data(63,40),
+		"b110".U 			-> io.in.r.mem_data(63,48),
+		"b111".U 			-> io.in.r.mem_data(63,56)
 	))
 	val mem_data_result		= MuxLookup(io.in.exuType,0.U(64.W),List(
 		LSUType.lsu_ld 		-> mem_data,
@@ -81,66 +85,58 @@ class WriteBack extends Module with CoreParameters{
 	))
 
 	// 根据状态机,进行改变值
-	val ls_idle :: ls_busy :: Nil = Enum(2)
-	val reg_mem_avalid			= RegInit(false.B)
-	val reg_ls_state 		= RegInit(ls_idle) 
+	val ls_idle :: ls_busy :: Nil 	= Enum(2)
+	
+	val reg_ls_state 				= RegInit(ls_idle)
 
 	// 处理数据相关问题
-	val rs2_data 		= Mux((io.in.rs2_addr === reg_rs_addr)&reg_w_rs_en,reg_result_data,io.in.rs2_data)
+	val rs2_data		= Mux((io.in.rs2_addr === reg_rs_addr)&reg_w_rs_en,reg_result_data,io.in.rs2_data)
 	switch(reg_ls_state){
 		is(ls_idle){
 			when(io.in.mem_avalid){
-				reg_ls_state 	:= ls_busy
-				reg_stall 		:= true.B
-				reg_mem_wdata	:= rs2_data
-				reg_mem_wstrb	:= mem_wstrb
-				reg_mem_wvalid	:= io.in.w_mem_en
-				reg_mem_addr	:= io.in.mem_addr
-				reg_mem_avalid  := true.B
-				
-				reg_rs_addr		:= io.in.rs_addr
-				reg_result_data := 0.U
-				reg_w_rs_en		:= false.B
+				reg_ls_state	:= ls_busy
+				reg_stall		:= true.B 
+				reg_mem_w_wdata := rs2_data
+				reg_mem_w_wstrb := mem_wstrb 
+				reg_mem_w_is_w	:= io.in.w_mem_en 
+				reg_mem_w_addr  := io.in.mem_addr 
+				reg_mem_w_valid := true.B 
+				reg_mem_r_ready := true.B
+
+				reg_rs_addr		:= io.in.rs_addr 
+				reg_result_data := 0.U 
+				reg_w_rs_en		:= false.B 
 			}.otherwise{
-				reg_rs_addr			:= io.in.rs_addr
-				reg_result_data		:= io.in.result_data
-				reg_w_rs_en			:= io.in.w_rs_en
+				reg_rs_addr		:= io.in.rs_addr
+				reg_result_data	:= io.in.result_data
+				reg_w_rs_en 	:= io.in.w_rs_en
+				reg_ls_state	:= ls_idle
 			}
 		}
 		is(ls_busy){
-			when(io.in.mem_valid | io.in.w_ok){
-				//reg_rs_addr		:= 
-				reg_result_data	:= mem_data_result
-				reg_w_rs_en		:= Mux(io.in.mem_valid,true.B,false.B)
+			when(io.in.r.fire()){
+				reg_result_data := mem_data_result 
+				//read 1, write 0
+				reg_w_rs_en		:= Mux(io.in.r.resp === "b01".U,true.B,false.B)
 
 				reg_ls_state	:= ls_idle
-				reg_stall 		:= false.B
-				reg_mem_avalid  := false.B
-				reg_mem_wvalid	:= false.B
+				reg_stall		:= false.B 
+				reg_mem_w_valid := false.B 
+				reg_mem_w_is_w	:= false.B 
+				reg_mem_r_ready := false.B 
 			}
 		}
 	}
 
-	val difftest_commit 		= RegInit(false.B)
-	val reg_inst 				= RegInit(0.U(InstLen.W))
-	val reg_pc 					= RegInit(0.U(AddrLen.W))
-	reg_pc 						:= Mux(reg_stall,reg_pc,io.in.pc) 
-	reg_inst 					:= Mux(reg_stall,reg_inst,io.in.inst) 
+	val difftest_commit 	= RegInit(false.B)
+	val reg_inst 			= RegInit(0.U(InstLen.W))
+	val reg_pc 				= RegInit(0.U(AddrLen.W))
+	reg_pc 					:= Mux(reg_stall,reg_pc,io.in.pc)
+	reg_inst 					:= Mux(reg_stall,reg_inst,io.in.inst)
 	val difftest_inst 			= RegInit(0.U(InstLen.W))
 	val difftest_pc 			= RegInit(0.U(AddrLen.W))
 	val reg_exuType				= RegInit(0.U(ExuTypeLen.W))
 	reg_exuType					:= Mux(reg_stall,reg_exuType,io.in.exuType)
-	// when(reg_stall & io.in.w_ok){
-	// 	difftest_inst 	:= reg_inst 
-	// 	difftest_pc		:= reg_pc
-	// 	difftest_commit := true.B
-	// }.elsewhen((!reg_stall) & reg_w_rs_en){
-	// 	difftest_inst 	:= reg_inst 
-	// 	difftest_pc		:= reg_pc		
-	// 	difftest_commit := true.B
-	// }.otherwise{
-	// 	difftest_commit := false.B
-	// }
 
 	when(reg_stall | (reg_exuType === ALUType.alu_none)){
 		difftest_commit := false.B
@@ -153,22 +149,17 @@ class WriteBack extends Module with CoreParameters{
     BoringUtils.addSource(difftest_pc,"DIFFTEST_PC")
     BoringUtils.addSource(difftest_inst,"DIFFTEST_INST")
 
-    // 暂时还没想好怎么使用这一级
+	io.out.rs_addr			:= Mux(reg_stall,0.U,reg_rs_addr)
+	io.out.result_data		:= Mux(reg_stall,0.U,reg_result_data)
+	io.out.w_rs_en			:= Mux(reg_stall,0.U,reg_w_rs_en) 
 
+	io.out.w.mem_wdata 		:= reg_mem_w_wdata 
+	io.out.w.mem_addr		:= reg_mem_w_addr 
+	io.out.w.is_w			:= reg_mem_w_is_w 
+	io.out.w.mem_wstrb		:= reg_mem_w_wstrb 
+	io.out.w.valid 			:= reg_mem_w_valid 
 
-	// reg_rs_addr 				:= io.in.rs_addr
-	// reg_result_data				:= Mux(io.in.mem_valid, mem_data_result, io.in.result_data)
-	// reg_w_rs_en 				:= Mux(io.in.mem_valid, true.B,   			io.in.w_rs_en)
+	io.in.r.ready 			:= reg_mem_r_ready
 
-	io.out.rs_addr				:= Mux(reg_stall,0.U,reg_rs_addr)
-	io.out.result_data			:= Mux(reg_stall,0.U,reg_result_data)
-	io.out.w_rs_en				:= Mux(reg_stall,0.U,reg_w_rs_en)
-
-	io.out.mem_wdata			:= reg_mem_wdata
-	io.out.mem_wvalid			:= reg_mem_wvalid
-	io.out.mem_addr				:= reg_mem_addr // Cat(reg_mem_addr(63,3),0.U(3.W))
-	io.out.mem_wstrb			:= reg_mem_wstrb
-	io.out.mem_avalid			:= reg_mem_avalid
-
-	io.out.stall				:= reg_stall
+	io.out.stall 			:= reg_stall
 }

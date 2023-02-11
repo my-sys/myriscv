@@ -77,11 +77,13 @@ compile1:$(VSRCS) $(CSRCS)
 run: 
 	make verilog 
 	make compile
+	$(call git_commit, "sim RTL xingk")
 	obj_dir/V$(TOPNAME)  $(ARGS_DIFF) $(IMG)
 
 gdb:
 	make verilog 
 	make compile1
+	$(call git_commit, "sim RTL xingk")
 	obj_dir/V$(TOPNAME) $(ARGS_DIFF) $(IMG)	
 # nemu/native.mk
 sim: run

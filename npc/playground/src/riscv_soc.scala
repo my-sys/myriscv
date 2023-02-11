@@ -51,12 +51,12 @@ class riscv_soc extends Module{
   io.difftest_inst    := difftest_inst 
   io.difftest_commit  := difftest_commit
 
-  core.io.in.rdata    :=  axi_ram.io.rdata
-  
-  axi_ram.io.waddr    :=  core.io.out.waddr 
-  axi_ram.io.wdata    :=  core.io.out.wdata
-  axi_ram.io.raddr    :=  core.io.out.raddr
-  axi_ram.io.wen      :=  core.io.out.wen
-  axi_ram.io.wstrb    :=  core.io.out.wstrb 
+	axi_ram.io.ram_bus <> core.io.axi_bus
+//   core.io.in.rdata    :=  axi_ram.io.rdata
+//   axi_ram.io.waddr    :=  core.io.out.waddr 
+//   axi_ram.io.wdata    :=  core.io.out.wdata
+//   axi_ram.io.raddr    :=  core.io.out.raddr
+//   axi_ram.io.wen      :=  core.io.out.wen
+//   axi_ram.io.wstrb    :=  core.io.out.wstrb 
 
 }

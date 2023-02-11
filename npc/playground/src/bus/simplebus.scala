@@ -1,86 +1,116 @@
 import chisel3._
 import chisel3.util._
 
-class SimpleBus_w extends Bundle{
-	//address 
-	val addr 		= Output(UInt(64.W))
-	// 00 is read , 01 is write , 10 is ReadBurst
-	// 11 is WriteBurst 
-	val cmd 		= Output(UInt(2.W)) 
-	val size 		= Output(UInt(2.W)) // unit is the bus width, len = size + 1,default = 0
-	val data 		= Output(UInt(64.W))
+class SimpleBus_aw extends Bundle{
+	val awaddr 		= Output(UInt(64.W))
+	val awlen 		= Output(UInt(8.W))
+	val wdata 		= Output(UInt(64.W))
 	val wstrb 		= Output(UInt(8.W))
+	val wlast 		= Output(Bool())
 
-	def isRead()  	= !cmd(0)
-	def isWrite() 	= cmd(0)
-	def isBurst() 	= cmd(1)
+	def isBurst()	= (awlen =/= 0.U)
+}
+
+class SimpleBus_b extends Bundle{
+	val bresp 		= Output(UInt(2.W))
+}
+
+class SimpleBus_ar extends Bundle{
+	val araddr 		= Output(UInt(64.W))
+	val arlen 		= Output(UInt(8.W))
 
 }
 
 class SimpleBus_r extends Bundle{
-	// 00 transport is fail, 01 read is success, 10 write is success
-	// 11 transport is in progress, can not be interrupted
-	val resp 		= Output(UInt(2.W))
-	val data 		= Output(UInt(64.W))
+	val rdata 		= Output(UInt(64.W))
+	val rresp		= Output(UInt(2.W))
+	val rlast 		= Output(Bool())
 }
 
 class SimpleBus extends Bundle{
-	val w = Decoupled(new SimpleBus_w)
-	val r = Flipped(Decoupled(new SimpleBus_r))
+	val aw 	= Decoupled(new SimpleBus_aw)
+	val b 	= Flipped(Decoupled(new SimpleBus_b))
+	val ar	= Decoupled(new SimpleBus_ar)
+	val r 	= Flipped(Decoupled(new SimpleBus_r))
 }
 
-class SimpleCrossbar extends Module{
+// simplebus <--------> axi
+class Crossbar extends Module{
 	val io = IO(new Bundle{
-		val ICache_bus 	= Flipped(new SimpleBus)
-		val DCache_bus 	= Flipped(new SimpleBus)
-		val out_bus 	= new SimpleBus
+		val ICache_bus 	= new SimpleBus
+		val DCache_bus 	= new SimpleBus
+		val AXI_Bus		= new AXI4Bus
 	})
+	val lockFun = ((x:SimpleBus_aw) => x.isBurst())
+	val aw_arb = Module(new LockingArbiter(chiselTypeOf(SimpleBus_aw),2,2,Some(lockFun))
+	val ar_arb = Module(new LockingArbiter(chiselTypeOf(SimpleBus_ar),2,0,false.B))
+	aw_arb.io.in(0) <> io.ICache_bus.aw 
+	aw_arb.io.in(1) <> io.DCache_bus.aw 
 
-	val lockFun = ((x:SimpleBus_w) => x.isWrite() && x.isBurst())
-	// two way and lock eight cycles 
-	val simple_arb = Module(new LockingArbiter(chiselTypeOf(SimpleBus_w),2,8,Some(lockFun))
-	simple_arb.io.in(0) <> io.DCache_bus.w
-	simple_arb.io.in(1) <> io.ICache_bus.w
+	ar_arb.io.in(0) <> io.ICache_bus.ar 
+	ar_arb.io.in(1) <> io.DCache_bus.ar 
 
-	io.out_bus.w <> simple_arb.io.out
-	io.ICache_bus.r.data := io.out_bus.r.data 
-	io.DCache_bus.r.data := io.out_bus.r.data 
-	io.ICache_bus.r.resp := io.out_bus.r.resp 
-	io.DCache_bus.r.resp := io.out_bus.r.resp
+//--------------------------aw----------------------------
+	val reg_aw_ack 		= RegInit(false.B)
+	val reg_w_ack 		= RegInit(false.B) 
 
-	//val select_r = RegInit(0.U(log2Up(n).W))
-	val select_r = RegInit(0.U(1.W))
-	io.DCache_bus.r.valid := Mux(select_r === 0.U, io.out_bus.r.valid,false.B)
-	io.ICache_bus.r.valid := Mux(select_r === 1.U, io.out_bus.r.valid,false.B)
 
-	io.ICache_bus.r.data  := io.out_bus.r.data
-	io.DCache_bus.r.data  := io.out_bus.r.data
+	val aw_w_finish		= reg_aw_ack & reg_w_ack
 
-	val bus_idle :: bus_read :: bus_write :: Nil = Enum(3)
-	val bus_state = RegInit(bus_idle)
-
-	switch(bus_state){
-		is(bus_idle){
-			when(simple_arb.io.out.fire()){
-				select_r := simple_arb.io.chosen
-				when(simple_arb.io.out.w.isRead()){
-					bus_state := bus_read
-				}.elsewhen(simple_arb.io.out.w.isWrite()){
-					bus_state := bus_write
-				}
-			}
+	when(aw_w_finish){
+		reg_aw_ack := false.B
+		reg_w_ack  := false.B
+	}.otherwise{
+		when(io.AXI_Bus.aw.fire()){
+			reg_aw_ack := true.B
 		}
-		// suppose read or write is success imediately
-		is(bus_read){
-			when(io.out_bus.r.fire()){
-				bus_state := bus_idle
-			}
-		}
-		is(bus_write){
-			when(io.out_bus.r.fire()){
-				bus_state := bus_idle
-			}
+		when(io.AXI_Bus.w.fire() & io.AXI_Bus.w.wlast){
+			reg_w_ack  := true.B
 		}
 	}
 
+//--------------------------aw----------------------------
+	io.AXI_Bus.aw.awid 		:= 0.U  
+	io.AXI_Bus.aw.awaddr 	:= aw_arb.io.out.awaddr 
+	io.AXI_Bus.aw.awlen 	:= aw_arb.io.out.awlen 
+	io.AXI_Bus.aw.awsize 	:= 8.U
+	io.AXI_Bus.aw.awburst	:= "b01".U
+	io.AXI_Bus.aw.valid 	:= aw_arb.io.out.valid &(!reg_aw_ack)
+	//:=io.AXI_Bus.aw.ready
+
+//--------------------------w-----------------------------
+	io.AXI_Bus.w.wid 		:= 0.U
+	io.AXI_Bus.w.wdata 		:= aw_arb.io.out.wdata
+	io.AXI_Bus.w.wstrb		:= aw_arb.io.out.wstrb
+	io.AXI_Bus.w.wlast 		:= aw_arb.io.out.wlast
+	io.AXI_Bus.w.valid 		:= aw_arb.io.out.valid &(!reg_w_ack)
+	aw_arb.io.out.ready 	:= io.AXI_Bus.w.ready
+//-------------------------b------------------------------
+	io.DCache_bus.b.resp		:= Mux(aw_arb.io.chosen === 1.U,io.AXI_Bus.b.resp,"b00".U)
+	io.DCache_bus.b.valid 		:= Mux(aw_arb.io.chosen === 1.U,io.AXI_Bus.b.valid,false.B)
+	io.AXI_Bus.b.ready 			:= Mux(aw_arb.io.chosen === 1.U,io.DCache_bus.b.ready,io.ICache_bus.b.ready)
+	io.ICache_bus.b.resp		:= Mux(aw_arb.io.chosen === 0.U,io.AXI_Bus.b.resp,"b00".U)
+	io.ICache_bus.b.valid 		:= Mux(aw_arb.io.chosen === 0.U,io.AXI_Bus.b.valid,false.B)
+	//:=io.AXI_Bus.b.bid
+//------------------------ar------------------------------
+	io.AXI_Bus.ar.arid			:= 0.U 
+	io.AXI_Bus.ar.araddr 		:= ar_arb.io.out.araddr
+	io.AXI_Bus.ar.arlen 		:= ar_arb.io.out.arlen
+	io.AXI_Bus.ar.arsize 		:= 8.U
+	io.AXI_Bus.ar.arburst		:= "b01".U
+	io.AXI_Bus.ar.valid 		:=  ar_arb.io.out.valid
+
+	ar_arb.io.out.ready 		:= io.AXI_Bus.ar.ready
+//-----------------------r--------------------------------
+	//:=io.AXI_Bus.r.rid
+	io.ICache_bus.r.rdata 		:= Mux(ar_arb.io.chosen === 0.U,io.AXI_Bus.r.rdata,0.U)
+	io.ICache_bus.r.rresp		:= Mux(ar_arb.io.chosen === 0.U,io.AXI_Bus.r.resp,"b00".U)
+	io.ICache_bus.r.rlast 		:= Mux(ar_arb.io.chosen === 0.U,io.AXI_Bus.r.rlast,false.B)
+	io.ICache_bus.r.valid		:= Mux(ar_arb.io.chosen === 0.U,io.AXI_Bus.r.rdata,false.B)
+	io.AXI_Bus.r.ready 			:= Mux(ar_arb.io.chosen === 1.U,io.DCache_bus.r.ready,io.ICache_bus.r.ready)
+
+	io.DCache_bus.r.rdata 		:= Mux(ar_arb.io.chosen === 1.U,io.AXI_Bus.r.rdata,0.U)
+	io.DCache_bus.r.rresp		:= Mux(ar_arb.io.chosen === 1.U,io.AXI_Bus.r.resp,"b00".U)
+	io.DCache_bus.r.rlast 		:= Mux(ar_arb.io.chosen === 1.U,io.AXI_Bus.r.rlast,false.B)
+	io.DCache_bus.r.valid		:= Mux(ar_arb.io.chosen === 1.U,io.AXI_Bus.r.rdata,false.B)
 }
