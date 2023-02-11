@@ -201,7 +201,7 @@ class Cache extends Module{
 					//----cache---
 					//reg_cache_write			:= false.B
 					//----bus-----
-					reg_ar_araddr(63,3)			:= Cat(reg_tag,reg_index)
+					reg_ar_araddr				:= Cat(reg_tag,reg_index) << 4.U
 					reg_ar_arlen				:=1.U 
 					reg_ar_valid				:= true.B
 					reg_r_ready 				:= true.B
@@ -220,7 +220,7 @@ class Cache extends Module{
 					//reg_cache_write	:= false.B
 					//-------bus-----------
 					reg_chosen_tag		:= LRU(1) 
-					reg_aw_awaddr(63,4)	:= Cat(Mux(LRU(1),tag_2,tag_1),reg_index)
+					reg_aw_awaddr		:= Cat(Mux(LRU(1),tag_2,tag_1),reg_index)<<4.U
 					reg_aw_awlen		:= 1.U 
 					reg_cnt				:= 1.U //assistant to count
 					reg_aw_wdata 		:= Mux(LRU(1),rdata2(63,0),rdata1(63,0))
@@ -230,7 +230,7 @@ class Cache extends Module{
 					reg_b_ready 		:= true.B
 					reg_wbus_finish		:= false.B 
 
-					reg_ar_araddr(63,4)	:= Cat(reg_tag,reg_index)
+					reg_ar_araddr		:= Cat(reg_tag,reg_index) << 4.U
 					reg_ar_arlen		:=1.U 
 					reg_ar_valid		:= true.B
 					reg_rbus_finish		:= false.B
@@ -239,7 +239,7 @@ class Cache extends Module{
 				}.otherwise{
 					reg_chosen_tag 		:= Mux(tag_valid_1,1.U,0.U) 
 
-					reg_ar_araddr(63,4)	:= Cat(reg_tag,reg_index)
+					reg_ar_araddr		:= Cat(reg_tag,reg_index) << 4.U
 					reg_ar_arlen		:=1.U 
 					reg_ar_valid		:= true.B
 					reg_rbus_finish		:= false.B
