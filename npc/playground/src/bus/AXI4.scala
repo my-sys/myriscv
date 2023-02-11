@@ -37,7 +37,7 @@ class AXI4Bus_r  extends Bundle{
 }
 class AXI4Bus extends Bundle{
 	val aw	= Decoupled(new AXI4Bus_aw)
-	val w	= Flipped(new AXI4Bus_w)
+	val w	= Decoupled(new AXI4Bus_w)
 	val b 	= Flipped(Decoupled(new AXI4Bus_b))
 	val ar  = Decoupled(new AXI4Bus_ar)
 	val r 	= Flipped(Decoupled(new AXI4Bus_r))
