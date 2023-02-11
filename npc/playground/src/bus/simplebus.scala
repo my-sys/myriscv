@@ -70,47 +70,47 @@ class Crossbar extends Module{
 	}
 
 //--------------------------aw----------------------------
-	io.AXI_Bus.aw.awid 		:= 0.U  
-	io.AXI_Bus.aw.awaddr 	:= aw_arb.io.out.awaddr 
-	io.AXI_Bus.aw.awlen 	:= aw_arb.io.out.awlen 
-	io.AXI_Bus.aw.awsize 	:= 8.U
-	io.AXI_Bus.aw.awburst	:= "b01".U
+	io.AXI_Bus.aw.bits.awid 		:= 0.U  
+	io.AXI_Bus.aw.bits.awaddr 	:= aw_arb.io.out.bits.awaddr 
+	io.AXI_Bus.aw.bits.awlen 	:= aw_arb.io.out.bits.awlen 
+	io.AXI_Bus.aw.bits.awsize 	:= 8.U
+	io.AXI_Bus.aw.bits.awburst	:= "b01".U
 	io.AXI_Bus.aw.valid 	:= aw_arb.io.out.valid &(!reg_aw_ack)
 	//:=io.AXI_Bus.aw.ready
 
 //--------------------------w-----------------------------
-	io.AXI_Bus.w.wid 		:= 0.U
-	io.AXI_Bus.w.wdata 		:= aw_arb.io.out.wdata
-	io.AXI_Bus.w.wstrb		:= aw_arb.io.out.wstrb
-	io.AXI_Bus.w.wlast 		:= aw_arb.io.out.wlast
+	io.AXI_Bus.w.bits.wid 		:= 0.U
+	io.AXI_Bus.w.bits.wdata 	:= aw_arb.io.out.bits.wdata
+	io.AXI_Bus.w.bits.wstrb		:= aw_arb.io.out.bits.wstrb
+	io.AXI_Bus.w.bits.wlast 	:= aw_arb.io.out.bits.wlast
 	io.AXI_Bus.w.valid 		:= aw_arb.io.out.valid &(!reg_w_ack)
 	aw_arb.io.out.ready 	:= io.AXI_Bus.w.ready
 //-------------------------b------------------------------
-	io.DCache_bus.b.resp		:= Mux(aw_arb.io.chosen === 1.U,io.AXI_Bus.b.resp,"b00".U)
+	io.DCache_bus.b.bits.resp	:= Mux(aw_arb.io.chosen === 1.U,io.AXI_Bus.b.bits.resp,"b00".U)
 	io.DCache_bus.b.valid 		:= Mux(aw_arb.io.chosen === 1.U,io.AXI_Bus.b.valid,false.B)
 	io.AXI_Bus.b.ready 			:= Mux(aw_arb.io.chosen === 1.U,io.DCache_bus.b.ready,io.ICache_bus.b.ready)
-	io.ICache_bus.b.resp		:= Mux(aw_arb.io.chosen === 0.U,io.AXI_Bus.b.resp,"b00".U)
+	io.ICache_bus.b.bits.resp	:= Mux(aw_arb.io.chosen === 0.U,io.AXI_Bus.b.bits.resp,"b00".U)
 	io.ICache_bus.b.valid 		:= Mux(aw_arb.io.chosen === 0.U,io.AXI_Bus.b.valid,false.B)
 	//:=io.AXI_Bus.b.bid
 //------------------------ar------------------------------
-	io.AXI_Bus.ar.arid			:= 0.U 
-	io.AXI_Bus.ar.araddr 		:= ar_arb.io.out.araddr
-	io.AXI_Bus.ar.arlen 		:= ar_arb.io.out.arlen
-	io.AXI_Bus.ar.arsize 		:= 8.U
-	io.AXI_Bus.ar.arburst		:= "b01".U
+	io.AXI_Bus.ar.bits.arid			:= 0.U 
+	io.AXI_Bus.ar.bits.araddr 		:= ar_arb.io.out.bits.araddr
+	io.AXI_Bus.ar.bits.arlen 		:= ar_arb.io.out.bits.arlen
+	io.AXI_Bus.ar.bits.arsize 		:= 8.U
+	io.AXI_Bus.ar.bits.arburst		:= "b01".U
 	io.AXI_Bus.ar.valid 		:=  ar_arb.io.out.valid
 
 	ar_arb.io.out.ready 		:= io.AXI_Bus.ar.ready
 //-----------------------r--------------------------------
 	//:=io.AXI_Bus.r.rid
-	io.ICache_bus.r.rdata 		:= Mux(ar_arb.io.chosen === 0.U,io.AXI_Bus.r.rdata,0.U)
-	io.ICache_bus.r.rresp		:= Mux(ar_arb.io.chosen === 0.U,io.AXI_Bus.r.resp,"b00".U)
-	io.ICache_bus.r.rlast 		:= Mux(ar_arb.io.chosen === 0.U,io.AXI_Bus.r.rlast,false.B)
-	io.ICache_bus.r.valid		:= Mux(ar_arb.io.chosen === 0.U,io.AXI_Bus.r.rdata,false.B)
-	io.AXI_Bus.r.ready 			:= Mux(ar_arb.io.chosen === 1.U,io.DCache_bus.r.ready,io.ICache_bus.r.ready)
+	io.ICache_bus.r.bits.rdata 		:= Mux(ar_arb.io.chosen === 0.U,io.AXI_Bus.r.bits.rdata,0.U)
+	io.ICache_bus.r.bits.rresp		:= Mux(ar_arb.io.chosen === 0.U,io.AXI_Bus.r.bits.resp,"b00".U)
+	io.ICache_bus.r.bits.rlast 		:= Mux(ar_arb.io.chosen === 0.U,io.AXI_Bus.r.bits.rlast,false.B)
+	io.ICache_bus.r.valid			:= Mux(ar_arb.io.chosen === 0.U,io.AXI_Bus.r.bits.rdata,false.B)
+	io.AXI_Bus.r.ready 				:= Mux(ar_arb.io.chosen === 1.U,io.DCache_bus.r.ready,io.ICache_bus.r.ready)
 
-	io.DCache_bus.r.rdata 		:= Mux(ar_arb.io.chosen === 1.U,io.AXI_Bus.r.rdata,0.U)
-	io.DCache_bus.r.rresp		:= Mux(ar_arb.io.chosen === 1.U,io.AXI_Bus.r.resp,"b00".U)
-	io.DCache_bus.r.rlast 		:= Mux(ar_arb.io.chosen === 1.U,io.AXI_Bus.r.rlast,false.B)
-	io.DCache_bus.r.valid		:= Mux(ar_arb.io.chosen === 1.U,io.AXI_Bus.r.rdata,false.B)
+	io.DCache_bus.r.bits.rdata 		:= Mux(ar_arb.io.chosen === 1.U,io.AXI_Bus.r.bits.rdata,0.U)
+	io.DCache_bus.r.bits.rresp		:= Mux(ar_arb.io.chosen === 1.U,io.AXI_Bus.r.bits.resp,"b00".U)
+	io.DCache_bus.r.bits.rlast 		:= Mux(ar_arb.io.chosen === 1.U,io.AXI_Bus.r.bits.rlast,false.B)
+	io.DCache_bus.r.valid			:= Mux(ar_arb.io.chosen === 1.U,io.AXI_Bus.r.bits.rdata,false.B)
 }
