@@ -69,7 +69,7 @@ class Fetch extends Module{
 		}.otherwise{
 			reg_inst 	:= Mux(reg_pc_0(2),io.in.r.bits.inst(63,32),io.in.r.bits.inst(31,0))
 		}
-		reg_r_flush = false.B
+		reg_r_flush 	:= false.B
 		when(stall){
 			reg_r_ready	:= false.B
 		}

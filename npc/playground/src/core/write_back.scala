@@ -24,7 +24,7 @@ class WriteBack extends Module with CoreParameters{
 			val r = Flipped(Decoupled(new Bundle{
 				val mem_data	= Output(UInt(RegDataLen.W))
 				// 01 ---read, 10 ---write
-				val resp 		= Output(UInt(2.W))
+				//val resp 		= Output(UInt(2.W))
 			}))
 		}
 		val out = new Bundle{
@@ -101,7 +101,7 @@ class WriteBack extends Module with CoreParameters{
 				reg_mem_w_is_w	:= io.in.w_mem_en 
 				reg_mem_w_addr  := io.in.mem_addr 
 				reg_mem_w_valid := true.B 
-				reg_mem_r_ready := true.B
+				reg_mem_r_ready := Mux(io.in.w_mem_en,false.B,true.B)
 
 				reg_rs_addr		:= io.in.rs_addr 
 				reg_result_data := 0.U 
@@ -114,16 +114,40 @@ class WriteBack extends Module with CoreParameters{
 			}
 		}
 		is(ls_busy){
-			when(io.in.r.fire()){
-				reg_result_data := mem_data_result 
-				//read 1, write 0
-				reg_w_rs_en		:= Mux(io.in.r.resp === "b01".U,true.B,false.B)
+			// when(reg_mem_w_is_w){
+			// 	when(io.out.w.fire()){
+			// 		//reg_result_data
+			// 		//reg_w_rs_en
+
+			// 		reg_ls_state	:= ls_idle
+			// 		reg_stall 		:= false.B 
+			// 		reg_mem_w_valid := false.B
+			// 		reg_mem_w_is_w	:= false.B 
+			// 		reg_mem_r_ready := false.B 
+			// 	}
+			// }.otherwise{
+			// 	when(io.in.r.fire()){
+			// 		reg_result_data := mem_data_result 
+			// 		reg_w_rs_en		:= true.B 
+
+			// 		reg_ls_state	:= ls_idle
+			// 		reg_stall		:= false.B 
+			// 		reg_mem_w_valid := false.B
+			// 		reg_mem_w_is_w	:= false.B 
+			// 		reg_mem_r_ready := false.B 
+			// 	}
+			// }
+			when(reg_mem_w_is_w){
+				reg_w_rs_en		:= Mux(reg_mem_w_is_w,false.B,true.B)
+				reg_mem_w_is_w	:= false.B
 
 				reg_ls_state	:= ls_idle
 				reg_stall		:= false.B 
-				reg_mem_w_valid := false.B 
-				reg_mem_w_is_w	:= false.B 
-				reg_mem_r_ready := false.B 
+				reg_mem_w_valid := false.B
+			}
+			when(io.in.r.fire()){
+				reg_mem_r_ready := false.B
+				reg_result_data := mem_data_result
 			}
 		}
 	}
@@ -153,10 +177,10 @@ class WriteBack extends Module with CoreParameters{
 	io.out.result_data		:= Mux(reg_stall,0.U,reg_result_data)
 	io.out.w_rs_en			:= Mux(reg_stall,0.U,reg_w_rs_en) 
 
-	io.out.w.mem_wdata 		:= reg_mem_w_wdata 
-	io.out.w.mem_addr		:= reg_mem_w_addr 
-	io.out.w.is_w			:= reg_mem_w_is_w 
-	io.out.w.mem_wstrb		:= reg_mem_w_wstrb 
+	io.out.w.bits.mem_wdata 	:= reg_mem_w_wdata 
+	io.out.w.bits.mem_addr		:= reg_mem_w_addr 
+	io.out.w.bits.is_w			:= reg_mem_w_is_w 
+	io.out.w.bits.mem_wstrb		:= reg_mem_w_wstrb 
 	io.out.w.valid 			:= reg_mem_w_valid 
 
 	io.in.r.ready 			:= reg_mem_r_ready
