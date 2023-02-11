@@ -52,38 +52,38 @@ class Cache extends Module{
 	val reg_cache_write = RegInit(false.B)
 	val reg_cache_wstrb = RegInit(0.U(16.W))
 	val reg_cache_wdata = RegInit(0.U(128.W))
-	val reg_chosen_tag	= RegInit(0.U(1.w))
+	val reg_chosen_tag	= RegInit(0.U(1.W))
 	val cache_mask 		= Cat(reg_cache_wstrb.asBools.map(Fill(8, _)).reverse)
 	val cache_wdata 	= Mux(reg_offset(3),Cat(reg_wdata,0.U(64.W)),Cat(0.U(64.W),reg_wdata))
 	val cache_wstrb 	= Mux(reg_offset(3),Cat(reg_wstrb,0.U(8.W)),Cat(0.U(8.W),reg_wstrb))
 
 //--------------------------------- sram1-------------------------------
-	sram1_data.WEN 		:= ~(reg_cache_write &(reg_chosen_tag === 0.U))
-	sram1_data.CEN 		:= ~(true.B)
-	sram1_data.BWEN 	:= ~(cache_mask)
-	sram1_data.A 		:= Mux(reg_cache_state =/= cache_idle,reg_index,Index)
-	sram1_data.D 		:= reg_cache_wdata
+	sram1_data.io.WEN 		:= ~(reg_cache_write &(reg_chosen_tag === 0.U))
+	sram1_data.io.CEN 		:= ~(true.B)
+	sram1_data.io.BWEN 	:= ~(cache_mask)
+	sram1_data.io.A 		:= Mux(reg_cache_state =/= cache_idle,reg_index,Index)
+	sram1_data.io.D 		:= reg_cache_wdata
 
-	sram1_tag.WEN		:= ~(reg_cache_write &(reg_chosen_tag === 0.U))
-	sram1_tag.CEN		:= ~(true.B)
-	sram1_tag.BWEN 		:= 0.U
-	sram1_tag.A 		:= Mux(reg_cache_state =/= cache_idle,reg_index,Index)
+	sram1_tag.io.WEN		:= ~(reg_cache_write &(reg_chosen_tag === 0.U))
+	sram1_tag.io.CEN		:= ~(true.B)
+	sram1_tag.io.BWEN 		:= 0.U
+	sram1_tag.io.A 		:= Mux(reg_cache_state =/= cache_idle,reg_index,Index)
 	//tag,valid, dirty
 	//<55,2>,<1>,<0>
-	sram1_tag.D 		:= Cat(reg_tag,Mux(reg_is_w,"b11".U(2.W),"b10".U(2.W)))
+	sram1_tag.io.D 		:= Cat(reg_tag,Mux(reg_is_w,"b11".U(2.W),"b10".U(2.W)))
 
 //--------------------------------sram2---------------------------------
-	sram2_data.WEN 		:= ~(reg_cache_write &(reg_chosen_tag === 1.U))
-	sram2_data.CEN 		:= ~(true.B)
-	sram2_data.BWEN 	:= ~(cache_mask)
-	sram2_data.A 		:= Mux(reg_cache_state =/= cache_idle,reg_index,Index)
-	sram2_data.D 		:= reg_cache_wdata
+	sram2_data.io.WEN 		:= ~(reg_cache_write &(reg_chosen_tag === 1.U))
+	sram2_data.io.CEN 		:= ~(true.B)
+	sram2_data.io.BWEN 	:= ~(cache_mask)
+	sram2_data.io.A 		:= Mux(reg_cache_state =/= cache_idle,reg_index,Index)
+	sram2_data.io.D 		:= reg_cache_wdata
 
-	sram2_tag.WEN 		:= ~(reg_cache_write &(reg_chosen_tag === 1.U))
-	sram2_tag.CEN 		:= ~(true.B)
-	sram2_tag.BWEN 		:= 0.U
-	sram2_tag.A 		:= Mux(reg_cache_state =/= cache_idle,reg_index,Index)
-	sram2_tag.D 		:= Cat(reg_tag,Mux(reg_is_w,"b11".U(2.W),"b10".U(2.W)))
+	sram2_tag.io.WEN 		:= ~(reg_cache_write &(reg_chosen_tag === 1.U))
+	sram2_tag.io.CEN 		:= ~(true.B)
+	sram2_tag.io.BWEN 		:= 0.U
+	sram2_tag.io.A 		:= Mux(reg_cache_state =/= cache_idle,reg_index,Index)
+	sram2_tag.io.D 		:= Cat(reg_tag,Mux(reg_is_w,"b11".U(2.W),"b10".U(2.W)))
 
 //------------cachhe  <-------> bus -------------------------
 // 基本不存在1次读写，Cache从主存区读取，往主存区写，都是128位，总线为64位，所以为2两次。
@@ -104,16 +104,16 @@ class Cache extends Module{
 	val reg_r_ready 	= RegInit(false.B)
 
 //------------------------------ get data from SRAM-----------------------------
-	val tag_1			= sram1_tag.Q(55,2)
-	val tag_2 		 	= sram2_tag.Q(55,2)
+	val tag_1			= sram1_tag.io.Q(55,2)
+	val tag_2 		 	= sram2_tag.io.Q(55,2)
 	val hit_1	 	 	= (reg_tag === tag_1)
 	val hit_2	 		= (reg_tag === tag_2)
-	val tag_valid_1	  	= sram1_tag.Q(1)
-	val tag_valid_2	  	= sram2_tag.Q(1)
-	val tag_dirty_1		= sram1_tag.Q(0)
-	val tag_dirty_2		= sram2_tag.Q(0)
-	val rdata1			= Mux(reg_offset(3),sram1_data.Q(127,64),sram1_data.Q(63,0))
-	val rdata2 			= Mux(reg_offset(3),sram2_data.Q(127,64),sram2_data.Q(63,0))
+	val tag_valid_1	  	= sram1_tag.io.Q(1)
+	val tag_valid_2	  	= sram2_tag.io.Q(1)
+	val tag_dirty_1		= sram1_tag.io.Q(0)
+	val tag_dirty_2		= sram2_tag.io.Q(0)
+	val rdata1			= Mux(reg_offset(3),sram1_data.io.Q(127,64),sram1_data.io.Q(63,0))
+	val rdata2 			= Mux(reg_offset(3),sram2_data.io.Q(127,64),sram2_data.io.Q(63,0))
 
 //------------------------LRU-----------------------
 // 1 bit LRU
