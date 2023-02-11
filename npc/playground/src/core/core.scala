@@ -61,21 +61,21 @@ class Core extends Module{
 	write_back.io.in.inst 			:= execute.io.out.inst
 
 //-------------- Cache and cpu  handshake-------------------
-	i_cache.io.cpu_in.addr 		:= fetch.io.out.w.pc_0
-	i_cache.io.cpu_in.wdata 	:= 0.U 
-	i_cache.io.cpu_in.is_w 		:= false.B
-	i_cache.io.cpu_in.wstrb 	:= 0.U 
+	i_cache.io.cpu_in.bits.addr 		:= fetch.io.out.w.bits.pc_0
+	i_cache.io.cpu_in.bits.wdata 	:= 0.U 
+	i_cache.io.cpu_in.bits.is_w 		:= false.B
+	i_cache.io.cpu_in.bits.wstrb 	:= 0.U 
 	i_cache.io.cpu_in.valid 	:= fetch.io.out.w.valid 
 	fetch.io.out.w.ready 		:= i_cache.io.cpu_in.ready 
 
 	i_cache.io.cpu_out.ready 	:= fetch.io.in.r.ready
-	fetch.io.in.r.inst 			:= i_cache.io.cpu_out.rdata 
+	fetch.io.in.r.bits.inst 	:= i_cache.io.cpu_out.bits.rdata 
 	fetch.io.in.r.valid 		:= i_cache.io.cpu_out.valid 
 
-	d_cache.cpu_in.addr 		:= write_back.io.out.w.mem_addr
-	d_cache.cpu_in.wdata 		:= write_back.io.out.w.mem_wdata
-	d_cache.cpu_in.is_w 		:= write_back.io.out.w.is_w 
-	d_cache.cpu_in.wstrb 		:= write_back.io.out.w.mem_wstrb
+	d_cache.cpu_in.bits.addr 	:= write_back.io.out.w.bits.mem_addr
+	d_cache.cpu_in.bits.wdata 	:= write_back.io.out.w.bits.mem_wdata
+	d_cache.cpu_in.bits.is_w 	:= write_back.io.out.w.bits.is_w 
+	d_cache.cpu_in.bits.wstrb 	:= write_back.io.out.w.bits.mem_wstrb
 	d_cache.cpu_in.valid 		:= write_back.io.out.w.valid 
 
 	d_cache.cpu_out.ready 		:= write_back.io.in.r.ready
