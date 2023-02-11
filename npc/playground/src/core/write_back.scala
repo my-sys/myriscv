@@ -56,15 +56,15 @@ class WriteBack extends Module with CoreParameters{
 	val reg_result_data 		= RegInit(0.U(RegDataLen.W))
 	val reg_w_rs_en 			= RegInit(false.B) 
 
-	val mem_r_data				= MuxLookup(reg_mem_w_addr(2,0),io.in.r.mem_data,List(
-		"b000".U 			-> io.in.r.mem_data,
-		"b001".U 			-> io.in.r.mem_data(63,8),
-		"b010".U 			-> io.in.r.mem_data(63,16),
-		"b011".U 			-> io.in.r.mem_data(63,24),
-		"b100".U 			-> io.in.r.mem_data(63,32),
-		"b101".U 			-> io.in.r.mem_data(63,40),
-		"b110".U 			-> io.in.r.mem_data(63,48),
-		"b111".U 			-> io.in.r.mem_data(63,56)
+	val mem_r_data				= MuxLookup(reg_mem_w_addr(2,0),io.in.r.bits.mem_data,List(
+		"b000".U 			-> io.in.r.bits.mem_data,
+		"b001".U 			-> io.in.r.bits.mem_data(63,8),
+		"b010".U 			-> io.in.r.bits.mem_data(63,16),
+		"b011".U 			-> io.in.r.bits.mem_data(63,24),
+		"b100".U 			-> io.in.r.bits.mem_data(63,32),
+		"b101".U 			-> io.in.r.bits.mem_data(63,40),
+		"b110".U 			-> io.in.r.bits.mem_data(63,48),
+		"b111".U 			-> io.in.r.bits.mem_data(63,56)
 	))
 	val mem_data_result		= MuxLookup(io.in.exuType,0.U(64.W),List(
 		LSUType.lsu_ld 		-> mem_data,
