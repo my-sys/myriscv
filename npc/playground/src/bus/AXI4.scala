@@ -1,3 +1,5 @@
+import chisel3._
+import chisel3.util._
 // wuser 
 class AXI4Bus_w extends Bundle{
 	val wid 	= Output(UInt(4.W))
