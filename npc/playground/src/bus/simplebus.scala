@@ -42,8 +42,8 @@ class Crossbar extends Module{
 		val AXI_Bus		= new AXI4Bus
 	})
 	val lockFun = ((x:SimpleBus_aw) => x.isBurst())
-	val aw_arb = Module(new LockingArbiter(chiselTypeOf(SimpleBus_aw),2,2,Some(lockFun)))
-	val ar_arb = Module(new LockingArbiter(chiselTypeOf(SimpleBus_ar),2,0,false.B))
+	val aw_arb = Module(new LockingArbiter(chiselTypeOf(new SimpleBus_aw),2,2,Some(lockFun)))
+	val ar_arb = Module(new LockingArbiter(chiselTypeOf(new SimpleBus_ar),2,0,false.B))
 	aw_arb.io.in(0) <> io.ICache_bus.aw 
 	aw_arb.io.in(1) <> io.DCache_bus.aw 
 
