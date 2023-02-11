@@ -122,7 +122,7 @@ class Cache extends Module{
 
 	//0 <--------------> 63
 	for(i <- 0 until 64){
-		when((i === reg_index) & (reg_start_operation)){
+		when((i.asUInt === reg_index) & (reg_start_operation)){
 			when(hit_1){
 				reg_lru(i) := "b10".U
 			}.elsewhen(hit_2){
