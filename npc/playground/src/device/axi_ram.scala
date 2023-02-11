@@ -19,7 +19,7 @@ class AXI_RAM extends Module{
     })
 	//val reg_aw_awid 	= RegInit(0.U(4.W))
 	val reg_aw_awaddr 	= RegInit(0.U(64.W))
-	//val reg_aw_awlen	= RegInit(0.U(8.W))
+	val reg_aw_awlen	= RegInit(0.U(8.W))
 	//val reg_aw_awsize 	= RegInit(0.U(3.W))
 	//val reg_aw_awburst	= RegInit(0.U(2.W))
 	val reg_aw_ready	= RegInit(true.B)
@@ -89,11 +89,11 @@ class AXI_RAM extends Module{
 	switch(reg_r_state){
 		is(r_idle){
 			reg_r_valid	:= Mux(reg_start_read,true.B,false.B)
-			reg_r_last 	:= Mux(reg_ar_arlen === 0.U,true.B,false.B)
+			reg_r_rlast 	:= Mux(reg_ar_arlen === 0.U,true.B,false.B)
 			reg_r_state := Mux(reg_start_read,r_busy,r_idle)
 		}
 		is(r_busy){
-			reg_r_last 	:= Mux(reg_ar_arlen === 0.U,true.B,false.B)
+			reg_r_rlast 	:= Mux(reg_ar_arlen === 0.U,true.B,false.B)
 			when(io.ram_bus.r.fire()){
 				when(reg_ar_arlen === 0.U){
 					reg_r_valid := false.B 
@@ -108,7 +108,7 @@ class AXI_RAM extends Module{
 	mem.io.clock				:= clock 
 	mem.io.raddr 				:= reg_ar_araddr
 	mem.io.waddr 				:= reg_aw_awaddr
-	mem.io.wdata 				:= io.ram_bus.w.wdata
+	mem.io.wdata 				:= io.ram_bus.w.bits.wdata
 	mem.io.wmask				:= Cat(io.ram_bus.w.bits.wstrb.asBools.map(Fill(8,_)))
 	mem.io.wen 					:= reg_is_w
 
@@ -121,6 +121,6 @@ class AXI_RAM extends Module{
 	io.ram_bus.r.bits.rid 			:= 0.U 
 	io.ram_bus.r.bits.resp			:= reg_r_resp
 	io.ram_bus.r.bits.rdata			:= mem.io.rdata
-	io.ram_bus.r.bits.rlast			:= reg_r_last
+	io.ram_bus.r.bits.rlast			:= reg_r_rlast
 	io.ram_bus.r.valid			:= reg_r_valid
 }
