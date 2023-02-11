@@ -72,13 +72,13 @@ class Core extends Module{
 	fetch.io.in.r.bits.inst 	:= i_cache.io.cpu_out.bits.rdata 
 	fetch.io.in.r.valid 		:= i_cache.io.cpu_out.valid 
 
-	d_cache.cpu_in.bits.addr 	:= write_back.io.out.w.bits.mem_addr
-	d_cache.cpu_in.bits.wdata 	:= write_back.io.out.w.bits.mem_wdata
-	d_cache.cpu_in.bits.is_w 	:= write_back.io.out.w.bits.is_w 
-	d_cache.cpu_in.bits.wstrb 	:= write_back.io.out.w.bits.mem_wstrb
-	d_cache.cpu_in.valid 		:= write_back.io.out.w.valid 
+	d_cache.io.cpu_in.bits.addr 	:= write_back.io.out.w.bits.mem_addr
+	d_cache.io.cpu_in.bits.wdata 	:= write_back.io.out.w.bits.mem_wdata
+	d_cache.io.cpu_in.bits.is_w 	:= write_back.io.out.w.bits.is_w 
+	d_cache.io.cpu_in.bits.wstrb 	:= write_back.io.out.w.bits.mem_wstrb
+	d_cache.io.cpu_in.valid 		:= write_back.io.out.w.valid 
 
-	d_cache.cpu_out.ready 		:= write_back.io.in.r.ready
+	d_cache.io.cpu_out.ready 		:= write_back.io.in.r.ready
 //---------------Cache an bus handshake --------------------
 	cross_bar.io.ICache_bus	<> i_cache.io.cache_bus
 	cross_bar.io.DCache_bus <> d_cache.io.cache_bus
