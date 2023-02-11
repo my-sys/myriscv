@@ -23,12 +23,12 @@ class Cache extends Module{
 		val cache_bus = new SimpleBus
 	})
 
-	val Tag 		= io.cpu_in.addr(63,10)
-	val Index 		= io.cpu_in.addr(9,4)
-	val Offset 		= io.cpu_in.addr(3,0)
-	val wdata 		= io.cpu_in.wdata
-	val wstrb 		= io.cpu_in.wstrb
-	val is_w 		= io.cpu_in.is_w
+	val Tag 		= io.cpu_in.bits.addr(63,10)
+	val Index 		= io.cpu_in.bits.addr(9,4)
+	val Offset 		= io.cpu_in.bits.addr(3,0)
+	val wdata 		= io.cpu_in.bits.wdata
+	val wstrb 		= io.cpu_in.bits.wstrb
+	val is_w 		= io.cpu_in.bits.is_w
 
 	val sram1_data 		= Module(new S011HD1P_X32Y2D128_BW) // 存放数据
 	val sram1_tag 		= Module(new S011HD1P_X32Y2D128_BW) // 存放Tag， 以及控制位
@@ -148,12 +148,12 @@ class Cache extends Module{
 		is(cache_idle){
 			when(io.cpu_in.fire()){
 			//------hold cpu state----------
-				reg_wdata		:= io.cpu_in.wdata
-				reg_wstrb		:= io.cpu_in.wstrb
-				reg_is_w		:= io.cpu_in.is_w
-				reg_tag			:= io.cpu_in.addr(63,10)
-				reg_index		:= io.cpu_in.addr(9,4)
-				reg_offset		:= io.cpu_in.addr(3,0)
+				reg_wdata		:= io.cpu_in.bits.wdata
+				reg_wstrb		:= io.cpu_in.bits.wstrb
+				reg_is_w		:= io.cpu_in.bits.is_w
+				reg_tag			:= io.cpu_in.bits.addr(63,10)
+				reg_index		:= io.cpu_in.bits.addr(9,4)
+				reg_offset		:= io.cpu_in.bits.addr(3,0)
 				reg_wready		:= false.B 
 			//-----------cache--------------
 				reg_cache_write := false.B
@@ -313,7 +313,7 @@ class Cache extends Module{
 				//reg_b_ready	:= false.B
 			//}
 			// when read bus finish , write bus finish
-			when((io.cache_bus.r.rlast | reg_rbus_finish)&((reg_cnt === 0.U) | reg_wbus_finish )){
+			when((io.cache_bus.r.bits.rlast | reg_rbus_finish)&((reg_cnt === 0.U) | reg_wbus_finish )){
 				reg_cache_state		:= write_cache
 				reg_cache_write		:= true.B
 			}
