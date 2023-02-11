@@ -28,8 +28,8 @@ class Fetch extends Module{
 			val inst = Output(UInt(32.W))
 		}
 	})
-
-	val stall 			= de_stall | wb_stall | ex_stall
+	val flush 			= io.in.flush
+	val stall 			= io.in.de_stall | io.in.wb_stall | io.in.ex_stall
 	val reg_pc_0 		= RegInit("h8000_0000".U(64.W))
 	val reg_pc_1 		= RegInit(0.U(64.W))
 	val reg_inst		= RegInit(0.U(32.W))
