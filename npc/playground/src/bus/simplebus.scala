@@ -64,18 +64,18 @@ class Crossbar extends Module{
 		when(io.AXI_Bus.aw.fire()){
 			reg_aw_ack := true.B
 		}
-		when(io.AXI_Bus.w.fire() & io.AXI_Bus.w.wlast){
+		when(io.AXI_Bus.w.fire() & io.AXI_Bus.w.bits.wlast){
 			reg_w_ack  := true.B
 		}
 	}
 
 //--------------------------aw----------------------------
-	io.AXI_Bus.aw.bits.awid 		:= 0.U  
+	io.AXI_Bus.aw.bits.awid 	:= 0.U  
 	io.AXI_Bus.aw.bits.awaddr 	:= aw_arb.io.out.bits.awaddr 
 	io.AXI_Bus.aw.bits.awlen 	:= aw_arb.io.out.bits.awlen 
 	io.AXI_Bus.aw.bits.awsize 	:= 8.U
 	io.AXI_Bus.aw.bits.awburst	:= "b01".U
-	io.AXI_Bus.aw.valid 	:= aw_arb.io.out.valid &(!reg_aw_ack)
+	io.AXI_Bus.aw.valid 		:= aw_arb.io.out.valid &(!reg_aw_ack)
 	//:=io.AXI_Bus.aw.ready
 
 //--------------------------w-----------------------------
@@ -86,10 +86,10 @@ class Crossbar extends Module{
 	io.AXI_Bus.w.valid 		:= aw_arb.io.out.valid &(!reg_w_ack)
 	aw_arb.io.out.ready 	:= io.AXI_Bus.w.ready
 //-------------------------b------------------------------
-	io.DCache_bus.b.bits.resp	:= Mux(aw_arb.io.chosen === 1.U,io.AXI_Bus.b.bits.resp,"b00".U)
+	io.DCache_bus.b.bits.bresp	:= Mux(aw_arb.io.chosen === 1.U,io.AXI_Bus.b.bits.bresp,"b00".U)
 	io.DCache_bus.b.valid 		:= Mux(aw_arb.io.chosen === 1.U,io.AXI_Bus.b.valid,false.B)
 	io.AXI_Bus.b.ready 			:= Mux(aw_arb.io.chosen === 1.U,io.DCache_bus.b.ready,io.ICache_bus.b.ready)
-	io.ICache_bus.b.bits.resp	:= Mux(aw_arb.io.chosen === 0.U,io.AXI_Bus.b.bits.resp,"b00".U)
+	io.ICache_bus.b.bits.bresp	:= Mux(aw_arb.io.chosen === 0.U,io.AXI_Bus.b.bits.bresp,"b00".U)
 	io.ICache_bus.b.valid 		:= Mux(aw_arb.io.chosen === 0.U,io.AXI_Bus.b.valid,false.B)
 	//:=io.AXI_Bus.b.bid
 //------------------------ar------------------------------
