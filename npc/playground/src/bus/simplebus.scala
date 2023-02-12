@@ -49,7 +49,7 @@ class Crossbar extends Module{
 	aw_arb.io.in(0).bits.wdata	:= io.ICache_bus.aw.bits.wdata
 	aw_arb.io.in(0).bits.wlast  := io.ICache_bus.aw.bits.wlast
 	aw_arb.io.in(0).valid 		:= io.ICache_bus.aw.valid 
-	aw_arb.io.in(0).ready		:= true.B
+	//aw_arb.io.in(0).ready		:= true.B
 	io.ICache_bus.aw.ready      := true.B
 	//io.ICache_bus.aw.bits<>aw_arb.io.in(0).bits
 
