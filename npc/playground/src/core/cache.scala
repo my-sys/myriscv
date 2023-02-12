@@ -321,4 +321,23 @@ class Cache extends Module{
 			}
 		}
 	}
+
+	io.cpu_out.bits.rdata 		:= reg_rdata 
+	io.cpu_out.valid			:= reg_rvalid
+
+	io.cpu_in.bits.ready 		:= reg_wready
+
+	io.cache_bus.aw.bits.awaddr := reg_aw_awaddr
+	io.cache_bus.aw.bits.awlen 	:= reg_aw_awlen
+	io.cache_bus.aw.bits.wdata 	:= reg_aw_wdata
+	io.cache_bus.aw.bits.wlast 	:= reg_aw_wlast
+	io.cache_bus.aw.bits.wstrb	:= reg_aw_wstrb 
+	io.cache_bus.aw.valid 		:= reg_aw_valid
+
+	io.cache_bus.b.ready 		:= reg_b_ready
+	io.cache_bus.ar.araddr		:= reg_ar_araddr
+	io.cache_bus.ar.arlen		:= reg_ar_arlen
+	io.cache_bus.ar.valid 		:= reg_ar_valid
+
+	io.cache_bus.r.ready		:= reg_r_ready
 }
