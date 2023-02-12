@@ -7,7 +7,7 @@ class SimpleBus_aw extends Bundle{
 	val wdata 		= Output(UInt(64.W))
 	val wlast 		= Output(Bool())
 	val wstrb 		= Output(UInt(8.W))
-	//def isBurst()	= (awlen =/= 0.U)
+	def isBurst()	= (awlen =/= 0.U)
 }
 
 class SimpleBus_b extends Bundle{
@@ -40,7 +40,7 @@ class Crossbar extends Module{
 		val DCache_bus 	= new SimpleBus
 		val AXI_Bus		= new AXI4Bus
 	})
-	val lockFun = ((x:SimpleBus_aw) => false.B)
+	val lockFun = ((x:SimpleBus_aw) => x.isBurst())
 	val aw_arb = Module(new LockingArbiter(chiselTypeOf(io.ICache_bus.aw.bits),2,2,Some(lockFun)))
 	val ar_arb = Module(new LockingArbiter(chiselTypeOf(io.ICache_bus.ar.bits),2,0,Some(((x:SimpleBus_ar) => false.B))))
 
