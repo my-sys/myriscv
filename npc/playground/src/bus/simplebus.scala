@@ -36,22 +36,22 @@ class SimpleBus extends Bundle{
 // simplebus <--------> axi
 class Crossbar extends Module{
 	val io = IO(new Bundle{
-		val ICache_bus 	= new SimpleBus
-		val DCache_bus 	= new SimpleBus
+		val ICache_bus 	= Flipped(new SimpleBus)
+		val DCache_bus 	= Flipped(new SimpleBus)
 		val AXI_Bus		= new AXI4Bus
 	})
 	val lockFun = ((x:SimpleBus_aw) => x.isBurst())
 	val aw_arb = Module(new LockingArbiter(chiselTypeOf(io.ICache_bus.aw.bits),2,2,Some(lockFun)))
 	val ar_arb = Module(new LockingArbiter(chiselTypeOf(io.ICache_bus.ar.bits),2,0,Some(((x:SimpleBus_ar) => false.B))))
 
-	aw_arb.io.in(0).bits.awaddr := io.ICache_bus.aw.bits.awaddr 
-	aw_arb.io.in(0).bits.awlen  := io.ICache_bus.aw.bits.awlen
-	aw_arb.io.in(0).bits.wdata	:= io.ICache_bus.aw.bits.wdata
-	aw_arb.io.in(0).bits.wlast  := io.ICache_bus.aw.bits.wlast
-	aw_arb.io.in(0).valid 		:= io.ICache_bus.aw.valid 
+	// aw_arb.io.in(0).bits.awaddr := io.ICache_bus.aw.bits.awaddr 
+	// aw_arb.io.in(0).bits.awlen  := io.ICache_bus.aw.bits.awlen
+	// aw_arb.io.in(0).bits.wdata	:= io.ICache_bus.aw.bits.wdata
+	// aw_arb.io.in(0).bits.wlast  := io.ICache_bus.aw.bits.wlast
+	// aw_arb.io.in(0).valid 		:= io.ICache_bus.aw.valid 
 	//aw_arb.io.in(0).ready		:= true.B
-	io.ICache_bus.aw.valid 		:= true.B 
-	io.ICache_bus.aw.ready      := true.B
+	// io.ICache_bus.aw.valid 		:= true.B 
+	// io.ICache_bus.aw.ready      := true.B
 	//io.ICache_bus.aw.bits<>aw_arb.io.in(0).bits
 
 	aw_arb.io.in(1).bits.awaddr := io.DCache_bus.aw.bits.awaddr 
