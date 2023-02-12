@@ -114,7 +114,8 @@ class Cache extends Module{
 	val tag_dirty_2		= sram2_tag.io.Q(0)
 	val rdata1			= Mux(reg_offset(3),sram1_data.io.Q(127,64),sram1_data.io.Q(63,0))
 	val rdata2 			= Mux(reg_offset(3),sram2_data.io.Q(127,64),sram2_data.io.Q(63,0))
-
+	val rdata_1			= sram1_data.io.Q
+	val rdata_2 		= sram2_data.io.Q
 //------------------------LRU-----------------------
 // 1 bit LRU
 	val reg_lru 			= RegInit(VecInit(Seq.fill(64)(0.U(2.W))))
@@ -223,7 +224,7 @@ class Cache extends Module{
 					reg_aw_awaddr		:= Cat(Mux(LRU(1),tag_2,tag_1),reg_index)<<4.U
 					reg_aw_awlen		:= 1.U 
 					reg_cnt				:= 1.U //assistant to count
-					reg_aw_wdata 		:= Mux(LRU(1),rdata2(63,0),rdata1(63,0))
+					reg_aw_wdata 		:= Mux(LRU(1),rdata_2(63,0),rdata_1(63,0))
 					reg_aw_wstrb 		:= "hff".U
 					reg_aw_wlast 		:= false.B 
 					reg_aw_valid 		:= true.B
@@ -304,10 +305,10 @@ class Cache extends Module{
 				}.elsewhen(reg_cnt === 1.U){
 					reg_cnt 		:= reg_cnt - 1.U 
 					reg_aw_wlast 	:= true.B
-					reg_aw_wdata 	:= Mux(reg_chosen_tag === 1.U,rdata2(127,64),rdata1(127,64))
+					reg_aw_wdata 	:= Mux(reg_chosen_tag === 1.U,rdata_2(127,64),rdata_1(127,64))
 				}.otherwise{
 					reg_cnt := reg_cnt - 1.U 
-					reg_aw_wdata 	:= Mux(reg_chosen_tag === 1.U,rdata2(127,64),rdata1(127,64))
+					reg_aw_wdata 	:= Mux(reg_chosen_tag === 1.U,rdata_2(127,64),rdata_1(127,64))
 				}
 			}
 			//when(io.cache_bus.b.fire()){
