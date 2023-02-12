@@ -77,7 +77,7 @@ class Fetch extends Module{
 		reg_r_flush := Mux(flush,true.B,reg_r_flush)
 		reg_r_ready := Mux(stall,reg_r_ready,true.B)
 	}
-
+	io.in.r.ready 		:=reg_r_ready
 	io.out.w.bits.pc_0	:=reg_pc_0
 	io.out.w.valid 		:=reg_w_valid
 	io.out.pc_1			:=Mux(reg_stall,reg_temp_pc_1,reg_pc_1)

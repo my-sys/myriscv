@@ -77,8 +77,11 @@ class Core extends Module{
 	d_cache.io.cpu_in.bits.is_w 	:= write_back.io.out.w.bits.is_w 
 	d_cache.io.cpu_in.bits.wstrb 	:= write_back.io.out.w.bits.mem_wstrb
 	d_cache.io.cpu_in.valid 		:= write_back.io.out.w.valid 
+	write_back.io.out.w.ready 		:= d_cache.io.cpu_in.ready
 
 	d_cache.io.cpu_out.ready 		:= write_back.io.in.r.ready
+	write_back.io.in.r.bits.mem_data	:= d_cache.io.cpu_out.rdata
+	write_back.io.in.r.valid 			:= d_cache.io.cpu_out.valid 
 //---------------Cache an bus handshake --------------------
 	cross_bar.io.ICache_bus	<> i_cache.io.cache_bus
 	cross_bar.io.DCache_bus <> d_cache.io.cache_bus
