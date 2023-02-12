@@ -5,7 +5,7 @@ import "DPI-C" function void ramCtrl
     input   longint   waddr,
     input   longint   wdata,
 //	input   byte	  wstrb,
-	input   longint   wmask
+	input   longint   wmask,
     input   bit       wen
 );
 
