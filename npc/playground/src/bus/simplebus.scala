@@ -1,6 +1,6 @@
 import chisel3._
 import chisel3.util._
-import utils._
+import chisel3.stage.ChiselStage
 class SimpleBus_aw extends Bundle{
 	val awaddr 		= Output(UInt(64.W))
 	val awlen 		= Output(UInt(8.W))
