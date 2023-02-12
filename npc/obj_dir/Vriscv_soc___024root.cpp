@@ -99,10 +99,10 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__11(Vriscv_soc___024root*
         ++(vlSymsp->__Vcoverage[14231]);
     }
     if (vlSelf->reset) {
-        ++(vlSymsp->__Vcoverage[14255]);
+        ++(vlSymsp->__Vcoverage[14237]);
     }
     if (vlSelf->reset) {
-        ++(vlSymsp->__Vcoverage[14237]);
+        ++(vlSymsp->__Vcoverage[14255]);
     }
     if (vlSelf->reset) {
         ++(vlSymsp->__Vcoverage[14263]);
@@ -191,6 +191,15 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__11(Vriscv_soc___024root*
     if ((1U & (~ (IData)(vlSelf->reset)))) {
         if (vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_state) {
             if (vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_state) {
+                if (vlSelf->riscv_soc__DOT__axi_ram__DOT___T_3) {
+                    ++(vlSymsp->__Vcoverage[14250]);
+                }
+            }
+        }
+    }
+    if ((1U & (~ (IData)(vlSelf->reset)))) {
+        if (vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_state) {
+            if (vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_state) {
                 if ((1U & (~ (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT___T_3)))) {
                     ++(vlSymsp->__Vcoverage[14245]);
                 }
@@ -211,15 +220,6 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__11(Vriscv_soc___024root*
             if (vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_state) {
                 if (vlSelf->riscv_soc__DOT__axi_ram__DOT___T_3) {
                     ++(vlSymsp->__Vcoverage[14244]);
-                }
-            }
-        }
-    }
-    if ((1U & (~ (IData)(vlSelf->reset)))) {
-        if (vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_state) {
-            if (vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_state) {
-                if (vlSelf->riscv_soc__DOT__axi_ram__DOT___T_3) {
-                    ++(vlSymsp->__Vcoverage[14250]);
                 }
             }
         }
@@ -10098,7 +10098,8 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__11(Vriscv_soc___024root*
         }
     } else {
         vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_rlast 
-            = (0U == (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_ar_arlen));
+            = ((0U == (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_ar_arlen)) 
+               & (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_start_read));
     }
     if (vlSelf->reset) {
         vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_valid = 0U;
