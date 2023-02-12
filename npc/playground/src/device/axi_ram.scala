@@ -89,7 +89,7 @@ class AXI_RAM extends Module{
 	switch(reg_r_state){
 		is(r_idle){
 			reg_r_valid	:= Mux(reg_start_read,true.B,false.B)
-			reg_r_rlast 	:= Mux(reg_ar_arlen === 0.U,true.B,false.B)
+			reg_r_rlast := Mux((reg_ar_arlen === 0.U)&reg_start_read,true.B,false.B)
 			reg_r_state := Mux(reg_start_read,r_busy,r_idle)
 		}
 		is(r_busy){

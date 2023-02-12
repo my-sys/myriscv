@@ -325,7 +325,7 @@ class Cache extends Module{
 	io.cpu_out.bits.rdata 		:= reg_rdata 
 	io.cpu_out.valid			:= reg_rvalid
 
-	io.cpu_in.ready 		:= reg_wready
+	io.cpu_in.ready 			:= reg_wready
 
 	io.cache_bus.aw.bits.awaddr := reg_aw_awaddr
 	io.cache_bus.aw.bits.awlen 	:= reg_aw_awlen
