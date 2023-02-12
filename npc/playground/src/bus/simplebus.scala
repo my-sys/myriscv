@@ -6,7 +6,7 @@ class SimpleBus_aw extends Bundle{
 	val awlen 		= Output(UInt(8.W))
 	val wdata 		= Output(UInt(64.W))
 	val wlast 		= Output(Bool())
-	//val wstrb 		= Output(UInt(8.W))
+	val wstrb 		= Output(UInt(8.W))
 	def isBurst()	= (awlen =/= 0.U)
 }
 
@@ -44,12 +44,21 @@ class Crossbar extends Module{
 	val aw_arb = Module(new LockingArbiter(chiselTypeOf(io.ICache_bus.aw.bits),2,2,Some(lockFun)))
 	val ar_arb = Module(new LockingArbiter(chiselTypeOf(io.ICache_bus.ar.bits),2,0,Some(((x:SimpleBus_ar) => false.B))))
 
-	// aw_arb.io.in(0).bits.awaddr := io.ICache_bus.aw.bits.awaddr 
-	// aw_arb.io.in(0).bits.awlen  := io.ICache_bus.aw.bits.awlen
-	// aw_arb.io.in(0).bits.wdata	:= io.ICache_bus.aw.bits.wdata
-	io.ICache_bus.aw.bits<>aw_arb.io.in(0).bits
+	aw_arb.io.in(0).bits.awaddr := io.ICache_bus.aw.bits.awaddr 
+	aw_arb.io.in(0).bits.awlen  := io.ICache_bus.aw.bits.awlen
+	aw_arb.io.in(0).bits.wdata	:= io.ICache_bus.aw.bits.wdata
+	aw_arb.io.in(0).bits.wlast  := io.ICache_bus.aw.bits.wlast
+	aw_arb.io.in(0).valid 		:= io.ICache_bus.aw.valid 
+	io.ICache_bus.aw.ready      := aw_arb.io.in(0).ready
+	//io.ICache_bus.aw.bits<>aw_arb.io.in(0).bits
 
-	aw_arb.io.in(1) <> io.DCache_bus.aw 
+	aw_arb.io.in(1).bits.awaddr := io.DCache_bus.aw.bits.awaddr 
+	aw_arb.io.in(1).bits.awlen  := io.DCache_bus.aw.bits.awlen
+	aw_arb.io.in(1).bits.wdata	:= io.DCache_bus.aw.bits.wdata
+	aw_arb.io.in(1).bits.wlast  := io.DCache_bus.aw.bits.wlast
+	aw_arb.io.in(1).valid 		:= io.DCache_bus.aw.valid 
+	io.DCache_bus.aw.ready      := aw_arb.io.in(1).ready
+	//aw_arb.io.in(1) <> io.DCache_bus.aw 
 
 	ar_arb.io.in(0) <> io.ICache_bus.ar 
 	ar_arb.io.in(1) <> io.DCache_bus.ar 
