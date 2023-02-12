@@ -7,7 +7,7 @@ class SimpleBus_aw extends Bundle{
 	val wdata 		= Output(UInt(64.W))
 	val wlast 		= Output(Bool())
 	val wstrb 		= Output(UInt(8.W))
-	def isBurst()	= (awlen =/= 0.U)
+	//def isBurst()	= (awlen =/= 0.U)
 }
 
 class SimpleBus_b extends Bundle{
