@@ -234,6 +234,7 @@ class Cache extends Module{
 					reg_ar_araddr		:= Cat(reg_tag,reg_index) << 4.U
 					reg_ar_arlen		:=1.U 
 					reg_ar_valid		:= true.B
+					reg_r_ready 		:= true.B
 					reg_rbus_finish		:= false.B
 
 					reg_cache_state		:=cache_and_bus
@@ -243,6 +244,7 @@ class Cache extends Module{
 					reg_ar_araddr		:= Cat(reg_tag,reg_index) << 4.U
 					reg_ar_arlen		:=1.U 
 					reg_ar_valid		:= true.B
+					reg_r_ready 		:= true.B
 					reg_rbus_finish		:= false.B
 
 					reg_cache_state		:=cache_and_bus
@@ -269,6 +271,7 @@ class Cache extends Module{
 			}
 			when(io.cache_bus.r.fire()){
 				when(io.cache_bus.r.bits.rlast){
+					reg_r_ready 			:= false.B
 					reg_rbus_finish			:= true.B
 					when(reg_is_w){
 						//----cpu--
@@ -335,8 +338,8 @@ class Cache extends Module{
 	io.cache_bus.aw.valid 		:= reg_aw_valid
 
 	io.cache_bus.b.ready 		:= reg_b_ready
-	io.cache_bus.ar.bits.araddr		:= reg_ar_araddr
-	io.cache_bus.ar.bits.arlen		:= reg_ar_arlen
+	io.cache_bus.ar.bits.araddr	:= reg_ar_araddr
+	io.cache_bus.ar.bits.arlen	:= reg_ar_arlen
 	io.cache_bus.ar.valid 		:= reg_ar_valid
 
 	io.cache_bus.r.ready		:= reg_r_ready
