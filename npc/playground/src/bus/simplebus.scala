@@ -6,7 +6,7 @@ class SimpleBus_aw extends Bundle{
 	val awlen 		= Output(UInt(8.W))
 	val wdata 		= Output(UInt(64.W))
 	val wstrb 		= Output(UInt(8.W))
-	val wlast 		= Output(UInt(1.W))
+	val wlast 		= Output(UInt(2.W))
 
 	def isBurst()	= (awlen =/= 0.U)
 }
