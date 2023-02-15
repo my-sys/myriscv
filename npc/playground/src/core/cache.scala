@@ -162,7 +162,7 @@ class Cache extends Module{
 			reg_b_ready 	:= false.B 
 			reg_r_valid 	:= false.B
 		}
-		is(cache_read){
+		is(read_cache){
 			reg_start_operation := false.B
 			when(hit_1 | hit_2){
 				reg_chosen_tag	:= Mux(hit_1,0.U,1.U)

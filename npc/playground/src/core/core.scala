@@ -76,8 +76,8 @@ class Core extends Module{
 	write_back.io.bus.bits.rdata 	:= cross_bar_1.io.wb.bits.rdata
 	write_back.io.bus.ready 		:= cross_bar_1.io.wb.ready
 
-	i_cache.io.cpu <> cross_bar_1.ICache 
-	d_cache.io.cpu <> cross_bar_1.DCache 
+	i_cache.io.cpu <> cross_bar_1.io.ICache 
+	d_cache.io.cpu <> cross_bar_1.io.DCache 
 
 //---------------Cache an bus handshake --------------------
 	cross_bar.io.ICache_bus	<> i_cache.io.cache_bus

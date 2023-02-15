@@ -45,14 +45,14 @@ class Crossbar_1 extends Module{
 		})
 	})
 	
-	io.ICache.cpu.bits.addr  := io.fetch.bits.addr 
-	io.ICache.cpu.bits.wdata := 0.U 
-	io.ICache.cpu.bits.wstrb := 0.U 
-	io.ICache.cpu.bits.is_w  := false.B 
-	io.ICache.cpu.valid 	 := io.fetch.bits.addr(31)&io.fetch.valid
+	io.ICache.bits.addr  := io.fetch.bits.addr 
+	io.ICache.bits.wdata := 0.U 
+	io.ICache.bits.wstrb := 0.U 
+	io.ICache.bits.is_w  := false.B 
+	io.ICache.valid 	 := io.fetch.bits.addr(31)&io.fetch.valid
 	when(io.fetch.bits.addr(31)){
-		io.fetch.ready 		:= io.ICache.cpu.ready
-		io.fetch.bits.rdata := io.ICache.cpu.bits.rdata
+		io.fetch.ready 		:= io.ICache.ready
+		io.fetch.bits.rdata := io.ICache.bits.rdata
 	}.otherwise{
 		io.fetch.bits.rdata := io.bus1.bits.rdata
 		io.fetch.ready 		:= io.bus1.ready
@@ -62,11 +62,11 @@ class Crossbar_1 extends Module{
 	io.bus1.bits.addr 		:= io.fetch.bits.addr 
 	io.bus1.valid 			:= (!(io.fetch.bits.addr(31)))&io.fetch.valid
 	
-	io.DCache.cpu.bits.addr		:= io.wb.bits.addr 
-	io.DCache.cpu.bits.wdata	:= io.wb.bits.wdata
-	io.DCache.cpu.bits.wstrb	:= io.wb.bits.wstrb
-	io.DCache.cpu.bits.is_w		:= io.wb.bits.is_w
-	io.DCache.cpu.valid 		:= io.wb.bits.addr(31)& io.wb.valid 
+	io.DCache.bits.addr		:= io.wb.bits.addr 
+	io.DCache.bits.wdata	:= io.wb.bits.wdata
+	io.DCache.bits.wstrb	:= io.wb.bits.wstrb
+	io.DCache.bits.is_w		:= io.wb.bits.is_w
+	io.DCache.valid 		:= io.wb.bits.addr(31)& io.wb.valid 
 	
 	//io.bus2.bits.is_io		:= !(io.wb.bits.addr(31))
 	io.bus2.bits.addr 		:= io.wb.bits.addr
@@ -77,8 +77,8 @@ class Crossbar_1 extends Module{
 	io.bus2.valid 			:= (!(io.wb.bits.addr(31))) & io.wb.valid 
 	
 	when(io.wb.bits.addr(31)){
-		io.wb.ready 		:= io.DCache.cpu.ready
-		io.wb.bits.rdata 	:= io.DCache.cpu.bits.rdata
+		io.wb.ready 		:= io.DCache.ready
+		io.wb.bits.rdata 	:= io.DCache.bits.rdata
 	}.otherwise{
 		io.wb.ready 		:= io.bus2.ready
 		io.wb.bits.rdata 	:= io.bus2.bits.rdata

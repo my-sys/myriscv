@@ -31,7 +31,7 @@ class AXI4Bus_ar extends Bundle{
 //ruser
 class AXI4Bus_r  extends Bundle{
 	val rid 	= Output(UInt(4.W))
-	val resp 	= Output(UInt(2.W))
+	val rresp 	= Output(UInt(2.W))
 	val rdata 	= Output(UInt(64.W))
 	val rlast 	= Output(Bool())
 }
