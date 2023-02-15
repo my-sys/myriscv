@@ -274,7 +274,7 @@ class Cache extends Module{
 		// }
 	}
 
-	io.cpu.bits.rdata 			:= 1.U //reg_rdata
+	//io.cpu.bits.rdata 			:= 1.U //reg_rdata
 	io.cpu.ready 				:= reg_ready 
 
 	io.cache_bus.w.valid 		:= reg_w_valid
