@@ -9,6 +9,7 @@ class Core extends Module{
 	val i_cache 		= Module(new Cache)
 	val d_cache			= Module(new Cache)
 	val cross_bar 		= Module(new Crossbar)
+	val cross_bar_1 	= Module(new Crossbar_1)
 
 	val fetch			= Module(new Fetch)
 	val execute 		= Module(new Exu)
@@ -61,29 +62,27 @@ class Core extends Module{
 	write_back.io.in.inst 			:= execute.io.out.inst
 
 //-------------- Cache and cpu  handshake-------------------
-	i_cache.io.cpu_in.bits.addr 		:= fetch.io.out.w.bits.pc_0
-	i_cache.io.cpu_in.bits.wdata 	:= 0.U 
-	i_cache.io.cpu_in.bits.is_w 		:= false.B
-	i_cache.io.cpu_in.bits.wstrb 	:= 0.U 
-	i_cache.io.cpu_in.valid 	:= fetch.io.out.w.valid 
-	fetch.io.out.w.ready 		:= i_cache.io.cpu_in.ready 
+	cross_bar_1.io.fetch.valid		:= fetch.io.bus.valid
+	cross_bar_1.io.fetch.bits.addr 	:= fetch.io.bus.bits.pc_0
+	fetch.io.bus.ready 				:= cross_bar_1.io.fetch.ready 
+	fetch.io.bus.bits.inst 			:= cross_bar_1.io.fetch.bits.rdata 
 
-	i_cache.io.cpu_out.ready 	:= fetch.io.in.r.ready
-	fetch.io.in.r.bits.inst 	:= i_cache.io.cpu_out.bits.rdata 
-	fetch.io.in.r.valid 		:= i_cache.io.cpu_out.valid 
+	cross_bar_1.io.wb.valid			:= write_back.io.bus.valid
+	cross_bar_1.io.wb.bits.addr 	:= write_back.io.bus.bits.addr
+	cross_bar_1.io.wb.bits.wdata 	:= write_back.io.bus.bits.wdata
+	cross_bar_1.io.wb.bits.size 	:= write_back.io.bus.bits.size
+	cross_bar_1.io.wb.bits.wstrb 	:= write_back.io.bus.bits.wstrb
+	cross_bar_1.io.wb.bits.is_w		:= write_back.io.bus.bits.is_w
+	write_back.io.bus.bits.rdata 	:= cross_bar_1.io.wb.bits.rdata
+	write_back.io.bus.ready 		:= cross_bar_1.io.wb.ready
 
-	d_cache.io.cpu_in.bits.addr 	:= write_back.io.out.w.bits.mem_addr
-	d_cache.io.cpu_in.bits.wdata 	:= write_back.io.out.w.bits.mem_wdata
-	d_cache.io.cpu_in.bits.is_w 	:= write_back.io.out.w.bits.is_w 
-	d_cache.io.cpu_in.bits.wstrb 	:= write_back.io.out.w.bits.mem_wstrb
-	d_cache.io.cpu_in.valid 		:= write_back.io.out.w.valid 
-	write_back.io.out.w.ready 		:= d_cache.io.cpu_in.ready
+	i_cache.io.cpu <> cross_bar_1.ICache 
+	d_cache.io.cpu <> cross_bar_1.DCache 
 
-	d_cache.io.cpu_out.ready 		:= write_back.io.in.r.ready
-	write_back.io.in.r.bits.mem_data	:= d_cache.io.cpu_out.bits.rdata
-	write_back.io.in.r.valid 			:= d_cache.io.cpu_out.valid 
 //---------------Cache an bus handshake --------------------
 	cross_bar.io.ICache_bus	<> i_cache.io.cache_bus
 	cross_bar.io.DCache_bus <> d_cache.io.cache_bus
+	cross_bar.io.bus1 <> cross_bar_1.io.bus1 
+	cross_bar.io.bus2 <> cross_bar_1.io.bus2
 	io.axi_bus	<> cross_bar.io.AXI_Bus
 }
