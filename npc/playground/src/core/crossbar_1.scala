@@ -1,49 +1,80 @@
-import utils._
+
 import chisel3._
 import chisel3.util._
 class Crossbar_1 extends Module{
 	val io = IO(new Bundle{
 		// in 
-		val fetch = Flipped(Coupled(new Bundle{
-			val addr 	= Output(UInt(64.W))
-			val rdata	= Input(UInt(64.W))
-		}))
-		val wb	 = Flipped(Coupled(new Bundle{
-			val addr    = Output(UInt(64.W))
-			val rdata 	= Input(UInt(64.W))
-			val wdata 	= Output(UInt(64.W))
-			val size 	= Output(UInt(2.W))
-			val wstrb 	= Output(UInt(8.W))
-			val is_w 	= Output(Bool())
-		}))
+		val fetch = Flipped(new Bundle{
+			val valid = Output(Bool())
+			val bits = new Bundle{
+				val addr 	= Output(UInt(64.W))
+				val rdata	= Input(UInt(64.W))
+			}
+			val ready = Input(Bool())
+			def fire: Bool = valid & ready
+		}
+		)
+		val wb	 = Flipped(new Bundle{
+			val valid = Output(Bool())
+			val bits = new Bundle{
+				val addr    = Output(UInt(64.W))
+				val rdata 	= Input(UInt(64.W))
+				val wdata 	= Output(UInt(64.W))
+				val size 	= Output(UInt(2.W))
+				val wstrb 	= Output(UInt(8.W))
+				val is_w 	= Output(Bool())
+			}
+			val ready = Input(Bool())
+			def fire: Bool = valid & ready
+		})
 		// out
-		val ICache = Coupled(new Bundle{
-			val addr    = Output(UInt(64.W))
-			val rdata 	= Input(UInt(64.W))
-			val wdata 	= Output(UInt(64.W))
-			val wstrb 	= Output(UInt(8.W))
-			val is_w 	= Output(Bool())
-		})
-		val DCache = Coupled(new Bundle{
-			val addr    = Output(UInt(64.W))
-			val rdata 	= Input(UInt(64.W))
-			val wdata 	= Output(UInt(64.W))
-			val wstrb 	= Output(UInt(8.W))
-			val is_w 	= Output(Bool())
-		})
+		val ICache = new Bundle{
+			val valid = Output(Bool())
+			val bits = new Bundle{
+				val addr    = Output(UInt(64.W))
+				val rdata 	= Input(UInt(64.W))
+				val wdata 	= Output(UInt(64.W))
+				val wstrb 	= Output(UInt(8.W))
+				val is_w 	= Output(Bool())
+			}
+			val ready = Input(Bool())
+			def fire: Bool = valid & ready
+		}
+		val DCache = new Bundle{
+			val valid = Output(Bool())
+			val bits = new Bundle{
+				val addr    = Output(UInt(64.W))
+				val rdata 	= Input(UInt(64.W))
+				val wdata 	= Output(UInt(64.W))
+				val wstrb 	= Output(UInt(8.W))
+				val is_w 	= Output(Bool())
+			}
+			val ready = Input(Bool())
+			def fire: Bool = valid & ready
+		}
 		
-		val bus1	= Coupled(new Bundle{
-			val addr 	= Output(UInt(64.W))
-			val rdata	= Input(UInt(64.W))
-		})
-		val bus2 	= Coupled(new Bundle{
-			val addr    = Output(UInt(64.W))
-			val rdata 	= Input(UInt(64.W))
-			val wdata 	= Output(UInt(64.W))
-			val size 	= Output(UInt(2.W))
-			val wstrb 	= Output(UInt(8.W))
-			val is_w 	= Output(Bool())
-		})
+		val bus1	= new Bundle{
+			val valid = Output(Bool())
+			val bits = new Bundle{
+				val addr 	= Output(UInt(64.W))
+				val rdata	= Input(UInt(64.W))
+			}
+			val ready = Input(Bool())
+			def fire: Bool = valid & ready
+		}
+		val bus2 	= new Bundle{
+			val valid = Output(Bool())
+			val bits = new Bundle{
+				val addr    = Output(UInt(64.W))
+				val rdata 	= Input(UInt(64.W))
+				val wdata 	= Output(UInt(64.W))
+				val size 	= Output(UInt(2.W))
+				val wstrb 	= Output(UInt(8.W))
+				val is_w 	= Output(Bool())
+			}
+			val ready = Input(Bool())
+			def fire: Bool = valid & ready
+		}
 	})
 	
 	io.ICache.bits.addr  := io.fetch.bits.addr 

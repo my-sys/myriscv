@@ -1,16 +1,22 @@
-import utils._
+
 import chisel3._
 import chisel3.util._ 
 
 class Cache extends Module{
 	val io = IO(new Bundle{
-		val cpu = Flipped(Coupled(new Bundle{
-			val addr    = Output(UInt(64.W))
-			val rdata 	= Input(UInt(64.W))
-			val wdata 	= Output(UInt(64.W))
-			val wstrb 	= Output(UInt(8.W))
-			val is_w 	= Output(Bool())
-		}))
+		val cpu = Flipped(new Bundle{
+			val valid = Output(Bool())
+			val bits = new Bundle{
+				val addr    = Output(UInt(64.W))
+				val rdata 	= Input(UInt(64.W))
+				val wdata 	= Output(UInt(64.W))
+				val wstrb 	= Output(UInt(8.W))
+				val is_w 	= Output(Bool())
+			}
+			val ready = Input(Bool())
+			def fire: Bool = valid & ready
+		}
+		)
 		// val up_mem 		= Flipped(Decoupled())
 
 		// val clean_cache = Flipped(Decoupled())

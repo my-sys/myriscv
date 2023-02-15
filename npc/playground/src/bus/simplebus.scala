@@ -1,4 +1,4 @@
-import utils._
+
 import chisel3._
 import chisel3.util._ 
 class SimpleBus_w extends Bundle{
@@ -21,25 +21,40 @@ class SimpleBus_r extends Bundle{
 class SimpleBus extends Bundle{
 	val w  = Decoupled(new SimpleBus_w)
 	val b  = Flipped(Decoupled(new SimpleBus_b))
-	val r  = Coupled(new SimpleBus_r)
+	val r  = newBundle{
+		val valid = Output(Bool())
+		val bits = new SimpleBus_r
+		val ready = Input(Bool())
+		def fire: Bool = valid & ready
+	}
 }
 
 class Crossbar extends Module{
 	val io = IO(new Bundle{
 		val ICache_bus 	= Flipped(new SimpleBus)
 		val DCache_bus 	= Flipped(new SimpleBus)
-		val bus1		= Flipped(Coupled(new Bundle{
-			val addr 	= Output(UInt(64.W))
-			val rdata	= Input(UInt(64.W))
-		}))
-		val bus2 		= Flipped(Coupled(new Bundle{
-			val addr    = Output(UInt(64.W))
-			val rdata 	= Input(UInt(64.W))
-			val wdata 	= Output(UInt(64.W))
-			val size 	= Output(UInt(2.W))
-			val wstrb 	= Output(UInt(8.W))
-			val is_w 	= Output(Bool())
-		}))
+		val bus1		= Flipped(new Bundle{
+			val valid = Output(Bool())
+			val bits = new Bundle{
+				val addr 	= Output(UInt(64.W))
+				val rdata	= Input(UInt(64.W))
+			}
+			val ready = Input(Bool())
+			def fire: Bool = valid & ready
+		})
+		val bus2 		= Flipped( new Bundle{
+			val valid = Output(Bool())
+			val bits = new Bundle{
+				val addr    = Output(UInt(64.W))
+				val rdata 	= Input(UInt(64.W))
+				val wdata 	= Output(UInt(64.W))
+				val size 	= Output(UInt(2.W))
+				val wstrb 	= Output(UInt(8.W))
+				val is_w 	= Output(Bool())
+			}
+			val ready = Input(Bool())
+			def fire: Bool = valid & ready
+		})
 		val AXI_Bus		= new AXI4Bus
 	})
 	val r_arb = Module(new LockingArbiter(chiselTypeOf(io.ICache_bus.r.bits),2,2,None))
