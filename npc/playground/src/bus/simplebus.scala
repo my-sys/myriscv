@@ -21,7 +21,7 @@ class SimpleBus_r extends Bundle{
 class SimpleBus extends Bundle{
 	val w  = Decoupled(new SimpleBus_w)
 	val b  = Flipped(Decoupled(new SimpleBus_b))
-	val r  = newBundle{
+	val r  = new Bundle{
 		val valid = Output(Bool())
 		val bits = new SimpleBus_r
 		val ready = Input(Bool())
