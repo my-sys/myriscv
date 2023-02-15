@@ -1,3 +1,5 @@
+import chisel3._
+import chisel3.util._ 
 class SimpleBus_w extends Bundle{
 	val waddr 		= Output(UInt(64.W))
 	val wdata 		= Output(UInt(64.W))
