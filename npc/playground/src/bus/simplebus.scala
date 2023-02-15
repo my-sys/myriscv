@@ -36,7 +36,7 @@ class Crossbar extends Module{
 			val size 	= Output(UInt(2.W))
 			val wstrb 	= Output(UInt(8.W))
 			val is_w 	= Output(Bool())
-		})))
+		}))
 		val AXI_Bus		= new AXI4Bus
 	})
 	val r_arb = Module(new LockingArbiter(chiselTypeOf(io.ICache_bus.r.bits),2,2,None))
