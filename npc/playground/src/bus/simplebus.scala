@@ -4,7 +4,7 @@ class SimpleBus_w extends Bundle{
 	val wlast 		= Output(Bool())
 }
 
-class SimpleBus_b extens Bundle{
+class SimpleBus_b extends Bundle{
 	val bresp 		= Output(UInt(2.W))
 }
 
