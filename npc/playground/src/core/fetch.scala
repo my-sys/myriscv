@@ -1,3 +1,4 @@
+import utils._
 import chisel3._
 import chisel3.util._ 
 import chisel3.util.experimental.BoringUtils
@@ -15,7 +16,7 @@ class Fetch extends Module{
 			val valid_next_pc = Input(Bool())
 			val flush 		= Input(Bool())
 		}
-		val bus = Decoupled(new Bundle{
+		val bus = Coupled(new Bundle{
 			val pc_0 	= Output(UInt(64.W))
 			val inst 	= Input(UInt(64.W))
 		})

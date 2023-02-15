@@ -1,3 +1,4 @@
+import utils._
 import chisel3._
 import chisel3.util._ 
 class SimpleBus_w extends Bundle{
@@ -20,18 +21,18 @@ class SimpleBus_r extends Bundle{
 class SimpleBus extends Bundle{
 	val w  = Decoupled(new SimpleBus_w)
 	val b  = Flipped(Decoupled(new SimpleBus_b))
-	val r  = Decoupled(new SimpleBus_r)
+	val r  = Coupled(new SimpleBus_r)
 }
 
 class Crossbar extends Module{
 	val io = IO(new Bundle{
 		val ICache_bus 	= Flipped(new SimpleBus)
 		val DCache_bus 	= Flipped(new SimpleBus)
-		val bus1		= Flipped(Decoupled(new Bundle{
+		val bus1		= Flipped(Coupled(new Bundle{
 			val addr 	= Output(UInt(64.W))
 			val rdata	= Input(UInt(64.W))
 		}))
-		val bus2 		= Flipped(Decoupled(new Bundle{
+		val bus2 		= Flipped(Coupled(new Bundle{
 			val addr    = Output(UInt(64.W))
 			val rdata 	= Input(UInt(64.W))
 			val wdata 	= Output(UInt(64.W))

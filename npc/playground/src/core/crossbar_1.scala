@@ -1,13 +1,14 @@
+import utils._
 import chisel3._
 import chisel3.util._
 class Crossbar_1 extends Module{
 	val io = IO(new Bundle{
 		// in 
-		val fetch = Flipped(Decoupled(new Bundle{
+		val fetch = Flipped(Coupled(new Bundle{
 			val addr 	= Output(UInt(64.W))
 			val rdata	= Input(UInt(64.W))
 		}))
-		val wb	 = Flipped(Decoupled(new Bundle{
+		val wb	 = Flipped(Coupled(new Bundle{
 			val addr    = Output(UInt(64.W))
 			val rdata 	= Input(UInt(64.W))
 			val wdata 	= Output(UInt(64.W))
@@ -16,14 +17,14 @@ class Crossbar_1 extends Module{
 			val is_w 	= Output(Bool())
 		}))
 		// out
-		val ICache = Decoupled(new Bundle{
+		val ICache = Coupled(new Bundle{
 			val addr    = Output(UInt(64.W))
 			val rdata 	= Input(UInt(64.W))
 			val wdata 	= Output(UInt(64.W))
 			val wstrb 	= Output(UInt(8.W))
 			val is_w 	= Output(Bool())
 		})
-		val DCache = Decoupled(new Bundle{
+		val DCache = Coupled(new Bundle{
 			val addr    = Output(UInt(64.W))
 			val rdata 	= Input(UInt(64.W))
 			val wdata 	= Output(UInt(64.W))
@@ -31,11 +32,11 @@ class Crossbar_1 extends Module{
 			val is_w 	= Output(Bool())
 		})
 		
-		val bus1	= Decoupled(new Bundle{
+		val bus1	= Coupled(new Bundle{
 			val addr 	= Output(UInt(64.W))
 			val rdata	= Input(UInt(64.W))
 		})
-		val bus2 	= Decoupled(new Bundle{
+		val bus2 	= Coupled(new Bundle{
 			val addr    = Output(UInt(64.W))
 			val rdata 	= Input(UInt(64.W))
 			val wdata 	= Output(UInt(64.W))

@@ -1,9 +1,10 @@
+import utils._
 import chisel3._
 import chisel3.util._ 
 
 class Cache extends Module{
 	val io = IO(new Bundle{
-		val cpu = Flipped(Decoupled(new Bundle{
+		val cpu = Flipped(Coupled(new Bundle{
 			val addr    = Output(UInt(64.W))
 			val rdata 	= Input(UInt(64.W))
 			val wdata 	= Output(UInt(64.W))
@@ -274,7 +275,7 @@ class Cache extends Module{
 		// }
 	}
 
-	//io.cpu.bits.rdata 			:= 1.U //reg_rdata
+	io.cpu.bits.rdata 			:= reg_rdata
 	io.cpu.ready 				:= reg_ready 
 
 	io.cache_bus.w.valid 		:= reg_w_valid

@@ -1,3 +1,4 @@
+import utils._
 import chisel3._ 
 import chisel3.util._ 
 import chisel3.util.experimental.BoringUtils
@@ -21,7 +22,7 @@ class WriteBack extends Module with CoreParameters{
 			val inst 			= Input(UInt(InstLen.W))
 		}
 		
-		val bus = Decoupled(new Bundle{
+		val bus = Coupled(new Bundle{
 			val addr    = Output(UInt(64.W))
 			val rdata 	= Input(UInt(64.W))
 			val wdata 	= Output(UInt(64.W))
