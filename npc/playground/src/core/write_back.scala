@@ -158,7 +158,7 @@ class WriteBack extends Module with CoreParameters{
 	io.bus.bits.is_w		:= reg_bus_is_w
 	io.bus.bits.wstrb 		:= reg_bus_wstrb
 	io.bus.valid 			:= reg_bus_valid
-	io.bus.size 			:= reg_bus_size
+	io.bus.bits.size 		:= reg_bus_size
 	
 	io.out.stall 			:= reg_stall 
 }
