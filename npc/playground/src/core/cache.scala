@@ -147,10 +147,10 @@ class Cache extends Module{
 			//-------next state-------------
 				reg_cache_state := read_cache
 				reg_start_operation := true.B
-			}.elsewhen(io.up_mem.valid){
-				reg_cache_state := cache_sync
-			}.elsewhen(io.clean_cache.valid){
-				reg_cache_state	:= cache_clean
+			// }.elsewhen(io.up_mem.valid){
+			// 	reg_cache_state := cache_sync
+			// }.elsewhen(io.clean_cache.valid){
+			// 	reg_cache_state	:= cache_clean
 			}.otherwise{
 				reg_cache_state := cache_idle
 			}
@@ -252,7 +252,7 @@ class Cache extends Module{
 					reg_w_wdata 	:= Mux(reg_chosen_tag === 1.U,rdata_2(127,64),rdata_1(127,64))
 				}.otherwise{
 					reg_cnt := reg_cnt - 1.U 
-					reg_aw_wdata 	:= Mux(reg_chosen_tag === 1.U,rdata_2(127,64),rdata_1(127,64))
+					reg_w_wdata 	:= Mux(reg_chosen_tag === 1.U,rdata_2(127,64),rdata_1(127,64))
 				}
 			}
 			when(io.cache_bus.b.fire){

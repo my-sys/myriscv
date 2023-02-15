@@ -66,7 +66,7 @@ class Crossbar extends Module{
 
 		io.AXI_Bus.aw.bits.awaddr	:= io.DCache_bus.w.bits.waddr
 		io.AXI_Bus.aw.bits.awlen	:= 1.U
-		io.AXI_Bus.aw.bits.awsize	:= 3.W
+		io.AXI_Bus.aw.bits.awsize	:= 3.U
 		io.AXI_Bus.aw.bits.awburst	:= "b01".U
 		io.AXI_Bus.aw.valid 		:= io.DCache_bus.w.valid & !reg_aw_ok		
 	}
@@ -94,7 +94,7 @@ class Crossbar extends Module{
 		//......
 	}.otherwise{
 		io.AXI_Bus.b.ready 				:= io.DCache_bus.b.ready										
-		io.DCache_bus.b.bits.bit 		:= io.AXI_Bus.b.bits.bit
+		//io.DCache_bus.b.bits.bit 		:= io.AXI_Bus.b.bits.bit
 		io.DCache_bus.b.bits.bresp 		:= io.AXI_Bus.b.bits.bresp
 		io.DCache_bus.b.valid 			:= io.AXI_Bus.b.valid 		
 	}
@@ -132,7 +132,7 @@ class Crossbar extends Module{
 	io.AXI_Bus.r.ready			:= true.B
 	io.bus1.bits.rdata 			:= io.AXI_Bus.r.bits.rdata
 	io.bus2.bits.rdata 			:= io.AXI_Bus.r.bits.rdata
-	r_arb.io.out.bits.resp 		:= io.AXI_Bus.r.bits.resp
+	r_arb.io.out.bits.rresp 	:= io.AXI_Bus.r.bits.rresp
 	r_arb.io.out.bits.rdata 	:= io.AXI_Bus.r.bits.rdata
 	when(io.bus1.valid){
 		io.bus1.ready 				:= io.AXI_Bus.r.valid
