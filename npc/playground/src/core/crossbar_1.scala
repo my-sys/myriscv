@@ -22,14 +22,14 @@ class Crossbar_1 extends Module{
 			val wdata 	= Output(UInt(64.W))
 			val wstrb 	= Output(UInt(8.W))
 			val is_w 	= Output(Bool())
-		}))
+		})
 		val DCache = Decoupled(new Bundle{
 			val addr    = Output(UInt(64.W))
 			val rdata 	= Input(UInt(64.W))
 			val wdata 	= Output(UInt(64.W))
 			val wstrb 	= Output(UInt(8.W))
 			val is_w 	= Output(Bool())
-		}))
+		})
 		
 		val bus1	= Decoupled(new Bundle{
 			val addr 	= Output(UInt(64.W))
@@ -42,7 +42,7 @@ class Crossbar_1 extends Module{
 			val size 	= Output(UInt(2.W))
 			val wstrb 	= Output(UInt(8.W))
 			val is_w 	= Output(Bool())
-		}))
+		})
 	})
 	
 	io.ICache.cpu.bits.addr  := io.fetch.bits.addr 
