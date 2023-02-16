@@ -32,10 +32,10 @@ class Cache extends Module{
 	val wstrb 		= io.cpu.bits.wstrb
 	val is_w 		= io.cpu.bits.is_w
 	
-	val sram1_data 		= Module(new S011HD1P_X32Y2D128_BW) // 存放数据
-	val sram1_tag 		= Module(new S011HD1P_X32Y2D128_BW) // 存放Tag， 以及控制位
-	val sram2_data 		= Module(new S011HD1P_X32Y2D128_BW) // 存放数据
-	val sram2_tag 		= Module(new S011HD1P_X32Y2D128_BW) // 存放Tag，以及控制位	
+	val sram1_data 		= Module(new SRAM) // 存放数据
+	val sram1_tag 		= Module(new SRAM) // 存放Tag， 以及控制位
+	val sram2_data 		= Module(new SRAM) // 存放数据
+	val sram2_tag 		= Module(new SRAM) // 存放Tag，以及控制位	
 	
 	val cache_idle	:: read_cache :: cache_and_bus :: cache_end :: Nil = Enum(4)
 	val reg_cache_state	= RegInit(cache_idle)
