@@ -31,4 +31,5 @@ class SRAM extends Module{
 	sram.io.BWEN	:= io.BWEN
 	sram.io.A		:= io.A
 	sram.io.D		:= io.D
+	io.Q 			:= sram.io.Q
 }
