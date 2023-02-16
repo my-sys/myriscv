@@ -182,12 +182,12 @@ class Cache extends Module{
 						//reg_chosen_tag
 						reg_cache_wdata			:= cache_wdata
 						reg_cache_state 		:= cache_end
-						//reg_ready				:= true.B
+						reg_ready				:= true.B
 					}.otherwise{
 						// read data from cache,
 						//-----cpu
 						reg_rdata				:= Mux(hit_1,rdata1,rdata2)
-						//reg_ready 				:= true.B
+						reg_ready 				:= true.B
 						reg_cache_state 		:= cache_end
 					}
 				}.otherwise{
@@ -270,12 +270,12 @@ class Cache extends Module{
 			when((io.cache_bus.r.bits.rlast | reg_rbus_finish)&((io.cache_bus.b.fire) | reg_wbus_finish )){
 				reg_cache_write		:= true.B  //??? when not write cache 
 				reg_cache_state		:= cache_end
-				//reg_ready 			:= true.B
+				reg_ready 			:= true.B
 			}			
 		}
 		is(cache_end){
 			reg_cache_write		:= false.B
-			reg_ready 			:= true.B
+			reg_ready 			:= false.B
 			//------------bus---------------
 			reg_w_valid		:= false.B 
 			reg_b_ready 	:= false.B 
