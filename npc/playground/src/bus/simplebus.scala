@@ -164,7 +164,7 @@ when(!w_locked){	//Lock
 	io.DCache_bus.r.bits.rdata 	:= io.AXI_Bus.r.bits.rdata
 	io.DCache_bus.r.bits.rlast	:= (r_chosen === 1.U) & io.AXI_Bus.r.bits.rlast 
 	io.DCache_bus.r.bits.rresp	:= io.AXI_Bus.r.bits.rresp
-	io.ICache_bus.r.ready		:= (r_chosen === 1.U) & io.AXI_Bus.r.valid
+	io.DCache_bus.r.ready		:= (r_chosen === 1.U) & io.AXI_Bus.r.valid
 
 	io.bus1.ready 		:= (r_chosen === 2.U) & io.AXI_Bus.r.valid 
 	io.bus1.bits.rdata 	:= io.AXI_Bus.r.bits.rdata 
