@@ -48,6 +48,7 @@ VM_CLASSES_SLOW += \
 	Vriscv_soc___024root__6__Slow \
 	Vriscv_soc___024root__7__Slow \
 	Vriscv_soc___024root__8__Slow \
+	Vriscv_soc___024root__9__Slow \
 	Vriscv_soc___024unit__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization
