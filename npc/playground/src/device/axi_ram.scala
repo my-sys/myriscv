@@ -122,6 +122,6 @@ class AXI_RAM extends Module{
 	io.ram_bus.r.bits.rid 			:= 0.U 
 	io.ram_bus.r.bits.rresp			:= reg_r_resp
 	io.ram_bus.r.bits.rdata			:= mem.io.rdata
-	io.ram_bus.r.bits.rlast			:= //reg_r_rlast
+	io.ram_bus.r.bits.rlast			:= r_last //reg_r_rlast
 	io.ram_bus.r.valid			:= reg_r_valid
 }
