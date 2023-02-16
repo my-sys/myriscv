@@ -150,7 +150,7 @@ when(!w_locked){	//Lock
 //---------------------------------------------------------------------------
 	io.ICache_bus.w.ready := false.B 
 	io.ICache_bus.b.valid := false.B 
-	io.ICache_bus.b.bresp := "b00".U 
+	io.ICache_bus.b.bits.bresp := "b00".U 
 
 	io.ICache_bus.r.bits.rdata 	:= io.AXI_Bus.r.bits.rdata
 	io.ICache_bus.r.ready 		:= (r_chosen === 0.U) & io.AXI_Bus.r.valid
@@ -244,12 +244,12 @@ when(!w_locked){	//Lock
 		io.AXI_Bus.ar.bits.arsize	:= 3.U 
 	}.elsewhen(r_chosen === 2.U){
 		io.AXI_Bus.ar.valid 		:= io.bus1.valid & !reg_ar_ok
-		io.AXI_Bus.ar.bits.araddr	:= io.bus1.bits.raddr 
+		io.AXI_Bus.ar.bits.araddr	:= io.bus1.bits.addr 
 		io.AXI_Bus.ar.bits.arlen 	:= 0.U
 		io.AXI_Bus.ar.bits.arsize	:= 3.U
 	}.elsewhen(r_chosen === 3.U){
 		io.AXI_Bus.ar.valid 		:= io.bus2.valid & !reg_ar_ok
-		io.AXI_Bus.ar.bits.araddr	:= io.bus2.bits.raddr 
+		io.AXI_Bus.ar.bits.araddr	:= io.bus2.bits.addr 
 		io.AXI_Bus.ar.bits.arlen 	:= 0.U
 		io.AXI_Bus.ar.bits.arsize	:= io.bus2.bits.size
 	}.otherwise{
