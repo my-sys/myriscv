@@ -63,10 +63,11 @@ class AXI_RAM extends Module{
 
 	val reg_r_resp		= RegInit(0.U(2.W))
 	val reg_r_rdata		= RegInit(0.U(64.W))
-	val reg_r_rlast		= RegInit(false.B)
+	//val reg_r_rlast		= RegInit(false.B)
 	val reg_r_valid		= RegInit(false.B) 
 	val reg_start_read	= RegInit(false.B) 
 
+	val r_rlast = (reg_ar_arlen === 0.U) & reg_r_valid
 	when(io.ram_bus.ar.fire()){
 		reg_ar_araddr	:= io.ram_bus.ar.bits.araddr
 		reg_ar_arlen	:= io.ram_bus.ar.bits.arlen
@@ -79,7 +80,7 @@ class AXI_RAM extends Module{
 				reg_start_read	:= false.B
 			}.otherwise{
 				reg_ar_arlen 	:= reg_ar_arlen - 1.U
-				reg_ar_araddr	:= reg_ar_araddr + 4.U
+				reg_ar_araddr	:= reg_ar_araddr + 8.U
 			}
 		}
 	}
@@ -89,15 +90,15 @@ class AXI_RAM extends Module{
 	switch(reg_r_state){
 		is(r_idle){
 			reg_r_valid	:= Mux(reg_start_read,true.B,false.B)
-			reg_r_rlast := Mux((reg_ar_arlen === 0.U)&reg_start_read,true.B,false.B)
+			//reg_r_rlast := Mux((reg_ar_arlen === 0.U)&reg_start_read,true.B,false.B)
 			reg_r_state := Mux(reg_start_read,r_busy,r_idle)
 		}
 		is(r_busy){
-			reg_r_rlast 	:= Mux(reg_ar_arlen === 0.U,true.B,false.B)
+			//reg_r_rlast 	:= Mux(reg_ar_arlen === 0.U,true.B,false.B)
 			when(io.ram_bus.r.fire()){
 				when(reg_ar_arlen === 0.U){
 					reg_r_valid := false.B 
-					reg_r_rlast	:= false.B
+					//reg_r_rlast	:= false.B
 					reg_r_state	:= r_idle
 				}
 			}
@@ -121,6 +122,6 @@ class AXI_RAM extends Module{
 	io.ram_bus.r.bits.rid 			:= 0.U 
 	io.ram_bus.r.bits.rresp			:= reg_r_resp
 	io.ram_bus.r.bits.rdata			:= mem.io.rdata
-	io.ram_bus.r.bits.rlast			:= reg_r_rlast
+	io.ram_bus.r.bits.rlast			:= //reg_r_rlast
 	io.ram_bus.r.valid			:= reg_r_valid
 }
