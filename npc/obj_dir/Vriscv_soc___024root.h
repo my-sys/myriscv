@@ -679,6 +679,7 @@ VL_MODULE(Vriscv_soc___024root) {
         QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_1;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__reg_temp_pc_1;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__reg_next_pc;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT___reg_pc_0_T_1;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu_io_op_data1;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu_io_op_data2;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__lsu_exu_io_rs1_data;

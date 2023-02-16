@@ -539,6 +539,16 @@ void Vriscv_soc___024root___settle__TOP__6(Vriscv_soc___024root* vlSelf) {
     VlWide<4>/*127:0*/ __Vtemp1273;
     // Body
     if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul_io_result 
+                        >> 0x38U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT____Vtogcov__mul_io_result 
+                                              >> 0x38U))))) {
+        ++(vlSymsp->__Vcoverage[12299]);
+        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT____Vtogcov__mul_io_result 
+            = ((0xfeffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT____Vtogcov__mul_io_result) 
+               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul_io_result 
+                                                 >> 0x38U))))) 
+                  << 0x38U));
+    }
+    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul_io_result 
                         >> 0x39U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT____Vtogcov__mul_io_result 
                                               >> 0x39U))))) {
         ++(vlSymsp->__Vcoverage[12300]);
@@ -17332,12 +17342,5 @@ void Vriscv_soc___024root___settle__TOP__6(Vriscv_soc___024root* vlSelf) {
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT____Vtogcov__cache_mask[0U] 
             = ((0xfffffffeU & vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT____Vtogcov__cache_mask[0U]) 
                | (1U & vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_mask[0U]));
-    }
-    if ((2U & (vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_mask[0U] 
-               ^ vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT____Vtogcov__cache_mask[0U]))) {
-        ++(vlSymsp->__Vcoverage[9661]);
-        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT____Vtogcov__cache_mask[0U] 
-            = ((0xfffffffdU & vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT____Vtogcov__cache_mask[0U]) 
-               | (2U & vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_mask[0U]));
     }
 }

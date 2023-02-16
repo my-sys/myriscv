@@ -937,6 +937,8 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__16(Vriscv_soc___024root*
         vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_wdata[3U] 
             = __Vtemp2798[3U];
     }
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT___reg_pc_0_T_1 
+        = (4ULL + vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_0);
     vlSelf->riscv_soc__DOT__core__DOT__cross_bar_1_io_ICache_valid 
         = ((IData)((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_0 
                     >> 0x1fU)) & (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_valid));
@@ -17348,12 +17350,5 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__16(Vriscv_soc___024root*
         vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__cache_mask[2U] 
             = ((0xfffffffbU & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__cache_mask[2U]) 
                | (4U & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_mask[2U]));
-    }
-    if ((8U & (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_mask[2U] 
-               ^ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__cache_mask[2U]))) {
-        ++(vlSymsp->__Vcoverage[7509]);
-        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__cache_mask[2U] 
-            = ((0xfffffff7U & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__cache_mask[2U]) 
-               | (8U & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_mask[2U]));
     }
 }

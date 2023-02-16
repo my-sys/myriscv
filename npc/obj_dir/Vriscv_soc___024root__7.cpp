@@ -328,6 +328,16 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__18(Vriscv_soc___024root*
     VlWide<4>/*127:0*/ __Vtemp4023;
     // Body
     if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu_io_rs2_data 
+                        >> 3U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__mu_exu_io_rs2_data 
+                                           >> 3U))))) {
+        ++(vlSymsp->__Vcoverage[11470]);
+        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__mu_exu_io_rs2_data 
+            = ((0xfffffffffffffff7ULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__mu_exu_io_rs2_data) 
+               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu_io_rs2_data 
+                                                 >> 3U))))) 
+                  << 3U));
+    }
+    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu_io_rs2_data 
                         >> 4U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__mu_exu_io_rs2_data 
                                            >> 4U))))) {
         ++(vlSymsp->__Vcoverage[11471]);
