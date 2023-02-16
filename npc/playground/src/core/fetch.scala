@@ -58,7 +58,7 @@ class Fetch extends Module{
 		}.elsewhen(reg_flush){
 			reg_pc_0 := reg_next_pc
 		}.otherwise{
-			reg_pc_0 + 4.U
+			reg_pc_0 := reg_pc_0 + 4.U
 		}
 		
 		reg_pc_1 := Mux(flush | reg_flush,0.U,reg_pc_0)
