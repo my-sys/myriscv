@@ -25,7 +25,7 @@ class SRAM extends Module{
 	})
 
 	val sram = Module(new S011HD1P_X32Y2D128_BW)
-	sram.io.CLK 	:= io.clock 
+	sram.io.CLK 	:= clock 
 	sram.io.CEN 	:= io.CEN
 	sram.io.WEN		:= io.WEN
 	sram.io.BWEN	:= io.BWEN
