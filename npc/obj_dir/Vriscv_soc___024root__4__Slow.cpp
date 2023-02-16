@@ -18,6 +18,16 @@ void Vriscv_soc___024root___settle__TOP__5(Vriscv_soc___024root* vlSelf) {
     VlWide<5>/*159:0*/ __Vtemp716;
     VlWide<5>/*159:0*/ __Vtemp717;
     // Body
+    if ((1U & ((IData)((vlSelf->io_difftest_reg_3 >> 0x2dU)) 
+               ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_3 
+                          >> 0x2dU))))) {
+        ++(vlSymsp->__Vcoverage[239]);
+        vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_3 
+            = ((0xffffdfffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_3) 
+               | ((QData)((IData)((1U & (IData)((vlSelf->io_difftest_reg_3 
+                                                 >> 0x2dU))))) 
+                  << 0x2dU));
+    }
     if ((1U & ((IData)((vlSelf->io_difftest_reg_3 >> 0x2eU)) 
                ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_3 
                           >> 0x2eU))))) {
@@ -19747,15 +19757,5 @@ void Vriscv_soc___024root___settle__TOP__5(Vriscv_soc___024root* vlSelf) {
                | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul_io_result 
                                                  >> 0x38U))))) 
                   << 0x38U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul_io_result 
-                        >> 0x39U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT____Vtogcov__mul_io_result 
-                                              >> 0x39U))))) {
-        ++(vlSymsp->__Vcoverage[12300]);
-        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT____Vtogcov__mul_io_result 
-            = ((0xfdffffffffffffffULL & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT____Vtogcov__mul_io_result) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul_io_result 
-                                                 >> 0x39U))))) 
-                  << 0x39U));
     }
 }

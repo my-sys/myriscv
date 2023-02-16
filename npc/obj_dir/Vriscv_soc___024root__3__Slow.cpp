@@ -15,32 +15,6 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     VlWide<4>/*127:0*/ __Vtemp703;
     VlWide<4>/*127:0*/ __Vtemp707;
     // Body
-    if (((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_start_operation) 
-         ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT____Vtogcov__reg_start_operation))) {
-        ++(vlSymsp->__Vcoverage[10194]);
-        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT____Vtogcov__reg_start_operation 
-            = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_start_operation;
-    }
-    if (((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_flush) 
-         ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT____Vtogcov__reg_flush))) {
-        ++(vlSymsp->__Vcoverage[10974]);
-        vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT____Vtogcov__reg_flush 
-            = vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_flush;
-    }
-    if ((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_state) 
-               ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__reg_cache_state)))) {
-        ++(vlSymsp->__Vcoverage[7221]);
-        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__reg_cache_state 
-            = ((2U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__reg_cache_state)) 
-               | (1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_state)));
-    }
-    if ((2U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_state) 
-               ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__reg_cache_state)))) {
-        ++(vlSymsp->__Vcoverage[7222]);
-        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__reg_cache_state 
-            = ((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__reg_cache_state)) 
-               | (2U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_state)));
-    }
     if ((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cnt) 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__reg_cnt)))) {
         ++(vlSymsp->__Vcoverage[7977]);
@@ -9785,12 +9759,29 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___temp_result_data_T_5 
         = (vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc 
            + vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_imm);
-    if (((IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_start_read) 
-         ^ (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT____Vtogcov__reg_start_read))) {
-        ++(vlSymsp->__Vcoverage[14243]);
-        vlSelf->riscv_soc__DOT__axi_ram__DOT____Vtogcov__reg_start_read 
-            = vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_start_read;
+    if (((IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_valid) 
+         ^ (IData)(vlSelf->riscv_soc__DOT____Vtogcov__core_io_axi_bus_r_valid))) {
+        ++(vlSymsp->__Vcoverage[2363]);
+        vlSelf->riscv_soc__DOT____Vtogcov__core_io_axi_bus_r_valid 
+            = vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_valid;
     }
+    vlSelf->riscv_soc__DOT__axi_ram_io_ram_bus_r_valid 
+        = vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_valid;
+    if (((IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_state) 
+         ^ (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT____Vtogcov__reg_r_state))) {
+        ++(vlSymsp->__Vcoverage[14244]);
+        vlSelf->riscv_soc__DOT__axi_ram__DOT____Vtogcov__reg_r_state 
+            = vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_state;
+    }
+    vlSelf->riscv_soc__DOT__axi_ram__DOT___GEN_27 = 
+        ((0U != (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_ar_arlen)) 
+         & (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_valid));
+    vlSelf->riscv_soc__DOT__axi_ram__DOT___GEN_28 = 
+        ((0U != (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_ar_arlen)) 
+         & (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_state));
+    vlSelf->riscv_soc__DOT__axi_ram_io_ram_bus_r_bits_rlast 
+        = ((0U == (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_ar_arlen)) 
+           & (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_valid));
     if (((IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_bus_is_w) 
          ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__d_cache_io_cpu_bits_is_w))) {
         ++(vlSymsp->__Vcoverage[5104]);
@@ -12504,6 +12495,12 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
             = vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_rs_addr;
         vlSelf->riscv_soc__DOT__core__DOT__write_back_io_out_result_data 
             = vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_result_data;
+    }
+    if (((IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_start_read) 
+         ^ (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT____Vtogcov__reg_start_read))) {
+        ++(vlSymsp->__Vcoverage[14243]);
+        vlSelf->riscv_soc__DOT__axi_ram__DOT____Vtogcov__reg_start_read 
+            = vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_start_read;
     }
     if ((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_rs2_addr) 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_rs2_addr)))) {
@@ -18357,15 +18354,5 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                | ((QData)((IData)((1U & (IData)((vlSelf->io_difftest_reg_3 
                                                  >> 0x2cU))))) 
                   << 0x2cU));
-    }
-    if ((1U & ((IData)((vlSelf->io_difftest_reg_3 >> 0x2dU)) 
-               ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_3 
-                          >> 0x2dU))))) {
-        ++(vlSymsp->__Vcoverage[239]);
-        vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_3 
-            = ((0xffffdfffffffffffULL & vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_3) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->io_difftest_reg_3 
-                                                 >> 0x2dU))))) 
-                  << 0x2dU));
     }
 }
