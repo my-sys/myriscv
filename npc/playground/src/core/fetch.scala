@@ -39,18 +39,10 @@ class Fetch extends Module{
 	
 	val reg_temp_pc_1   = RegInit(0.U(64.W))
 	val reg_temp_inst 	= RegInit(0.U(32.W))
-	val reg_stall 		= RegInit(false.B)
 	val reg_flush 		= RegInit(false.B)
 	val reg_next_pc 	= RegInit(0.U(64.W))
-	
-	when(stall & !reg_stall){
-		reg_temp_pc_1	:= Mux(flush,0.U,reg_pc_1)
-		reg_temp_inst	:= Mux(flush,0.U,reg_inst)
-	}.otherwise{
-		reg_temp_pc_1	:= Mux(flush,0.U,reg_temp_pc_1)
-		reg_temp_inst	:= Mux(flush,0.U,reg_temp_inst)		
-	}
-	reg_stall := Mux(stall,true.B,false.B)
+
+	val need_update     = RegInit(false.B)
 	when(io.bus.fire){
 		// next_pc ??? 
 		when(flush){
@@ -61,14 +53,17 @@ class Fetch extends Module{
 			reg_pc_0 := reg_pc_0 + 4.U
 		}
 		
-		reg_pc_1 := Mux(flush | reg_flush,0.U,reg_pc_0)
+		reg_pc_1 := Mux(flush | reg_flush,0.U,Mux(stall,reg_pc_1,reg_pc_0))
 		reg_flush := false.B
 		when(flush | reg_flush){
 			reg_inst := 0.U
 		}.otherwise{
-			reg_inst := Mux(reg_pc_0(2),io.bus.bits.inst(63,32),io.bus.bits.inst(31,0))
+			reg_inst := Mux(stall,reg_inst,Mux(reg_pc_0(2),io.bus.bits.inst(63,32),io.bus.bits.inst(31,0)))
 		}
 		when(stall){
+			reg_temp_pc_1	:= reg_pc_0
+			reg_temp_inst	:= Mux(reg_pc_0(2),io.bus.bits.inst(63,32),io.bus.bits.inst(31,0))
+			need_update		:= true.B
 			reg_valid := false.B
 		}
 	}.otherwise{
@@ -81,7 +76,7 @@ class Fetch extends Module{
 	}
 	io.bus.valid 		:= reg_valid 
 	io.bus.bits.pc_0	:= reg_pc_0
-	io.out.pc_1			:= Mux(reg_stall,reg_temp_pc_1,reg_pc_1)
-	io.out.inst 		:= Mux(reg_stall,reg_temp_inst,reg_inst)
+	io.out.pc_1			:= reg_pc_1
+	io.out.inst 		:= reg_inst
 	
 }
