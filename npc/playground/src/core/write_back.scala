@@ -120,7 +120,7 @@ class WriteBack extends Module with CoreParameters{
 		is(ls_busy){
 			when(io.bus.fire){
 				reg_ls_state	:= ls_idle
-				reg_stall		:= true.B
+				reg_stall		:= false.B
 				//reg_bus_addr
 				//reg_bus_wdata
 				//reg_bus_wstrb
