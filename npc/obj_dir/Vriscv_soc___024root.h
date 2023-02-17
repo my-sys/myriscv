@@ -552,12 +552,12 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*0:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__reg_bus_valid;
         CData/*4:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__reg_rs_addr;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__reg_w_rs_en;
+        CData/*5:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__reg_exuType;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__reg_ls_state;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__write_back__DOT___GEN_1;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__write_back__DOT___GEN_6;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__write_back__DOT___T_2;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__difftest_commit;
-        CData/*5:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__reg_exuType;
         CData/*0:0*/ riscv_soc__DOT__axi_ram__DOT__mem_wen;
         CData/*3:0*/ riscv_soc__DOT__axi_ram__DOT__reg_rlen;
         CData/*0:0*/ riscv_soc__DOT__axi_ram__DOT__reg_ar_ready;
@@ -1054,8 +1054,8 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*0:0*/ riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__temp_stall;
         CData/*4:0*/ riscv_soc__DOT__core__DOT__write_back__DOT____Vtogcov__reg_rs_addr;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__write_back__DOT____Vtogcov__reg_w_rs_en;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__write_back__DOT____Vtogcov__reg_ls_state;
         CData/*5:0*/ riscv_soc__DOT__core__DOT__write_back__DOT____Vtogcov__reg_exuType;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__write_back__DOT____Vtogcov__reg_ls_state;
         CData/*0:0*/ riscv_soc__DOT__axi_ram__DOT____Vtogcov__mem_wen;
         CData/*3:0*/ riscv_soc__DOT__axi_ram__DOT____Vtogcov__reg_rlen;
         CData/*0:0*/ riscv_soc__DOT__axi_ram__DOT____Vtogcov__reg_r_state;
