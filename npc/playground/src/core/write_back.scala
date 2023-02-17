@@ -58,6 +58,9 @@ class WriteBack extends Module with CoreParameters{
 	val reg_rs_addr				= RegInit(0.U(RegAddrLen.W))
 	val reg_result_data 		= RegInit(0.U(RegDataLen.W))
 	val reg_w_rs_en 			= RegInit(false.B)
+
+	val reg_exuType				= RegInit(0.U(ExuTypeLen.W))
+	reg_exuType					:= Mux(reg_stall,reg_exuType,io.in.exuType)
 //----------------------------------------------------------------------------------------
 	val mem_r_data				= MuxLookup(reg_bus_addr(2,0),io.bus.bits.rdata,List(
 		"b000".U 			-> io.bus.bits.rdata,
@@ -70,7 +73,9 @@ class WriteBack extends Module with CoreParameters{
 		"b111".U 			-> io.bus.bits.rdata(63,56)
 	))
 
-	val mem_data_result		= MuxLookup(io.in.exuType,0.U(64.W),List(
+//
+	//val mem_data_result		= MuxLookup(io.in.exuType,0.U(64.W),List(
+	val mem_data_result		= MuxLookup(reg_exuType,0.U(64.W),List(
 		LSUType.lsu_ld 		-> mem_r_data,
 		LSUType.lsu_lb 		-> Cat(Fill(56,mem_r_data(7)),	mem_r_data(7,0)),
 		LSUType.lsu_lbu 	-> Cat(Fill(56,0.U(1.W)),		mem_r_data(7,0)),
@@ -140,8 +145,7 @@ class WriteBack extends Module with CoreParameters{
 	reg_inst 				:= Mux(reg_stall,reg_inst,io.in.inst)
 	val difftest_inst 			= RegInit(0.U(InstLen.W))
 	val difftest_pc 			= RegInit(0.U(AddrLen.W))
-	val reg_exuType				= RegInit(0.U(ExuTypeLen.W))
-	reg_exuType					:= Mux(reg_stall,reg_exuType,io.in.exuType)
+
 
 	when(reg_stall | (reg_exuType === ALUType.alu_none)){
 		difftest_commit := false.B
