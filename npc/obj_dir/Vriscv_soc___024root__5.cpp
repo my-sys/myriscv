@@ -530,6 +530,27 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__16(Vriscv_soc___024root*
     VlWide<4>/*127:0*/ __Vtemp3364;
     VlWide<4>/*127:0*/ __Vtemp3365;
     // Body
+    if ((0x80U & (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wdata[0U] 
+                  ^ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_data_io_D[0U]))) {
+        ++(vlSymsp->__Vcoverage[6567]);
+        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_data_io_D[0U] 
+            = ((0xffffff7fU & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_data_io_D[0U]) 
+               | (0x80U & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wdata[0U]));
+    }
+    if ((0x100U & (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wdata[0U] 
+                   ^ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_data_io_D[0U]))) {
+        ++(vlSymsp->__Vcoverage[6568]);
+        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_data_io_D[0U] 
+            = ((0xfffffeffU & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_data_io_D[0U]) 
+               | (0x100U & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wdata[0U]));
+    }
+    if ((0x200U & (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wdata[0U] 
+                   ^ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_data_io_D[0U]))) {
+        ++(vlSymsp->__Vcoverage[6569]);
+        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_data_io_D[0U] 
+            = ((0xfffffdffU & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_data_io_D[0U]) 
+               | (0x200U & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wdata[0U]));
+    }
     if ((0x400U & (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wdata[0U] 
                    ^ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_data_io_D[0U]))) {
         ++(vlSymsp->__Vcoverage[6570]);
@@ -17482,26 +17503,5 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__16(Vriscv_soc___024root*
         vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U] 
             = ((0xfeffffffU & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U]) 
                | (0x1000000U & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram_Q[0U]));
-    }
-    if ((0x2000000U & (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram_Q[0U] 
-                       ^ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U]))) {
-        ++(vlSymsp->__Vcoverage[6713]);
-        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U] 
-            = ((0xfdffffffU & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U]) 
-               | (0x2000000U & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram_Q[0U]));
-    }
-    if ((0x4000000U & (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram_Q[0U] 
-                       ^ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U]))) {
-        ++(vlSymsp->__Vcoverage[6714]);
-        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U] 
-            = ((0xfbffffffU & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U]) 
-               | (0x4000000U & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram_Q[0U]));
-    }
-    if ((0x8000000U & (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram_Q[0U] 
-                       ^ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U]))) {
-        ++(vlSymsp->__Vcoverage[6715]);
-        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U] 
-            = ((0xf7ffffffU & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U]) 
-               | (0x8000000U & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram_Q[0U]));
     }
 }

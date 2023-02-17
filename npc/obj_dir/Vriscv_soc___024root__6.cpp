@@ -12,6 +12,27 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__17(Vriscv_soc___024root*
     Vriscv_soc__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root___sequent__TOP__17\n"); );
     // Body
+    if ((0x2000000U & (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram_Q[0U] 
+                       ^ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U]))) {
+        ++(vlSymsp->__Vcoverage[6713]);
+        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U] 
+            = ((0xfdffffffU & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U]) 
+               | (0x2000000U & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram_Q[0U]));
+    }
+    if ((0x4000000U & (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram_Q[0U] 
+                       ^ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U]))) {
+        ++(vlSymsp->__Vcoverage[6714]);
+        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U] 
+            = ((0xfbffffffU & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U]) 
+               | (0x4000000U & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram_Q[0U]));
+    }
+    if ((0x8000000U & (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram_Q[0U] 
+                       ^ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U]))) {
+        ++(vlSymsp->__Vcoverage[6715]);
+        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U] 
+            = ((0xf7ffffffU & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U]) 
+               | (0x8000000U & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram_Q[0U]));
+    }
     if ((0x10000000U & (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram_Q[0U] 
                         ^ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vtogcov__sram1_tag_io_Q[0U]))) {
         ++(vlSymsp->__Vcoverage[6716]);
@@ -14021,35 +14042,5 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__17(Vriscv_soc___024root*
                | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_rs2_data 
                                                  >> 0x20U))))) 
                   << 0x20U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_rs2_data 
-                        >> 0x21U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_rs2_data 
-                                              >> 0x21U))))) {
-        ++(vlSymsp->__Vcoverage[6199]);
-        vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_rs2_data 
-            = ((0xfffffffdffffffffULL & vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_rs2_data) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_rs2_data 
-                                                 >> 0x21U))))) 
-                  << 0x21U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_rs2_data 
-                        >> 0x22U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_rs2_data 
-                                              >> 0x22U))))) {
-        ++(vlSymsp->__Vcoverage[6200]);
-        vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_rs2_data 
-            = ((0xfffffffbffffffffULL & vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_rs2_data) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_rs2_data 
-                                                 >> 0x22U))))) 
-                  << 0x22U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_rs2_data 
-                        >> 0x23U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_rs2_data 
-                                              >> 0x23U))))) {
-        ++(vlSymsp->__Vcoverage[6201]);
-        vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_rs2_data 
-            = ((0xfffffff7ffffffffULL & vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_rs2_data) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_rs2_data 
-                                                 >> 0x23U))))) 
-                  << 0x23U));
     }
 }
