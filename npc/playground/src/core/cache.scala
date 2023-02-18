@@ -172,6 +172,7 @@ class Cache extends Module{
 		}
 		is(read_cache){
 			reg_start_operation := false.B
+			reg_cache_wstrb		:= cache_wdata
 			when(hit_1 | hit_2){
 				reg_chosen_tag	:= Mux(hit_1,0.U,1.U)
 				when((hit_1 & tag_valid_1) | (hit_2 & tag_valid_2)){
@@ -181,7 +182,7 @@ class Cache extends Module{
 						reg_cache_wstrb		 	:= cache_wstrb	
 						//reg_index
 						//reg_chosen_tag
-						reg_cache_wdata			:= cache_wdata
+						//reg_cache_wdata			:= cache_wdata
 						reg_cache_state 		:= cache_end
 						reg_ready				:= true.B
 					}.otherwise{
