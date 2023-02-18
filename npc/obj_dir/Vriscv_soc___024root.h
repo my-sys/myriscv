@@ -255,33 +255,35 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__reg_rbus_finish;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__reg_wbus_finish;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_263;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_270;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_274;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_277;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_300;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_342;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_269;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_272;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_275;
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_298;
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_319;
     };
     struct {
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_355;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_356;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_359;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_361;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_386;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_398;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_399;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_400;
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_340;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_353;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_354;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_357;
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_359;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___T_206;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_383;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_395;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_396;
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_397;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_400;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_401;
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_402;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_403;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_404;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_405;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_405;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_406;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_407;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_408;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_409;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_410;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_411;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_412;
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_409;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_459;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_463;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_467;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__sram1_data_io_WEN;
         CData/*5:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__sram1_data_io_A;
         CData/*5:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__sram1_tag_io_A;
@@ -324,10 +326,10 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_lru_17;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_lru_18;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_lru_19;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_lru_20;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_lru_21;
     };
     struct {
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_lru_20;
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_lru_21;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_lru_22;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_lru_23;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_lru_24;
@@ -390,10 +392,10 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_60;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_64;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_68;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_72;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_76;
     };
     struct {
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_72;
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_76;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_80;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_84;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_88;
@@ -442,35 +444,36 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rbus_finish;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_wbus_finish;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_263;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_270;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_274;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_277;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_300;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_321;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_342;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_355;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_356;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_359;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_361;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_386;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_398;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_399;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_400;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_402;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_403;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_269;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_272;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_275;
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_298;
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_319;
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_340;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_353;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_354;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_357;
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_359;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___T_206;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_383;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_395;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_396;
     };
     struct {
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_397;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_399;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_400;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_401;
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_402;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_403;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_404;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_405;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_405;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_406;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_407;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_408;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_409;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_410;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_411;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_412;
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_409;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_459;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_463;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_467;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT__reg_w_cnt;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT__w_lockId;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT___T;
@@ -521,11 +524,11 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_stall;
         CData/*6:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___reg_cnt_T_1;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___GEN_3;
+    };
+    struct {
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_stall;
         CData/*5:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_cnt;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_state;
-    };
-    struct {
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_exuType;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_out_valid;
         CData/*5:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT___reg_cnt_T_1;
@@ -582,22 +585,18 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*7:0*/ riscv_soc__DOT__axi_ram__DOT___GEN_39;
         SData/*15:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb;
         SData/*15:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__cache_wstrb;
-        SData/*15:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_271;
-        SData/*15:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_387;
         SData/*15:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb;
         SData/*15:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__cache_wstrb;
-        SData/*15:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_271;
-        SData/*15:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_387;
         VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wdata;
         VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__cache_mask;
+        VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__cache_wdata;
     };
     struct {
-        VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__cache_wdata;
-        VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_272;
         VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___reg_cache_wdata_T_2;
-        VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_389;
-        VlWide<3>/*66:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_473;
-        VlWide<3>/*66:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_474;
+        VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_386;
+        VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_470;
+        VlWide<3>/*66:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_471;
+        VlWide<3>/*66:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_472;
         VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_data__DOT__sram_Q;
         VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram_Q;
         VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__sram2_data__DOT__sram_Q;
@@ -605,11 +604,11 @@ VL_MODULE(Vriscv_soc___024root) {
         VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wdata;
         VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__cache_mask;
         VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__cache_wdata;
-        VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_272;
         VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___reg_cache_wdata_T_2;
-        VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_389;
-        VlWide<3>/*66:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_473;
-        VlWide<3>/*66:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_474;
+        VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_386;
+        VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_470;
+        VlWide<3>/*66:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_471;
+        VlWide<3>/*66:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_472;
         VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__sram1_data__DOT__sram_Q;
         VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__sram1_tag__DOT__sram_Q;
         VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__sram2_data__DOT__sram_Q;
@@ -656,9 +655,9 @@ VL_MODULE(Vriscv_soc___024root) {
         QData/*63:0*/ riscv_soc__DOT__core__DOT__cross_bar_io_AXI_Bus_ar_bits_araddr;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__cross_bar_1_io_fetch_bits_rdata;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__cross_bar_1_io_wb_bits_rdata;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back_io_out_result_data;
     };
     struct {
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back_io_out_result_data;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__reg_wdata;
         QData/*53:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__reg_tag;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__reg_rdata;
@@ -670,10 +669,10 @@ VL_MODULE(Vriscv_soc___024root) {
         QData/*63:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__rdata1;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__rdata2;
         QData/*59:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___reg_r_raddr_T;
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_275;
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_358;
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_390;
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_401;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_273;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_356;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_387;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_398;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_wdata;
         QData/*53:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_tag;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata;
@@ -685,10 +684,10 @@ VL_MODULE(Vriscv_soc___024root) {
         QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__rdata1;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__rdata2;
         QData/*59:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___reg_r_raddr_T;
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_275;
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_358;
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_390;
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_401;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_273;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_356;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_387;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_398;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_0;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_1;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__reg_temp_pc_1;
@@ -722,9 +721,9 @@ VL_MODULE(Vriscv_soc___024root) {
         QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__reg_bus_addr;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__reg_bus_wdata;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__reg_result_data;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__mem_r_data;
     };
     struct {
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__mem_r_data;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__mem_data_result;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__mem_wstrb;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back__DOT__reg_pc;
@@ -1061,12 +1060,9 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*3:0*/ riscv_soc__DOT__axi_ram__DOT____Vtogcov__reg_rlen;
         CData/*0:0*/ riscv_soc__DOT__axi_ram__DOT____Vtogcov__reg_r_state;
         CData/*0:0*/ riscv_soc__DOT__axi_ram__DOT____Vtogcov__reg_is_w;
-        CData/*5:0*/ __Vdlyvdim0__riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_data__DOT__sram__DOT__ram__v0;
-        CData/*0:0*/ __Vdlyvset__riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_data__DOT__sram__DOT__ram__v0;
+        CData/*1:0*/ __Vdly__riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_state;
         CData/*5:0*/ __Vdlyvdim0__riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram__DOT__ram__v0;
         CData/*0:0*/ __Vdlyvset__riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram__DOT__ram__v0;
-        CData/*5:0*/ __Vdlyvdim0__riscv_soc__DOT__core__DOT__i_cache__DOT__sram2_data__DOT__sram__DOT__ram__v0;
-        CData/*0:0*/ __Vdlyvset__riscv_soc__DOT__core__DOT__i_cache__DOT__sram2_data__DOT__sram__DOT__ram__v0;
         CData/*5:0*/ __Vdlyvdim0__riscv_soc__DOT__core__DOT__i_cache__DOT__sram2_tag__DOT__sram__DOT__ram__v0;
         CData/*0:0*/ __Vdlyvset__riscv_soc__DOT__core__DOT__i_cache__DOT__sram2_tag__DOT__sram__DOT__ram__v0;
         CData/*5:0*/ __Vdlyvdim0__riscv_soc__DOT__core__DOT__d_cache__DOT__sram1_data__DOT__sram__DOT__ram__v0;
@@ -1079,11 +1075,11 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*0:0*/ __Vdlyvset__riscv_soc__DOT__core__DOT__d_cache__DOT__sram2_tag__DOT__sram__DOT__ram__v0;
         CData/*1:0*/ __Vdly__riscv_soc__DOT__core__DOT__cross_bar__DOT__reg_r_cnt;
         CData/*1:0*/ __Vdly__riscv_soc__DOT__core__DOT__cross_bar__DOT__reg_w_cnt;
-    };
-    struct {
         CData/*1:0*/ __Vdly__riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_state;
         CData/*5:0*/ __Vdly__riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_cnt;
         CData/*1:0*/ __Vdly__riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_state;
+    };
+    struct {
         CData/*4:0*/ __Vdlyvdim0__riscv_soc__DOT__core__DOT__decode__DOT__regfile__v0;
         CData/*0:0*/ __Vdlyvset__riscv_soc__DOT__core__DOT__decode__DOT__regfile__v0;
         CData/*0:0*/ __Vdly__riscv_soc__DOT__core__DOT__write_back__DOT__reg_bus_is_w;
@@ -1141,17 +1137,15 @@ VL_MODULE(Vriscv_soc___024root) {
         IData/*31:0*/ riscv_soc__DOT__core__DOT__write_back__DOT____Vtogcov__reg_inst;
         IData/*31:0*/ riscv_soc__DOT__axi_ram__DOT____Vtogcov__mem_io_wmask_lo;
         IData/*31:0*/ riscv_soc__DOT__axi_ram__DOT____Vtogcov__mem_io_wmask_hi;
-        VlWide<4>/*127:0*/ __Vdlyvval__riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_data__DOT__sram__DOT__ram__v0;
         VlWide<4>/*127:0*/ __Vdlyvval__riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram__DOT__ram__v0;
-        VlWide<4>/*127:0*/ __Vdlyvval__riscv_soc__DOT__core__DOT__i_cache__DOT__sram2_data__DOT__sram__DOT__ram__v0;
         VlWide<4>/*127:0*/ __Vdlyvval__riscv_soc__DOT__core__DOT__i_cache__DOT__sram2_tag__DOT__sram__DOT__ram__v0;
-    };
-    struct {
         VlWide<4>/*127:0*/ __Vdlyvval__riscv_soc__DOT__core__DOT__d_cache__DOT__sram1_data__DOT__sram__DOT__ram__v0;
         VlWide<4>/*127:0*/ __Vdlyvval__riscv_soc__DOT__core__DOT__d_cache__DOT__sram1_tag__DOT__sram__DOT__ram__v0;
         VlWide<4>/*127:0*/ __Vdlyvval__riscv_soc__DOT__core__DOT__d_cache__DOT__sram2_data__DOT__sram__DOT__ram__v0;
         VlWide<4>/*127:0*/ __Vdlyvval__riscv_soc__DOT__core__DOT__d_cache__DOT__sram2_tag__DOT__sram__DOT__ram__v0;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__io_difftest_reg_0;
+    };
+    struct {
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__io_difftest_reg_1;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__io_difftest_reg_2;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__io_difftest_reg_3;
@@ -1211,13 +1205,13 @@ VL_MODULE(Vriscv_soc___024root) {
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_19;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_20;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_21;
-    };
-    struct {
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_22;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_23;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_24;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_25;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_26;
+    };
+    struct {
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_27;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_28;
         QData/*63:0*/ riscv_soc__DOT____Vtogcov__core___05FWIRE_29;
@@ -1277,13 +1271,13 @@ VL_MODULE(Vriscv_soc___024root) {
         QData/*63:0*/ riscv_soc__DOT__core__DOT__decode__DOT____Vtogcov__regfile_rs2_data_MPORT_data;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back__DOT____Vtogcov__reg_result_data;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back__DOT____Vtogcov__mem_r_data;
-    };
-    struct {
         QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back__DOT____Vtogcov__mem_data_result;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back__DOT____Vtogcov__mem_wstrb;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__write_back__DOT____Vtogcov__reg_pc;
         QData/*63:0*/ riscv_soc__DOT__axi_ram__DOT____Vtogcov__mem_raddr;
         QData/*63:0*/ riscv_soc__DOT__axi_ram__DOT____Vtogcov__mem_waddr;
+    };
+    struct {
         QData/*63:0*/ riscv_soc__DOT__axi_ram__DOT____Vtogcov__mem_wmask;
         QData/*63:0*/ riscv_soc__DOT__axi_ram__DOT____Vtogcov__reg_raddr;
         QData/*63:0*/ __Vdlyvval__riscv_soc__DOT__core__DOT__decode__DOT__regfile__v0;
