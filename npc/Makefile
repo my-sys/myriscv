@@ -76,7 +76,7 @@ compile1:$(VSRCS) $(CSRCS)
 
 run: 
 	make verilog 
-	make compile
+	make compile1
 	$(call git_commit, "sim RTL xingk")
 	obj_dir/V$(TOPNAME)  $(ARGS_DIFF) $(IMG)
 
