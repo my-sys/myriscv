@@ -9096,82 +9096,82 @@ void Vriscv_soc___024root___settle__TOP__6(Vriscv_soc___024root* vlSelf) {
                   << 0x3fU));
     }
     __Vtemp1236[2U] = (IData)((((QData)((IData)((((
-                                                   (1U 
+                                                   (0x8000U 
                                                     & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb))
                                                     ? 0xffU
                                                     : 0U) 
                                                   << 0x18U) 
-                                                 | ((((2U 
+                                                 | ((((0x4000U 
                                                        & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb))
                                                        ? 0xffU
                                                        : 0U) 
                                                      << 0x10U) 
-                                                    | ((((4U 
+                                                    | ((((0x2000U 
                                                           & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb))
                                                           ? 0xffU
                                                           : 0U) 
                                                         << 8U) 
-                                                       | ((8U 
+                                                       | ((0x1000U 
                                                            & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb))
                                                            ? 0xffU
                                                            : 0U)))))) 
                                 << 0x20U) | (QData)((IData)(
-                                                            ((((0x10U 
+                                                            ((((0x800U 
                                                                 & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb))
                                                                 ? 0xffU
                                                                 : 0U) 
                                                               << 0x18U) 
-                                                             | ((((0x20U 
+                                                             | ((((0x400U 
                                                                    & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb))
                                                                    ? 0xffU
                                                                    : 0U) 
                                                                  << 0x10U) 
-                                                                | ((((0x40U 
+                                                                | ((((0x200U 
                                                                       & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb))
                                                                       ? 0xffU
                                                                       : 0U) 
                                                                     << 8U) 
-                                                                   | ((0x80U 
+                                                                   | ((0x100U 
                                                                        & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb))
                                                                        ? 0xffU
                                                                        : 0U))))))));
     __Vtemp1236[3U] = (IData)(((((QData)((IData)(((
-                                                   ((1U 
+                                                   ((0x8000U 
                                                      & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb))
                                                      ? 0xffU
                                                      : 0U) 
                                                    << 0x18U) 
-                                                  | ((((2U 
+                                                  | ((((0x4000U 
                                                         & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb))
                                                         ? 0xffU
                                                         : 0U) 
                                                       << 0x10U) 
-                                                     | ((((4U 
+                                                     | ((((0x2000U 
                                                            & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb))
                                                            ? 0xffU
                                                            : 0U) 
                                                          << 8U) 
-                                                        | ((8U 
+                                                        | ((0x1000U 
                                                             & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb))
                                                             ? 0xffU
                                                             : 0U)))))) 
                                  << 0x20U) | (QData)((IData)(
-                                                             ((((0x10U 
+                                                             ((((0x800U 
                                                                  & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb))
                                                                  ? 0xffU
                                                                  : 0U) 
                                                                << 0x18U) 
-                                                              | ((((0x20U 
+                                                              | ((((0x400U 
                                                                     & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb))
                                                                     ? 0xffU
                                                                     : 0U) 
                                                                   << 0x10U) 
-                                                                 | ((((0x40U 
+                                                                 | ((((0x200U 
                                                                        & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb))
                                                                        ? 0xffU
                                                                        : 0U) 
                                                                      << 8U) 
-                                                                    | ((0x80U 
+                                                                    | ((0x100U 
                                                                         & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wstrb))
                                                                         ? 0xffU
                                                                         : 0U))))))) 
@@ -9823,82 +9823,82 @@ void Vriscv_soc___024root___settle__TOP__6(Vriscv_soc___024root* vlSelf) {
                   << 0x3fU));
     }
     __Vtemp1237[2U] = (IData)((((QData)((IData)((((
-                                                   (1U 
+                                                   (0x8000U 
                                                     & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb))
                                                     ? 0xffU
                                                     : 0U) 
                                                   << 0x18U) 
-                                                 | ((((2U 
+                                                 | ((((0x4000U 
                                                        & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb))
                                                        ? 0xffU
                                                        : 0U) 
                                                      << 0x10U) 
-                                                    | ((((4U 
+                                                    | ((((0x2000U 
                                                           & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb))
                                                           ? 0xffU
                                                           : 0U) 
                                                         << 8U) 
-                                                       | ((8U 
+                                                       | ((0x1000U 
                                                            & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb))
                                                            ? 0xffU
                                                            : 0U)))))) 
                                 << 0x20U) | (QData)((IData)(
-                                                            ((((0x10U 
+                                                            ((((0x800U 
                                                                 & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb))
                                                                 ? 0xffU
                                                                 : 0U) 
                                                               << 0x18U) 
-                                                             | ((((0x20U 
+                                                             | ((((0x400U 
                                                                    & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb))
                                                                    ? 0xffU
                                                                    : 0U) 
                                                                  << 0x10U) 
-                                                                | ((((0x40U 
+                                                                | ((((0x200U 
                                                                       & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb))
                                                                       ? 0xffU
                                                                       : 0U) 
                                                                     << 8U) 
-                                                                   | ((0x80U 
+                                                                   | ((0x100U 
                                                                        & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb))
                                                                        ? 0xffU
                                                                        : 0U))))))));
     __Vtemp1237[3U] = (IData)(((((QData)((IData)(((
-                                                   ((1U 
+                                                   ((0x8000U 
                                                      & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb))
                                                      ? 0xffU
                                                      : 0U) 
                                                    << 0x18U) 
-                                                  | ((((2U 
+                                                  | ((((0x4000U 
                                                         & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb))
                                                         ? 0xffU
                                                         : 0U) 
                                                       << 0x10U) 
-                                                     | ((((4U 
+                                                     | ((((0x2000U 
                                                            & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb))
                                                            ? 0xffU
                                                            : 0U) 
                                                          << 8U) 
-                                                        | ((8U 
+                                                        | ((0x1000U 
                                                             & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb))
                                                             ? 0xffU
                                                             : 0U)))))) 
                                  << 0x20U) | (QData)((IData)(
-                                                             ((((0x10U 
+                                                             ((((0x800U 
                                                                  & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb))
                                                                  ? 0xffU
                                                                  : 0U) 
                                                                << 0x18U) 
-                                                              | ((((0x20U 
+                                                              | ((((0x400U 
                                                                     & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb))
                                                                     ? 0xffU
                                                                     : 0U) 
                                                                   << 0x10U) 
-                                                                 | ((((0x40U 
+                                                                 | ((((0x200U 
                                                                        & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb))
                                                                        ? 0xffU
                                                                        : 0U) 
                                                                      << 8U) 
-                                                                    | ((0x80U 
+                                                                    | ((0x100U 
                                                                         & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb))
                                                                         ? 0xffU
                                                                         : 0U))))))) 
