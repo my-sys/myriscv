@@ -10487,7 +10487,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__18(Vriscv_soc___024root*
         = ((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar__DOT__r_chosen))
             ? vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_r_raddr
             : ((1U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar__DOT__r_chosen))
-                ? vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_r_raddr
+                ? vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_r_raddr
                 : ((2U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar__DOT__r_chosen))
                     ? vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_0
                     : ((3U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar__DOT__r_chosen))

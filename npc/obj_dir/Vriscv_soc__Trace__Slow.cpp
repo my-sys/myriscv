@@ -246,6 +246,7 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+123,"riscv_soc core cross_bar_io_DCache_bus_w_bits_wlast", false,-1);
         tracep->declBit(c+125,"riscv_soc core cross_bar_io_DCache_bus_b_valid", false,-1);
         tracep->declBit(c+126,"riscv_soc core cross_bar_io_DCache_bus_r_valid", false,-1);
+        tracep->declQuad(c+127,"riscv_soc core cross_bar_io_DCache_bus_r_bits_raddr", false,-1, 63,0);
         tracep->declQuad(c+18,"riscv_soc core cross_bar_io_DCache_bus_r_bits_rdata", false,-1, 63,0);
         tracep->declBit(c+129,"riscv_soc core cross_bar_io_DCache_bus_r_bits_rlast", false,-1);
         tracep->declBit(c+130,"riscv_soc core cross_bar_io_DCache_bus_r_ready", false,-1);
@@ -962,6 +963,7 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+123,"riscv_soc core cross_bar io_DCache_bus_w_bits_wlast", false,-1);
         tracep->declBit(c+125,"riscv_soc core cross_bar io_DCache_bus_b_valid", false,-1);
         tracep->declBit(c+126,"riscv_soc core cross_bar io_DCache_bus_r_valid", false,-1);
+        tracep->declQuad(c+127,"riscv_soc core cross_bar io_DCache_bus_r_bits_raddr", false,-1, 63,0);
         tracep->declQuad(c+18,"riscv_soc core cross_bar io_DCache_bus_r_bits_rdata", false,-1, 63,0);
         tracep->declBit(c+129,"riscv_soc core cross_bar io_DCache_bus_r_bits_rlast", false,-1);
         tracep->declBit(c+130,"riscv_soc core cross_bar io_DCache_bus_r_ready", false,-1);
