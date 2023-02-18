@@ -54,8 +54,8 @@ class Cache extends Module{
 	val reg_cache_wstrb = RegInit(0.U(16.W))
 	val reg_cache_wdata = RegInit(0.U(128.W))
 	val reg_chosen_tag	= RegInit(0.U(1.W))
-	//val cache_mask 		= Cat(reg_cache_wstrb.asBools.map(Fill(8, _)).reverse)
-	val cache_mask 		= Cat(reg_cache_wstrb.asBools.map(Fill(8, _)))
+	val cache_mask 		= Cat(reg_cache_wstrb.asBools.map(Fill(8, _)).reverse)
+	//val cache_mask 		= Cat(reg_cache_wstrb.asBools.map(Fill(8, _)))
 	val cache_wdata 	= Mux(reg_offset(3),Cat(reg_wdata,0.U(64.W)),Cat(0.U(64.W),reg_wdata))
 	val cache_wstrb 	= Mux(reg_offset(3),Cat(reg_wstrb,0.U(8.W)),Cat(0.U(8.W),reg_wstrb))	
 	
