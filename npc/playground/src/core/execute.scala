@@ -124,9 +124,9 @@ class Exu extends Module with CoreParameters{
 	lsu_exu.io.imm_data		:= imm_data 
 
 	when(!reg_flush){
-		reg_mem_addr			:= lsu_exu.io.address_result
-		reg_mem_avalid			:= lsu_exu.io.avalid
-		reg_w_mem_en			:= lsu_exu.io.w_mem_en		
+		reg_mem_addr			:= Mux(stall,reg_mem_addr,lsu_exu.io.address_result)
+		reg_mem_avalid			:= Mux(stall,reg_mem_avalid,lsu_exu.io.avalid)
+		reg_w_mem_en			:= Mux(stall,reg_w_mem_en,lsu_exu.io.w_mem_en)
 	}.otherwise{
 		reg_mem_avalid			:= false.B
 		reg_w_mem_en			:= false.B
