@@ -239,7 +239,7 @@ when(!w_locked){	//Lock
 		io.AXI_Bus.ar.bits.arsize	:= 3.U 
 	}.elsewhen(r_chosen === 1.U){
 		io.AXI_Bus.ar.valid 		:= io.DCache_bus.r.valid & !reg_ar_ok
-		io.AXI_Bus.ar.bits.araddr	:= io.ICache_bus.r.bits.raddr
+		io.AXI_Bus.ar.bits.araddr	:= io.DCache_bus.r.bits.raddr
 		io.AXI_Bus.ar.bits.arlen 	:= 1.U
 		io.AXI_Bus.ar.bits.arsize	:= 3.U 
 	}.elsewhen(r_chosen === 2.U){
