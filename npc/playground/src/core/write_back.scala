@@ -101,7 +101,7 @@ class WriteBack extends Module with CoreParameters{
 	val rs2_data		= Mux((io.in.rs2_addr === reg_rs_addr)&reg_w_rs_en,reg_result_data,io.in.rs2_data)
 	
 	// move data to the appropriate position
-	val mem_w_data 		= rs2_data << io.in.mem_addr(2,0)
+	val mem_w_data 		= rs2_data << Cat(io.in.mem_addr(2,0),0.U(3.W))
 	switch(reg_ls_state){
 		is(ls_idle){
 			when(io.in.mem_avalid){
