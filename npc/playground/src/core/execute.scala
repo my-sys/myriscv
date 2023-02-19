@@ -85,6 +85,8 @@ class Exu extends Module with CoreParameters{
 		reg_pc 					:= Mux(stall,reg_pc,pc)
 		reg_inst 				:= Mux(stall,reg_inst,inst)
 	}.otherwise{
+		reg_pc					:= 0.U 
+		reg_inst				:= 0.U
 		reg_opType				:= Op_type.op_n
 		reg_exuType				:= ALUType.alu_none
 	}
