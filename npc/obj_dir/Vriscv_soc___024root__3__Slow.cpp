@@ -6553,16 +6553,16 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
             = ((0x7fffffffU & vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT____Vtogcov__sram2_tag_io_Q[3U]) 
                | (0x80000000U & vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram2_tag__DOT__sram_Q[3U]));
     }
+    vlSelf->riscv_soc__DOT__core__DOT__cross_bar_1_io_wb_bits_rdata 
+        = ((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_bus_addr 
+                          >> 0x1fU))) ? vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata
+            : vlSelf->riscv_soc__DOT__axi_ram__DOT__mem_rdata);
     vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__rs2_data 
         = ((((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_rs2_addr) 
              == (IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_rs_addr)) 
             & (IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_w_rs_en))
             ? vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_result_data
             : vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_rs2_data);
-    vlSelf->riscv_soc__DOT__core__DOT__cross_bar_1_io_wb_bits_rdata 
-        = ((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_bus_addr 
-                          >> 0x1fU))) ? vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata
-            : vlSelf->riscv_soc__DOT__axi_ram__DOT__mem_rdata);
     vlSelf->riscv_soc__DOT__core__DOT__cross_bar_1_io_bus2_valid 
         = ((~ (IData)((vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_bus_addr 
                        >> 0x1fU))) & (IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_bus_valid));
