@@ -91,13 +91,13 @@ class Decode extends Module with CoreParameters{
 	// when you generate stall, should stall the previous stage and insert nop to next stage
 	when(!io.in.flush){
 		reg_imm 			:= Mux(stall,reg_imm,imm_data)
-		reg_opType          := Mux(stall,reg_opType,Mux(temp_stall,0.U,opType))
-		reg_exuType         := Mux(stall,reg_exuType,Mux(temp_stall,0.U,exuType))
+		reg_opType          := Mux(stall,reg_opType,opType)
+		reg_exuType         := Mux(stall,reg_exuType,exuType)
 		reg_rs1_data        := Mux(stall,reg_rs1_data,rs1_data)
 		reg_rs2_data        := Mux(stall,reg_rs2_data,rs2_data)
 		reg_dest_rs_addr    := Mux(stall,reg_dest_rs_addr,dest_rs_addr)
-		reg_pc              := Mux(stall,reg_pc,Mux(temp_stall,0.U,pc))
-		reg_inst 			:= Mux(stall,reg_inst,Mux(temp_stall,0.U,inst))
+		reg_pc              := Mux(stall,reg_pc,pc)
+		reg_inst 			:= Mux(stall,reg_inst,inst)
 		reg_rs1_addr		:= Mux(stall,reg_rs1_addr,rs1_addr)
 		reg_rs2_addr		:= Mux(stall,reg_rs2_addr,rs2_addr)
 	}.otherwise{
@@ -109,14 +109,14 @@ class Decode extends Module with CoreParameters{
 	}
 
 
-    io.out.opType       := Mux(io.in.stall,Op_type.op_n,reg_opType) 
-    io.out.exuType      := Mux(io.in.stall,ALUType.alu_none,reg_exuType) 
+    io.out.opType       := Mux(reg_stall,Op_type.op_n,reg_opType) 
+    io.out.exuType      := Mux(reg_stall,ALUType.alu_none,reg_exuType) 
     io.out.rs1_data     := reg_rs1_data
     io.out.rs2_data     := reg_rs2_data  
     io.out.imm_data     := reg_imm
     io.out.rs_addr      := reg_dest_rs_addr
-    io.out.pc           := reg_pc
-	io.out.inst 		:= reg_inst 
+    io.out.pc           := Mux(reg_stall,0.U,reg_pc)
+	io.out.inst 		:= Mux(reg_stall,0.U,reg_inst)
 	io.out.rs1_addr		:= reg_rs1_addr
 	io.out.rs2_addr		:= reg_rs2_addr
 

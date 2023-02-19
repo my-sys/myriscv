@@ -191,7 +191,7 @@ class Exu extends Module with CoreParameters{
 	io.out.rs2_addr 		:= reg_rs2_addr
 	io.out.mem_addr			:= reg_mem_addr
 	io.out.mem_avalid		:= Mux(stall,false.B,reg_mem_avalid)
-	io.out.w_mem_en			:= Mux(stall,false.B,reg_w_mem_en) 
+	io.out.w_mem_en			:= Mux(stall,false.B,reg_w_mem_en)
 	io.out.stall 			:= mu_exu.io.stall
 }
 
