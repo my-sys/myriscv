@@ -80,19 +80,30 @@ class Decode extends Module with CoreParameters{
         //Inst_type.Type_N    -> (),
         //Inst_type.Type_R    -> (),
     ))
+
+	// 处理ld 与其他指令的数据相关问题，引入气泡解决. .
+	val temp_stall     = (reg_opType === Op_type.op_lsu)&(!reg_exuType(2))&((reg_dest_rs_addr === rs1_addr) |(reg_dest_rs_addr === rs2_addr))
+	when(!io.in.flush){
+		reg_stall		:= Mux(io.in.stall,reg_stall,temp_stall)
+	}.otherwise{
+		reg_stall		:= false.B
+	}
+	// when you generate stall, should stall the previous stage and insert nop to next stage
 	when(!io.in.flush){
 		reg_imm 			:= Mux(stall,reg_imm,imm_data)
-		reg_opType          := Mux(stall,reg_opType,opType)
-		reg_exuType         := Mux(stall,reg_exuType,exuType)     
+		reg_opType          := Mux(stall,reg_opType,Mux(temp_stall,0.U,opType))
+		reg_exuType         := Mux(stall,reg_exuType,Mux(temp_stall,0.U,exuType))
 		reg_rs1_data        := Mux(stall,reg_rs1_data,rs1_data)
 		reg_rs2_data        := Mux(stall,reg_rs2_data,rs2_data)
 		reg_dest_rs_addr    := Mux(stall,reg_dest_rs_addr,dest_rs_addr)
-		reg_pc              := Mux(stall,reg_pc,pc)
-		reg_inst 			:= Mux(stall,reg_inst,inst)
+		reg_pc              := Mux(stall,reg_pc,Mux(temp_stall,0.U,pc))
+		reg_inst 			:= Mux(stall,reg_inst,Mux(temp_stall,0.U,inst))
 		reg_rs1_addr		:= Mux(stall,reg_rs1_addr,rs1_addr)
 		reg_rs2_addr		:= Mux(stall,reg_rs2_addr,rs2_addr)
 	}.otherwise{
 		// 产生nop指令
+		reg_pc 				:= 0.U
+		reg_inst			:= 0.U
 		reg_opType			:= Op_type.op_n
 		reg_exuType			:= ALUType.alu_none
 	}
@@ -112,13 +123,7 @@ class Decode extends Module with CoreParameters{
 	
 
 	io.out.stall 		:= reg_stall
-	// 处理ld 与其他指令的数据相关问题，引入气泡解决. .
-	val temp_stall     = (reg_opType === Op_type.op_lsu)&(!reg_exuType(2))&((reg_dest_rs_addr === rs1_addr) |(reg_dest_rs_addr === rs2_addr))
-	when(!io.in.flush){
-		reg_stall		:= Mux(io.in.stall,reg_stall,temp_stall)
-	}.otherwise{
-		reg_stall		:= false.B
-	}
+
 
     when(io.in.w_rs_en){
         reg_file.write(io.in.rs_addr,io.in.result_data)
