@@ -48,6 +48,7 @@ Vriscv_soc::Vriscv_soc(VerilatedContext* _vcontextp__, const char* _vcname__)
     , io_difftest_pc{vlSymsp->TOP.io_difftest_pc}
     , io_difftest_inst{vlSymsp->TOP.io_difftest_inst}
     , io_difftest_commit{vlSymsp->TOP.io_difftest_commit}
+    , io_inst_counter{vlSymsp->TOP.io_inst_counter}
     , __PVT____024unit{vlSymsp->TOP.__PVT____024unit}
     , rootp{&(vlSymsp->TOP)}
 {
@@ -95,7 +96,7 @@ static void _eval_initial_loop(Vriscv_soc__Syms* __restrict vlSymsp) {
             Verilated::debug(1);
             __Vchange = Vriscv_soc___024root___change_request(&(vlSymsp->TOP));
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 5346, "",
+            VL_FATAL_MT("/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 5362, "",
                 "Verilated model didn't DC converge\n"
                 "- See https://verilator.org/warn/DIDNOTCONVERGE");
         } else {
@@ -126,7 +127,7 @@ void Vriscv_soc::eval_step() {
             Verilated::debug(1);
             __Vchange = Vriscv_soc___024root___change_request(&(vlSymsp->TOP));
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 5346, "",
+            VL_FATAL_MT("/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 5362, "",
                 "Verilated model didn't converge\n"
                 "- See https://verilator.org/warn/DIDNOTCONVERGE");
         } else {

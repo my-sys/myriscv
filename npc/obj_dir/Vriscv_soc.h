@@ -67,6 +67,7 @@ class Vriscv_soc VL_NOT_FINAL {
     VL_OUT64(&io_difftest_pc,63,0);
     VL_OUT(&io_difftest_inst,31,0);
     VL_OUT8(&io_difftest_commit,0,0);
+    VL_OUT64(&io_inst_counter,63,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.
