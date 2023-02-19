@@ -113,7 +113,7 @@ class Decode extends Module with CoreParameters{
 
 	io.out.stall 		:= reg_stall
 	// 处理ld 与其他指令的数据相关问题，引入气泡解决. .
-	val temp_stall     = (reg_opType === Op_type.op_lsu)&(!reg_exuType(3))&((reg_dest_rs_addr === rs1_addr) |(reg_dest_rs_addr === rs2_addr))
+	val temp_stall     = (reg_opType === Op_type.op_lsu)&(!reg_exuType(2))&((reg_dest_rs_addr === rs1_addr) |(reg_dest_rs_addr === rs2_addr))
 	when(!io.in.flush){
 		reg_stall		:= Mux(io.in.stall,reg_stall,temp_stall)
 	}.otherwise{
