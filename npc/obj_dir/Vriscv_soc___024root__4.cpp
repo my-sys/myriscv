@@ -17,6 +17,16 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__15(Vriscv_soc___024root*
     VlWide<4>/*127:0*/ __Vtemp2850;
     // Body
     if ((1U & ((IData)((vlSelf->io_difftest_reg_15 
+                        >> 0x14U)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_15 
+                                              >> 0x14U))))) {
+        ++(vlSymsp->__Vcoverage[982]);
+        vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_15 
+            = ((0xffffffffffefffffULL & vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_15) 
+               | ((QData)((IData)((1U & (IData)((vlSelf->io_difftest_reg_15 
+                                                 >> 0x14U))))) 
+                  << 0x14U));
+    }
+    if ((1U & ((IData)((vlSelf->io_difftest_reg_15 
                         >> 0x15U)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_15 
                                               >> 0x15U))))) {
         ++(vlSymsp->__Vcoverage[983]);
@@ -18271,15 +18281,5 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__15(Vriscv_soc___024root*
                | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_w_wdata 
                                                  >> 0x24U))))) 
                   << 0x24U));
-    }
-    if ((1U & ((IData)((vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_w_wdata 
-                        >> 0x25U)) ^ (IData)((vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__d_cache_io_cache_bus_w_bits_wdata 
-                                              >> 0x25U))))) {
-        ++(vlSymsp->__Vcoverage[5209]);
-        vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__d_cache_io_cache_bus_w_bits_wdata 
-            = ((0xffffffdfffffffffULL & vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__d_cache_io_cache_bus_w_bits_wdata) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_w_wdata 
-                                                 >> 0x25U))))) 
-                  << 0x25U));
     }
 }

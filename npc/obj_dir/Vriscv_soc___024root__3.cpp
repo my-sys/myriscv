@@ -6082,19 +6082,19 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__14(Vriscv_soc___024root*
     }
     if (vlSelf->reset) {
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_pc = 0ULL;
-    } else if ((1U & (~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_flush)))) {
-        if ((1U & (~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode_io_in_stall)))) {
-            vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_pc 
-                = vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc;
-        }
+    } else if (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_flush) {
+        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_pc = 0ULL;
+    } else if ((1U & (~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode_io_in_stall)))) {
+        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_pc 
+            = vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc;
     }
     if (vlSelf->reset) {
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_inst = 0U;
-    } else if ((1U & (~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_flush)))) {
-        if ((1U & (~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode_io_in_stall)))) {
-            vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_inst 
-                = vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_inst;
-        }
+    } else if (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_flush) {
+        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_inst = 0U;
+    } else if ((1U & (~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode_io_in_stall)))) {
+        vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_inst 
+            = vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_inst;
     }
     vlSelf->riscv_soc__DOT__axi_ram__DOT___reg_w_addr_T_1 
         = (8ULL + vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_w_addr);
@@ -18247,15 +18247,5 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__14(Vriscv_soc___024root*
                | ((QData)((IData)((1U & (IData)((vlSelf->io_difftest_reg_15 
                                                  >> 0x13U))))) 
                   << 0x13U));
-    }
-    if ((1U & ((IData)((vlSelf->io_difftest_reg_15 
-                        >> 0x14U)) ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_15 
-                                              >> 0x14U))))) {
-        ++(vlSymsp->__Vcoverage[982]);
-        vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_15 
-            = ((0xffffffffffefffffULL & vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_15) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->io_difftest_reg_15 
-                                                 >> 0x14U))))) 
-                  << 0x14U));
     }
 }
