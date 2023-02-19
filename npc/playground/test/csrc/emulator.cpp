@@ -103,6 +103,7 @@ bool Emulator::isa_difftest_checkregs(CPU_state *ref, vaddr_t pc){
 }
 
 void Emulator::isa_reg_display(){
+	printf("inst_counter: = %lx\n",top->io_inst_counter);
 #define gpr(x) top->io_difftest_reg_##x
     printf("$0($0) = %lx, $1(ra) = %lx, $2(sp) = %lx, $3(gp) = %lx \n",gpr(0),gpr(1),gpr(2),gpr(3));
     printf("$4(tp) = %lx, $5(t0) = %lx, $6(t1) = %lx, $7(t2) = %lx \n",gpr(4),gpr(5),gpr(6),gpr(7));

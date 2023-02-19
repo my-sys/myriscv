@@ -147,15 +147,17 @@ class WriteBack extends Module with CoreParameters{
 	reg_inst 				:= Mux(reg_stall,reg_inst,io.in.inst)
 	val difftest_inst 			= RegInit(0.U(InstLen.W))
 	val difftest_pc 			= RegInit(0.U(AddrLen.W))
-
+	val inst_counter   = RegInit(0.U(64.W)) // for test 
 
 	when(reg_stall | (reg_exuType === ALUType.alu_none)){
 		difftest_commit := false.B
 	}.otherwise{
 		difftest_inst 	:= reg_inst
 		difftest_pc		:= reg_pc
-		difftest_commit := true.B
+		difftest_commit := true.B	
+		inst_counter  	:= inst_counter + 1.U
 	}
+	BoringUtils.addSource(inst_counter, "INST_COUNTER")
 	BoringUtils.addSource(difftest_commit, "DIFFTEST_COMMIT")
     BoringUtils.addSource(difftest_pc,"DIFFTEST_PC")
     BoringUtils.addSource(difftest_inst,"DIFFTEST_INST")

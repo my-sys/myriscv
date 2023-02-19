@@ -31,6 +31,7 @@ class riscv_soc extends Module{
     val difftest_pc   	= Output(UInt(64.W))
     val difftest_inst 	= Output(UInt(32.W))
 	val difftest_commit = Output(Bool())
+	val inst_counter 	= Output(UInt(64.W))
   })
   val core = Module(new Core)
   val axi_ram = Module(new AXI_RAM)
@@ -40,16 +41,19 @@ class riscv_soc extends Module{
   val difftest_reg      = VecInit(Seq.fill(32)(0.U(64.W)))
   val difftest_pc       = WireInit(0.U(64.W))
   val difftest_commit   = WireInit(false.B)
+  val inst_counter		= WireInit(0.U(64.W))
   
 
   BoringUtils.addSink(difftest_reg,"DIFFTEST_REG")
   BoringUtils.addSink(difftest_pc,"DIFFTEST_PC")
   BoringUtils.addSink(difftest_inst,"DIFFTEST_INST")
   BoringUtils.addSink(difftest_commit, "DIFFTEST_COMMIT")
+  BoringUtils.addSink(inst_counter, "INST_COUNTER")
   io.difftest_reg     := difftest_reg
   io.difftest_pc      := difftest_pc
   io.difftest_inst    := difftest_inst 
   io.difftest_commit  := difftest_commit
+  io.inst_counter	  := inst_counter
 
 	axi_ram.io.ram_bus <> core.io.axi_bus
 //   core.io.in.rdata    :=  axi_ram.io.rdata
