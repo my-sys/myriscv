@@ -109,43 +109,45 @@ class ALU_EXU extends Module with CoreParameters{
     val srlw_temp = op_data1(31,0) >>   rs2_data(4,0)        // (rs2_data & "h1f".U)
 
     val sraw_temp      = ((op_data1(31,0)).asSInt >> (rs2_data & "h1f".U)).asUInt
-    val temp_result_data = MuxLookup(io.exuType(5,2),0.U(65.W), List(
-        ALUType.alu_add(5,2)    -> Cat(1.U(1.W),(op_data1 + rs2_data)),
-        ALUType.alu_auipc(5,2)  -> Cat(1.U(1.W),(op_pc + op_imm)),
-        ALUType.alu_and(5,2)    -> Cat(1.U(1.W),(op_data1 & rs2_data)),
+	val add_temp = op_data1 + rs2_data
+    val temp_result_data = MuxLookup(io.exuType(5,1),0.U(65.W), List(
+        ALUType.alu_add(5,1)    -> Cat(1.U(1.W),add_temp), //(op_data1 + rs2_data)
+        ALUType.alu_addw(5,1)   -> Cat(1.U(1.W),Mux(add_temp(31),Cat(Fill(32,1.U),add_temp(31,0)),Cat(0.U(32.W),add_temp(31,0)))),
+        ALUType.alu_auipc(5,1)  -> Cat(1.U(1.W),(op_pc + op_imm)),
+        ALUType.alu_and(5,1)    -> Cat(1.U(1.W),(op_data1 & rs2_data)),
         
         //  slt     slti 
-        ALUType.alu_slt(5,2)    -> Cat(1.U(1.W),(Cat(0.U((XLEN-1).W), s_rs1_l_rs2))),
-        ALUType.alu_sltu(5,2)   -> Cat(1.U(1.W),(Cat(0.U((XLEN-1).W), u_rs1_l_rs2))),
-        ALUType.alu_sub(5,2)    -> Cat(1.U(1.W),(subresult)),
-        ALUType.alu_subw(5,2)   -> Cat(1.U(1.W),(Mux(subresult(31),Cat(Fill(32,1.U),subresult(31,0)),Cat(0.U(32.W),subresult(31,0))))),
+        ALUType.alu_slt(5,1)    -> Cat(1.U(1.W),(Cat(0.U((XLEN-1).W), s_rs1_l_rs2))),
+        ALUType.alu_sltu(5,1)   -> Cat(1.U(1.W),(Cat(0.U((XLEN-1).W), u_rs1_l_rs2))),
+        ALUType.alu_sub(5,1)    -> Cat(1.U(1.W),(subresult)),
+        ALUType.alu_subw(5,1)   -> Cat(1.U(1.W),(Mux(subresult(31),Cat(Fill(32,1.U),subresult(31,0)),Cat(0.U(32.W),subresult(31,0))))),
         //  sll        slli 
-        ALUType.alu_sll(5,2)    -> Cat(1.U(1.W),(op_data1 << (rs2_data(5,0)))),  //(rs2_data &"h3f".U)
+        ALUType.alu_sll(5,1)    -> Cat(1.U(1.W),(op_data1 << (rs2_data(5,0)))),  //(rs2_data &"h3f".U)
         //  slliw       sllw 
-        ALUType.alu_sllw(5,2)   -> Cat(1.U(1.W),(Cat(Fill(32,sllw_temp(31)),sllw_temp(31,0)))),
+        ALUType.alu_sllw(5,1)   -> Cat(1.U(1.W),(Cat(Fill(32,sllw_temp(31)),sllw_temp(31,0)))),
 
         //  srl         srli 
-        ALUType.alu_srl(5,2)    -> Cat(1.U(1.W),(op_data1 >> (rs2_data(5,0)))), //rs2_data & "h3f".U
+        ALUType.alu_srl(5,1)    -> Cat(1.U(1.W),(op_data1 >> (rs2_data(5,0)))), //rs2_data & "h3f".U
 
         // srlw         srliw 
-        ALUType.alu_srlw(5,2)   -> Cat(1.U(1.W),(Cat(Fill(32,srlw_temp(31)),srlw_temp(31,0)))),
+        ALUType.alu_srlw(5,1)   -> Cat(1.U(1.W),(Cat(Fill(32,srlw_temp(31)),srlw_temp(31,0)))),
 
         // sra          srai 
-        ALUType.alu_sra(5,2)    -> Cat(1.U(1.W),((op_data1.asSInt >> (rs2_data(5,0))).asUInt)), //rs2_data & "h3f".U
+        ALUType.alu_sra(5,1)    -> Cat(1.U(1.W),((op_data1.asSInt >> (rs2_data(5,0))).asUInt)), //rs2_data & "h3f".U
 
         //  sraw        sraiw 
-        ALUType.alu_sraw(5,2)   -> Cat(1.U(1.W),(Cat(Fill(32,sraw_temp(31)),sraw_temp(31,0)))),
+        ALUType.alu_sraw(5,1)   -> Cat(1.U(1.W),(Cat(Fill(32,sraw_temp(31)),sraw_temp(31,0)))),
 
         //  xor         xori 
-        ALUType.alu_xor(5,2)    -> Cat(1.U(1.W),(op_data1 ^ rs2_data)),
+        ALUType.alu_xor(5,1)    -> Cat(1.U(1.W),(op_data1 ^ rs2_data)),
 
         // or           ori 
-        ALUType.alu_or(5,2)     -> Cat(1.U(1.W),(op_data1 | rs2_data)),
+        ALUType.alu_or(5,1)     -> Cat(1.U(1.W),(op_data1 | rs2_data)),
 
-		ALUType.alu_lui(5,2)    -> Cat(1.U(1.W),op_imm),
+		ALUType.alu_lui(5,1)    -> Cat(1.U(1.W),op_imm),
 
 		// jal 			jalr
-		ALUType.alu_jal(5,2)	-> Cat(1.U(1.W),op_pc + 4.U)
+		ALUType.alu_jal(5,1)	-> Cat(1.U(1.W),op_pc + 4.U)
     ))
 
     val w_rs_en                 = temp_result_data(64)
