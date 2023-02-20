@@ -113,7 +113,18 @@ class Exu extends Module with CoreParameters{
 	}.otherwise{
 		reg_valid := 0.U
 	}
-
+	val reg_rs_data = MuxCase(0.U(64.W),Array(
+		reg_valid(0) -> alu_exu.io.result_data,
+		reg_valid(1) -> 0.U,
+		reg_valid(2) -> 0.U,
+		reg_valid(3) -> mu_exu.io.result_data
+	))
+	val reg_w_rs_en = MuxCase(1.U(1.W),Array(
+		reg_valid(0) -> alu_exu.io.result_data, // alu 
+		reg_valid(1) -> 0.U,//lsu 
+		reg_valid(2) -> 0.U,//csr
+		reg_valid(3) -> mu_exu.io.result_data	// mu exu	
+	))
 //---------------------------------LSU --------------------------------------
 	lsu_exu.io.valid		:= valid(1)
 	lsu_exu.io.exuType		:= exuType
@@ -141,21 +152,8 @@ class Exu extends Module with CoreParameters{
 	mu_exu.io.rs2_data		:= rs2_data
 	mu_exu.io.stall 		:= io.in.stall
 	
-	val reg_stall 			:= mu_exu.io.stall
+	val reg_stall 			= mu_exu.io.stall
 //------------------------------CSR EXU--------------------------------------
-
-	val reg_rs_data = MuxCase(0.U(64.W),Array(
-		reg_valid(0) -> alu_exu.io.result_data,
-		reg_valid(1) -> 0.U,
-		reg_valid(2) -> 0.U,
-		reg_valid(3) -> mu_exu.io.result_data
-	))
-	val reg_w_rs_en = MuxCase(1.U(1.W),Array(
-		reg_valid(0) -> alu_exu.io.result_data, // alu 
-		reg_valid(1) -> 0.U,//lsu 
-		reg_valid(2) -> 0.U,//csr
-		reg_valid(3) -> mu_exu.io.result_data	// mu exu	
-	))
 	
 	io.out.rs_addr          := reg_rs_addr
 	io.out.rs_data          := reg_rs_data
