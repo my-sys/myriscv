@@ -86,11 +86,11 @@ class Exu extends Module with CoreParameters{
 		reg_valid(2) -> 0.U,
 		reg_valid(3) -> mu_exu.io.result_data
 	))
-	val reg_w_rs_en = MuxCase(1.U(1.W),Array(
-		reg_valid(0) -> alu_exu.io.result_data, // alu 
-		reg_valid(1) -> 0.U,//lsu 
-		reg_valid(2) -> 0.U,//csr
-		reg_valid(3) -> mu_exu.io.result_data	// mu exu	
+	val reg_w_rs_en = MuxCase(false.B,Array(
+		reg_valid(0) -> alu_exu.io.w_rs_en, // alu 
+		reg_valid(1) -> false.B,//lsu 
+		reg_valid(2) -> false.B,//csr
+		reg_valid(3) -> mu_exu.io.out_valid	// mu exu	
 	))
 
 //  解决数据相关冲突 
