@@ -38,7 +38,7 @@ class MUL extends Module with CoreParameters{
 	val rs2_data	= io.rs2_data
 	val valid 		= io.valid
 
-	val mul_data1 = Mux(exuType(2),Cat(Fill(33,rs1_data(31)),rs1_data(31,0)),Mux(exuType(1),Cat(rs1_data(63),rs1_data),Cat(0.U(1.W),rs1_data)))
+	val mul_data1 = Mux(exuType(2),Cat(Fill(98,rs1_data(31)),rs1_data(31,0)),Mux(exuType(1),Cat(Fill(66,1.U(1.W)),rs1_data),Cat(0.U(66.W),rs1_data)))
 	val mul_data2 = Mux(exuType(2),Cat(Fill(33,rs2_data(31)),rs2_data(31,0)),Mux(exuType(0),Cat(rs2_data(63),rs2_data),Cat(0.U(1.W),rs2_data)))	
 
 	// temp_mul2 的长度是67, mul2 为64位，多出1位用于兼容无符号运算， 即65位
@@ -53,7 +53,7 @@ class MUL extends Module with CoreParameters{
 	val reg_result 		= RegInit(0.U(130.W))
 	val reg_exuType 	= RegInit(0.U(1.W)) 
 	val reg_out_valid	= RegInit(false.B)
-	val pp				= MuxLookup(reg_temp_mul2(2,0),0.U(65.W),List(
+	val pp				= MuxLookup(reg_temp_mul2(2,0),0.U(130.W),List(
 		"b001".U 	->  (reg_mul1),
 		"b010".U 	-> 	(reg_mul1),
 		"b011".U 	->	(reg_mul1 << 1.U),

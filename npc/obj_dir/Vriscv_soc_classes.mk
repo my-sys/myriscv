@@ -35,6 +35,7 @@ VM_CLASSES_FAST += \
 	Vriscv_soc___024root__6 \
 	Vriscv_soc___024root__7 \
 	Vriscv_soc___024root__8 \
+	Vriscv_soc___024root__9 \
 	Vriscv_soc___024unit \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
