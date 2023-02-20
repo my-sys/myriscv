@@ -138,6 +138,7 @@ class Exu extends Module with CoreParameters{
 	val  reg_w_mem_en 		= lsu_exu.io.w_mem_en
 //-------------------------------ALU-----------------------------------------
     alu_exu.io.valid 		:= valid(0)
+	alu_exu.io.exuType		:= exuType
 	alu_exu.io.op_data1 	:= rs1_data 
     alu_exu.io.op_data2 	:= rs2_data
     alu_exu.io.op_imm   	:= imm_data
