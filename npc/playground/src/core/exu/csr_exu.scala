@@ -20,8 +20,8 @@ class CSR_EXU extends Module with CoreParameters{
         val rd_result   = Output(UInt(RegDataLen.W))
         val csr_result  = Output(UInt(CsrDataLen.W))
     })
-	val reg_rd_result	:= RegInit(0.U(64.W))
-	val reg_csr_result 	:= RegInit(0.U(64.W))
+	val reg_rd_result	= RegInit(0.U(64.W))
+	val reg_csr_result 	= RegInit(0.U(64.W))
     io.rd_result        := reg_rd_result
     io.csr_result       := reg_csr_result
 } 

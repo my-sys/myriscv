@@ -144,13 +144,13 @@ class Exu extends Module with CoreParameters{
 	val reg_stall 			:= mu_exu.io.stall
 //------------------------------CSR EXU--------------------------------------
 
-	val reg_rs_data	:= Case(0.U(64.W),Array(
+	val reg_rs_data	= Case(0.U(64.W),Array(
 		reg_valid(0) -> alu_exu.io.result_data,
 		reg_valid(1) -> 0.U,
 		reg_valid(2) -> 0.U,
 		reg_valid(3) -> mu_exu.io.result_data
 	))
-	val reg_w_rs_en := Mux(1.U(1.W),Array(
+	val reg_w_rs_en = Mux(1.U(1.W),Array(
 		reg_valid(0) -> alu_exu.io.result_data, // alu 
 		reg_valid(1) -> 0.U,//lsu 
 		reg_valid(2) -> 0.U,//csr
