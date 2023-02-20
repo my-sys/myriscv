@@ -147,7 +147,7 @@ class Exu extends Module with CoreParameters{
 	val reg_next_pc				= alu_exu.io.result_pc
 	val reg_valid_next_pc		= alu_exu.io.next_pc_valid
 //-------------------------------MU EXU--------------------------------------
-	mu_exu.io.valid 		:= valid(3)
+	mu_exu.io.in_valid 		:= valid(3)
 	mu_exu.io.exuType		:= exuType
 	mu_exu.io.rs1_data		:= rs1_data
 	mu_exu.io.rs2_data		:= rs2_data
