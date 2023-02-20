@@ -171,7 +171,7 @@ class DIV extends Module with CoreParameters{
 			reg_q 			:= Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q <<1.U)+1.U)
 			reg_rem 		:= Mux(reg_rem(64)^reg_divisor(64),(reg_rem<<1.U) + reg_divisor,(reg_rem<<1.U)+neg_divisor)
 			//reg_cnt 为64时，说明本次reg_cnt要变为65，故总共执行了65次
-			reg_state 		:= Mux(reg_cnt === "h3F",div_end,reg_state)
+			reg_state 		:= Mux(reg_cnt === "h3F".U,div_end,reg_state)
 		}
 		is(div_end){
 			// 商和余数矫正
