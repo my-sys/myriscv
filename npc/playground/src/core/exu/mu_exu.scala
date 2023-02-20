@@ -170,8 +170,8 @@ class DIV extends Module with CoreParameters{
 			reg_cnt 		:= reg_cnt + 1.U 
 			reg_q 			:= Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q <<1.U)+1.U)
 			reg_rem 		:= Mux(reg_rem(64)^reg_divisor(64),(reg_rem<<1.U) + reg_divisor,(reg_rem<<1.U)+neg_divisor)
-		//reg_cnt 为64时，说明本次reg_cnt要变为65，故总共执行了65次
-			reg_state 		:= Mux(reg_cnt(6),div_end,reg_state)
+			//reg_cnt 为64时，说明本次reg_cnt要变为65，故总共执行了65次
+			reg_state 		:= Mux(reg_cnt === "h3F",div_end,reg_state)
 		}
 		is(div_end){
 			// 商和余数矫正
@@ -187,7 +187,7 @@ class DIV extends Module with CoreParameters{
 				reg_cnt 		:= reg_cnt
 			}.otherwise{
 				reg_q 			:= Mux(reg_divisor(64)^reg_dividend(64),reg_q + 1.U,reg_q)
-				reg_rem 		:= Mux(reg_divisor(64)^reg_rem(64),Mux(reg_divisor(64)^reg_dividend(64),reg_rem + neg_divisor,reg_rem + reg_divisor),reg_rem)
+				reg_rem 		:= Mux(reg_dividend(64)^reg_rem(64),Mux(reg_divisor(64)^reg_dividend(64),reg_rem + neg_divisor,reg_rem + reg_divisor),reg_rem)
 				reg_stall		:= false.B 
 				reg_out_valid	:= true.B
 				reg_state		:= div_start
