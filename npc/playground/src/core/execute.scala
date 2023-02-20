@@ -66,6 +66,33 @@ class Exu extends Module with CoreParameters{
 	
 	// 跳转指令问题，冲刷流水线
 	val reg_flush 			= reg_valid_next_pc 
+	// Choosing the function unit to execute
+	val default_valid = "b0000".U
+    val valid = MuxLookup(opType,default_valid,List(
+        Op_type.op_alu     ->  "b0001".U,
+        Op_type.op_lsu     ->  "b0010".U,
+        Op_type.op_csr     ->  "b0100".U,
+        Op_type.op_mu      ->  "b1000".U    
+    ))
+	val reg_valid = RegInit(0.U(4.W))
+	when(!reg_flush){
+		reg_valid := Mux(stall,reg_valid,valid)
+	}.otherwise{
+		reg_valid := 0.U
+	}
+	val reg_rs_data = MuxCase(0.U(64.W),Array(
+		reg_valid(0) -> alu_exu.io.result_data,
+		reg_valid(1) -> 0.U,
+		reg_valid(2) -> 0.U,
+		reg_valid(3) -> mu_exu.io.result_data
+	))
+	val reg_w_rs_en = MuxCase(1.U(1.W),Array(
+		reg_valid(0) -> alu_exu.io.result_data, // alu 
+		reg_valid(1) -> 0.U,//lsu 
+		reg_valid(2) -> 0.U,//csr
+		reg_valid(3) -> mu_exu.io.result_data	// mu exu	
+	))
+
 //  解决数据相关冲突 
 	val rs1_data = Mux((reg_rs_addr === io.in.rs1_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs1_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs1_data))
 	val rs2_data = Mux((reg_rs_addr === io.in.rs2_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs2_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs2_data))	
@@ -99,32 +126,6 @@ class Exu extends Module with CoreParameters{
 	}
 	
 	
-	// Choosing the function unit to execute
-	val default_valid = "b0000".U
-    val valid = MuxLookup(opType,default_valid,List(
-        Op_type.op_alu     ->  "b0001".U,
-        Op_type.op_lsu     ->  "b0010".U,
-        Op_type.op_csr     ->  "b0100".U,
-        Op_type.op_mu      ->  "b1000".U    
-    ))
-	val reg_valid = RegInit(0.U(4.W))
-	when(!reg_flush){
-		reg_valid := Mux(stall,reg_valid,valid)
-	}.otherwise{
-		reg_valid := 0.U
-	}
-	val reg_rs_data = MuxCase(0.U(64.W),Array(
-		reg_valid(0) -> alu_exu.io.result_data,
-		reg_valid(1) -> 0.U,
-		reg_valid(2) -> 0.U,
-		reg_valid(3) -> mu_exu.io.result_data
-	))
-	val reg_w_rs_en = MuxCase(1.U(1.W),Array(
-		reg_valid(0) -> alu_exu.io.result_data, // alu 
-		reg_valid(1) -> 0.U,//lsu 
-		reg_valid(2) -> 0.U,//csr
-		reg_valid(3) -> mu_exu.io.result_data	// mu exu	
-	))
 //---------------------------------LSU --------------------------------------
 	lsu_exu.io.valid		:= valid(1)
 	lsu_exu.io.exuType		:= exuType
