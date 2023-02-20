@@ -153,7 +153,7 @@ class DIV extends Module with CoreParameters{
 		is(div_start){
 			reg_divisor 	:= divisor
 			reg_dividend 	:= dividend
-			reg_rem			:= Mux(divisor(64)^dividend(64),divisor + dividend,dividend + neg_divisor)
+			reg_rem			:= Mux(divisor(64)^dividend(64),divisor + dividend,dividend + (~divisor)+1.U)
 			reg_state 		:= Mux(valid,div_busy,div_start)
 			reg_stall 		:= Mux(valid,true.B,false.B)
 			reg_exuType		:= Mux(valid,exuType,0.U)
