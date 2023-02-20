@@ -65,7 +65,7 @@ class Exu extends Module with CoreParameters{
 	val  reg_inst 			= RegInit(0.U(InstLen.W))
 	
 	// 跳转指令问题，冲刷流水线
-	val reg_flush 			= reg_valid_next_pc 
+	val reg_flush 			= alu_exu.io.next_pc_valid 
 	// Choosing the function unit to execute
 	val default_valid = "b0000".U
     val valid = MuxLookup(opType,default_valid,List(
