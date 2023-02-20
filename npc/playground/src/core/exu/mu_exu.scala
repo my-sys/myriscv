@@ -49,11 +49,11 @@ class MUL extends Module with CoreParameters{
 	val mul_start :: mul_busy :: mul_end :: Nil = Enum(3)
 	val reg_state 		= RegInit(mul_start)
 	val reg_temp_mul2   = RegInit(0.U(67.W))
-	val reg_mul1		= RegInit(0.U(65.W))
+	val reg_mul1		= RegInit(0.U(130.W))
 	val reg_result 		= RegInit(0.U(130.W))
 	val reg_exuType 	= RegInit(0.U(1.W)) 
 	val reg_out_valid	= RegInit(false.B)
-	val pp				= MuxLookup(reg_temp_mul2(66,64),0.U(65.W),List(
+	val pp				= MuxLookup(reg_temp_mul2(2,0),0.U(65.W),List(
 		"b001".U 	->  (reg_mul1),
 		"b010".U 	-> 	(reg_mul1),
 		"b011".U 	->	(reg_mul1 << 1.U),
@@ -78,8 +78,9 @@ class MUL extends Module with CoreParameters{
 			//reg_mul1
 			//reg_exuType
 			//reg_out_valid
-			reg_result		:= (reg_result<<2.U) + pp
-			reg_temp_mul2	:= reg_temp_mul2 << 2.U
+			reg_result		:= reg_result + pp
+			reg_mul1		:= reg_mul1 << 2.U
+			reg_temp_mul2	:= reg_temp_mul2 >> 2.U
 			reg_cnt 		:= reg_cnt + 1.U
 			when(reg_cnt === 32.U){
 				reg_state	:= mul_end
@@ -95,7 +96,9 @@ class MUL extends Module with CoreParameters{
 				reg_state	:= reg_state
 				reg_cnt 		:= reg_cnt
 				reg_out_valid	:= reg_out_valid
+				reg_result		:= reg_result
 			}.otherwise{
+				reg_result		:= reg_result + pp
 				reg_stall 		:= false.B
 				reg_state		:= mul_start
 				reg_cnt 		:= 0.U 
