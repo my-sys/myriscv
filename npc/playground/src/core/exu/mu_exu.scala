@@ -108,7 +108,7 @@ class MUL extends Module with CoreParameters{
 		}
 	}
 	io.stall 				:= reg_stall
-	io.result				:= Mux(reg_exuType === 1.U,reg_result(63,0),reg_result(127,64)) 
+	io.result				:= Mux(reg_exuType =/= 1.U,reg_result(63,0),reg_result(127,64)) 
 	io.out_valid			:= reg_out_valid
 }
 
@@ -191,7 +191,7 @@ class DIV extends Module with CoreParameters{
 				reg_stall		:= false.B 
 				reg_out_valid	:= true.B
 				reg_state		:= div_start
-				reg_cnt 		:= 0.U 				
+				reg_cnt 		:= 0.U 
 			}
 
 		}
