@@ -177,10 +177,10 @@ class ALU_EXU extends Module with CoreParameters{
 	val reg_next_pc_valid = RegInit(false.B)
 	val reg_w_rs_en 	= RegInit(false.B)
 
-	reg_result_data 	:= Mux(stall,reg_result_data,result_data)
-	reg_result_pc		:= Mux(stall,reg_result_pc,result_pc)
-	reg_next_pc_valid	:= Mux(stall,reg_next_pc_valid,next_pc_valid&io.valid)
-	reg_w_rs_en			:= Mux(stall,reg_w_rs_en,w_rs_en&io.valid)
+	reg_result_data 	:= Mux(io.stall,reg_result_data,result_data)
+	reg_result_pc		:= Mux(io.stall,reg_result_pc,result_pc)
+	reg_next_pc_valid	:= Mux(io.stall,reg_next_pc_valid,next_pc_valid&io.valid)
+	reg_w_rs_en			:= Mux(io.stall,reg_w_rs_en,w_rs_en&io.valid)
 
     io.result_data      := reg_result_data
     io.result_pc        := reg_result_pc
