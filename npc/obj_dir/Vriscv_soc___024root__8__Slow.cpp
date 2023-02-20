@@ -825,7 +825,6 @@ void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_397 = VL_RAND_RESET_I(2);
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_398 = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___T_210 = VL_RAND_RESET_I(1);
-    vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_399 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_400 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_401 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_402 = VL_RAND_RESET_I(2);
@@ -1125,7 +1124,7 @@ void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT____Vtogcov__reg_state = VL_RAND_RESET_I(2);
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT____Vtogcov__reg_cnt = VL_RAND_RESET_I(7);
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT____Vtogcov__reg_exuType = VL_RAND_RESET_I(6);
-    VL_RAND_RESET_W(65, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__mul_data1);
+    VL_RAND_RESET_W(130, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__mul_data1);
     VL_RAND_RESET_W(65, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__mul_data2);
     VL_RAND_RESET_W(67, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__temp_mul2);
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_stall = VL_RAND_RESET_I(1);
@@ -1146,7 +1145,7 @@ void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT___GEN_4 = VL_RAND_RESET_I(1);
     VL_RAND_RESET_W(133, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT___GEN_30);
     VL_RAND_RESET_W(131, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT___GEN_31);
-    VL_RAND_RESET_W(65, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT____Vtogcov__mul_data1);
+    VL_RAND_RESET_W(130, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT____Vtogcov__mul_data1);
     VL_RAND_RESET_W(65, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT____Vtogcov__mul_data2);
     VL_RAND_RESET_W(67, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT____Vtogcov__temp_mul2);
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT____Vtogcov__reg_cnt = VL_RAND_RESET_I(6);
