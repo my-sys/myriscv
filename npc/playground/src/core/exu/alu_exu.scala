@@ -74,12 +74,13 @@ object ALUType{
 //应该有多个ALU。少数的CSR ，MU，LSU。
 class ALU_EXU extends Module with CoreParameters{
     val io = IO(new Bundle{
-        //val valid = Input(Bool())
+        val valid = Input(Bool())
         val exuType = Input(UInt(ExuTypeLen.W))
         val op_data1 = Input(UInt(RegDataLen.W))
         val op_data2 = Input(UInt(RegDataLen.W))
         val op_imm   = Input(UInt(RegDataLen.W))
         val op_pc    = Input(UInt(AddrLen.W))
+		val stall    = Input(Bool())
 
         val result_data     = Output(UInt(RegDataLen.W))
         val result_pc       = Output(UInt(AddrLen.W))
@@ -171,8 +172,18 @@ class ALU_EXU extends Module with CoreParameters{
     val next_pc_valid   = temp_result_pc(64)
     val result_pc       = temp_result_pc(63,0)
 
-    io.result_data      := result_data
-    io.result_pc        := result_pc
-    io.next_pc_valid    := next_pc_valid
-    io.w_rs_en          := w_rs_en
+	val reg_result_data = RegInit(0.U(64.W))
+	val reg_result_pc 	= RegInit(0.U(64.W))
+	val reg_next_pc_valid = RegInit(false.B)
+	val reg_w_rs_en 	= RegInit(false.B)
+
+	reg_result_data 	:= Mux(stall,reg_result_data,result_data)
+	reg_result_pc		:= Mux(stall,reg_result_pc,result_pc)
+	reg_next_pc_valid	:= Mux(stall,reg_next_pc_valid,next_pc_valid&io.valid)
+	reg_w_rs_en			:= Mux(stall,reg_w_rs_en,w_rs_en&io.valid)
+
+    io.result_data      := reg_result_data
+    io.result_pc        := reg_result_pc
+    io.next_pc_valid    := reg_next_pc_valid
+    io.w_rs_en          := reg_w_rs_en
 }

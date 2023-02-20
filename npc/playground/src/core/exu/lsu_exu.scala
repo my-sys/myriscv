@@ -38,12 +38,20 @@ class LSU_EXU extends Module with CoreParameters{
         val address_result      = Output(UInt(RegDataLen.W))
 		val avalid				= Output(Bool())
 		val w_mem_en			= Output(Bool())
+		val stall 				= Input(Bool())
     })
 
 	val rs1_data 	= io.rs1_data
 	val exuType		= io.exuType
 	val imm_data	= io.imm_data
-    io.address_result := (rs1_data + imm_data)
-	io.avalid		:= io.valid 
-	io.w_mem_en 	:= io.valid & exuType(2)
+
+	val reg_address_result 	= RegInit(0.U(64.W))
+	val reg_avalid			= RegInit(false.B)
+	val reg_w_mem_en		= RegInit(false.B)
+	reg_address_result	:= Mux(stall,reg_address_result,(rs1_data + imm_data))
+	reg_avalid			:= Mux(stall,reg_avalid,io.valid)
+	reg_w_mem_en		:= Mux(stall,reg_w_mem_en,io.valid & exuType(2))
+    io.address_result := reg_address_result
+	io.avalid		:= reg_avalid
+	io.w_mem_en 	:= reg_w_mem_en
 }
