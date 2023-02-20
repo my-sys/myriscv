@@ -151,7 +151,7 @@ class Exu extends Module with CoreParameters{
 	mu_exu.io.exuType		:= exuType
 	mu_exu.io.rs1_data		:= rs1_data
 	mu_exu.io.rs2_data		:= rs2_data
-	mu_exu.io.stall 		:= io.in.stall
+	mu_exu.io.in_stall 		:= io.in.stall
 	
 	val reg_stall 			= mu_exu.io.stall
 //------------------------------CSR EXU--------------------------------------

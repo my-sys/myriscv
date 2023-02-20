@@ -23,6 +23,7 @@ object MUType{
 
 class MUL extends Module with CoreParameters{
 	val io = IO(new Bundle{
+		val in_stall	= Input(Bool())
 		val exuType     = Input(UInt(ExuTypeLen.W))
 		val rs1_data    = Input(UInt(RegDataLen.W))
 		val rs2_data    = Input(UInt(RegDataLen.W))
@@ -89,10 +90,18 @@ class MUL extends Module with CoreParameters{
 			//reg_mul1
 			//reg_result
 			//reg_exuType
-			reg_stall 		:= false.B
-			reg_state		:= mul_start
-			reg_cnt 		:= 0.U 
-			reg_out_valid	:= true.B 
+			when(io.in_stall){
+				reg_stall 	:= reg_stall
+				reg_state	:= reg_state
+				reg_cnt 		:= reg_cnt
+				reg_out_valid	:= reg_out_valid
+			}.otherwise{
+				reg_stall 		:= false.B
+				reg_state		:= mul_start
+				reg_cnt 		:= 0.U 
+				reg_out_valid	:= true.B 
+			}
+
 		}
 	}
 	io.stall 				:= reg_stall
@@ -102,6 +111,7 @@ class MUL extends Module with CoreParameters{
 
 class DIV extends Module with CoreParameters{
 	val io = IO(new Bundle{
+		val in_stall    = Input(Bool())
 		val rs1_data	= Input(UInt(64.W))
 		val rs2_data	= Input(UInt(64.W))
 		val result 		= Output(UInt(64.W))
@@ -165,12 +175,22 @@ class DIV extends Module with CoreParameters{
 			//reg_divisor 
 			//reg_dividend
 			//reg_exuType
-			reg_q 			:= Mux(reg_divisor(64)^reg_dividend(64),reg_q + 1.U,reg_q)
-			reg_rem 		:= Mux(reg_divisor(64)^reg_rem(64),Mux(reg_divisor(64)^reg_dividend(64),reg_rem + neg_divisor,reg_rem + reg_divisor),reg_rem)
-			reg_stall		:= false.B 
-			reg_out_valid	:= true.B
-			reg_state		:= div_start
-			reg_cnt 		:= 0.U 
+			when(io.in_stall){
+				reg_q 			:= reg_q
+				reg_rem 		:= reg_rem
+				reg_stall		:= reg_stall
+				reg_out_valid	:= reg_out_valid
+				reg_state		:= reg_state
+				reg_cnt 		:= reg_cnt
+			}.otherwise{
+				reg_q 			:= Mux(reg_divisor(64)^reg_dividend(64),reg_q + 1.U,reg_q)
+				reg_rem 		:= Mux(reg_divisor(64)^reg_rem(64),Mux(reg_divisor(64)^reg_dividend(64),reg_rem + neg_divisor,reg_rem + reg_divisor),reg_rem)
+				reg_stall		:= false.B 
+				reg_out_valid	:= true.B
+				reg_state		:= div_start
+				reg_cnt 		:= 0.U 				
+			}
+
 		}
 	}
 	io.result 		:= Mux(reg_exuType(2),reg_rem,reg_q)
@@ -181,6 +201,7 @@ class DIV extends Module with CoreParameters{
 
 class MU_EXU extends Module with CoreParameters{
     val io = IO(new Bundle{
+		val in_stall 		= Input(Bool())
         val exuType     	= Input(UInt(ExuTypeLen.W))
         val rs1_data    	= Input(UInt(RegDataLen.W))
         val rs2_data    	= Input(UInt(RegDataLen.W))
@@ -198,11 +219,13 @@ class MU_EXU extends Module with CoreParameters{
 	div.io.rs2_data 	:= io.rs2_data
 	div.io.valid 		:= io.in_valid & exuType(4)
 	div.io.exuType		:= io.exuType 
+	div.io.in_stall		:= io.in_stall
 	
 	mul.io.rs1_data		:= io.rs1_data
 	mul.io.rs2_data		:= io.rs2_data
 	mul.io.exuType		:= io.exuType
 	mul.io.valid 		:= io.in_valid &(~exuType(4))
+	mul.io.in_stall		:= io.in_stall
 
 	io.stall 		:= div.io.stall | mul.io.stall 
 	io.result_data 	:= Mux(div.io.out_valid,div.io.result,0.U) | Mux(mul.io.out_valid,mul.io.result,0.U)
