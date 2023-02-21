@@ -12,6 +12,30 @@ void Vriscv_soc___024root___settle__TOP__5(Vriscv_soc___024root* vlSelf) {
     Vriscv_soc__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root___settle__TOP__5\n"); );
     // Body
+    if ((0x40000U & (vlSelf->io_difftest_inst ^ vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_inst))) {
+        ++(vlSymsp->__Vcoverage[2132]);
+        vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_inst 
+            = ((0xfffbffffU & vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_inst) 
+               | (0x40000U & vlSelf->io_difftest_inst));
+    }
+    if ((0x80000U & (vlSelf->io_difftest_inst ^ vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_inst))) {
+        ++(vlSymsp->__Vcoverage[2133]);
+        vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_inst 
+            = ((0xfff7ffffU & vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_inst) 
+               | (0x80000U & vlSelf->io_difftest_inst));
+    }
+    if ((0x100000U & (vlSelf->io_difftest_inst ^ vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_inst))) {
+        ++(vlSymsp->__Vcoverage[2134]);
+        vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_inst 
+            = ((0xffefffffU & vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_inst) 
+               | (0x100000U & vlSelf->io_difftest_inst));
+    }
+    if ((0x200000U & (vlSelf->io_difftest_inst ^ vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_inst))) {
+        ++(vlSymsp->__Vcoverage[2135]);
+        vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_inst 
+            = ((0xffdfffffU & vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_inst) 
+               | (0x200000U & vlSelf->io_difftest_inst));
+    }
     if ((0x400000U & (vlSelf->io_difftest_inst ^ vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_inst))) {
         ++(vlSymsp->__Vcoverage[2136]);
         vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_inst 
@@ -19836,45 +19860,5 @@ void Vriscv_soc___024root___settle__TOP__5(Vriscv_soc___024root* vlSelf) {
                | ((QData)((IData)((1U & (IData)((vlSelf->io_difftest_pc 
                                                  >> 2U))))) 
                   << 2U));
-    }
-    if ((1U & ((IData)((vlSelf->io_difftest_pc >> 3U)) 
-               ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_pc 
-                          >> 3U))))) {
-        ++(vlSymsp->__Vcoverage[2053]);
-        vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_pc 
-            = ((0xfffffffffffffff7ULL & vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_pc) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->io_difftest_pc 
-                                                 >> 3U))))) 
-                  << 3U));
-    }
-    if ((1U & ((IData)((vlSelf->io_difftest_pc >> 4U)) 
-               ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_pc 
-                          >> 4U))))) {
-        ++(vlSymsp->__Vcoverage[2054]);
-        vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_pc 
-            = ((0xffffffffffffffefULL & vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_pc) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->io_difftest_pc 
-                                                 >> 4U))))) 
-                  << 4U));
-    }
-    if ((1U & ((IData)((vlSelf->io_difftest_pc >> 5U)) 
-               ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_pc 
-                          >> 5U))))) {
-        ++(vlSymsp->__Vcoverage[2055]);
-        vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_pc 
-            = ((0xffffffffffffffdfULL & vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_pc) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->io_difftest_pc 
-                                                 >> 5U))))) 
-                  << 5U));
-    }
-    if ((1U & ((IData)((vlSelf->io_difftest_pc >> 6U)) 
-               ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_pc 
-                          >> 6U))))) {
-        ++(vlSymsp->__Vcoverage[2056]);
-        vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_pc 
-            = ((0xffffffffffffffbfULL & vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_pc) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->io_difftest_pc 
-                                                 >> 6U))))) 
-                  << 6U));
     }
 }
