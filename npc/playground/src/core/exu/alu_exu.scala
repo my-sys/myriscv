@@ -120,7 +120,7 @@ class ALU_EXU extends Module with CoreParameters{
         //  slt     slti 
         ALUType.alu_slt(5,1)    -> Cat(1.U(1.W),(Cat(0.U((XLEN-1).W), s_rs1_l_rs2))),
         ALUType.alu_sltu(5,1)   -> Cat(1.U(1.W),(Cat(0.U((XLEN-1).W), u_rs1_l_rs2))),
-        ALUType.alu_sub(5,1)    -> Cat(1.U(1.W),(subresult)),
+        ALUType.alu_sub(5,1)    -> Cat(1.U(1.W),(subresult)(63,0)),
         ALUType.alu_subw(5,1)   -> Cat(1.U(1.W),(Mux(subresult(31),Cat(Fill(32,1.U),subresult(31,0)),Cat(0.U(32.W),subresult(31,0))))),
         //  sll        slli 
         ALUType.alu_sll(5,1)    -> Cat(1.U(1.W),(op_data1 << (rs2_data(5,0)))(63,0)),  //(rs2_data &"h3f".U)
