@@ -53,18 +53,18 @@ object ALUType{
 // 分支跳转不在遵循前面的规则，因为其不需要区分立即数，和低位操作。但识别的操作还是不能混淆
 // 这么做的目的主要是减小操作码
     
-	val alu_beq     = "b1101_00".U 
-    val alu_bne     = "b1101_01".U
+	val alu_beq     = "b1101_00".U //不需要区分立即数，和低位操作
+    val alu_bne     = "b1101_01".U //不需要区分立即数，和低位操作
 
-    val alu_bge     = "b1101_10".U 
-    val alu_bgeu    = "b1101_11".U 
+    val alu_bge     = "b1111_00".U //需要区分立即数
+    val alu_bgeu    = "b1111_10".U //需要区分立即数
 
-    val alu_blt     = "b1110_00".U 
-    val alu_bltu    = "b1110_01".U
+    val alu_blt     = "b1110_00".U //需要区分立即数
+    val alu_bltu    = "b1110_10".U //需要区分立即数
 
 // 这两个例外需要注意
-    val alu_jal     = "b1111_10".U 
-    val alu_jalr    = "b1111_11".U
+    val alu_jal     = "b1110_01".U //不需要区分立即数，和低位操作
+    val alu_jalr    = "b1110_11".U //不需要区分立即数，和低位操作
 
 	
     
