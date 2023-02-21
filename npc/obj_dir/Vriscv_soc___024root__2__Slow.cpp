@@ -12321,13 +12321,13 @@ void Vriscv_soc___024root___settle__TOP__3(Vriscv_soc___024root* vlSelf) {
                                                              == 
                                                              (0x7fU 
                                                               & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_inst))
-                                                             ? 0x3eU
+                                                             ? 0x39U
                                                              : 
                                                             ((0x67U 
                                                               == 
                                                               (0x707fU 
                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_inst))
-                                                              ? 0x3fU
+                                                              ? 0x3bU
                                                               : 0U))))))))))))));
     }
     if ((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_tag) 

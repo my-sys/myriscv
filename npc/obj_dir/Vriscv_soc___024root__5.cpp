@@ -10468,13 +10468,13 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__16(Vriscv_soc___024root*
                                                              == 
                                                              (0x7fU 
                                                               & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_inst))
-                                                             ? 0x3eU
+                                                             ? 0x39U
                                                              : 
                                                             ((0x67U 
                                                               == 
                                                               (0x707fU 
                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_inst))
-                                                              ? 0x3fU
+                                                              ? 0x3bU
                                                               : 0U))))))))))))));
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_284 
             = ((0x2005033U == (0xfe00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_inst))
