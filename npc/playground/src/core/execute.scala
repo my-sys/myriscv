@@ -189,8 +189,8 @@ class Exu extends Module with CoreParameters{
 	io.out.rs_data          := reg_rs_data
 	io.out.w_rs_en          := Mux(stall,false.B,reg_w_rs_en) //reg_w_rs_en
 	io.out.next_pc          := reg_next_pc
-	io.out.valid_next_pc    := Mux(stall,false.B,reg_valid_next_pc)
-	io.out.flush 			:= Mux(stall,false.B,reg_valid_next_pc)
+	io.out.valid_next_pc    := Mux(stall,false.B,reg_valid_next_pc & reg_valid(0))
+	io.out.flush 			:= Mux(stall,false.B,reg_valid_next_pc & reg_valid(0))
 	
 	io.out.opType			:= Mux(stall,Op_type.op_n,reg_opType)
 	io.out.exuType			:= Mux(stall,ALUType.alu_none,reg_exuType) 
@@ -199,7 +199,7 @@ class Exu extends Module with CoreParameters{
 	io.out.rs2_data			:= reg_rs2_data
 	io.out.rs2_addr 		:= reg_rs2_addr
 	io.out.mem_addr			:= reg_mem_addr
-	io.out.mem_avalid		:= Mux(stall,false.B,reg_mem_avalid)
+	io.out.mem_avalid		:= Mux(stall,false.B,reg_mem_avalid & reg_valid(1))
 	io.out.w_mem_en			:= Mux(stall,false.B,reg_w_mem_en)
 	io.out.stall 			:= reg_stall
 }
