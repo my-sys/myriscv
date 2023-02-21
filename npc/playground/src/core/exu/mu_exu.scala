@@ -151,6 +151,7 @@ class DIV extends Module with CoreParameters{
 	val reg_exuType		= RegInit(0.U(ExuTypeLen.W)) 
 	val reg_out_valid   = RegInit(false.B) 
 	val reg_stall 		= RegInit(false.B)
+	val temp_result 	= (Cat(reg_rem,reg_q)<<1.U)+Mux(reg_rem(64)^reg_divisor(64),Cat(reg_divisor,0.U(65.W)),Cat(neg_divisor,1.U(65.W)))
 	switch(reg_state){
 		is(div_start){
 			reg_divisor 	:= divisor
@@ -170,7 +171,8 @@ class DIV extends Module with CoreParameters{
 			//reg_exuType
 			//reg_out_valid
 			reg_cnt 		:= reg_cnt + 1.U 
-			Cat(reg_rem,reg_q) := (Cat(reg_rem,reg_q)<<1.U)+Mux(reg_rem(64)^reg_divisor(64),Cat(reg_divisor,0.U(65.W)),Cat(neg_divisor,1.U(65.W)))
+			reg_q 	:= temp_result(64,0)
+			reg_rem := temp_result(129,65)
 			//reg_q 			:= Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q <<1.U)+1.U)
 			//reg_rem 		:= Mux(reg_rem(64)^reg_divisor(64),(reg_rem<<1.U) + reg_divisor,(reg_rem<<1.U)+neg_divisor)
 			//reg_cnt 为64时，说明本次reg_cnt要变为65，故总共执行了65次
