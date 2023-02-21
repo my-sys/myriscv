@@ -75,11 +75,17 @@ class Exu extends Module with CoreParameters{
         Op_type.op_mu      ->  "b1000".U    
     ))
 	val reg_valid = RegInit(0.U(4.W))
-	when(!reg_flush){
-		reg_valid := Mux(stall,reg_valid,valid)
+
+	when(stall){
+		reg_valid := reg_valid
 	}.otherwise{
-		reg_valid := 0.U
+		reg_valid := Mux(reg_flush,0.U,valid)
 	}
+	// when(!reg_flush){
+	// 	reg_valid := Mux(stall,reg_valid,valid)
+	// }.otherwise{
+	// 	reg_valid := 0.U
+	// }
 	val reg_rs_data = MuxCase(0.U(64.W),Array(
 		reg_valid(0) -> alu_exu.io.result_data,
 		reg_valid(1) -> 0.U,
@@ -96,19 +102,34 @@ class Exu extends Module with CoreParameters{
 //  解决数据相关冲突 
 	val rs1_data = Mux((reg_rs_addr === io.in.rs1_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs1_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs1_data))
 	val rs2_data = Mux((reg_rs_addr === io.in.rs2_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs2_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs2_data))	
-	when(!reg_flush){
-		reg_rs_addr				:= Mux(stall,reg_rs_addr,rs_addr)
-		reg_opType				:= Mux(stall,reg_opType,opType)
-		reg_exuType				:= Mux(stall,reg_exuType,exuType) 
-		reg_pc 					:= Mux(stall,reg_pc,pc)
-		reg_inst 				:= Mux(stall,reg_inst,inst)
+	
+	when(stall){
+		reg_rs_addr				:= reg_rs_addr
+		reg_pc					:= reg_pc 
+		reg_inst				:= reg_inst
+		reg_opType				:= reg_opType
+		reg_exuType				:= reg_exuType
 	}.otherwise{
-		reg_rs_addr				:= 0.U
-		reg_pc					:= 0.U 
-		reg_inst				:= 0.U
-		reg_opType				:= Op_type.op_n
-		reg_exuType				:= ALUType.alu_none
+		reg_rs_addr				:= Mux(reg_flush,0.U,rs_addr)
+		reg_opType				:= Mux(reg_flush,Op_type.op_n,opType)
+		reg_exuType				:= Mux(reg_flush,ALUType.alu_none,exuType) 
+		reg_pc 					:= Mux(reg_flush,0.U,pc)
+		reg_inst 				:= Mux(reg_flush,0.U,inst)		
 	}
+	
+	// when(!reg_flush){
+	// 	reg_rs_addr				:= Mux(stall,reg_rs_addr,rs_addr)
+	// 	reg_opType				:= Mux(stall,reg_opType,opType)
+	// 	reg_exuType				:= Mux(stall,reg_exuType,exuType) 
+	// 	reg_pc 					:= Mux(stall,reg_pc,pc)
+	// 	reg_inst 				:= Mux(stall,reg_inst,inst)
+	// }.otherwise{
+	// 	reg_rs_addr				:= 0.U
+	// 	reg_pc					:= 0.U 
+	// 	reg_inst				:= 0.U
+	// 	reg_opType				:= Op_type.op_n
+	// 	reg_exuType				:= ALUType.alu_none
+	// }
 	
 	val  reg_rs2_data 		= RegInit(0.U(RegDataLen.W))
 	val  reg_rs2_addr 		= RegInit(0.U(RegAddrLen.W))
@@ -117,13 +138,20 @@ class Exu extends Module with CoreParameters{
 
 //对于内部产生的reg_stall,在reg_stall未消失前，输出端为空气泡。
 //reg_stall中不需要改变的值，保持原值。需要改变的值，进行变动。
-	when(!reg_flush){
-		reg_rs2_data			:= Mux(stall,reg_rs2_data,rs2_data)
-		reg_rs2_addr			:= Mux(stall,reg_rs2_addr,io.in.rs2_addr)
+	when(stall){
+		reg_rs2_data	:= reg_rs2_data
+		reg_rs2_addr	:= reg_rs2_addr
 	}.otherwise{
-		reg_rs2_data			:= 0.U 
-		reg_rs2_addr			:= 0.U
+		reg_rs2_data	:= Mux(reg_flush,0.U,rs2_data)
+		reg_rs2_addr 	:= Mux(reg_flush,0.U,io.in.rs2_addr)
 	}
+	// when(!reg_flush){
+	// 	reg_rs2_data			:= Mux(stall,reg_rs2_data,rs2_data)
+	// 	reg_rs2_addr			:= Mux(stall,reg_rs2_addr,io.in.rs2_addr)
+	// }.otherwise{
+	// 	reg_rs2_data			:= 0.U 
+	// 	reg_rs2_addr			:= 0.U
+	// }
 	
 	
 //---------------------------------LSU --------------------------------------
