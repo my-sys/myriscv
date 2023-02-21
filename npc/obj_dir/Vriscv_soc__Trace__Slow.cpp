@@ -1531,22 +1531,22 @@ void Vriscv_soc___024root__traceFullTop0(void* voidSelf, VerilatedVcd* tracep) {
 void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, VerilatedVcd* tracep) {
     if (false && vlSelf) {}  // Prevent unused
     Vriscv_soc__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VlWide<4>/*127:0*/ __Vtemp4266;
     VlWide<4>/*127:0*/ __Vtemp4267;
     VlWide<4>/*127:0*/ __Vtemp4268;
     VlWide<4>/*127:0*/ __Vtemp4269;
-    VlWide<4>/*127:0*/ __Vtemp4270;
+    VlWide<3>/*95:0*/ __Vtemp4271;
     VlWide<3>/*95:0*/ __Vtemp4272;
     VlWide<3>/*95:0*/ __Vtemp4273;
-    VlWide<3>/*95:0*/ __Vtemp4274;
+    VlWide<3>/*95:0*/ __Vtemp4275;
     VlWide<3>/*95:0*/ __Vtemp4276;
-    VlWide<3>/*95:0*/ __Vtemp4277;
-    VlWide<3>/*95:0*/ __Vtemp4279;
+    VlWide<3>/*95:0*/ __Vtemp4278;
+    VlWide<3>/*95:0*/ __Vtemp4280;
     VlWide<3>/*95:0*/ __Vtemp4281;
     VlWide<3>/*95:0*/ __Vtemp4282;
     VlWide<3>/*95:0*/ __Vtemp4283;
-    VlWide<3>/*95:0*/ __Vtemp4284;
+    VlWide<4>/*127:0*/ __Vtemp4284;
     VlWide<4>/*127:0*/ __Vtemp4285;
-    VlWide<4>/*127:0*/ __Vtemp4286;
     vluint32_t* const oldp = tracep->oldp(vlSymsp->__Vm_baseCode);
     if (false && oldp) {}  // Prevent unused
     // Body
@@ -1709,18 +1709,18 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->fullBit(oldp+187,(vlSelf->riscv_soc__DOT__core__DOT__decode_io_in_stall));
         tracep->fullWData(oldp+188,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_data__DOT__sram_Q),128);
         tracep->fullBit(oldp+192,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_data_io_WEN));
-        __Vtemp4267[0U] = (~ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_mask[0U]);
-        __Vtemp4267[1U] = (~ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_mask[1U]);
-        __Vtemp4267[2U] = (~ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_mask[2U]);
-        __Vtemp4267[3U] = (~ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_mask[3U]);
-        tracep->fullWData(oldp+193,(__Vtemp4267),128);
+        __Vtemp4266[0U] = (~ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_mask[0U]);
+        __Vtemp4266[1U] = (~ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_mask[1U]);
+        __Vtemp4266[2U] = (~ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_mask[2U]);
+        __Vtemp4266[3U] = (~ vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_mask[3U]);
+        tracep->fullWData(oldp+193,(__Vtemp4266),128);
         tracep->fullCData(oldp+197,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_data_io_A),6);
         tracep->fullWData(oldp+198,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_cache_wdata),128);
         tracep->fullWData(oldp+202,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag__DOT__sram_Q),128);
         tracep->fullBit(oldp+206,((1U & (~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT___sram1_data_io_WEN_T_1)))));
         tracep->fullCData(oldp+207,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram1_tag_io_A),6);
-        VL_EXTEND_WQ(128,56, __Vtemp4268, vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT___sram1_tag_io_D_T_1);
-        tracep->fullWData(oldp+208,(__Vtemp4268),128);
+        VL_EXTEND_WQ(128,56, __Vtemp4267, vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT___sram1_tag_io_D_T_1);
+        tracep->fullWData(oldp+208,(__Vtemp4267),128);
         tracep->fullWData(oldp+212,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram2_data__DOT__sram_Q),128);
         tracep->fullBit(oldp+216,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram2_data_io_WEN));
         tracep->fullCData(oldp+217,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram2_data_io_A),6);
@@ -1844,18 +1844,18 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->fullBit(oldp+335,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT___sram2_data_io_WEN_T_1));
         tracep->fullWData(oldp+336,(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram1_data__DOT__sram_Q),128);
         tracep->fullBit(oldp+340,(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram1_data_io_WEN));
-        __Vtemp4269[0U] = (~ vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_mask[0U]);
-        __Vtemp4269[1U] = (~ vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_mask[1U]);
-        __Vtemp4269[2U] = (~ vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_mask[2U]);
-        __Vtemp4269[3U] = (~ vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_mask[3U]);
-        tracep->fullWData(oldp+341,(__Vtemp4269),128);
+        __Vtemp4268[0U] = (~ vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_mask[0U]);
+        __Vtemp4268[1U] = (~ vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_mask[1U]);
+        __Vtemp4268[2U] = (~ vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_mask[2U]);
+        __Vtemp4268[3U] = (~ vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_mask[3U]);
+        tracep->fullWData(oldp+341,(__Vtemp4268),128);
         tracep->fullCData(oldp+345,(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram1_data_io_A),6);
         tracep->fullWData(oldp+346,(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wdata),128);
         tracep->fullWData(oldp+350,(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram1_tag__DOT__sram_Q),128);
         tracep->fullBit(oldp+354,((1U & (~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___sram1_data_io_WEN_T_1)))));
         tracep->fullCData(oldp+355,(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram1_tag_io_A),6);
-        VL_EXTEND_WQ(128,56, __Vtemp4270, vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___sram1_tag_io_D_T_1);
-        tracep->fullWData(oldp+356,(__Vtemp4270),128);
+        VL_EXTEND_WQ(128,56, __Vtemp4269, vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___sram1_tag_io_D_T_1);
+        tracep->fullWData(oldp+356,(__Vtemp4269),128);
         tracep->fullWData(oldp+360,(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram2_data__DOT__sram_Q),128);
         tracep->fullBit(oldp+364,(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram2_data_io_WEN));
         tracep->fullCData(oldp+365,(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram2_data_io_A),6);
@@ -2013,19 +2013,19 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->fullCData(oldp+522,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_valid),4);
         tracep->fullBit(oldp+523,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_w_rs_en));
         tracep->fullQData(oldp+524,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs2_data),64);
-        __Vtemp4272[0U] = 1U;
-        __Vtemp4272[1U] = 0U;
-        __Vtemp4272[2U] = 0U;
-        VL_ADD_W(3, __Vtemp4273, __Vtemp4272, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___subresult_T_3);
-        __Vtemp4274[0U] = __Vtemp4273[0U];
-        __Vtemp4274[1U] = __Vtemp4273[1U];
-        __Vtemp4274[2U] = (1U & __Vtemp4273[2U]);
-        tracep->fullWData(oldp+526,(__Vtemp4274),65);
-        __Vtemp4276[0U] = 1U;
-        __Vtemp4276[1U] = 0U;
-        __Vtemp4276[2U] = 0U;
-        VL_ADD_W(3, __Vtemp4277, __Vtemp4276, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___subresult_T_3);
-        tracep->fullBit(oldp+529,((1U & (~ (1U & __Vtemp4277[2U])))));
+        __Vtemp4271[0U] = 1U;
+        __Vtemp4271[1U] = 0U;
+        __Vtemp4271[2U] = 0U;
+        VL_ADD_W(3, __Vtemp4272, __Vtemp4271, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___subresult_T_3);
+        __Vtemp4273[0U] = __Vtemp4272[0U];
+        __Vtemp4273[1U] = __Vtemp4272[1U];
+        __Vtemp4273[2U] = (1U & __Vtemp4272[2U]);
+        tracep->fullWData(oldp+526,(__Vtemp4273),65);
+        __Vtemp4275[0U] = 1U;
+        __Vtemp4275[1U] = 0U;
+        __Vtemp4275[2U] = 0U;
+        VL_ADD_W(3, __Vtemp4276, __Vtemp4275, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___subresult_T_3);
+        tracep->fullBit(oldp+529,((1U & (~ (1U & __Vtemp4276[2U])))));
         tracep->fullBit(oldp+530,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2));
         tracep->fullQData(oldp+531,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__sllw_temp),63);
         tracep->fullIData(oldp+533,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__srlw_temp),32);
@@ -2037,13 +2037,13 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                                       vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[1U])) 
                                       << 0x20U) | (QData)((IData)(
                                                                   vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_data[0U])))),64);
-        __Vtemp4279[0U] = (IData)((0xfffffffffffffffeULL 
+        __Vtemp4278[0U] = (IData)((0xfffffffffffffffeULL 
                                    & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___next_pc3_T_1));
-        __Vtemp4279[1U] = (IData)(((0xfffffffffffffffeULL 
+        __Vtemp4278[1U] = (IData)(((0xfffffffffffffffeULL 
                                     & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___next_pc3_T_1) 
                                    >> 0x20U));
-        __Vtemp4279[2U] = 1U;
-        tracep->fullWData(oldp+543,(__Vtemp4279),65);
+        __Vtemp4278[2U] = 1U;
+        tracep->fullWData(oldp+543,(__Vtemp4278),65);
         tracep->fullWData(oldp+546,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc),65);
         tracep->fullBit(oldp+549,((1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[2U])));
         tracep->fullQData(oldp+550,((((QData)((IData)(
@@ -2068,17 +2068,17 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->fullWData(oldp+574,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_dividend),65);
         tracep->fullWData(oldp+577,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem),65);
         tracep->fullWData(oldp+580,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q),65);
-        __Vtemp4281[0U] = 1U;
-        __Vtemp4281[1U] = 0U;
-        __Vtemp4281[2U] = 0U;
-        __Vtemp4282[0U] = (~ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_divisor[0U]);
-        __Vtemp4282[1U] = (~ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_divisor[1U]);
-        __Vtemp4282[2U] = (~ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_divisor[2U]);
-        VL_ADD_W(3, __Vtemp4283, __Vtemp4281, __Vtemp4282);
-        __Vtemp4284[0U] = __Vtemp4283[0U];
-        __Vtemp4284[1U] = __Vtemp4283[1U];
-        __Vtemp4284[2U] = (1U & __Vtemp4283[2U]);
-        tracep->fullWData(oldp+583,(__Vtemp4284),65);
+        __Vtemp4280[0U] = 1U;
+        __Vtemp4280[1U] = 0U;
+        __Vtemp4280[2U] = 0U;
+        __Vtemp4281[0U] = (~ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_divisor[0U]);
+        __Vtemp4281[1U] = (~ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_divisor[1U]);
+        __Vtemp4281[2U] = (~ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_divisor[2U]);
+        VL_ADD_W(3, __Vtemp4282, __Vtemp4280, __Vtemp4281);
+        __Vtemp4283[0U] = __Vtemp4282[0U];
+        __Vtemp4283[1U] = __Vtemp4282[1U];
+        __Vtemp4283[2U] = (1U & __Vtemp4282[2U]);
+        tracep->fullWData(oldp+583,(__Vtemp4283),65);
         tracep->fullCData(oldp+586,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_state),2);
         tracep->fullCData(oldp+587,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_cnt),7);
         tracep->fullCData(oldp+588,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType),6);
@@ -2208,19 +2208,19 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->fullCData(oldp+817,(0U),8);
         tracep->fullBit(oldp+818,(0U));
         tracep->fullBit(oldp+819,(1U));
-        __Vtemp4285[0U] = 0U;
-        __Vtemp4285[1U] = 0U;
-        __Vtemp4285[2U] = 0U;
-        __Vtemp4285[3U] = 0U;
-        tracep->fullWData(oldp+820,(__Vtemp4285),128);
+        __Vtemp4284[0U] = 0U;
+        __Vtemp4284[1U] = 0U;
+        __Vtemp4284[2U] = 0U;
+        __Vtemp4284[3U] = 0U;
+        tracep->fullWData(oldp+820,(__Vtemp4284),128);
         tracep->fullIData(oldp+824,(0x80U),32);
         tracep->fullIData(oldp+825,(0x40U),32);
         tracep->fullIData(oldp+826,(6U),32);
-        __Vtemp4286[0U] = 0xffffffffU;
-        __Vtemp4286[1U] = 0xffffffffU;
-        __Vtemp4286[2U] = 0xffffffffU;
-        __Vtemp4286[3U] = 0xffffffffU;
-        tracep->fullWData(oldp+827,(__Vtemp4286),128);
+        __Vtemp4285[0U] = 0xffffffffU;
+        __Vtemp4285[1U] = 0xffffffffU;
+        __Vtemp4285[2U] = 0xffffffffU;
+        __Vtemp4285[3U] = 0xffffffffU;
+        tracep->fullWData(oldp+827,(__Vtemp4285),128);
         tracep->fullCData(oldp+831,(0U),5);
         tracep->fullCData(oldp+832,(1U),5);
         tracep->fullCData(oldp+833,(2U),5);

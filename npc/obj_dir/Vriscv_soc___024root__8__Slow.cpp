@@ -1007,8 +1007,8 @@ void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT___T = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT___reg_pc_0_T_1 = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT___reg_pc_1_T = VL_RAND_RESET_I(1);
-    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT___reg_inst_T_3 = VL_RAND_RESET_I(32);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT___GEN_5 = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT___reg_pc_1_T_3 = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT___GEN_14 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT____Vtogcov__stall = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT____Vtogcov__reg_temp_pc_1 = VL_RAND_RESET_Q(64);
@@ -1180,12 +1180,15 @@ void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__stall = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_150 = VL_RAND_RESET_I(3);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_165 = VL_RAND_RESET_I(3);
+    vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_180 = VL_RAND_RESET_I(3);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_195 = VL_RAND_RESET_I(3);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_217 = VL_RAND_RESET_I(6);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_232 = VL_RAND_RESET_I(6);
+    vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_247 = VL_RAND_RESET_I(6);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_262 = VL_RAND_RESET_I(6);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_284 = VL_RAND_RESET_I(4);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_299 = VL_RAND_RESET_I(4);
+    vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_314 = VL_RAND_RESET_I(4);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType = VL_RAND_RESET_I(4);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___imm_data_T_51 = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__temp_stall = VL_RAND_RESET_I(1);
@@ -1309,6 +1312,7 @@ void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vlSelf) {
     vlSelf->__Vdlyvset__riscv_soc__DOT__core__DOT__d_cache__DOT__sram2_tag__DOT__sram__DOT__ram__v0 = 0;
     vlSelf->__Vdly__riscv_soc__DOT__core__DOT__cross_bar__DOT__reg_r_cnt = VL_RAND_RESET_I(2);
     vlSelf->__Vdly__riscv_soc__DOT__core__DOT__cross_bar__DOT__reg_w_cnt = VL_RAND_RESET_I(2);
+    vlSelf->__Vdly__riscv_soc__DOT__core__DOT__fetch__DOT__need_update = VL_RAND_RESET_I(1);
     vlSelf->__Vdly__riscv_soc__DOT__core__DOT__execute__DOT__reg_rs_addr = VL_RAND_RESET_Q(64);
     vlSelf->__Vdly__riscv_soc__DOT__core__DOT__execute__DOT__lsu_exu__DOT__reg_address_result = VL_RAND_RESET_Q(64);
     vlSelf->__Vdly__riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_state = VL_RAND_RESET_I(2);
