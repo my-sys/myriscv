@@ -60,7 +60,7 @@ class Fetch extends Module{
 		}.otherwise{
 			reg_inst := Mux(stall,reg_inst,Mux(reg_pc_0(2),io.bus.bits.inst(63,32),io.bus.bits.inst(31,0)))
 		}
-		when(stall){
+		when(stall & !flush & !reg_flush){
 			reg_temp_pc_1	:= reg_pc_0
 			reg_temp_inst	:= Mux(reg_pc_0(2),io.bus.bits.inst(63,32),io.bus.bits.inst(31,0))
 			need_update		:= true.B
@@ -68,12 +68,12 @@ class Fetch extends Module{
 		}
 	}.otherwise{
 		reg_pc_0 	:= reg_pc_0
-		reg_pc_1    := Mux(stall,reg_pc_1,Mux(need_update,reg_temp_pc_1,0.U))
-		reg_inst 	:= Mux(stall,reg_inst,Mux(need_update,reg_temp_inst,0.U))
+		reg_pc_1    := Mux(flush,0.U,Mux(stall,reg_pc_1,Mux(need_update,reg_temp_pc_1,0.U)))
+		reg_inst 	:= Mux(flush,0.U,Mux(stall,reg_inst,Mux(need_update,reg_temp_inst,0.U)))
 		reg_next_pc := Mux(flush,next_pc,reg_next_pc)
 		reg_flush	:= Mux(flush,true.B,reg_flush)
 		reg_valid	:= Mux(stall,reg_valid,true.B)
-		need_update := Mux(stall,need_update,false.B)
+		need_update := Mux(flush,false.B,Mux(stall,need_update,false.B))
 	}
 	io.bus.valid 		:= reg_valid 
 	io.bus.bits.pc_0	:= reg_pc_0
