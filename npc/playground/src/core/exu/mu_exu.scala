@@ -134,6 +134,8 @@ class DIV extends Module with CoreParameters{
 // divisor 需要扩展为65位有符号数
 	val divisor			= Mux(exuType(1),Mux(exuType(0),Cat(Fill(33,rs2_data(31)),rs2_data(31,0)),Cat(Fill(33,0.U(1.W)),rs2_data(31,0))),
 						Mux(exuType(0),Cat(Fill(1,rs2_data(63)),rs2_data(63,0)),Cat(Fill(1,0.U(1.W)),rs2_data(63,0))))
+						
+	val rem 			= Mux(exuType(1),Mux(exuType(0),Fill(65,rs1_data(31)),0.U),Mux(exuType(0),Fill(65,rs1_data(63)),0.U))
 
 	val reg_divisor 	= RegInit(0.U(65.W))
 	val reg_dividend  	= RegInit(0.U(65.W))
@@ -142,7 +144,7 @@ class DIV extends Module with CoreParameters{
 
 // 补码除法运算过程中需要
 	val neg_divisor		= (~reg_divisor) + 1.U			
-	val div_start :: div_busy :: div_end :: Nil = Enum(3)
+	val div_start :: div_busy :: div_correct :: div_end :: Nil = Enum(4)
 
 	val reg_state		= RegInit(div_start)
 	val reg_cnt			= RegInit(0.U(7.W))
@@ -153,11 +155,11 @@ class DIV extends Module with CoreParameters{
 		is(div_start){
 			reg_divisor 	:= divisor
 			reg_dividend 	:= dividend
-			reg_rem			:= Mux(divisor(64)^dividend(64),divisor + dividend,dividend + (~divisor)+1.U)
+			reg_rem			:= Mux(divisor(64)^dividend(64),rem+divisor,rem+(~divisor)+1.U)//Mux(divisor(64)^dividend(64),divisor + dividend,dividend + (~divisor)+1.U)
 			reg_state 		:= Mux(valid,div_busy,div_start)
 			reg_stall 		:= Mux(valid,true.B,false.B)
 			reg_exuType		:= Mux(valid,exuType,0.U)
-			reg_q 			:= 0.U 
+			reg_q 			:= dividend 
 			reg_out_valid	:= false.B 
 			//reg_cnt 
 		}
@@ -168,10 +170,16 @@ class DIV extends Module with CoreParameters{
 			//reg_exuType
 			//reg_out_valid
 			reg_cnt 		:= reg_cnt + 1.U 
-			reg_q 			:= Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q <<1.U)+1.U)
-			reg_rem 		:= Mux(reg_rem(64)^reg_divisor(64),(reg_rem<<1.U) + reg_divisor,(reg_rem<<1.U)+neg_divisor)
+			Cat(reg_rem,reg_q) := (Cat(reg_rem,reg_q)<<1.U)+Mux(reg_rem(64)^reg_divisor(64),Cat(reg_divisor,0.U(65.W)),Cat(neg_divisor,1.U(65.W)))
+			//reg_q 			:= Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q <<1.U)+1.U)
+			//reg_rem 		:= Mux(reg_rem(64)^reg_divisor(64),(reg_rem<<1.U) + reg_divisor,(reg_rem<<1.U)+neg_divisor)
 			//reg_cnt 为64时，说明本次reg_cnt要变为65，故总共执行了65次
-			reg_state 		:= Mux(reg_cnt === "h3F".U,div_end,reg_state)
+			reg_state 		:= Mux(reg_cnt === "h40".U,div_correct,reg_state)
+		}
+		is(div_correct){
+			reg_q := Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q<<1.U)+1.U)
+			reg_rem := reg_rem
+			reg_state := div_end
 		}
 		is(div_end){
 			// 商和余数矫正
