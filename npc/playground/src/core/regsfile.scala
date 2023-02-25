@@ -16,7 +16,7 @@ class RegCtrl extends CoreParameters{
 //mstatus 	0x300 
 //mie		0x304 
 //mip 		
-Object CSRAddrType{
+object CSRAddrType{
 	val mvendorid	= "0xf11".U
 	val marchid		= "0xf12".U 
 	val mimpid		= "0xf13".U 
