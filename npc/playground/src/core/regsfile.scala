@@ -105,8 +105,8 @@ class CsrRegCtrl extends Module with CoreParameters{
 	// how to use the mip ???
 
 	when(io.in.w_csr_en){
-		reg_mcycle		:= Mux(io.in.csr_addr === "h".U,io.in.csr_data,reg_mcycle + 1.U)
-		reg_minstret	:= Mux(io.in.csr_addr === "h".U,io.in.csr_data,Mux(io.in.commit,reg_minstret + 1.U,reg_minstret))
+		reg_mcycle		:= Mux(io.in.csr_addr === CSRAddrType.mcycle,io.in.csr_data,reg_mcycle + 1.U)
+		reg_minstret	:= Mux(io.in.csr_addr === CSRAddrType.minstret,io.in.csr_data,Mux(io.in.commit,reg_minstret + 1.U,reg_minstret))
 	}.otherwise{
 		reg_mcycle		:= reg_mcycle + 1.U
 		reg_minstret	:= Mux(io.in.commit,reg_minstret + 1.U,reg_minstret)
