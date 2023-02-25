@@ -234,19 +234,19 @@ class Exu extends Module with CoreParameters{
 	csr_exu.io.rs1_data		:= rs1_data
 	csr_exu.io.in_flush		:= io.in.flush
 
-	val reg_csr_data 		:= csr_exu.io.csr_result
-	val reg_w_csr_en		:= csr_exu.io.w_csr_en
+	val reg_csr_data 		= csr_exu.io.csr_result
+	val reg_w_csr_en		= csr_exu.io.w_csr_en
 //------------------------------ABN EXU--------------------------------------
 	abn_exu.io.valid 		:= valid(4)
 	abn_exu.io.exuType		:= exuType
 	abn_exu.io.stall 		:= io.in.stall
 	abn_exu.io.in_flush		:= io.in.flush
 
-	val reg_exception		:= abn_exu.io.exception
-	val reg_is_exception	:= abn_exu.io.is_exception
-	val reg_is_mret			:= abn_exu.io.is_mret
-	val reg_is_fence		:= abn_exu.io.is_fence
-	val reg_is_fence_i		:= abn_exu.io.is_fence_i
+	val reg_exception		= abn_exu.io.exception
+	val reg_is_exception	= abn_exu.io.is_exception
+	val reg_is_mret			= abn_exu.io.is_mret
+	val reg_is_fence		= abn_exu.io.is_fence
+	val reg_is_fence_i		= abn_exu.io.is_fence_i
 
 	io.out.rs_addr          := reg_rs_addr
 	io.out.rs_data          := reg_rs_data
