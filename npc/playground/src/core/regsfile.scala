@@ -85,10 +85,10 @@ class CsrRegCtrl extends Module with CoreParameters{
 		reg_mstatus := (reg_mstatus &"hffff_ffff_ffff_ff77".U) | (Mux(reg_mstatus(3),"h1880".U(64.W),"h1800".U(64.W)))
 	}.otherwise{
 		when(io.in.w_csr_en){
-			reg_mepc	:= Mux(io.in.csr_addr === "h".U,io.in.csr_data,reg_mepc)
-			reg_mcause	:= Mux(io.in.csr_addr === "h".U,io.in.csr_data,reg_mcause)
-			reg_mtval	:= Mux(io.in.csr_addr === "h".U,io.in.csr_data,reg_mtval)
-			reg_mstatus := Mux(io.in.csr_addr === "h".U,io.in.csr_data,reg_mstatus)
+			reg_mepc	:= Mux(io.in.csr_addr === CSRAddrType.mepc,io.in.csr_data,reg_mepc)
+			reg_mcause	:= Mux(io.in.csr_addr === CSRAddrType.mcause,io.in.csr_data,reg_mcause)
+			reg_mtval	:= Mux(io.in.csr_addr === CSRAddrType.mtval,io.in.csr_data,reg_mtval)
+			reg_mstatus := Mux(io.in.csr_addr === CSRAddrType.mstatus,io.in.csr_data,reg_mstatus)
 		}
 	}
 
