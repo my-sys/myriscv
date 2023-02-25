@@ -127,6 +127,7 @@ class Crossbar_1 extends Module{
 	io.bus2.valid 			:= low_address & not_clint &io.wb.valid
 
 	io.clint_bus.bits.addr	:= io.wb.bits.addr
+	io.clint_bus.bits.is_w  := io.wb.bits.is_w
 	io.clint_bus.bits.wdata	:= io.wb.bits.wdata
 	io.clint_bus.valid		:= low_address &(!not_clint) & io.wb.valid
 	

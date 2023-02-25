@@ -101,6 +101,7 @@ class Core extends Module{
 	csr_reg.io.in.mtval				:= write_back.io.out.mtval
 	csr_reg.io.in.exception			:= write_back.io.out.exception
 	csr_reg.io.in.is_exception		:= write_back.io.out.is_exception
+	csr_reg.io.in.commit			:= write_back.io.out.commit
 
 	csr_reg.io.r.csr_raddr			:= decode.io.out.csr_addr_0
 
