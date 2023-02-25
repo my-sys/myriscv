@@ -113,7 +113,7 @@ class CsrRegCtrl extends Module with CoreParameters{
 	}
 
 //--------------------------------------- read operation-----------------------------------------------------------------
-	val csr_rdata = MuxLoopup(io.r.csr_raddr,0.U(64.W),List(
+	val csr_rdata = MuxLookup(io.r.csr_raddr,0.U(64.W),List(
 		CSRAddrType.mvendorid 	-> (0.U(64.W)),
 		CSRAddrType.marchid		-> (0.U(64.W)),
 		CSRAddrType.mimpid 		-> (0.U(64.W)),
