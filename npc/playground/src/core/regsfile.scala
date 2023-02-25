@@ -94,9 +94,9 @@ class CsrRegCtrl extends Module with CoreParameters{
 
 	when(io.in.w_csr_en){
 		when(!irq & !io.in.is_exception){
-			reg_mie 	:= Mux(io.in.csr_addr === "h".U,io.in.csr_data,)
-			reg_mtvec 	:= Mux(io.in.csr_addr === "h".U,io.in.csr_data,)
-			reg_mscratch	:= Mux(io.in.csr_addr == "h".U,io.in.csr_data,)
+			reg_mie 	:= Mux(io.in.csr_addr === CSRAddrType.mie,io.in.csr_data,reg_mie)
+			reg_mtvec 	:= Mux(io.in.csr_addr === CSRAddrType.mtvec,io.in.csr_data,reg_mtvec)
+			reg_mscratch	:= Mux(io.in.csr_addr == CSRAddrType.mscratch,io.in.csr_data,reg_mscratch)
 			//reg_mip 	:= Mux(io.in.csr_addr == "h".U,io.in.csr_data,)
 			//reg_mcycle	:= Mux(io.in.csr_addr == "h".U,io.in.csr_data,)
 			//reg_minstret	:= Mux(io.in.csr_addr == "h".U,io.in.csr_data,)
