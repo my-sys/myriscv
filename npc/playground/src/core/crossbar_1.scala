@@ -139,7 +139,7 @@ class Crossbar_1 extends Module{
 			io.wb.bits.rdata 	:= io.bus2.bits.rdata
 		}.otherwise{
 			io.wb.ready 		:= io.clint_bus.ready
-			io.wb.bits.rdata 	:= io.clint_bus.rdata
+			io.wb.bits.rdata 	:= io.clint_bus.bits.rdata
 		}
 	}
 }

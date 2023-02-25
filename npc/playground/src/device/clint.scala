@@ -6,7 +6,7 @@ class Clint extends Module{
 		val valid = Input(Bool())
 		val bits 	= new Bundle{
 			val addr  	= Input(UInt(64.W))
-			val wdata 	= Input(UInt(64.w))
+			val wdata 	= Input(UInt(64.W))
 			val rdata 	= Output(UInt(64.W))
 			val is_w 	= Input(Bool())
 		}
