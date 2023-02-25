@@ -36,8 +36,8 @@ class Clint extends Module{
 		is(idle){
 			when(io.valid){
 				when(io.bits.is_w){
-					reg_msip 		= Mux(io.bits.addr(7,0) === "h00".U,io.bits.wdata(0),reg_msip)
-					reg_mtimecmp	= Mux(io.bits.addr(7,0) === "h30".U,io.bits.wdata,reg_mtimecmp)
+					reg_msip 		:= Mux(io.bits.addr(7,0) === "h00".U,io.bits.wdata(0),reg_msip)
+					reg_mtimecmp	:= Mux(io.bits.addr(7,0) === "h30".U,io.bits.wdata,reg_mtimecmp)
 				}
 				red_rdata := temp_data
 				reg_state := busy

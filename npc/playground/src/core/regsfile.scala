@@ -77,12 +77,12 @@ class CsrRegCtrl extends Module with CoreParameters{
 		reg_mepc 	:= Mux(io.in.is_exception,io.in.pc,io.in.pc + 4.U)
 		reg_mcause 	:= Cat("h400_0000_0000_0000".U(59.W),Mux(io.in.time_irq,7.U(5.W),3.U(5.W)))
 		reg_mtval 	:= io.in.mtval
-		reg_mstatus := (reg_mstatus &"hffff_ffff_ffff_fff7") | (Mux(reg_mstatus(3),"h1880".U(64.W),"h1800".U(64.W)))
+		reg_mstatus := (reg_mstatus &"hffff_ffff_ffff_ff77".U) | (Mux(reg_mstatus(3),"h1880".U(64.W),"h1800".U(64.W)))
 	}.elsewhen(io.in.is_exception){
 		reg_mepc 	:= io.in.pc
 		reg_mcause 	:= io.in.exception
 		reg_mtval 	:= io.in.mtval
-		reg_mstatus := (reg_mstatus &"hffff_ffff_ffff_ff77") | (Mux(reg_mstatus(3),"h1880".U(64.W),"h1800".U(64.W)))
+		reg_mstatus := (reg_mstatus &"hffff_ffff_ffff_ff77".U) | (Mux(reg_mstatus(3),"h1880".U(64.W),"h1800".U(64.W)))
 	}.otherwise{
 		when(io.in.w_csr_en){
 			reg_mepc	:= Mux(io.in.csr_addr === "h".U,io.in.csr_data,reg_mepc)
@@ -96,7 +96,7 @@ class CsrRegCtrl extends Module with CoreParameters{
 		when(!irq & !io.in.is_exception){
 			reg_mie 	:= Mux(io.in.csr_addr === CSRAddrType.mie,io.in.csr_data,reg_mie)
 			reg_mtvec 	:= Mux(io.in.csr_addr === CSRAddrType.mtvec,io.in.csr_data,reg_mtvec)
-			reg_mscratch	:= Mux(io.in.csr_addr == CSRAddrType.mscratch,io.in.csr_data,reg_mscratch)
+			reg_mscratch	:= Mux(io.in.csr_addr === CSRAddrType.mscratch,io.in.csr_data,reg_mscratch)
 			//reg_mip 	:= Mux(io.in.csr_addr == "h".U,io.in.csr_data,)
 			//reg_mcycle	:= Mux(io.in.csr_addr == "h".U,io.in.csr_data,)
 			//reg_minstret	:= Mux(io.in.csr_addr == "h".U,io.in.csr_data,)
@@ -123,7 +123,7 @@ class CsrRegCtrl extends Module with CoreParameters{
 		CSRAddrType.misa		-> (0.U(64.W)),
 		CSRAddrType.medeleg		-> (0.U(64.W)),
 		CSRAddrType.mideleg		-> (0.U(64.W)),
-		CSRAddrType.mie			-> reg__mie,
+		CSRAddrType.mie			-> reg_mie,
 		CSRAddrType.mtvec		-> reg_mtvec,
 		CSRAddrType.mcounteren	-> (0.U(64.W)),
 		CSRAddrType.mscratch	-> reg_mscratch,
@@ -135,7 +135,7 @@ class CsrRegCtrl extends Module with CoreParameters{
 		CSRAddrType.mcycle		-> reg_mcycle,
 		CSRAddrType.minstret	-> reg_minstret
 	))
-	io.r.csr_rdata	:= Mux((io.in.csr_raddr === io.in.csr_addr)&io.in.w_csr_en,io.in.csr_data,csr_rdata)
+	io.r.csr_rdata	:= Mux((io.r.csr_raddr === io.in.csr_addr)&io.in.w_csr_en,io.in.csr_data,csr_rdata)
 	io.r.csr_mtvec	:= Mux((io.in.csr_addr === CSRAddrType.mtvec)&io.in.w_csr_en,io.in.csr_data,reg_mtvec)
 	io.r.csr_mepc 	:= Mux((io.in.csr_addr === CSRAddrType.mepc)&io.in.w_csr_en,io.in.csr_data,reg_mepc)
 	io.r.csr_mstatus := Mux((io.in.csr_addr === CSRAddrType.mstatus)&io.in.w_csr_en,io.in.csr_data,reg_mstatus)
