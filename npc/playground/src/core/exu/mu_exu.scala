@@ -194,7 +194,7 @@ class DIV extends Module with CoreParameters{
 			//reg_divisor 
 			//reg_dividend
 			//reg_exuType
-			when(io.in.flush){
+			when(io.in_flush){
 				reg_q 			:= 0.U
 				reg_rem 		:= 0.U
 				reg_stall		:= false.B

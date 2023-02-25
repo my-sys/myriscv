@@ -48,7 +48,7 @@ class ABN_EXU extends Module  with CoreParameters{
 		reg_is_fence_i		:= Mux(io.exuType === ABNType.abn_fence_i,io.valid,false.B)
 		reg_is_mret			:= Mux(io.exuType === ABNType.abn_mret,io.valid,false.B)
 		reg_exception		:= temp_exception
-		reg_is_exception	:= io.in.exuType(0)&io.valid
+		reg_is_exception	:= io.exuType(0)&io.valid
 	}
 	// reg_is_fence 	:= Mux(io.stall,reg_is_fence,Mux(io.exuType === ABNType.abn_fence,io.valid,false.B))
 	// reg_is_fence_i	:= Mux(io.stall,reg_is_fence_i,Mux(io.exuType === ABNType.abn_fence_i,io.valid,false.B))
