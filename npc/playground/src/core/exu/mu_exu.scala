@@ -115,6 +115,7 @@ class MUL extends Module with CoreParameters{
 class DIV extends Module with CoreParameters{
 	val io = IO(new Bundle{
 		val in_stall    = Input(Bool())
+		val in_flush 	= Input(Bool())
 		val rs1_data	= Input(UInt(64.W))
 		val rs2_data	= Input(UInt(64.W))
 		val result 		= Output(UInt(64.W))
@@ -157,8 +158,8 @@ class DIV extends Module with CoreParameters{
 			reg_divisor 	:= divisor
 			reg_dividend 	:= dividend
 			reg_rem			:= Mux(divisor(64)^dividend(64),rem+divisor,rem+(~divisor)+1.U)//Mux(divisor(64)^dividend(64),divisor + dividend,dividend + (~divisor)+1.U)
-			reg_state 		:= Mux(valid,div_busy,div_start)
-			reg_stall 		:= Mux(valid,true.B,false.B)
+			reg_state 		:= Mux(io.in_flush,div_start,Mux(valid,div_busy,div_start))
+			reg_stall 		:= Mux(io.in_flush,false.B,Mux(valid,true.B,false.B))
 			reg_exuType		:= Mux(valid,exuType,0.U)
 			reg_q 			:= dividend 
 			reg_out_valid	:= false.B 
@@ -170,25 +171,32 @@ class DIV extends Module with CoreParameters{
 			//reg_stall
 			//reg_exuType
 			//reg_out_valid
-			reg_cnt 		:= reg_cnt + 1.U 
+			reg_cnt 		:= Mux(io.in_flush,0.U,reg_cnt + 1.U)
 			reg_q 	:= temp_result(64,0)
 			reg_rem := temp_result(129,65)
 			//reg_q 			:= Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q <<1.U)+1.U)
 			//reg_rem 		:= Mux(reg_rem(64)^reg_divisor(64),(reg_rem<<1.U) + reg_divisor,(reg_rem<<1.U)+neg_divisor)
 			//reg_cnt 为64时，说明本次reg_cnt要变为65，故总共执行了65次
-			reg_state 		:= Mux(reg_cnt === "h40".U,div_correct,reg_state)
+			reg_state 		:= Mux(io.in_flush,Mux(reg_cnt === "h40".U,div_correct,reg_state))
 		}
 		is(div_correct){
 			reg_q := Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q<<1.U)+1.U)
 			reg_rem := reg_rem
-			reg_state := div_end
+			reg_state := Mux(io.in_flush,div_start,div_end)
 		}
 		is(div_end){
 			// 商和余数矫正
 			//reg_divisor 
 			//reg_dividend
 			//reg_exuType
-			when(io.in_stall){
+			when(io.in.flush){
+				reg_q 			:= 0.U
+				reg_rem 		:= 0.U
+				reg_stall		:= false.B
+				reg_out_valid	:= false.B
+				reg_state		:= div_start
+				reg_cnt 		:= 0.U
+			}.elsewhen(io.in_stall){
 				reg_q 			:= reg_q
 				reg_rem 		:= reg_rem
 				reg_stall		:= reg_stall

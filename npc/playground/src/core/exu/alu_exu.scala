@@ -66,8 +66,6 @@ object ALUType{
     val alu_jal     = "b1110_01".U //不需要区分立即数，和低位操作
     val alu_jalr    = "b1110_11".U //不需要区分立即数，和低位操作
 
-	
-    
 }
 
 // ALU 是一个常用的单元，设计它的指令非常多，乘法，除法。存储指令，CSR较少，因此在多个执行单元中
@@ -81,6 +79,7 @@ class ALU_EXU extends Module with CoreParameters{
         val op_imm   = Input(UInt(RegDataLen.W))
         val op_pc    = Input(UInt(AddrLen.W))
 		val stall    = Input(Bool())
+		val in_flush = Input(Bool())
 
         val result_data     = Output(UInt(RegDataLen.W))
         val result_pc       = Output(UInt(AddrLen.W))
@@ -178,10 +177,26 @@ class ALU_EXU extends Module with CoreParameters{
 	val reg_next_pc_valid = RegInit(false.B)
 	val reg_w_rs_en 	= RegInit(false.B)
 
-	reg_result_data 	:= Mux(io.stall,reg_result_data,result_data)
-	reg_result_pc		:= Mux(io.stall,reg_result_pc,result_pc)
-	reg_next_pc_valid	:= Mux(io.stall,reg_next_pc_valid,next_pc_valid&io.valid)
-	reg_w_rs_en			:= Mux(io.stall,reg_w_rs_en,w_rs_en&io.valid)
+	when(io.in_flush){
+		reg_result_data 	:= 0.U
+		reg_result_pc		:= 0.U
+		reg_next_pc_valid	:= false.B 
+		reg_w_rs_en			:= false.B
+	}.elsewhen(io.stall){
+		reg_result_data 	:= reg_result_data
+		reg_result_pc		:= reg_result_pc
+		reg_next_pc_valid	:= reg_next_pc_valid
+		reg_w_rs_en			:= reg_w_rs_en
+	}.otherwise{
+		reg_result_data 	:= result_data
+		reg_result_pc		:= result_pc
+		reg_next_pc_valid	:= next_pc_valid&io.valid
+		reg_w_rs_en			:= w_rs_en&io.valid
+	}
+	// reg_result_data 	:= Mux(io.stall,reg_result_data,result_data)
+	// reg_result_pc		:= Mux(io.stall,reg_result_pc,result_pc)
+	// reg_next_pc_valid	:= Mux(io.stall,reg_next_pc_valid,next_pc_valid&io.valid)
+	// reg_w_rs_en			:= Mux(io.stall,reg_w_rs_en,w_rs_en&io.valid)
 
     io.result_data      := reg_result_data
     io.result_pc        := reg_result_pc

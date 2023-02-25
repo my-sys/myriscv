@@ -39,6 +39,7 @@ class LSU_EXU extends Module with CoreParameters{
 		val avalid				= Output(Bool())
 		val w_mem_en			= Output(Bool())
 		val stall 				= Input(Bool())
+		val in_flush 			= Input(Bool())
     })
 
 	val rs1_data 	= io.rs1_data
@@ -48,9 +49,22 @@ class LSU_EXU extends Module with CoreParameters{
 	val reg_address_result 	= RegInit(0.U(64.W))
 	val reg_avalid			= RegInit(false.B)
 	val reg_w_mem_en		= RegInit(false.B)
-	reg_address_result	:= Mux(io.stall,reg_address_result,(rs1_data + imm_data))
-	reg_avalid			:= Mux(io.stall,reg_avalid,io.valid)
-	reg_w_mem_en		:= Mux(io.stall,reg_w_mem_en,io.valid & exuType(2))
+	when(io.in_flush){
+		reg_address_result 	:= 0.U 
+		reg_avalid			:= false.B 
+		reg_w_mem_en		:= false.B
+	}.elsewhen(io.stall){
+		reg_address_result 	:= reg_address_result
+		reg_avalid			:= reg_avalid
+		reg_w_mem_en		:= reg_w_mem_en
+	}.otherwise{
+		reg_address_result 	:= (rs1_data + imm_data)
+		reg_avalid			:= io.valid
+		reg_w_mem_en		:= io.valid & exuType(2)
+	}
+	// reg_address_result	:= Mux(io.stall,reg_address_result,(rs1_data + imm_data))
+	// reg_avalid			:= Mux(io.stall,reg_avalid,io.valid)
+	// reg_w_mem_en		:= Mux(io.stall,reg_w_mem_en,io.valid & exuType(2))
     io.address_result := reg_address_result
 	io.avalid		:= reg_avalid
 	io.w_mem_en 	:= reg_w_mem_en

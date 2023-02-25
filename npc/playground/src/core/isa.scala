@@ -6,15 +6,16 @@ import chisel3.util._
 //3 "b1111_1111".U
 
 object Inst_type{
-    def Type_N  = "b0000".U
-    def Type_U  = "b0001".U
-    def Type_S  = "b0011".U 
-    def Type_J  = "b0010".U 
-    def Type_R  = "b0110".U 
-    def Type_B  = "b0111".U
-    def Type_CSR = "b0101".U
-    def Type_IR = "b0100".U
-    def Type_I  = "b1100".U
+    def Type_N  = 	"b0000".U
+    def Type_U  = 	"b0001".U
+    def Type_S  = 	"b0011".U 
+    def Type_J  = 	"b0010".U 
+    def Type_R  = 	"b0110".U 
+    def Type_B  = 	"b0111".U
+    def Type_CSR = 	"b0101".U
+    def Type_IR = 	"b0100".U
+    def Type_I  = 	"b1100".U
+	def Type_ABN = 	"b1101".U
 }
 
 object Op_type{
@@ -22,7 +23,8 @@ object Op_type{
     def op_lsu = "b001".U
     def op_csr = "b010".U
     def op_mu  = "b011".U
-	def op_alu = "b100".U 
+	def op_alu = "b100".U
+	def op_abn = "b101".U
 }
 object ISA{
     def ADD     = BitPat("b0000000_?????_?????_000_?????_0110011")
@@ -185,10 +187,11 @@ def SFENCE_VMA  = BitPat("b0001001_?????_?????_000_00000_1110011")
         JAL         -> List(Op_type.op_alu,     ALUType.alu_jal,     Inst_type.Type_J),
         JALR        -> List(Op_type.op_alu,     ALUType.alu_jalr,    Inst_type.Type_I),
 
-        //EBREAK      -> List(),
-        //FENCE       -> List(),
-        //FENCE_I     -> List(),
-        //MRET        -> List(),
+        EBREAK      -> List(Op_type.op_abn,     ABNType.abn_ebreak,  Inst_type.Type_ABN),
+        FENCE       -> List(Op_type.op_abn,     ABNType.abn_fence,   Inst_type.Type_ABN),
+        FENCE_I     -> List(Op_type.op_abn,     ABNType.abn_fence_i, Inst_type.Type_ABN),
+        MRET        -> List(Op_type.op_abn,     ABNType.abn_mret,    Inst_type.Type_ABN),
+		ECALL       -> List(Op_type.op_abn,     ABNType.abn_ecall,   Inst_type.Type_ABN)
         //SRET        -> List(),
         //SFENCE_VMA  -> List(),
 

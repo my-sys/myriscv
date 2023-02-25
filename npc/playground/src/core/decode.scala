@@ -10,7 +10,10 @@ class Decode extends Module with CoreParameters{
 
             val rs_addr         = Input(UInt(RegAddrLen.W))
             val result_data     = Input(UInt(RegDataLen.W))
-            val w_rs_en         = Input(Bool())
+            val w_rs_en         = Input(Bool()) 
+
+			// data from CSR register
+			val csr_data 		= Input(UInt(64.W))
 
 			val stall 			= Input(Bool())
 			val flush 			= Input(Bool())
@@ -20,6 +23,9 @@ class Decode extends Module with CoreParameters{
             val rs2_data    = Output(UInt(RegDataLen.W))
 			val rs1_addr 	= Output(UInt(RegAddrLen.W))
 			val rs2_addr 	= Output(UInt(RegAddrLen.W))
+			val csr_addr_0 	= Output(UInt(12.W)) // get data from csr 
+			val csr_addr 	= Output(UInt(12.W)) // send to exu 
+			val csr_data 	= Output(UInt(64.W))
 
             val rs_addr     = Output(UInt(RegAddrLen.W))
             val imm_data    = Output(UInt(ImmLen.W))
@@ -44,6 +50,8 @@ class Decode extends Module with CoreParameters{
 	val reg_inst 	 = RegInit(0.U(32.W))
 	val reg_rs1_addr = RegInit(0.U(RegAddrLen.W))
 	val reg_rs2_addr = RegInit(0.U(RegAddrLen.W))
+	val reg_csr_addr = RegInit(0.U(12.W))
+	val reg_csr_data = RegInit(0.U(64.W))
 	
 	val reg_stall 		= RegInit(false.B)
 
@@ -100,6 +108,8 @@ class Decode extends Module with CoreParameters{
 		reg_inst 			:= Mux(stall,reg_inst,inst)
 		reg_rs1_addr		:= Mux(stall,reg_rs1_addr,rs1_addr)
 		reg_rs2_addr		:= Mux(stall,reg_rs2_addr,rs2_addr)
+		reg_csr_addr 		:= Mux(stall,reg_csr_addr,csr_addr)
+		reg_csr_data		:= Mux(stall,reg_csr_data,io.in.csr_data)
 	}.otherwise{
 		// 产生nop指令
 		reg_pc 				:= 0.U
@@ -119,8 +129,9 @@ class Decode extends Module with CoreParameters{
 	io.out.inst 		:= Mux(reg_stall,0.U,reg_inst)
 	io.out.rs1_addr		:= reg_rs1_addr
 	io.out.rs2_addr		:= reg_rs2_addr
-
-	
+	io.out.csr_addr 	:= reg_csr_addr
+	io.out.csr_data 	:= reg_csr_data
+	io.out.csr_addr_0	:= csr_addr
 
 	io.out.stall 		:= reg_stall
 

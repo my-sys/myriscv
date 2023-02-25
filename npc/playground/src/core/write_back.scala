@@ -20,6 +20,23 @@ class WriteBack extends Module with CoreParameters{
             val w_mem_en        = Input(Bool())
 			val pc 				= Input(UInt(AddrLen.W))
 			val inst 			= Input(UInt(InstLen.W))
+
+			val csr_addr 		= Input(UInt(12.W))
+			val csr_data 		= Input(UInt(64.W))
+			val w_csr_en		= Input(Bool())
+			val mtvec			= Input(UInt(64.W)) 
+			val mepc 			= Input(UInt(64.W))
+			val mstatus			= Input(UInt(64.W))
+
+			val is_mret			= Input(Bool())
+			val is_fence		= Input(Bool())
+			val is_fence_i		= Input(Bool())
+
+			val time_irq		= Input(Bool())
+			val soft_irq 		= Input(Bool())
+			val mtval 			= Input(UInt(64.W))
+			val exception		= Input(UInt(5.W))
+			val is_exception	= Input(Bool())
 		}
 		
 		val bus = new Bundle{
@@ -41,6 +58,21 @@ class WriteBack extends Module with CoreParameters{
 			val w_rs_en         = Output(Bool())
 
 			val stall 			= Output(Bool())
+
+			val csr_addr 		= Output(UInt(12.W))
+			val csr_data 		= Output(UInt(64.W))
+			val w_csr_en		= Output(Bool())
+
+			val time_irq		= Output(Bool())
+			val soft_irq 		= Output(Bool())
+			val mtval 			= Output(UInt(64.W))
+			val exception		= Output(UInt(5.W))
+			val is_exception	= Output(Bool())
+			val pc 				= Output(UInt(64.W))
+			val commit 			= Output(Bool())
+
+			val flush 			= Output(Bool())
+			val next_pc			= Output(Bool())
 		}
 	})
 	// 本级存在的必要性，execute 计算内存地址，wb阶段进行读写。往寄存器写的也需要流到这一级的原因是，指令之间要按顺序执行不能存在越位。
@@ -83,7 +115,7 @@ class WriteBack extends Module with CoreParameters{
 		LSUType.lsu_lhu 	-> Cat(Fill(48,0.U(1.W)),		mem_r_data(15,0)),
 		LSUType.lsu_lw 		-> Cat(Fill(32,mem_r_data(31)),	mem_r_data(31,0)),
 		LSUType.lsu_lwu 	-> Cat(Fill(32,0.U(1.W)),		mem_r_data(31,0))
-	))		
+	))
 
 	// 写没有处理好，缺少许多种情况
 	val mem_wstrb			= MuxLookup(io.in.exuType,0.U(64.W),List(
@@ -139,7 +171,42 @@ class WriteBack extends Module with CoreParameters{
 			}
 		}
 	}
-	
+//----------------------------------- handle exception-----------------------------
+	val reg_csr_addr 	= RegInit(0.U(64.W))
+	val reg_csr_data 	= RegInit(0.U(64.W))
+	val reg_w_csr_en 	= RegInit(false.B)
+	reg_csr_addr		:= Mux(reg_stall,reg_csr_addr,Mux(io.in.is_mret,CSRAddrType.mstatus,io.in.csr_addr))
+	reg_csr_data		:= Mux(reg_stall,reg_csr_data,Mux(io.in.is_mret,(io.in.mstatus & "hffff_ffff_ffff_ff77".U)|(Mux(io.in.mstatus(7),"h88".U,"h80".U)),io.in.csr_data))
+	reg_w_csr_en		:= Mux(reg_stall,reg_w_csr_en,Mux(io.in.is_mret,true.B,io.in.w_csr_en))
+
+	val reg_time_irq 	= RegInit(false.B)
+	val reg_soft_irq 	= RegInit(false.B)
+	val reg_mtval 		= RegInit(0.U(64.W))
+	val reg_exception 	= RegInit(0.U(5.W))
+	val reg_is_exception = RegInit(false.B)
+	val reg_commit 		= RegInit(false.B)
+	reg_time_irq		:= Mux(reg_stall,reg_time_irq | io.in.time_irq,io.in.time_irq)
+	reg_soft_irq		:= Mux(reg_stall,reg_soft_irq | io.in.soft_irq,io.in.soft_irq)
+	reg_mtval 			:= Mux(reg_stall,reg_mtval,io.in.mtval)
+	reg_exception		:= Mux(reg_stall,reg_exception,io.in.exception)
+	reg_is_exception	:= Mux(reg_stall,reg_is_exception,io.in.is_exception)
+
+	val reg_flush 		= RegInit(false.B)
+	val reg_next_pc		= RegInit(0.U(64.W))
+	val temp_except 	= io.in.is_exception | io.in.time_irq | io.in.soft_irq
+	when(reg_stall){
+		when(io.in.time_irq | io.in.soft_irq){
+			reg_flush	:= true.B
+			reg_next_pc := Cat(io.in.mtvec(63,2),0.U(2.W))
+		}.otherwise{
+			reg_flush	:= reg_flush
+			reg_next_pc := reg_next_pc
+		}
+	}.otherwise{
+		reg_flush	:= Mux(temp_except | io.in.is_mret,true.B,false.B)
+		reg_next_pc := Mux(temp_except,Cat(io.in.mtvec(63,2),0.U(2.W)),Mux(io.in.is_mret,io.in.mepc,0.U))
+	}
+
 	val difftest_commit 	= RegInit(false.B)
 	val reg_inst 			= RegInit(0.U(InstLen.W))
 	val reg_pc 				= RegInit(0.U(AddrLen.W))
@@ -147,7 +214,7 @@ class WriteBack extends Module with CoreParameters{
 	reg_inst 				:= Mux(reg_stall,reg_inst,io.in.inst)
 	val difftest_inst 			= RegInit(0.U(InstLen.W))
 	val difftest_pc 			= RegInit(0.U(AddrLen.W))
-	val inst_counter   = RegInit(0.U(64.W)) // for test 
+	val inst_counter   			= RegInit(0.U(64.W)) // for test 
 
 	when(reg_stall | (reg_exuType === ALUType.alu_none)){
 		difftest_commit := false.B
@@ -165,6 +232,18 @@ class WriteBack extends Module with CoreParameters{
 	io.out.rs_addr			:= Mux(reg_stall,0.U,reg_rs_addr)
 	io.out.result_data		:= Mux(reg_stall,0.U,reg_result_data)
 	io.out.w_rs_en			:= Mux(reg_stall,0.U,reg_w_rs_en)
+	io.out.csr_addr 		:= reg_csr_addr
+	io.out.csr_data			:= reg_csr_data
+	io.out.w_csr_en			:= Mux(reg_stall,false.B,reg_w_csr_en)
+	io.out.time_irq			:= Mux(reg_stall,false.B,reg_time_irq)
+	io.out.soft_irq			:= Mux(reg_stall,false.B,reg_soft_irq)
+	io.out.mtval			:= reg_mtval
+	io.out.exception		:= reg_exception
+	io.out.is_exception		:= reg_is_exception
+	io.out.pc 				:= reg_pc 
+	io.out.commit 			:= true.B 
+	io.out.flush			:= Mux(reg_stall,false.B,reg_flush)
+	io.out.next_pc			:= reg_next_pc
 	
 	io.bus.bits.wdata 		:= reg_bus_wdata
 	io.bus.bits.addr 		:= reg_bus_addr
