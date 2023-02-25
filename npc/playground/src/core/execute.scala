@@ -124,7 +124,7 @@ class Exu extends Module with CoreParameters{
 		reg_valid(2) -> csr_exu.io.w_rs_en,//csr
 		reg_valid(3) -> mu_exu.io.out_valid	// mu exu	
 	))
-
+	val reg_w_csr_en		= csr_exu.io.w_csr_en
 //  解决数据相关冲突 
 	val rs1_data = Mux((reg_rs_addr === io.in.rs1_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs1_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs1_data))
 	val rs2_data = Mux((reg_rs_addr === io.in.rs2_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs2_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs2_data))	
@@ -235,7 +235,7 @@ class Exu extends Module with CoreParameters{
 	csr_exu.io.in_flush		:= io.in.flush
 
 	val reg_csr_data 		= csr_exu.io.csr_result
-	val reg_w_csr_en		= csr_exu.io.w_csr_en
+	
 //------------------------------ABN EXU--------------------------------------
 	abn_exu.io.valid 		:= valid(4)
 	abn_exu.io.exuType		:= exuType
