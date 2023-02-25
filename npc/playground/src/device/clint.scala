@@ -32,7 +32,7 @@ class Clint extends Module{
 		"h20".U ->reg_mtime,
 		"h30".U ->reg_mtimecmp
 	))
-	siwch(reg_state){
+	switch(reg_state){
 		is(idle){
 			when(io.valid){
 				when(io.bits.is_w){
