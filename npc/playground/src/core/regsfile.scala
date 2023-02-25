@@ -17,24 +17,24 @@ class RegCtrl extends CoreParameters{
 //mie		0x304 
 //mip 		
 object CSRAddrType{
-	val mvendorid	= "0xf11".U
-	val marchid		= "0xf12".U 
-	val mimpid		= "0xf13".U 
-	val mhartid		= "0xf14".U 
-	val mstatus		= "0x300".U 
-	val misa		= "0x301".U 
-	val medeleg		= "0x302".U 
-	val mideleg		= "0x303".U 
-	val mie			= "0x304".U 
-	val mtvec		= "0x305".U 
-	val mcounteren	= "0x306".U 
-	val mscratch	= "0x340".U 
-	val mepc		= "0x341".U 
-	val mcause		= "0x342".U 
-	val mtval		= "0x343".U 
-	val mip			= "0x344".U 
-	val mcycle		= "0xB00".U 
-	val minstret	= "0xB02".U
+	val mvendorid	= "hf11".U
+	val marchid		= "hf12".U 
+	val mimpid		= "hf13".U 
+	val mhartid		= "hf14".U 
+	val mstatus		= "h300".U 
+	val misa		= "h301".U 
+	val medeleg		= "h302".U 
+	val mideleg		= "h303".U 
+	val mie			= "h304".U 
+	val mtvec		= "h305".U 
+	val mcounteren	= "h306".U 
+	val mscratch	= "h340".U 
+	val mepc		= "h341".U 
+	val mcause		= "h342".U 
+	val mtval		= "h343".U 
+	val mip			= "h344".U 
+	val mcycle		= "hB00".U 
+	val minstret	= "hB02".U
 }
 class CsrRegCtrl extends Module with CoreParameters{
 	val io = IO(new Bundle{
