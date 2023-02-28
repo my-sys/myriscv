@@ -1,19 +1,9 @@
 #include "../common.h"
 #include "device.h"
-#include <unistd.h>
-#include <dlfcn.h>
-#include <assert.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include <SDL2/SDL.h>
-#include <sys/mman.h>
-#include <sys/ioctl.h>
 #define KEYDOWN_MASK 0x8000
 
+#define concat(x, y) x ## y
 // Note that this is not the standard
 #define _KEYS(f) \
   f(ESCAPE) f(F1) f(F2) f(F3) f(F4) f(F5) f(F6) f(F7) f(F8) f(F9) f(F10) f(F11) f(F12) \
