@@ -49,9 +49,9 @@ void sdl_clear_event_queue(){
 	SDL_Event event;
 	while(SDL_PollEvent(&event));
 }
-extern bool ioe_init();
+//extern bool ioe_init();
 void init_device(){
-	ioe_init();
+	//ioe_init();ioe_init();是有关驱动初始化的部分，属于软件，不是硬件。不能，也不应该在硬件初始化
 	init_serial();
 	init_vga();
 	init_i8042();
