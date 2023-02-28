@@ -94,7 +94,7 @@ class AXI_RAM extends Module{
 	mem.io.rflag 				:= io.ram_bus.ar.valid
 	mem.io.waddr 				:= reg_w_addr
 	mem.io.wdata 				:= io.ram_bus.w.bits.wdata
-	mem.io.wmask				:= Cat(io.ram_bus.w.bits.wstrb.asBools.map(Fill(8,_)))
+	mem.io.wmask				:= Cat(io.ram_bus.w.bits.wstrb.asBools.map(Fill(8,_)).reverse)
 	mem.io.wen 					:= w_en
 
 	io.ram_bus.aw.ready 		:= reg_aw_ready
