@@ -1,5 +1,6 @@
 #include "device.h"
 #include "../common.h"
+#include <time.h>
 static uint32_t *rtc_port_base = NULL;
 uint64_t rtc_read(uint64_t offset){
 	assert(offset == 0);

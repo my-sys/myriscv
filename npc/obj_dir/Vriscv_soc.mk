@@ -46,6 +46,7 @@ VM_USER_CLASSES = \
 	audio \
 	device \
 	keyboard \
+	rtc \
 	serial \
 	vga \
 	difftest \
@@ -77,6 +78,8 @@ audio.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/device/audio.c
 device.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/device/device.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 keyboard.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/device/keyboard.c
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+rtc.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/device/rtc.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 serial.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/device/serial.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
