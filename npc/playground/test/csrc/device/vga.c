@@ -3,6 +3,7 @@
 #define SCREEN_W 	400
 #define SCREEN_H	300
 
+#define str(x) #x
 static uint32_t screen_width(){
 	return SCREEN_W;
 }
@@ -23,7 +24,7 @@ static SDL_Texture *texture = NULL;
 static void init_screen() {
   SDL_Window *window = NULL;
   char title[128];
-  sprintf(title, "%s-NPC", str("riscv64"));
+  sprintf(title, "%s-NPC", "riscv64");
   SDL_Init(SDL_INIT_VIDEO); //SDL_INIT_VIDEO | SDL_INIT_TIMER  SDL_Init(SDL_INIT_VIDEO);
   SDL_CreateWindowAndRenderer(
       SCREEN_W * 2, //2,1    ???????????????????????????????????????????xingk
@@ -73,7 +74,7 @@ uint64_t vga_read(uint64_t offset){
 	if(offset == 0){
 		temp = vgactl_port_base[0];
 	}else{
-		temp = vgactl_port_base[1]<<32;
+		temp = ((uint64_t)vgactl_port_base[1])<<32;
 	}
 	return temp;
 	//offset 0, offset	
