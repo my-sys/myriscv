@@ -5,7 +5,7 @@ export PATH := $(PATH):$(abspath ./utils)
 
 # project source
 VSRCS = $(shell find $(abspath ./playground/test/vsrc) -name "*.v") $(shell find $(abspath ./build) -name "*.v")
-CSRCS = $(shell find $(abspath ./playground/test/csrc) -name "*.c" -or -name "*.cc" -or -name "*.cpp")
+CSRCS = $(shell find $(abspath ./playground/test/csrc) -name "*.c" -or -name "*.cc" -or -name "*.cpp") $(shell find $(abspath ./playground/test/csrc/device) -name "*.c")
 INCLUDE_DIR = $(abspath ./playground/test/include)
 # Generate C++ in executable form
 VERILATOR_FLAGS += -cc --exe

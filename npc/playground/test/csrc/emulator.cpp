@@ -4,6 +4,7 @@
 #include "Vriscv_soc.h"
 #include "difftest.h"
 #include "disasm.h"
+#include "./device.h"
 CPU_state cpu = {};
 NPCState npc_state = { .state = NPC_STOP };
 Emulator::Emulator(){
@@ -74,6 +75,7 @@ void Emulator::execute_once(){
 		exit(1);
 	}
 #endif 
+	device_update();
 };
 
 void Emulator::checkregs(CPU_state *ref, vaddr_t pc){
@@ -95,6 +97,8 @@ bool Emulator::isa_difftest_checkregs(CPU_state *ref, vaddr_t pc){
 	for(int i=0;i<32;i++){
 		if(ref->gpr[i] != gpr[i]){
 			printf("difftest false \n"); 
+			npc_state.state 	= NPC_ABORT;
+			npc_state.halt_pc	= pc;
 			printf("ref gpr[%d] = 0x%lx, gpr[%d] = 0x%lx\n",i,ref->gpr[i],i,gpr[i]);
 			return false;
 		}
@@ -119,12 +123,16 @@ void Emulator::execute(uint64_t n){
     //....
     for(; n > 0; n--){
         execute_once();
+		if(npc_state.state != NPC_RUNNING){
+			break;
+		}
     }
     //....
 };
 
 void Emulator::reset(int n){
-    top->reset = 1;
+    npc_state.state 	= NPC_RUNNING;
+	top->reset = 1;
     for(int i = 0; i<n; i++){
         execute_cycle();
     }

@@ -90,6 +90,7 @@ class AXI_RAM extends Module{
     val mem = Module(new RAMCtrl)
 	mem.io.clock				:= clock 
 	mem.io.raddr 				:= Mux(reg_r_valid,reg_raddr,io.ram_bus.ar.bits.araddr)
+	mem.io.rflag 				:= io.ram_bus.ar.valid
 	mem.io.waddr 				:= reg_w_addr
 	mem.io.wdata 				:= io.ram_bus.w.bits.wdata
 	mem.io.wmask				:= Cat(io.ram_bus.w.bits.wstrb.asBools.map(Fill(8,_)))

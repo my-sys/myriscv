@@ -12,12 +12,15 @@
 
 static uint64_t ref_this_pc = RESET_VECTOR;
 
+static CPU_state temp_cpu = {};
+
 void (*ref_difftest_memcpy)(paddr_t addr, void *buf, size_t n, bool direction) = NULL;
 void (*ref_difftest_regcpy)(void *dut, bool direction) = NULL;
 void (*ref_difftest_exec)(uint64_t n) = NULL;
 void (*ref_difftest_raise_intr)(uint64_t NO) = NULL;
 
 static bool is_skip_ref = false;
+static bool is_need_sync = false;
 static int skip_dut_nr_inst = 0;
 
 void difftest_skip_ref() {
@@ -71,27 +74,42 @@ void init_difftest(char *ref_so_file, long img_size, int port){
 void difftest_step(vaddr_t pc){
 	CPU_state ref_r;
 
-	if(skip_dut_nr_inst > 0){
-		ref_difftest_regcpy(&ref_r,DIFFTEST_TO_DUT);
-		// 这里有问题，ref.pc 是下一个pc, 而pc 是当前pc, 跳转指令问题  
-		if(ref_r.pc == pc){
-			skip_dut_nr_inst = 0;
-			Emulator::get_instance().checkregs(&ref_r, pc);
-			return;
+	// if(skip_dut_nr_inst > 0){
+	// 	ref_difftest_regcpy(&ref_r,DIFFTEST_TO_DUT);
+	// 	// 这里有问题，ref.pc 是下一个pc, 而pc 是当前pc, 跳转指令问题  
+	// 	if(ref_r.pc == pc){
+	// 		skip_dut_nr_inst = 0;
+	// 		Emulator::get_instance().checkregs(&ref_r, pc);
+	// 		return;
+	// 	}
+	// 	skip_dut_nr_inst --;
+	// 	if (skip_dut_nr_inst == 0){
+	// 		Log("can not catch up with ref.pc = " FMT_WORD " at pc = " FMT_WORD, ref_r.pc, pc);
+	// 	}
+	// 	return;
+	// }
+
+	// if (is_skip_ref){
+	// 	// to skip the checking of an instruction, just copy the reg state to reference design
+	// 	// 这里有问题，ref.pc 是下一个pc, 而pc 是当前pc, 跳转指令问题  
+	// 	ref_difftest_regcpy(&cpu, DIFFTEST_TO_REF);
+	// 	is_skip_ref = false;
+	// 	return;
+	// }
+	if(is_skip_ref){
+		for(int i = 0; i<32;i++){
+			temp_cpu.gpr[i] = cpu.gpr[i];
+			temp_cpu.csr[i] = cpu.csr[i];
 		}
-		skip_dut_nr_inst --;
-		if (skip_dut_nr_inst == 0){
-			Log("can not catch up with ref.pc = " FMT_WORD " at pc = " FMT_WORD, ref_r.pc, pc);
-		}
+		is_skip_ref = false;
+		is_need_sync = true;
 		return;
 	}
-
-	if (is_skip_ref){
-		// to skip the checking of an instruction, just copy the reg state to reference design
-		// 这里有问题，ref.pc 是下一个pc, 而pc 是当前pc, 跳转指令问题  
-		ref_difftest_regcpy(&cpu, DIFFTEST_TO_REF);
-		is_skip_ref = false;
-		return;
+	if(is_need_sync){
+		temp_cpu.pc = cpu.pc;
+		ref_this_pc = cpu.pc;
+		ref_difftest_regcpy(&temp_cpu, DIFFTEST_TO_REF);
+		is_need_sync = false;
 	}
 
 	ref_difftest_exec(1);
