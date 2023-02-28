@@ -65,6 +65,8 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, uint8_t rflag,paddr_t wa
 				vga_buffer_write(waddr,wdata);
 			}else if((0x10000000<=waddr) & (waddr <=0x10000FFF)){ // uart
 				printf("waddr %lx, wmask %lx\n",waddr,wmask);
+				*rdata = 0;
+				return;
 				assert((waddr == 0x10000000)&(wmask == 0xff));
 				serial_write(waddr-0x10000000,wdata);
 			}else if((0x10002000<=waddr) & (waddr <= 0x10002FFF)){ // vga
