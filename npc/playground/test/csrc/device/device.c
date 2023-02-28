@@ -1,7 +1,7 @@
 #include "../common.h"
 // #include <utils.h>
 #include "device.h"
-#include <am.h>
+
 #include <SDL2/SDL.h>
 #include <time.h>
 
