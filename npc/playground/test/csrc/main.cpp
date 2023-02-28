@@ -3,7 +3,7 @@
 #include "sdb.h"
 #include "disasm.h"
 #include "difftest.h"
-#include "./device.h"
+#include "./device/device.h"
 static char *diff_so_file = NULL;
 static char *img_file = NULL;
 static char *log_file = NULL;

@@ -4,7 +4,7 @@
 #include "Vriscv_soc.h"
 #include "difftest.h"
 #include "disasm.h"
-#include "./device.h"
+#include "./device/device.h"
 CPU_state cpu = {};
 NPCState npc_state = { .state = NPC_STOP };
 Emulator::Emulator(){
