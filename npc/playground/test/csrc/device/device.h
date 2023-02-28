@@ -20,6 +20,10 @@ void init_serial();
 void vga_update_screen();
 void device_update();
 void sdl_clear_event_queue();
+
+uint64_t rtc_read(uint64_t offset);
+void init_rtc();
+
 void init_device();
 extern NPCState npc_state;
 #endif
