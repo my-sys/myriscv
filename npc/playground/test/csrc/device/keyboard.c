@@ -2,10 +2,16 @@
 #include "device.h"
 #include <unistd.h>
 #include <dlfcn.h>
-#include <sys/mman.h>
-#include <sys/ioctl.h>
+#include <assert.h>
+#include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <SDL2/SDL.h>
+#include <sys/mman.h>
+#include <sys/ioctl.h>
 #define KEYDOWN_MASK 0x8000
 
 // Note that this is not the standard
