@@ -6,6 +6,7 @@ class RAMCtrl extends BlackBox{
         val clock   = Input(Clock())
         val raddr   = Input(UInt(64.W))
         val rdata   = Output(UInt(64.W))
+		val rflag   = Input(Bool())
         val waddr   = Input(UInt(64.W))
         val wdata   = Input(UInt(64.W))
         val wmask   = Input(UInt(64.W))
