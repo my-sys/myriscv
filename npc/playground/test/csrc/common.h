@@ -15,6 +15,6 @@ typedef uint64_t word_t;
 // calculate the length of an array
 #define ARRLEN(arr) (int)(sizeof(arr) / sizeof(arr[0]))
 #define EN_TRACE 0
-#define CONFIG_ITRACE
+//#define CONFIG_ITRACE
 #define CONFIG_DIFFTEST
 #endif 
