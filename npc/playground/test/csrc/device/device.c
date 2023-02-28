@@ -49,7 +49,7 @@ void sdl_clear_event_queue(){
 	SDL_Event event;
 	while(SDL_PollEvent(&event));
 }
-
+extern ioe_init();
 void init_device(){
 	ioe_init();
 	init_serial();
