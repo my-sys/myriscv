@@ -1,6 +1,7 @@
 #include "../common.h"
 #include "device.h"
 #include <unistd.h>
+#include <dlfcn.h>
 #include <sys/mman.h>
 #include <sys/ioctl.h>
 #include <sys/stat.h>
