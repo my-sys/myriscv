@@ -1,4 +1,4 @@
-#include <common.h>
+#include "../common.h"
 #include <utils.h>
 #include "device.h"
 #include <SDL2/SDL.h>

@@ -1708,6 +1708,7 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+832,"riscv_soc axi_ram mem_clock", false,-1);
         tracep->declQuad(c+818,"riscv_soc axi_ram mem_raddr", false,-1, 63,0);
         tracep->declQuad(c+18,"riscv_soc axi_ram mem_rdata", false,-1, 63,0);
+        tracep->declBit(c+13,"riscv_soc axi_ram mem_rflag", false,-1);
         tracep->declQuad(c+820,"riscv_soc axi_ram mem_waddr", false,-1, 63,0);
         tracep->declQuad(c+7,"riscv_soc axi_ram mem_wdata", false,-1, 63,0);
         tracep->declQuad(c+822,"riscv_soc axi_ram mem_wmask", false,-1, 63,0);
@@ -1727,6 +1728,7 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+832,"riscv_soc axi_ram mem clock", false,-1);
         tracep->declQuad(c+818,"riscv_soc axi_ram mem raddr", false,-1, 63,0);
         tracep->declQuad(c+18,"riscv_soc axi_ram mem rdata", false,-1, 63,0);
+        tracep->declBit(c+13,"riscv_soc axi_ram mem rflag", false,-1);
         tracep->declQuad(c+820,"riscv_soc axi_ram mem waddr", false,-1, 63,0);
         tracep->declQuad(c+7,"riscv_soc axi_ram mem wdata", false,-1, 63,0);
         tracep->declQuad(c+822,"riscv_soc axi_ram mem wmask", false,-1, 63,0);

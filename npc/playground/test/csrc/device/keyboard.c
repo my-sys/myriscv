@@ -1,4 +1,4 @@
-#include "common.h"
+#include "../common.h"
 #include "device.h"
 #define KEYDOWN_MASK 0x8000
 

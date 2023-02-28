@@ -43,6 +43,11 @@ VM_USER_LDLIBS = \
 
 # User .cpp files (from .cpp's on Verilator command line)
 VM_USER_CLASSES = \
+	audio \
+	device \
+	keyboard \
+	serial \
+	vga \
 	difftest \
 	disasm \
 	emulator \
@@ -55,6 +60,7 @@ VM_USER_CLASSES = \
 # User .cpp directories (from .cpp's on Verilator command line)
 VM_USER_DIR = \
 	/home/xingk/ysyx-workbench/npc/playground/test/csrc \
+	/home/xingk/ysyx-workbench/npc/playground/test/csrc/device \
 
 
 ### Default rules...
@@ -66,6 +72,16 @@ include $(VERILATOR_ROOT)/include/verilated.mk
 ### Executable rules... (from --exe)
 VPATH += $(VM_USER_DIR)
 
+audio.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/device/audio.c
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+device.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/device/device.c
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+keyboard.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/device/keyboard.c
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+serial.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/device/serial.c
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+vga.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/device/vga.c
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 difftest.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/difftest.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 disasm.o: /home/xingk/ysyx-workbench/npc/playground/test/csrc/disasm.cc
