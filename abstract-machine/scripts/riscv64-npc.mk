@@ -18,7 +18,8 @@ AM_SRCS := riscv/npc/start.S \
            riscv/npc/ioe/gpu.c \
            riscv/npc/ioe/input.c \
            riscv/npc/ioe/ioe.c \
-           riscv/npc/ioe/timer.c
+           riscv/npc/ioe/timer.c \
+		   riscv/npc/ioe/audio.c
 
 CFLAGS  += -DISA_H=\"riscv/riscv.h\"
 CFLAGS    += -fdata-sections -ffunction-sections
