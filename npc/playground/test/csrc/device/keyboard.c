@@ -55,7 +55,7 @@ void send_key(uint8_t scancode, bool is_keydown){
 
 static uint32_t *i8042_data_port_base = NULL;
 uint64_t keyboard_read(uint64_t offset){
-	assert(offset == 0);
+	//assert(offset == 0);
 	i8042_data_port_base[0] = key_dequeue();
 	uint64_t temp = i8042_data_port_base[0];
 	return temp;

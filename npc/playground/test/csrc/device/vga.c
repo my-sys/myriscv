@@ -69,7 +69,7 @@ void vga_buffer_write(uint64_t offset,uint64_t wdata){
 //0x10002000 	vgactl_port
 //
 uint64_t vga_read(uint64_t offset){
-	assert((offset == 0) ||(offset == 4));
+	//assert((offset == 0) ||(offset == 4));
 	uint64_t temp;
 	if(offset == 0){
 		temp = vgactl_port_base[0];
