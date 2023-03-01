@@ -92,6 +92,7 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, uint8_t rflag,paddr_t wa
 		}else if((0x10003000<=raddr)&(raddr <= 0x10003FFF)){ //keyboard
 			*rdata = keyboard_read(raddr - 0x10003000);
 		}else if((0x10005000<=raddr)&(raddr <= 0x2FFFFFFF)){
+			printf("raddr %lx \n",raddr);
 			*rdata = rtc_read(raddr - 0x10005000);
 		}
 	}else{
