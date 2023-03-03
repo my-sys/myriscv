@@ -109,7 +109,9 @@ int main(int argc, char *argv[], char *envp[]) {
       exec_argv[2] = NULL;
       clear_display();
       SDL_UpdateRect(screen, 0, 0, 0, 0);
+	  printf("zzzz\n");
       execve(exec_argv[0], (char**)exec_argv, (char**)envp);
+	  printf("zz34zz\n");
       fprintf(stderr, "\033[31m[ERROR]\033[0m Exec %s failed.\n\n", exec_argv[0]);
     } else {
       fprintf(stderr, "Choose a number between %d and %d\n\n", 0, i_max);
