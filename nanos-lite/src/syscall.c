@@ -61,7 +61,6 @@ void do_syscall(Context *c) {
       c->gpr[10]=gettimeofday((struct timeval *)a[1],(struct timezone *)a[2]);
     break;
 	case SYS_execve:
-		printf("SYS_execve \n");
       c->gpr[10]= 0;naive_uload(NULL,(const char *)a[1]);
 	break;
     default: panic("Unhandled syscall ID = %d", (uint32_t)a[0]);
