@@ -2,15 +2,9 @@
 #include <cpu/difftest.h>
 #include "../local-include/reg.h"
 
-bool isa_difftest_checkregs(CPU_state *ref_r, vaddr_t pc) {
-	// temp---
-	if(csr(0x300) == 0xa00001880){
-		printf("pc %lx\n",pc);
-		return false;
-	}
-	//----
-    if(ref_r->pc != pc ){
-        printf("ref->pc 0x%lx, nemu->pc :0x%lx\n",ref_r->pc,pc);
+bool isa_difftest_checkregs(CPU_state *ref_r, vaddr_t npc,vaddr_t pc) {
+    if(ref_r->pc != npc ){
+        printf("ref->next_pc 0x%lx, nemu->next_pc :0x%lx,nemu this pc :0x%lx \n",ref_r->pc,npc,pc);
         return false;
     }
     for(int i=0;i<32;i++){
