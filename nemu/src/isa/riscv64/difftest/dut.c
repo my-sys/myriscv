@@ -4,7 +4,10 @@
 
 bool isa_difftest_checkregs(CPU_state *ref_r, vaddr_t pc) {
 	// temp---
-	if(csr(0x300) == 0xa00001880){return false;}
+	if(csr(0x300) == 0xa00001880){
+		printf("pc %lx\n",pc);
+		return false;
+	}
 	//----
     if(ref_r->pc != pc ){
         printf("ref->pc 0x%lx, nemu->pc :0x%lx\n",ref_r->pc,pc);
