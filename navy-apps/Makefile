@@ -154,7 +154,7 @@ install: app
 
 ### Clean a single project (remove `build/`)
 clean:
-	rm -rf Makefile.html $(WORK_DIR)/build/ build/
+	rm -rf Makefile.html $(WORK_DIR)/build/ build/ fsimg/bin/*
 .PHONY: clean
 
 ### Clean all sub-projects within depth 2 (and ignore errors)
@@ -166,7 +166,7 @@ $(CLEAN_ALL):
 .PHONY: clean-all $(CLEAN_ALL)
 
 ### Build fsimg and ramdisk for Nanos-lite
-APPS =
+APPS = menu
 TESTS = dummy hello file-test timer-test event-test bmp-test 
 
 fsimg: $(addprefix apps/, $(APPS)) $(addprefix tests/, $(TESTS))
