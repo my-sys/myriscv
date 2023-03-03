@@ -29,8 +29,9 @@ void context_kload(PCB *temp_pcb, void (*entry)(void *), void *arg){
 
 void context_uload(PCB *temp_pcb, char *filename){
   //naive_uload(temp_pcb,filename);
-  uintptr_t entry = loader(temp_pcb,filename);
-  temp_pcb->cp = ucontext(NULL,,entry);
+
+//   uintptr_t entry = loader(temp_pcb,filename);
+//   temp_pcb->cp = ucontext(NULL,,entry);
 }
 void init_proc() {
   //switch_boot_pcb();
@@ -43,14 +44,15 @@ void init_proc() {
   //naive_uload(NULL, "/bin/nslider");
   //naive_uload(NULL, "/bin/bird");
   //naive_uload(NULL, "/bin/pal");
-  //naive_uload(NULL,"/bin/menu");  coremark
+  naive_uload(NULL,"/bin/menu");
   //naive_uload(NULL,"/bin/typing-game");
   //naive_uload(NULL,"/bin/dhrystone");
   //naive_uload(NULL,"/bin/coremark");
 
-  context_kload(&pcb[0], hello_fun, "he");
-  context_kload(&pcb[1], hello_fun, "plx");
-  switch_boot_pcb();
+//-----------------------------PA 4-------------
+//   context_kload(&pcb[0], hello_fun, "he");
+//   context_kload(&pcb[1], hello_fun, "plx");
+//   switch_boot_pcb();
 }
 
 Context* schedule(Context *prev) {

@@ -1,5 +1,6 @@
 #include <common.h>
 #include "fs.h"
+#include "proc.h"
 // size_t write(int fd, void* buf, int count){
 //   char * temp = buf;
 //   // if(fd == 1){
@@ -26,8 +27,8 @@ void do_syscall(Context *c) {
   uintptr_t a[4];
   a[0] = c->GPR1; //a7
   a[1] = c->GPR2; //a0
-  a[2] = c->GPR3;
-  a[3] = c->GPR4;
+  a[2] = c->GPR3; //a1 
+  a[3] = c->GPR4; // a2 
   switch (a[0]) {
     case SYS_yield:yield();c->gpr[10] = 0;break;
     case SYS_exit:halt(c->gpr[10]);c->gpr[10] = 0;break;
@@ -59,6 +60,9 @@ void do_syscall(Context *c) {
     case SYS_gettimeofday:
       c->gpr[10]=gettimeofday((struct timeval *)a[1],(struct timezone *)a[2]);
     break;
+	case SYS_execve:
+      c->gpr[10]= 0;naive_uload(NULL,(const char *)a[1]);
+	break;
     default: panic("Unhandled syscall ID = %d", (uint32_t)a[0]);
   }
 }
