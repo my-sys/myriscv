@@ -106,6 +106,7 @@ int _gettimeofday(struct timeval *tv, struct timezone *tz) {
 }
 
 int _execve(const char *fname, char * const argv[], char *const envp[]) {
+  assert(0);
   int ret = _syscall_(SYS_execve,fname,argv,envp);
   //_exit(SYS_execve);
   return ret;
