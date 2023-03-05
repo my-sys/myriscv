@@ -3,8 +3,29 @@
 #include <unistd.h>
 #include <SDL.h>
 
+static void sh_printf(const char *format, ...);
 char handle_key(SDL_Event *ev);
 
+static int cmd_echo(char *args){
+	sh_printf("%s\n",args);
+	return 0;
+}
+
+static int cmd_export(char *args){
+	char *name = strtok(args, "=");
+	char *value = name + strlen(name) + 1;
+	setenv(name,value,0);
+	return 0;
+}
+static struct{
+	const char *name;
+	int (*handler) (char *);
+}cmd_table [] = {
+	{"echo",cmd_echo},
+	{"export",cmd_export},
+};
+#define ARRLEN(arr) (int)(sizeof(arr) / sizeof(arr[0]))
+#define NR_CMD ARRLEN(cmd_table)
 static void sh_printf(const char *format, ...) {
   static char buf[256] = {};
   va_list ap;
@@ -23,6 +44,28 @@ static void sh_prompt() {
 }
 
 static void sh_handle_cmd(const char *cmd) {
+	char str[50]={'\0'};
+	strcpy(str,cmd);
+	char *str_end = str + strlen(str);
+	char *cmd1 = strtok(str, " ");
+	if(cmd1 == NULL)return;
+
+	char *args = cmd1 + strlen(cmd1) + 1;
+	if (args >= str_end) {
+		args = NULL;
+	}
+	for(int i = 0; i < NR_CMD; i++){
+		if (strcmp(cmd1, cmd_table[i].name) == 0){
+			int temp = cmd_table[i].handler(args);
+			if(temp == 0)return;
+			break;
+		}
+	}
+	char *argv[2]={NULL,NULL};
+	argv[0] = cmd1;
+	if(execvp(argv[0],argv) == -1){
+		execve(argv[0],argv,NULL);
+	}
 }
 
 void builtin_sh_run() {
