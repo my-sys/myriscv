@@ -44,10 +44,12 @@ static void sh_prompt() {
 }
 
 static void sh_handle_cmd(const char *cmd) {
+	printf("cmd %s\n",cmd);
 	char str[50]={'\0'};
 	strcpy(str,cmd);
 	char *str_end = str + strlen(str);
 	char *cmd1 = strtok(str, " ");
+	printf("cmd1 %s\n",cmd1);
 	if(cmd1 == NULL)return;
 
 	char *args = cmd1 + strlen(cmd1) + 1;
