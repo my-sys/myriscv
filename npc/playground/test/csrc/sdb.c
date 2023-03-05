@@ -110,7 +110,10 @@ static int cmd_x(char *args){
     }
     char *str_num = strtok(args, " ");
     int num = atoi(str_num);
-    if(num <= 0){Emulator::
+    if(num <= 0){
+        printf("You must follow the format strictly !!! error input!!! \n");
+        return 0;
+	}
     char *str_addr = strtok(NULL," ");
     word_t paddr = strtoul(str_addr,NULL,16); 
     if(paddr == 0){
