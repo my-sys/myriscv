@@ -10,6 +10,7 @@ NPCState npc_state = { .state = NPC_STOP };
 Emulator::Emulator(){
     top = new Vriscv_soc;
     cycles = 0;
+	start_wave= true;
 #if EN_TRACE
     Verilated::traceEverOn(true);
     m_trace = new VerilatedVcdC;
@@ -23,14 +24,22 @@ void Emulator::execute_cycle(){
     top->clock = 0;
     top->eval();
 #if EN_TRACE
-    m_trace->dump(2*cycles);
+	if(start_wave){
+		m_trace->dump(2*cycles);
+	}
 #endif 
     top->clock = 1;
     top->eval();
 #if EN_TRACE
-    m_trace->dump(2*cycles + 1);
+	if(start_wave){
+		m_trace->dump(2*cycles + 1);
+		cycles++;
+	}
 #endif 
-    cycles++;	
+}
+
+void Emulator::is_satrt_wave(bool flag){
+	start_wave = flag;
 }
 
 void Emulator::execute_once(){

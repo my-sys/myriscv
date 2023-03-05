@@ -9,6 +9,7 @@ class Emulator{
 private:
     Vriscv_soc *top;
     uint64_t    cycles;
+	bool 	    start_wave;
 #if EN_TRACE
 VerilatedVcdC *m_trace;
 #endif 
@@ -29,6 +30,7 @@ public:
 	void checkregs(CPU_state *ref, vaddr_t pc);
 	bool isa_difftest_checkregs(CPU_state *ref, vaddr_t pc);
 	void isa_reg_display();
+	void is_satrt_wave(bool flag);
 };
 
 #endif

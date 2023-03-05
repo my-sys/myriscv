@@ -81,6 +81,7 @@ class Core extends Module{
 	write_back.io.in.mtvec			:= csr_reg.io.r.csr_mtvec
 	write_back.io.in.mepc 			:= csr_reg.io.r.csr_mepc
 	write_back.io.in.mstatus		:= csr_reg.io.r.csr_mstatus
+	write_back.io.in.mie 			:= csr_reg.io.r.csr_mie
 
 	write_back.io.in.is_mret		:= execute.io.out.is_mret
 	write_back.io.in.is_fence		:= execute.io.out.is_fence

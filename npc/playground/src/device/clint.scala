@@ -32,12 +32,16 @@ class Clint extends Module{
 		"h20".U ->reg_mtime,
 		"h30".U ->reg_mtimecmp
 	))
+	val is_misp = (io.bits.addr(7,0) === "h00".U)
+	val is_mtimecmp = (io.bits.addr(7,0) === "h30".U)
+
+	//val reg_time_irq = RegInit(false.B)
 	switch(reg_state){
 		is(idle){
 			when(io.valid){
 				when(io.bits.is_w){
-					reg_msip 		:= Mux(io.bits.addr(7,0) === "h00".U,io.bits.wdata(0),reg_msip)
-					reg_mtimecmp	:= Mux(io.bits.addr(7,0) === "h30".U,io.bits.wdata,reg_mtimecmp)
+					reg_msip 		:= Mux(is_misp,io.bits.wdata(0),reg_msip)
+					reg_mtimecmp	:= Mux(is_mtimecmp,io.bits.wdata,reg_mtimecmp)
 				}
 				red_rdata := temp_data
 				reg_state := busy
@@ -51,8 +55,9 @@ class Clint extends Module{
 			}
 		}
 	}
+	//reg_time_irq    := Mux(io.valid & is_mtimecmp & io.bits.is_w,false.B,Mux(reg_mtimecmp < reg_mtime,true.B,reg_time_irq))
 	io.ready 		:= reg_ready
 	io.bits.rdata 	:= red_rdata
-	io.time_irq 	:= (reg_mtimecmp < reg_mtime)
+	io.time_irq 	:= reg_mtimecmp <= reg_mtime
 	io.soft_irq 	:= reg_msip
 }

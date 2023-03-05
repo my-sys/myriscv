@@ -27,6 +27,7 @@ class WriteBack extends Module with CoreParameters{
 			val mtvec			= Input(UInt(64.W)) 
 			val mepc 			= Input(UInt(64.W))
 			val mstatus			= Input(UInt(64.W))
+			val mie 			= Input(UInt(64.W))
 
 			val is_mret			= Input(Bool())
 			val is_fence		= Input(Bool())
@@ -179,23 +180,25 @@ class WriteBack extends Module with CoreParameters{
 	reg_csr_data		:= Mux(reg_stall,reg_csr_data,Mux(io.in.is_mret,(io.in.mstatus & "hffff_ffff_ffff_ff77".U)|(Mux(io.in.mstatus(7),"h88".U,"h80".U)),io.in.csr_data))
 	reg_w_csr_en		:= Mux(reg_stall,reg_w_csr_en,Mux(io.in.is_mret,true.B,io.in.w_csr_en))
 
+	val is_time_irq 	= io.in.mstatus(3) & io.in.mie(7) & io.in.time_irq
+	val is_soft_irq 	= io.in.mstatus(3) & io.in.mie(3) & io.in.soft_irq
 	val reg_time_irq 	= RegInit(false.B)
 	val reg_soft_irq 	= RegInit(false.B)
 	val reg_mtval 		= RegInit(0.U(64.W))
 	val reg_exception 	= RegInit(0.U(5.W))
 	val reg_is_exception = RegInit(false.B)
 	val reg_commit 		= RegInit(false.B)
-	reg_time_irq		:= Mux(reg_stall,reg_time_irq | io.in.time_irq,io.in.time_irq)
-	reg_soft_irq		:= Mux(reg_stall,reg_soft_irq | io.in.soft_irq,io.in.soft_irq)
+	reg_time_irq		:= Mux(reg_stall,reg_time_irq | is_time_irq,is_time_irq)
+	reg_soft_irq		:= Mux(reg_stall,reg_soft_irq | is_soft_irq,is_soft_irq)
 	reg_mtval 			:= Mux(reg_stall,reg_mtval,io.in.mtval)
 	reg_exception		:= Mux(reg_stall,reg_exception,io.in.exception)
 	reg_is_exception	:= Mux(reg_stall,reg_is_exception,io.in.is_exception)
 
 	val reg_flush 		= RegInit(false.B)
 	val reg_next_pc		= RegInit(0.U(64.W))
-	val temp_except 	= io.in.is_exception | io.in.time_irq | io.in.soft_irq
+	val temp_except 	= io.in.is_exception | is_time_irq | is_soft_irq
 	when(reg_stall){
-		when(io.in.time_irq | io.in.soft_irq){
+		when(is_time_irq | is_soft_irq){
 			reg_flush	:= true.B
 			reg_next_pc := Cat(io.in.mtvec(63,2),0.U(2.W))
 		}.otherwise{
@@ -207,6 +210,7 @@ class WriteBack extends Module with CoreParameters{
 		reg_next_pc := Mux(temp_except,Cat(io.in.mtvec(63,2),0.U(2.W)),Mux(io.in.is_mret,io.in.mepc,0.U))
 	}
 
+//-------------------------------- handle commit------------------------------------------------------------
 	val difftest_commit 	= RegInit(false.B)
 	val reg_inst 			= RegInit(0.U(InstLen.W))
 	val reg_pc 				= RegInit(0.U(AddrLen.W))

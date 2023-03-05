@@ -57,6 +57,7 @@ class CsrRegCtrl extends Module with CoreParameters{
 			val csr_mtvec 		= Output(UInt(64.W))
 			val csr_mepc 		= Output(UInt(64.W))
 			val csr_mstatus		= Output(UInt(64.W))
+			val csr_mie 		= Output(UInt(64.W))
 		}
 	})
 	val irq = io.in.time_irq | io.in.soft_irq
@@ -139,4 +140,5 @@ class CsrRegCtrl extends Module with CoreParameters{
 	io.r.csr_mtvec	:= Mux((io.in.csr_addr === CSRAddrType.mtvec)&io.in.w_csr_en,io.in.csr_data,reg_mtvec)
 	io.r.csr_mepc 	:= Mux((io.in.csr_addr === CSRAddrType.mepc)&io.in.w_csr_en,io.in.csr_data,reg_mepc)
 	io.r.csr_mstatus := Mux((io.in.csr_addr === CSRAddrType.mstatus)&io.in.w_csr_en,io.in.csr_data,reg_mstatus)
+	io.r.csr_mie 	:= Mux((io.in.csr_addr === CSRAddrType.mie)&io.in.w_csr_en,io.in.csr_data,reg_mie)
 }

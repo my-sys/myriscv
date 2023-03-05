@@ -70,6 +70,18 @@ void isa_csr_reg_display(){
   printf("This operation has not yet been done !\n");
 }
 
+static int cmd_wave(char *args){
+    if(args == NULL ){
+        printf("You must follow the format strictly!!!! no number is input !!!!\n");
+        return 0;
+    }
+	int num = atoi(args);
+	bool flag = false;
+	if(num)flag = true;
+	Emulator::get_instance().is_satrt_wave(flag);
+	return 0;
+}
+
 static int cmd_info(char *args){
     if(args == NULL ){
         printf("You must follow the format strictly!!!! not have more space and .etc !!!!\n");
@@ -98,10 +110,7 @@ static int cmd_x(char *args){
     }
     char *str_num = strtok(args, " ");
     int num = atoi(str_num);
-    if(num <= 0){
-        printf("You must follow the format strictly !!! error input!!! \n");
-        return 0;
-    }
+    if(num <= 0){Emulator::
     char *str_addr = strtok(NULL," ");
     word_t paddr = strtoul(str_addr,NULL,16); 
     if(paddr == 0){
@@ -166,6 +175,7 @@ static struct {
   { "p", "p EXPR, Evaluate the expression EXPR", cmd_p },
   { "w", "w EXPR, set watchpoint , It means stopping the program when the expression EXPR has changed!",cmd_w },
   { "d", "d N, delete the watchpoint whoes number is N !", cmd_d },
+  { "wave","Is open wave,0 false,1 true. wave 0",cmd_wave},
 
   /* TODO: Add more commands */
 
