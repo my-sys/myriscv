@@ -63,6 +63,7 @@ static void sh_handle_cmd(const char *cmd) {
 	}
 	char *argv[2]={NULL,NULL};
 	argv[0] = cmd1;
+	printf("cmd1 %s\n",cmd1);
 	if(execvp(argv[0],argv) == -1){
 		execve(argv[0],argv,NULL);
 	}
