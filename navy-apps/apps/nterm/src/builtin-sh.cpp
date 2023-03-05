@@ -48,7 +48,8 @@ static void sh_handle_cmd(const char *cmd) {
 	char str[50]={'\0'};
 	strcpy(str,cmd);
 	char *str_end = str + strlen(str);
-	char *cmd1 = strtok(str, " ");
+	char *cmd1 = strtok(str, "\r");
+	cmd1 = strtok(cmd1," ");
 	printf("cmd1 %s\n",cmd1);
 	if(cmd1 == NULL)return;
 
