@@ -55,6 +55,10 @@ static uintptr_t loader(PCB *pcb, const char *filename) {
   // printf(" loader \n");
   int len;
   int fd = fs_open(filename,0,0);
+  if(fd == -1){
+	printf("%s no such file\n",filename);
+	assert(0);
+  }
   //printf(" fs_open %d\n",fd);
   Elf64_Ehdr elf_head;
   fs_read(fd,&elf_head,sizeof(Elf64_Ehdr));
