@@ -40,12 +40,12 @@ void init_proc() {
 
   // load program here
   //naive_uload(NULL, "/bin/bmp-test");
-  //naive_uload(NULL,"/bin/nterm");
+  naive_uload(NULL,"/bin/nterm");
   //naive_uload(NULL, "/bin/nslider");
   //naive_uload(NULL, "/bin/bird");
   //naive_uload(NULL, "/bin/pal");
   //naive_uload(NULL,"/bin/fceux");
-  naive_uload(NULL,"/bin/menu");
+  //naive_uload(NULL,"/bin/menu");
   //naive_uload(NULL,"/bin/typing-game");
   //naive_uload(NULL,"/bin/dhrystone");
   //naive_uload(NULL,"/bin/coremark");
