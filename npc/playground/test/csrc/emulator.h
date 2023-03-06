@@ -25,11 +25,12 @@ public:
     void execute(uint64_t n);
     void close();
     void reset(int n);
-	void read_regs(uint64_t* reg);
-	void read_pc_and_inst(uint64_t* reg);
+	// void read_regs(uint64_t* reg);
+	// void read_pc_and_inst(uint64_t* reg);
 	void checkregs(CPU_state *ref, vaddr_t pc);
 	bool isa_difftest_checkregs(CPU_state *ref, vaddr_t pc);
 	void isa_reg_display();
+	void isa_csr_display();
 	void is_satrt_wave(bool flag);
 };
 

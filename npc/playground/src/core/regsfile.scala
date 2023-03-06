@@ -1,6 +1,6 @@
 import chisel3._ 
 import chisel3.util._ 
-
+import chisel3.util.experimental.BoringUtils
 class RegCtrl extends CoreParameters{
     val regfile = Mem(32, UInt(RegDataLen.W))
 	// this not obey the rules (when write and read both in one cycle),you should handle by yourself
@@ -72,6 +72,11 @@ class CsrRegCtrl extends Module with CoreParameters{
 	val reg_mip 	= RegInit(0.U(64.W))
 	val reg_mcycle	= RegInit(0.U(64.W))
 	val reg_minstret = RegInit(0.U(64.W))
+
+	BoringUtils.addSource(reg_mstatus,"DIFFTEST_MSTATUS")
+	BoringUtils.addSource(reg_mcause,"DIFFTEST_MCAUSE")
+	BoringUtils.addSource(reg_mepc,"DIFFTEST_MEPC")
+	BoringUtils.addSource(reg_mtvec,"DIFFTEST_MTVEC")
 
 //---------------------------------------- write operation------------------------------------------------------------
 	when(irq){

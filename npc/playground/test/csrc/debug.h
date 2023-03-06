@@ -13,7 +13,9 @@ typedef struct{
 typedef struct{
 	word_t gpr[32];
 	vaddr_t pc;
+	vaddr_t pre_pc; // no use take up space for the order 
 	word_t	csr[32];
+	word_t inst;
 } CPU_state;
 
 extern NPCState npc_state;

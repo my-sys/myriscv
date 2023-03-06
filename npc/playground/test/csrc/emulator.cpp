@@ -42,6 +42,12 @@ void Emulator::is_satrt_wave(bool flag){
 	start_wave = flag;
 }
 
+
+//{"mstatus",   0x300, 5},
+//    {"mepc",      0x341, 13},
+//    {"mcause",    0x342, 14},
+//    {"mtval",     0x343, 15},
+//    {"mtvec",     0x305, 10},
 void Emulator::execute_once(){
 	int i = 0;
 	execute_cycle();
@@ -52,7 +58,7 @@ void Emulator::execute_once(){
 	}
 	
 	cpu.pc = top->io_difftest_pc;
-
+	cpu.inst = top->io_difftest_inst;
 #define REGS(x) cpu.gpr[x] = top->io_difftest_reg_##x
     REGS(0);REGS(1);REGS(2);REGS(3);REGS(4);REGS(5);REGS(6);REGS(7);
     REGS(8);REGS(9);REGS(10);REGS(11);REGS(12);REGS(13);REGS(14);REGS(15);
@@ -60,8 +66,12 @@ void Emulator::execute_once(){
     REGS(24);REGS(25);REGS(26);REGS(27);REGS(28);REGS(29);REGS(30);REGS(31);
 #undef REGS(x)
 
+	cpu.csr[5]  = top->io_difftest_mstatus;
+	cpu.csr[10] = top->io_difftest_mtvec;
+	cpu.csr[13] = top->io_difftest_mepc;
+	cpu.csr[14] = top->io_difftest_mcause;
 #ifdef CONFIG_DIFFTEST 
-	difftest_step(top->io_difftest_pc);
+	difftest_step(top->io_difftest_pc,top->io_difftest_irq);
 #endif
 
 #ifdef CONFIG_ITRACE
@@ -98,18 +108,16 @@ void Emulator::checkregs(CPU_state *ref, vaddr_t pc){
 
 bool Emulator::isa_difftest_checkregs(CPU_state *ref, vaddr_t pc){
 
-	if(ref->pc != pc){
-		printf("ref->pc 0x%lx, npc->pc :0x%lx\n",ref->pc,pc);
+	if(ref->pre_pc != pc){ // ref 的pre_pc 是当前pc
+		printf("ref->pc 0x%lx, npc->pc :0x%lx\n",ref->pre_pc,pc);
 		return false;
 	}
-	uint64_t gpr[35];
-	read_regs(gpr);
 	for(int i=0;i<32;i++){
-		if(ref->gpr[i] != gpr[i]){
+		if(ref->gpr[i] != cpu.gpr[i]){
 			printf("difftest false \n"); 
 			npc_state.state 	= NPC_ABORT;
 			npc_state.halt_pc	= pc;
-			printf("ref gpr[%d] = 0x%lx, gpr[%d] = 0x%lx\n",i,ref->gpr[i],i,gpr[i]);
+			printf("ref gpr[%d] = 0x%lx, gpr[%d] = 0x%lx\n",i,ref->gpr[i],i,cpu.gpr[i]);
 			return false;
 		}
 	}
@@ -127,6 +135,11 @@ void Emulator::isa_reg_display(){
     printf("$20(s4) = %lx, $21(s5) = %lx, $22(s6) = %lx, $23(s7) = %lx \n",gpr(20),gpr(21),gpr(22),gpr(23));
     printf("$24(s8) = %lx, $25(s9) = %lx, $26(s10) = %lx, $27(s11) = %lx \n",gpr(24),gpr(25),gpr(26),gpr(27));
     printf("$28(t3) = %lx, $29(t4) = %lx, $30(t5) = %lx, $31(t6) = %lx \n",gpr(28),gpr(29),gpr(30),gpr(31));  
+}
+
+void Emulator::isa_csr_display(){
+	printf("mstatus = %lx, mcause = %lx\n",cpu.csr[5],cpu.csr[14]);
+	printf("mepc = %lx, mtvec = %lx\n",cpu.csr[13],cpu.csr[10]);
 }
 
 void Emulator::execute(uint64_t n){
@@ -149,21 +162,21 @@ void Emulator::reset(int n){
     top->reset = 0;
 };
 
-void Emulator::read_regs(uint64_t* reg){
-#define REGS(x) reg[x] = top->io_difftest_reg_##x
-    REGS(0);REGS(1);REGS(2);REGS(3);REGS(4);REGS(5);REGS(6);REGS(7);
-    REGS(8);REGS(9);REGS(10);REGS(11);REGS(12);REGS(13);REGS(14);REGS(15);
-    REGS(16);REGS(17);REGS(18);REGS(19);REGS(20);REGS(21);REGS(22);REGS(23);
-    REGS(24);REGS(25);REGS(26);REGS(27);REGS(28);REGS(29);REGS(30);REGS(31);
+// void Emulator::read_regs(uint64_t* reg){
+// #define REGS(x) reg[x] = top->io_difftest_reg_##x
+//     REGS(0);REGS(1);REGS(2);REGS(3);REGS(4);REGS(5);REGS(6);REGS(7);
+//     REGS(8);REGS(9);REGS(10);REGS(11);REGS(12);REGS(13);REGS(14);REGS(15);
+//     REGS(16);REGS(17);REGS(18);REGS(19);REGS(20);REGS(21);REGS(22);REGS(23);
+//     REGS(24);REGS(25);REGS(26);REGS(27);REGS(28);REGS(29);REGS(30);REGS(31);
 
-    reg[32] = top->io_difftest_pc;
-    reg[33] = top->io_difftest_inst;
-};
+//     reg[32] = top->io_difftest_pc;
+//     reg[33] = top->io_difftest_inst;
+// };
 
-void Emulator::read_pc_and_inst(uint64_t* reg){
-    reg[0] = top->io_difftest_pc;
-    reg[1] = top->io_difftest_inst;
-}
+// void Emulator::read_pc_and_inst(uint64_t* reg){
+//     reg[0] = top->io_difftest_pc;
+//     reg[1] = top->io_difftest_inst;
+// }
 
 void Emulator::close(){
 #if EN_TRACE
