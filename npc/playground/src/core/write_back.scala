@@ -92,6 +92,8 @@ class WriteBack extends Module with CoreParameters{
 	val reg_w_rs_en 			= RegInit(false.B)
 	val reg_commit 				= RegInit(false.B)	
 
+	val reg_exuType				= RegInit(0.U(ExuTypeLen.W))
+	reg_exuType					:= Mux(reg_stall,reg_exuType,io.in.exuType)
 //----------------------------------------------------------------------------------------
 	val mem_r_data				= MuxLookup(reg_bus_addr(2,0),io.bus.bits.rdata,List(
 		"b000".U 			-> io.bus.bits.rdata,
