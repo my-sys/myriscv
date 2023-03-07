@@ -72,13 +72,13 @@ void Emulator::execute_once(){
 	cpu.csr[10] = top->io_difftest_mtvec;
 	cpu.csr[13] = top->io_difftest_mepc;
 	cpu.csr[14] = top->io_difftest_mcause;
+
+	iringbuf1[top->io_inst_counter%16] = cpu.pc;
+	iringbuf2[top->io_inst_counter%16] = cpu.inst;
 #ifdef CONFIG_DIFFTEST 
 	if(top->io_difftest_peripheral)difftest_skip_ref();
 	difftest_step(top->io_difftest_pc,top->io_difftest_irq);
 #endif
-
-	iringbuf1[top->io_inst_counter%16] = cpu.pc;
-	iringbuf2[top->io_inst_counter%16] = cpu.inst;
 
 #ifdef CONFIG_ITRACE
 	uint64_t reg[2];
@@ -119,9 +119,9 @@ void Emulator::assert_fail_msg(){
 	  p = instbuf;
       if((top->io_inst_counter%16) == i){
 		  //disassemble(p,90,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
-          printf("0x%lx, %s <------\n",iringbuf1[i],instbuf);
+          printf("0x%lx, %lx <------\n",iringbuf1[i],iringbuf2[i]);
       }else{
-		  printf("0x%lx, %s\n",iringbuf1[i],instbuf);
+		  printf("0x%lx, %s\n",iringbuf1[i],iringbuf2[i]);
 		  //disassemble(p,90,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
           
       }
