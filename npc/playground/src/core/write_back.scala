@@ -72,7 +72,7 @@ class WriteBack extends Module with CoreParameters{
 			val commit 			= Output(Bool())
 
 			val flush 			= Output(Bool())
-			val next_pc			= Output(Bool())
+			val next_pc			= Output(UInt(64.W))
 		}
 	})
 	// 本级存在的必要性，execute 计算内存地址，wb阶段进行读写。往寄存器写的也需要流到这一级的原因是，指令之间要按顺序执行不能存在越位。
