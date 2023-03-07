@@ -54,11 +54,11 @@ class CSR_EXU extends Module with CoreParameters{
 	val reg_w_csr_en 	= RegInit(false.B)
 	val temp_csr_result_data = MuxLookup(io.exuType(5,0),0.U(65.W),List(
 		CSRType.csr_csrrs	-> Cat(1.U(1.W),io.rs1_data | io.csr_data),
-		CSRType.csr_csrrsi	-> Cat(1.U(1.W),io.rs1_data	| io.imm_data),
+		CSRType.csr_csrrsi	-> Cat(1.U(1.W),io.csr_data	| io.imm_data),
 		CSRType.csr_csrrw	-> Cat(1.U(1.W),io.rs1_data),
 		CSRType.csr_csrrwi	-> Cat(1.U(1.W),Cat(io.csr_data(63,5),io.imm_data(4,0))),
-		CSRType.csr_csrrc	-> Cat(1.U(1.W),(~io.rs1_data) | io.csr_data),
-		CSRType.csr_csrrci	-> Cat(1.U(1.W),(~io.rs1_data) | io.csr_data)
+		CSRType.csr_csrrc	-> Cat(1.U(1.W),(~io.rs1_data) & io.csr_data),
+		CSRType.csr_csrrci	-> Cat(1.U(1.W),(~io.imm_data) & io.csr_data)
 	))
 
 	when(io.in_flush){

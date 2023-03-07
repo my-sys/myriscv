@@ -223,7 +223,7 @@ class WriteBack extends Module with CoreParameters{
 	difftest_inst			:= reg_inst 
 	difftest_pc				:= reg_pc 
 	inst_counter			:= Mux(reg_commit,inst_counter + 1.U,inst_counter)
-	difftest_irq			:= io.in.time_irq | io.in.soft_irq
+	difftest_irq			:= is_time_irq | is_soft_irq
 	difftest_peripheral		:= test_is_peripheral
 	BoringUtils.addSource(inst_counter, "INST_COUNTER")
 	BoringUtils.addSource(difftest_commit, "DIFFTEST_COMMIT")
