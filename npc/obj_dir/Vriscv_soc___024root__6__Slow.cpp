@@ -13776,6 +13776,15 @@ void Vriscv_soc___024root___settle__TOP__7(Vriscv_soc___024root* vlSelf) {
         vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__cross_bar_io_bus1_valid 
             = vlSelf->riscv_soc__DOT__core__DOT__cross_bar_1_io_bus1_valid;
     }
+    if (((IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back_io_out_time_irq) 
+         ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__write_back_io_out_time_irq))) {
+        ++(vlSymsp->__Vcoverage[7632]);
+        vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__write_back_io_out_time_irq 
+            = vlSelf->riscv_soc__DOT__core__DOT__write_back_io_out_time_irq;
+    }
+    vlSelf->riscv_soc__DOT__core__DOT__csr_reg__DOT__irq 
+        = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back_io_out_time_irq) 
+           | (IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back_io_out_soft_irq));
     if ((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__valid) 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT____Vtogcov__alu_exu_io_valid)))) {
         ++(vlSymsp->__Vcoverage[12370]);
@@ -14599,15 +14608,6 @@ void Vriscv_soc___024root___settle__TOP__7(Vriscv_soc___024root* vlSelf) {
                        : ((8U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_valid))
                            ? vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu_io_result_data
                            : 0ULL)));
-    if (((IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back_io_out_time_irq) 
-         ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__write_back_io_out_time_irq))) {
-        ++(vlSymsp->__Vcoverage[7632]);
-        vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__write_back_io_out_time_irq 
-            = vlSelf->riscv_soc__DOT__core__DOT__write_back_io_out_time_irq;
-    }
-    vlSelf->riscv_soc__DOT__core__DOT__csr_reg__DOT__irq 
-        = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back_io_out_time_irq) 
-           | (IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back_io_out_soft_irq));
     vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_340 
         = ((0x3fU == (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_index))
             ? (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_lru_63)

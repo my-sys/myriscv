@@ -10034,6 +10034,15 @@ void Vriscv_soc___024root___settle__TOP__5(Vriscv_soc___024root* vlSelf) {
         vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_peripheral 
             = vlSelf->io_difftest_peripheral;
     }
+    if (((IData)(vlSelf->riscv_soc__DOT__core__DOT__clint_de_io_time_irq) 
+         ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__write_back_io_in_time_irq))) {
+        ++(vlSymsp->__Vcoverage[7630]);
+        vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__write_back_io_in_time_irq 
+            = vlSelf->riscv_soc__DOT__core__DOT__clint_de_io_time_irq;
+    }
+    vlSelf->riscv_soc__DOT__core__DOT__write_back_io_out_time_irq 
+        = ((~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_stall)) 
+           & (IData)(vlSelf->riscv_soc__DOT__core__DOT__clint_de_io_time_irq));
     if ((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode_io_out_opType) 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__execute_io_in_opType)))) {
         ++(vlSymsp->__Vcoverage[6317]);
@@ -17889,12 +17898,5 @@ void Vriscv_soc___024root___settle__TOP__5(Vriscv_soc___024root* vlSelf) {
                | ((QData)((IData)((1U & (IData)((vlSelf->io_difftest_reg_12 
                                                  >> 0x3fU))))) 
                   << 0x3fU));
-    }
-    if ((1U & ((IData)(vlSelf->io_difftest_reg_13) 
-               ^ (IData)(vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_13)))) {
-        ++(vlSymsp->__Vcoverage[834]);
-        vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_13 
-            = ((0xfffffffffffffffeULL & vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_13) 
-               | (IData)((IData)((1U & (IData)(vlSelf->io_difftest_reg_13)))));
     }
 }
