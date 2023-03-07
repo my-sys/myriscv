@@ -147,10 +147,13 @@ static int decode_exec(Decode *s) {
   INSTPAT("0000000 00001 00000 000 00000 11100 11", ebreak , N, NEMUTRAP(s->pc, R(10))); // R(10) is $a0
   INSTPAT("??????? ????? 00000 000 00000 00011 11", fence  , N, );
   INSTPAT("0000000 00000 00000 001 00000 00011 11", fence_i, N, );
+#ifndef CONFIG_TARGET_SHARE
   //for spkie difftest this is wrong
   INSTPAT("0011000 00010 00000 000 00000 11100 11", mret   , N, s->dnpc = CSR_R(0x341);word_t temp = CSR_R(0x300);if((temp & 0x80) == 0){CSR_R(0x300) = (temp &0xfffffffffffffff7);}else{CSR_R(0x300) = temp | 0x8;});
+#else
   // for npc difftest this is real 
-  //INSTPAT("0011000 00010 00000 000 00000 11100 11", mret   , N, s->dnpc = CSR_R(0x341);word_t temp = CSR_R(0x300);if((temp & 0x80) == 0){CSR_R(0x300) = (temp &0xfffffffffffffff7)|0x80;}else{CSR_R(0x300) = temp | 0x88;});
+  INSTPAT("0011000 00010 00000 000 00000 11100 11", mret   , N, s->dnpc = CSR_R(0x341);word_t temp = CSR_R(0x300);if((temp & 0x80) == 0){CSR_R(0x300) = (temp &0xfffffffffffffff7)|0x80;}else{CSR_R(0x300) = temp | 0x88;});
+#endif
   INSTPAT("0001000 00010 00000 000 00000 11100 11", sret   , N, s->dnpc = CSR_R(0x141);word_t temp = CSR_R(0x100); if((temp & 0x20) == 0){CSR_R(0x100) = (temp & 0xfffffffffffffffd)|0x20;}else{CSR_R(0x100) = temp | 0x22;});
   INSTPAT("0001001 ????? ????? 000 00000 11100 11", sfence_vma, N, );
   // INSTPAT("0000000 00000 00000 000 00000 11100 11", ecall  , N, CSR_R(0x341) = s->pc; CSR_R(0x342) = 0xb; word_t temp_addr = CSR_R(0x305);s->dnpc = isa_raise_intr(11,temp_addr));
