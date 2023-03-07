@@ -80,7 +80,7 @@ void Emulator::execute_once(){
 	difftest_step(top->io_difftest_pc,top->io_difftest_irq);
 #endif
 
-#ifdef CONFIG_ITRACE
+#ifdef CONFIG_ITRACE_ALL
 	uint64_t reg[2];
 	read_pc_and_inst(reg);
 	char logbuf[128];
@@ -118,10 +118,11 @@ void Emulator::assert_fail_msg(){
   for(int i = 0; i<16; i++){
 	  p = instbuf;
       if((top->io_inst_counter%16) == i){
-		  //disassemble(p,90,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
-          printf("0x%lx, %lx <------\n",iringbuf1[i],iringbuf2[i]);
+		  disassemble(p,90,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
+          printf("0x%lx, %s <------\n",iringbuf1[i],instbuf);
       }else{
-		  printf("0x%lx, %s\n",iringbuf1[i],iringbuf2[i]);
+		  disassemble(p,90,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
+		  printf("0x%lx, %s\n",iringbuf1[i],instbuf);
 		  //disassemble(p,90,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
           
       }
