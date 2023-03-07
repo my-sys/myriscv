@@ -25,7 +25,7 @@ void difftest_regcpy(void *dut, bool direction) {
 	//memcpy(temp->csr,cpu.csr,sizeof(cpu.csr));
   }else{	// to ref 
 	memcpy(cpu.gpr,temp->gpr,sizeof(cpu.gpr));
-	printf("nemu pc %lx \n",temp->pc);
+	// printf("nemu pc %lx \n",temp->pc);
 	cpu.pc   = temp->pc;
 	//memcpy(cpu.csr,temp->csr,sizeof(cpu.csr));
   }
