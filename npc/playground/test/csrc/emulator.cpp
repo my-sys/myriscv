@@ -77,8 +77,8 @@ void Emulator::execute_once(){
 	difftest_step(top->io_difftest_pc,top->io_difftest_irq);
 #endif
 
-	iringbuf[top->io_inst_counter%16] = cpu.pc;
-	iringbuf[top->io_inst_counter%16] = cpu.inst;
+	iringbuf1[top->io_inst_counter%16] = cpu.pc;
+	iringbuf2[top->io_inst_counter%16] = cpu.inst;
 
 #ifdef CONFIG_ITRACE
 	uint64_t reg[2];
