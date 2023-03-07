@@ -37,7 +37,7 @@ class riscv_soc extends Module{
 	val difftest_mcause  = Output(UInt(64.W))
 	val difftest_mepc 	= Output(UInt(64.W))
 	val difftest_mtvec  = Output(UInt(64.W))
-	val difftest_peripheral = Output(UInt(Bool()))
+	val difftest_peripheral = Output(Bool())
   })
   val core = Module(new Core)
   val axi_ram = Module(new AXI_RAM)
