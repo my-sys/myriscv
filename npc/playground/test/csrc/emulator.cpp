@@ -113,15 +113,15 @@ void Emulator::execute_once(){
 //   }
 // }
 void Emulator::assert_fail_msg(){
-  char instbuf[20]={0};
+  char instbuf[100]={0};
   char *p;
   for(int i = 0; i<16; i++){
 	  p = instbuf;
       if((top->io_inst_counter%16) == i){
-		  disassemble(p,18,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
+		  disassemble(p,90,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
           printf("0x%lx, %s <------\n",iringbuf1[i],p);
       }else{
-		  disassemble(p,18,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
+		  disassemble(p,90,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
           printf("0x%lx, %s\n",iringbuf1[i],p);
       }
   }
