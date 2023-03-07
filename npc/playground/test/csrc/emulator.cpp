@@ -6,7 +6,7 @@
 #include "disasm.h"
 #include "./device/device.h"
 static uint64_t iringbuf1[16][64] = {0};
-static uint32_t iringbuf2[16][32] = {0};
+static uint32_t iringbuf2[16][64] = {0};
 CPU_state cpu = {};
 NPCState npc_state = { .state = NPC_STOP };
 Emulator::Emulator(){
@@ -118,10 +118,10 @@ void Emulator::assert_fail_msg(){
   for(int i = 0; i<16; i++){
 	  p = instbuf;
       if((top->io_inst_counter%16) == i){
-		  disassemble(p,18,iringbuf[i],(uint8_t *)&iringbuf2[i],4);
+		  disassemble(p,18,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
           printf("0x%lx, %s <------\n",iringbuf1[i],p);
       }else{
-		  disassemble(p,18,iringbuf[i],(uint8_t *)&iringbuf2[i],4);
+		  disassemble(p,18,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
           printf("0x%lx, %s\n",iringbuf1[i],p);
       }
   }
