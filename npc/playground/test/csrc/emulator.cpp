@@ -5,8 +5,8 @@
 #include "difftest.h"
 #include "disasm.h"
 #include "./device/device.h"
-static uint64_t iringbuf1[16][64] = {0};
-static uint32_t iringbuf2[16][64] = {0};
+static uint64_t iringbuf1[16] = {0};
+static uint32_t iringbuf2[16] = {0};
 CPU_state cpu = {};
 NPCState npc_state = { .state = NPC_STOP };
 Emulator::Emulator(){
