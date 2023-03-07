@@ -134,12 +134,15 @@ class WriteBack extends Module with CoreParameters{
 	val rs2_data		= Mux((io.in.rs2_addr === reg_rs_addr)&reg_w_rs_en,reg_result_data,io.in.rs2_data)
 	
 	// move data to the appropriate position
-	val mem_w_data 		= rs2_data << Cat(io.in.mem_addr(2,0),0.U(3.W))
+	val mem_w_data 		= rs2_data << Cat(io.in.mem_addr(2,0),0.U(3.W)) 
+
+	val test_is_peripheral = RegInit(false.B)
 	switch(reg_ls_state){
 		is(ls_idle){
 			when(io.in.mem_avalid){
 				reg_ls_state	:= ls_busy
 				reg_commit 		:= false.B
+				test_is_peripheral := Mux(io.in.mem_addr(63,31) === 0.U,true.B,false.B)
 				reg_stall 		:= true.B
 				reg_bus_addr	:= io.in.mem_addr
 				reg_bus_wdata	:= mem_w_data
@@ -153,6 +156,7 @@ class WriteBack extends Module with CoreParameters{
 				reg_w_rs_en		:= false.B
 			}.otherwise{
 				reg_commit		:= Mux(io.in.exuType === ALUType.alu_none,false.B, true.B)
+				test_is_peripheral := false.B
 				reg_rs_addr 	:= io.in.rs_addr
 				reg_result_data	:= io.in.result_data
 				reg_w_rs_en 	:= io.in.w_rs_en
@@ -214,16 +218,19 @@ class WriteBack extends Module with CoreParameters{
 	val difftest_pc 			= RegInit(0.U(AddrLen.W))
 	val inst_counter   			= RegInit(0.U(64.W))
 	val difftest_irq 			= RegInit(false.B)
+	val difftest_peripheral 	= RegInit(false.B)
 	difftest_commit			:= reg_commit
 	difftest_inst			:= reg_inst 
 	difftest_pc				:= reg_pc 
 	inst_counter			:= Mux(reg_commit,inst_counter + 1.U,inst_counter)
 	difftest_irq			:= io.in.time_irq | io.in.soft_irq
+	difftest_peripheral		:= test_is_peripheral
 	BoringUtils.addSource(inst_counter, "INST_COUNTER")
 	BoringUtils.addSource(difftest_commit, "DIFFTEST_COMMIT")
     BoringUtils.addSource(difftest_pc,"DIFFTEST_PC")
     BoringUtils.addSource(difftest_inst,"DIFFTEST_INST")
 	BoringUtils.addSource(difftest_irq,"DIFFTEST_IRQ")
+	BoringUtils.addSource(difftest_peripheral,"DIFFTEST_PERIPHERAL")
 	
 	io.out.rs_addr			:= Mux(reg_stall,0.U,reg_rs_addr)
 	io.out.result_data		:= Mux(reg_stall,0.U,reg_result_data)

@@ -71,6 +71,7 @@ void Emulator::execute_once(){
 	cpu.csr[13] = top->io_difftest_mepc;
 	cpu.csr[14] = top->io_difftest_mcause;
 #ifdef CONFIG_DIFFTEST 
+	if(top->io_difftest_peripheral)difftest_skip_ref();
 	difftest_step(top->io_difftest_pc,top->io_difftest_irq);
 #endif
 

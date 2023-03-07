@@ -56,9 +56,9 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, uint8_t rflag,paddr_t wa
 	// chiplink 0x4000_0000 ~ 0x7fff_ffff 
 	// mem 0x8000_0000 ~ 0xfbff_ffff 
 	// sdram 0xfc00_0000 ~ 0xffff_ffff 
-	if(((rflag!=0)  && (raddr < 0x80000000)) || ((wen != 0)&&(waddr<0x80000000))){
-		difftest_skip_ref();
-	}
+	// if(((rflag!=0)  && (raddr < 0x80000000)) || ((wen != 0)&&(waddr<0x80000000))){
+	// 	difftest_skip_ref();
+	// }
 	if(waddr < 0x80000000){
 		if(wen){
 			if(waddr < 0x01ffffff){ //VGA buffer

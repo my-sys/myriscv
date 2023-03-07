@@ -37,6 +37,7 @@ class riscv_soc extends Module{
 	val difftest_mcause  = Output(UInt(64.W))
 	val difftest_mepc 	= Output(UInt(64.W))
 	val difftest_mtvec  = Output(UInt(64.W))
+	val difftest_peripheral = Output(UInt(Bool()))
   })
   val core = Module(new Core)
   val axi_ram = Module(new AXI_RAM)
@@ -53,6 +54,7 @@ class riscv_soc extends Module{
   val difftest_mcause   = WireInit(0.U(64.W))
   val difftest_mepc     = WireInit(0.U(64.W))
   val difftest_mtvec    = WireInit(0.U(64.W))
+  val difftest_peripheral = WireInit(false.B)
   
   BoringUtils.addSink(difftest_reg,"DIFFTEST_REG")
   BoringUtils.addSink(difftest_pc,"DIFFTEST_PC")
@@ -65,6 +67,7 @@ class riscv_soc extends Module{
   BoringUtils.addSink(difftest_mcause, "DIFFTEST_MCAUSE")
   BoringUtils.addSink(difftest_mepc, "DIFFTEST_MEPC")
   BoringUtils.addSink(difftest_mtvec, "DIFFTEST_MTVEC")
+  BoringUtils.addSink(difftest_peripheral, "DIFFTEST_PERIPHERAL")
 
   io.difftest_reg     := difftest_reg
   io.difftest_pc      := difftest_pc
@@ -77,6 +80,7 @@ class riscv_soc extends Module{
   io.difftest_mcause	:= difftest_mcause
   io.difftest_mepc		:= difftest_mepc
   io.difftest_mtvec		:= difftest_mtvec
+  io.difftest_peripheral := difftest_peripheral
 
 	axi_ram.io.ram_bus <> core.io.axi_bus
 //   core.io.in.rdata    :=  axi_ram.io.rdata
