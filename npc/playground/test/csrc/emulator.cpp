@@ -5,6 +5,8 @@
 #include "difftest.h"
 #include "disasm.h"
 #include "./device/device.h"
+static uint64_t iringbuf1[16][64] = {0};
+static uint32_t iringbuf2[16][32] = {0};
 CPU_state cpu = {};
 NPCState npc_state = { .state = NPC_STOP };
 Emulator::Emulator(){
@@ -75,6 +77,9 @@ void Emulator::execute_once(){
 	difftest_step(top->io_difftest_pc,top->io_difftest_irq);
 #endif
 
+	iringbuf[top->io_inst_counter%16] = cpu.pc;
+	iringbuf[top->io_inst_counter%16] = cpu.inst;
+
 #ifdef CONFIG_ITRACE
 	uint64_t reg[2];
 	read_pc_and_inst(reg);
@@ -99,11 +104,35 @@ void Emulator::execute_once(){
 	device_update();
 };
 
+// void aaa(int j){
+//   char instbuf[20]={0};
+//   char *p = instbuf;
+//   uint8_t *inst = (uint8_t *)&iringbuf2[j];
+//   for (int i = 0; i < 4; i ++) {
+// 	p += snprintf(p, 4, " %02x", inst[i]);
+//   }
+// }
+void Emulator::assert_fail_msg(){
+  char instbuf[20]={0};
+  char *p;
+  for(int i = 0; i<16; i++){
+	  p = instbuf;
+      if((top->io_inst_counter%16) == i){
+		  disassemble(p,18,iringbuf[i],(uint8_t *)&iringbuf2[i],4);
+          printf("0x%lx, %s <------\n",iringbuf1[i],p);
+      }else{
+		  disassemble(p,18,iringbuf[i],(uint8_t *)&iringbuf2[i],4);
+          printf("0x%lx, %s\n",iringbuf1[i],p);
+      }
+  }
+}
+
 void Emulator::checkregs(CPU_state *ref, vaddr_t pc){
 	if(!isa_difftest_checkregs(ref, pc)){
 		npc_state.state 	= NPC_ABORT;
 		npc_state.halt_pc	= pc;
 		isa_reg_display();
+		assert_fail_msg();
 	}
 }
 

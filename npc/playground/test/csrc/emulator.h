@@ -27,6 +27,7 @@ public:
     void reset(int n);
 	void read_regs(uint64_t* reg);
 	// void read_pc_and_inst(uint64_t* reg);
+	void assert_fail_msg();
 	void checkregs(CPU_state *ref, vaddr_t pc);
 	bool isa_difftest_checkregs(CPU_state *ref, vaddr_t pc);
 	void isa_reg_display();
