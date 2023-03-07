@@ -45,10 +45,10 @@ void difftest_exec(uint64_t n) {
 void difftest_raise_intr(void *dut, bool direction) {
 	CPU_state* temp = (CPU_state*)dut;
 	if(direction == true){
-		cpu.csr[5] = temp.csr[5]; //mstatus
-		cpu.csr[14] = temp.csr[14];//mcause
-		cpu.csr[13] = temp.csr[13];// mpec
-		cpu.pc 	= temp.csr[10]; //mtvec
+		cpu.csr[5] = temp->csr[5]; //mstatus
+		cpu.csr[14] = temp->csr[14];//mcause
+		cpu.csr[13] = temp->csr[13];// mpec
+		cpu.pc 	= temp->csr[10]; //mtvec
 	}
 }
 
