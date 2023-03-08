@@ -161,7 +161,7 @@ class WriteBack extends Module with CoreParameters{
 				reg_w_rs_en		:= false.B
 				
 			}.otherwise{
-				reg_commit		:= Mux(is_commit,false.B, true.B)
+				reg_commit		:= Mux(is_commit,true.B, false.B)
 				test_is_peripheral := false.B
 				reg_rs_addr 	:= io.in.rs_addr
 				reg_result_data	:= io.in.result_data
