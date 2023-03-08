@@ -141,7 +141,7 @@ class WriteBack extends Module with CoreParameters{
 	
 	val test_is_peripheral = RegInit(false.B)
 	
-	val is_commit 		= io.in.exuType === ALUType.alu_none
+	val is_commit 		= io.in.exuType =/= ALUType.alu_none
 	switch(reg_ls_state){
 		is(ls_idle){
 			when(io.in.mem_avalid){
