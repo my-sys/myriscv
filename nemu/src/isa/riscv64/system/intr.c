@@ -8,7 +8,7 @@ word_t isa_raise_intr(word_t NO, vaddr_t epc) {
   csr(0x341) = epc;
   // mcause
   csr(0x342) = NO;
-#ifndef CONFIG_TARGET_SHARE
+#ifdef CONFIG_TARGET_SHARE
   // mstatus
   if(csr(0x300) & 0x8){
 	csr(0x300) = (csr(0x300) &0xffffffffffffff77)|0x1880;
