@@ -1,16 +1,17 @@
 import chisel3._ 
 import chisel3.util._ 
 import chisel3.util.experimental.BoringUtils
+
 class WriteBack extends Module with CoreParameters{
 	val io = IO(new Bundle{
 		val in = new Bundle{
-			// from execute 
+			// from execute
 			val rs_addr         = Input(UInt(RegAddrLen.W))
 			val result_data     = Input(UInt(RegDataLen.W))
 			val w_rs_en         = Input(Bool())
 			val opType			= Input(UInt(OpTypeLen.W))
 			val exuType			= Input(UInt(ExuTypeLen.W))
-			
+
 			// from execute
 			val rs2_addr 		= Input(UInt(RegAddrLen.W))
 			val rs2_data 		= Input(UInt(RegDataLen.W))
@@ -19,6 +20,8 @@ class WriteBack extends Module with CoreParameters{
 			val w_mem_en        = Input(Bool())
 			val pc 				= Input(UInt(AddrLen.W))
 			val inst 			= Input(UInt(InstLen.W))
+			val next_pc 		= Input(UInt(AddrLen.W))
+			val valid_next_pc 	= Input(Bool())
 			
 			val csr_addr 		= Input(UInt(12.W))
 			val csr_data 		= Input(UInt(64.W))
@@ -27,11 +30,11 @@ class WriteBack extends Module with CoreParameters{
 			val mepc 			= Input(UInt(64.W))
 			val mstatus 		= Input(UInt(64.W))
 			val mie 			= Input(UInt(64.W))
-			
+
 			val is_mret			= Input(Bool())
 			val is_fence		= Input(Bool())
 			val is_fence_i		= Input(Bool())
-			
+
 			val time_irq		= Input(Bool())
 			val soft_irq 		= Input(Bool())
 			val mtval 			= Input(UInt(64.W))
@@ -69,16 +72,16 @@ class WriteBack extends Module with CoreParameters{
 			val exception		= Output(UInt(5.W))
 			val is_exception	= Output(Bool())
 			val pc 				= Output(UInt(64.W))
+			val next_pc			= Output(UInt(64.W))
 			val commit 			= Output(Bool())
 
 			val flush 			= Output(Bool())
-			val next_pc			= Output(UInt(64.W))
-		}
+			val flush_pc		= Output(UInt(64.W))
+		}	
 	})
 	// 本级存在的必要性，execute 计算内存地址，wb阶段进行读写。往寄存器写的也需要流到这一级的原因是，指令之间要按顺序执行不能存在越位。
-	
 	val reg_stall				= RegInit(false.B)
-
+	
 	val reg_bus_addr 			= RegInit(0.U(64.W))
 	val reg_bus_rdata 			= RegInit(0.U(64.W))
 	val reg_bus_wdata 			= RegInit(0.U(64.W))
@@ -90,8 +93,8 @@ class WriteBack extends Module with CoreParameters{
 	val reg_rs_addr				= RegInit(0.U(RegAddrLen.W))
 	val reg_result_data 		= RegInit(0.U(RegDataLen.W))
 	val reg_w_rs_en 			= RegInit(false.B)
-	val reg_commit 				= RegInit(false.B)	
-
+	val reg_commit 				= RegInit(false.B)
+	
 	val reg_exuType				= RegInit(0.U(ExuTypeLen.W))
 	reg_exuType					:= Mux(reg_stall,reg_exuType,io.in.exuType)
 //----------------------------------------------------------------------------------------
@@ -135,8 +138,10 @@ class WriteBack extends Module with CoreParameters{
 	
 	// move data to the appropriate position
 	val mem_w_data 		= rs2_data << Cat(io.in.mem_addr(2,0),0.U(3.W)) 
-
+	
 	val test_is_peripheral = RegInit(false.B)
+	
+	val is_commit 		= io.in.exuType === ALUType.alu_none
 	switch(reg_ls_state){
 		is(ls_idle){
 			when(io.in.mem_avalid){
@@ -154,13 +159,14 @@ class WriteBack extends Module with CoreParameters{
 				reg_rs_addr		:= io.in.rs_addr
 				reg_result_data := 0.U
 				reg_w_rs_en		:= false.B
+				
 			}.otherwise{
-				reg_commit		:= Mux(io.in.exuType === ALUType.alu_none,false.B, true.B)
+				reg_commit		:= Mux(is_commit,false.B, true.B)
 				test_is_peripheral := false.B
 				reg_rs_addr 	:= io.in.rs_addr
 				reg_result_data	:= io.in.result_data
 				reg_w_rs_en 	:= io.in.w_rs_en
-				reg_ls_state	:= ls_idle
+				reg_ls_state	:= ls_idle	
 			}
 		}
 		is(ls_busy){
@@ -175,20 +181,50 @@ class WriteBack extends Module with CoreParameters{
 				reg_bus_valid	:= false.B
 				//reg_rs_addr
 				reg_result_data	:= mem_data_result
-				reg_w_rs_en		:= !reg_bus_is_w				
+				reg_w_rs_en		:= !reg_bus_is_w		
 			}
 		}
 	}
-//----------------------------------- handle exception-----------------------------
 	val reg_csr_addr 	= RegInit(0.U(64.W))
 	val reg_csr_data 	= RegInit(0.U(64.W))
 	val reg_w_csr_en 	= RegInit(false.B)
 	reg_csr_addr		:= Mux(reg_stall,reg_csr_addr,Mux(io.in.is_mret,CSRAddrType.mstatus,io.in.csr_addr))
 	reg_csr_data		:= Mux(reg_stall,reg_csr_data,Mux(io.in.is_mret,(io.in.mstatus & "hffff_ffff_ffff_ff77".U)|(Mux(io.in.mstatus(7),"h88".U,"h80".U)),io.in.csr_data))
 	reg_w_csr_en		:= Mux(reg_stall,reg_w_csr_en,Mux(io.in.is_mret,true.B,io.in.w_csr_en))
-
+//----------------------------------- handle exception-----------------------------
 	val is_time_irq 	= io.in.mstatus(3) & io.in.mie(7) & io.in.time_irq
 	val is_soft_irq 	= io.in.mstatus(3) & io.in.mie(3) & io.in.soft_irq
+	val is_irq 			= is_time_irq | is_soft_irq
+	val reg_flush 		= RegInit(false.B)
+	val reg_flush_pc	= RegInit(0.U(64.W))
+	val temp_except 	= io.in.is_exception | is_time_irq | is_soft_irq
+	val reg_time_irq 	= RegInit(false.B)
+	val reg_soft_irq 	= RegInit(false.B)
+	// 中断的处理有些问题
+	when(reg_stall){
+		when(io.bus.fire){
+			reg_flush	 := Mux(is_irq,true.B,false.B)
+			reg_flush_pc := Mux(is_irq,Cat(io.in.mtvec(63,2),0.U(2.W)),0.U)
+			reg_time_irq := is_time_irq
+			reg_soft_irq := is_soft_irq
+		}.otherwise{
+			reg_flush	 := false.B 
+			reg_time_irq := false.B 
+			reg_soft_irq := false.B 
+		}
+	}.otherwise{
+		when(!io.in.mem_avalid & is_commit){
+			reg_flush	:= Mux(temp_except | io.in.is_mret,true.B,false.B)
+			reg_flush_pc := Mux(temp_except,Cat(io.in.mtvec(63,2),0.U(2.W)),Mux(io.in.is_mret,io.in.mepc,0.U))
+			reg_time_irq := is_time_irq
+			reg_soft_irq := is_soft_irq
+		}.otherwise{
+			reg_flush	:= false.B
+			reg_time_irq := false.B 
+			reg_soft_irq := false.B 
+		}
+	}
+	
 	val reg_mtval 		= RegInit(0.U(64.W))
 	val reg_exception 	= RegInit(0.U(5.W))
 	val reg_is_exception = RegInit(false.B)
@@ -197,21 +233,13 @@ class WriteBack extends Module with CoreParameters{
 	reg_exception		:= Mux(reg_stall,reg_exception,io.in.exception)
 	reg_is_exception	:= Mux(reg_stall,reg_is_exception,io.in.is_exception)
 	
-	val reg_flush 		= RegInit(false.B)
-	val reg_next_pc		= RegInit(0.U(64.W))
-	val temp_except 	= io.in.is_exception | is_time_irq | is_soft_irq
-	when(reg_stall){
-		reg_flush	:= reg_flush
-		reg_next_pc := reg_next_pc
-	}.otherwise{
-		reg_flush	:= Mux(temp_except | io.in.is_mret,true.B,false.B)
-		reg_next_pc := Mux(temp_except,Cat(io.in.mtvec(63,2),0.U(2.W)),Mux(io.in.is_mret,io.in.mepc,0.U))	
-	}
-	
 	val reg_inst 			= RegInit(0.U(InstLen.W))
 	val reg_pc 				= RegInit(0.U(AddrLen.W))
+	val reg_next_pc 		= RegInit(0.U(64.W))
+	reg_next_pc				:= Mux(reg_stall,reg_next_pc,mux(io.in.valid_next_pc,io.in.next_pc,io.in.pc + 4))
 	reg_pc 					:= Mux(reg_stall,reg_pc,io.in.pc)
-	reg_inst 				:= Mux(reg_stall,reg_inst,io.in.inst)	
+	reg_inst 				:= Mux(reg_stall,reg_inst,io.in.inst)
+	
 //-------------------------------- handle commit------------------------------------------------------------
 	val difftest_commit 		= RegInit(false.B)
 	val difftest_inst 			= RegInit(0.U(InstLen.W))
@@ -223,7 +251,7 @@ class WriteBack extends Module with CoreParameters{
 	difftest_inst			:= reg_inst 
 	difftest_pc				:= reg_pc 
 	inst_counter			:= Mux(reg_commit,inst_counter + 1.U,inst_counter)
-	difftest_irq			:= is_time_irq | is_soft_irq
+	difftest_irq			:= reg_time_irq | reg_soft_irq
 	difftest_peripheral		:= test_is_peripheral
 	BoringUtils.addSource(inst_counter, "INST_COUNTER")
 	BoringUtils.addSource(difftest_commit, "DIFFTEST_COMMIT")
@@ -238,14 +266,15 @@ class WriteBack extends Module with CoreParameters{
 	io.out.csr_addr 		:= reg_csr_addr
 	io.out.csr_data			:= reg_csr_data
 	io.out.w_csr_en			:= Mux(reg_stall,false.B,reg_w_csr_en)
-	io.out.time_irq			:= Mux(reg_stall,false.B,io.in.time_irq)
-	io.out.soft_irq			:= Mux(reg_stall,false.B,io.in.soft_irq)
+	io.out.time_irq			:= Mux(reg_stall,false.B,reg_time_irq)
+	io.out.soft_irq			:= Mux(reg_stall,false.B,reg_soft_irq)
 	io.out.mtval			:= reg_mtval
 	io.out.exception		:= reg_exception
 	io.out.is_exception		:= reg_is_exception
 	io.out.pc 				:= reg_pc 
 	io.out.commit 			:= reg_commit
 	io.out.flush			:= Mux(reg_stall,false.B,reg_flush)
+	io.out.flush_pc			:= reg_flush_pc
 	io.out.next_pc			:= reg_next_pc
 	
 	io.bus.bits.wdata 		:= reg_bus_wdata

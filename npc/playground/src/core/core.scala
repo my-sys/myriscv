@@ -22,7 +22,7 @@ class Core extends Module{
 	fetch.io.in.de_stall		:= decode.io.out.stall
 	fetch.io.in.wb_stall		:= write_back.io.out.stall
 	fetch.io.in.ex_stall		:= execute.io.out.stall
-	fetch.io.in.next_pc			:= Mux(write_back.io.out.flush,write_back.io.out.next_pc,execute.io.out.next_pc)
+	fetch.io.in.next_pc			:= Mux(write_back.io.out.flush,write_back.io.out.flush_pc,execute.io.out.next_pc)
 	fetch.io.in.valid_next_pc	:= execute.io.out.valid_next_pc | write_back.io.out.flush
 	fetch.io.in.flush			:= execute.io.out.flush | write_back.io.out.flush
 
@@ -74,6 +74,8 @@ class Core extends Module{
 	write_back.io.in.w_mem_en		:= execute.io.out.w_mem_en
 	write_back.io.in.pc 			:= execute.io.out.pc
 	write_back.io.in.inst 			:= execute.io.out.inst
+	write_back.io.in.next_pc		:= execute.io.out.next_pc
+	write_back.io.in.valid_next_pc  := execute.io.out.valid_next_pc
 
 	write_back.io.in.csr_addr		:= execute.io.out.csr_addr
 	write_back.io.in.csr_data		:= execute.io.out.csr_data
@@ -97,6 +99,7 @@ class Core extends Module{
 	csr_reg.io.in.csr_data			:= write_back.io.out.csr_data
 	csr_reg.io.in.w_csr_en			:= write_back.io.out.w_csr_en
 	csr_reg.io.in.pc				:= write_back.io.out.pc 
+	csr_reg.io.in.next_pc			:= write_back.io.out.next_pc
 	csr_reg.io.in.time_irq			:= write_back.io.out.time_irq
 	csr_reg.io.in.soft_irq			:= write_back.io.out.soft_irq
 	csr_reg.io.in.mtval				:= write_back.io.out.mtval

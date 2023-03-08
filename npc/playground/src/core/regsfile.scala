@@ -43,6 +43,7 @@ class CsrRegCtrl extends Module with CoreParameters{
 			val csr_data 	= Input(UInt(64.W))
 			val w_csr_en		= Input(Bool())
 			val pc 				= Input(UInt(64.W))
+			val next_pc 	= Input(UInt(64.W))
 
 			val time_irq		= Input(Bool())
 			val soft_irq 		= Input(Bool())
@@ -79,14 +80,14 @@ class CsrRegCtrl extends Module with CoreParameters{
 	BoringUtils.addSource(reg_mtvec,"DIFFTEST_MTVEC")
 
 //---------------------------------------- write operation------------------------------------------------------------
-	when(irq){
-		reg_mepc 	:= Mux(io.in.is_exception,io.in.pc,io.in.pc + 4.U)
-		reg_mcause 	:= Cat("h400_0000_0000_0000".U(59.W),Mux(io.in.time_irq,7.U(5.W),3.U(5.W)))
-		reg_mtval 	:= io.in.mtval
-		reg_mstatus := (reg_mstatus &"hffff_ffff_ffff_ff77".U) | (Mux(reg_mstatus(3),"h1880".U(64.W),"h1800".U(64.W)))
-	}.elsewhen(io.in.is_exception){
+	when(io.in.is_exception){
 		reg_mepc 	:= io.in.pc
 		reg_mcause 	:= io.in.exception
+		reg_mtval 	:= io.in.mtval
+		reg_mstatus := (reg_mstatus &"hffff_ffff_ffff_ff77".U) | (Mux(reg_mstatus(3),"h1880".U(64.W),"h1800".U(64.W)))
+	}.elsewhen(irq){
+		reg_mepc 	:= Mux(io.in.is_exception,io.in.pc,io.in.next_pc)
+		reg_mcause 	:= Cat("h400_0000_0000_0000".U(59.W),Mux(io.in.time_irq,7.U(5.W),3.U(5.W)))
 		reg_mtval 	:= io.in.mtval
 		reg_mstatus := (reg_mstatus &"hffff_ffff_ffff_ff77".U) | (Mux(reg_mstatus(3),"h1880".U(64.W),"h1800".U(64.W)))
 	}.otherwise{
