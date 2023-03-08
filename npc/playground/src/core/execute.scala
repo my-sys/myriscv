@@ -127,8 +127,8 @@ class Exu extends Module with CoreParameters{
 	val reg_w_csr_en		= csr_exu.io.w_csr_en
 	val reg_csr_data 		= csr_exu.io.csr_result
 //  解决数据相关冲突 
-	val rs1_data = Mux((reg_rs_addr === io.in.rs1_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs1_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs1_data))
-	val rs2_data = Mux((reg_rs_addr === io.in.rs2_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs2_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs2_data))	
+	val rs1_data = Mux(io.in.rs1_addr === 0.U,0.U,Mux((reg_rs_addr === io.in.rs1_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs1_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs1_data)))
+	val rs2_data = Mux(io.in.rs2_addr === 0.U,0.U,Mux((reg_rs_addr === io.in.rs2_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs2_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs2_data)))	
 	val csr_data = Mux((reg_csr_addr === io.in.csr_addr)&reg_w_csr_en,reg_csr_data,Mux((io.in.wb_csr_addr === io.in.csr_addr)&io.in.wb_w_csr_en,io.in.wb_csr_data,io.in.csr_data))
 	when(io.in.flush){
 		reg_rs_addr				:= 0.U
