@@ -236,7 +236,7 @@ class WriteBack extends Module with CoreParameters{
 	val reg_inst 			= RegInit(0.U(InstLen.W))
 	val reg_pc 				= RegInit(0.U(AddrLen.W))
 	val reg_next_pc 		= RegInit(0.U(64.W))
-	reg_next_pc				:= Mux(reg_stall,reg_next_pc,mux(io.in.valid_next_pc,io.in.next_pc,io.in.pc + 4))
+	reg_next_pc				:= Mux(reg_stall,reg_next_pc,Mux(io.in.valid_next_pc,io.in.next_pc,io.in.pc + 4.U))
 	reg_pc 					:= Mux(reg_stall,reg_pc,io.in.pc)
 	reg_inst 				:= Mux(reg_stall,reg_inst,io.in.inst)
 	
