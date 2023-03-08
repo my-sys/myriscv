@@ -50,9 +50,7 @@ void difftest_raise_intr(void *dut, bool direction) {
 		cpu.csr[14] = temp->csr[14];//mcause
 		cpu.csr[13] = temp->csr[13];// mpec
 		cpu.pc 	= temp->csr[10]; //mtvec
-		printf("raise_intr2\n");
 	}
-	printf("raise_intr1\n");
 }
 
 void difftest_init() {

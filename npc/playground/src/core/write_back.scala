@@ -81,6 +81,7 @@ class WriteBack extends Module with CoreParameters{
 	})
 	// 本级存在的必要性，execute 计算内存地址，wb阶段进行读写。往寄存器写的也需要流到这一级的原因是，指令之间要按顺序执行不能存在越位。
 	val reg_stall				= RegInit(false.B)
+	val reg_flush 				= RegInit(false.B)
 	
 	val reg_bus_addr 			= RegInit(0.U(64.W))
 	val reg_bus_rdata 			= RegInit(0.U(64.W))
@@ -96,7 +97,13 @@ class WriteBack extends Module with CoreParameters{
 	val reg_commit 				= RegInit(false.B)
 	
 	val reg_exuType				= RegInit(0.U(ExuTypeLen.W))
-	reg_exuType					:= Mux(reg_stall,reg_exuType,io.in.exuType)
+
+	when(reg_flush){
+		reg_exuType := 0.U
+	}.otherwise{
+		reg_exuType					:= Mux(reg_stall,reg_exuType,io.in.exuType)
+	}
+	
 //----------------------------------------------------------------------------------------
 	val mem_r_data				= MuxLookup(reg_bus_addr(2,0),io.bus.bits.rdata,List(
 		"b000".U 			-> io.bus.bits.rdata,
@@ -144,7 +151,12 @@ class WriteBack extends Module with CoreParameters{
 	val is_commit 		= io.in.exuType =/= ALUType.alu_none
 	switch(reg_ls_state){
 		is(ls_idle){
-			when(io.in.mem_avalid){
+			when(reg_flush){
+				reg_commit		:= false.B
+				test_is_peripheral := false.B
+				reg_w_rs_en 	:= false.B
+				reg_ls_state	:= ls_idle	
+			}.elsewhen(io.in.mem_avalid){
 				reg_ls_state	:= ls_busy
 				reg_commit 		:= false.B
 				test_is_peripheral := Mux(io.in.mem_addr(63,31) === 0.U,true.B,false.B)
@@ -191,11 +203,16 @@ class WriteBack extends Module with CoreParameters{
 	reg_csr_addr		:= Mux(reg_stall,reg_csr_addr,Mux(io.in.is_mret,CSRAddrType.mstatus,io.in.csr_addr))
 	reg_csr_data		:= Mux(reg_stall,reg_csr_data,Mux(io.in.is_mret,(io.in.mstatus & "hffff_ffff_ffff_ff77".U)|(Mux(io.in.mstatus(7),"h88".U,"h80".U)),io.in.csr_data))
 	reg_w_csr_en		:= Mux(reg_stall,reg_w_csr_en,Mux(io.in.is_mret,true.B,io.in.w_csr_en))
+	when(reg_flush){
+		reg_w_csr_en	:= false.B
+	}.otherwise{
+		reg_w_csr_en		:= Mux(reg_stall,reg_w_csr_en,Mux(io.in.is_mret,true.B,io.in.w_csr_en))
+	}
 //----------------------------------- handle exception-----------------------------
 	val is_time_irq 	= io.in.mstatus(3) & io.in.mie(7) & io.in.time_irq
 	val is_soft_irq 	= io.in.mstatus(3) & io.in.mie(3) & io.in.soft_irq
 	val is_irq 			= is_time_irq | is_soft_irq
-	val reg_flush 		= RegInit(false.B)
+	
 	val reg_flush_pc	= RegInit(0.U(64.W))
 	val temp_except 	= io.in.is_exception | is_time_irq | is_soft_irq
 	val reg_time_irq 	= RegInit(false.B)
@@ -213,7 +230,11 @@ class WriteBack extends Module with CoreParameters{
 			reg_soft_irq := false.B 
 		}
 	}.otherwise{
-		when(!io.in.mem_avalid & is_commit){
+		when(reg_flush){
+			reg_flush	:= false.B
+			reg_time_irq := false.B 
+			reg_soft_irq := false.B 
+		}.elsewhen(!io.in.mem_avalid & is_commit){
 			reg_flush	:= Mux(temp_except | io.in.is_mret,true.B,false.B)
 			reg_flush_pc := Mux(temp_except,Cat(io.in.mtvec(63,2),0.U(2.W)),Mux(io.in.is_mret,io.in.mepc,0.U))
 			reg_time_irq := is_time_irq
@@ -229,9 +250,16 @@ class WriteBack extends Module with CoreParameters{
 	val reg_exception 	= RegInit(0.U(5.W))
 	val reg_is_exception = RegInit(false.B)
 	
-	reg_mtval 			:= Mux(reg_stall,reg_mtval,io.in.mtval)
-	reg_exception		:= Mux(reg_stall,reg_exception,io.in.exception)
-	reg_is_exception	:= Mux(reg_stall,reg_is_exception,io.in.is_exception)
+
+	when(reg_flush){
+		reg_mtval 			:= 0.U
+		reg_exception		:= 0.U
+		reg_is_exception	:= 0.U
+	}.otherwise{
+		reg_mtval 			:= Mux(reg_stall,reg_mtval,io.in.mtval)
+		reg_exception		:= Mux(reg_stall,reg_exception,io.in.exception)
+		reg_is_exception	:= Mux(reg_stall,reg_is_exception,io.in.is_exception)
+	}
 	
 	val reg_inst 			= RegInit(0.U(InstLen.W))
 	val reg_pc 				= RegInit(0.U(AddrLen.W))
@@ -239,6 +267,15 @@ class WriteBack extends Module with CoreParameters{
 	reg_next_pc				:= Mux(reg_stall,reg_next_pc,Mux(io.in.valid_next_pc,io.in.next_pc,io.in.pc + 4.U))
 	reg_pc 					:= Mux(reg_stall,reg_pc,io.in.pc)
 	reg_inst 				:= Mux(reg_stall,reg_inst,io.in.inst)
+	when(reg_flush){
+		reg_next_pc				:= 0.U
+		reg_pc 					:= 0.U
+		reg_inst 				:= 0.U
+	}.otherwise{
+		reg_next_pc				:= Mux(reg_stall,reg_next_pc,Mux(io.in.valid_next_pc,io.in.next_pc,io.in.pc + 4.U))
+		reg_pc 					:= Mux(reg_stall,reg_pc,io.in.pc)
+		reg_inst 				:= Mux(reg_stall,reg_inst,io.in.inst)
+	}
 	
 //-------------------------------- handle commit------------------------------------------------------------
 	val difftest_commit 		= RegInit(false.B)

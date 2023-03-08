@@ -20,8 +20,8 @@ static Context* (*user_handler)(Event, Context*) = NULL;
 //  0			7 		// 存储/原子指令访问错误异常
 //  0			8 		// 用户模式环境调用异常
 //  0			11 		// 机器模式环境调用异常
-#define MA_SOFT_IRQ 0x1000000000000003
-#define MA_TIME_IRQ 0x1000000000000007
+#define MA_SOFT_IRQ 0x8000000000000003
+#define MA_TIME_IRQ 0x8000000000000007
 #define MA_ECALL 	0xb
 Context* __am_irq_handle(Context *c) {
   if (user_handler) {
