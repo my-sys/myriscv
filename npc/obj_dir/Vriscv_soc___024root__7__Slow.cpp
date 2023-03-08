@@ -8242,11 +8242,11 @@ void Vriscv_soc___024root___settle__TOP__8(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT__core__DOT__fetch_io_in_flush 
         = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_flush) 
            | (IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back_io_out_flush));
-    if (((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType)) 
+    if (((0U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType)) 
          ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT____Vtogcov__is_commit))) {
         ++(vlSymsp->__Vcoverage[16324]);
         vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT____Vtogcov__is_commit 
-            = (0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType));
+            = (0U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType));
     }
     if ((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType) 
                ^ (IData)(vlSelf->riscv_soc__DOT__core__DOT____Vtogcov__execute_io_out_exuType)))) {

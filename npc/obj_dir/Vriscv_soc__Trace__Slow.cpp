@@ -2512,7 +2512,7 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->fullQData(oldp+798,(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__rs2_data),64);
         tracep->fullWData(oldp+800,(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__mem_w_data),127);
         tracep->fullBit(oldp+804,(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__test_is_peripheral));
-        tracep->fullBit(oldp+805,((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType))));
+        tracep->fullBit(oldp+805,((0U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType))));
         tracep->fullQData(oldp+806,(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_csr_addr),64);
         tracep->fullBit(oldp+808,(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_w_csr_en));
         tracep->fullBit(oldp+809,(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__is_time_irq));

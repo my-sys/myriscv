@@ -5073,7 +5073,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__18(Vriscv_soc___024root*
     } else {
         vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_commit 
             = ((~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_mem_avalid)) 
-               & (0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType)));
+               & (0U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType)));
     }
     if (vlSelf->reset) {
         vlSelf->__Vdly__riscv_soc__DOT__core__DOT__write_back__DOT__reg_ls_state = 0U;

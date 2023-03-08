@@ -641,7 +641,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__16(Vriscv_soc___024root*
                                              & (IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__is_irq))
                                           : (((~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_mem_avalid)) 
                                               & (0U 
-                                                 == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType))) 
+                                                 != (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType))) 
                                              & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__temp_except) 
                                                 | (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__abn_exu__DOT__reg_is_mret)))));
     if (vlSelf->reset) {
@@ -654,7 +654,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__16(Vriscv_soc___024root*
                     : 0ULL);
         }
     } else if (((~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_mem_avalid)) 
-                & (0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType)))) {
+                & (0U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType)))) {
         vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_flush_pc 
             = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__temp_except)
                 ? (0xfffffffffffffffcULL & vlSelf->riscv_soc__DOT__core__DOT__csr_reg_io_r_csr_mtvec)
@@ -668,7 +668,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__16(Vriscv_soc___024root*
                                              & (IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__is_time_irq))
                                           : (((~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_mem_avalid)) 
                                               & (0U 
-                                                 == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType))) 
+                                                 != (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType))) 
                                              & (IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__is_time_irq))));
     vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_soft_irq 
         = ((~ (IData)(vlSelf->reset)) & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_stall)
@@ -676,7 +676,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__16(Vriscv_soc___024root*
                                              & (IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__is_soft_irq))
                                           : (((~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_mem_avalid)) 
                                               & (0U 
-                                                 == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType))) 
+                                                 != (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_exuType))) 
                                              & (IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__is_soft_irq))));
     if (vlSelf->reset) {
         vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_exception = 0U;
