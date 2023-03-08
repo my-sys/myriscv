@@ -424,33 +424,33 @@ VL_INLINE_OPT void Vriscv_soc___024root___combo__TOP__22(Vriscv_soc___024root* v
     VL_EXTEND_WQ(127,64, __Vtemp4268, vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_bus_wdata);
     VL_EXTEND_WQ(127,64, __Vtemp4269, vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_bus_wdata);
     if (vlSelf->reset) {
-        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_43[0U] = 0U;
-        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_43[1U] = 0U;
-        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_43[2U] = 0U;
-        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_43[3U] = 0U;
-        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_44 = 0ULL;
+        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_53[0U] = 0U;
+        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_53[1U] = 0U;
+        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_53[2U] = 0U;
+        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_53[3U] = 0U;
+        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_54 = 0ULL;
     } else {
-        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_43[0U] 
+        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_53[0U] 
             = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_ls_state)
                 ? __Vtemp4268[0U] : ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_mem_avalid)
                                       ? vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__mem_w_data[0U]
                                       : __Vtemp4269[0U]));
-        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_43[1U] 
+        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_53[1U] 
             = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_ls_state)
                 ? __Vtemp4268[1U] : ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_mem_avalid)
                                       ? vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__mem_w_data[1U]
                                       : __Vtemp4269[1U]));
-        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_43[2U] 
+        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_53[2U] 
             = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_ls_state)
                 ? __Vtemp4268[2U] : ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_mem_avalid)
                                       ? vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__mem_w_data[2U]
                                       : __Vtemp4269[2U]));
-        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_43[3U] 
+        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_53[3U] 
             = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_ls_state)
                 ? __Vtemp4268[3U] : ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_mem_avalid)
                                       ? vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__mem_w_data[3U]
                                       : __Vtemp4269[3U]));
-        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_44 
+        vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT___GEN_54 
             = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_ls_state)
                 ? (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__write_back__DOT__reg_bus_wstrb))
                 : ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_out_mem_avalid)
