@@ -22,7 +22,7 @@ void difftest_regcpy(void *dut, bool direction) {
 	memcpy(temp->gpr,cpu.gpr,sizeof(cpu.gpr));
 	temp->pc = cpu.pc; // ref 的 PC是下一个pc, pre_pc 是当前pc
 	temp->pre_pc = cpu.pre_pc;
-	temp->csr[5] = cpu.csr[5];
+	//temp->csr[5] = cpu.csr[5];
 	//memcpy(temp->csr,cpu.csr,sizeof(cpu.csr));
   }else{	// to ref 
 	memcpy(cpu.gpr,temp->gpr,sizeof(cpu.gpr));

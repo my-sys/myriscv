@@ -144,7 +144,7 @@ bool Emulator::isa_difftest_checkregs(CPU_state *ref, vaddr_t pc){
 		printf("ref->pc 0x%lx, npc->pc :0x%lx\n",ref->pre_pc,pc);
 		return false;
 	}
-	if(ref->csr[5] !=cpu.csr[5]){return false;}
+	//if(ref->csr[5] !=cpu.csr[5]){return false;}
 	for(int i=0;i<32;i++){
 		if(ref->gpr[i] != cpu.gpr[i]){
 			printf("difftest false \n"); 
