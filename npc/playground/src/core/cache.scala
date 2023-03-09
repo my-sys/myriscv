@@ -194,7 +194,7 @@ class Cache extends Module{
 			reg_cache_write := false.B 
 			//------------bus--------------------
 			reg_w_valid 	:= false.B 
-			reg_b_valid 	:= false.B 
+			reg_b_ready 	:= false.B 
 			reg_r_valid 	:= false.B 
 			//reg_rbus_finish := true.B
 		}
@@ -288,7 +288,7 @@ class Cache extends Module{
 				}.elsewhen(reg_cnt === 1.U){
 					reg_cnt 		:= reg_cnt - 1.U
 					reg_w_wlast 	:= true.B 
-					reg_w_data 		:= Mux(reg_chosen_tag === 1.U,rdata_2(127,64),rdata_0(127,64))
+					reg_w_wdata 		:= Mux(reg_chosen_tag === 1.U,rdata_2(127,64),rdata_0(127,64))
 				}.otherwise{
 					reg_cnt := reg_cnt - 1.U
 					reg_w_wdata 	:= Mux(reg_chosen_tag === 1.U,rdata_2(127,64),rdata_0(127,64))
