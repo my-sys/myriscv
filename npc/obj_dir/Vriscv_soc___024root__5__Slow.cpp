@@ -12,6 +12,16 @@ void Vriscv_soc___024root___settle__TOP__6(Vriscv_soc___024root* vlSelf) {
     Vriscv_soc__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root___settle__TOP__6\n"); );
     // Body
+    if ((1U & ((IData)((vlSelf->io_difftest_reg_2 >> 5U)) 
+               ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_2 
+                          >> 5U))))) {
+        ++(vlSymsp->__Vcoverage[135]);
+        vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_2 
+            = ((0xffffffffffffffdfULL & vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_2) 
+               | ((QData)((IData)((1U & (IData)((vlSelf->io_difftest_reg_2 
+                                                 >> 5U))))) 
+                  << 5U));
+    }
     if ((1U & ((IData)((vlSelf->io_difftest_reg_2 >> 6U)) 
                ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__io_difftest_reg_2 
                           >> 6U))))) {
@@ -19909,15 +19919,5 @@ void Vriscv_soc___024root___settle__TOP__6(Vriscv_soc___024root* vlSelf) {
                | ((QData)((IData)((1U & (IData)((vlSelf->io_inst_counter 
                                                  >> 0x15U))))) 
                   << 0x15U));
-    }
-    if ((1U & ((IData)((vlSelf->io_inst_counter >> 0x16U)) 
-               ^ (IData)((vlSelf->riscv_soc__DOT____Vtogcov__io_inst_counter 
-                          >> 0x16U))))) {
-        ++(vlSymsp->__Vcoverage[2169]);
-        vlSelf->riscv_soc__DOT____Vtogcov__io_inst_counter 
-            = ((0xffffffffffbfffffULL & vlSelf->riscv_soc__DOT____Vtogcov__io_inst_counter) 
-               | ((QData)((IData)((1U & (IData)((vlSelf->io_inst_counter 
-                                                 >> 0x16U))))) 
-                  << 0x16U));
     }
 }
