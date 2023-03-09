@@ -110,7 +110,7 @@ class Cache extends Module{
 		reg_sram2_dirty		:= 0.U 
 	}.elsewhen(is_sram2_write){
 		reg_sram2_valid 	:= reg_sram2_valid | chose_bit
-		reg_sram2_dirty 	:= Mux(reg_is_w,reg_sram2_dirty | chose_bit, reg_sram2_dirty &(neg_chosen_bit))
+		reg_sram2_dirty 	:= Mux(reg_is_w,reg_sram2_dirty | chose_bit, reg_sram2_dirty &(neg_chose_bit))
 	}.otherwise{
 		reg_sram2_valid 	:= reg_sram2_valid
 		reg_sram2_dirty 	:= reg_sram2_dirty
@@ -155,14 +155,14 @@ class Cache extends Module{
 			reg_lru_2 := reg_lru_2 | chose_bit
 		}.elsewhen(hit_2){
 			reg_lru_0 := reg_lru_0 | chose_bit
-			reg_lru_2 := reg_lru_2 & neg_chosen_bit
+			reg_lru_2 := reg_lru_2 & neg_chose_bit
 		}.otherwise{
 			when(tag_valid_0 & tag_valid_2){
 				reg_lru_0 := Mux(LRU_2,reg_lru_0 | chose_bit,reg_lru_0 & neg_chose_bit)
-				reg_lru_2 := Mux(LRU_2,reg_lru_2 & neg_chosen_bit,reg_lru_2 | chose_bit)
+				reg_lru_2 := Mux(LRU_2,reg_lru_2 & neg_chose_bit,reg_lru_2 | chose_bit)
 			}.otherwise{
 				reg_lru_0 := Mux(tag_valid_0,reg_lru_0 | chose_bit,reg_lru_0 & neg_chose_bit)
-				reg_lru_2 := Mux(tag_valid_0,reg_lru_2 & neg_chosen_bit,reg_lru_2 | chose_bit)
+				reg_lru_2 := Mux(tag_valid_0,reg_lru_2 & neg_chose_bit,reg_lru_2 | chose_bit)
 			}
 		}
 	}
