@@ -54,7 +54,11 @@ void Emulator::execute_once(){
 	int i = 0;
 	execute_cycle();
 	while(top->io_difftest_commit == 0){
-		if(i>100){printf("~~~~~Dead cycle~~~~~\n");break;}
+		if(i>100){printf("~~~~~Dead cycle~~~~~\n");
+			npc_state.state 	= NPC_ABORT;
+			npc_state.halt_pc	= cpu.pc;
+			break;
+		}
 		execute_cycle();
 		i++;
 	}
