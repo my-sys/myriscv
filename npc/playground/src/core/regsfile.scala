@@ -82,7 +82,7 @@ class CsrRegCtrl extends Module with CoreParameters{
 //---------------------------------------- write operation------------------------------------------------------------
 	when(io.in.is_exception){
 		reg_mepc 	:= io.in.pc
-		reg_mcause 	:= io.in.exception
+		reg_mcause 	:= 0x800000000000000//io.in.exception
 		reg_mtval 	:= io.in.mtval
 		reg_mstatus := (reg_mstatus &"hffff_ffff_ffff_ff77".U) | (Mux(reg_mstatus(3),"h1880".U(64.W),"h1800".U(64.W)))
 	}.elsewhen(irq){
