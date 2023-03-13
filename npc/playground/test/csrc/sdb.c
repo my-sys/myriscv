@@ -48,6 +48,9 @@ static int cmd_si(char *args){
         printf("you maybe input a illegal number!!!!\n");
         return 0;
     }
+	if(npc_state.state != NPC_RUNNING){
+		npc_state.state = NPC_RUNNING;
+	}
     Emulator::get_instance().execute(num);
     return 0;
 }
