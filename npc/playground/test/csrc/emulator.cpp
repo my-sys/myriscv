@@ -102,8 +102,8 @@ void Emulator::execute_once(){
 
 #endif 
 	device_update();
-	if(reg[1] == 0x100073){
-		Log("npc: %s at pc = " FMT_WORD, ASNI_FMT("HIT GOOD TRAP", ASNI_FG_GREEN) );
+	if(cpu.inst == 0x100073){
+		Log(" ebreak npc: %s at pc = " FMT_WORD, ASNI_FMT("HIT GOOD TRAP", ASNI_FG_GREEN) );
 		npc_state.state 	= NPC_STOP;
 		//exit(1);
 	}
