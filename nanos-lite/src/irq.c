@@ -17,6 +17,7 @@ static Context* do_event(Event e, Context* c) {
     break;
 	case EVENT_EBREAK:
 	printf("a ebreak for debug in npc\n");
+	c->mepc = c->mepc + 4;
 	break;
     default: panic("Unhandled event ID = %d", e.event);
   }
