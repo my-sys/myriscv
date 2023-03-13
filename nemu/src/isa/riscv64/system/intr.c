@@ -7,8 +7,8 @@ word_t isa_raise_intr(word_t NO, vaddr_t epc) {
   // mpec
   csr(0x341) = epc;
   // mcause
-  csr(0x342) = 9223372036854775808UL;
-  printf("haha\n");
+  csr(0x342) = 0x800000000000000Bull;
+  printf("haha22\n");
 #ifdef CONFIG_TARGET_SHARE
   // mstatus
   if(csr(0x300) & 0x8){
