@@ -99,13 +99,14 @@ void Emulator::execute_once(){
 	disassemble(p, logbuf + sizeof(logbuf) - p, reg[0],(uint8_t *)&reg[1],4);
 	puts(logbuf);
 
-	if(reg[1] == 0x100073){
-		Log("npc: %s at pc = " FMT_WORD, ASNI_FMT("HIT GOOD TRAP", ASNI_FG_GREEN) );
-		npc_state.state 	= NPC_ABORT;
-		//exit(1);
-	}
+
 #endif 
 	device_update();
+	if(reg[1] == 0x100073){
+		Log("npc: %s at pc = " FMT_WORD, ASNI_FMT("HIT GOOD TRAP", ASNI_FG_GREEN) );
+		npc_state.state 	= NPC_STOP;
+		//exit(1);
+	}
 };
 
 // void aaa(int j){

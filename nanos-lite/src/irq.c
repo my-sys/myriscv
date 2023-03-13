@@ -15,6 +15,9 @@ static Context* do_event(Event e, Context* c) {
     case EVENT_IRQ_TIMER:
 
     break;
+	case EVENT_EBREAK:
+	printf("a ebreak for debug in npc\n");
+	break;
     default: panic("Unhandled event ID = %d", e.event);
   }
   return c;

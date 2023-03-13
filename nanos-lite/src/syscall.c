@@ -29,9 +29,10 @@ void do_syscall(Context *c) {
   a[1] = c->GPR2; //a0
   a[2] = c->GPR3; //a1 
   a[3] = c->GPR4; // a2 
+  Log("do_syscall %lx",a[0]);
   switch (a[0]) {
     case SYS_yield:yield();c->gpr[10] = 0;break;
-    case SYS_exit:halt(c->gpr[10]);c->gpr[10] = 0;break;
+    case SYS_exit:Log("app is exit");halt(c->gpr[10]);c->gpr[10] = 0;break;
     case SYS_write:
        // printf("hello xingkw %x,%x,%x\n",(uint32_t)a[1],(uint32_t)a[2],(uint32_t)a[3]);
         c->gpr[10]=fs_write(a[1],(void *)a[2],a[3]);

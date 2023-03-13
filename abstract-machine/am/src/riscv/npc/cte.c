@@ -23,6 +23,7 @@ static Context* (*user_handler)(Event, Context*) = NULL;
 #define MA_SOFT_IRQ 0x8000000000000003
 #define MA_TIME_IRQ 0x8000000000000007
 #define MA_ECALL 	0xb
+#define MA_EBREAK	0x3
 Context* __am_irq_handle(Context *c) {
   if (user_handler) {
     Event ev = {0};
@@ -30,6 +31,7 @@ Context* __am_irq_handle(Context *c) {
       case MA_SOFT_IRQ: ev.event = EVENT_IRQ_SOFT;break;
 	  case MA_TIME_IRQ: ev.event = EVENT_IRQ_TIMER;break;
 	  case MA_ECALL: ev.event = EVENT_SYSCALL;break;
+	  case MA_EBREAK: ev.event = EVENT_EBREAK;break;
       default: ev.event = EVENT_ERROR; break;
     }
 
