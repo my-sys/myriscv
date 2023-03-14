@@ -1,6 +1,8 @@
 #include "emulator.h"
  #include <verilated.h>
+#if EN_TRACE
  #include <verilated_vcd_c.h>
+#endif
 #include "Vriscv_soc.h"
 #include "difftest.h"
 #include "disasm.h"
