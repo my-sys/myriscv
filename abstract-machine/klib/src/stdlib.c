@@ -3,97 +3,125 @@
 #include <klib-macros.h>
 
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
-struct block *xingk_hbrk = NULL;
- char *temp_hbrk = NULL;
-typedef struct block Block;
-static unsigned long int next = 1;
 
-static char *hbrk;
+static unsigned long int rand_data = 1;
+int rand(void){
+	rand_data = rand_data*12345 +7498;
 
-int rand(void) {
-  // RAND_MAX assumed to be 32767
-  next = next * 1103515245 + 12345;
-  return (unsigned int)(next/65536) % 32768;
+	return (unsigned int)(rand_data)%32768;
 }
 
 void srand(unsigned int seed) {
-  next = seed;
+  rand_data = seed;
 }
 
-int abs(int x) {
-  return (x < 0 ? -x : x);
+int abs(int x){
+	return (x < 0 ? -x : x);
 }
 
-int atoi(const char* nptr) {
-  int x = 0;
-  while (*nptr == ' ') { nptr ++; }
-  while (*nptr >= '0' && *nptr <= '9') {
-    x = x * 10 + *nptr - '0';
-    nptr ++;
-  }
-  return x;
+int atoi(const char* nptr){
+	int num = 0;
+	while(*nptr == ' '){nptr ++;}
+	//'0'=48  // 指令只有大于等于，和小于,速度更快
+	while((*nptr >= 48) &(*nptr < 58)){
+		//左移比乘法快，即使是多了移位，和加法
+		num = num<<3 + num<<1 +(*nptr-48);
+		nptr ++;
+	}
+	return num;
+}
+extern Area heap;
+static uintptr_t program_break = (uintptr_t)&heap.start;
+//获取指针所指向的对应地址
+int brk(void *addr){
+	if((uintptr_t)addr >= program_break && (uintptr_t)addr < (uintptr_t)heap.end){
+		program_break = addr;
+		return 0;
+	}
+	return -1;
 }
 
-int brk(void* addr){
+void *sbrk(intptr_t increment){
+	uintptr_t temp = program_break;
+	int ret = brk((void *)(program_break+increment));
+	assert(ret == 0);
+	if(ret == 0){
+		return (void*)temp;
+	}else{
+		return (void*)-1;
+	}
+	
+}
+static void *base = NULL;
+#define BLOCK_SIZE 24 //8*3 =24, size, next, free
+typedef struct s_block{
+	size_t			size; ////uint64_t size
+	struct s_block	*next;
+	uint64_t		free; // 目的8字节对齐，因为64位系统是8字节
+	uint8_t			*data; //这个是用于指明数据的开始位置，//占位符
+}xingk_block;
 
-    return 0;
-}
-extern char _heap_start;
-void* sbrk(intptr_t increment){
-  static uintptr_t program_break = (uintptr_t)&_heap_start;
-  uintptr_t temp = program_break;
-  program_break = program_break + increment;
-  return (void*)temp;
-}
-// xingk 初始化堆
-void init_heap(){
-  hbrk = (void *)ROUNDUP(heap.start, 8);
-}
-
-void *malloc(size_t size) {
-  // On native, malloc() will be called during initializaion of C runtime.
-  // Therefore do not call panic() here, else it will yield a dead recursion:
-  //   panic() -> putchar() -> (glibc) -> malloc() -> panic()
-// #if !(defined(__ISA_NATIVE__) && defined(__NATIVE_USE_KLIB__))  --xingk
-#if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
-  size  = (size_t)ROUNDUP(size, 8);
-  if(hbrk == NULL){
-    init_heap();
-  }
-  char *old = hbrk;
-  hbrk += size;
-  printf("0x%x,0x%x,0x%x,size = %d\n",heap.start,hbrk,heap.end,size);
-  assert((uintptr_t)heap.start <= (uintptr_t)hbrk && (uintptr_t)hbrk < (uintptr_t)heap.end);
-  for (uint64_t *p = (uint64_t *)old; p != (uint64_t *)hbrk; p ++) {
-    *p = 0;
-  }
-  return old;
-#endif
-  return NULL;
+//从头开始找，last返回的是不满足条件最后一个block，return 返回的是满足条件的block
+//找不到last返回最后不满足，return 返回NULL
+xingk_block *find_block(xingk_block *last,size_t s){
+	xingk_block *temp = last;
+	while(temp &&(!((temp->free) && (temp->size >= s)))){
+		last = temp;
+		temp = temp->next;
+	}
+	return temp;
 }
 
-void free(void *ptr) {
-  // Block* temp = (Block*)(ptr - BLOCK_SIZE);
-  // if(temp->is_free != 0){
-  //     return;
-  // }
-  // temp->is_free = 1;
-  // if(temp->pre != NULL && temp->pre->is_free == 1){
-  //     //merge
-  //     temp->pre->next = temp->next;
-  //     if(temp->next != NULL){
-  //         temp->next->pre = temp->pre;
-  //     }
-  //     temp->pre->size += temp->size;
-  //     temp = temp->pre;
-  // }
-
-  // if(temp->next != NULL && temp->next->is_free == 1){
-  //     //merge
-  //     temp->size += temp->next->size;
-  //     temp->next = temp->next->next;
-  // }
-
+//将当前块划分为两块，前一块大小为s,s要求是8字节对齐，划分完后b指针不变
+void split_block(xingk_block *b, size_t s){
+	xingk_block *new;
+	new = (xingk_block *)(b->data - s);
+	new->size = b->size - s - BLOCK_SIZE;
+	new->free = 1;
+	new->next = b->next;
+	//new->data = b->data - s - BLOCK_SIZE;
+	b->size = s;
+	b->next = new;
 }
 
+//last 是最后一块block，下增加的block要接到其后面，增加失败返回NULL。
+//增加成功返回block
+xingk_block *extend_heap(xingk_block *last, size_t s){
+	xingk_block *new = NULL;
+	new = (xingk_block*)sbrk(s+BLOCK_SIZE);
+	new->size = s;
+	new->next = NULL;
+	new->free = 0;
+	//new->data = (void*)new + BLOCK_SIZE;
+	if(last){
+		last->next = new;
+	}
+	return new;
+}
+
+void *malloc(size_t size){
+	size = (size_t)ROUNDUP(size,8);
+	xingk_block *new = NULL;
+	xingk_block *last = base;
+	if(base){
+		new = find_block(last,size);
+		if(new){
+			if(new->size >=(size+BLOCK_SIZE+8)){
+				split_block(new,size);
+			}
+			new->free = 0;
+		}else{
+			new = extend_heap(NULL,size);
+		}
+	}else{
+		new = extend_heap(NULL,size);
+		base = new;
+	}
+	if(new == NULL)return NULL;
+	return new->data;
+}
+
+void free(void *ptr){
+	
+}
 #endif
