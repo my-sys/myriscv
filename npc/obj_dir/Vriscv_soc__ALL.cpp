@@ -4,6 +4,8 @@
 #include "Vriscv_soc___024root.cpp"
 #include "Vriscv_soc___024unit.cpp"
 #include "Vriscv_soc__Dpi.cpp"
+#include "Vriscv_soc__Trace.cpp"
 #include "Vriscv_soc___024root__Slow.cpp"
 #include "Vriscv_soc___024unit__Slow.cpp"
 #include "Vriscv_soc__Syms.cpp"
+#include "Vriscv_soc__Trace__Slow.cpp"
