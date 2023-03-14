@@ -102,7 +102,7 @@ static void _eval_initial_loop(Vriscv_soc__Syms* __restrict vlSymsp) {
             Verilated::debug(1);
             __Vchange = Vriscv_soc___024root___change_request(&(vlSymsp->TOP));
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 5808, "",
+            VL_FATAL_MT("/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 5811, "",
                 "Verilated model didn't DC converge\n"
                 "- See https://verilator.org/warn/DIDNOTCONVERGE");
         } else {
@@ -133,7 +133,7 @@ void Vriscv_soc::eval_step() {
             Verilated::debug(1);
             __Vchange = Vriscv_soc___024root___change_request(&(vlSymsp->TOP));
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 5808, "",
+            VL_FATAL_MT("/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 5811, "",
                 "Verilated model didn't converge\n"
                 "- See https://verilator.org/warn/DIDNOTCONVERGE");
         } else {
