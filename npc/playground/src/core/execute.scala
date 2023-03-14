@@ -70,6 +70,7 @@ class Exu extends Module with CoreParameters{
 	val csr_exu = Module(new CSR_EXU())
 	val abn_exu = Module(new ABN_EXU())
 	
+	val reg_valid = RegInit(0.U(5.W))
 	val opType			= io.in.opType
 	val exuType    		= io.in.exuType
 	val stall 			= io.in.stall | (mu_exu.io.stall & reg_valid(3))
@@ -88,7 +89,7 @@ class Exu extends Module with CoreParameters{
 	val  reg_inst 			= RegInit(0.U(InstLen.W))
 	
 	// 跳转指令问题，冲刷流水线
-	val reg_valid = RegInit(0.U(5.W))
+	
 	val reg_flush 			= alu_exu.io.next_pc_valid & reg_valid(0)
 	// Choosing the function unit to execute
 	val default_valid = "b00000".U
