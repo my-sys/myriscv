@@ -60,7 +60,7 @@ typedef struct s_block{
 	size_t			size; ////uint64_t size
 	struct s_block	*next;
 	uint64_t		free; // 目的8字节对齐，因为64位系统是8字节
-	uint8_t			*data; //这个是用于指明数据的开始位置，//占位符
+	uint8_t			data; //这个是用于指明数据的开始位置，//占位符
 }xingk_block;
 
 //从头开始找，last返回的是不满足条件最后一个block，return 返回的是满足条件的block
@@ -77,7 +77,7 @@ xingk_block *find_block(xingk_block *last,size_t s){
 //将当前块划分为两块，前一块大小为s,s要求是8字节对齐，划分完后b指针不变
 void split_block(xingk_block *b, size_t s){
 	xingk_block *new;
-	new = (xingk_block *)(b->data - s);
+	new = (xingk_block *)(&b->data - s);
 	new->size = b->size - s - BLOCK_SIZE;
 	new->free = 1;
 	new->next = b->next;
@@ -121,8 +121,8 @@ void *malloc(size_t size){
 		base = new;
 	}
 	if(new == NULL)return NULL;
-	printf("0x%x,0x%x\n",(uintptr_t)new,(uintptr_t)new->data);
-	return new->data;
+	printf("0x%x,0x%x\n",(uintptr_t)new,(uintptr_t)&new->data);
+	return &new->data;
 }
 
 void free(void *ptr){
