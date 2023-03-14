@@ -157,7 +157,7 @@ bool Emulator::isa_difftest_checkregs(CPU_state *ref, vaddr_t pc){
 			printf("difftest false \n"); 
 			npc_state.state 	= NPC_ABORT;
 			npc_state.halt_pc	= pc;
-			printf("ref gpr[%d] = 0x%lx, gpr[%d] = 0x%lx\n",i,ref->gpr[i],i,cpu.gpr[i]);
+			printf("ref gpr[%d] = 0x%lx, gpr[%d] = 0x%lx, gpr[%d]= 0x%lx\n",i,ref->gpr[i],i,cpu.gpr[i],15,ref->gpr[15]);
 			return false;
 		}
 	}
