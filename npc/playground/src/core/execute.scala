@@ -72,7 +72,7 @@ class Exu extends Module with CoreParameters{
 	
 	val opType			= io.in.opType
 	val exuType    		= io.in.exuType
-	val stall 			= io.in.stall | mu_exu.io.stall
+	val stall 			= io.in.stall | (mu_exu.io.stall & reg_valid(3))
 	
 	val imm_data		= io.in.imm_data
 	val pc         		= io.in.pc
@@ -88,7 +88,8 @@ class Exu extends Module with CoreParameters{
 	val  reg_inst 			= RegInit(0.U(InstLen.W))
 	
 	// 跳转指令问题，冲刷流水线
-	val reg_flush 			= alu_exu.io.next_pc_valid 
+	val reg_valid = RegInit(0.U(5.W))
+	val reg_flush 			= alu_exu.io.next_pc_valid & reg_valid(0)
 	// Choosing the function unit to execute
 	val default_valid = "b00000".U
     val valid = MuxLookup(opType,default_valid,List(
@@ -98,7 +99,7 @@ class Exu extends Module with CoreParameters{
         Op_type.op_mu      ->  "b01000".U,
 		Op_type.op_abn     ->  "b10000".U
     ))
-	val reg_valid = RegInit(0.U(5.W))
+	
 
 	when(io.in.flush){
 		reg_valid := 0.U
@@ -124,7 +125,7 @@ class Exu extends Module with CoreParameters{
 		reg_valid(2) -> csr_exu.io.w_rs_en,//csr
 		reg_valid(3) -> mu_exu.io.out_valid	// mu exu	
 	))
-	val reg_w_csr_en		= csr_exu.io.w_csr_en
+	val reg_w_csr_en		= csr_exu.io.w_csr_en & reg_valid(2) 
 	val reg_csr_data 		= csr_exu.io.csr_result
 //  解决数据相关冲突 
 	val rs1_data = Mux(io.in.rs1_addr === 0.U,0.U,Mux((reg_rs_addr === io.in.rs1_addr)&reg_w_rs_en,reg_rs_data,Mux((io.in.wb_rs_addr === io.in.rs1_addr)&io.in.wb_w_rs_en,io.in.wb_result_data,io.in.rs1_data)))
@@ -203,8 +204,8 @@ class Exu extends Module with CoreParameters{
 	lsu_exu.io.in_flush 	:= io.in.flush
 
 	val  reg_mem_addr 		= lsu_exu.io.address_result
-	val  reg_mem_avalid		= lsu_exu.io.avalid
-	val  reg_w_mem_en 		= lsu_exu.io.w_mem_en
+	val  reg_mem_avalid		= lsu_exu.io.avalid & reg_valid(1)
+	val  reg_w_mem_en 		= lsu_exu.io.w_mem_en & reg_valid(1)
 //-------------------------------ALU-----------------------------------------
     alu_exu.io.valid 		:= valid(0)
 	alu_exu.io.exuType		:= exuType
@@ -216,7 +217,7 @@ class Exu extends Module with CoreParameters{
 	alu_exu.io.in_flush		:= io.in.flush
 	
 	val reg_next_pc				= alu_exu.io.result_pc
-	val reg_valid_next_pc		= alu_exu.io.next_pc_valid
+	val reg_valid_next_pc		= alu_exu.io.next_pc_valid & reg_valid(0)
 //-------------------------------MU EXU--------------------------------------
 	mu_exu.io.in_valid 		:= valid(3)
 	mu_exu.io.exuType		:= exuType
@@ -225,7 +226,7 @@ class Exu extends Module with CoreParameters{
 	mu_exu.io.in_stall 		:= io.in.stall
 	mu_exu.io.in_flush		:= io.in.flush
 	
-	val reg_stall 			= mu_exu.io.stall
+	val reg_stall 			= mu_exu.io.stall & reg_valid(3)
 //------------------------------CSR EXU--------------------------------------
 	csr_exu.io.valid 		:= valid(2)
 	csr_exu.io.stall		:= io.in.stall
@@ -244,10 +245,10 @@ class Exu extends Module with CoreParameters{
 	abn_exu.io.in_flush		:= io.in.flush
 
 	val reg_exception		= abn_exu.io.exception
-	val reg_is_exception	= abn_exu.io.is_exception
-	val reg_is_mret			= abn_exu.io.is_mret
-	val reg_is_fence		= abn_exu.io.is_fence
-	val reg_is_fence_i		= abn_exu.io.is_fence_i
+	val reg_is_exception	= abn_exu.io.is_exception & reg_valid(4)
+	val reg_is_mret			= abn_exu.io.is_mret & reg_valid(4)
+	val reg_is_fence		= abn_exu.io.is_fence & reg_valid(4)
+	val reg_is_fence_i		= abn_exu.io.is_fence_i & reg_valid(4)
 
 	io.out.rs_addr          := reg_rs_addr
 	io.out.rs_data          := reg_rs_data
