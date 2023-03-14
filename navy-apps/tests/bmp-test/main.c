@@ -4,7 +4,6 @@
 #include <NDL.h>
 #include <BMP.h>
 int main() {
-  asm volatile("ebreak");
   printf(" main 0x ll\n");
   NDL_Init(0);
   int w, h;
