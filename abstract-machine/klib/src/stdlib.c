@@ -121,6 +121,7 @@ void *malloc(size_t size){
 		base = new;
 	}
 	if(new == NULL)return NULL;
+	printf("0x%x\n",(uintptr_t)new->data);
 	return new->data;
 }
 
