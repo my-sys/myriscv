@@ -25,7 +25,7 @@ int atoi(const char* nptr){
 	//'0'=48  // 指令只有大于等于，和小于,速度更快
 	while((*nptr >= 48) &(*nptr < 58)){
 		//左移比乘法快，即使是多了移位，和加法
-		num = num<<3 + num<<1 +(*nptr-48);
+		num = (num<<3) + (num<<1) +(*nptr-48);
 		nptr ++;
 	}
 	return num;
@@ -35,7 +35,7 @@ static uintptr_t program_break = (uintptr_t)&heap.start;
 //获取指针所指向的对应地址
 int brk(void *addr){
 	if((uintptr_t)addr >= program_break && (uintptr_t)addr < (uintptr_t)heap.end){
-		program_break = addr;
+		program_break = (uintptr_t)addr;
 		return 0;
 	}
 	return -1;

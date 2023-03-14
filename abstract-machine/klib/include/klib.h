@@ -19,8 +19,8 @@ struct block{
     struct block *next; //指向下一个区块   /*保证堆大小为64位*/
 };
 
-#define BLOCK_SIZE (sizeof(struct block))
-extern struct block *xingk_hbrk;
+// #define BLOCK_SIZE (sizeof(struct block))
+// extern struct block *xingk_hbrk;
 void init_heap();
 
 int brk(void* addr);
