@@ -61,10 +61,13 @@ size_t fs_write(int fd, const void *buf, size_t len){
     //printf("0x%x\n",(__uint32_t)((uint64_t)buf));
     return file_table[fd].write(buf,file_table[fd].open_offset,len);
   }
+  printf("xxx2\n");
   size_t size = file_table[fd].size;
   size_t offset = file_table[fd].disk_offset + file_table[fd].open_offset;
   if(len+file_table[fd].open_offset > size)len = size - file_table[fd].open_offset;
+  printf("xxx3\n");
   ramdisk_write(buf,offset,len);
+  printf("xxx5\n");
   file_table[fd].open_offset +=len;
   printf("xxx\n");
   return len;
