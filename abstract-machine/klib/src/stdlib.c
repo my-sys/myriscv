@@ -35,7 +35,7 @@ extern char _heap_start;
 static uintptr_t program_break = (uintptr_t)(&_heap_start);
 //获取指针所指向的对应地址
 int brk(void *addr){
-	printf("addr 0x%x,%x start 0x%x,%x end 0x%x,%x\n",(uintptr_t)addr>>32,(uintptr_t)addr,(uintptr_t)program_break>>32,(uintptr_t)program_break,(uintptr_t)heap.end>>32,(uintptr_t)heap.end);
+	//printf("addr 0x%x,%x start 0x%x,%x end 0x%x,%x\n",(uintptr_t)addr>>32,(uintptr_t)addr,(uintptr_t)program_break>>32,(uintptr_t)program_break,(uintptr_t)heap.end>>32,(uintptr_t)heap.end);
 	if((uintptr_t)addr >= program_break && (uintptr_t)addr < (uintptr_t)heap.end){
 		program_break = (uintptr_t)addr;
 		return 0;
@@ -102,7 +102,7 @@ xingk_block *extend_heap(xingk_block *last, size_t s){
 }
 
 void *malloc(size_t size){
-	printf("malloc\n");
+	//printf("malloc\n");
 	size = (size_t)ROUNDUP(size,8);
 	xingk_block *new = NULL;
 	xingk_block *last = base;
@@ -121,7 +121,7 @@ void *malloc(size_t size){
 		base = new;
 	}
 	if(new == NULL)return NULL;
-	printf("0x%x,0x%x\n",(uintptr_t)new,(uintptr_t)&new->data);
+	//printf("0x%x,0x%x\n",(uintptr_t)new,(uintptr_t)&new->data);
 	return &new->data;
 }
 

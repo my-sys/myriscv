@@ -29,7 +29,7 @@ void do_syscall(Context *c) {
   a[1] = c->GPR2; //a0
   a[2] = c->GPR3; //a1 
   a[3] = c->GPR4; // a2 
-  printf("do_syscall 0x%d,0x%d,0x%d,0x%d \n",(uint32_t)a[0],(uint32_t)a[1],(uint32_t)a[2],(uint32_t)a[3]);
+  //printf("do_syscall 0x%d,0x%d,0x%d,0x%d \n",(uint32_t)a[0],(uint32_t)a[1],(uint32_t)a[2],(uint32_t)a[3]);
   switch (a[0]) {
     case SYS_yield:yield();c->gpr[10] = 0;break;
     case SYS_exit:Log("app is exit");halt(c->gpr[10]);c->gpr[10] = 0;break;
