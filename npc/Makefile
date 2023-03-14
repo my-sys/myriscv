@@ -16,7 +16,7 @@ VERILATOR_FLAGS += --x-assign unique -O3
 # Warn abount lint issues; may not want this on less solid designs
 VERILATOR_FLAGS += -Wall
 # Make waveforms
-#VERILATOR_FLAGS += --trace
+VERILATOR_FLAGS += --trace
 # Check SystemVerilog assertions
 #VERILATOR_FLAGS += --assert
 # Generate coverage analysis
