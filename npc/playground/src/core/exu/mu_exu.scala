@@ -164,11 +164,12 @@ class DIV extends Module with CoreParameters{
 	val rem_is_neg_div = (reg_rem === neg_divisor)
 	val rem_is_div 	   = (reg_rem === reg_divisor)
 	//Mux(divisor(64)^dividend(64),rem+divisor,rem+(~divisor)+1.U)//
+	//Mux(divisor(64)^dividend(64),divisor + dividend,dividend + (~divisor)+1.U)
 	switch(reg_state){
 		is(div_start){
 			reg_divisor 	:= divisor
 			reg_dividend 	:= dividend
-			reg_rem			:= Mux(divisor(64)^dividend(64),divisor + dividend,dividend + (~divisor)+1.U)
+			reg_rem			:= Mux(divisor(64)^dividend(64),rem+divisor,rem+(~divisor)+1.U)//Mux(divisor(64)^dividend(64),divisor + dividend,dividend + (~divisor)+1.U)
 			reg_state 		:= Mux(io.in_flush,div_start,Mux(valid,div_busy,div_start))
 			reg_stall 		:= Mux(io.in_flush,false.B,Mux(valid,true.B,false.B))
 			reg_exuType		:= Mux(valid,exuType,0.U)
