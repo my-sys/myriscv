@@ -160,7 +160,7 @@ class DIV extends Module with CoreParameters{
 	val temp_result 	= (Cat(reg_rem,reg_q)<<1.U)+Mux(reg_rem(64)^reg_divisor(64),Cat(reg_divisor,0.U(65.W)),Cat(neg_divisor,1.U(65.W)))
 	val reg_is_need_correct = RegInit(false.B)
 	
-	val rem_is_0 = ~(|reg_rem)
+	val rem_is_0 = (reg_rem === 0.U)
 	val rem_is_neg_div = (reg_rem === neg_divisor)
 	val rem_is_div 	   = (reg_rem === reg_divisor)
 	switch(reg_state){
