@@ -227,7 +227,7 @@ class DIV extends Module with CoreParameters{
 			}.otherwise{
 				when(reg_is_need_correct){
 					when(reg_rem(64)^reg_divisor(64)){
-						reg_q := reg_q - 1.U
+						//reg_q := reg_q - 1.U
 						reg_rem := reg_rem + reg_divisor
 					}.otherwise{
 						reg_q := reg_q + 1.U
