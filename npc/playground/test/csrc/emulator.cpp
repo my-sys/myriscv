@@ -14,7 +14,7 @@ NPCState npc_state = { .state = NPC_STOP };
 Emulator::Emulator(){
     top = new Vriscv_soc;
     cycles = 0;
-	start_wave= true;
+	start_wave= false;
 #if EN_TRACE
     Verilated::traceEverOn(true);
     m_trace = new VerilatedVcdC;
