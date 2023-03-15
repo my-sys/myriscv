@@ -35,7 +35,7 @@ extern char _heap_start;
 static uintptr_t program_break = (uintptr_t)(&_heap_start);
 //获取指针所指向的对应地址
 int brk(void *addr){
-	printf("addr 0x%x,%x start 0x%x,%x end 0x%x,%x\n",(uintptr_t)addr>>32,(uintptr_t)addr,(uintptr_t)program_break>>32,(uintptr_t)program_break,(uintptr_t)heap.end>>32,(uintptr_t)heap.end);
+	//printf("addr 0x%x,%x start 0x%x,%x end 0x%x,%x\n",(uintptr_t)addr>>32,(uintptr_t)addr,(uintptr_t)program_break>>32,(uintptr_t)program_break,(uintptr_t)heap.end>>32,(uintptr_t)heap.end);
 	if((uintptr_t)addr >= (uintptr_t)(heap.start) && (uintptr_t)addr < (uintptr_t)heap.end){
 		program_break = (uintptr_t)addr;
 		return 0;
@@ -44,7 +44,7 @@ int brk(void *addr){
 }
 
 void *sbrk(intptr_t increment){
-	printf("sbrk %d\n",increment);
+	//printf("sbrk %d\n",increment);
 	uintptr_t temp = program_break;
 	int ret = brk((void *)(program_break+increment));
 	assert(ret == 0);
