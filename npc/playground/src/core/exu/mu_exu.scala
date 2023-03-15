@@ -158,6 +158,11 @@ class DIV extends Module with CoreParameters{
 	val reg_out_valid   = RegInit(false.B) 
 	val reg_stall 		= RegInit(false.B)
 	val temp_result 	= (Cat(reg_rem,reg_q)<<1.U)+Mux(reg_rem(64)^reg_divisor(64),Cat(reg_divisor,0.U(65.W)),Cat(neg_divisor,1.U(65.W)))
+	val reg_is_need_correct = RegInit(false.B)
+	
+	val rem_is_0 = ~(|reg_rem)
+	val rem_is_neg_div = (reg_rem === neg_divisor)
+	val rem_is_div 	   = (reg_rem === reg_divisor)
 	switch(reg_state){
 		is(div_start){
 			reg_divisor 	:= divisor
@@ -168,6 +173,7 @@ class DIV extends Module with CoreParameters{
 			reg_exuType		:= Mux(valid,exuType,0.U)
 			reg_q 			:= dividend 
 			reg_out_valid	:= false.B 
+			reg_is_need_correct := false.B
 			//reg_cnt 
 		}
 		is(div_busy){
@@ -188,6 +194,12 @@ class DIV extends Module with CoreParameters{
 			reg_q := Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q<<1.U)+1.U)
 			reg_rem := reg_rem
 			reg_state := Mux(io.in_flush,div_start,div_end)
+			when(io.in_flush){
+				reg_is_need_correct := false.B
+			}.otherwise{
+				reg_is_need_correct := ((reg_rem(64) ^ reg_dividend(64)) & (~rem_is_0)) | rem_is_neg_div | rem_is_div
+			}
+			
 		}
 		is(div_end){
 			// 商和余数矫正
@@ -201,6 +213,7 @@ class DIV extends Module with CoreParameters{
 				reg_out_valid	:= false.B
 				reg_state		:= div_start
 				reg_cnt 		:= 0.U
+				reg_is_need_correct := false.B
 			}.elsewhen(io.in_stall){
 				reg_q 			:= reg_q
 				reg_rem 		:= reg_rem
@@ -208,9 +221,18 @@ class DIV extends Module with CoreParameters{
 				reg_out_valid	:= reg_out_valid
 				reg_state		:= reg_state
 				reg_cnt 		:= reg_cnt
+				reg_is_need_correct := reg_is_need_correct
 			}.otherwise{
-				reg_q 			:= Mux(reg_divisor(64)^reg_dividend(64),reg_q + 1.U,reg_q)
-				reg_rem 		:= Mux(reg_dividend(64)^reg_rem(64),Mux(reg_divisor(64)^reg_dividend(64),reg_rem + neg_divisor,reg_rem + reg_divisor),reg_rem)
+				when(reg_is_need_correct){
+					when(reg_rem(64)^reg_divisor(64)){
+						reg_q := reg_q - 1.U
+						reg_rem := reg_rem + reg_divisor
+					}.otherwise{
+						reg_q := reg_q + 1.U
+						reg_rem := reg_rem + neg_divisor
+					}
+				}
+				reg_is_need_correct := false.B
 				reg_stall		:= false.B 
 				reg_out_valid	:= true.B
 				reg_state		:= div_start
