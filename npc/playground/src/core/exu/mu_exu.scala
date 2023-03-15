@@ -163,11 +163,12 @@ class DIV extends Module with CoreParameters{
 	val rem_is_0 = (reg_rem === 0.U)
 	val rem_is_neg_div = (reg_rem === neg_divisor)
 	val rem_is_div 	   = (reg_rem === reg_divisor)
+	//Mux(divisor(64)^dividend(64),rem+divisor,rem+(~divisor)+1.U)//
 	switch(reg_state){
 		is(div_start){
 			reg_divisor 	:= divisor
 			reg_dividend 	:= dividend
-			reg_rem			:= Mux(divisor(64)^dividend(64),rem+divisor,rem+(~divisor)+1.U)//Mux(divisor(64)^dividend(64),divisor + dividend,dividend + (~divisor)+1.U)
+			reg_rem			:= Mux(divisor(64)^dividend(64),divisor + dividend,dividend + (~divisor)+1.U)
 			reg_state 		:= Mux(io.in_flush,div_start,Mux(valid,div_busy,div_start))
 			reg_stall 		:= Mux(io.in_flush,false.B,Mux(valid,true.B,false.B))
 			reg_exuType		:= Mux(valid,exuType,0.U)
@@ -191,7 +192,7 @@ class DIV extends Module with CoreParameters{
 			reg_state 		:= Mux(io.in_flush,div_start,Mux(reg_cnt === "h40".U,div_correct,reg_state))
 		}
 		is(div_correct){
-			reg_q := (reg_q<<1.U)//Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q<<1.U)+1.U)
+			reg_q := Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q<<1.U)+1.U)
 			reg_rem := reg_rem
 			reg_state := Mux(io.in_flush,div_start,div_end)
 			when(io.in_flush){
