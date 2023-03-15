@@ -244,7 +244,7 @@ class MU_EXU extends Module with CoreParameters{
 	val exuType 		= io.exuType
 	div.io.rs1_data 	:= io.rs1_data
 	div.io.rs2_data 	:= io.rs2_data
-	div.io.valid 		:= io.in_valid & exuType(4)
+	div.io.valid 		:= io.in_valid & exuType(4) & (!mul.io.stall)
 	div.io.exuType		:= io.exuType 
 	div.io.in_stall		:= io.in_stall
 	div.io.in_flush		:= io.in_flush
@@ -252,7 +252,7 @@ class MU_EXU extends Module with CoreParameters{
 	mul.io.rs1_data		:= io.rs1_data
 	mul.io.rs2_data		:= io.rs2_data
 	mul.io.exuType		:= io.exuType
-	mul.io.valid 		:= io.in_valid &(~exuType(4))
+	mul.io.valid 		:= io.in_valid &(~exuType(4)) & (!div.io.stall)
 	mul.io.in_stall		:= io.in_stall
 	mul.io.in_flush		:= io.in_flush
 
