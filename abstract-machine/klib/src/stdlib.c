@@ -44,6 +44,7 @@ int brk(void *addr){
 }
 
 void *sbrk(intptr_t increment){
+	printf("sbrk %d\n",increment);
 	uintptr_t temp = program_break;
 	int ret = brk((void *)(program_break+increment));
 	assert(ret == 0);
@@ -102,7 +103,6 @@ xingk_block *extend_heap(xingk_block *last, size_t s){
 }
 
 void *malloc(size_t size){
-	printf("malloc %d\n",size);
 	size = (size_t)ROUNDUP(size,8);
 	xingk_block *new = NULL;
 	xingk_block *last = base;
