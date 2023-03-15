@@ -102,7 +102,7 @@ xingk_block *extend_heap(xingk_block *last, size_t s){
 }
 
 void *malloc(size_t size){
-	//printf("malloc\n");
+	printf("malloc %d\n",size);
 	size = (size_t)ROUNDUP(size,8);
 	xingk_block *new = NULL;
 	xingk_block *last = base;
