@@ -165,6 +165,7 @@ class DIV extends Module with CoreParameters{
 	val rem_is_div 	   = (reg_rem === reg_divisor)
 	//Mux(divisor(64)^dividend(64),rem+divisor,rem+(~divisor)+1.U)//
 	//Mux(divisor(64)^dividend(64),divisor + dividend,dividend + (~divisor)+1.U)
+	val is_need_correct = ((reg_rem(64) ^ reg_dividend(64)) & (~rem_is_0)) | rem_is_neg_div | rem_is_div
 	switch(reg_state){
 		is(div_start){
 			reg_divisor 	:= divisor
@@ -193,15 +194,24 @@ class DIV extends Module with CoreParameters{
 			reg_state 		:= Mux(io.in_flush,div_start,Mux(reg_cnt === "h40".U,div_correct,reg_state))
 		}
 		is(div_correct){
-			//reg_q := Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q<<1.U)+1.U)
-			reg_q := Mux(reg_rem(64)^reg_divisor(64),(reg_q<<1.U)+1.U,reg_q<<1.U)
-			reg_rem := reg_rem
+			reg_q := Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q<<1.U)+1.U)
+			//reg_q := Mux(reg_rem(64)^reg_divisor(64),(reg_q<<1.U)+1.U,reg_q<<1.U)
+			when(is_need_correct){
+				when(reg_rem(64)^reg_divisor(64)){
+					//reg_q := reg_q - 1.U
+					reg_rem := reg_rem + reg_divisor
+				}.otherwise{
+					//reg_q := reg_q + 1.U
+					reg_rem := reg_rem + neg_divisor
+				}
+		 	}
+			//reg_rem := reg_rem
 			reg_state := Mux(io.in_flush,div_start,div_end)
-			when(io.in_flush){
-				reg_is_need_correct := false.B
-			}.otherwise{
-				reg_is_need_correct := ((reg_rem(64) ^ reg_dividend(64)) & (~rem_is_0)) | rem_is_neg_div | rem_is_div
-			}
+			// when(io.in_flush){
+			// 	reg_is_need_correct := false.B
+			// }.otherwise{
+			// 	reg_is_need_correct := ((reg_rem(64) ^ reg_dividend(64)) & (~rem_is_0)) | rem_is_neg_div | rem_is_div
+			// }
 			
 		}
 		is(div_end){
@@ -216,7 +226,7 @@ class DIV extends Module with CoreParameters{
 				reg_out_valid	:= false.B
 				reg_state		:= div_start
 				reg_cnt 		:= 0.U
-				reg_is_need_correct := false.B
+				//reg_is_need_correct := false.B
 			}.elsewhen(io.in_stall){
 				reg_q 			:= reg_q
 				reg_rem 		:= reg_rem
@@ -224,15 +234,15 @@ class DIV extends Module with CoreParameters{
 				reg_out_valid	:= reg_out_valid
 				reg_state		:= reg_state
 				reg_cnt 		:= reg_cnt
-				reg_is_need_correct := reg_is_need_correct
+				//reg_is_need_correct := reg_is_need_correct
 			}.otherwise{
-				when(reg_is_need_correct){
+				when(ris_need_correct){
 					when(reg_rem(64)^reg_divisor(64)){
 						reg_q := reg_q - 1.U
-						reg_rem := reg_rem + reg_divisor
+						//reg_rem := reg_rem + reg_divisor
 					}.otherwise{
 						reg_q := reg_q + 1.U
-						reg_rem := reg_rem + neg_divisor
+						//reg_rem := reg_rem + neg_divisor
 					}
 				}
 				reg_is_need_correct := false.B
