@@ -197,7 +197,7 @@ class Exu extends Module with CoreParameters{
 	
 	
 //---------------------------------LSU --------------------------------------
-	lsu_exu.io.valid		:= valid(1)
+	lsu_exu.io.valid		:= valid(1) & (!reg_flush)
 	lsu_exu.io.exuType		:= exuType
 	lsu_exu.io.rs1_data		:= rs1_data
 	lsu_exu.io.imm_data		:= imm_data
@@ -208,7 +208,7 @@ class Exu extends Module with CoreParameters{
 	val  reg_mem_avalid		= lsu_exu.io.avalid & reg_valid(1)
 	val  reg_w_mem_en 		= lsu_exu.io.w_mem_en & reg_valid(1)
 //-------------------------------ALU-----------------------------------------
-    alu_exu.io.valid 		:= valid(0)
+    alu_exu.io.valid 		:= valid(0) & (!reg_flush)
 	alu_exu.io.exuType		:= exuType
 	alu_exu.io.op_data1 	:= rs1_data 
     alu_exu.io.op_data2 	:= rs2_data
@@ -220,7 +220,7 @@ class Exu extends Module with CoreParameters{
 	val reg_next_pc				= alu_exu.io.result_pc
 	val reg_valid_next_pc		= alu_exu.io.next_pc_valid & reg_valid(0)
 //-------------------------------MU EXU--------------------------------------
-	mu_exu.io.in_valid 		:= valid(3)
+	mu_exu.io.in_valid 		:= valid(3) & (!reg_flush)
 	mu_exu.io.exuType		:= exuType
 	mu_exu.io.rs1_data		:= rs1_data
 	mu_exu.io.rs2_data		:= rs2_data
@@ -229,7 +229,7 @@ class Exu extends Module with CoreParameters{
 	
 	val reg_stall 			= mu_exu.io.stall & reg_valid(3)
 //------------------------------CSR EXU--------------------------------------
-	csr_exu.io.valid 		:= valid(2)
+	csr_exu.io.valid 		:= valid(2) & (!reg_flush)
 	csr_exu.io.stall		:= io.in.stall
 	csr_exu.io.exuType		:= exuType
 	csr_exu.io.csr_data		:= csr_data
@@ -240,7 +240,7 @@ class Exu extends Module with CoreParameters{
 	//val reg_csr_data 		= csr_exu.io.csr_result
 	
 //------------------------------ABN EXU--------------------------------------
-	abn_exu.io.valid 		:= valid(4)
+	abn_exu.io.valid 		:= valid(4) & (!reg_flush)
 	abn_exu.io.exuType		:= exuType
 	abn_exu.io.stall 		:= io.in.stall
 	abn_exu.io.in_flush		:= io.in.flush
