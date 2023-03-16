@@ -136,7 +136,6 @@ void Vriscv_soc___024root___settle__TOP__1(Vriscv_soc___024root* vlSelf) {
     VlWide<3>/*95:0*/ __Vtemp270;
     VlWide<3>/*95:0*/ __Vtemp273;
     VlWide<3>/*95:0*/ __Vtemp274;
-    VlWide<3>/*95:0*/ __Vtemp275;
     VlWide<3>/*95:0*/ __Vtemp276;
     VlWide<3>/*95:0*/ __Vtemp277;
     VlWide<3>/*95:0*/ __Vtemp278;
@@ -3630,7 +3629,6 @@ void Vriscv_soc___024root___settle__TOP__1(Vriscv_soc___024root* vlSelf) {
     __Vtemp273[1U] = vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__temp_result[1U];
     __Vtemp273[2U] = (3U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__temp_result[2U]);
     VL_EXTEND_WW(67,66, __Vtemp274, __Vtemp273);
-    VL_EXTEND_WW(67,66, __Vtemp275, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q);
     __Vtemp276[0U] = 2U;
     __Vtemp276[1U] = 0U;
     __Vtemp276[2U] = 0U;
@@ -3704,7 +3702,8 @@ void Vriscv_soc___024root___settle__TOP__1(Vriscv_soc___024root* vlSelf) {
                                          ? ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__is_need_correct)
                                              ? ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_4)
                                                  ? 
-                                                __Vtemp275[0U]
+                                                (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q[0U] 
+                                                 << 1U)
                                                  : 
                                                 __Vtemp278[0U])
                                              : ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_4)
@@ -3722,7 +3721,10 @@ void Vriscv_soc___024root___settle__TOP__1(Vriscv_soc___024root* vlSelf) {
                                          ? ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__is_need_correct)
                                              ? ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_4)
                                                  ? 
-                                                __Vtemp275[1U]
+                                                ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q[0U] 
+                                                  >> 0x1fU) 
+                                                 | (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q[1U] 
+                                                    << 1U))
                                                  : 
                                                 __Vtemp278[1U])
                                              : ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_4)
@@ -3743,7 +3745,10 @@ void Vriscv_soc___024root___settle__TOP__1(Vriscv_soc___024root* vlSelf) {
                                                    ? 
                                                   ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_4)
                                                     ? 
-                                                   __Vtemp275[2U]
+                                                   ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q[1U] 
+                                                     >> 0x1fU) 
+                                                    | (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q[2U] 
+                                                       << 1U))
                                                     : 
                                                    __Vtemp278[2U])
                                                    : 

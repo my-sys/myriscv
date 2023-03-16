@@ -6765,7 +6765,6 @@ VL_INLINE_OPT void Vriscv_soc___024root___combo__TOP__3(Vriscv_soc___024root* vl
     VlWide<3>/*95:0*/ __Vtemp961;
     VlWide<3>/*95:0*/ __Vtemp964;
     VlWide<3>/*95:0*/ __Vtemp965;
-    VlWide<3>/*95:0*/ __Vtemp966;
     VlWide<3>/*95:0*/ __Vtemp967;
     VlWide<3>/*95:0*/ __Vtemp968;
     VlWide<3>/*95:0*/ __Vtemp969;
@@ -7276,7 +7275,6 @@ VL_INLINE_OPT void Vriscv_soc___024root___combo__TOP__3(Vriscv_soc___024root* vl
     __Vtemp964[1U] = vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__temp_result[1U];
     __Vtemp964[2U] = (3U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__temp_result[2U]);
     VL_EXTEND_WW(67,66, __Vtemp965, __Vtemp964);
-    VL_EXTEND_WW(67,66, __Vtemp966, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q);
     __Vtemp967[0U] = 2U;
     __Vtemp967[1U] = 0U;
     __Vtemp967[2U] = 0U;
@@ -7351,7 +7349,8 @@ VL_INLINE_OPT void Vriscv_soc___024root___combo__TOP__3(Vriscv_soc___024root* vl
                                          ? ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__is_need_correct)
                                              ? ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_4)
                                                  ? 
-                                                __Vtemp966[0U]
+                                                (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q[0U] 
+                                                 << 1U)
                                                  : 
                                                 __Vtemp969[0U])
                                              : ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_4)
@@ -7369,7 +7368,10 @@ VL_INLINE_OPT void Vriscv_soc___024root___combo__TOP__3(Vriscv_soc___024root* vl
                                          ? ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__is_need_correct)
                                              ? ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_4)
                                                  ? 
-                                                __Vtemp966[1U]
+                                                ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q[0U] 
+                                                  >> 0x1fU) 
+                                                 | (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q[1U] 
+                                                    << 1U))
                                                  : 
                                                 __Vtemp969[1U])
                                              : ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_4)
@@ -7390,7 +7392,10 @@ VL_INLINE_OPT void Vriscv_soc___024root___combo__TOP__3(Vriscv_soc___024root* vl
                                                    ? 
                                                   ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_4)
                                                     ? 
-                                                   __Vtemp966[2U]
+                                                   ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q[1U] 
+                                                     >> 0x1fU) 
+                                                    | (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q[2U] 
+                                                       << 1U))
                                                     : 
                                                    __Vtemp969[2U])
                                                    : 
