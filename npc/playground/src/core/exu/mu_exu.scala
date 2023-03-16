@@ -241,8 +241,8 @@ class DIV extends Module with CoreParameters{
 					when(!reg_dividend(64)){
 						reg_q := reg_q + 1.U
 					}
-				}.
-				//reg_is_need_correct := false.B
+				}
+				reg_is_need_correct := false.B
 				reg_stall		:= false.B 
 				reg_out_valid	:= true.B
 				reg_state		:= div_start
