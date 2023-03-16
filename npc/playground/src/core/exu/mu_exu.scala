@@ -52,7 +52,7 @@ class MUL extends Module with CoreParameters{
 	val reg_temp_mul2   = RegInit(0.U(67.W))
 	val reg_mul1		= RegInit(0.U(130.W))
 	val reg_result 		= RegInit(0.U(130.W))
-	val reg_exuType 	= RegInit(0.U(1.W)) 
+	val reg_exuType 	= RegInit(0.U(4.W)) 
 	val reg_out_valid	= RegInit(false.B)
 	val pp				= MuxLookup(reg_temp_mul2(2,0),0.U(130.W),List(
 		"b001".U 	->  (reg_mul1),
@@ -70,7 +70,7 @@ class MUL extends Module with CoreParameters{
 			reg_temp_mul2 	:= temp_mul2
 			reg_mul1 		:= mul_data1
 			reg_result		:= 0.U 
-			reg_exuType		:= exuType(3) 
+			reg_exuType		:= exuType(3,0)
 			reg_out_valid	:= false.B
 			//reg_cnt
 		}
@@ -113,7 +113,7 @@ class MUL extends Module with CoreParameters{
 		}
 	}
 	io.stall 				:= reg_stall
-	io.result				:= Mux(reg_exuType =/= 1.U,reg_result(63,0),reg_result(127,64)) 
+	io.result				:= Mux(reg_exuType(2),Cat(Fill(32,reg_result(31)),reg_result(31,0)),Mux(reg_exuType(3) =/= 1.U,reg_result(63,0),reg_result(127,64))) 
 	io.out_valid			:= reg_out_valid
 }
 
@@ -268,7 +268,9 @@ class DIV extends Module with CoreParameters{
 
 		}
 	}
-	io.result 		:= Mux(reg_exuType(2),reg_rem,reg_q)
+	val rem_adjust = Mux(reg_exuType(1),Cat(Fill(32,reg_rem(31)),reg_rem(31,0)),reg_rem(63,0))
+	val q_adjust   = Mux(reg_exuType(1),Cat(Fill(32,reg_q(31)),reg_q(31,0)),reg_q(63,0))
+	io.result 		:= Mux(reg_exuType(2),rem_adjust,q_adjust)
 	io.stall  		:= reg_stall 
 	io.out_valid	:= reg_out_valid
 }
