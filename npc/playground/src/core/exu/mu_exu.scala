@@ -157,7 +157,7 @@ class DIV extends Module with CoreParameters{
 	val reg_exuType		= RegInit(0.U(ExuTypeLen.W)) 
 	val reg_out_valid   = RegInit(false.B) 
 	val reg_stall 		= RegInit(false.B)
-	val temp_result 	= (Cat(reg_rem,reg_q)<<1.U)+Mux(reg_rem(64)^reg_divisor(64),Cat(reg_divisor,0.U(65.W)),Cat(neg_divisor,1.U(65.W)))
+	val temp_result 	= (Cat(reg_rem,reg_q)<<1.U)+Mux(reg_rem(64)^reg_divisor(64),Cat(reg_divisor,0.U(66.W)),Cat(neg_divisor,1.U(66.W)))
 	val reg_is_need_correct = RegInit(false.B)
 	
 	val rem_is_0 = (reg_rem === 0.U)
@@ -165,7 +165,7 @@ class DIV extends Module with CoreParameters{
 	val rem_is_div 	   = (reg_rem === reg_divisor)
 	//Mux(divisor(64)^dividend(64),rem+divisor,rem+(~divisor)+1.U)//
 	//Mux(divisor(64)^dividend(64),divisor + dividend,dividend + (~divisor)+1.U)
-	val is_need_correct = ((reg_rem(64) ^ reg_dividend(64)) & (~rem_is_0)) | rem_is_neg_div | rem_is_div
+	val is_need_correct = ((reg_rem(64) ^ reg_dividend(65)) & (~rem_is_0)) | rem_is_neg_div | rem_is_div
 	switch(reg_state){
 		is(div_start){
 			reg_divisor 	:= divisor
@@ -186,8 +186,8 @@ class DIV extends Module with CoreParameters{
 			//reg_exuType
 			//reg_out_valid
 			reg_cnt 		:= Mux(io.in_flush,0.U,reg_cnt + 1.U)
-			reg_q 	:= temp_result(64,0)
-			reg_rem := temp_result(129,65)
+			reg_q 	:= temp_result(65,0)
+			reg_rem := temp_result(130,66)
 			//reg_q 			:= Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q <<1.U)+1.U)
 			//reg_rem 		:= Mux(reg_rem(64)^reg_divisor(64),(reg_rem<<1.U) + reg_divisor,(reg_rem<<1.U)+neg_divisor)
 			//reg_cnt 为64时，说明本次reg_cnt要变为65，故总共执行了65次
