@@ -144,9 +144,9 @@ class DIV extends Module with CoreParameters{
 	val rem 			= Mux(exuType(1),Mux(exuType(0),Fill(65,rs1_data(31)),0.U),Mux(exuType(0),Fill(65,rs1_data(63)),0.U))
 
 	val reg_divisor 	= RegInit(0.U(65.W))
-	val reg_dividend  	= RegInit(0.U(65.W))
+	val reg_dividend  	= RegInit(0.U(66.W))
 	val reg_rem 		= RegInit(0.U(65.W))
-	val reg_q 			= RegInit(0.U(65.W))
+	val reg_q 			= RegInit(0.U(66.W))
 
 // 补码除法运算过程中需要
 	val neg_divisor		= (~reg_divisor) + 1.U			
@@ -169,12 +169,12 @@ class DIV extends Module with CoreParameters{
 	switch(reg_state){
 		is(div_start){
 			reg_divisor 	:= divisor
-			reg_dividend 	:= dividend
+			reg_dividend 	:= Cat(dividend,0.U(1.W))
 			reg_rem			:= Mux(divisor(64)^dividend(64),rem+divisor,rem+(~divisor)+1.U)//Mux(divisor(64)^dividend(64),divisor + dividend,dividend + (~divisor)+1.U)
 			reg_state 		:= Mux(io.in_flush,div_start,Mux(valid,div_busy,div_start))
 			reg_stall 		:= Mux(io.in_flush,false.B,Mux(valid,true.B,false.B))
 			reg_exuType		:= Mux(valid,exuType,0.U)
-			reg_q 			:= dividend 
+			reg_q 			:= Cat(dividend,0.U(1.W))
 			reg_out_valid	:= false.B 
 			reg_is_need_correct := false.B
 			//reg_cnt 
@@ -235,11 +235,11 @@ class DIV extends Module with CoreParameters{
 				reg_cnt 		:= reg_cnt
 				//reg_is_need_correct := reg_is_need_correct
 			}.otherwise{
-				when(reg_dividend(64)^reg_divisor(64)){
+				when(reg_dividend(65)^reg_divisor(64)){
 					//reg_q := reg_q - 1.U
 					//reg_rem := reg_rem + reg_divisor
 					//when(!reg_dividend(64)){
-						reg_q := reg_q + 1.U
+					reg_q := reg_q + 1.U
 					//}
 				}
 				reg_is_need_correct := false.B
