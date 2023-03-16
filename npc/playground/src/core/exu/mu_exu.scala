@@ -195,19 +195,15 @@ class DIV extends Module with CoreParameters{
 		}
 		is(div_correct){
 			//reg_q := Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q<<1.U))//+1.U)
-			//reg_q := Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q<<1.U)+1.U)
+			reg_q := Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q<<1.U)+1.U)
 			//reg_q := Mux(reg_rem(64)^reg_divisor(64),(reg_q<<1.U)+1.U,reg_q<<1.U)
 			when(is_need_correct){
 				when(reg_rem(64)^reg_divisor(64)){
-					reg_q := (reg_q<<1.U)
 					reg_rem := reg_rem + reg_divisor
 				}.otherwise{
-					reg_q := (reg_q<<1.U) + 1.U
 					reg_rem := reg_rem + neg_divisor
 				}
-		 	}.otherwise{
-				reg_q := reg_q<<1.U 
-			}
+		 	}
 			//reg_rem := reg_rem
 			reg_state := Mux(io.in_flush,div_start,div_end)
 			// when(io.in_flush){
@@ -242,11 +238,10 @@ class DIV extends Module with CoreParameters{
 				when(reg_dividend(64)^reg_divisor(64)){
 					//reg_q := reg_q - 1.U
 					//reg_rem := reg_rem + reg_divisor
-					reg_q := reg_q + 1.U
-				}.otherwise{
-					//reg_q := reg_q + 1.U
-					//reg_rem := reg_rem + neg_divisor
-				}
+					when(!reg_dividend(64)){
+						reg_q := reg_q + 1.U
+					}
+				}.
 				reg_is_need_correct := false.B
 				reg_stall		:= false.B 
 				reg_out_valid	:= true.B
