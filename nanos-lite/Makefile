@@ -25,6 +25,7 @@ ifeq ($(wildcard $(NAVY_HOME)/libs/libos/src/syscall.h),)
 endif
 
 update:
+	$(MAKE)  -C $(NAVY_HOME) clean
 	$(MAKE) -s -C $(NAVY_HOME) ISA=$(ISA) ramdisk
 	@ln -sf $(NAVY_HOME)/build/ramdisk.img $(RAMDISK_FILE)
 	@ln -sf $(NAVY_HOME)/build/ramdisk.h src/files.h
