@@ -196,7 +196,7 @@ class DIV extends Module with CoreParameters{
 		is(div_correct){
 			//reg_q := Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q<<1.U))//+1.U)
 			when(rem_is_0){
-				reg_q := (reg_q<<1.U))+1.U
+				reg_q := (reg_q<<1.U)+1.U
 			}.otherwise{
 				reg_q := Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q<<1.U)+1.U)
 			}
