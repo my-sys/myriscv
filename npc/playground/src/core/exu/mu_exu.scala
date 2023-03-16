@@ -194,7 +194,7 @@ class DIV extends Module with CoreParameters{
 			reg_state 		:= Mux(io.in_flush,div_start,Mux(reg_cnt === "h40".U,div_correct,reg_state))
 		}
 		is(div_correct){
-			reg_q := Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q<<1.U))//+1.U)
+			//reg_q := Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q<<1.U))//+1.U)
 			//reg_q := Mux(reg_rem(64)^reg_divisor(64),reg_q<<1.U,(reg_q<<1.U)+1.U)
 			//reg_q := Mux(reg_rem(64)^reg_divisor(64),(reg_q<<1.U)+1.U,reg_q<<1.U)
 			when(is_need_correct){
