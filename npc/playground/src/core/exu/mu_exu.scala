@@ -199,13 +199,15 @@ class DIV extends Module with CoreParameters{
 			//reg_q := Mux(reg_rem(64)^reg_divisor(64),(reg_q<<1.U)+1.U,reg_q<<1.U)
 			when(is_need_correct){
 				when(reg_rem(64)^reg_divisor(64)){
-					//reg_q := reg_q - 1.U
+					reg_q := (reg_q<<1.U)
 					reg_rem := reg_rem + reg_divisor
 				}.otherwise{
-					//reg_q := reg_q + 1.U
+					reg_q := (reg_q<<1.U) + 1.U
 					reg_rem := reg_rem + neg_divisor
 				}
-		 	}
+		 	}.otherwise{
+				reg_q := reg_q<<1.U 
+			}
 			//reg_rem := reg_rem
 			reg_state := Mux(io.in_flush,div_start,div_end)
 			// when(io.in_flush){
