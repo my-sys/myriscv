@@ -15,6 +15,11 @@ class Cache extends Module{
 			def fire: Bool = valid & ready
 		}
 		)
+
+		val sram0_data 	= new SRAM_Interface
+		val sram0_tag 	= new SRAM_Interface
+		val sram2_data 	= new SRAM_Interface
+		val sram2_tag 	= new SRAM_Interface
 		// val up_mem 		= Flipped(Decoupled())
 
 		// val clean_cache = Flipped(Decoupled())
@@ -30,10 +35,10 @@ class Cache extends Module{
 	val wstrb 		= io.cpu.bits.wstrb
 	val is_w 		= io.cpu.bits.is_w
 	
-	val sram0_data 		= Module(new SRAM) // 存放数据
-	val sram0_tag 		= Module(new SRAM) // 存放Tag， 以及控制位
-	val sram2_data 		= Module(new SRAM) // 存放数据
-	val sram2_tag 		= Module(new SRAM) // 存放Tag，以及控制位
+	val sram0_data 		= io.sram0_data	//Module(new SRAM) // 存放数据
+	val sram0_tag 		= io.sram0_tag	//Module(new SRAM) // 存放Tag， 以及控制位
+	val sram2_data 		= io.sram2_data	//Module(new SRAM) // 存放数据
+	val sram2_tag 		= io.sram2_tag	//Module(new SRAM) // 存放Tag，以及控制位
 	
 	val cache_idle	:: read_cache :: cache_and_bus :: cache_end :: Nil = Enum(4)
 	val reg_cache_state	= RegInit(cache_idle)
@@ -60,17 +65,17 @@ class Cache extends Module{
 //-----------------------------sram0--------------------------------
 	val is_sram0_write 		= reg_cache_write &(reg_chosen_tag === 0.U)
 	val sram0_A				= Mux(reg_cache_state =/= cache_idle,reg_index,Index)
-	sram0_data.io.WEN 		:= ~(is_sram0_write)
-	sram0_data.io.CEN 		:= ~(true.B)
-	sram0_data.io.BWEN 	:= ~(cache_mask)
-	sram0_data.io.A 		:= sram0_A
-	sram0_data.io.D 		:= reg_cache_wdata
+	sram0_data.wen 			:= ~(is_sram0_write)
+	sram0_data.cen 			:= ~(true.B)
+	sram0_data.wmask 		:= ~(cache_mask)
+	sram0_data.addr 		:= sram0_A
+	sram0_data.wdata 		:= reg_cache_wdata
 	
-	sram0_tag.io.WEN		:= ~(is_sram0_write)
-	sram0_tag.io.CEN		:= ~(true.B)
-	sram0_tag.io.BWEN 		:= 0.U
-	sram0_tag.io.A 			:= sram0_A
-	sram0_tag.io.D 			:= reg_tag
+	sram0_tag.wen			:= ~(is_sram0_write)
+	sram0_tag.cen			:= ~(true.B)
+	sram0_tag.wmask 		:= 0.U
+	sram0_tag.addr 			:= sram0_A
+	sram0_tag.wdata 		:= reg_tag
 	
 	val clear_cache = false.B
 	val reg_sram0_valid 	= RegInit(0.U(64.W))
@@ -91,17 +96,17 @@ class Cache extends Module{
 //---------------------------sram2-----------------------------
 	val is_sram2_write 		= reg_cache_write &(reg_chosen_tag === 1.U)
 	val sram2_A = sram0_A
-	sram2_data.io.WEN 		:= ~(is_sram2_write)
-	sram2_data.io.CEN 		:= ~(true.B)
-	sram2_data.io.BWEN 	:= ~(cache_mask)
-	sram2_data.io.A 		:= sram2_A
-	sram2_data.io.D 		:= reg_cache_wdata
+	sram2_data.wen 			:= ~(is_sram2_write)
+	sram2_data.cen 			:= ~(true.B)
+	sram2_data.wmask 		:= ~(cache_mask)
+	sram2_data.addr 		:= sram2_A
+	sram2_data.wdata 		:= reg_cache_wdata
 	
-	sram2_tag.io.WEN 		:= ~(is_sram2_write)
-	sram2_tag.io.CEN 		:= ~(true.B)
-	sram2_tag.io.BWEN 		:= 0.U
-	sram2_tag.io.A 			:= sram2_A
-	sram2_tag.io.D 			:= reg_tag 
+	sram2_tag.wen 			:= ~(is_sram2_write)
+	sram2_tag.cen 			:= ~(true.B)
+	sram2_tag.wmask 		:= 0.U
+	sram2_tag.addr 			:= sram2_A
+	sram2_tag.wdata 		:= reg_tag 
 	
 	val reg_sram2_valid 	= RegInit(0.U(64.W))
 	val reg_sram2_dirty 	= RegInit(0.U(64.W))
@@ -129,18 +134,18 @@ class Cache extends Module{
 	val reg_b_ready 	= RegInit(false.B)
 	
 //------------------------------ get data from SRAM-----------------------------
-	val tag_0 			= sram0_tag.io.Q(53,0)
-	val tag_2 			= sram2_tag.io.Q(53,0)
+	val tag_0 			= sram0_tag.rdata(53,0)
+	val tag_2 			= sram2_tag.rdata(53,0)
 	val hit_0			= (reg_tag === tag_0)
 	val hit_2 			= (reg_tag === tag_2)
 	val tag_valid_0 	= reg_sram0_valid(reg_index)
 	val tag_valid_2 	= reg_sram2_valid(reg_index)
 	val tag_dirty_0 	= reg_sram0_dirty(reg_index)
 	val tag_dirty_2 	= reg_sram2_dirty(reg_index)
-	val rdata0			= Mux(reg_offset(3),sram0_data.io.Q(127,64),sram0_data.io.Q(63,0))
-	val rdata2 			= Mux(reg_offset(3),sram2_data.io.Q(127,64),sram2_data.io.Q(63,0))
-	val rdata_0			= sram0_data.io.Q
-	val rdata_2 		= sram2_data.io.Q
+	val rdata0			= Mux(reg_offset(3),sram0_data.rdata(127,64),sram0_data.rdata(63,0))
+	val rdata2 			= Mux(reg_offset(3),sram2_data.rdata(127,64),sram2_data.rdata(63,0))
+	val rdata_0			= sram0_data.rdata
+	val rdata_2 		= sram2_data.rdata
 	
 //--------------------------LRU--------------------------------------
 // 1 bit LRU 
