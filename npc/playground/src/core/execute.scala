@@ -90,7 +90,7 @@ class Exu extends Module with CoreParameters{
 	
 	// 跳转指令问题，冲刷流水线
 	
-	val reg_flush 			= alu_exu.io.next_pc_valid & reg_valid(0)
+	val reg_flush 			= (alu_exu.io.next_pc_valid & reg_valid(0)) | (abn_exu.io.is_fence_i & reg_valid(4))
 	// Choosing the function unit to execute
 	val default_valid = "b00000".U
     val valid = MuxLookup(opType,default_valid,List(
@@ -254,9 +254,9 @@ class Exu extends Module with CoreParameters{
 	io.out.rs_addr          := reg_rs_addr
 	io.out.rs_data          := reg_rs_data
 	io.out.w_rs_en          := Mux(stall,false.B,reg_w_rs_en) //reg_w_rs_en
-	io.out.next_pc          := reg_next_pc
-	io.out.valid_next_pc    := Mux(stall,false.B,reg_valid_next_pc & reg_valid(0))
-	io.out.flush 			:= Mux(stall,false.B,reg_valid_next_pc & reg_valid(0))
+	io.out.next_pc          := Mux(reg_valid(4),reg_pc + 4.U,reg_next_pc)
+	io.out.valid_next_pc    := Mux(stall,false.B,reg_flush)
+	io.out.flush 			:= Mux(stall,false.B,reg_flush)
 	
 	io.out.opType			:= Mux(stall,Op_type.op_n,reg_opType)
 	io.out.exuType			:= Mux(stall,ALUType.alu_none,reg_exuType) 

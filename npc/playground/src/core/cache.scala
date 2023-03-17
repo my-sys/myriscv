@@ -15,6 +15,7 @@ class Cache extends Module{
 			def fire: Bool = valid & ready
 		}
 		)
+		val is_fence_i = Input(Bool())
 
 		val sram0_data 	= new SRAM_Interface
 		val sram0_tag 	= new SRAM_Interface
@@ -77,7 +78,8 @@ class Cache extends Module{
 	sram0_tag.addr 			:= sram0_A
 	sram0_tag.wdata 		:= reg_tag
 	
-	val clear_cache = false.B
+	//val clear_cache = false.B
+	val clear_cache = io.is_fence_i
 	val reg_sram0_valid 	= RegInit(0.U(64.W))
 	val reg_sram0_dirty 	= RegInit(0.U(64.W))
 	val chose_bit = 1.U << reg_index   //相应位，置1

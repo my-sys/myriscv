@@ -103,8 +103,8 @@ class Core extends Module{
 	write_back.io.in.mie 			:= csr_reg.io.r.csr_mie
 
 	write_back.io.in.is_mret		:= execute.io.out.is_mret
-	write_back.io.in.is_fence		:= execute.io.out.is_fence
-	write_back.io.in.is_fence_i		:= execute.io.out.is_fence_i
+	// write_back.io.in.is_fence		:= execute.io.out.is_fence
+	// write_back.io.in.is_fence_i		:= execute.io.out.is_fence_i
 
 	write_back.io.in.time_irq		:= clint_de.io.time_irq
 	write_back.io.in.soft_irq		:= clint_de.io.soft_irq
@@ -141,6 +141,9 @@ class Core extends Module{
 	cross_bar_1.io.wb.bits.is_w		:= write_back.io.bus.bits.is_w
 	write_back.io.bus.bits.rdata 	:= cross_bar_1.io.wb.bits.rdata
 	write_back.io.bus.ready 		:= cross_bar_1.io.wb.ready
+
+	i_cache.io.is_fence_i := execute.io.out.is_fence_i
+	d_cache.io.is_fence_i := false.B 
 
 	i_cache.io.cpu <> cross_bar_1.io.ICache 
 	d_cache.io.cpu <> cross_bar_1.io.DCache 

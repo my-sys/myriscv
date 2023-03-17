@@ -9,7 +9,7 @@ class Fetch extends Module{
 	val io = IO(new Bundle{
 		val in = new Bundle{
 			val de_stall 	= Input(Bool())
-			val wb_stall  	= Input(Bool()) 
+			val wb_stall  	= Input(Bool())
 			val ex_stall	= Input(Bool())
 			val next_pc 	= Input(UInt(64.W))
 			val valid_next_pc = Input(Bool())

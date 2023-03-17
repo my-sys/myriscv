@@ -32,8 +32,8 @@ class WriteBack extends Module with CoreParameters{
 			val mie 			= Input(UInt(64.W))
 
 			val is_mret			= Input(Bool())
-			val is_fence		= Input(Bool())
-			val is_fence_i		= Input(Bool())
+			// val is_fence		= Input(Bool())
+			// val is_fence_i		= Input(Bool())
 
 			val time_irq		= Input(Bool())
 			val soft_irq 		= Input(Bool())
@@ -77,7 +77,7 @@ class WriteBack extends Module with CoreParameters{
 
 			val flush 			= Output(Bool())
 			val flush_pc		= Output(UInt(64.W))
-		}	
+		}
 	})
 	// 本级存在的必要性，execute 计算内存地址，wb阶段进行读写。往寄存器写的也需要流到这一级的原因是，指令之间要按顺序执行不能存在越位。
 	val reg_stall				= RegInit(false.B)
