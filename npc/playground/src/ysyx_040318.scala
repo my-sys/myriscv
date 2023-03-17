@@ -53,39 +53,39 @@ class ysyx_040318 extends Module{
 	})
 
 	val core = Module(new Core)
-	core.axi_bus.aw.ready	:= io.master.awready
-	io.master.awvalid	:= core.axi_bus.aw.valid
-	io.master.awid 		:= core.axi_bus.aw.bits.awid
-	io.master.awaddr 	:= core.axi_bus.aw.bits.awaddr
-	io.master.awlen 	:= core.axi_bus.aw.bits.awlen
-	io.master.awsize 	:= core.axi_bus.aw.bits.awsize
-	io.master.awburst 	:= core.axi_bus.aw.bits.awburst
+	core.io.axi_bus.aw.ready	:= io.master.awready
+	io.master.awvalid	:= core.io.axi_bus.aw.valid
+	io.master.awid 		:= core.io.axi_bus.aw.bits.awid
+	io.master.awaddr 	:= core.io.axi_bus.aw.bits.awaddr
+	io.master.awlen 	:= core.io.axi_bus.aw.bits.awlen
+	io.master.awsize 	:= core.io.axi_bus.aw.bits.awsize
+	io.master.awburst 	:= core.io.axi_bus.aw.bits.awburst
 
-	core.axi_bus.w.ready	:= io.master.wready 
-	io.master.wvalid 	:= core.axi_bus.w.valid
-	io.master.wdata 	:= core.axi_bus.w.bits.wdata
-	io.master.wstrb 	:= core.axi_bus.w.bits.wstrb
-	io.master.wlast 	:= core.axi_bus.w.bits.wlast
+	core.io.axi_bus.w.ready	:= io.master.wready 
+	io.master.wvalid 	:= core.io.axi_bus.w.valid
+	io.master.wdata 	:= core.io.axi_bus.w.bits.wdata
+	io.master.wstrb 	:= core.io.axi_bus.w.bits.wstrb
+	io.master.wlast 	:= core.io.axi_bus.w.bits.wlast
 
-	io.master.bready 	:= core.axi_bus.b.ready
-	core.axi_bus.b.valid 		:= io.master.bvalid
-	core.axi_bus.b.bits.bid 	:= io.master.bid
-	core.axi_bus.b.bits.bresp 	:= io.master.bresp
+	io.master.bready 	:= core.io.axi_bus.b.ready
+	core.io.axi_bus.b.valid 		:= io.master.bvalid
+	core.io.axi_bus.b.bits.bid 	:= io.master.bid
+	core.io.axi_bus.b.bits.bresp 	:= io.master.bresp
 
-	core.axi_bus.ar.ready 	:= io.master.arready
-	io.master.arvalid	:= core.axi_bus.ar.valid
-	io.master.arid		:= core.axi_bus.ar.bits.arid 
-	io.master.araddr	:= core.axi_bus.ar.bits.araddr
-	io.master.arlen		:= core.axi_bus.ar.bits.arlen
-	io.master.arsize	:= core.axi_bus.ar.bits.arsize
-	io.master.arburst	:= core.axi_bus.ar.bits.arburst
+	core.io.axi_bus.ar.ready 	:= io.master.arready
+	io.master.arvalid	:= core.io.axi_bus.ar.valid
+	io.master.arid		:= core.io.axi_bus.ar.bits.arid 
+	io.master.araddr	:= core.io.axi_bus.ar.bits.araddr
+	io.master.arlen		:= core.io.axi_bus.ar.bits.arlen
+	io.master.arsize	:= core.io.axi_bus.ar.bits.arsize
+	io.master.arburst	:= core.io.axi_bus.ar.bits.arburst
 
-	io.master.rready	:= core.axi_bus.r.ready
-	core.axi_bus.r.valid		:= io.master.rvalid 
-	core.axi_bus.r.bits.rid 	:= io.master.rid 
-	core.axi_bus.r.bits.rresp 	:= io.master.rresp
-	core.axi_bus.r.bits.rdata 	:= io.master.rdata 
-	core.axi_bus.r.bits.rlast 	:= io.master.rlast
+	io.master.rready	:= core.io.axi_bus.r.ready
+	core.io.axi_bus.r.valid		:= io.master.rvalid 
+	core.io.axi_bus.r.bits.rid 	:= io.master.rid 
+	core.io.axi_bus.r.bits.rresp 	:= io.master.rresp
+	core.io.axi_bus.r.bits.rdata 	:= io.master.rdata 
+	core.io.axi_bus.r.bits.rlast 	:= io.master.rlast
 
 	io.slave.awready := false.B
 	//:= io.slave.awvalid
@@ -120,4 +120,13 @@ class ysyx_040318 extends Module{
 	io.slave.rresp 	:= 0.U 
 	io.slave.rdata 	:= 0.U 
 	io.slave.rlast 	:= false.B
+
+	core.io.sram0 <> io.sram0 
+	core.io.sram1 <> io.sram1 
+	core.io.sram2 <> io.sram2 
+	core.io.sram3 <> io.sram3 
+	core.io.sram4 <> io.sram4 
+	core.io.sram5 <> io.sram5 
+	core.io.sram6 <> io.sram6 
+	core.io.sram7 <> io.sram7 
 }
