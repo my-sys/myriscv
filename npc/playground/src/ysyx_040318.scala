@@ -40,6 +40,7 @@ class AXI_Interface extends Bundle{
 
 class ysyx_22040318 extends Module{
 	val io = IO(new Bundle{
+		val inerrupt = Input(interrupt)
 		val master 	= new AXI_Interface
 		val slave	= Flipped(new AXI_Interface)
 		val sram0 	= new SRAM_Interface
