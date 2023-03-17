@@ -67,9 +67,8 @@ class Decode extends Module with CoreParameters{
 
     val reg_file        = new RegCtrl
 
-    BoringUtils.addSource(VecInit((0 to 31).map(i => reg_file.read(i.U))),"DIFFTEST_REG")
-    //val temp_inst = WireInit(3.U(32.W))
-    //BoringUtils.addSource(temp_inst,"DIFFTEST_INST1")
+    //BoringUtils.addSource(VecInit((0 to 31).map(i => reg_file.read(i.U))),"DIFFTEST_REG")
+
 	//处理寄存器读写同时进行时的相关问题
     val rs1_data        = Mux((io.in.rs_addr === rs1_addr)&io.in.w_rs_en, io.in.result_data,reg_file.read(rs1_addr))
     val rs2_data        = Mux((io.in.rs_addr === rs2_addr)&io.in.w_rs_en, io.in.result_data,reg_file.read(rs2_addr))

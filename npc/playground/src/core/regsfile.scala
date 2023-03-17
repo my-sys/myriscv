@@ -74,10 +74,10 @@ class CsrRegCtrl extends Module with CoreParameters{
 	val reg_mcycle	= RegInit(0.U(64.W))
 	val reg_minstret = RegInit(0.U(64.W))
 
-	BoringUtils.addSource(reg_mstatus,"DIFFTEST_MSTATUS")
-	BoringUtils.addSource(reg_mcause,"DIFFTEST_MCAUSE")
-	BoringUtils.addSource(reg_mepc,"DIFFTEST_MEPC")
-	BoringUtils.addSource(reg_mtvec,"DIFFTEST_MTVEC")
+	// BoringUtils.addSource(reg_mstatus,"DIFFTEST_MSTATUS")
+	// BoringUtils.addSource(reg_mcause,"DIFFTEST_MCAUSE")
+	// BoringUtils.addSource(reg_mepc,"DIFFTEST_MEPC")
+	// BoringUtils.addSource(reg_mtvec,"DIFFTEST_MTVEC")
 
 //---------------------------------------- write operation------------------------------------------------------------
 	when(io.in.is_exception){
