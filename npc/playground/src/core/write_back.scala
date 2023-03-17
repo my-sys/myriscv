@@ -278,24 +278,24 @@ class WriteBack extends Module with CoreParameters{
 	}
 	
 //-------------------------------- handle commit------------------------------------------------------------
-	val difftest_commit 		= RegInit(false.B)
-	val difftest_inst 			= RegInit(0.U(InstLen.W))
-	val difftest_pc 			= RegInit(0.U(AddrLen.W))
-	val inst_counter   			= RegInit(0.U(64.W))
-	val difftest_irq 			= RegInit(false.B)
-	val difftest_peripheral 	= RegInit(false.B)
-	difftest_commit			:= reg_commit
-	difftest_inst			:= reg_inst 
-	difftest_pc				:= reg_pc 
-	inst_counter			:= Mux(reg_commit,inst_counter + 1.U,inst_counter)
-	difftest_irq			:= reg_time_irq | reg_soft_irq
-	difftest_peripheral		:= test_is_peripheral
-	BoringUtils.addSource(inst_counter, "INST_COUNTER")
-	BoringUtils.addSource(difftest_commit, "DIFFTEST_COMMIT")
-    BoringUtils.addSource(difftest_pc,"DIFFTEST_PC")
-    BoringUtils.addSource(difftest_inst,"DIFFTEST_INST")
-	BoringUtils.addSource(difftest_irq,"DIFFTEST_IRQ")
-	BoringUtils.addSource(difftest_peripheral,"DIFFTEST_PERIPHERAL")
+	// val difftest_commit 		= RegInit(false.B)
+	// val difftest_inst 			= RegInit(0.U(InstLen.W))
+	// val difftest_pc 			= RegInit(0.U(AddrLen.W))
+	// val inst_counter   			= RegInit(0.U(64.W))
+	// val difftest_irq 			= RegInit(false.B)
+	// val difftest_peripheral 	= RegInit(false.B)
+	// difftest_commit			:= reg_commit
+	// difftest_inst			:= reg_inst 
+	// difftest_pc				:= reg_pc 
+	// inst_counter			:= Mux(reg_commit,inst_counter + 1.U,inst_counter)
+	// difftest_irq			:= reg_time_irq | reg_soft_irq
+	// difftest_peripheral		:= test_is_peripheral
+	// BoringUtils.addSource(inst_counter, "INST_COUNTER")
+	// BoringUtils.addSource(difftest_commit, "DIFFTEST_COMMIT")
+    // BoringUtils.addSource(difftest_pc,"DIFFTEST_PC")
+    // BoringUtils.addSource(difftest_inst,"DIFFTEST_INST")
+	// BoringUtils.addSource(difftest_irq,"DIFFTEST_IRQ")
+	// BoringUtils.addSource(difftest_peripheral,"DIFFTEST_PERIPHERAL")
 	
 	io.out.rs_addr			:= Mux(reg_stall,0.U,reg_rs_addr)
 	io.out.result_data		:= Mux(reg_stall,0.U,reg_result_data)
