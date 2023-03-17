@@ -38,7 +38,7 @@ class AXI_Interface extends Bundle{
 	val rlast 	= Input(Bool())
 }
 
-class ysyx_040318 extends Module{
+class ysyx_22040318 extends Module{
 	val io = IO(new Bundle{
 		val master 	= new AXI_Interface
 		val slave	= Flipped(new AXI_Interface)
