@@ -1,4 +1,4 @@
-package playground  // modify to your package name
+ // modify to your package name
 
 import firrtl._
 import firrtl.annotations.{ModuleTarget, NoTargetAnnotation}
