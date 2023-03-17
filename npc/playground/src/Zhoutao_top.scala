@@ -2,7 +2,7 @@ package playground
 import circt.stage._
  
 object Zhoutao_top extends App{
-    def top = new riscv_soc()
+    def top = new ysyx_040318()	///new riscv_soc()
     val useMFC = false 
     val generator = Seq(chisel3.stage.ChiselGeneratorAnnotation(() => top),
 	firrtl.stage.RunFirrtlTransformAnnotation(new AddModulePrefix()),
