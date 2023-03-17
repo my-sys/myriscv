@@ -179,7 +179,7 @@ when(!w_locked){	//Lock
 	io.AXI_Bus.aw.bits.awid 	:= 0.U
 	io.AXI_Bus.aw.bits.awaddr	:= 0.U
 	io.AXI_Bus.aw.bits.awlen 	:= 0.U
-	io.AXI_Bus.aw.bits.awsize   := 3.U
+	io.AXI_Bus.aw.bits.awsize   := 0.U
 	io.AXI_Bus.aw.bits.awburst  := "b01".U
 	when(w_chosen === 0.U){
 		io.AXI_Bus.aw.bits.awaddr 	:= io.DCache_bus.w.bits.waddr
@@ -192,7 +192,7 @@ when(!w_locked){	//Lock
 	}.otherwise{
 		io.AXI_Bus.aw.bits.awaddr := 0.U
 		io.AXI_Bus.aw.bits.awlen 	:= 0.U
-		io.AXI_Bus.aw.bits.awsize   := 3.U
+		io.AXI_Bus.aw.bits.awsize   := 0.U
 	}
 
 	io.AXI_Bus.w.valid 		:= false.B
@@ -230,7 +230,7 @@ when(!w_locked){	//Lock
 	io.AXI_Bus.ar.bits.arid 	:= 0.U 
 	io.AXI_Bus.ar.bits.araddr	:= 0.U 
 	io.AXI_Bus.ar.bits.arlen 	:= 0.U
-	io.AXI_Bus.ar.bits.arsize	:= 3.U 
+	io.AXI_Bus.ar.bits.arsize	:= 0.U 
 	io.AXI_Bus.ar.bits.arburst	:= "b01".U 
 	when(r_chosen === 0.U){
 		io.AXI_Bus.ar.valid 		:= io.ICache_bus.r.valid & !reg_ar_ok
@@ -246,7 +246,7 @@ when(!w_locked){	//Lock
 		io.AXI_Bus.ar.valid 		:= io.bus1.valid & !reg_ar_ok
 		io.AXI_Bus.ar.bits.araddr	:= io.bus1.bits.addr 
 		io.AXI_Bus.ar.bits.arlen 	:= 0.U
-		io.AXI_Bus.ar.bits.arsize	:= 3.U
+		io.AXI_Bus.ar.bits.arsize	:= 2.U
 	}.elsewhen(r_chosen === 3.U){
 		io.AXI_Bus.ar.valid 		:= io.bus2.valid & !reg_ar_ok
 		io.AXI_Bus.ar.bits.araddr	:= io.bus2.bits.addr 
@@ -256,7 +256,7 @@ when(!w_locked){	//Lock
 		io.AXI_Bus.ar.valid 		:= false.B 
 		io.AXI_Bus.ar.bits.araddr	:= 0.U 
 		io.AXI_Bus.ar.bits.arlen 	:= 0.U
-		io.AXI_Bus.ar.bits.arsize	:= 3.U 
+		io.AXI_Bus.ar.bits.arsize	:= 0.U 
 	}
 
 	io.AXI_Bus.r.ready 	:= true.B
