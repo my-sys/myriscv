@@ -3,6 +3,7 @@ import chisel3.util._
 class ICache extends Module{
 	val io = IO(new Bundle{
 		val cpu = Flipped(new Bundle{
+			val valid = Output(Bool())
 			val bits = new Bundle{
 				val addr 	= Output(UInt(64.W))
 				val rdata 	= Input(UInt(64.W))
@@ -160,7 +161,7 @@ class ICache extends Module{
 		}
 		is(read_cache){
 			reg_start_operation := false.B 
-			reg_cache_wstrb 	:= cache_wstrb
+			//reg_cache_wstrb 	:= cache_wstrb
 			when(hit_0 | hit_2){
 			//一般情况下不会出现两个都中，如果两个都中，则必然两个都无效
 			//这种情况下强制为hit_0先有效

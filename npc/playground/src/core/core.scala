@@ -143,7 +143,7 @@ class Core extends Module{
 	write_back.io.bus.ready 		:= cross_bar_1.io.wb.ready
 
 	i_cache.io.is_fence_i := execute.io.out.is_fence_i
-	d_cache.io.is_fence_i := false.B 
+	//d_cache.io.is_fence_i := false.B 
 
 	i_cache.io.cpu <> cross_bar_1.io.ICache 
 	d_cache.io.cpu <> cross_bar_1.io.DCache 
