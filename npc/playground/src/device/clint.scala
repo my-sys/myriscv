@@ -27,13 +27,13 @@ class Clint extends Module{
 	reg_mtime := reg_mtime + 1.U 
 	val idle :: busy :: Nil = Enum(2)
 	val reg_state = RegInit(idle)
-	val temp_data = MuxLookup(io.bits.addr(7,0),0.U(64.W),List(
-		"h00".U	->reg_msip,
-		"h20".U ->reg_mtime,
-		"h30".U ->reg_mtimecmp
+	val temp_data = MuxLookup(io.bits.addr(15,0),0.U(64.W),List(
+		"h0000".U	->reg_msip,
+		"hbff8".U ->reg_mtime,
+		"h4000".U ->reg_mtimecmp
 	))
-	val is_misp = (io.bits.addr(7,0) === "h00".U)
-	val is_mtimecmp = (io.bits.addr(7,0) === "h30".U)
+	val is_misp = (io.bits.addr(15,0) === "h4000".U)
+	val is_mtimecmp = (io.bits.addr(15,0) === "hbff8".U)
 
 	//val reg_time_irq = RegInit(false.B)
 	switch(reg_state){
