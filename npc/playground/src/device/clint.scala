@@ -29,8 +29,8 @@ class Clint extends Module{
 	val reg_state = RegInit(idle)
 	val temp_data = MuxLookup(io.bits.addr(15,0),0.U(64.W),List(
 		"h0000".U	->reg_msip,
-		"hbff8".U ->reg_mtime,
-		"h4000".U ->reg_mtimecmp
+		"h4000".U ->reg_mtimecmp,
+		"hbff8".U ->reg_mtime
 	))
 	val is_misp = (io.bits.addr(15,0) === "h0000".U)
 	val is_mtimecmp = (io.bits.addr(15,0) === "h4000".U)

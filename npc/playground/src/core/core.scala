@@ -23,8 +23,8 @@ class Core extends Module{
 		val sram7 	= new SRAM_Interface
 	})
 
-	val i_cache 		= Module(new Cache)
-	val d_cache			= Module(new Cache)
+	val i_cache 		= Module(new ICache)
+	val d_cache			= Module(new DCache)
 	val cross_bar 		= Module(new Crossbar)
 	val cross_bar_1 	= Module(new Crossbar_1)
 

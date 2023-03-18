@@ -32,9 +32,9 @@ class Crossbar_1 extends Module{
 			val bits = new Bundle{
 				val addr    = Output(UInt(64.W))
 				val rdata 	= Input(UInt(64.W))
-				val wdata 	= Output(UInt(64.W))
-				val wstrb 	= Output(UInt(8.W))
-				val is_w 	= Output(Bool())
+				// val wdata 	= Output(UInt(64.W))
+				// val wstrb 	= Output(UInt(8.W))
+				// val is_w 	= Output(Bool())
 			}
 			val ready = Input(Bool())
 			def fire: Bool = valid & ready
@@ -89,9 +89,9 @@ class Crossbar_1 extends Module{
 //---------------------------fetch----------------------
 	val fetch_low_address	= (io.fetch.bits.addr(63,31) === "h0".U)
 	io.ICache.bits.addr  := io.fetch.bits.addr 
-	io.ICache.bits.wdata := 0.U 
-	io.ICache.bits.wstrb := 0.U 
-	io.ICache.bits.is_w  := false.B 
+	// io.ICache.bits.wdata := 0.U 
+	// io.ICache.bits.wstrb := 0.U 
+	// io.ICache.bits.is_w  := false.B 
 	//io.ICache.valid 	 := io.fetch.bits.addr(31)&io.fetch.valid
 	io.ICache.valid 	 := (!fetch_low_address)&io.fetch.valid
 	when(!fetch_low_address){
