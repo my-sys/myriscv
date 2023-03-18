@@ -32,8 +32,8 @@ class Clint extends Module{
 		"hbff8".U ->reg_mtime,
 		"h4000".U ->reg_mtimecmp
 	))
-	val is_misp = (io.bits.addr(15,0) === "h4000".U)
-	val is_mtimecmp = (io.bits.addr(15,0) === "hbff8".U)
+	val is_misp = (io.bits.addr(15,0) === "h0000".U)
+	val is_mtimecmp = (io.bits.addr(15,0) === "h4000".U)
 
 	//val reg_time_irq = RegInit(false.B)
 	switch(reg_state){
