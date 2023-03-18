@@ -59,7 +59,7 @@ class Crossbar extends Module{
 	})
 //---------------------write lock-----------------------------------
 val reg_w_cnt = RegInit(0.U(2.W))
-val w_locked = (reg_w_cnt =/= 0.U)
+val w_locked = RegInit(false.B)
 val w_lockId = RegInit(0.U(2.W))
 val w_chosen = WireInit(0.U(2.W))
 
@@ -69,30 +69,26 @@ when(!w_locked){
 	}.elsewhen(io.bus2.valid & io.bus2.bits.is_w){
 		w_chosen := 1.U
 	}.otherwise{
-		w_chosen := 0.U
+		w_chosen := 2.U
 	}
 }.otherwise{
 	w_chosen := w_lockId
 }
 
-when(!w_locked){	//Lock
+when(!w_locked){	//Set Lock
 	when(io.DCache_bus.w.valid){
-		reg_w_cnt 	:= 2.U 
+		w_locked	:= true.B 
 		w_lockId	:= 0.U
 	}.elsewhen(io.bus2.valid & io.bus2.bits.is_w){
-		reg_w_cnt	:= 1.U 
+		w_locked	:= true.B
 		w_lockId	:= 1.U
 	}.otherwise{
 		w_lockId	:= 0.U
-		reg_w_cnt 	:= 0.U
+		w_locked	:= false.B
 	}
-}.otherwise{ //Unlock
-	when((w_lockId === 0.U) & io.DCache_bus.w.fire){
-		reg_w_cnt	:= reg_w_cnt - 1.U
-	}.elsewhen((w_lockId === 1.U) & io.bus2.fire & io.bus2.bits.is_w){
-		reg_w_cnt	:= reg_w_cnt - 1.U
-	}.otherwise{
-		reg_w_cnt	:= reg_w_cnt
+}.otherwise{ //Set Unlock
+	when(io.AXI_Bus.b.valid){
+		w_locked	:= false.B
 	}
 }
 //---------------------read lock------------------------------------
@@ -119,16 +115,16 @@ when(!w_locked){	//Lock
 
 	when(!r_locked){
 		when(io.ICache_bus.r.valid){
-			reg_r_cnt	:= 2.U
+			reg_r_cnt	:= Mux(io.ICache_bus.r.ready,1.U,2.U)
 			r_lockId	:= 0.U
 		}.elsewhen(io.DCache_bus.r.valid){
-			reg_r_cnt	:= 2.U
+			reg_r_cnt	:= Mux(io.DCache_bus.r.ready,1.U,2.U)
 			r_lockId	:= 1.U
 		}.elsewhen(io.bus1.valid){
-			reg_r_cnt	:= 1.U
+			reg_r_cnt	:= Mux(io.bus1.ready,0.U,1.U)
 			r_lockId	:= 2.U
 		}.elsewhen(io.bus2.valid & (!io.bus2.bits.is_w)){
-			reg_r_cnt	:= 1.U
+			reg_r_cnt	:= Mux(io.bus2.ready,0.U,1.U)
 			r_lockId	:= 3.U
 		}.otherwise{
 			reg_r_cnt	:= 0.U
@@ -260,4 +256,4 @@ when(!w_locked){	//Lock
 	}
 
 	io.AXI_Bus.r.ready 	:= true.B
-}
+}  
