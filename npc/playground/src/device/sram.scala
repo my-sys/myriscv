@@ -15,12 +15,12 @@ class S011HD1P_X32Y2D128_BW extends BlackBox{
 
 class SRAM extends Module{
 	val io = IO(new Bundle{
-		val addr 	= Output(UInt(6.W))
-		val cen 	= Output(Bool())
-		val wen 	= Output(Bool())
-		val wmask 	= Output(UInt(128.W))
-		val wdata 	= Output(UInt(128.W))
-		val rdata 	= Input(UInt(128.W))
+		val addr 	= Input(UInt(6.W))
+		val cen 	= Input(Bool())
+		val wen 	= Input(Bool())
+		val wmask 	= Input(UInt(128.W))
+		val wdata 	= Input(UInt(128.W))
+		val rdata 	= Output(UInt(128.W))
 	})
 
 	val sram = Module(new S011HD1P_X32Y2D128_BW)
