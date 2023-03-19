@@ -93,13 +93,13 @@ class riscv_soc extends Module{
 	axi_ram.io.ram_bus <> core.io.axi_bus
 
 	core.io.sram0 <>sram0.io 
-	core.io.sram1 <>sram0.io 
-	core.io.sram2 <>sram0.io 
-	core.io.sram3 <>sram0.io 
-	core.io.sram4 <>sram0.io 
-	core.io.sram5 <>sram0.io 
-	core.io.sram6 <>sram0.io 
-	core.io.sram7 <>sram0.io 
+	core.io.sram1 <>sram1.io 
+	core.io.sram2 <>sram2.io 
+	core.io.sram3 <>sram3.io 
+	core.io.sram4 <>sram4.io 
+	core.io.sram5 <>sram5.io 
+	core.io.sram6 <>sram6.io 
+	core.io.sram7 <>sram7.io 
 //   core.io.in.rdata    :=  axi_ram.io.rdata
 //   axi_ram.io.waddr    :=  core.io.out.waddr 
 //   axi_ram.io.wdata    :=  core.io.out.wdata
