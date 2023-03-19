@@ -1,5 +1,5 @@
 BUILD_DIR = ./build
-TOPNAME = ysyx_22040318
+TOPNAME = riscv_soc
 export PATH := $(PATH):$(abspath ./utils)
 
 

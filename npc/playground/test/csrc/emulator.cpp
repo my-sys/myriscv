@@ -3,7 +3,7 @@
 #if EN_TRACE
  #include <verilated_vcd_c.h>
 #endif
-#include "Vysyx_22040318.h"
+#include "Vriscv_soc.h"
 #include "difftest.h"
 #include "disasm.h"
 #include "./device/device.h"
@@ -12,7 +12,7 @@ static uint64_t iringbuf2[16] = {0};
 CPU_state cpu = {};
 NPCState npc_state = { .state = NPC_STOP };
 Emulator::Emulator(){
-    top = new Vysyx_22040318;
+    top = new Vriscv_soc;
     cycles = 0;
 	start_wave= false;
 #if EN_TRACE
