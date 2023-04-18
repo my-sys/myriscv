@@ -311,4 +311,4 @@ class MU_EXU extends Module with CoreParameters{
 	io.result_data 	:= Mux(div.io.out_valid,div.io.result,0.U) | Mux(mul.io.out_valid,mul.io.result,0.U)
 	io.out_valid 	:= div.io.out_valid | mul.io.out_valid
 
-}   
+}
