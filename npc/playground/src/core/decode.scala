@@ -9,7 +9,7 @@ class Decode extends Module{
 		val get_inst = Flipped(Decoupled(new Get_Inst_IO))
 		val normal_rd = Flipped(new Normal_Read_IO)
 		val csr_rd 	  = Flipped(new Csr_Read_IO)
-		val op_datas  = Flipped(Decoupled(new Op_Datas_IO))
+		val op_datas  = Decoupled(new Op_Datas_IO)
 		val flush 	  = Input(Bool())
     })
 	val flush = io.flush

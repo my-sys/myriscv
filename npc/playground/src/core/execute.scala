@@ -49,7 +49,7 @@ class IRQ_IO extends Bundle{
 
 class Exu extends Module with CoreParameters{
 	val io = IO(new Bundle{
-		val op_datas = Decoupled(new Op_Datas_IO)
+		val op_datas = Flipped(Decoupled(new Op_Datas_IO))
 		val irq 	   = new IRQ_IO
 		val mstatus	   = Input(UInt(64.W))
 		val mie 	   = Input(UInt(64.W))
