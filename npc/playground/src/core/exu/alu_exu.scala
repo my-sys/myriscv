@@ -63,7 +63,7 @@ object BRUType{
 
 // ALU 是一个常用的单元，设计它的指令非常多，乘法，除法。存储指令，CSR较少，因此在多个执行单元中
 //应该有多个ALU。少数的CSR ，MU，LSU。
-class ALU_EXU(has_br_unit: Bool = false.B) extends Module with CoreParameters{
+class ALU_EXU(has_br_unit: Bool = false) extends Module with CoreParameters{
     val io = IO(new Bundle{
         val valid = Input(Bool())
 		val opType 		= Input(UInt(3.W))
