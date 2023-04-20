@@ -22,96 +22,96 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
     if (false && tracep && c) {}  // Prevent unused
     // Body
     {
-        tracep->declBit(c+738,"clock", false,-1);
-        tracep->declBit(c+739,"reset", false,-1);
-        tracep->declQuad(c+740,"io_difftest_reg_0", false,-1, 63,0);
-        tracep->declQuad(c+742,"io_difftest_reg_1", false,-1, 63,0);
-        tracep->declQuad(c+744,"io_difftest_reg_2", false,-1, 63,0);
-        tracep->declQuad(c+746,"io_difftest_reg_3", false,-1, 63,0);
-        tracep->declQuad(c+748,"io_difftest_reg_4", false,-1, 63,0);
-        tracep->declQuad(c+750,"io_difftest_reg_5", false,-1, 63,0);
-        tracep->declQuad(c+752,"io_difftest_reg_6", false,-1, 63,0);
-        tracep->declQuad(c+754,"io_difftest_reg_7", false,-1, 63,0);
-        tracep->declQuad(c+756,"io_difftest_reg_8", false,-1, 63,0);
-        tracep->declQuad(c+758,"io_difftest_reg_9", false,-1, 63,0);
-        tracep->declQuad(c+760,"io_difftest_reg_10", false,-1, 63,0);
-        tracep->declQuad(c+762,"io_difftest_reg_11", false,-1, 63,0);
-        tracep->declQuad(c+764,"io_difftest_reg_12", false,-1, 63,0);
-        tracep->declQuad(c+766,"io_difftest_reg_13", false,-1, 63,0);
-        tracep->declQuad(c+768,"io_difftest_reg_14", false,-1, 63,0);
-        tracep->declQuad(c+770,"io_difftest_reg_15", false,-1, 63,0);
-        tracep->declQuad(c+772,"io_difftest_reg_16", false,-1, 63,0);
-        tracep->declQuad(c+774,"io_difftest_reg_17", false,-1, 63,0);
-        tracep->declQuad(c+776,"io_difftest_reg_18", false,-1, 63,0);
-        tracep->declQuad(c+778,"io_difftest_reg_19", false,-1, 63,0);
-        tracep->declQuad(c+780,"io_difftest_reg_20", false,-1, 63,0);
-        tracep->declQuad(c+782,"io_difftest_reg_21", false,-1, 63,0);
-        tracep->declQuad(c+784,"io_difftest_reg_22", false,-1, 63,0);
-        tracep->declQuad(c+786,"io_difftest_reg_23", false,-1, 63,0);
-        tracep->declQuad(c+788,"io_difftest_reg_24", false,-1, 63,0);
-        tracep->declQuad(c+790,"io_difftest_reg_25", false,-1, 63,0);
-        tracep->declQuad(c+792,"io_difftest_reg_26", false,-1, 63,0);
-        tracep->declQuad(c+794,"io_difftest_reg_27", false,-1, 63,0);
-        tracep->declQuad(c+796,"io_difftest_reg_28", false,-1, 63,0);
-        tracep->declQuad(c+798,"io_difftest_reg_29", false,-1, 63,0);
-        tracep->declQuad(c+800,"io_difftest_reg_30", false,-1, 63,0);
-        tracep->declQuad(c+802,"io_difftest_reg_31", false,-1, 63,0);
-        tracep->declQuad(c+804,"io_difftest_pc", false,-1, 63,0);
-        tracep->declBus(c+806,"io_difftest_inst", false,-1, 31,0);
-        tracep->declBit(c+807,"io_difftest_commit", false,-1);
-        tracep->declQuad(c+808,"io_inst_counter", false,-1, 63,0);
-        tracep->declBit(c+810,"io_difftest_irq", false,-1);
-        tracep->declQuad(c+811,"io_difftest_mstatus", false,-1, 63,0);
-        tracep->declQuad(c+813,"io_difftest_mcause", false,-1, 63,0);
-        tracep->declQuad(c+815,"io_difftest_mepc", false,-1, 63,0);
-        tracep->declQuad(c+817,"io_difftest_mtvec", false,-1, 63,0);
-        tracep->declBit(c+819,"io_difftest_peripheral", false,-1);
-        tracep->declBit(c+738,"riscv_soc clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc reset", false,-1);
-        tracep->declQuad(c+740,"riscv_soc io_difftest_reg_0", false,-1, 63,0);
-        tracep->declQuad(c+742,"riscv_soc io_difftest_reg_1", false,-1, 63,0);
-        tracep->declQuad(c+744,"riscv_soc io_difftest_reg_2", false,-1, 63,0);
-        tracep->declQuad(c+746,"riscv_soc io_difftest_reg_3", false,-1, 63,0);
-        tracep->declQuad(c+748,"riscv_soc io_difftest_reg_4", false,-1, 63,0);
-        tracep->declQuad(c+750,"riscv_soc io_difftest_reg_5", false,-1, 63,0);
-        tracep->declQuad(c+752,"riscv_soc io_difftest_reg_6", false,-1, 63,0);
-        tracep->declQuad(c+754,"riscv_soc io_difftest_reg_7", false,-1, 63,0);
-        tracep->declQuad(c+756,"riscv_soc io_difftest_reg_8", false,-1, 63,0);
-        tracep->declQuad(c+758,"riscv_soc io_difftest_reg_9", false,-1, 63,0);
-        tracep->declQuad(c+760,"riscv_soc io_difftest_reg_10", false,-1, 63,0);
-        tracep->declQuad(c+762,"riscv_soc io_difftest_reg_11", false,-1, 63,0);
-        tracep->declQuad(c+764,"riscv_soc io_difftest_reg_12", false,-1, 63,0);
-        tracep->declQuad(c+766,"riscv_soc io_difftest_reg_13", false,-1, 63,0);
-        tracep->declQuad(c+768,"riscv_soc io_difftest_reg_14", false,-1, 63,0);
-        tracep->declQuad(c+770,"riscv_soc io_difftest_reg_15", false,-1, 63,0);
-        tracep->declQuad(c+772,"riscv_soc io_difftest_reg_16", false,-1, 63,0);
-        tracep->declQuad(c+774,"riscv_soc io_difftest_reg_17", false,-1, 63,0);
-        tracep->declQuad(c+776,"riscv_soc io_difftest_reg_18", false,-1, 63,0);
-        tracep->declQuad(c+778,"riscv_soc io_difftest_reg_19", false,-1, 63,0);
-        tracep->declQuad(c+780,"riscv_soc io_difftest_reg_20", false,-1, 63,0);
-        tracep->declQuad(c+782,"riscv_soc io_difftest_reg_21", false,-1, 63,0);
-        tracep->declQuad(c+784,"riscv_soc io_difftest_reg_22", false,-1, 63,0);
-        tracep->declQuad(c+786,"riscv_soc io_difftest_reg_23", false,-1, 63,0);
-        tracep->declQuad(c+788,"riscv_soc io_difftest_reg_24", false,-1, 63,0);
-        tracep->declQuad(c+790,"riscv_soc io_difftest_reg_25", false,-1, 63,0);
-        tracep->declQuad(c+792,"riscv_soc io_difftest_reg_26", false,-1, 63,0);
-        tracep->declQuad(c+794,"riscv_soc io_difftest_reg_27", false,-1, 63,0);
-        tracep->declQuad(c+796,"riscv_soc io_difftest_reg_28", false,-1, 63,0);
-        tracep->declQuad(c+798,"riscv_soc io_difftest_reg_29", false,-1, 63,0);
-        tracep->declQuad(c+800,"riscv_soc io_difftest_reg_30", false,-1, 63,0);
-        tracep->declQuad(c+802,"riscv_soc io_difftest_reg_31", false,-1, 63,0);
-        tracep->declQuad(c+804,"riscv_soc io_difftest_pc", false,-1, 63,0);
-        tracep->declBus(c+806,"riscv_soc io_difftest_inst", false,-1, 31,0);
-        tracep->declBit(c+807,"riscv_soc io_difftest_commit", false,-1);
-        tracep->declQuad(c+808,"riscv_soc io_inst_counter", false,-1, 63,0);
-        tracep->declBit(c+810,"riscv_soc io_difftest_irq", false,-1);
-        tracep->declQuad(c+811,"riscv_soc io_difftest_mstatus", false,-1, 63,0);
-        tracep->declQuad(c+813,"riscv_soc io_difftest_mcause", false,-1, 63,0);
-        tracep->declQuad(c+815,"riscv_soc io_difftest_mepc", false,-1, 63,0);
-        tracep->declQuad(c+817,"riscv_soc io_difftest_mtvec", false,-1, 63,0);
-        tracep->declBit(c+819,"riscv_soc io_difftest_peripheral", false,-1);
-        tracep->declBit(c+738,"riscv_soc core_clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core_reset", false,-1);
+        tracep->declBit(c+739,"clock", false,-1);
+        tracep->declBit(c+740,"reset", false,-1);
+        tracep->declQuad(c+741,"io_difftest_reg_0", false,-1, 63,0);
+        tracep->declQuad(c+743,"io_difftest_reg_1", false,-1, 63,0);
+        tracep->declQuad(c+745,"io_difftest_reg_2", false,-1, 63,0);
+        tracep->declQuad(c+747,"io_difftest_reg_3", false,-1, 63,0);
+        tracep->declQuad(c+749,"io_difftest_reg_4", false,-1, 63,0);
+        tracep->declQuad(c+751,"io_difftest_reg_5", false,-1, 63,0);
+        tracep->declQuad(c+753,"io_difftest_reg_6", false,-1, 63,0);
+        tracep->declQuad(c+755,"io_difftest_reg_7", false,-1, 63,0);
+        tracep->declQuad(c+757,"io_difftest_reg_8", false,-1, 63,0);
+        tracep->declQuad(c+759,"io_difftest_reg_9", false,-1, 63,0);
+        tracep->declQuad(c+761,"io_difftest_reg_10", false,-1, 63,0);
+        tracep->declQuad(c+763,"io_difftest_reg_11", false,-1, 63,0);
+        tracep->declQuad(c+765,"io_difftest_reg_12", false,-1, 63,0);
+        tracep->declQuad(c+767,"io_difftest_reg_13", false,-1, 63,0);
+        tracep->declQuad(c+769,"io_difftest_reg_14", false,-1, 63,0);
+        tracep->declQuad(c+771,"io_difftest_reg_15", false,-1, 63,0);
+        tracep->declQuad(c+773,"io_difftest_reg_16", false,-1, 63,0);
+        tracep->declQuad(c+775,"io_difftest_reg_17", false,-1, 63,0);
+        tracep->declQuad(c+777,"io_difftest_reg_18", false,-1, 63,0);
+        tracep->declQuad(c+779,"io_difftest_reg_19", false,-1, 63,0);
+        tracep->declQuad(c+781,"io_difftest_reg_20", false,-1, 63,0);
+        tracep->declQuad(c+783,"io_difftest_reg_21", false,-1, 63,0);
+        tracep->declQuad(c+785,"io_difftest_reg_22", false,-1, 63,0);
+        tracep->declQuad(c+787,"io_difftest_reg_23", false,-1, 63,0);
+        tracep->declQuad(c+789,"io_difftest_reg_24", false,-1, 63,0);
+        tracep->declQuad(c+791,"io_difftest_reg_25", false,-1, 63,0);
+        tracep->declQuad(c+793,"io_difftest_reg_26", false,-1, 63,0);
+        tracep->declQuad(c+795,"io_difftest_reg_27", false,-1, 63,0);
+        tracep->declQuad(c+797,"io_difftest_reg_28", false,-1, 63,0);
+        tracep->declQuad(c+799,"io_difftest_reg_29", false,-1, 63,0);
+        tracep->declQuad(c+801,"io_difftest_reg_30", false,-1, 63,0);
+        tracep->declQuad(c+803,"io_difftest_reg_31", false,-1, 63,0);
+        tracep->declQuad(c+805,"io_difftest_pc", false,-1, 63,0);
+        tracep->declBus(c+807,"io_difftest_inst", false,-1, 31,0);
+        tracep->declBit(c+808,"io_difftest_commit", false,-1);
+        tracep->declQuad(c+809,"io_inst_counter", false,-1, 63,0);
+        tracep->declBit(c+811,"io_difftest_irq", false,-1);
+        tracep->declQuad(c+812,"io_difftest_mstatus", false,-1, 63,0);
+        tracep->declQuad(c+814,"io_difftest_mcause", false,-1, 63,0);
+        tracep->declQuad(c+816,"io_difftest_mepc", false,-1, 63,0);
+        tracep->declQuad(c+818,"io_difftest_mtvec", false,-1, 63,0);
+        tracep->declBit(c+820,"io_difftest_peripheral", false,-1);
+        tracep->declBit(c+739,"riscv_soc clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc reset", false,-1);
+        tracep->declQuad(c+741,"riscv_soc io_difftest_reg_0", false,-1, 63,0);
+        tracep->declQuad(c+743,"riscv_soc io_difftest_reg_1", false,-1, 63,0);
+        tracep->declQuad(c+745,"riscv_soc io_difftest_reg_2", false,-1, 63,0);
+        tracep->declQuad(c+747,"riscv_soc io_difftest_reg_3", false,-1, 63,0);
+        tracep->declQuad(c+749,"riscv_soc io_difftest_reg_4", false,-1, 63,0);
+        tracep->declQuad(c+751,"riscv_soc io_difftest_reg_5", false,-1, 63,0);
+        tracep->declQuad(c+753,"riscv_soc io_difftest_reg_6", false,-1, 63,0);
+        tracep->declQuad(c+755,"riscv_soc io_difftest_reg_7", false,-1, 63,0);
+        tracep->declQuad(c+757,"riscv_soc io_difftest_reg_8", false,-1, 63,0);
+        tracep->declQuad(c+759,"riscv_soc io_difftest_reg_9", false,-1, 63,0);
+        tracep->declQuad(c+761,"riscv_soc io_difftest_reg_10", false,-1, 63,0);
+        tracep->declQuad(c+763,"riscv_soc io_difftest_reg_11", false,-1, 63,0);
+        tracep->declQuad(c+765,"riscv_soc io_difftest_reg_12", false,-1, 63,0);
+        tracep->declQuad(c+767,"riscv_soc io_difftest_reg_13", false,-1, 63,0);
+        tracep->declQuad(c+769,"riscv_soc io_difftest_reg_14", false,-1, 63,0);
+        tracep->declQuad(c+771,"riscv_soc io_difftest_reg_15", false,-1, 63,0);
+        tracep->declQuad(c+773,"riscv_soc io_difftest_reg_16", false,-1, 63,0);
+        tracep->declQuad(c+775,"riscv_soc io_difftest_reg_17", false,-1, 63,0);
+        tracep->declQuad(c+777,"riscv_soc io_difftest_reg_18", false,-1, 63,0);
+        tracep->declQuad(c+779,"riscv_soc io_difftest_reg_19", false,-1, 63,0);
+        tracep->declQuad(c+781,"riscv_soc io_difftest_reg_20", false,-1, 63,0);
+        tracep->declQuad(c+783,"riscv_soc io_difftest_reg_21", false,-1, 63,0);
+        tracep->declQuad(c+785,"riscv_soc io_difftest_reg_22", false,-1, 63,0);
+        tracep->declQuad(c+787,"riscv_soc io_difftest_reg_23", false,-1, 63,0);
+        tracep->declQuad(c+789,"riscv_soc io_difftest_reg_24", false,-1, 63,0);
+        tracep->declQuad(c+791,"riscv_soc io_difftest_reg_25", false,-1, 63,0);
+        tracep->declQuad(c+793,"riscv_soc io_difftest_reg_26", false,-1, 63,0);
+        tracep->declQuad(c+795,"riscv_soc io_difftest_reg_27", false,-1, 63,0);
+        tracep->declQuad(c+797,"riscv_soc io_difftest_reg_28", false,-1, 63,0);
+        tracep->declQuad(c+799,"riscv_soc io_difftest_reg_29", false,-1, 63,0);
+        tracep->declQuad(c+801,"riscv_soc io_difftest_reg_30", false,-1, 63,0);
+        tracep->declQuad(c+803,"riscv_soc io_difftest_reg_31", false,-1, 63,0);
+        tracep->declQuad(c+805,"riscv_soc io_difftest_pc", false,-1, 63,0);
+        tracep->declBus(c+807,"riscv_soc io_difftest_inst", false,-1, 31,0);
+        tracep->declBit(c+808,"riscv_soc io_difftest_commit", false,-1);
+        tracep->declQuad(c+809,"riscv_soc io_inst_counter", false,-1, 63,0);
+        tracep->declBit(c+811,"riscv_soc io_difftest_irq", false,-1);
+        tracep->declQuad(c+812,"riscv_soc io_difftest_mstatus", false,-1, 63,0);
+        tracep->declQuad(c+814,"riscv_soc io_difftest_mcause", false,-1, 63,0);
+        tracep->declQuad(c+816,"riscv_soc io_difftest_mepc", false,-1, 63,0);
+        tracep->declQuad(c+818,"riscv_soc io_difftest_mtvec", false,-1, 63,0);
+        tracep->declBit(c+820,"riscv_soc io_difftest_peripheral", false,-1);
+        tracep->declBit(c+739,"riscv_soc core_clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core_reset", false,-1);
         tracep->declBit(c+1,"riscv_soc core_io_axi_bus_aw_ready", false,-1);
         tracep->declBit(c+2,"riscv_soc core_io_axi_bus_aw_valid", false,-1);
         tracep->declQuad(c+3,"riscv_soc core_io_axi_bus_aw_bits_awaddr", false,-1, 63,0);
@@ -167,7 +167,7 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+86,"riscv_soc core_difftest_commit", false,-1);
         tracep->declQuad(c+87,"riscv_soc core_difftest_pc", false,-1, 63,0);
         tracep->declBus(c+89,"riscv_soc core_difftest_inst", false,-1, 31,0);
-        tracep->declQuad(c+820,"riscv_soc core__WIRE_0", false,-1, 63,0);
+        tracep->declQuad(c+821,"riscv_soc core__WIRE_0", false,-1, 63,0);
         tracep->declQuad(c+90,"riscv_soc core__WIRE_1", false,-1, 63,0);
         tracep->declQuad(c+92,"riscv_soc core__WIRE_2", false,-1, 63,0);
         tracep->declQuad(c+94,"riscv_soc core__WIRE_3", false,-1, 63,0);
@@ -200,8 +200,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+148,"riscv_soc core__WIRE_30", false,-1, 63,0);
         tracep->declQuad(c+150,"riscv_soc core__WIRE_31", false,-1, 63,0);
         tracep->declQuad(c+152,"riscv_soc core_inst_counter", false,-1, 63,0);
-        tracep->declBit(c+738,"riscv_soc axi_ram_clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc axi_ram_reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc axi_ram_clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc axi_ram_reset", false,-1);
         tracep->declBit(c+1,"riscv_soc axi_ram_io_ram_bus_aw_ready", false,-1);
         tracep->declBit(c+2,"riscv_soc axi_ram_io_ram_bus_aw_valid", false,-1);
         tracep->declQuad(c+3,"riscv_soc axi_ram_io_ram_bus_aw_bits_awaddr", false,-1, 63,0);
@@ -218,58 +218,58 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+17,"riscv_soc axi_ram_io_ram_bus_r_valid", false,-1);
         tracep->declQuad(c+18,"riscv_soc axi_ram_io_ram_bus_r_bits_rdata", false,-1, 63,0);
         tracep->declBit(c+20,"riscv_soc axi_ram_io_ram_bus_r_bits_rlast", false,-1);
-        tracep->declBit(c+738,"riscv_soc sram0_clock", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram0_clock", false,-1);
         tracep->declBus(c+21,"riscv_soc sram0_io_addr", false,-1, 5,0);
         tracep->declBit(c+22,"riscv_soc sram0_io_wen", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram0_io_wmask", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram0_io_wmask", false,-1, 127,0);
         tracep->declArray(c+23,"riscv_soc sram0_io_wdata", false,-1, 127,0);
         tracep->declArray(c+27,"riscv_soc sram0_io_rdata", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram1_clock", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram1_clock", false,-1);
         tracep->declBus(c+31,"riscv_soc sram1_io_addr", false,-1, 5,0);
         tracep->declBit(c+22,"riscv_soc sram1_io_wen", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram1_io_wmask", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram1_io_wmask", false,-1, 127,0);
         tracep->declArray(c+32,"riscv_soc sram1_io_wdata", false,-1, 127,0);
         tracep->declArray(c+36,"riscv_soc sram1_io_rdata", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram2_clock", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram2_clock", false,-1);
         tracep->declBus(c+40,"riscv_soc sram2_io_addr", false,-1, 5,0);
         tracep->declBit(c+41,"riscv_soc sram2_io_wen", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram2_io_wmask", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram2_io_wmask", false,-1, 127,0);
         tracep->declArray(c+23,"riscv_soc sram2_io_wdata", false,-1, 127,0);
         tracep->declArray(c+42,"riscv_soc sram2_io_rdata", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram3_clock", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram3_clock", false,-1);
         tracep->declBus(c+46,"riscv_soc sram3_io_addr", false,-1, 5,0);
         tracep->declBit(c+41,"riscv_soc sram3_io_wen", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram3_io_wmask", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram3_io_wmask", false,-1, 127,0);
         tracep->declArray(c+32,"riscv_soc sram3_io_wdata", false,-1, 127,0);
         tracep->declArray(c+47,"riscv_soc sram3_io_rdata", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram4_clock", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram4_clock", false,-1);
         tracep->declBus(c+51,"riscv_soc sram4_io_addr", false,-1, 5,0);
         tracep->declBit(c+52,"riscv_soc sram4_io_wen", false,-1);
         tracep->declArray(c+53,"riscv_soc sram4_io_wmask", false,-1, 127,0);
         tracep->declArray(c+57,"riscv_soc sram4_io_wdata", false,-1, 127,0);
         tracep->declArray(c+61,"riscv_soc sram4_io_rdata", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram5_clock", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram5_clock", false,-1);
         tracep->declBus(c+65,"riscv_soc sram5_io_addr", false,-1, 5,0);
         tracep->declBit(c+52,"riscv_soc sram5_io_wen", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram5_io_wmask", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram5_io_wmask", false,-1, 127,0);
         tracep->declArray(c+66,"riscv_soc sram5_io_wdata", false,-1, 127,0);
         tracep->declArray(c+70,"riscv_soc sram5_io_rdata", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram6_clock", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram6_clock", false,-1);
         tracep->declBus(c+51,"riscv_soc sram6_io_addr", false,-1, 5,0);
         tracep->declBit(c+74,"riscv_soc sram6_io_wen", false,-1);
         tracep->declArray(c+53,"riscv_soc sram6_io_wmask", false,-1, 127,0);
         tracep->declArray(c+57,"riscv_soc sram6_io_wdata", false,-1, 127,0);
         tracep->declArray(c+75,"riscv_soc sram6_io_rdata", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram7_clock", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram7_clock", false,-1);
         tracep->declBus(c+79,"riscv_soc sram7_io_addr", false,-1, 5,0);
         tracep->declBit(c+74,"riscv_soc sram7_io_wen", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram7_io_wmask", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram7_io_wmask", false,-1, 127,0);
         tracep->declArray(c+66,"riscv_soc sram7_io_wdata", false,-1, 127,0);
         tracep->declArray(c+80,"riscv_soc sram7_io_rdata", false,-1, 127,0);
         tracep->declBus(c+89,"riscv_soc DIFFTEST_INST", false,-1, 31,0);
         tracep->declQuad(c+154,"riscv_soc difftest_inst", false,-1, 63,0);
-        tracep->declBit(c+738,"riscv_soc core clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core reset", false,-1);
         tracep->declBit(c+1,"riscv_soc core io_axi_bus_aw_ready", false,-1);
         tracep->declBit(c+2,"riscv_soc core io_axi_bus_aw_valid", false,-1);
         tracep->declQuad(c+3,"riscv_soc core io_axi_bus_aw_bits_awaddr", false,-1, 63,0);
@@ -326,8 +326,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+87,"riscv_soc core difftest_pc", false,-1, 63,0);
         tracep->declBus(c+89,"riscv_soc core difftest_inst", false,-1, 31,0);
         tracep->declQuad(c+152,"riscv_soc core inst_counter", false,-1, 63,0);
-        tracep->declBit(c+738,"riscv_soc core i_cache_clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core i_cache_reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core i_cache_clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core i_cache_reset", false,-1);
         tracep->declBit(c+156,"riscv_soc core i_cache_io_cpu_valid", false,-1);
         tracep->declQuad(c+157,"riscv_soc core i_cache_io_cpu_bits_addr", false,-1, 63,0);
         tracep->declQuad(c+159,"riscv_soc core i_cache_io_cpu_bits_rdata", false,-1, 63,0);
@@ -354,8 +354,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+18,"riscv_soc core i_cache_io_cache_bus_r_bits_rdata", false,-1, 63,0);
         tracep->declBit(c+166,"riscv_soc core i_cache_io_cache_bus_r_bits_rlast", false,-1);
         tracep->declBit(c+167,"riscv_soc core i_cache_io_cache_bus_r_ready", false,-1);
-        tracep->declBit(c+738,"riscv_soc core d_cache_clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core d_cache_reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core d_cache_clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core d_cache_reset", false,-1);
         tracep->declBit(c+168,"riscv_soc core d_cache_io_cpu_valid", false,-1);
         tracep->declQuad(c+169,"riscv_soc core d_cache_io_cpu_bits_addr", false,-1, 63,0);
         tracep->declQuad(c+171,"riscv_soc core d_cache_io_cpu_bits_rdata", false,-1, 63,0);
@@ -393,8 +393,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+18,"riscv_soc core d_cache_io_cache_bus_r_bits_rdata", false,-1, 63,0);
         tracep->declBit(c+190,"riscv_soc core d_cache_io_cache_bus_r_bits_rlast", false,-1);
         tracep->declBit(c+191,"riscv_soc core d_cache_io_cache_bus_r_ready", false,-1);
-        tracep->declBit(c+738,"riscv_soc core cross_bar_clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core cross_bar_reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core cross_bar_clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core cross_bar_reset", false,-1);
         tracep->declBit(c+163,"riscv_soc core cross_bar_io_ICache_bus_r_valid", false,-1);
         tracep->declQuad(c+164,"riscv_soc core cross_bar_io_ICache_bus_r_bits_raddr", false,-1, 63,0);
         tracep->declQuad(c+18,"riscv_soc core cross_bar_io_ICache_bus_r_bits_rdata", false,-1, 63,0);
@@ -430,7 +430,7 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+7,"riscv_soc core cross_bar_io_AXI_Bus_w_bits_wdata", false,-1, 63,0);
         tracep->declBus(c+9,"riscv_soc core cross_bar_io_AXI_Bus_w_bits_wstrb", false,-1, 7,0);
         tracep->declBit(c+10,"riscv_soc core cross_bar_io_AXI_Bus_w_bits_wlast", false,-1);
-        tracep->declBit(c+826,"riscv_soc core cross_bar_io_AXI_Bus_b_ready", false,-1);
+        tracep->declBit(c+827,"riscv_soc core cross_bar_io_AXI_Bus_b_ready", false,-1);
         tracep->declBit(c+11,"riscv_soc core cross_bar_io_AXI_Bus_b_valid", false,-1);
         tracep->declBit(c+12,"riscv_soc core cross_bar_io_AXI_Bus_ar_ready", false,-1);
         tracep->declBit(c+13,"riscv_soc core cross_bar_io_AXI_Bus_ar_valid", false,-1);
@@ -477,11 +477,11 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+173,"riscv_soc core cross_bar_1_io_clint_bus_bits_wdata", false,-1, 63,0);
         tracep->declBit(c+176,"riscv_soc core cross_bar_1_io_clint_bus_bits_is_w", false,-1);
         tracep->declBit(c+206,"riscv_soc core cross_bar_1_io_clint_bus_ready", false,-1);
-        tracep->declBit(c+738,"riscv_soc core fetch_clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core fetch_reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core fetch_clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core fetch_reset", false,-1);
         tracep->declQuad(c+207,"riscv_soc core fetch_io_next_pc", false,-1, 63,0);
         tracep->declBit(c+209,"riscv_soc core fetch_io_flush", false,-1);
-        tracep->declBit(c+826,"riscv_soc core fetch_io_bus_valid", false,-1);
+        tracep->declBit(c+827,"riscv_soc core fetch_io_bus_valid", false,-1);
         tracep->declQuad(c+157,"riscv_soc core fetch_io_bus_bits_pc_0", false,-1, 63,0);
         tracep->declQuad(c+196,"riscv_soc core fetch_io_bus_bits_inst", false,-1, 63,0);
         tracep->declBit(c+198,"riscv_soc core fetch_io_bus_ready", false,-1);
@@ -489,8 +489,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+211,"riscv_soc core fetch_io_put_pc_valid", false,-1);
         tracep->declBus(c+212,"riscv_soc core fetch_io_put_pc_bits_inst", false,-1, 31,0);
         tracep->declQuad(c+213,"riscv_soc core fetch_io_put_pc_bits_pc", false,-1, 63,0);
-        tracep->declBit(c+738,"riscv_soc core execute_clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core execute_reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core execute_clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core execute_reset", false,-1);
         tracep->declBit(c+210,"riscv_soc core execute_io_op_datas_ready", false,-1);
         tracep->declBit(c+215,"riscv_soc core execute_io_op_datas_valid", false,-1);
         tracep->declBus(c+216,"riscv_soc core execute_io_op_datas_bits_opType", false,-1, 2,0);
@@ -537,8 +537,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBus(c+175,"riscv_soc core execute_io_bus_bits_wstrb", false,-1, 7,0);
         tracep->declBit(c+176,"riscv_soc core execute_io_bus_bits_is_w", false,-1);
         tracep->declBit(c+202,"riscv_soc core execute_io_bus_ready", false,-1);
-        tracep->declBit(c+738,"riscv_soc core decode_clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core decode_reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core decode_clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core decode_reset", false,-1);
         tracep->declBit(c+210,"riscv_soc core decode_io_get_inst_ready", false,-1);
         tracep->declBit(c+211,"riscv_soc core decode_io_get_inst_valid", false,-1);
         tracep->declBus(c+212,"riscv_soc core decode_io_get_inst_bits_inst", false,-1, 31,0);
@@ -565,8 +565,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBus(c+230,"riscv_soc core decode_io_op_datas_bits_csr_addr", false,-1, 11,0);
         tracep->declQuad(c+231,"riscv_soc core decode_io_op_datas_bits_csr_data", false,-1, 63,0);
         tracep->declBit(c+209,"riscv_soc core decode_io_flush", false,-1);
-        tracep->declBit(c+738,"riscv_soc core commit_clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core commit_reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core commit_clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core commit_reset", false,-1);
         tracep->declBus(c+262,"riscv_soc core commit_io_normal_rd_rs1_addr", false,-1, 4,0);
         tracep->declQuad(c+263,"riscv_soc core commit_io_normal_rd_rs1_data", false,-1, 63,0);
         tracep->declBus(c+265,"riscv_soc core commit_io_normal_rd_rs2_addr", false,-1, 4,0);
@@ -597,7 +597,7 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+86,"riscv_soc core commit_difftest_commit_0", false,-1);
         tracep->declQuad(c+87,"riscv_soc core commit_difftest_pc_0", false,-1, 63,0);
         tracep->declBus(c+89,"riscv_soc core commit_difftest_inst_0", false,-1, 31,0);
-        tracep->declQuad(c+820,"riscv_soc core commit__WIRE_0_0", false,-1, 63,0);
+        tracep->declQuad(c+821,"riscv_soc core commit__WIRE_0_0", false,-1, 63,0);
         tracep->declQuad(c+90,"riscv_soc core commit__WIRE_0_1", false,-1, 63,0);
         tracep->declQuad(c+92,"riscv_soc core commit__WIRE_0_2", false,-1, 63,0);
         tracep->declQuad(c+94,"riscv_soc core commit__WIRE_0_3", false,-1, 63,0);
@@ -630,8 +630,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+148,"riscv_soc core commit__WIRE_0_30", false,-1, 63,0);
         tracep->declQuad(c+150,"riscv_soc core commit__WIRE_0_31", false,-1, 63,0);
         tracep->declQuad(c+152,"riscv_soc core commit_inst_counter_0", false,-1, 63,0);
-        tracep->declBit(c+738,"riscv_soc core clint_de_clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core clint_de_reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core clint_de_clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core clint_de_reset", false,-1);
         tracep->declBit(c+203,"riscv_soc core clint_de_io_valid", false,-1);
         tracep->declQuad(c+169,"riscv_soc core clint_de_io_bits_addr", false,-1, 63,0);
         tracep->declQuad(c+173,"riscv_soc core clint_de_io_bits_wdata", false,-1, 63,0);
@@ -640,8 +640,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+206,"riscv_soc core clint_de_io_ready", false,-1);
         tracep->declBit(c+234,"riscv_soc core clint_de_io_soft_irq", false,-1);
         tracep->declBit(c+233,"riscv_soc core clint_de_io_time_irq", false,-1);
-        tracep->declBit(c+738,"riscv_soc core i_cache clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core i_cache reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core i_cache clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core i_cache reset", false,-1);
         tracep->declBit(c+156,"riscv_soc core i_cache io_cpu_valid", false,-1);
         tracep->declQuad(c+157,"riscv_soc core i_cache io_cpu_bits_addr", false,-1, 63,0);
         tracep->declQuad(c+159,"riscv_soc core i_cache io_cpu_bits_rdata", false,-1, 63,0);
@@ -699,8 +699,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+304,"riscv_soc core i_cache reg_lru_2", false,-1, 63,0);
         tracep->declBit(c+306,"riscv_soc core i_cache LRU_2", false,-1);
         tracep->declBit(c+307,"riscv_soc core i_cache reg_start_operation", false,-1);
-        tracep->declBit(c+738,"riscv_soc core d_cache clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core d_cache reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core d_cache clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core d_cache reset", false,-1);
         tracep->declBit(c+168,"riscv_soc core d_cache io_cpu_valid", false,-1);
         tracep->declQuad(c+169,"riscv_soc core d_cache io_cpu_bits_addr", false,-1, 63,0);
         tracep->declQuad(c+171,"riscv_soc core d_cache io_cpu_bits_rdata", false,-1, 63,0);
@@ -788,8 +788,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBus(c+366,"riscv_soc core d_cache reg_cnt", false,-1, 1,0);
         tracep->declBit(c+367,"riscv_soc core d_cache reg_rbus_finish", false,-1);
         tracep->declBit(c+368,"riscv_soc core d_cache reg_wbus_finish", false,-1);
-        tracep->declBit(c+738,"riscv_soc core cross_bar clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core cross_bar reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core cross_bar clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core cross_bar reset", false,-1);
         tracep->declBit(c+163,"riscv_soc core cross_bar io_ICache_bus_r_valid", false,-1);
         tracep->declQuad(c+164,"riscv_soc core cross_bar io_ICache_bus_r_bits_raddr", false,-1, 63,0);
         tracep->declQuad(c+18,"riscv_soc core cross_bar io_ICache_bus_r_bits_rdata", false,-1, 63,0);
@@ -825,7 +825,7 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+7,"riscv_soc core cross_bar io_AXI_Bus_w_bits_wdata", false,-1, 63,0);
         tracep->declBus(c+9,"riscv_soc core cross_bar io_AXI_Bus_w_bits_wstrb", false,-1, 7,0);
         tracep->declBit(c+10,"riscv_soc core cross_bar io_AXI_Bus_w_bits_wlast", false,-1);
-        tracep->declBit(c+826,"riscv_soc core cross_bar io_AXI_Bus_b_ready", false,-1);
+        tracep->declBit(c+827,"riscv_soc core cross_bar io_AXI_Bus_b_ready", false,-1);
         tracep->declBit(c+11,"riscv_soc core cross_bar io_AXI_Bus_b_valid", false,-1);
         tracep->declBit(c+12,"riscv_soc core cross_bar io_AXI_Bus_ar_ready", false,-1);
         tracep->declBit(c+13,"riscv_soc core cross_bar io_AXI_Bus_ar_valid", false,-1);
@@ -884,11 +884,11 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+192,"riscv_soc core cross_bar_1 fetch_low_address", false,-1);
         tracep->declBit(c+378,"riscv_soc core cross_bar_1 low_address", false,-1);
         tracep->declBit(c+379,"riscv_soc core cross_bar_1 not_clint", false,-1);
-        tracep->declBit(c+738,"riscv_soc core fetch clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core fetch reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core fetch clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core fetch reset", false,-1);
         tracep->declQuad(c+207,"riscv_soc core fetch io_next_pc", false,-1, 63,0);
         tracep->declBit(c+209,"riscv_soc core fetch io_flush", false,-1);
-        tracep->declBit(c+826,"riscv_soc core fetch io_bus_valid", false,-1);
+        tracep->declBit(c+827,"riscv_soc core fetch io_bus_valid", false,-1);
         tracep->declQuad(c+157,"riscv_soc core fetch io_bus_bits_pc_0", false,-1, 63,0);
         tracep->declQuad(c+196,"riscv_soc core fetch io_bus_bits_inst", false,-1, 63,0);
         tracep->declBit(c+198,"riscv_soc core fetch io_bus_ready", false,-1);
@@ -896,8 +896,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+211,"riscv_soc core fetch io_put_pc_valid", false,-1);
         tracep->declBus(c+212,"riscv_soc core fetch io_put_pc_bits_inst", false,-1, 31,0);
         tracep->declQuad(c+213,"riscv_soc core fetch io_put_pc_bits_pc", false,-1, 63,0);
-        tracep->declBit(c+738,"riscv_soc core fetch ibuf_clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core fetch ibuf_reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core fetch ibuf_clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core fetch ibuf_reset", false,-1);
         tracep->declBit(c+209,"riscv_soc core fetch ibuf_io_flush", false,-1);
         tracep->declBit(c+380,"riscv_soc core fetch ibuf_io_cache_buf_valid", false,-1);
         tracep->declQuad(c+157,"riscv_soc core fetch ibuf_io_cache_buf_bits_pc", false,-1, 63,0);
@@ -909,8 +909,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+157,"riscv_soc core fetch reg_pc_0", false,-1, 63,0);
         tracep->declBit(c+382,"riscv_soc core fetch reg_flush", false,-1);
         tracep->declQuad(c+383,"riscv_soc core fetch reg_next_pc", false,-1, 63,0);
-        tracep->declBit(c+738,"riscv_soc core fetch ibuf clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core fetch ibuf reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core fetch ibuf clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core fetch ibuf reset", false,-1);
         tracep->declBit(c+209,"riscv_soc core fetch ibuf io_flush", false,-1);
         tracep->declBit(c+380,"riscv_soc core fetch ibuf io_cache_buf_valid", false,-1);
         tracep->declQuad(c+157,"riscv_soc core fetch ibuf io_cache_buf_bits_pc", false,-1, 63,0);
@@ -921,21 +921,21 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+213,"riscv_soc core fetch ibuf io_put_pc_bits_pc", false,-1, 63,0);
         {int i; for (i=0; i<4; i++) {
                 tracep->declQuad(c+385+i*2,"riscv_soc core fetch ibuf ibuf_pc", true,(i+0), 63,0);}}
-        tracep->declBit(c+826,"riscv_soc core fetch ibuf ibuf_pc_io_put_pc_bits_pc_MPORT_en", false,-1);
+        tracep->declBit(c+827,"riscv_soc core fetch ibuf ibuf_pc_io_put_pc_bits_pc_MPORT_en", false,-1);
         tracep->declBus(c+393,"riscv_soc core fetch ibuf ibuf_pc_io_put_pc_bits_pc_MPORT_addr", false,-1, 1,0);
         tracep->declQuad(c+213,"riscv_soc core fetch ibuf ibuf_pc_io_put_pc_bits_pc_MPORT_data", false,-1, 63,0);
         tracep->declQuad(c+157,"riscv_soc core fetch ibuf ibuf_pc_MPORT_data", false,-1, 63,0);
         tracep->declBus(c+394,"riscv_soc core fetch ibuf ibuf_pc_MPORT_addr", false,-1, 1,0);
-        tracep->declBit(c+826,"riscv_soc core fetch ibuf ibuf_pc_MPORT_mask", false,-1);
+        tracep->declBit(c+827,"riscv_soc core fetch ibuf ibuf_pc_MPORT_mask", false,-1);
         tracep->declBit(c+395,"riscv_soc core fetch ibuf ibuf_pc_MPORT_en", false,-1);
         {int i; for (i=0; i<4; i++) {
                 tracep->declBus(c+396+i*1,"riscv_soc core fetch ibuf ibuf_inst", true,(i+0), 31,0);}}
-        tracep->declBit(c+826,"riscv_soc core fetch ibuf ibuf_inst_io_put_pc_bits_inst_MPORT_en", false,-1);
+        tracep->declBit(c+827,"riscv_soc core fetch ibuf ibuf_inst_io_put_pc_bits_inst_MPORT_en", false,-1);
         tracep->declBus(c+393,"riscv_soc core fetch ibuf ibuf_inst_io_put_pc_bits_inst_MPORT_addr", false,-1, 1,0);
         tracep->declBus(c+212,"riscv_soc core fetch ibuf ibuf_inst_io_put_pc_bits_inst_MPORT_data", false,-1, 31,0);
         tracep->declBus(c+381,"riscv_soc core fetch ibuf ibuf_inst_MPORT_1_data", false,-1, 31,0);
         tracep->declBus(c+394,"riscv_soc core fetch ibuf ibuf_inst_MPORT_1_addr", false,-1, 1,0);
-        tracep->declBit(c+826,"riscv_soc core fetch ibuf ibuf_inst_MPORT_1_mask", false,-1);
+        tracep->declBit(c+827,"riscv_soc core fetch ibuf ibuf_inst_MPORT_1_mask", false,-1);
         tracep->declBit(c+395,"riscv_soc core fetch ibuf ibuf_inst_MPORT_1_en", false,-1);
         tracep->declBit(c+400,"riscv_soc core fetch ibuf ibuf_valid_0", false,-1);
         tracep->declBit(c+401,"riscv_soc core fetch ibuf ibuf_valid_1", false,-1);
@@ -943,8 +943,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+403,"riscv_soc core fetch ibuf ibuf_valid_3", false,-1);
         tracep->declBus(c+394,"riscv_soc core fetch ibuf reg_head", false,-1, 1,0);
         tracep->declBus(c+393,"riscv_soc core fetch ibuf reg_tail", false,-1, 1,0);
-        tracep->declBit(c+738,"riscv_soc core execute clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core execute reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core execute clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core execute reset", false,-1);
         tracep->declBit(c+210,"riscv_soc core execute io_op_datas_ready", false,-1);
         tracep->declBit(c+215,"riscv_soc core execute io_op_datas_valid", false,-1);
         tracep->declBus(c+216,"riscv_soc core execute io_op_datas_bits_opType", false,-1, 2,0);
@@ -1001,8 +1001,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+409,"riscv_soc core execute alu_exu_io_dst_data", false,-1, 63,0);
         tracep->declBit(c+411,"riscv_soc core execute alu_exu_io_valid_next_pc", false,-1);
         tracep->declQuad(c+412,"riscv_soc core execute alu_exu_io_next_pc", false,-1, 63,0);
-        tracep->declBit(c+738,"riscv_soc core execute mem_exu_clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core execute mem_exu_reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core execute mem_exu_clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core execute mem_exu_reset", false,-1);
         tracep->declBit(c+414,"riscv_soc core execute mem_exu_io_valid", false,-1);
         tracep->declBus(c+217,"riscv_soc core execute mem_exu_io_exuType", false,-1, 6,0);
         tracep->declQuad(c+415,"riscv_soc core execute mem_exu_io_rs1_data", false,-1, 63,0);
@@ -1019,8 +1019,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+176,"riscv_soc core execute mem_exu_io_bus_bits_is_w", false,-1);
         tracep->declBit(c+202,"riscv_soc core execute mem_exu_io_bus_ready", false,-1);
         tracep->declBit(c+261,"riscv_soc core execute mem_exu_io_difftest_peripheral", false,-1);
-        tracep->declBit(c+738,"riscv_soc core execute mu_exu_clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core execute mu_exu_reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core execute mu_exu_clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core execute mu_exu_reset", false,-1);
         tracep->declBit(c+423,"riscv_soc core execute mu_exu_io_valid", false,-1);
         tracep->declBus(c+217,"riscv_soc core execute mu_exu_io_exu_type", false,-1, 6,0);
         tracep->declQuad(c+405,"riscv_soc core execute mu_exu_io_rs1_data", false,-1, 63,0);
@@ -1044,32 +1044,33 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBus(c+436,"riscv_soc core execute system_exu_io_exception", false,-1, 5,0);
         tracep->declBit(c+437,"riscv_soc core execute system_exu_io_valid_next_pc", false,-1);
         tracep->declQuad(c+239,"riscv_soc core execute system_exu_io_next_pc", false,-1, 63,0);
+        tracep->declBit(c+438,"riscv_soc core execute in_data_valid", false,-1);
         tracep->declBit(c+210,"riscv_soc core execute ready", false,-1);
-        tracep->declBus(c+438,"riscv_soc core execute reg_valid", false,-1, 3,0);
-        tracep->declBit(c+439,"riscv_soc core execute reg_alu_valid", false,-1);
-        tracep->declBit(c+440,"riscv_soc core execute reg_mem_valid", false,-1);
-        tracep->declBit(c+441,"riscv_soc core execute reg_mu_valid", false,-1);
-        tracep->declBit(c+442,"riscv_soc core execute reg_system_valid", false,-1);
-        tracep->declBus(c+443,"riscv_soc core execute valid", false,-1, 3,0);
-        tracep->declBit(c+444,"riscv_soc core execute reg_sys_alu_w_valid", false,-1);
-        tracep->declQuad(c+445,"riscv_soc core execute reg_sys_alu_wdata", false,-1, 63,0);
+        tracep->declBus(c+439,"riscv_soc core execute reg_valid", false,-1, 3,0);
+        tracep->declBit(c+440,"riscv_soc core execute reg_alu_valid", false,-1);
+        tracep->declBit(c+441,"riscv_soc core execute reg_mem_valid", false,-1);
+        tracep->declBit(c+442,"riscv_soc core execute reg_mu_valid", false,-1);
+        tracep->declBit(c+443,"riscv_soc core execute reg_system_valid", false,-1);
+        tracep->declBus(c+444,"riscv_soc core execute valid", false,-1, 3,0);
+        tracep->declBit(c+445,"riscv_soc core execute reg_sys_alu_w_valid", false,-1);
+        tracep->declQuad(c+446,"riscv_soc core execute reg_sys_alu_wdata", false,-1, 63,0);
         tracep->declBus(c+244,"riscv_soc core execute reg_dest_addr", false,-1, 4,0);
         tracep->declQuad(c+249,"riscv_soc core execute reg_csr_data", false,-1, 63,0);
         tracep->declBus(c+248,"riscv_soc core execute reg_csr_addr", false,-1, 11,0);
-        tracep->declBit(c+447,"riscv_soc core execute reg_csr_is_w", false,-1);
-        tracep->declBit(c+448,"riscv_soc core execute reg_is_except", false,-1);
+        tracep->declBit(c+448,"riscv_soc core execute reg_csr_is_w", false,-1);
+        tracep->declBit(c+449,"riscv_soc core execute reg_is_except", false,-1);
         tracep->declBus(c+254,"riscv_soc core execute reg_exception", false,-1, 5,0);
-        tracep->declBit(c+449,"riscv_soc core execute reg_is_time_irq", false,-1);
-        tracep->declBit(c+450,"riscv_soc core execute reg_is_soft_irq", false,-1);
+        tracep->declBit(c+450,"riscv_soc core execute reg_is_time_irq", false,-1);
+        tracep->declBit(c+451,"riscv_soc core execute reg_is_soft_irq", false,-1);
         tracep->declQuad(c+255,"riscv_soc core execute reg_except_next_pc", false,-1, 63,0);
         tracep->declQuad(c+257,"riscv_soc core execute reg_except_pc", false,-1, 63,0);
-        tracep->declBit(c+451,"riscv_soc core execute time_irq", false,-1);
-        tracep->declBit(c+452,"riscv_soc core execute soft_irq", false,-1);
-        tracep->declBit(c+453,"riscv_soc core execute irq", false,-1);
+        tracep->declBit(c+452,"riscv_soc core execute time_irq", false,-1);
+        tracep->declBit(c+453,"riscv_soc core execute soft_irq", false,-1);
+        tracep->declBit(c+454,"riscv_soc core execute irq", false,-1);
         tracep->declQuad(c+207,"riscv_soc core execute reg_next_pc", false,-1, 63,0);
-        tracep->declBit(c+454,"riscv_soc core execute reg_valid_next_pc", false,-1);
-        tracep->declBit(c+455,"riscv_soc core execute reg_fence_i", false,-1);
-        tracep->declBit(c+456,"riscv_soc core execute reg_commit", false,-1);
+        tracep->declBit(c+455,"riscv_soc core execute reg_valid_next_pc", false,-1);
+        tracep->declBit(c+456,"riscv_soc core execute reg_fence_i", false,-1);
+        tracep->declBit(c+457,"riscv_soc core execute reg_commit", false,-1);
         tracep->declBus(c+260,"riscv_soc core execute reg_difftest_inst", false,-1, 31,0);
         tracep->declBit(c+404,"riscv_soc core execute alu_exu io_valid", false,-1);
         tracep->declBus(c+216,"riscv_soc core execute alu_exu io_opType", false,-1, 2,0);
@@ -1081,32 +1082,32 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+409,"riscv_soc core execute alu_exu io_dst_data", false,-1, 63,0);
         tracep->declBit(c+411,"riscv_soc core execute alu_exu io_valid_next_pc", false,-1);
         tracep->declQuad(c+412,"riscv_soc core execute alu_exu io_next_pc", false,-1, 63,0);
-        tracep->declBit(c+457,"riscv_soc core execute alu_exu is_32", false,-1);
-        tracep->declQuad(c+458,"riscv_soc core execute alu_exu op_data1", false,-1, 63,0);
-        tracep->declQuad(c+460,"riscv_soc core execute alu_exu op_data2", false,-1, 63,0);
-        tracep->declQuad(c+462,"riscv_soc core execute alu_exu op_imm", false,-1, 63,0);
-        tracep->declBit(c+464,"riscv_soc core execute alu_exu rs2_is_imm", false,-1);
-        tracep->declQuad(c+465,"riscv_soc core execute alu_exu rs2_data", false,-1, 63,0);
-        tracep->declBit(c+467,"riscv_soc core execute alu_exu rs1_is_pc", false,-1);
-        tracep->declBit(c+468,"riscv_soc core execute alu_exu is_sub", false,-1);
-        tracep->declQuad(c+469,"riscv_soc core execute alu_exu rs1_data", false,-1, 63,0);
-        tracep->declQuad(c+471,"riscv_soc core execute alu_exu temp_rs2_data", false,-1, 63,0);
-        tracep->declArray(c+473,"riscv_soc core execute alu_exu add_sub_result", false,-1, 64,0);
-        tracep->declBit(c+476,"riscv_soc core execute alu_exu u_rs1_l_rs2", false,-1);
-        tracep->declBit(c+477,"riscv_soc core execute alu_exu s_rs1_l_rs2", false,-1);
-        tracep->declBus(c+478,"riscv_soc core execute alu_exu shift_rs2_data", false,-1, 5,0);
-        tracep->declArray(c+479,"riscv_soc core execute alu_exu sll_temp", false,-1, 126,0);
-        tracep->declQuad(c+483,"riscv_soc core execute alu_exu srl_temp", false,-1, 63,0);
-        tracep->declQuad(c+485,"riscv_soc core execute alu_exu sra_temp", false,-1, 63,0);
-        tracep->declBus(c+487,"riscv_soc core execute alu_exu func", false,-1, 2,0);
-        tracep->declQuad(c+488,"riscv_soc core execute alu_exu result_data", false,-1, 63,0);
-        tracep->declBit(c+490,"riscv_soc core execute alu_exu is_br", false,-1);
-        tracep->declBit(c+491,"riscv_soc core execute alu_exu is_eq", false,-1);
-        tracep->declArray(c+492,"riscv_soc core execute alu_exu add_pc", false,-1, 64,0);
-        tracep->declArray(c+495,"riscv_soc core execute alu_exu temp_result_pc", false,-1, 64,0);
-        tracep->declBit(c+498,"riscv_soc core execute alu_exu valid_next_pc", false,-1);
-        tracep->declBit(c+738,"riscv_soc core execute mem_exu clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core execute mem_exu reset", false,-1);
+        tracep->declBit(c+458,"riscv_soc core execute alu_exu is_32", false,-1);
+        tracep->declQuad(c+459,"riscv_soc core execute alu_exu op_data1", false,-1, 63,0);
+        tracep->declQuad(c+461,"riscv_soc core execute alu_exu op_data2", false,-1, 63,0);
+        tracep->declQuad(c+463,"riscv_soc core execute alu_exu op_imm", false,-1, 63,0);
+        tracep->declBit(c+465,"riscv_soc core execute alu_exu rs2_is_imm", false,-1);
+        tracep->declQuad(c+466,"riscv_soc core execute alu_exu rs2_data", false,-1, 63,0);
+        tracep->declBit(c+468,"riscv_soc core execute alu_exu rs1_is_pc", false,-1);
+        tracep->declBit(c+469,"riscv_soc core execute alu_exu is_sub", false,-1);
+        tracep->declQuad(c+470,"riscv_soc core execute alu_exu rs1_data", false,-1, 63,0);
+        tracep->declQuad(c+472,"riscv_soc core execute alu_exu temp_rs2_data", false,-1, 63,0);
+        tracep->declArray(c+474,"riscv_soc core execute alu_exu add_sub_result", false,-1, 64,0);
+        tracep->declBit(c+477,"riscv_soc core execute alu_exu u_rs1_l_rs2", false,-1);
+        tracep->declBit(c+478,"riscv_soc core execute alu_exu s_rs1_l_rs2", false,-1);
+        tracep->declBus(c+479,"riscv_soc core execute alu_exu shift_rs2_data", false,-1, 5,0);
+        tracep->declArray(c+480,"riscv_soc core execute alu_exu sll_temp", false,-1, 126,0);
+        tracep->declQuad(c+484,"riscv_soc core execute alu_exu srl_temp", false,-1, 63,0);
+        tracep->declQuad(c+486,"riscv_soc core execute alu_exu sra_temp", false,-1, 63,0);
+        tracep->declBus(c+488,"riscv_soc core execute alu_exu func", false,-1, 2,0);
+        tracep->declQuad(c+489,"riscv_soc core execute alu_exu result_data", false,-1, 63,0);
+        tracep->declBit(c+491,"riscv_soc core execute alu_exu is_br", false,-1);
+        tracep->declBit(c+492,"riscv_soc core execute alu_exu is_eq", false,-1);
+        tracep->declArray(c+493,"riscv_soc core execute alu_exu add_pc", false,-1, 64,0);
+        tracep->declArray(c+496,"riscv_soc core execute alu_exu temp_result_pc", false,-1, 64,0);
+        tracep->declBit(c+499,"riscv_soc core execute alu_exu valid_next_pc", false,-1);
+        tracep->declBit(c+739,"riscv_soc core execute mem_exu clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core execute mem_exu reset", false,-1);
         tracep->declBit(c+414,"riscv_soc core execute mem_exu io_valid", false,-1);
         tracep->declBus(c+217,"riscv_soc core execute mem_exu io_exuType", false,-1, 6,0);
         tracep->declQuad(c+415,"riscv_soc core execute mem_exu io_rs1_data", false,-1, 63,0);
@@ -1123,7 +1124,7 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+176,"riscv_soc core execute mem_exu io_bus_bits_is_w", false,-1);
         tracep->declBit(c+202,"riscv_soc core execute mem_exu io_bus_ready", false,-1);
         tracep->declBit(c+261,"riscv_soc core execute mem_exu io_difftest_peripheral", false,-1);
-        tracep->declQuad(c+499,"riscv_soc core execute mem_exu imm", false,-1, 63,0);
+        tracep->declQuad(c+500,"riscv_soc core execute mem_exu imm", false,-1, 63,0);
         tracep->declBit(c+422,"riscv_soc core execute mem_exu reg_ready", false,-1);
         tracep->declQuad(c+169,"riscv_soc core execute mem_exu reg_bus_addr", false,-1, 63,0);
         tracep->declQuad(c+173,"riscv_soc core execute mem_exu reg_bus_wdata", false,-1, 63,0);
@@ -1133,15 +1134,15 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+419,"riscv_soc core execute mem_exu reg_result_data", false,-1, 63,0);
         tracep->declBit(c+421,"riscv_soc core execute mem_exu reg_w_rs_en", false,-1);
         tracep->declBit(c+261,"riscv_soc core execute mem_exu reg_difftest_peripheral", false,-1);
-        tracep->declQuad(c+501,"riscv_soc core execute mem_exu mem_r_data", false,-1, 63,0);
-        tracep->declQuad(c+503,"riscv_soc core execute mem_exu mem_data_result", false,-1, 63,0);
-        tracep->declQuad(c+505,"riscv_soc core execute mem_exu mem_addr", false,-1, 63,0);
-        tracep->declBit(c+507,"riscv_soc core execute mem_exu w_mem_en", false,-1);
-        tracep->declQuad(c+508,"riscv_soc core execute mem_exu mem_wstrb", false,-1, 63,0);
-        tracep->declBit(c+510,"riscv_soc core execute mem_exu reg_ls_state", false,-1);
-        tracep->declArray(c+511,"riscv_soc core execute mem_exu mem_w_data", false,-1, 126,0);
-        tracep->declBit(c+738,"riscv_soc core execute mu_exu clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core execute mu_exu reset", false,-1);
+        tracep->declQuad(c+502,"riscv_soc core execute mem_exu mem_r_data", false,-1, 63,0);
+        tracep->declQuad(c+504,"riscv_soc core execute mem_exu mem_data_result", false,-1, 63,0);
+        tracep->declQuad(c+506,"riscv_soc core execute mem_exu mem_addr", false,-1, 63,0);
+        tracep->declBit(c+508,"riscv_soc core execute mem_exu w_mem_en", false,-1);
+        tracep->declQuad(c+509,"riscv_soc core execute mem_exu mem_wstrb", false,-1, 63,0);
+        tracep->declBit(c+511,"riscv_soc core execute mem_exu reg_ls_state", false,-1);
+        tracep->declArray(c+512,"riscv_soc core execute mem_exu mem_w_data", false,-1, 126,0);
+        tracep->declBit(c+739,"riscv_soc core execute mu_exu clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core execute mu_exu reset", false,-1);
         tracep->declBit(c+423,"riscv_soc core execute mu_exu io_valid", false,-1);
         tracep->declBus(c+217,"riscv_soc core execute mu_exu io_exu_type", false,-1, 6,0);
         tracep->declQuad(c+405,"riscv_soc core execute mu_exu io_rs1_data", false,-1, 63,0);
@@ -1149,83 +1150,83 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+424,"riscv_soc core execute mu_exu io_dest_data", false,-1, 63,0);
         tracep->declBit(c+426,"riscv_soc core execute mu_exu io_dest_is_w", false,-1);
         tracep->declBit(c+427,"riscv_soc core execute mu_exu io_ready", false,-1);
-        tracep->declBit(c+738,"riscv_soc core execute mu_exu div_clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core execute mu_exu div_reset", false,-1);
-        tracep->declBit(c+515,"riscv_soc core execute mu_exu div_io_valid", false,-1);
+        tracep->declBit(c+739,"riscv_soc core execute mu_exu div_clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core execute mu_exu div_reset", false,-1);
+        tracep->declBit(c+516,"riscv_soc core execute mu_exu div_io_valid", false,-1);
         tracep->declQuad(c+405,"riscv_soc core execute mu_exu div_io_rs1_data", false,-1, 63,0);
         tracep->declQuad(c+407,"riscv_soc core execute mu_exu div_io_rs2_data", false,-1, 63,0);
         tracep->declBus(c+217,"riscv_soc core execute mu_exu div_io_exuType", false,-1, 6,0);
-        tracep->declQuad(c+516,"riscv_soc core execute mu_exu div_io_dest_data", false,-1, 63,0);
-        tracep->declBit(c+518,"riscv_soc core execute mu_exu div_io_dest_is_w", false,-1);
-        tracep->declBit(c+519,"riscv_soc core execute mu_exu div_io_ready", false,-1);
-        tracep->declBit(c+738,"riscv_soc core execute mu_exu mul_clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core execute mu_exu mul_reset", false,-1);
-        tracep->declBit(c+520,"riscv_soc core execute mu_exu mul_io_valid", false,-1);
+        tracep->declQuad(c+517,"riscv_soc core execute mu_exu div_io_dest_data", false,-1, 63,0);
+        tracep->declBit(c+519,"riscv_soc core execute mu_exu div_io_dest_is_w", false,-1);
+        tracep->declBit(c+520,"riscv_soc core execute mu_exu div_io_ready", false,-1);
+        tracep->declBit(c+739,"riscv_soc core execute mu_exu mul_clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core execute mu_exu mul_reset", false,-1);
+        tracep->declBit(c+521,"riscv_soc core execute mu_exu mul_io_valid", false,-1);
         tracep->declQuad(c+405,"riscv_soc core execute mu_exu mul_io_rs1_data", false,-1, 63,0);
         tracep->declQuad(c+407,"riscv_soc core execute mu_exu mul_io_rs2_data", false,-1, 63,0);
         tracep->declBus(c+217,"riscv_soc core execute mu_exu mul_io_exuType", false,-1, 6,0);
-        tracep->declQuad(c+521,"riscv_soc core execute mu_exu mul_io_dest_data", false,-1, 63,0);
-        tracep->declBit(c+523,"riscv_soc core execute mu_exu mul_io_dest_is_w", false,-1);
-        tracep->declBit(c+524,"riscv_soc core execute mu_exu mul_io_ready", false,-1);
-        tracep->declBit(c+738,"riscv_soc core execute mu_exu div clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core execute mu_exu div reset", false,-1);
-        tracep->declBit(c+515,"riscv_soc core execute mu_exu div io_valid", false,-1);
+        tracep->declQuad(c+522,"riscv_soc core execute mu_exu mul_io_dest_data", false,-1, 63,0);
+        tracep->declBit(c+524,"riscv_soc core execute mu_exu mul_io_dest_is_w", false,-1);
+        tracep->declBit(c+525,"riscv_soc core execute mu_exu mul_io_ready", false,-1);
+        tracep->declBit(c+739,"riscv_soc core execute mu_exu div clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core execute mu_exu div reset", false,-1);
+        tracep->declBit(c+516,"riscv_soc core execute mu_exu div io_valid", false,-1);
         tracep->declQuad(c+405,"riscv_soc core execute mu_exu div io_rs1_data", false,-1, 63,0);
         tracep->declQuad(c+407,"riscv_soc core execute mu_exu div io_rs2_data", false,-1, 63,0);
         tracep->declBus(c+217,"riscv_soc core execute mu_exu div io_exuType", false,-1, 6,0);
-        tracep->declQuad(c+516,"riscv_soc core execute mu_exu div io_dest_data", false,-1, 63,0);
-        tracep->declBit(c+518,"riscv_soc core execute mu_exu div io_dest_is_w", false,-1);
-        tracep->declBit(c+519,"riscv_soc core execute mu_exu div io_ready", false,-1);
-        tracep->declBit(c+457,"riscv_soc core execute mu_exu div is_32", false,-1);
-        tracep->declBit(c+525,"riscv_soc core execute mu_exu div is_signed", false,-1);
-        tracep->declArray(c+526,"riscv_soc core execute mu_exu div dividend", false,-1, 64,0);
-        tracep->declArray(c+529,"riscv_soc core execute mu_exu div divisor", false,-1, 64,0);
-        tracep->declArray(c+532,"riscv_soc core execute mu_exu div rem", false,-1, 64,0);
-        tracep->declArray(c+535,"riscv_soc core execute mu_exu div reg_divisor", false,-1, 64,0);
-        tracep->declArray(c+538,"riscv_soc core execute mu_exu div reg_dividend", false,-1, 65,0);
-        tracep->declArray(c+541,"riscv_soc core execute mu_exu div reg_rem", false,-1, 64,0);
-        tracep->declArray(c+544,"riscv_soc core execute mu_exu div reg_q", false,-1, 65,0);
-        tracep->declArray(c+547,"riscv_soc core execute mu_exu div neg_divisor", false,-1, 64,0);
-        tracep->declBus(c+550,"riscv_soc core execute mu_exu div reg_state", false,-1, 1,0);
-        tracep->declBus(c+551,"riscv_soc core execute mu_exu div reg_cnt", false,-1, 6,0);
-        tracep->declBus(c+552,"riscv_soc core execute mu_exu div reg_exuType", false,-1, 6,0);
-        tracep->declArray(c+553,"riscv_soc core execute mu_exu div temp_result", false,-1, 131,0);
-        tracep->declBit(c+558,"riscv_soc core execute mu_exu div rem_is_0", false,-1);
-        tracep->declBit(c+559,"riscv_soc core execute mu_exu div rem_is_neg_div", false,-1);
-        tracep->declBit(c+560,"riscv_soc core execute mu_exu div rem_is_div", false,-1);
-        tracep->declBit(c+561,"riscv_soc core execute mu_exu div is_need_correct", false,-1);
-        tracep->declBit(c+518,"riscv_soc core execute mu_exu div reg_dest_is_w", false,-1);
-        tracep->declBit(c+519,"riscv_soc core execute mu_exu div reg_ready", false,-1);
-        tracep->declBit(c+562,"riscv_soc core execute mu_exu div reg_is_32", false,-1);
-        tracep->declBit(c+563,"riscv_soc core execute mu_exu div reg_is_rem", false,-1);
-        tracep->declQuad(c+564,"riscv_soc core execute mu_exu div rem_adjust", false,-1, 63,0);
-        tracep->declQuad(c+566,"riscv_soc core execute mu_exu div q_adjust", false,-1, 63,0);
-        tracep->declBit(c+738,"riscv_soc core execute mu_exu mul clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core execute mu_exu mul reset", false,-1);
-        tracep->declBit(c+520,"riscv_soc core execute mu_exu mul io_valid", false,-1);
+        tracep->declQuad(c+517,"riscv_soc core execute mu_exu div io_dest_data", false,-1, 63,0);
+        tracep->declBit(c+519,"riscv_soc core execute mu_exu div io_dest_is_w", false,-1);
+        tracep->declBit(c+520,"riscv_soc core execute mu_exu div io_ready", false,-1);
+        tracep->declBit(c+458,"riscv_soc core execute mu_exu div is_32", false,-1);
+        tracep->declBit(c+526,"riscv_soc core execute mu_exu div is_signed", false,-1);
+        tracep->declArray(c+527,"riscv_soc core execute mu_exu div dividend", false,-1, 64,0);
+        tracep->declArray(c+530,"riscv_soc core execute mu_exu div divisor", false,-1, 64,0);
+        tracep->declArray(c+533,"riscv_soc core execute mu_exu div rem", false,-1, 64,0);
+        tracep->declArray(c+536,"riscv_soc core execute mu_exu div reg_divisor", false,-1, 64,0);
+        tracep->declArray(c+539,"riscv_soc core execute mu_exu div reg_dividend", false,-1, 65,0);
+        tracep->declArray(c+542,"riscv_soc core execute mu_exu div reg_rem", false,-1, 64,0);
+        tracep->declArray(c+545,"riscv_soc core execute mu_exu div reg_q", false,-1, 65,0);
+        tracep->declArray(c+548,"riscv_soc core execute mu_exu div neg_divisor", false,-1, 64,0);
+        tracep->declBus(c+551,"riscv_soc core execute mu_exu div reg_state", false,-1, 1,0);
+        tracep->declBus(c+552,"riscv_soc core execute mu_exu div reg_cnt", false,-1, 6,0);
+        tracep->declBus(c+553,"riscv_soc core execute mu_exu div reg_exuType", false,-1, 6,0);
+        tracep->declArray(c+554,"riscv_soc core execute mu_exu div temp_result", false,-1, 131,0);
+        tracep->declBit(c+559,"riscv_soc core execute mu_exu div rem_is_0", false,-1);
+        tracep->declBit(c+560,"riscv_soc core execute mu_exu div rem_is_neg_div", false,-1);
+        tracep->declBit(c+561,"riscv_soc core execute mu_exu div rem_is_div", false,-1);
+        tracep->declBit(c+562,"riscv_soc core execute mu_exu div is_need_correct", false,-1);
+        tracep->declBit(c+519,"riscv_soc core execute mu_exu div reg_dest_is_w", false,-1);
+        tracep->declBit(c+520,"riscv_soc core execute mu_exu div reg_ready", false,-1);
+        tracep->declBit(c+563,"riscv_soc core execute mu_exu div reg_is_32", false,-1);
+        tracep->declBit(c+564,"riscv_soc core execute mu_exu div reg_is_rem", false,-1);
+        tracep->declQuad(c+565,"riscv_soc core execute mu_exu div rem_adjust", false,-1, 63,0);
+        tracep->declQuad(c+567,"riscv_soc core execute mu_exu div q_adjust", false,-1, 63,0);
+        tracep->declBit(c+739,"riscv_soc core execute mu_exu mul clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core execute mu_exu mul reset", false,-1);
+        tracep->declBit(c+521,"riscv_soc core execute mu_exu mul io_valid", false,-1);
         tracep->declQuad(c+405,"riscv_soc core execute mu_exu mul io_rs1_data", false,-1, 63,0);
         tracep->declQuad(c+407,"riscv_soc core execute mu_exu mul io_rs2_data", false,-1, 63,0);
         tracep->declBus(c+217,"riscv_soc core execute mu_exu mul io_exuType", false,-1, 6,0);
-        tracep->declQuad(c+521,"riscv_soc core execute mu_exu mul io_dest_data", false,-1, 63,0);
-        tracep->declBit(c+523,"riscv_soc core execute mu_exu mul io_dest_is_w", false,-1);
-        tracep->declBit(c+524,"riscv_soc core execute mu_exu mul io_ready", false,-1);
-        tracep->declBit(c+568,"riscv_soc core execute mu_exu mul is_32", false,-1);
-        tracep->declBit(c+569,"riscv_soc core execute mu_exu mul is_rs1_signed", false,-1);
-        tracep->declBit(c+457,"riscv_soc core execute mu_exu mul is_rs2_signed", false,-1);
-        tracep->declArray(c+570,"riscv_soc core execute mu_exu mul mul_data1", false,-1, 129,0);
-        tracep->declArray(c+575,"riscv_soc core execute mu_exu mul mul_data2", false,-1, 64,0);
-        tracep->declArray(c+578,"riscv_soc core execute mu_exu mul temp_mul2", false,-1, 66,0);
-        tracep->declBit(c+524,"riscv_soc core execute mu_exu mul reg_ready", false,-1);
-        tracep->declBus(c+581,"riscv_soc core execute mu_exu mul reg_state", false,-1, 1,0);
-        tracep->declArray(c+582,"riscv_soc core execute mu_exu mul reg_temp_mul2", false,-1, 66,0);
-        tracep->declArray(c+585,"riscv_soc core execute mu_exu mul reg_mul1", false,-1, 129,0);
-        tracep->declArray(c+590,"riscv_soc core execute mu_exu mul reg_result", false,-1, 129,0);
-        tracep->declBus(c+595,"riscv_soc core execute mu_exu mul reg_exuType", false,-1, 6,0);
-        tracep->declBit(c+523,"riscv_soc core execute mu_exu mul reg_dest_is_w", false,-1);
-        tracep->declArray(c+596,"riscv_soc core execute mu_exu mul pp", false,-1, 130,0);
-        tracep->declBus(c+601,"riscv_soc core execute mu_exu mul reg_cnt", false,-1, 6,0);
-        tracep->declBit(c+602,"riscv_soc core execute mu_exu mul reg_not_h", false,-1);
-        tracep->declBit(c+603,"riscv_soc core execute mu_exu mul reg_is_32", false,-1);
+        tracep->declQuad(c+522,"riscv_soc core execute mu_exu mul io_dest_data", false,-1, 63,0);
+        tracep->declBit(c+524,"riscv_soc core execute mu_exu mul io_dest_is_w", false,-1);
+        tracep->declBit(c+525,"riscv_soc core execute mu_exu mul io_ready", false,-1);
+        tracep->declBit(c+569,"riscv_soc core execute mu_exu mul is_32", false,-1);
+        tracep->declBit(c+570,"riscv_soc core execute mu_exu mul is_rs1_signed", false,-1);
+        tracep->declBit(c+458,"riscv_soc core execute mu_exu mul is_rs2_signed", false,-1);
+        tracep->declArray(c+571,"riscv_soc core execute mu_exu mul mul_data1", false,-1, 129,0);
+        tracep->declArray(c+576,"riscv_soc core execute mu_exu mul mul_data2", false,-1, 64,0);
+        tracep->declArray(c+579,"riscv_soc core execute mu_exu mul temp_mul2", false,-1, 66,0);
+        tracep->declBit(c+525,"riscv_soc core execute mu_exu mul reg_ready", false,-1);
+        tracep->declBus(c+582,"riscv_soc core execute mu_exu mul reg_state", false,-1, 1,0);
+        tracep->declArray(c+583,"riscv_soc core execute mu_exu mul reg_temp_mul2", false,-1, 66,0);
+        tracep->declArray(c+586,"riscv_soc core execute mu_exu mul reg_mul1", false,-1, 129,0);
+        tracep->declArray(c+591,"riscv_soc core execute mu_exu mul reg_result", false,-1, 129,0);
+        tracep->declBus(c+596,"riscv_soc core execute mu_exu mul reg_exuType", false,-1, 6,0);
+        tracep->declBit(c+524,"riscv_soc core execute mu_exu mul reg_dest_is_w", false,-1);
+        tracep->declArray(c+597,"riscv_soc core execute mu_exu mul pp", false,-1, 130,0);
+        tracep->declBus(c+602,"riscv_soc core execute mu_exu mul reg_cnt", false,-1, 6,0);
+        tracep->declBit(c+603,"riscv_soc core execute mu_exu mul reg_not_h", false,-1);
+        tracep->declBit(c+604,"riscv_soc core execute mu_exu mul reg_is_32", false,-1);
         tracep->declBit(c+428,"riscv_soc core execute system_exu io_valid", false,-1);
         tracep->declBus(c+217,"riscv_soc core execute system_exu io_exuType", false,-1, 6,0);
         tracep->declQuad(c+429,"riscv_soc core execute system_exu io_csr_data", false,-1, 63,0);
@@ -1242,22 +1243,22 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBus(c+436,"riscv_soc core execute system_exu io_exception", false,-1, 5,0);
         tracep->declBit(c+437,"riscv_soc core execute system_exu io_valid_next_pc", false,-1);
         tracep->declQuad(c+239,"riscv_soc core execute system_exu io_next_pc", false,-1, 63,0);
-        tracep->declQuad(c+462,"riscv_soc core execute system_exu imm", false,-1, 63,0);
-        tracep->declBit(c+604,"riscv_soc core execute system_exu is_imm", false,-1);
-        tracep->declQuad(c+605,"riscv_soc core execute system_exu op_data", false,-1, 63,0);
-        tracep->declQuad(c+607,"riscv_soc core execute system_exu or_result", false,-1, 63,0);
-        tracep->declQuad(c+609,"riscv_soc core execute system_exu and_result", false,-1, 63,0);
-        tracep->declQuad(c+611,"riscv_soc core execute system_exu temp_csr_result_data", false,-1, 63,0);
-        tracep->declBit(c+613,"riscv_soc core execute system_exu is_mret", false,-1);
-        tracep->declBit(c+614,"riscv_soc core execute system_exu is_sret", false,-1);
-        tracep->declBit(c+615,"riscv_soc core execute system_exu is_ecall", false,-1);
-        tracep->declBit(c+616,"riscv_soc core execute system_exu is_ebreak", false,-1);
-        tracep->declBit(c+617,"riscv_soc core execute system_exu is_except", false,-1);
-        tracep->declBus(c+618,"riscv_soc core execute system_exu exception", false,-1, 3,0);
-        tracep->declBit(c+619,"riscv_soc core execute system_exu is_ret", false,-1);
-        tracep->declQuad(c+620,"riscv_soc core execute system_exu result_status", false,-1, 63,0);
-        tracep->declBit(c+738,"riscv_soc core decode clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core decode reset", false,-1);
+        tracep->declQuad(c+463,"riscv_soc core execute system_exu imm", false,-1, 63,0);
+        tracep->declBit(c+605,"riscv_soc core execute system_exu is_imm", false,-1);
+        tracep->declQuad(c+606,"riscv_soc core execute system_exu op_data", false,-1, 63,0);
+        tracep->declQuad(c+608,"riscv_soc core execute system_exu or_result", false,-1, 63,0);
+        tracep->declQuad(c+610,"riscv_soc core execute system_exu and_result", false,-1, 63,0);
+        tracep->declQuad(c+612,"riscv_soc core execute system_exu temp_csr_result_data", false,-1, 63,0);
+        tracep->declBit(c+614,"riscv_soc core execute system_exu is_mret", false,-1);
+        tracep->declBit(c+615,"riscv_soc core execute system_exu is_sret", false,-1);
+        tracep->declBit(c+616,"riscv_soc core execute system_exu is_ecall", false,-1);
+        tracep->declBit(c+617,"riscv_soc core execute system_exu is_ebreak", false,-1);
+        tracep->declBit(c+618,"riscv_soc core execute system_exu is_except", false,-1);
+        tracep->declBus(c+619,"riscv_soc core execute system_exu exception", false,-1, 3,0);
+        tracep->declBit(c+620,"riscv_soc core execute system_exu is_ret", false,-1);
+        tracep->declQuad(c+621,"riscv_soc core execute system_exu result_status", false,-1, 63,0);
+        tracep->declBit(c+739,"riscv_soc core decode clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core decode reset", false,-1);
         tracep->declBit(c+210,"riscv_soc core decode io_get_inst_ready", false,-1);
         tracep->declBit(c+211,"riscv_soc core decode io_get_inst_valid", false,-1);
         tracep->declBus(c+212,"riscv_soc core decode io_get_inst_bits_inst", false,-1, 31,0);
@@ -1298,14 +1299,14 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+229,"riscv_soc core decode reg_dest_is_reg", false,-1);
         tracep->declBus(c+230,"riscv_soc core decode reg_csr_addr", false,-1, 11,0);
         tracep->declQuad(c+231,"riscv_soc core decode reg_csr_data", false,-1, 63,0);
-        tracep->declBus(c+622,"riscv_soc core decode instType", false,-1, 3,0);
-        tracep->declBit(c+623,"riscv_soc core decode dest_is_reg", false,-1);
+        tracep->declBus(c+623,"riscv_soc core decode instType", false,-1, 3,0);
+        tracep->declBit(c+624,"riscv_soc core decode dest_is_reg", false,-1);
         tracep->declBus(c+265,"riscv_soc core decode rs2_addr", false,-1, 4,0);
         tracep->declBus(c+262,"riscv_soc core decode rs1_addr", false,-1, 4,0);
         tracep->declBus(c+268,"riscv_soc core decode csr_addr", false,-1, 11,0);
-        tracep->declBus(c+624,"riscv_soc core decode dest_addr", false,-1, 4,0);
-        tracep->declBit(c+738,"riscv_soc core commit clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core commit reset", false,-1);
+        tracep->declBus(c+625,"riscv_soc core decode dest_addr", false,-1, 4,0);
+        tracep->declBit(c+739,"riscv_soc core commit clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core commit reset", false,-1);
         tracep->declBus(c+262,"riscv_soc core commit io_normal_rd_rs1_addr", false,-1, 4,0);
         tracep->declQuad(c+263,"riscv_soc core commit io_normal_rd_rs1_data", false,-1, 63,0);
         tracep->declBus(c+265,"riscv_soc core commit io_normal_rd_rs2_addr", false,-1, 4,0);
@@ -1337,8 +1338,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+87,"riscv_soc core commit difftest_pc_0", false,-1, 63,0);
         tracep->declBus(c+89,"riscv_soc core commit difftest_inst_0", false,-1, 31,0);
         tracep->declQuad(c+152,"riscv_soc core commit inst_counter_0", false,-1, 63,0);
-        tracep->declBit(c+738,"riscv_soc core commit csr_reg_clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core commit csr_reg_reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core commit csr_reg_clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core commit csr_reg_reset", false,-1);
         tracep->declBus(c+248,"riscv_soc core commit csr_reg_io_in_csr_addr", false,-1, 11,0);
         tracep->declQuad(c+249,"riscv_soc core commit csr_reg_io_in_csr_data", false,-1, 63,0);
         tracep->declBit(c+247,"riscv_soc core commit csr_reg_io_in_w_csr_en", false,-1);
@@ -1346,7 +1347,7 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+255,"riscv_soc core commit csr_reg_io_in_next_pc", false,-1, 63,0);
         tracep->declBit(c+252,"riscv_soc core commit csr_reg_io_in_time_irq", false,-1);
         tracep->declBit(c+253,"riscv_soc core commit csr_reg_io_in_soft_irq", false,-1);
-        tracep->declBus(c+625,"riscv_soc core commit csr_reg_io_in_exception", false,-1, 4,0);
+        tracep->declBus(c+626,"riscv_soc core commit csr_reg_io_in_exception", false,-1, 4,0);
         tracep->declBit(c+251,"riscv_soc core commit csr_reg_io_in_is_exception", false,-1);
         tracep->declBit(c+259,"riscv_soc core commit csr_reg_io_in_commit", false,-1);
         tracep->declBus(c+268,"riscv_soc core commit csr_reg_io_r_csr_raddr", false,-1, 11,0);
@@ -1356,112 +1357,112 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+235,"riscv_soc core commit csr_reg_io_r_csr_mstatus", false,-1, 63,0);
         tracep->declQuad(c+237,"riscv_soc core commit csr_reg_io_r_csr_mie", false,-1, 63,0);
         {int i; for (i=0; i<32; i++) {
-                tracep->declQuad(c+626+i*2,"riscv_soc core commit regfile", true,(i+0), 63,0);}}
-        tracep->declBit(c+826,"riscv_soc core commit regfile_rs1_data_MPORT_en", false,-1);
+                tracep->declQuad(c+627+i*2,"riscv_soc core commit regfile", true,(i+0), 63,0);}}
+        tracep->declBit(c+827,"riscv_soc core commit regfile_rs1_data_MPORT_en", false,-1);
         tracep->declBus(c+262,"riscv_soc core commit regfile_rs1_data_MPORT_addr", false,-1, 4,0);
-        tracep->declQuad(c+690,"riscv_soc core commit regfile_rs1_data_MPORT_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_rs2_data_MPORT_en", false,-1);
+        tracep->declQuad(c+691,"riscv_soc core commit regfile_rs1_data_MPORT_data", false,-1, 63,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_rs2_data_MPORT_en", false,-1);
         tracep->declBus(c+265,"riscv_soc core commit regfile_rs2_data_MPORT_addr", false,-1, 4,0);
-        tracep->declQuad(c+692,"riscv_soc core commit regfile_rs2_data_MPORT_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_1_en", false,-1);
-        tracep->declBus(c+827,"riscv_soc core commit regfile_MPORT_1_addr", false,-1, 4,0);
-        tracep->declQuad(c+694,"riscv_soc core commit regfile_MPORT_1_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_2_en", false,-1);
-        tracep->declBus(c+828,"riscv_soc core commit regfile_MPORT_2_addr", false,-1, 4,0);
+        tracep->declQuad(c+693,"riscv_soc core commit regfile_rs2_data_MPORT_data", false,-1, 63,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_1_en", false,-1);
+        tracep->declBus(c+828,"riscv_soc core commit regfile_MPORT_1_addr", false,-1, 4,0);
+        tracep->declQuad(c+695,"riscv_soc core commit regfile_MPORT_1_data", false,-1, 63,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_2_en", false,-1);
+        tracep->declBus(c+829,"riscv_soc core commit regfile_MPORT_2_addr", false,-1, 4,0);
         tracep->declQuad(c+90,"riscv_soc core commit regfile_MPORT_2_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_3_en", false,-1);
-        tracep->declBus(c+829,"riscv_soc core commit regfile_MPORT_3_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_3_en", false,-1);
+        tracep->declBus(c+830,"riscv_soc core commit regfile_MPORT_3_addr", false,-1, 4,0);
         tracep->declQuad(c+92,"riscv_soc core commit regfile_MPORT_3_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_4_en", false,-1);
-        tracep->declBus(c+830,"riscv_soc core commit regfile_MPORT_4_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_4_en", false,-1);
+        tracep->declBus(c+831,"riscv_soc core commit regfile_MPORT_4_addr", false,-1, 4,0);
         tracep->declQuad(c+94,"riscv_soc core commit regfile_MPORT_4_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_5_en", false,-1);
-        tracep->declBus(c+831,"riscv_soc core commit regfile_MPORT_5_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_5_en", false,-1);
+        tracep->declBus(c+832,"riscv_soc core commit regfile_MPORT_5_addr", false,-1, 4,0);
         tracep->declQuad(c+96,"riscv_soc core commit regfile_MPORT_5_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_6_en", false,-1);
-        tracep->declBus(c+832,"riscv_soc core commit regfile_MPORT_6_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_6_en", false,-1);
+        tracep->declBus(c+833,"riscv_soc core commit regfile_MPORT_6_addr", false,-1, 4,0);
         tracep->declQuad(c+98,"riscv_soc core commit regfile_MPORT_6_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_7_en", false,-1);
-        tracep->declBus(c+833,"riscv_soc core commit regfile_MPORT_7_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_7_en", false,-1);
+        tracep->declBus(c+834,"riscv_soc core commit regfile_MPORT_7_addr", false,-1, 4,0);
         tracep->declQuad(c+100,"riscv_soc core commit regfile_MPORT_7_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_8_en", false,-1);
-        tracep->declBus(c+834,"riscv_soc core commit regfile_MPORT_8_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_8_en", false,-1);
+        tracep->declBus(c+835,"riscv_soc core commit regfile_MPORT_8_addr", false,-1, 4,0);
         tracep->declQuad(c+102,"riscv_soc core commit regfile_MPORT_8_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_9_en", false,-1);
-        tracep->declBus(c+835,"riscv_soc core commit regfile_MPORT_9_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_9_en", false,-1);
+        tracep->declBus(c+836,"riscv_soc core commit regfile_MPORT_9_addr", false,-1, 4,0);
         tracep->declQuad(c+104,"riscv_soc core commit regfile_MPORT_9_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_10_en", false,-1);
-        tracep->declBus(c+836,"riscv_soc core commit regfile_MPORT_10_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_10_en", false,-1);
+        tracep->declBus(c+837,"riscv_soc core commit regfile_MPORT_10_addr", false,-1, 4,0);
         tracep->declQuad(c+106,"riscv_soc core commit regfile_MPORT_10_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_11_en", false,-1);
-        tracep->declBus(c+837,"riscv_soc core commit regfile_MPORT_11_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_11_en", false,-1);
+        tracep->declBus(c+838,"riscv_soc core commit regfile_MPORT_11_addr", false,-1, 4,0);
         tracep->declQuad(c+108,"riscv_soc core commit regfile_MPORT_11_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_12_en", false,-1);
-        tracep->declBus(c+838,"riscv_soc core commit regfile_MPORT_12_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_12_en", false,-1);
+        tracep->declBus(c+839,"riscv_soc core commit regfile_MPORT_12_addr", false,-1, 4,0);
         tracep->declQuad(c+110,"riscv_soc core commit regfile_MPORT_12_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_13_en", false,-1);
-        tracep->declBus(c+839,"riscv_soc core commit regfile_MPORT_13_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_13_en", false,-1);
+        tracep->declBus(c+840,"riscv_soc core commit regfile_MPORT_13_addr", false,-1, 4,0);
         tracep->declQuad(c+112,"riscv_soc core commit regfile_MPORT_13_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_14_en", false,-1);
-        tracep->declBus(c+840,"riscv_soc core commit regfile_MPORT_14_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_14_en", false,-1);
+        tracep->declBus(c+841,"riscv_soc core commit regfile_MPORT_14_addr", false,-1, 4,0);
         tracep->declQuad(c+114,"riscv_soc core commit regfile_MPORT_14_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_15_en", false,-1);
-        tracep->declBus(c+841,"riscv_soc core commit regfile_MPORT_15_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_15_en", false,-1);
+        tracep->declBus(c+842,"riscv_soc core commit regfile_MPORT_15_addr", false,-1, 4,0);
         tracep->declQuad(c+116,"riscv_soc core commit regfile_MPORT_15_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_16_en", false,-1);
-        tracep->declBus(c+842,"riscv_soc core commit regfile_MPORT_16_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_16_en", false,-1);
+        tracep->declBus(c+843,"riscv_soc core commit regfile_MPORT_16_addr", false,-1, 4,0);
         tracep->declQuad(c+118,"riscv_soc core commit regfile_MPORT_16_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_17_en", false,-1);
-        tracep->declBus(c+843,"riscv_soc core commit regfile_MPORT_17_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_17_en", false,-1);
+        tracep->declBus(c+844,"riscv_soc core commit regfile_MPORT_17_addr", false,-1, 4,0);
         tracep->declQuad(c+120,"riscv_soc core commit regfile_MPORT_17_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_18_en", false,-1);
-        tracep->declBus(c+844,"riscv_soc core commit regfile_MPORT_18_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_18_en", false,-1);
+        tracep->declBus(c+845,"riscv_soc core commit regfile_MPORT_18_addr", false,-1, 4,0);
         tracep->declQuad(c+122,"riscv_soc core commit regfile_MPORT_18_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_19_en", false,-1);
-        tracep->declBus(c+845,"riscv_soc core commit regfile_MPORT_19_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_19_en", false,-1);
+        tracep->declBus(c+846,"riscv_soc core commit regfile_MPORT_19_addr", false,-1, 4,0);
         tracep->declQuad(c+124,"riscv_soc core commit regfile_MPORT_19_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_20_en", false,-1);
-        tracep->declBus(c+846,"riscv_soc core commit regfile_MPORT_20_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_20_en", false,-1);
+        tracep->declBus(c+847,"riscv_soc core commit regfile_MPORT_20_addr", false,-1, 4,0);
         tracep->declQuad(c+126,"riscv_soc core commit regfile_MPORT_20_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_21_en", false,-1);
-        tracep->declBus(c+847,"riscv_soc core commit regfile_MPORT_21_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_21_en", false,-1);
+        tracep->declBus(c+848,"riscv_soc core commit regfile_MPORT_21_addr", false,-1, 4,0);
         tracep->declQuad(c+128,"riscv_soc core commit regfile_MPORT_21_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_22_en", false,-1);
-        tracep->declBus(c+848,"riscv_soc core commit regfile_MPORT_22_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_22_en", false,-1);
+        tracep->declBus(c+849,"riscv_soc core commit regfile_MPORT_22_addr", false,-1, 4,0);
         tracep->declQuad(c+130,"riscv_soc core commit regfile_MPORT_22_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_23_en", false,-1);
-        tracep->declBus(c+849,"riscv_soc core commit regfile_MPORT_23_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_23_en", false,-1);
+        tracep->declBus(c+850,"riscv_soc core commit regfile_MPORT_23_addr", false,-1, 4,0);
         tracep->declQuad(c+132,"riscv_soc core commit regfile_MPORT_23_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_24_en", false,-1);
-        tracep->declBus(c+850,"riscv_soc core commit regfile_MPORT_24_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_24_en", false,-1);
+        tracep->declBus(c+851,"riscv_soc core commit regfile_MPORT_24_addr", false,-1, 4,0);
         tracep->declQuad(c+134,"riscv_soc core commit regfile_MPORT_24_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_25_en", false,-1);
-        tracep->declBus(c+851,"riscv_soc core commit regfile_MPORT_25_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_25_en", false,-1);
+        tracep->declBus(c+852,"riscv_soc core commit regfile_MPORT_25_addr", false,-1, 4,0);
         tracep->declQuad(c+136,"riscv_soc core commit regfile_MPORT_25_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_26_en", false,-1);
-        tracep->declBus(c+852,"riscv_soc core commit regfile_MPORT_26_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_26_en", false,-1);
+        tracep->declBus(c+853,"riscv_soc core commit regfile_MPORT_26_addr", false,-1, 4,0);
         tracep->declQuad(c+138,"riscv_soc core commit regfile_MPORT_26_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_27_en", false,-1);
-        tracep->declBus(c+853,"riscv_soc core commit regfile_MPORT_27_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_27_en", false,-1);
+        tracep->declBus(c+854,"riscv_soc core commit regfile_MPORT_27_addr", false,-1, 4,0);
         tracep->declQuad(c+140,"riscv_soc core commit regfile_MPORT_27_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_28_en", false,-1);
-        tracep->declBus(c+854,"riscv_soc core commit regfile_MPORT_28_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_28_en", false,-1);
+        tracep->declBus(c+855,"riscv_soc core commit regfile_MPORT_28_addr", false,-1, 4,0);
         tracep->declQuad(c+142,"riscv_soc core commit regfile_MPORT_28_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_29_en", false,-1);
-        tracep->declBus(c+855,"riscv_soc core commit regfile_MPORT_29_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_29_en", false,-1);
+        tracep->declBus(c+856,"riscv_soc core commit regfile_MPORT_29_addr", false,-1, 4,0);
         tracep->declQuad(c+144,"riscv_soc core commit regfile_MPORT_29_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_30_en", false,-1);
-        tracep->declBus(c+856,"riscv_soc core commit regfile_MPORT_30_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_30_en", false,-1);
+        tracep->declBus(c+857,"riscv_soc core commit regfile_MPORT_30_addr", false,-1, 4,0);
         tracep->declQuad(c+146,"riscv_soc core commit regfile_MPORT_30_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_31_en", false,-1);
-        tracep->declBus(c+857,"riscv_soc core commit regfile_MPORT_31_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_31_en", false,-1);
+        tracep->declBus(c+858,"riscv_soc core commit regfile_MPORT_31_addr", false,-1, 4,0);
         tracep->declQuad(c+148,"riscv_soc core commit regfile_MPORT_31_data", false,-1, 63,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_32_en", false,-1);
-        tracep->declBus(c+858,"riscv_soc core commit regfile_MPORT_32_addr", false,-1, 4,0);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_32_en", false,-1);
+        tracep->declBus(c+859,"riscv_soc core commit regfile_MPORT_32_addr", false,-1, 4,0);
         tracep->declQuad(c+150,"riscv_soc core commit regfile_MPORT_32_data", false,-1, 63,0);
         tracep->declQuad(c+245,"riscv_soc core commit regfile_MPORT_data", false,-1, 63,0);
         tracep->declBus(c+244,"riscv_soc core commit regfile_MPORT_addr", false,-1, 4,0);
-        tracep->declBit(c+826,"riscv_soc core commit regfile_MPORT_mask", false,-1);
+        tracep->declBit(c+827,"riscv_soc core commit regfile_MPORT_mask", false,-1);
         tracep->declBit(c+243,"riscv_soc core commit regfile_MPORT_en", false,-1);
         tracep->declBit(c+86,"riscv_soc core commit difftest_commit", false,-1);
         tracep->declBus(c+89,"riscv_soc core commit difftest_inst", false,-1, 31,0);
@@ -1469,8 +1470,8 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+152,"riscv_soc core commit inst_counter", false,-1, 63,0);
         tracep->declBit(c+84,"riscv_soc core commit difftest_irq", false,-1);
         tracep->declBit(c+85,"riscv_soc core commit difftest_peripheral", false,-1);
-        tracep->declBit(c+738,"riscv_soc core commit csr_reg clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core commit csr_reg reset", false,-1);
+        tracep->declBit(c+739,"riscv_soc core commit csr_reg clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core commit csr_reg reset", false,-1);
         tracep->declBus(c+248,"riscv_soc core commit csr_reg io_in_csr_addr", false,-1, 11,0);
         tracep->declQuad(c+249,"riscv_soc core commit csr_reg io_in_csr_data", false,-1, 63,0);
         tracep->declBit(c+247,"riscv_soc core commit csr_reg io_in_w_csr_en", false,-1);
@@ -1478,7 +1479,7 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+255,"riscv_soc core commit csr_reg io_in_next_pc", false,-1, 63,0);
         tracep->declBit(c+252,"riscv_soc core commit csr_reg io_in_time_irq", false,-1);
         tracep->declBit(c+253,"riscv_soc core commit csr_reg io_in_soft_irq", false,-1);
-        tracep->declBus(c+625,"riscv_soc core commit csr_reg io_in_exception", false,-1, 4,0);
+        tracep->declBus(c+626,"riscv_soc core commit csr_reg io_in_exception", false,-1, 4,0);
         tracep->declBit(c+251,"riscv_soc core commit csr_reg io_in_is_exception", false,-1);
         tracep->declBit(c+259,"riscv_soc core commit csr_reg io_in_commit", false,-1);
         tracep->declBus(c+268,"riscv_soc core commit csr_reg io_r_csr_raddr", false,-1, 11,0);
@@ -1487,19 +1488,19 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declQuad(c+239,"riscv_soc core commit csr_reg io_r_csr_mepc", false,-1, 63,0);
         tracep->declQuad(c+235,"riscv_soc core commit csr_reg io_r_csr_mstatus", false,-1, 63,0);
         tracep->declQuad(c+237,"riscv_soc core commit csr_reg io_r_csr_mie", false,-1, 63,0);
-        tracep->declBit(c+696,"riscv_soc core commit csr_reg irq", false,-1);
-        tracep->declQuad(c+697,"riscv_soc core commit csr_reg reg_mstatus", false,-1, 63,0);
-        tracep->declQuad(c+699,"riscv_soc core commit csr_reg reg_mie", false,-1, 63,0);
-        tracep->declQuad(c+701,"riscv_soc core commit csr_reg reg_mtvec", false,-1, 63,0);
-        tracep->declQuad(c+703,"riscv_soc core commit csr_reg reg_mscratch", false,-1, 63,0);
-        tracep->declQuad(c+705,"riscv_soc core commit csr_reg reg_mepc", false,-1, 63,0);
-        tracep->declQuad(c+707,"riscv_soc core commit csr_reg reg_mcause", false,-1, 63,0);
-        tracep->declQuad(c+709,"riscv_soc core commit csr_reg reg_mtval", false,-1, 63,0);
-        tracep->declQuad(c+711,"riscv_soc core commit csr_reg reg_mcycle", false,-1, 63,0);
-        tracep->declQuad(c+713,"riscv_soc core commit csr_reg reg_minstret", false,-1, 63,0);
-        tracep->declQuad(c+715,"riscv_soc core commit csr_reg csr_rdata", false,-1, 63,0);
-        tracep->declBit(c+738,"riscv_soc core clint_de clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc core clint_de reset", false,-1);
+        tracep->declBit(c+697,"riscv_soc core commit csr_reg irq", false,-1);
+        tracep->declQuad(c+698,"riscv_soc core commit csr_reg reg_mstatus", false,-1, 63,0);
+        tracep->declQuad(c+700,"riscv_soc core commit csr_reg reg_mie", false,-1, 63,0);
+        tracep->declQuad(c+702,"riscv_soc core commit csr_reg reg_mtvec", false,-1, 63,0);
+        tracep->declQuad(c+704,"riscv_soc core commit csr_reg reg_mscratch", false,-1, 63,0);
+        tracep->declQuad(c+706,"riscv_soc core commit csr_reg reg_mepc", false,-1, 63,0);
+        tracep->declQuad(c+708,"riscv_soc core commit csr_reg reg_mcause", false,-1, 63,0);
+        tracep->declQuad(c+710,"riscv_soc core commit csr_reg reg_mtval", false,-1, 63,0);
+        tracep->declQuad(c+712,"riscv_soc core commit csr_reg reg_mcycle", false,-1, 63,0);
+        tracep->declQuad(c+714,"riscv_soc core commit csr_reg reg_minstret", false,-1, 63,0);
+        tracep->declQuad(c+716,"riscv_soc core commit csr_reg csr_rdata", false,-1, 63,0);
+        tracep->declBit(c+739,"riscv_soc core clint_de clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc core clint_de reset", false,-1);
         tracep->declBit(c+203,"riscv_soc core clint_de io_valid", false,-1);
         tracep->declQuad(c+169,"riscv_soc core clint_de io_bits_addr", false,-1, 63,0);
         tracep->declQuad(c+173,"riscv_soc core clint_de io_bits_wdata", false,-1, 63,0);
@@ -1509,15 +1510,15 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+234,"riscv_soc core clint_de io_soft_irq", false,-1);
         tracep->declBit(c+233,"riscv_soc core clint_de io_time_irq", false,-1);
         tracep->declBit(c+234,"riscv_soc core clint_de reg_msip", false,-1);
-        tracep->declQuad(c+717,"riscv_soc core clint_de reg_mtime", false,-1, 63,0);
-        tracep->declQuad(c+719,"riscv_soc core clint_de reg_mtimecmp", false,-1, 63,0);
+        tracep->declQuad(c+718,"riscv_soc core clint_de reg_mtime", false,-1, 63,0);
+        tracep->declQuad(c+720,"riscv_soc core clint_de reg_mtimecmp", false,-1, 63,0);
         tracep->declBit(c+206,"riscv_soc core clint_de reg_ready", false,-1);
         tracep->declQuad(c+204,"riscv_soc core clint_de red_rdata", false,-1, 63,0);
-        tracep->declBit(c+721,"riscv_soc core clint_de reg_state", false,-1);
-        tracep->declBit(c+722,"riscv_soc core clint_de is_misp", false,-1);
-        tracep->declBit(c+723,"riscv_soc core clint_de is_mtimecmp", false,-1);
-        tracep->declBit(c+738,"riscv_soc axi_ram clock", false,-1);
-        tracep->declBit(c+739,"riscv_soc axi_ram reset", false,-1);
+        tracep->declBit(c+722,"riscv_soc core clint_de reg_state", false,-1);
+        tracep->declBit(c+723,"riscv_soc core clint_de is_misp", false,-1);
+        tracep->declBit(c+724,"riscv_soc core clint_de is_mtimecmp", false,-1);
+        tracep->declBit(c+739,"riscv_soc axi_ram clock", false,-1);
+        tracep->declBit(c+740,"riscv_soc axi_ram reset", false,-1);
         tracep->declBit(c+1,"riscv_soc axi_ram io_ram_bus_aw_ready", false,-1);
         tracep->declBit(c+2,"riscv_soc axi_ram io_ram_bus_aw_valid", false,-1);
         tracep->declQuad(c+3,"riscv_soc axi_ram io_ram_bus_aw_bits_awaddr", false,-1, 63,0);
@@ -1534,250 +1535,250 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+17,"riscv_soc axi_ram io_ram_bus_r_valid", false,-1);
         tracep->declQuad(c+18,"riscv_soc axi_ram io_ram_bus_r_bits_rdata", false,-1, 63,0);
         tracep->declBit(c+20,"riscv_soc axi_ram io_ram_bus_r_bits_rlast", false,-1);
-        tracep->declBit(c+738,"riscv_soc axi_ram mem_clock", false,-1);
-        tracep->declQuad(c+724,"riscv_soc axi_ram mem_raddr", false,-1, 63,0);
+        tracep->declBit(c+739,"riscv_soc axi_ram mem_clock", false,-1);
+        tracep->declQuad(c+725,"riscv_soc axi_ram mem_raddr", false,-1, 63,0);
         tracep->declQuad(c+18,"riscv_soc axi_ram mem_rdata", false,-1, 63,0);
         tracep->declBit(c+13,"riscv_soc axi_ram mem_rflag", false,-1);
-        tracep->declQuad(c+726,"riscv_soc axi_ram mem_waddr", false,-1, 63,0);
+        tracep->declQuad(c+727,"riscv_soc axi_ram mem_waddr", false,-1, 63,0);
         tracep->declQuad(c+7,"riscv_soc axi_ram mem_wdata", false,-1, 63,0);
-        tracep->declQuad(c+728,"riscv_soc axi_ram mem_wmask", false,-1, 63,0);
-        tracep->declBit(c+730,"riscv_soc axi_ram mem_wen", false,-1);
-        tracep->declQuad(c+731,"riscv_soc axi_ram reg_raddr", false,-1, 63,0);
-        tracep->declBus(c+733,"riscv_soc axi_ram reg_rlen", false,-1, 3,0);
+        tracep->declQuad(c+729,"riscv_soc axi_ram mem_wmask", false,-1, 63,0);
+        tracep->declBit(c+731,"riscv_soc axi_ram mem_wen", false,-1);
+        tracep->declQuad(c+732,"riscv_soc axi_ram reg_raddr", false,-1, 63,0);
+        tracep->declBus(c+734,"riscv_soc axi_ram reg_rlen", false,-1, 3,0);
         tracep->declBit(c+12,"riscv_soc axi_ram reg_ar_ready", false,-1);
         tracep->declBit(c+17,"riscv_soc axi_ram reg_r_valid", false,-1);
-        tracep->declBit(c+734,"riscv_soc axi_ram reg_r_state", false,-1);
-        tracep->declQuad(c+726,"riscv_soc axi_ram reg_w_addr", false,-1, 63,0);
-        tracep->declBit(c+735,"riscv_soc axi_ram reg_is_w", false,-1);
+        tracep->declBit(c+735,"riscv_soc axi_ram reg_r_state", false,-1);
+        tracep->declQuad(c+727,"riscv_soc axi_ram reg_w_addr", false,-1, 63,0);
+        tracep->declBit(c+736,"riscv_soc axi_ram reg_is_w", false,-1);
         tracep->declBit(c+1,"riscv_soc axi_ram reg_aw_ready", false,-1);
         tracep->declBit(c+5,"riscv_soc axi_ram reg_w_ready", false,-1);
         tracep->declBit(c+11,"riscv_soc axi_ram reg_b_valid", false,-1);
-        tracep->declBus(c+736,"riscv_soc axi_ram mem_io_wmask_lo", false,-1, 31,0);
-        tracep->declBus(c+737,"riscv_soc axi_ram mem_io_wmask_hi", false,-1, 31,0);
-        tracep->declBit(c+738,"riscv_soc axi_ram mem clock", false,-1);
-        tracep->declQuad(c+724,"riscv_soc axi_ram mem raddr", false,-1, 63,0);
+        tracep->declBus(c+737,"riscv_soc axi_ram mem_io_wmask_lo", false,-1, 31,0);
+        tracep->declBus(c+738,"riscv_soc axi_ram mem_io_wmask_hi", false,-1, 31,0);
+        tracep->declBit(c+739,"riscv_soc axi_ram mem clock", false,-1);
+        tracep->declQuad(c+725,"riscv_soc axi_ram mem raddr", false,-1, 63,0);
         tracep->declQuad(c+18,"riscv_soc axi_ram mem rdata", false,-1, 63,0);
         tracep->declBit(c+13,"riscv_soc axi_ram mem rflag", false,-1);
-        tracep->declQuad(c+726,"riscv_soc axi_ram mem waddr", false,-1, 63,0);
+        tracep->declQuad(c+727,"riscv_soc axi_ram mem waddr", false,-1, 63,0);
         tracep->declQuad(c+7,"riscv_soc axi_ram mem wdata", false,-1, 63,0);
-        tracep->declQuad(c+728,"riscv_soc axi_ram mem wmask", false,-1, 63,0);
-        tracep->declBit(c+730,"riscv_soc axi_ram mem wen", false,-1);
-        tracep->declBit(c+738,"riscv_soc sram0 clock", false,-1);
+        tracep->declQuad(c+729,"riscv_soc axi_ram mem wmask", false,-1, 63,0);
+        tracep->declBit(c+731,"riscv_soc axi_ram mem wen", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram0 clock", false,-1);
         tracep->declBus(c+21,"riscv_soc sram0 io_addr", false,-1, 5,0);
         tracep->declBit(c+22,"riscv_soc sram0 io_wen", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram0 io_wmask", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram0 io_wmask", false,-1, 127,0);
         tracep->declArray(c+23,"riscv_soc sram0 io_wdata", false,-1, 127,0);
         tracep->declArray(c+27,"riscv_soc sram0 io_rdata", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram0 sram_CLK", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram0 sram_CLK", false,-1);
         tracep->declArray(c+27,"riscv_soc sram0 sram_Q", false,-1, 127,0);
-        tracep->declBit(c+859,"riscv_soc sram0 sram_CEN", false,-1);
+        tracep->declBit(c+860,"riscv_soc sram0 sram_CEN", false,-1);
         tracep->declBit(c+22,"riscv_soc sram0 sram_WEN", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram0 sram_BWEN", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram0 sram_BWEN", false,-1, 127,0);
         tracep->declBus(c+21,"riscv_soc sram0 sram_A", false,-1, 5,0);
         tracep->declArray(c+23,"riscv_soc sram0 sram_D", false,-1, 127,0);
-        tracep->declBus(c+860,"riscv_soc sram0 sram Bits", false,-1, 31,0);
-        tracep->declBus(c+861,"riscv_soc sram0 sram Word_Depth", false,-1, 31,0);
-        tracep->declBus(c+862,"riscv_soc sram0 sram Add_Width", false,-1, 31,0);
-        tracep->declBus(c+860,"riscv_soc sram0 sram Wen_Width", false,-1, 31,0);
+        tracep->declBus(c+861,"riscv_soc sram0 sram Bits", false,-1, 31,0);
+        tracep->declBus(c+862,"riscv_soc sram0 sram Word_Depth", false,-1, 31,0);
+        tracep->declBus(c+863,"riscv_soc sram0 sram Add_Width", false,-1, 31,0);
+        tracep->declBus(c+861,"riscv_soc sram0 sram Wen_Width", false,-1, 31,0);
         tracep->declArray(c+27,"riscv_soc sram0 sram Q", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram0 sram CLK", false,-1);
-        tracep->declBit(c+859,"riscv_soc sram0 sram CEN", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram0 sram CLK", false,-1);
+        tracep->declBit(c+860,"riscv_soc sram0 sram CEN", false,-1);
         tracep->declBit(c+22,"riscv_soc sram0 sram WEN", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram0 sram BWEN", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram0 sram BWEN", false,-1, 127,0);
         tracep->declBus(c+21,"riscv_soc sram0 sram A", false,-1, 5,0);
         tracep->declArray(c+23,"riscv_soc sram0 sram D", false,-1, 127,0);
-        tracep->declBit(c+826,"riscv_soc sram0 sram cen", false,-1);
+        tracep->declBit(c+827,"riscv_soc sram0 sram cen", false,-1);
         tracep->declBit(c+282,"riscv_soc sram0 sram wen", false,-1);
-        tracep->declArray(c+863,"riscv_soc sram0 sram bwen", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram1 clock", false,-1);
+        tracep->declArray(c+864,"riscv_soc sram0 sram bwen", false,-1, 127,0);
+        tracep->declBit(c+739,"riscv_soc sram1 clock", false,-1);
         tracep->declBus(c+31,"riscv_soc sram1 io_addr", false,-1, 5,0);
         tracep->declBit(c+22,"riscv_soc sram1 io_wen", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram1 io_wmask", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram1 io_wmask", false,-1, 127,0);
         tracep->declArray(c+32,"riscv_soc sram1 io_wdata", false,-1, 127,0);
         tracep->declArray(c+36,"riscv_soc sram1 io_rdata", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram1 sram_CLK", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram1 sram_CLK", false,-1);
         tracep->declArray(c+36,"riscv_soc sram1 sram_Q", false,-1, 127,0);
-        tracep->declBit(c+859,"riscv_soc sram1 sram_CEN", false,-1);
+        tracep->declBit(c+860,"riscv_soc sram1 sram_CEN", false,-1);
         tracep->declBit(c+22,"riscv_soc sram1 sram_WEN", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram1 sram_BWEN", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram1 sram_BWEN", false,-1, 127,0);
         tracep->declBus(c+31,"riscv_soc sram1 sram_A", false,-1, 5,0);
         tracep->declArray(c+32,"riscv_soc sram1 sram_D", false,-1, 127,0);
-        tracep->declBus(c+860,"riscv_soc sram1 sram Bits", false,-1, 31,0);
-        tracep->declBus(c+861,"riscv_soc sram1 sram Word_Depth", false,-1, 31,0);
-        tracep->declBus(c+862,"riscv_soc sram1 sram Add_Width", false,-1, 31,0);
-        tracep->declBus(c+860,"riscv_soc sram1 sram Wen_Width", false,-1, 31,0);
+        tracep->declBus(c+861,"riscv_soc sram1 sram Bits", false,-1, 31,0);
+        tracep->declBus(c+862,"riscv_soc sram1 sram Word_Depth", false,-1, 31,0);
+        tracep->declBus(c+863,"riscv_soc sram1 sram Add_Width", false,-1, 31,0);
+        tracep->declBus(c+861,"riscv_soc sram1 sram Wen_Width", false,-1, 31,0);
         tracep->declArray(c+36,"riscv_soc sram1 sram Q", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram1 sram CLK", false,-1);
-        tracep->declBit(c+859,"riscv_soc sram1 sram CEN", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram1 sram CLK", false,-1);
+        tracep->declBit(c+860,"riscv_soc sram1 sram CEN", false,-1);
         tracep->declBit(c+22,"riscv_soc sram1 sram WEN", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram1 sram BWEN", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram1 sram BWEN", false,-1, 127,0);
         tracep->declBus(c+31,"riscv_soc sram1 sram A", false,-1, 5,0);
         tracep->declArray(c+32,"riscv_soc sram1 sram D", false,-1, 127,0);
-        tracep->declBit(c+826,"riscv_soc sram1 sram cen", false,-1);
+        tracep->declBit(c+827,"riscv_soc sram1 sram cen", false,-1);
         tracep->declBit(c+282,"riscv_soc sram1 sram wen", false,-1);
-        tracep->declArray(c+863,"riscv_soc sram1 sram bwen", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram2 clock", false,-1);
+        tracep->declArray(c+864,"riscv_soc sram1 sram bwen", false,-1, 127,0);
+        tracep->declBit(c+739,"riscv_soc sram2 clock", false,-1);
         tracep->declBus(c+40,"riscv_soc sram2 io_addr", false,-1, 5,0);
         tracep->declBit(c+41,"riscv_soc sram2 io_wen", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram2 io_wmask", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram2 io_wmask", false,-1, 127,0);
         tracep->declArray(c+23,"riscv_soc sram2 io_wdata", false,-1, 127,0);
         tracep->declArray(c+42,"riscv_soc sram2 io_rdata", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram2 sram_CLK", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram2 sram_CLK", false,-1);
         tracep->declArray(c+42,"riscv_soc sram2 sram_Q", false,-1, 127,0);
-        tracep->declBit(c+859,"riscv_soc sram2 sram_CEN", false,-1);
+        tracep->declBit(c+860,"riscv_soc sram2 sram_CEN", false,-1);
         tracep->declBit(c+41,"riscv_soc sram2 sram_WEN", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram2 sram_BWEN", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram2 sram_BWEN", false,-1, 127,0);
         tracep->declBus(c+40,"riscv_soc sram2 sram_A", false,-1, 5,0);
         tracep->declArray(c+23,"riscv_soc sram2 sram_D", false,-1, 127,0);
-        tracep->declBus(c+860,"riscv_soc sram2 sram Bits", false,-1, 31,0);
-        tracep->declBus(c+861,"riscv_soc sram2 sram Word_Depth", false,-1, 31,0);
-        tracep->declBus(c+862,"riscv_soc sram2 sram Add_Width", false,-1, 31,0);
-        tracep->declBus(c+860,"riscv_soc sram2 sram Wen_Width", false,-1, 31,0);
+        tracep->declBus(c+861,"riscv_soc sram2 sram Bits", false,-1, 31,0);
+        tracep->declBus(c+862,"riscv_soc sram2 sram Word_Depth", false,-1, 31,0);
+        tracep->declBus(c+863,"riscv_soc sram2 sram Add_Width", false,-1, 31,0);
+        tracep->declBus(c+861,"riscv_soc sram2 sram Wen_Width", false,-1, 31,0);
         tracep->declArray(c+42,"riscv_soc sram2 sram Q", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram2 sram CLK", false,-1);
-        tracep->declBit(c+859,"riscv_soc sram2 sram CEN", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram2 sram CLK", false,-1);
+        tracep->declBit(c+860,"riscv_soc sram2 sram CEN", false,-1);
         tracep->declBit(c+41,"riscv_soc sram2 sram WEN", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram2 sram BWEN", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram2 sram BWEN", false,-1, 127,0);
         tracep->declBus(c+40,"riscv_soc sram2 sram A", false,-1, 5,0);
         tracep->declArray(c+23,"riscv_soc sram2 sram D", false,-1, 127,0);
-        tracep->declBit(c+826,"riscv_soc sram2 sram cen", false,-1);
+        tracep->declBit(c+827,"riscv_soc sram2 sram cen", false,-1);
         tracep->declBit(c+289,"riscv_soc sram2 sram wen", false,-1);
-        tracep->declArray(c+863,"riscv_soc sram2 sram bwen", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram3 clock", false,-1);
+        tracep->declArray(c+864,"riscv_soc sram2 sram bwen", false,-1, 127,0);
+        tracep->declBit(c+739,"riscv_soc sram3 clock", false,-1);
         tracep->declBus(c+46,"riscv_soc sram3 io_addr", false,-1, 5,0);
         tracep->declBit(c+41,"riscv_soc sram3 io_wen", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram3 io_wmask", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram3 io_wmask", false,-1, 127,0);
         tracep->declArray(c+32,"riscv_soc sram3 io_wdata", false,-1, 127,0);
         tracep->declArray(c+47,"riscv_soc sram3 io_rdata", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram3 sram_CLK", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram3 sram_CLK", false,-1);
         tracep->declArray(c+47,"riscv_soc sram3 sram_Q", false,-1, 127,0);
-        tracep->declBit(c+859,"riscv_soc sram3 sram_CEN", false,-1);
+        tracep->declBit(c+860,"riscv_soc sram3 sram_CEN", false,-1);
         tracep->declBit(c+41,"riscv_soc sram3 sram_WEN", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram3 sram_BWEN", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram3 sram_BWEN", false,-1, 127,0);
         tracep->declBus(c+46,"riscv_soc sram3 sram_A", false,-1, 5,0);
         tracep->declArray(c+32,"riscv_soc sram3 sram_D", false,-1, 127,0);
-        tracep->declBus(c+860,"riscv_soc sram3 sram Bits", false,-1, 31,0);
-        tracep->declBus(c+861,"riscv_soc sram3 sram Word_Depth", false,-1, 31,0);
-        tracep->declBus(c+862,"riscv_soc sram3 sram Add_Width", false,-1, 31,0);
-        tracep->declBus(c+860,"riscv_soc sram3 sram Wen_Width", false,-1, 31,0);
+        tracep->declBus(c+861,"riscv_soc sram3 sram Bits", false,-1, 31,0);
+        tracep->declBus(c+862,"riscv_soc sram3 sram Word_Depth", false,-1, 31,0);
+        tracep->declBus(c+863,"riscv_soc sram3 sram Add_Width", false,-1, 31,0);
+        tracep->declBus(c+861,"riscv_soc sram3 sram Wen_Width", false,-1, 31,0);
         tracep->declArray(c+47,"riscv_soc sram3 sram Q", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram3 sram CLK", false,-1);
-        tracep->declBit(c+859,"riscv_soc sram3 sram CEN", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram3 sram CLK", false,-1);
+        tracep->declBit(c+860,"riscv_soc sram3 sram CEN", false,-1);
         tracep->declBit(c+41,"riscv_soc sram3 sram WEN", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram3 sram BWEN", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram3 sram BWEN", false,-1, 127,0);
         tracep->declBus(c+46,"riscv_soc sram3 sram A", false,-1, 5,0);
         tracep->declArray(c+32,"riscv_soc sram3 sram D", false,-1, 127,0);
-        tracep->declBit(c+826,"riscv_soc sram3 sram cen", false,-1);
+        tracep->declBit(c+827,"riscv_soc sram3 sram cen", false,-1);
         tracep->declBit(c+289,"riscv_soc sram3 sram wen", false,-1);
-        tracep->declArray(c+863,"riscv_soc sram3 sram bwen", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram4 clock", false,-1);
+        tracep->declArray(c+864,"riscv_soc sram3 sram bwen", false,-1, 127,0);
+        tracep->declBit(c+739,"riscv_soc sram4 clock", false,-1);
         tracep->declBus(c+51,"riscv_soc sram4 io_addr", false,-1, 5,0);
         tracep->declBit(c+52,"riscv_soc sram4 io_wen", false,-1);
         tracep->declArray(c+53,"riscv_soc sram4 io_wmask", false,-1, 127,0);
         tracep->declArray(c+57,"riscv_soc sram4 io_wdata", false,-1, 127,0);
         tracep->declArray(c+61,"riscv_soc sram4 io_rdata", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram4 sram_CLK", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram4 sram_CLK", false,-1);
         tracep->declArray(c+61,"riscv_soc sram4 sram_Q", false,-1, 127,0);
-        tracep->declBit(c+859,"riscv_soc sram4 sram_CEN", false,-1);
+        tracep->declBit(c+860,"riscv_soc sram4 sram_CEN", false,-1);
         tracep->declBit(c+52,"riscv_soc sram4 sram_WEN", false,-1);
         tracep->declArray(c+53,"riscv_soc sram4 sram_BWEN", false,-1, 127,0);
         tracep->declBus(c+51,"riscv_soc sram4 sram_A", false,-1, 5,0);
         tracep->declArray(c+57,"riscv_soc sram4 sram_D", false,-1, 127,0);
-        tracep->declBus(c+860,"riscv_soc sram4 sram Bits", false,-1, 31,0);
-        tracep->declBus(c+861,"riscv_soc sram4 sram Word_Depth", false,-1, 31,0);
-        tracep->declBus(c+862,"riscv_soc sram4 sram Add_Width", false,-1, 31,0);
-        tracep->declBus(c+860,"riscv_soc sram4 sram Wen_Width", false,-1, 31,0);
+        tracep->declBus(c+861,"riscv_soc sram4 sram Bits", false,-1, 31,0);
+        tracep->declBus(c+862,"riscv_soc sram4 sram Word_Depth", false,-1, 31,0);
+        tracep->declBus(c+863,"riscv_soc sram4 sram Add_Width", false,-1, 31,0);
+        tracep->declBus(c+861,"riscv_soc sram4 sram Wen_Width", false,-1, 31,0);
         tracep->declArray(c+61,"riscv_soc sram4 sram Q", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram4 sram CLK", false,-1);
-        tracep->declBit(c+859,"riscv_soc sram4 sram CEN", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram4 sram CLK", false,-1);
+        tracep->declBit(c+860,"riscv_soc sram4 sram CEN", false,-1);
         tracep->declBit(c+52,"riscv_soc sram4 sram WEN", false,-1);
         tracep->declArray(c+53,"riscv_soc sram4 sram BWEN", false,-1, 127,0);
         tracep->declBus(c+51,"riscv_soc sram4 sram A", false,-1, 5,0);
         tracep->declArray(c+57,"riscv_soc sram4 sram D", false,-1, 127,0);
-        tracep->declBit(c+826,"riscv_soc sram4 sram cen", false,-1);
+        tracep->declBit(c+827,"riscv_soc sram4 sram cen", false,-1);
         tracep->declBit(c+334,"riscv_soc sram4 sram wen", false,-1);
         tracep->declArray(c+326,"riscv_soc sram4 sram bwen", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram5 clock", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram5 clock", false,-1);
         tracep->declBus(c+65,"riscv_soc sram5 io_addr", false,-1, 5,0);
         tracep->declBit(c+52,"riscv_soc sram5 io_wen", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram5 io_wmask", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram5 io_wmask", false,-1, 127,0);
         tracep->declArray(c+66,"riscv_soc sram5 io_wdata", false,-1, 127,0);
         tracep->declArray(c+70,"riscv_soc sram5 io_rdata", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram5 sram_CLK", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram5 sram_CLK", false,-1);
         tracep->declArray(c+70,"riscv_soc sram5 sram_Q", false,-1, 127,0);
-        tracep->declBit(c+859,"riscv_soc sram5 sram_CEN", false,-1);
+        tracep->declBit(c+860,"riscv_soc sram5 sram_CEN", false,-1);
         tracep->declBit(c+52,"riscv_soc sram5 sram_WEN", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram5 sram_BWEN", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram5 sram_BWEN", false,-1, 127,0);
         tracep->declBus(c+65,"riscv_soc sram5 sram_A", false,-1, 5,0);
         tracep->declArray(c+66,"riscv_soc sram5 sram_D", false,-1, 127,0);
-        tracep->declBus(c+860,"riscv_soc sram5 sram Bits", false,-1, 31,0);
-        tracep->declBus(c+861,"riscv_soc sram5 sram Word_Depth", false,-1, 31,0);
-        tracep->declBus(c+862,"riscv_soc sram5 sram Add_Width", false,-1, 31,0);
-        tracep->declBus(c+860,"riscv_soc sram5 sram Wen_Width", false,-1, 31,0);
+        tracep->declBus(c+861,"riscv_soc sram5 sram Bits", false,-1, 31,0);
+        tracep->declBus(c+862,"riscv_soc sram5 sram Word_Depth", false,-1, 31,0);
+        tracep->declBus(c+863,"riscv_soc sram5 sram Add_Width", false,-1, 31,0);
+        tracep->declBus(c+861,"riscv_soc sram5 sram Wen_Width", false,-1, 31,0);
         tracep->declArray(c+70,"riscv_soc sram5 sram Q", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram5 sram CLK", false,-1);
-        tracep->declBit(c+859,"riscv_soc sram5 sram CEN", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram5 sram CLK", false,-1);
+        tracep->declBit(c+860,"riscv_soc sram5 sram CEN", false,-1);
         tracep->declBit(c+52,"riscv_soc sram5 sram WEN", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram5 sram BWEN", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram5 sram BWEN", false,-1, 127,0);
         tracep->declBus(c+65,"riscv_soc sram5 sram A", false,-1, 5,0);
         tracep->declArray(c+66,"riscv_soc sram5 sram D", false,-1, 127,0);
-        tracep->declBit(c+826,"riscv_soc sram5 sram cen", false,-1);
+        tracep->declBit(c+827,"riscv_soc sram5 sram cen", false,-1);
         tracep->declBit(c+334,"riscv_soc sram5 sram wen", false,-1);
-        tracep->declArray(c+863,"riscv_soc sram5 sram bwen", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram6 clock", false,-1);
+        tracep->declArray(c+864,"riscv_soc sram5 sram bwen", false,-1, 127,0);
+        tracep->declBit(c+739,"riscv_soc sram6 clock", false,-1);
         tracep->declBus(c+51,"riscv_soc sram6 io_addr", false,-1, 5,0);
         tracep->declBit(c+74,"riscv_soc sram6 io_wen", false,-1);
         tracep->declArray(c+53,"riscv_soc sram6 io_wmask", false,-1, 127,0);
         tracep->declArray(c+57,"riscv_soc sram6 io_wdata", false,-1, 127,0);
         tracep->declArray(c+75,"riscv_soc sram6 io_rdata", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram6 sram_CLK", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram6 sram_CLK", false,-1);
         tracep->declArray(c+75,"riscv_soc sram6 sram_Q", false,-1, 127,0);
-        tracep->declBit(c+859,"riscv_soc sram6 sram_CEN", false,-1);
+        tracep->declBit(c+860,"riscv_soc sram6 sram_CEN", false,-1);
         tracep->declBit(c+74,"riscv_soc sram6 sram_WEN", false,-1);
         tracep->declArray(c+53,"riscv_soc sram6 sram_BWEN", false,-1, 127,0);
         tracep->declBus(c+51,"riscv_soc sram6 sram_A", false,-1, 5,0);
         tracep->declArray(c+57,"riscv_soc sram6 sram_D", false,-1, 127,0);
-        tracep->declBus(c+860,"riscv_soc sram6 sram Bits", false,-1, 31,0);
-        tracep->declBus(c+861,"riscv_soc sram6 sram Word_Depth", false,-1, 31,0);
-        tracep->declBus(c+862,"riscv_soc sram6 sram Add_Width", false,-1, 31,0);
-        tracep->declBus(c+860,"riscv_soc sram6 sram Wen_Width", false,-1, 31,0);
+        tracep->declBus(c+861,"riscv_soc sram6 sram Bits", false,-1, 31,0);
+        tracep->declBus(c+862,"riscv_soc sram6 sram Word_Depth", false,-1, 31,0);
+        tracep->declBus(c+863,"riscv_soc sram6 sram Add_Width", false,-1, 31,0);
+        tracep->declBus(c+861,"riscv_soc sram6 sram Wen_Width", false,-1, 31,0);
         tracep->declArray(c+75,"riscv_soc sram6 sram Q", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram6 sram CLK", false,-1);
-        tracep->declBit(c+859,"riscv_soc sram6 sram CEN", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram6 sram CLK", false,-1);
+        tracep->declBit(c+860,"riscv_soc sram6 sram CEN", false,-1);
         tracep->declBit(c+74,"riscv_soc sram6 sram WEN", false,-1);
         tracep->declArray(c+53,"riscv_soc sram6 sram BWEN", false,-1, 127,0);
         tracep->declBus(c+51,"riscv_soc sram6 sram A", false,-1, 5,0);
         tracep->declArray(c+57,"riscv_soc sram6 sram D", false,-1, 127,0);
-        tracep->declBit(c+826,"riscv_soc sram6 sram cen", false,-1);
+        tracep->declBit(c+827,"riscv_soc sram6 sram cen", false,-1);
         tracep->declBit(c+343,"riscv_soc sram6 sram wen", false,-1);
         tracep->declArray(c+326,"riscv_soc sram6 sram bwen", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram7 clock", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram7 clock", false,-1);
         tracep->declBus(c+79,"riscv_soc sram7 io_addr", false,-1, 5,0);
         tracep->declBit(c+74,"riscv_soc sram7 io_wen", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram7 io_wmask", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram7 io_wmask", false,-1, 127,0);
         tracep->declArray(c+66,"riscv_soc sram7 io_wdata", false,-1, 127,0);
         tracep->declArray(c+80,"riscv_soc sram7 io_rdata", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram7 sram_CLK", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram7 sram_CLK", false,-1);
         tracep->declArray(c+80,"riscv_soc sram7 sram_Q", false,-1, 127,0);
-        tracep->declBit(c+859,"riscv_soc sram7 sram_CEN", false,-1);
+        tracep->declBit(c+860,"riscv_soc sram7 sram_CEN", false,-1);
         tracep->declBit(c+74,"riscv_soc sram7 sram_WEN", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram7 sram_BWEN", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram7 sram_BWEN", false,-1, 127,0);
         tracep->declBus(c+79,"riscv_soc sram7 sram_A", false,-1, 5,0);
         tracep->declArray(c+66,"riscv_soc sram7 sram_D", false,-1, 127,0);
-        tracep->declBus(c+860,"riscv_soc sram7 sram Bits", false,-1, 31,0);
-        tracep->declBus(c+861,"riscv_soc sram7 sram Word_Depth", false,-1, 31,0);
-        tracep->declBus(c+862,"riscv_soc sram7 sram Add_Width", false,-1, 31,0);
-        tracep->declBus(c+860,"riscv_soc sram7 sram Wen_Width", false,-1, 31,0);
+        tracep->declBus(c+861,"riscv_soc sram7 sram Bits", false,-1, 31,0);
+        tracep->declBus(c+862,"riscv_soc sram7 sram Word_Depth", false,-1, 31,0);
+        tracep->declBus(c+863,"riscv_soc sram7 sram Add_Width", false,-1, 31,0);
+        tracep->declBus(c+861,"riscv_soc sram7 sram Wen_Width", false,-1, 31,0);
         tracep->declArray(c+80,"riscv_soc sram7 sram Q", false,-1, 127,0);
-        tracep->declBit(c+738,"riscv_soc sram7 sram CLK", false,-1);
-        tracep->declBit(c+859,"riscv_soc sram7 sram CEN", false,-1);
+        tracep->declBit(c+739,"riscv_soc sram7 sram CLK", false,-1);
+        tracep->declBit(c+860,"riscv_soc sram7 sram CEN", false,-1);
         tracep->declBit(c+74,"riscv_soc sram7 sram WEN", false,-1);
-        tracep->declArray(c+822,"riscv_soc sram7 sram BWEN", false,-1, 127,0);
+        tracep->declArray(c+823,"riscv_soc sram7 sram BWEN", false,-1, 127,0);
         tracep->declBus(c+79,"riscv_soc sram7 sram A", false,-1, 5,0);
         tracep->declArray(c+66,"riscv_soc sram7 sram D", false,-1, 127,0);
-        tracep->declBit(c+826,"riscv_soc sram7 sram cen", false,-1);
+        tracep->declBit(c+827,"riscv_soc sram7 sram cen", false,-1);
         tracep->declBit(c+343,"riscv_soc sram7 sram wen", false,-1);
-        tracep->declArray(c+863,"riscv_soc sram7 sram bwen", false,-1, 127,0);
+        tracep->declArray(c+864,"riscv_soc sram7 sram bwen", false,-1, 127,0);
     }
 }
 
@@ -2578,57 +2579,58 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                                  ? 3U
                                                  : 0U))),6);
         tracep->fullBit(oldp+437,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__system_exu_io_valid_next_pc));
-        tracep->fullCData(oldp+438,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_valid),4);
-        tracep->fullBit(oldp+439,((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_valid))));
-        tracep->fullBit(oldp+440,((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_valid) 
-                                         >> 1U))));
+        tracep->fullBit(oldp+438,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__in_data_valid));
+        tracep->fullCData(oldp+439,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_valid),4);
+        tracep->fullBit(oldp+440,((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_valid))));
         tracep->fullBit(oldp+441,((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_valid) 
-                                         >> 2U))));
+                                         >> 1U))));
         tracep->fullBit(oldp+442,((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_valid) 
+                                         >> 2U))));
+        tracep->fullBit(oldp+443,((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_valid) 
                                          >> 3U))));
-        tracep->fullCData(oldp+443,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__valid),4);
-        tracep->fullBit(oldp+444,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_sys_alu_w_valid));
-        tracep->fullQData(oldp+445,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_sys_alu_wdata),64);
-        tracep->fullBit(oldp+447,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_csr_is_w));
-        tracep->fullBit(oldp+448,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_is_except));
-        tracep->fullBit(oldp+449,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_is_time_irq));
-        tracep->fullBit(oldp+450,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_is_soft_irq));
-        tracep->fullBit(oldp+451,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__time_irq));
-        tracep->fullBit(oldp+452,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__soft_irq));
-        tracep->fullBit(oldp+453,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__irq));
-        tracep->fullBit(oldp+454,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_valid_next_pc));
-        tracep->fullBit(oldp+455,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_fence_i));
-        tracep->fullBit(oldp+456,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_commit));
-        tracep->fullBit(oldp+457,((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType))));
-        tracep->fullQData(oldp+458,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1),64);
-        tracep->fullQData(oldp+460,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data2),64);
-        tracep->fullQData(oldp+462,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__system_exu__DOT__imm),64);
-        tracep->fullBit(oldp+464,((1U & (~ ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
+        tracep->fullCData(oldp+444,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__valid),4);
+        tracep->fullBit(oldp+445,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_sys_alu_w_valid));
+        tracep->fullQData(oldp+446,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_sys_alu_wdata),64);
+        tracep->fullBit(oldp+448,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_csr_is_w));
+        tracep->fullBit(oldp+449,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_is_except));
+        tracep->fullBit(oldp+450,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_is_time_irq));
+        tracep->fullBit(oldp+451,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_is_soft_irq));
+        tracep->fullBit(oldp+452,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__time_irq));
+        tracep->fullBit(oldp+453,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__soft_irq));
+        tracep->fullBit(oldp+454,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__irq));
+        tracep->fullBit(oldp+455,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_valid_next_pc));
+        tracep->fullBit(oldp+456,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_fence_i));
+        tracep->fullBit(oldp+457,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_commit));
+        tracep->fullBit(oldp+458,((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType))));
+        tracep->fullQData(oldp+459,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1),64);
+        tracep->fullQData(oldp+461,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data2),64);
+        tracep->fullQData(oldp+463,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__system_exu__DOT__imm),64);
+        tracep->fullBit(oldp+465,((1U & (~ ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                             >> 1U)))));
-        tracep->fullQData(oldp+465,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs2_data),64);
-        tracep->fullBit(oldp+467,((3U == (3U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
+        tracep->fullQData(oldp+466,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs2_data),64);
+        tracep->fullBit(oldp+468,((3U == (3U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                 >> 5U)))));
-        tracep->fullBit(oldp+468,((1U == (3U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
+        tracep->fullBit(oldp+469,((1U == (3U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                 >> 5U)))));
-        tracep->fullQData(oldp+469,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs1_data),64);
-        tracep->fullQData(oldp+471,(((1U == (3U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
+        tracep->fullQData(oldp+470,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs1_data),64);
+        tracep->fullQData(oldp+472,(((1U == (3U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                    >> 5U)))
                                       ? (~ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs2_data)
                                       : vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs2_data)),64);
-        tracep->fullWData(oldp+473,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__add_sub_result),65);
-        tracep->fullBit(oldp+476,((1U & (~ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__add_sub_result[2U]))));
-        tracep->fullBit(oldp+477,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2));
-        tracep->fullCData(oldp+478,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__shift_rs2_data),6);
+        tracep->fullWData(oldp+474,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__add_sub_result),65);
+        tracep->fullBit(oldp+477,((1U & (~ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__add_sub_result[2U]))));
+        tracep->fullBit(oldp+478,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2));
+        tracep->fullCData(oldp+479,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__shift_rs2_data),6);
         VL_EXTEND_WQ(127,64, __Vtemp696, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs1_data);
         VL_SHIFTL_WWI(127,127,6, __Vtemp697, __Vtemp696, (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__shift_rs2_data));
         __Vtemp698[0U] = __Vtemp697[0U];
         __Vtemp698[1U] = __Vtemp697[1U];
         __Vtemp698[2U] = __Vtemp697[2U];
         __Vtemp698[3U] = (0x7fffffffU & __Vtemp697[3U]);
-        tracep->fullWData(oldp+479,(__Vtemp698),127);
-        tracep->fullQData(oldp+483,((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs1_data 
+        tracep->fullWData(oldp+480,(__Vtemp698),127);
+        tracep->fullQData(oldp+484,((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs1_data 
                                      >> (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__shift_rs2_data))),64);
-        tracep->fullQData(oldp+485,(VL_SHIFTRS_QQI(64,64,6, 
+        tracep->fullQData(oldp+486,(VL_SHIFTRS_QQI(64,64,6, 
                                                    ((3U 
                                                      == 
                                                      (3U 
@@ -2636,11 +2638,11 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                                          >> 5U)))
                                                      ? vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc
                                                      : vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1), (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__shift_rs2_data))),64);
-        tracep->fullCData(oldp+487,((7U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
+        tracep->fullCData(oldp+488,((7U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                            >> 2U))),3);
         VL_EXTEND_WQ(127,64, __Vtemp700, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs1_data);
         VL_SHIFTL_WWI(127,127,6, __Vtemp701, __Vtemp700, (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__shift_rs2_data));
-        tracep->fullQData(oldp+488,(((5U == (7U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
+        tracep->fullQData(oldp+489,(((5U == (7U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                    >> 2U)))
                                       ? VL_SHIFTRS_QQI(64,64,6, 
                                                        ((3U 
@@ -2713,23 +2715,23 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                                        << 0x20U) 
                                                       | (QData)((IData)(
                                                                         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__add_sub_result[0U])))))))))))),64);
-        tracep->fullBit(oldp+490,((1U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_opType))));
-        tracep->fullBit(oldp+491,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__is_eq));
+        tracep->fullBit(oldp+491,((1U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_opType))));
+        tracep->fullBit(oldp+492,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__is_eq));
         __Vtemp703[0U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1);
         __Vtemp703[1U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                   >> 0x20U));
         __Vtemp703[2U] = 1U;
-        tracep->fullWData(oldp+492,(__Vtemp703),65);
-        tracep->fullWData(oldp+495,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc),65);
-        tracep->fullBit(oldp+498,((1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[2U])));
-        tracep->fullQData(oldp+499,((((QData)((IData)(
+        tracep->fullWData(oldp+493,(__Vtemp703),65);
+        tracep->fullWData(oldp+496,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc),65);
+        tracep->fullBit(oldp+499,((1U & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__temp_result_pc[2U])));
+        tracep->fullQData(oldp+500,((((QData)((IData)(
                                                       ((vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_imm 
                                                         >> 0x1fU)
                                                         ? 0xffffffffU
                                                         : 0U))) 
                                       << 0x20U) | (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_imm)))),64);
-        tracep->fullQData(oldp+501,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_r_data),64);
-        tracep->fullQData(oldp+503,(((((1U & (IData)(
+        tracep->fullQData(oldp+502,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_r_data),64);
+        tracep->fullQData(oldp+504,(((((1U & (IData)(
                                                      (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_r_data 
                                                       >> 7U)))
                                         ? 0xffffffffffffffULL
@@ -2737,11 +2739,11 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                      | (QData)((IData)(
                                                        (0xffU 
                                                         & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_r_data)))))),64);
-        tracep->fullQData(oldp+505,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_addr),64);
-        tracep->fullBit(oldp+507,(((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu_io_valid) 
+        tracep->fullQData(oldp+506,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_addr),64);
+        tracep->fullBit(oldp+508,(((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu_io_valid) 
                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                       >> 1U))));
-        tracep->fullQData(oldp+508,(((0xaU == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType))
+        tracep->fullQData(oldp+509,(((0xaU == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType))
                                       ? (QData)((IData)(
                                                         (0x7ffU 
                                                          & ((IData)(0xfU) 
@@ -2772,7 +2774,7 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                                                         (7U 
                                                                          & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_addr))))))
                                                   : 0ULL))))),64);
-        tracep->fullBit(oldp+510,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_ls_state));
+        tracep->fullBit(oldp+511,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_ls_state));
         VL_EXTEND_WQ(127,64, __Vtemp705, (((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_wb_valid) 
                                            & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_dest_addr) 
                                               == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_rs2_addr)))
@@ -2785,9 +2787,9 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
         __Vtemp707[1U] = __Vtemp706[1U];
         __Vtemp707[2U] = __Vtemp706[2U];
         __Vtemp707[3U] = (0x7fffffffU & __Vtemp706[3U]);
-        tracep->fullWData(oldp+511,(__Vtemp707),127);
-        tracep->fullBit(oldp+515,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div_io_valid));
-        tracep->fullQData(oldp+516,(((8U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType))
+        tracep->fullWData(oldp+512,(__Vtemp707),127);
+        tracep->fullBit(oldp+516,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div_io_valid));
+        tracep->fullQData(oldp+517,(((8U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType))
                                       ? ((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType))
                                           ? (((QData)((IData)(
                                                               ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[0U] 
@@ -2816,10 +2818,10 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                               << 0x20U) 
                                              | (QData)((IData)(
                                                                vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q[0U])))))),64);
-        tracep->fullBit(oldp+518,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_dest_is_w));
-        tracep->fullBit(oldp+519,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_ready));
-        tracep->fullBit(oldp+520,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul_io_valid));
-        tracep->fullQData(oldp+521,(((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_exuType))
+        tracep->fullBit(oldp+519,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_dest_is_w));
+        tracep->fullBit(oldp+520,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_ready));
+        tracep->fullBit(oldp+521,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul_io_valid));
+        tracep->fullQData(oldp+522,(((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_exuType))
                                       ? (((QData)((IData)(
                                                           ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_result[0U] 
                                                             >> 0x1fU)
@@ -2841,17 +2843,17 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                               << 0x20U) 
                                              | (QData)((IData)(
                                                                vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_result[2U])))))),64);
-        tracep->fullBit(oldp+523,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_dest_is_w));
-        tracep->fullBit(oldp+524,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_ready));
-        tracep->fullBit(oldp+525,((1U & (~ ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
+        tracep->fullBit(oldp+524,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_dest_is_w));
+        tracep->fullBit(oldp+525,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_ready));
+        tracep->fullBit(oldp+526,((1U & (~ ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                             >> 2U)))));
-        tracep->fullWData(oldp+526,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__dividend),65);
-        tracep->fullWData(oldp+529,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__divisor),65);
-        tracep->fullWData(oldp+532,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__rem),65);
-        tracep->fullWData(oldp+535,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_divisor),65);
-        tracep->fullWData(oldp+538,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_dividend),66);
-        tracep->fullWData(oldp+541,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem),65);
-        tracep->fullWData(oldp+544,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q),66);
+        tracep->fullWData(oldp+527,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__dividend),65);
+        tracep->fullWData(oldp+530,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__divisor),65);
+        tracep->fullWData(oldp+533,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__rem),65);
+        tracep->fullWData(oldp+536,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_divisor),65);
+        tracep->fullWData(oldp+539,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_dividend),66);
+        tracep->fullWData(oldp+542,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem),65);
+        tracep->fullWData(oldp+545,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q),66);
         __Vtemp709[0U] = 1U;
         __Vtemp709[1U] = 0U;
         __Vtemp709[2U] = 0U;
@@ -2862,12 +2864,12 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
         __Vtemp712[0U] = __Vtemp711[0U];
         __Vtemp712[1U] = __Vtemp711[1U];
         __Vtemp712[2U] = (1U & __Vtemp711[2U]);
-        tracep->fullWData(oldp+547,(__Vtemp712),65);
-        tracep->fullCData(oldp+550,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_state),2);
-        tracep->fullCData(oldp+551,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_cnt),7);
-        tracep->fullCData(oldp+552,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType),7);
-        tracep->fullWData(oldp+553,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__temp_result),132);
-        tracep->fullBit(oldp+558,((0U == ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[0U] 
+        tracep->fullWData(oldp+548,(__Vtemp712),65);
+        tracep->fullCData(oldp+551,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_state),2);
+        tracep->fullCData(oldp+552,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_cnt),7);
+        tracep->fullCData(oldp+553,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType),7);
+        tracep->fullWData(oldp+554,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__temp_result),132);
+        tracep->fullBit(oldp+559,((0U == ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[0U] 
                                            | vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[1U]) 
                                           | vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[2U]))));
         __Vtemp715[0U] = 1U;
@@ -2877,24 +2879,24 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
         __Vtemp716[1U] = (~ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_divisor[1U]);
         __Vtemp716[2U] = (~ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_divisor[2U]);
         VL_ADD_W(3, __Vtemp717, __Vtemp715, __Vtemp716);
-        tracep->fullBit(oldp+559,((0U == (((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[0U] 
+        tracep->fullBit(oldp+560,((0U == (((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[0U] 
                                             ^ __Vtemp717[0U]) 
                                            | (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[1U] 
                                               ^ __Vtemp717[1U])) 
                                           | (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[2U] 
                                              ^ (1U 
                                                 & __Vtemp717[2U]))))));
-        tracep->fullBit(oldp+560,((0U == (((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[0U] 
+        tracep->fullBit(oldp+561,((0U == (((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[0U] 
                                             ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_divisor[0U]) 
                                            | (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[1U] 
                                               ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_divisor[1U])) 
                                           | (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[2U] 
                                              ^ vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_divisor[2U])))));
-        tracep->fullBit(oldp+561,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__is_need_correct));
-        tracep->fullBit(oldp+562,((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType))));
-        tracep->fullBit(oldp+563,((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType) 
+        tracep->fullBit(oldp+562,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__is_need_correct));
+        tracep->fullBit(oldp+563,((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType))));
+        tracep->fullBit(oldp+564,((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType) 
                                          >> 3U))));
-        tracep->fullQData(oldp+564,(((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType))
+        tracep->fullQData(oldp+565,(((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType))
                                       ? (((QData)((IData)(
                                                           ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[0U] 
                                                             >> 0x1fU)
@@ -2908,7 +2910,7 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                           << 0x20U) 
                                          | (QData)((IData)(
                                                            vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[0U]))))),64);
-        tracep->fullQData(oldp+566,(((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType))
+        tracep->fullQData(oldp+567,(((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType))
                                       ? (((QData)((IData)(
                                                           ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q[0U] 
                                                             >> 0x1fU)
@@ -2922,9 +2924,9 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                           << 0x20U) 
                                          | (QData)((IData)(
                                                            vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q[0U]))))),64);
-        tracep->fullBit(oldp+568,((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
-                                         >> 2U))));
         tracep->fullBit(oldp+569,((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
+                                         >> 2U))));
+        tracep->fullBit(oldp+570,((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                          >> 1U))));
         VL_EXTEND_WQ(130,64, __Vtemp726, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu_io_rs1_data);
         if ((4U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType))) {
@@ -2956,8 +2958,8 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
             __Vtemp730[4U] = ((2U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType))
                                ? 3U : __Vtemp726[4U]);
         }
-        tracep->fullWData(oldp+570,(__Vtemp730),130);
-        tracep->fullWData(oldp+575,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__mul_data2),65);
+        tracep->fullWData(oldp+571,(__Vtemp730),130);
+        tracep->fullWData(oldp+576,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__mul_data2),65);
         __Vtemp732[0U] = (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__mul_data2[0U] 
                           << 1U);
         __Vtemp732[1U] = ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__mul_data2[0U] 
@@ -2968,12 +2970,12 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                              >> 0x1fU) 
                                             | (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__mul_data2[2U] 
                                                << 1U)));
-        tracep->fullWData(oldp+578,(__Vtemp732),67);
-        tracep->fullCData(oldp+581,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_state),2);
-        tracep->fullWData(oldp+582,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_temp_mul2),67);
-        tracep->fullWData(oldp+585,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_mul1),130);
-        tracep->fullWData(oldp+590,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_result),130);
-        tracep->fullCData(oldp+595,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_exuType),7);
+        tracep->fullWData(oldp+579,(__Vtemp732),67);
+        tracep->fullCData(oldp+582,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_state),2);
+        tracep->fullWData(oldp+583,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_temp_mul2),67);
+        tracep->fullWData(oldp+586,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_mul1),130);
+        tracep->fullWData(oldp+591,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_result),130);
+        tracep->fullCData(oldp+596,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_exuType),7);
         __Vtemp734[0U] = 1U;
         __Vtemp734[1U] = 0U;
         __Vtemp734[2U] = 0U;
@@ -3163,17 +3165,17 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                                      : 
                                                     __Vtemp757[4U])));
         }
-        tracep->fullWData(oldp+596,(__Vtemp765),131);
-        tracep->fullCData(oldp+601,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_cnt),7);
-        tracep->fullBit(oldp+602,((0U == (3U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_exuType) 
+        tracep->fullWData(oldp+597,(__Vtemp765),131);
+        tracep->fullCData(oldp+602,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_cnt),7);
+        tracep->fullBit(oldp+603,((0U == (3U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_exuType) 
                                                 >> 2U)))));
-        tracep->fullBit(oldp+603,((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_exuType))));
-        tracep->fullBit(oldp+604,((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
+        tracep->fullBit(oldp+604,((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_exuType))));
+        tracep->fullBit(oldp+605,((1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                          >> 4U))));
-        tracep->fullQData(oldp+605,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__system_exu__DOT__op_data),64);
-        tracep->fullQData(oldp+607,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__system_exu__DOT__or_result),64);
-        tracep->fullQData(oldp+609,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__system_exu__DOT__and_result),64);
-        tracep->fullQData(oldp+611,(((7U == (7U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
+        tracep->fullQData(oldp+606,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__system_exu__DOT__op_data),64);
+        tracep->fullQData(oldp+608,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__system_exu__DOT__or_result),64);
+        tracep->fullQData(oldp+610,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__system_exu__DOT__and_result),64);
+        tracep->fullQData(oldp+612,(((7U == (7U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                    >> 2U)))
                                       ? vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__system_exu__DOT__and_result
                                       : ((3U == (7U 
@@ -3210,23 +3212,23 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                                         >> 2U)))
                                                     ? vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__system_exu__DOT__or_result
                                                     : 0ULL))))))),64);
-        tracep->fullBit(oldp+613,((0x10U == (0x1fU 
+        tracep->fullBit(oldp+614,((0x10U == (0x1fU 
                                              & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                 >> 2U)))));
-        tracep->fullBit(oldp+614,((0x18U == (0x1fU 
+        tracep->fullBit(oldp+615,((0x18U == (0x1fU 
                                              & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                 >> 2U)))));
-        tracep->fullBit(oldp+615,((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
+        tracep->fullBit(oldp+616,((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                    >> 2U)))));
-        tracep->fullBit(oldp+616,((8U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
+        tracep->fullBit(oldp+617,((8U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                    >> 2U)))));
-        tracep->fullBit(oldp+617,(((0U == (0x1fU & 
+        tracep->fullBit(oldp+618,(((0U == (0x1fU & 
                                            ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                             >> 2U))) 
                                    | (8U == (0x1fU 
                                              & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                 >> 2U))))));
-        tracep->fullCData(oldp+618,(((0U == (0x1fU 
+        tracep->fullCData(oldp+619,(((0U == (0x1fU 
                                              & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                 >> 2U)))
                                       ? 0xbU : ((8U 
@@ -3236,8 +3238,8 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                                      >> 2U)))
                                                  ? 3U
                                                  : 0U))),4);
-        tracep->fullBit(oldp+619,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__system_exu__DOT__is_ret));
-        tracep->fullQData(oldp+620,(((0xffffffffffffff77ULL 
+        tracep->fullBit(oldp+620,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__system_exu__DOT__is_ret));
+        tracep->fullQData(oldp+621,(((0xffffffffffffff77ULL 
                                       & vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg_io_r_csr_mstatus) 
                                      | (QData)((IData)(
                                                        ((1U 
@@ -3246,8 +3248,8 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                                                     >> 7U)))
                                                          ? 0x88U
                                                          : 0x80U))))),64);
-        tracep->fullCData(oldp+622,(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType),4);
-        tracep->fullBit(oldp+623,(((0x33U == (0xfe00707fU 
+        tracep->fullCData(oldp+623,(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType),4);
+        tracep->fullBit(oldp+624,(((0x33U == (0xfe00707fU 
                                               & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
                                    | ((0x13U == (0x707fU 
                                                  & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
@@ -3290,74 +3292,74 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                                                      (0x707fU 
                                                                       & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
                                                                     & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_434)))))))))))))));
-        tracep->fullCData(oldp+624,((0x1fU & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data 
+        tracep->fullCData(oldp+625,((0x1fU & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data 
                                               >> 7U))),5);
-        tracep->fullCData(oldp+625,((0x1fU & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_exception))),5);
-        tracep->fullQData(oldp+626,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[0]),64);
-        tracep->fullQData(oldp+628,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[1]),64);
-        tracep->fullQData(oldp+630,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[2]),64);
-        tracep->fullQData(oldp+632,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[3]),64);
-        tracep->fullQData(oldp+634,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[4]),64);
-        tracep->fullQData(oldp+636,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[5]),64);
-        tracep->fullQData(oldp+638,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[6]),64);
-        tracep->fullQData(oldp+640,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[7]),64);
-        tracep->fullQData(oldp+642,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[8]),64);
-        tracep->fullQData(oldp+644,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[9]),64);
-        tracep->fullQData(oldp+646,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[10]),64);
-        tracep->fullQData(oldp+648,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[11]),64);
-        tracep->fullQData(oldp+650,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[12]),64);
-        tracep->fullQData(oldp+652,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[13]),64);
-        tracep->fullQData(oldp+654,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[14]),64);
-        tracep->fullQData(oldp+656,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[15]),64);
-        tracep->fullQData(oldp+658,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[16]),64);
-        tracep->fullQData(oldp+660,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[17]),64);
-        tracep->fullQData(oldp+662,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[18]),64);
-        tracep->fullQData(oldp+664,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[19]),64);
-        tracep->fullQData(oldp+666,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[20]),64);
-        tracep->fullQData(oldp+668,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[21]),64);
-        tracep->fullQData(oldp+670,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[22]),64);
-        tracep->fullQData(oldp+672,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[23]),64);
-        tracep->fullQData(oldp+674,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[24]),64);
-        tracep->fullQData(oldp+676,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[25]),64);
-        tracep->fullQData(oldp+678,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[26]),64);
-        tracep->fullQData(oldp+680,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[27]),64);
-        tracep->fullQData(oldp+682,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[28]),64);
-        tracep->fullQData(oldp+684,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[29]),64);
-        tracep->fullQData(oldp+686,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[30]),64);
-        tracep->fullQData(oldp+688,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[31]),64);
-        tracep->fullQData(oldp+690,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile
+        tracep->fullCData(oldp+626,((0x1fU & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_exception))),5);
+        tracep->fullQData(oldp+627,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[0]),64);
+        tracep->fullQData(oldp+629,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[1]),64);
+        tracep->fullQData(oldp+631,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[2]),64);
+        tracep->fullQData(oldp+633,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[3]),64);
+        tracep->fullQData(oldp+635,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[4]),64);
+        tracep->fullQData(oldp+637,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[5]),64);
+        tracep->fullQData(oldp+639,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[6]),64);
+        tracep->fullQData(oldp+641,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[7]),64);
+        tracep->fullQData(oldp+643,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[8]),64);
+        tracep->fullQData(oldp+645,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[9]),64);
+        tracep->fullQData(oldp+647,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[10]),64);
+        tracep->fullQData(oldp+649,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[11]),64);
+        tracep->fullQData(oldp+651,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[12]),64);
+        tracep->fullQData(oldp+653,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[13]),64);
+        tracep->fullQData(oldp+655,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[14]),64);
+        tracep->fullQData(oldp+657,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[15]),64);
+        tracep->fullQData(oldp+659,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[16]),64);
+        tracep->fullQData(oldp+661,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[17]),64);
+        tracep->fullQData(oldp+663,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[18]),64);
+        tracep->fullQData(oldp+665,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[19]),64);
+        tracep->fullQData(oldp+667,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[20]),64);
+        tracep->fullQData(oldp+669,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[21]),64);
+        tracep->fullQData(oldp+671,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[22]),64);
+        tracep->fullQData(oldp+673,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[23]),64);
+        tracep->fullQData(oldp+675,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[24]),64);
+        tracep->fullQData(oldp+677,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[25]),64);
+        tracep->fullQData(oldp+679,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[26]),64);
+        tracep->fullQData(oldp+681,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[27]),64);
+        tracep->fullQData(oldp+683,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[28]),64);
+        tracep->fullQData(oldp+685,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[29]),64);
+        tracep->fullQData(oldp+687,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[30]),64);
+        tracep->fullQData(oldp+689,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[31]),64);
+        tracep->fullQData(oldp+691,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile
                                     [(0x1fU & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data 
                                                >> 0xfU))]),64);
-        tracep->fullQData(oldp+692,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile
+        tracep->fullQData(oldp+693,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile
                                     [(0x1fU & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data 
                                                >> 0x14U))]),64);
-        tracep->fullQData(oldp+694,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile
+        tracep->fullQData(oldp+695,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile
                                     [0U]),64);
-        tracep->fullBit(oldp+696,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__irq));
-        tracep->fullQData(oldp+697,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mstatus),64);
-        tracep->fullQData(oldp+699,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mie),64);
-        tracep->fullQData(oldp+701,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mtvec),64);
-        tracep->fullQData(oldp+703,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mscratch),64);
-        tracep->fullQData(oldp+705,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mepc),64);
-        tracep->fullQData(oldp+707,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mcause),64);
-        tracep->fullQData(oldp+709,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mtval),64);
-        tracep->fullQData(oldp+711,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mcycle),64);
-        tracep->fullQData(oldp+713,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_minstret),64);
-        tracep->fullQData(oldp+715,(((0xb02U == (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data 
+        tracep->fullBit(oldp+697,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__irq));
+        tracep->fullQData(oldp+698,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mstatus),64);
+        tracep->fullQData(oldp+700,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mie),64);
+        tracep->fullQData(oldp+702,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mtvec),64);
+        tracep->fullQData(oldp+704,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mscratch),64);
+        tracep->fullQData(oldp+706,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mepc),64);
+        tracep->fullQData(oldp+708,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mcause),64);
+        tracep->fullQData(oldp+710,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mtval),64);
+        tracep->fullQData(oldp+712,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mcycle),64);
+        tracep->fullQData(oldp+714,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_minstret),64);
+        tracep->fullQData(oldp+716,(((0xb02U == (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data 
                                                  >> 0x14U))
                                       ? vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_minstret
                                       : vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT___csr_rdata_T_33)),64);
-        tracep->fullQData(oldp+717,(vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT__reg_mtime),64);
-        tracep->fullQData(oldp+719,(vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT__reg_mtimecmp),64);
-        tracep->fullBit(oldp+721,(vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT__reg_state));
-        tracep->fullBit(oldp+722,((0U == (0xffffU & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_bus_addr)))));
-        tracep->fullBit(oldp+723,((0x4000U == (0xffffU 
+        tracep->fullQData(oldp+718,(vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT__reg_mtime),64);
+        tracep->fullQData(oldp+720,(vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT__reg_mtimecmp),64);
+        tracep->fullBit(oldp+722,(vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT__reg_state));
+        tracep->fullBit(oldp+723,((0U == (0xffffU & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_bus_addr)))));
+        tracep->fullBit(oldp+724,((0x4000U == (0xffffU 
                                                & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_bus_addr)))));
-        tracep->fullQData(oldp+724,(((IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_valid)
+        tracep->fullQData(oldp+725,(((IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_valid)
                                       ? vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_raddr
                                       : vlSelf->riscv_soc__DOT__core__DOT__cross_bar_io_AXI_Bus_ar_bits_araddr)),64);
-        tracep->fullQData(oldp+726,(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_w_addr),64);
-        tracep->fullQData(oldp+728,((((QData)((IData)(
+        tracep->fullQData(oldp+727,(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_w_addr),64);
+        tracep->fullQData(oldp+729,((((QData)((IData)(
                                                       ((((0x80U 
                                                           & (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar_io_AXI_Bus_w_bits_wstrb))
                                                           ? 0xffU
@@ -3397,13 +3399,13 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                                                              & (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar_io_AXI_Bus_w_bits_wstrb))
                                                                              ? 0xffU
                                                                              : 0U)))))))),64);
-        tracep->fullBit(oldp+730,(((IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_is_w) 
+        tracep->fullBit(oldp+731,(((IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_is_w) 
                                    & (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar_io_AXI_Bus_w_valid))));
-        tracep->fullQData(oldp+731,(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_raddr),64);
-        tracep->fullCData(oldp+733,(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_rlen),4);
-        tracep->fullBit(oldp+734,(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_state));
-        tracep->fullBit(oldp+735,(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_is_w));
-        tracep->fullIData(oldp+736,(((((8U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar_io_AXI_Bus_w_bits_wstrb))
+        tracep->fullQData(oldp+732,(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_raddr),64);
+        tracep->fullCData(oldp+734,(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_rlen),4);
+        tracep->fullBit(oldp+735,(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_state));
+        tracep->fullBit(oldp+736,(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_is_w));
+        tracep->fullIData(oldp+737,(((((8U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar_io_AXI_Bus_w_bits_wstrb))
                                         ? 0xffU : 0U) 
                                       << 0x18U) | (
                                                    (((4U 
@@ -3420,7 +3422,7 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                                           & (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar_io_AXI_Bus_w_bits_wstrb))
                                                           ? 0xffU
                                                           : 0U))))),32);
-        tracep->fullIData(oldp+737,(((((0x80U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar_io_AXI_Bus_w_bits_wstrb))
+        tracep->fullIData(oldp+738,(((((0x80U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar_io_AXI_Bus_w_bits_wstrb))
                                         ? 0xffU : 0U) 
                                       << 0x18U) | (
                                                    (((0x40U 
@@ -3437,97 +3439,97 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                                           & (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar_io_AXI_Bus_w_bits_wstrb))
                                                           ? 0xffU
                                                           : 0U))))),32);
-        tracep->fullBit(oldp+738,(vlSelf->clock));
-        tracep->fullBit(oldp+739,(vlSelf->reset));
-        tracep->fullQData(oldp+740,(vlSelf->io_difftest_reg_0),64);
-        tracep->fullQData(oldp+742,(vlSelf->io_difftest_reg_1),64);
-        tracep->fullQData(oldp+744,(vlSelf->io_difftest_reg_2),64);
-        tracep->fullQData(oldp+746,(vlSelf->io_difftest_reg_3),64);
-        tracep->fullQData(oldp+748,(vlSelf->io_difftest_reg_4),64);
-        tracep->fullQData(oldp+750,(vlSelf->io_difftest_reg_5),64);
-        tracep->fullQData(oldp+752,(vlSelf->io_difftest_reg_6),64);
-        tracep->fullQData(oldp+754,(vlSelf->io_difftest_reg_7),64);
-        tracep->fullQData(oldp+756,(vlSelf->io_difftest_reg_8),64);
-        tracep->fullQData(oldp+758,(vlSelf->io_difftest_reg_9),64);
-        tracep->fullQData(oldp+760,(vlSelf->io_difftest_reg_10),64);
-        tracep->fullQData(oldp+762,(vlSelf->io_difftest_reg_11),64);
-        tracep->fullQData(oldp+764,(vlSelf->io_difftest_reg_12),64);
-        tracep->fullQData(oldp+766,(vlSelf->io_difftest_reg_13),64);
-        tracep->fullQData(oldp+768,(vlSelf->io_difftest_reg_14),64);
-        tracep->fullQData(oldp+770,(vlSelf->io_difftest_reg_15),64);
-        tracep->fullQData(oldp+772,(vlSelf->io_difftest_reg_16),64);
-        tracep->fullQData(oldp+774,(vlSelf->io_difftest_reg_17),64);
-        tracep->fullQData(oldp+776,(vlSelf->io_difftest_reg_18),64);
-        tracep->fullQData(oldp+778,(vlSelf->io_difftest_reg_19),64);
-        tracep->fullQData(oldp+780,(vlSelf->io_difftest_reg_20),64);
-        tracep->fullQData(oldp+782,(vlSelf->io_difftest_reg_21),64);
-        tracep->fullQData(oldp+784,(vlSelf->io_difftest_reg_22),64);
-        tracep->fullQData(oldp+786,(vlSelf->io_difftest_reg_23),64);
-        tracep->fullQData(oldp+788,(vlSelf->io_difftest_reg_24),64);
-        tracep->fullQData(oldp+790,(vlSelf->io_difftest_reg_25),64);
-        tracep->fullQData(oldp+792,(vlSelf->io_difftest_reg_26),64);
-        tracep->fullQData(oldp+794,(vlSelf->io_difftest_reg_27),64);
-        tracep->fullQData(oldp+796,(vlSelf->io_difftest_reg_28),64);
-        tracep->fullQData(oldp+798,(vlSelf->io_difftest_reg_29),64);
-        tracep->fullQData(oldp+800,(vlSelf->io_difftest_reg_30),64);
-        tracep->fullQData(oldp+802,(vlSelf->io_difftest_reg_31),64);
-        tracep->fullQData(oldp+804,(vlSelf->io_difftest_pc),64);
-        tracep->fullIData(oldp+806,(vlSelf->io_difftest_inst),32);
-        tracep->fullBit(oldp+807,(vlSelf->io_difftest_commit));
-        tracep->fullQData(oldp+808,(vlSelf->io_inst_counter),64);
-        tracep->fullBit(oldp+810,(vlSelf->io_difftest_irq));
-        tracep->fullQData(oldp+811,(vlSelf->io_difftest_mstatus),64);
-        tracep->fullQData(oldp+813,(vlSelf->io_difftest_mcause),64);
-        tracep->fullQData(oldp+815,(vlSelf->io_difftest_mepc),64);
-        tracep->fullQData(oldp+817,(vlSelf->io_difftest_mtvec),64);
-        tracep->fullBit(oldp+819,(vlSelf->io_difftest_peripheral));
-        tracep->fullQData(oldp+820,(0ULL),64);
+        tracep->fullBit(oldp+739,(vlSelf->clock));
+        tracep->fullBit(oldp+740,(vlSelf->reset));
+        tracep->fullQData(oldp+741,(vlSelf->io_difftest_reg_0),64);
+        tracep->fullQData(oldp+743,(vlSelf->io_difftest_reg_1),64);
+        tracep->fullQData(oldp+745,(vlSelf->io_difftest_reg_2),64);
+        tracep->fullQData(oldp+747,(vlSelf->io_difftest_reg_3),64);
+        tracep->fullQData(oldp+749,(vlSelf->io_difftest_reg_4),64);
+        tracep->fullQData(oldp+751,(vlSelf->io_difftest_reg_5),64);
+        tracep->fullQData(oldp+753,(vlSelf->io_difftest_reg_6),64);
+        tracep->fullQData(oldp+755,(vlSelf->io_difftest_reg_7),64);
+        tracep->fullQData(oldp+757,(vlSelf->io_difftest_reg_8),64);
+        tracep->fullQData(oldp+759,(vlSelf->io_difftest_reg_9),64);
+        tracep->fullQData(oldp+761,(vlSelf->io_difftest_reg_10),64);
+        tracep->fullQData(oldp+763,(vlSelf->io_difftest_reg_11),64);
+        tracep->fullQData(oldp+765,(vlSelf->io_difftest_reg_12),64);
+        tracep->fullQData(oldp+767,(vlSelf->io_difftest_reg_13),64);
+        tracep->fullQData(oldp+769,(vlSelf->io_difftest_reg_14),64);
+        tracep->fullQData(oldp+771,(vlSelf->io_difftest_reg_15),64);
+        tracep->fullQData(oldp+773,(vlSelf->io_difftest_reg_16),64);
+        tracep->fullQData(oldp+775,(vlSelf->io_difftest_reg_17),64);
+        tracep->fullQData(oldp+777,(vlSelf->io_difftest_reg_18),64);
+        tracep->fullQData(oldp+779,(vlSelf->io_difftest_reg_19),64);
+        tracep->fullQData(oldp+781,(vlSelf->io_difftest_reg_20),64);
+        tracep->fullQData(oldp+783,(vlSelf->io_difftest_reg_21),64);
+        tracep->fullQData(oldp+785,(vlSelf->io_difftest_reg_22),64);
+        tracep->fullQData(oldp+787,(vlSelf->io_difftest_reg_23),64);
+        tracep->fullQData(oldp+789,(vlSelf->io_difftest_reg_24),64);
+        tracep->fullQData(oldp+791,(vlSelf->io_difftest_reg_25),64);
+        tracep->fullQData(oldp+793,(vlSelf->io_difftest_reg_26),64);
+        tracep->fullQData(oldp+795,(vlSelf->io_difftest_reg_27),64);
+        tracep->fullQData(oldp+797,(vlSelf->io_difftest_reg_28),64);
+        tracep->fullQData(oldp+799,(vlSelf->io_difftest_reg_29),64);
+        tracep->fullQData(oldp+801,(vlSelf->io_difftest_reg_30),64);
+        tracep->fullQData(oldp+803,(vlSelf->io_difftest_reg_31),64);
+        tracep->fullQData(oldp+805,(vlSelf->io_difftest_pc),64);
+        tracep->fullIData(oldp+807,(vlSelf->io_difftest_inst),32);
+        tracep->fullBit(oldp+808,(vlSelf->io_difftest_commit));
+        tracep->fullQData(oldp+809,(vlSelf->io_inst_counter),64);
+        tracep->fullBit(oldp+811,(vlSelf->io_difftest_irq));
+        tracep->fullQData(oldp+812,(vlSelf->io_difftest_mstatus),64);
+        tracep->fullQData(oldp+814,(vlSelf->io_difftest_mcause),64);
+        tracep->fullQData(oldp+816,(vlSelf->io_difftest_mepc),64);
+        tracep->fullQData(oldp+818,(vlSelf->io_difftest_mtvec),64);
+        tracep->fullBit(oldp+820,(vlSelf->io_difftest_peripheral));
+        tracep->fullQData(oldp+821,(0ULL),64);
         __Vtemp766[0U] = 0U;
         __Vtemp766[1U] = 0U;
         __Vtemp766[2U] = 0U;
         __Vtemp766[3U] = 0U;
-        tracep->fullWData(oldp+822,(__Vtemp766),128);
-        tracep->fullBit(oldp+826,(1U));
-        tracep->fullCData(oldp+827,(0U),5);
-        tracep->fullCData(oldp+828,(1U),5);
-        tracep->fullCData(oldp+829,(2U),5);
-        tracep->fullCData(oldp+830,(3U),5);
-        tracep->fullCData(oldp+831,(4U),5);
-        tracep->fullCData(oldp+832,(5U),5);
-        tracep->fullCData(oldp+833,(6U),5);
-        tracep->fullCData(oldp+834,(7U),5);
-        tracep->fullCData(oldp+835,(8U),5);
-        tracep->fullCData(oldp+836,(9U),5);
-        tracep->fullCData(oldp+837,(0xaU),5);
-        tracep->fullCData(oldp+838,(0xbU),5);
-        tracep->fullCData(oldp+839,(0xcU),5);
-        tracep->fullCData(oldp+840,(0xdU),5);
-        tracep->fullCData(oldp+841,(0xeU),5);
-        tracep->fullCData(oldp+842,(0xfU),5);
-        tracep->fullCData(oldp+843,(0x10U),5);
-        tracep->fullCData(oldp+844,(0x11U),5);
-        tracep->fullCData(oldp+845,(0x12U),5);
-        tracep->fullCData(oldp+846,(0x13U),5);
-        tracep->fullCData(oldp+847,(0x14U),5);
-        tracep->fullCData(oldp+848,(0x15U),5);
-        tracep->fullCData(oldp+849,(0x16U),5);
-        tracep->fullCData(oldp+850,(0x17U),5);
-        tracep->fullCData(oldp+851,(0x18U),5);
-        tracep->fullCData(oldp+852,(0x19U),5);
-        tracep->fullCData(oldp+853,(0x1aU),5);
-        tracep->fullCData(oldp+854,(0x1bU),5);
-        tracep->fullCData(oldp+855,(0x1cU),5);
-        tracep->fullCData(oldp+856,(0x1dU),5);
-        tracep->fullCData(oldp+857,(0x1eU),5);
-        tracep->fullCData(oldp+858,(0x1fU),5);
-        tracep->fullBit(oldp+859,(0U));
-        tracep->fullIData(oldp+860,(0x80U),32);
-        tracep->fullIData(oldp+861,(0x40U),32);
-        tracep->fullIData(oldp+862,(6U),32);
+        tracep->fullWData(oldp+823,(__Vtemp766),128);
+        tracep->fullBit(oldp+827,(1U));
+        tracep->fullCData(oldp+828,(0U),5);
+        tracep->fullCData(oldp+829,(1U),5);
+        tracep->fullCData(oldp+830,(2U),5);
+        tracep->fullCData(oldp+831,(3U),5);
+        tracep->fullCData(oldp+832,(4U),5);
+        tracep->fullCData(oldp+833,(5U),5);
+        tracep->fullCData(oldp+834,(6U),5);
+        tracep->fullCData(oldp+835,(7U),5);
+        tracep->fullCData(oldp+836,(8U),5);
+        tracep->fullCData(oldp+837,(9U),5);
+        tracep->fullCData(oldp+838,(0xaU),5);
+        tracep->fullCData(oldp+839,(0xbU),5);
+        tracep->fullCData(oldp+840,(0xcU),5);
+        tracep->fullCData(oldp+841,(0xdU),5);
+        tracep->fullCData(oldp+842,(0xeU),5);
+        tracep->fullCData(oldp+843,(0xfU),5);
+        tracep->fullCData(oldp+844,(0x10U),5);
+        tracep->fullCData(oldp+845,(0x11U),5);
+        tracep->fullCData(oldp+846,(0x12U),5);
+        tracep->fullCData(oldp+847,(0x13U),5);
+        tracep->fullCData(oldp+848,(0x14U),5);
+        tracep->fullCData(oldp+849,(0x15U),5);
+        tracep->fullCData(oldp+850,(0x16U),5);
+        tracep->fullCData(oldp+851,(0x17U),5);
+        tracep->fullCData(oldp+852,(0x18U),5);
+        tracep->fullCData(oldp+853,(0x19U),5);
+        tracep->fullCData(oldp+854,(0x1aU),5);
+        tracep->fullCData(oldp+855,(0x1bU),5);
+        tracep->fullCData(oldp+856,(0x1cU),5);
+        tracep->fullCData(oldp+857,(0x1dU),5);
+        tracep->fullCData(oldp+858,(0x1eU),5);
+        tracep->fullCData(oldp+859,(0x1fU),5);
+        tracep->fullBit(oldp+860,(0U));
+        tracep->fullIData(oldp+861,(0x80U),32);
+        tracep->fullIData(oldp+862,(0x40U),32);
+        tracep->fullIData(oldp+863,(6U),32);
         __Vtemp767[0U] = 0xffffffffU;
         __Vtemp767[1U] = 0xffffffffU;
         __Vtemp767[2U] = 0xffffffffU;
         __Vtemp767[3U] = 0xffffffffU;
-        tracep->fullWData(oldp+863,(__Vtemp767),128);
+        tracep->fullWData(oldp+864,(__Vtemp767),128);
     }
 }
