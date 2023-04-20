@@ -126,7 +126,8 @@ class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
 		is_br 		:= (io.opType(2,0) === Op_type.op_bru)
 		
 		val is_eq 	= (op_data1 === op_data2)
-		val add_pc = Cat(1.U(1.W),op_pc + op_imm)
+		val temp_1  = Mux(func === BRUType.bru_jalr(4,2),io.op_data1,op_pc)
+		val add_pc = Cat(1.U(1.W),temp_1 + op_imm)
 		when(is_br){
 			temp_result_pc := MuxLookup(func,0.U,List(
 				BRUType.bru_beq(4,2)	-> Mux(is_eq,add_pc,0.U),
