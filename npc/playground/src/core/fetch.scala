@@ -23,7 +23,9 @@ class IBuf extends Module{
 	val ibuf_valid  = RegInit(VecInit(Seq.fill(4)(false.B)))
 	val reg_head 	= RegInit(0.U(2.W))
 	val reg_tail 	= RegInit(0.U(2.W))
+	val reg_full_size = RegInit(0.U(3.W))
 	val full_size 	= (ibuf_valid(0)+ibuf_valid(1))+(ibuf_valid(2)+ibuf_valid(3))
+	reg_full_size := full_size
 	val allow_in	= WireInit(false.B)
 	allow_in 		:= (full_size < 3.U)
 	
