@@ -88,8 +88,8 @@ class Exu extends Module with CoreParameters{
 	val rs2_addr	= io.op_datas.bits.rs2_addr
 	val op_data1	= Mux(io.wb.valid &(io.wb.dest_addr === rs1_addr),io.wb.dest_data,io.op_datas.bits.rs1_data)
 	val op_data2 	= Mux(io.wb.valid &(io.wb.dest_addr === rs2_addr),io.wb.dest_data,io.op_datas.bits.rs2_data)
-	val op_imm		= io.op_datas.bits.op_imm
-	val op_pc 		= io.op_datas.bits.op_pc
+	val op_imm		= io.op_datas.bits.imm
+	val op_pc 		= io.op_datas.bits.pc
 	val dest_addr	= io.op_datas.bits.dest_addr
 	val csr_addr	= io.op_datas.bits.csr_addr 
 	val csr_data 	= Mux(io.csr.valid & (io.csr.csr_addr === csr_addr),io.csr.csr_data,io.op_datas.bits.csr_data)
