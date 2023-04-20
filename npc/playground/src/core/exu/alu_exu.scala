@@ -83,8 +83,8 @@ class ALU_EXU(has_br_unit: Bool = false.B) extends Module with CoreParameters{
 
 	//为啥可以采取这种粗暴的扩展方式，因为进行32位计算的都是有符号数。
 	val is_32 = io.exuType(0)
-	val op_data1 = Mux(is_32,Cat(32,io.op_data1(31),io.op_data1(31,0)),io.op_data1)
-	val op_data2 = Mux(is_32,Cat(32,io.op_data2(31),io.op_data2(31,0)),io.op_data2)
+	val op_data1 = Mux(is_32,Cat(Fill(32,io.op_data1(31)),io.op_data1(31,0)),io.op_data1)
+	val op_data2 = Mux(is_32,Cat(Fill(32,io.op_data2(31)),io.op_data2(31,0)),io.op_data2)
 	val op_imm   = Cat(Fill(32,io.op_imm(31)),io.op_imm)
 	val op_pc 	 = io.op_pc 
 

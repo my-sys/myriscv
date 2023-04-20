@@ -205,7 +205,7 @@ class Exu extends Module with CoreParameters{
 	reg_is_time_irq	:= time_irq
 	reg_is_soft_irq := soft_irq
 
-	io.op_datas.ready 	= ready 
+	io.op_datas.ready 	:= ready 
 
 	io.wb.valid 	:= (reg_sys_alu_w_valid | mu_exu.io.dest_is_w | mem_exu.io.dest_is_w) & ready
 	io.wb.dest_addr	:= reg_dest_addr
@@ -241,7 +241,7 @@ class Exu extends Module with CoreParameters{
 	val reg_difftest_inst = RegInit(0.U(32.W))
 	when(ready){
 		reg_commit	:= io.op_datas.valid
-		reg_difftest_inst := io.op_datas.inst
+		reg_difftest_inst := io.op_datas.bits.inst
 	}
 	//reg_commit := io.op_datas.valid
 	reg_fence_i	:= io.op_datas.valid & (io.op_datas.bits.opType === Op_type.op_fence) &(io.op_datas.bits.exuType === FENCEType.fence_i)
