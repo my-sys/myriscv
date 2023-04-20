@@ -115,6 +115,8 @@ class MEM_EXU extends Module{
 	val reg_ls_state 				= RegInit(ls_idle)
 
 	// move data to the appropriate position
+	// move data to the appropriate position
+	val mem_w_data 		= rs2_data << Cat(mem_addr(2,0),0.U(3.W))
 	switch(reg_ls_state){
 		is(ls_idle){
 			reg_ls_state	:= ls_idle
