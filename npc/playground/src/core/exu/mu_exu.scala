@@ -161,7 +161,7 @@ class DIV extends Module{
 			reg_ready 		:= Mux(io.kill,true.B,Mux(valid,false.B,true.B))
 			reg_exuType		:= Mux(valid,exuType,0.U)
 			reg_q 			:= Cat(dividend,0.U(1.W))
-			reg_is_need_correct	:= false.B
+			//reg_is_need_correct	:= false.B
 			reg_cnt 		:= 0.U
 			reg_dest_is_w	:= false.B
 		}
