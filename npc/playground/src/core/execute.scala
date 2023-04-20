@@ -195,7 +195,7 @@ class Exu extends Module with CoreParameters{
 	val time_irq	= irq.time_irq & io.mstatus(3) & io.mie(7)
 	val soft_irq	= irq.soft_irq & io.mstatus(3) & io.mie(3)
 	val irq 		= time_irq | soft_irq
-	val is_except	= system_exu.io.is_exception
+	val is_except	= system_exu.io.is_except
 	val exception	= system_exu.io.exception
 	reg_is_except	:= is_except
 	reg_exception	:= exception//Mux(time_irq,7.U,Mux(soft_irq,3.U,exception))
