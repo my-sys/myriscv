@@ -24,7 +24,8 @@ class IBuf extends Module{
 	val reg_head 	= RegInit(0.U(2.W))
 	val reg_tail 	= RegInit(0.U(2.W))
 	val full_size 	= (ibuf_valid(0)+ibuf_valid(1))+(ibuf_valid(2)+ibuf_valid(3))
-	val allow_in 	= full_size < 3.U
+	val allow_in	= WireInit(false.B)
+	allow_in 		:= (full_size < 3.U)
 	
 	val ready 		= io.put_pc.ready
 	val valid 		= io.cache_buf.valid 
