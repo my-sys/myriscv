@@ -94,7 +94,7 @@ class Exu extends Module with CoreParameters{
 	val csr_addr	= io.op_datas.bits.csr_addr 
 	val csr_data 	= Mux(io.csr.valid & (io.csr.csr_addr === csr_addr),io.csr.csr_data,io.op_datas.bits.csr_data)
 
-	val alu_exu = Module(new ALU_EXU(true.B))
+	val alu_exu = Module(new ALU_EXU(true))
 	val mem_exu = Module(new MEM_EXU())
 	val mu_exu  = Module(new MU_EXU())
 	val system_exu = Module(new SYSTEM_EXU)
