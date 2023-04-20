@@ -60,7 +60,7 @@ class MUL extends Module{
 		"b110".U 	->	(~reg_mul1 + 1.U)
 	))
 
-	siwtch(reg_state){
+	switch(reg_state){
 		is(mul_start){
 			reg_ready 		:= Mux(io.kill,true.B,Mux(valid,false.B,true.B))
 			reg_state		:= Mux(io.kill,mul_start,Mux(valid,mul_busy,reg_state))
