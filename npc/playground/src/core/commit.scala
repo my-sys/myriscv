@@ -60,7 +60,7 @@ class Commit extends Module{
 	csr_reg.io.in.is_exception	:= io.csr_except.is_except
 	csr_reg.io.in.commit	:= io.commit
 
-	io.csr_rd.csr_addr			:= csr_reg.io.r.csr_raddr
+	csr_reg.io.r.csr_raddr 		:= io.csr_rd.csr_addr
 	io.csr_rd.csr_data			:= csr_reg.io.r.csr_rdata
 	io.csr_pass.csr_mtvec		:= csr_reg.io.r.csr_mtvec
 	io.csr_pass.csr_mepc		:= csr_reg.io.r.csr_mepc
