@@ -59,7 +59,7 @@ class MUL extends Module{
 		"b101".U 	-> 	(~reg_mul1 + 1.U),
 		"b110".U 	->	(~reg_mul1 + 1.U)
 	))
-
+	val reg_cnt			= RegInit(0.U(7.W))
 	switch(reg_state){
 		is(mul_start){
 			reg_ready 		:= Mux(io.kill,true.B,Mux(valid,false.B,true.B))

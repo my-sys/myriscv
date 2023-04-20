@@ -93,7 +93,7 @@ class SYSTEM_EXU extends Module with CoreParameters{
 
 	io.dst_data			:= csr_data 
 	io.result_csr_data	:= Mux(is_ret,result_status,temp_csr_result_data)
-	io.csr_is_w			:= io.valid & ((io.exuType(4,2) =/= 0.U) | |is_ret)
+	io.csr_is_w			:= io.valid & ((io.exuType(4,2) =/= 0.U) | is_ret)
 	io.result_csr_addr	:= Mux(is_ret,status_addr,io.csr_addr)
 
 	// io.is_mret			:= is_mret & io.valid
