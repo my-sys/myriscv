@@ -53,7 +53,7 @@ class IBuf extends Module{
 	}
 
 	
-	io.cache_buf.ready 	:= Mux(allow_in,true.B,false.B)
+	io.cache_buf.ready 	:= Mux(reg_full_size <3.U,true.B,false.B)
 
 	io.put_pc.valid 	:= ibuf_valid(reg_tail)
 	io.put_pc.bits.pc 	:= ibuf_pc(reg_tail)
