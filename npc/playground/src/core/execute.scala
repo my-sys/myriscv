@@ -156,7 +156,9 @@ class Exu extends Module with CoreParameters{
 	system_exu.io.csr_data	:= csr_data
 	system_exu.io.csr_addr	:= csr_addr
 	system_exu.io.imm		:= op_imm 
-	system_exu.io.rs1_data	:= rs1_data
+	system_exu.io.rs1_data	:= rs1_data 
+	system_exu.io.mstatus	:= io.mstatus
+	system_exu.io.mepc 		:= io.mepc
 
 	val reg_sys_alu_w_valid  = RegInit(false.B)
 	val reg_sys_alu_wdata 	 = RegInit(0.U(64.W))
