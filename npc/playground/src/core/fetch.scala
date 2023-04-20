@@ -37,7 +37,7 @@ class IBuf extends Module{
 			ibuf_valid(i) := false.B
 		}
 	}.otherwise{
-		when(ready){
+		when(ready & ibuf_valid(reg_tail)){
 			reg_tail	:= reg_tail + 1.U
 			ibuf_valid(reg_tail)	:= false.B 
 		}
