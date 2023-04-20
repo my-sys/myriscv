@@ -198,7 +198,7 @@ def SFENCE_VMA  = BitPat("b0001001_?????_?????_000_00000_1110011")
         EBREAK      -> List(Op_type.op_system,  SYSType.system_ebreak,Inst_type.Type_N,	N,			N,			N),
         MRET        -> List(Op_type.op_system,  SYSType.system_mret,  Inst_type.Type_N,	N,			N,			N),
 		ECALL       -> List(Op_type.op_system,  SYSType.system_ecall, Inst_type.Type_N,	N,			N,			N),
-		SRET        -> List(Op_type,op_system,  SYSType.system_sret, Inst_type.Type_N,	N,			N,			N),
+		SRET        -> List(Op_type.op_system,  SYSType.system_sret, Inst_type.Type_N,	N,			N,			N),
 
         FENCE       -> List(Op_type.op_fence,   FENCEType.fence,   Inst_type.Type_N,	N,			N,			N),
         FENCE_I     -> List(Op_type.op_fence,   FENCEType.fence_i, Inst_type.Type_N,	N,			N,			N),
