@@ -8,6 +8,7 @@ object MUType{
 	def mu_divuw 	= "b101_11".U 
 	def mu_divw 	= "b100_11".U 
 	def mu_rem		= "b110_10".U 
+	def mu_remu 	= "b111_10".U 
 	def mu_remuw 	= "b111_11".U 
 	def mu_remw 	= "b110_11".U 
 
