@@ -82,6 +82,7 @@ class Exu extends Module with CoreParameters{
 			def fire: Bool = valid & ready
 		}
 	})
+	val in_data_valid = io.op_datas.valid &(!io.flush)
 	val opType 		= io.op_datas.bits.opType
 	val exuType		= io.op_datas.bits.exuType
 	val rs1_addr	= io.op_datas.bits.rs1_addr
@@ -117,7 +118,7 @@ class Exu extends Module with CoreParameters{
 		Op_type.op_system 	-> "b1000".U ,
 	))
 	when(ready){
-		when(io.op_datas.valid){
+		when(in_data_valid){
 			reg_valid := valid
 		}.otherwise{
 			reg_valid := 0.U
@@ -125,7 +126,7 @@ class Exu extends Module with CoreParameters{
 	}
 	
 	//-----------------ALU--------------------------------
-	alu_exu.io.valid	:= valid(0) & io.op_datas.valid & ready
+	alu_exu.io.valid	:= valid(0) & in_data_valid & ready
 	alu_exu.io.opType	:= opType
 	alu_exu.io.exuType	:= exuType
 	alu_exu.io.op_data1	:= rs1_data
@@ -135,7 +136,7 @@ class Exu extends Module with CoreParameters{
 
 	//----------------MEM---------------------------------
 	//原因，5级流水中目前只需要处理fence_i ,因此暂时没必要弄复杂了
-	mem_exu.io.valid		:= valid(1) & io.op_datas.valid & (opType =/= Op_type.op_fence) & ready
+	mem_exu.io.valid		:= valid(1) & in_data_valid & (opType =/= Op_type.op_fence) & ready
 	mem_exu.io.exuType		:= exuType
 	mem_exu.io.rs1_data		:= rs1_data
 	mem_exu.io.rs2_data		:= rs2_data
@@ -144,14 +145,14 @@ class Exu extends Module with CoreParameters{
 	mem_exu.io.bus <> io.bus
 
 	//----------------MUL/DIV-----------------------------
-	mu_exu.io.valid 		:= valid(2) & io.op_datas.valid & ready
+	mu_exu.io.valid 		:= valid(2) & in_data_valid & ready
 	mu_exu.io.kill			:= false.B //这是满足超标量的，5级流水不用置0
 	mu_exu.io.exu_type		:= exuType
 	mu_exu.io.rs1_data		:= rs1_data
 	mu_exu.io.rs2_data		:= rs2_data
 
 	//----------------System------------------------------
-	system_exu.io.valid		:= valid(3) & io.op_datas.valid & ready
+	system_exu.io.valid		:= valid(3) & in_data_valid & ready
 	system_exu.io.exuType	:= exuType
 	system_exu.io.csr_data	:= csr_data
 	system_exu.io.csr_addr	:= csr_addr
@@ -242,11 +243,11 @@ class Exu extends Module with CoreParameters{
 	val reg_commit 		= RegInit(false.B)
 	val reg_difftest_inst = RegInit(0.U(32.W))
 	when(ready){
-		reg_commit	:= io.op_datas.valid
+		reg_commit	:= in_data_valid
 		reg_difftest_inst := io.op_datas.bits.inst
 	}
-	//reg_commit := io.op_datas.valid
-	reg_fence_i	:= io.op_datas.valid & (io.op_datas.bits.opType === Op_type.op_fence) &(io.op_datas.bits.exuType === FENCEType.fence_i)
+	//reg_commit := in_data_valid
+	reg_fence_i	:= in_data_valid & (io.op_datas.bits.opType === Op_type.op_fence) &(io.op_datas.bits.exuType === FENCEType.fence_i)
 	io.fence_i 			:= reg_fence_i & ready
 	io.commit 			:= reg_commit & ready
 	io.difftest_peripheral	:= mem_exu.io.difftest_peripheral
