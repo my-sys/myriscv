@@ -2,207 +2,150 @@ import chisel3._
 import chisel3.util._
 
 object ALUType{
-    //需要组合一下减轻分量。    6位
-    // 第0位用于判断rs2是否为立即数，第1位用于判断是否为进行低位操作。 
-    // 
-	// 不应该从全零开始，复位后是全0状态，如果选择使用0作为状态会产生意料之外的情况. 
-    
-	val alu_none 	= "b000_00".U
-    val alu_auipc   = "b001_00".U
+//第2位表示立即数，1表示没有立即数，0表示有立即数。尽量与指令对应减少复杂度
+//第1位表示是否为32位操作，1表示是32位操作，0表示不是32位操作。
+	val alu_add 	= "b000_1_0".U 
+	val alu_addi 	= "b000_0_0".U 
+	val alu_addiw 	= "b000_0_1".U 
+	val alu_addw 	= "b000_1_1".U 
 
-    val alu_and     = "b010_00".U
-    val alu_andi    = "b010_01".U 
-    
-    val alu_slt     = "b011_00".U 
-    val alu_slti    = "b011_01".U 
-     
-    val alu_sltu    = "b100_00".U
-    val alu_sltiu   = "b100_01".U
+	val alu_slt 	= "b010_1_0".U 
+	val alu_slti 	= "b010_0_0".U 
 
-    val alu_sub     = "b101_00".U
-    val alu_subw    = "b101_10".U
+	val alu_sltiu   = "b011_0_0".U 
+	val alu_sltu 	= "b011_1_0".U 
 
-    val alu_sll     = "b110_00".U 
-    val alu_slli    = "b110_01".U     
-    val alu_sllw    = "b110_10".U
-    val alu_slliw   = "b110_11".U
+	val alu_and 	= "b111_1_0".U 
+	val alu_andi 	= "b111_0_0".U 
 
-    val alu_sra     = "b111_00".U 
-    val alu_srai    = "b111_01".U     
-    val alu_sraw    = "b111_10".U
-    val alu_sraiw   = "b111_11".U
+	val alu_or 		= "b110_1_0".U 
+	val alu_ori 	= "b110_0_0".U 
 
-    val alu_srl     = "b1000_00".U 
-    val alu_srli    = "b1000_01".U 
-    val alu_srlw    = "b1000_10".U 
-    val alu_srliw   = "b1000_11".U
+	val alu_xor 	= "b100_1_0".U 
+	val alu_xori 	= "b100_0_0".U 
 
+	val alu_sll 	= "b001_1_0".U 
+	val alu_slli 	= "b001_0_0".U 
+	val alu_slliw 	= "b001_0_1".U 
+	val alu_sllw 	= "b001_1_1".U 
 
-    val alu_or      = "b1001_00".U 
-    val alu_ori     = "b1001_01".U 
+	val alu_srl 	= "b101_1_0".U 
+	val alu_srli 	= "b101_0_0".U 
+	val alu_srliw 	= "b101_0_1".U 
+	val alu_srlw 	= "b101_1_1".U 
 
-    val alu_xor     = "b1010_00".U 
-    val alu_xori    = "b1010_01".U
+	val alu_sub 	= "b1_000_1_0".U
+	val alu_subw 	= "b1_000_1_1".U 
+	
+	val alu_sra 	= "b1_101_1_0".U 
+	val alu_srai 	= "b1_101_0_0".U 
+	val alu_sraiw 	= "b1_101_0_1".U 
+	val alu_sraw 	= "b1_101_1_1".U 
 
-    def alu_add     = "b1011_00".U 
-    val alu_addi    = "b1011_01".U
-    val alu_addw    = "b1011_10".U
-    val alu_addiw   = "b1011_11".U
+	val alu_lui 	= "b10_000_0_0".U 
+	val alu_auipc 	= "b11_000_0_0".U 
+}
 
-	val alu_lui 	= "b1100_00".U
-// 分支跳转不在遵循前面的规则，因为其不需要区分立即数，和低位操作。但识别的操作还是不能混淆
-// 这么做的目的主要是减小操作码
-    
-	val alu_beq     = "b1101_11".U //不需要区分立即数，和低位操作
-    val alu_bne     = "b1101_01".U //不需要区分立即数，和低位操作
-
-    val alu_bge     = "b1111_00".U //需要区分立即数
-    val alu_bgeu    = "b1111_10".U //需要区分立即数
-
-    val alu_blt     = "b1101_00".U //需要区分立即数
-    val alu_bltu    = "b1101_10".U //需要区分立即数
-
-// 这两个例外需要注意
-//同时满足，加法和跳转问题。运算指令的第5~1位不可以与跳转指令的5~1位相同，实际表现为(5,2)位不可以出现相同。
-//跳转指令内部没有这个要求，运算指令内部有这个要求。
-//在运算部分中不需要区分立即数，在跳转部分中，已经进行了特殊处理也不需要区分
-    val alu_jal     = "b1110_00".U //需要区分立即数，不需要区分低位操作
-    val alu_jalr    = "b1110_01".U //需要区分立即数，不需要区分低位操作
-
+object BRUType{
+//这里的低两位没有特殊含义，尽量与指令集的形式对应，这会有助于，解码阶段降低复杂度？
+//上面一行的理解少考虑分支指令借用alu资源的情况，
+//第2行对分支指令如何借用alu资源问题的考虑有所欠缺，比较用alu加法器，那地址计算呢？
+	val bru_beq 	= "b01_000_1_0".U  //0
+	val bru_bne 	= "b01_001_1_0".U  //1
+	val bru_blt		= "b01_100_1_0".U  //4
+	val bru_bltu 	= "b01_110_1_0".U //6
+	val bru_bge 	= "b01_101_1_0".U  //5
+	val bru_bgeu 	= "b01_111_1_0".U  //7
+//这个要与其他分支指令不一样，暂时如下，不过这个值，是不是在取指令阶段的就已经确定了。指令预测还没有装上，就按这个先。
+	val bru_jal 	= "b011_1_0".U  //3
+	val bru_jalr 	= "b010_1_0".U  //2
 }
 
 // ALU 是一个常用的单元，设计它的指令非常多，乘法，除法。存储指令，CSR较少，因此在多个执行单元中
 //应该有多个ALU。少数的CSR ，MU，LSU。
-class ALU_EXU extends Module with CoreParameters{
+class ALU_EXU(has_br_unit: Bool = false.B) extends Module with CoreParameters{
     val io = IO(new Bundle{
         val valid = Input(Bool())
-        val exuType = Input(UInt(ExuTypeLen.W))
-        val op_data1 = Input(UInt(RegDataLen.W))
-        val op_data2 = Input(UInt(RegDataLen.W))
-        val op_imm   = Input(UInt(RegDataLen.W))
-        val op_pc    = Input(UInt(AddrLen.W))
-		val stall    = Input(Bool())
-		val in_flush = Input(Bool())
+		val opType 		= Input(UInt(3.W))
+        val exuType 	= Input(UInt(7.W))
+		////op_data1 如果不存在寄存器值，则应当为0
+        val op_data1 	= Input(UInt(64.W))
+        val op_data2 	= Input(UInt(64.W))
+        val op_imm   	= Input(UInt(32.W))
+		//val is_imm 		= Input(Bool())
+		val op_pc 		= Input(UInt(64.W))
 
-        val result_data     = Output(UInt(RegDataLen.W))
-        val result_pc       = Output(UInt(AddrLen.W))
-        val next_pc_valid   = Output(Bool())
-        val w_rs_en         = Output(Bool())
+		//val has_dst 	= Output(Bool())
+        val dst_data	  = Output(UInt(RegDataLen.W))
+		val valid_next_pc = Output(Bool())
+		val next_pc 	= Output(UInt(64.W))
     })
 
-    val op_data1 = io.op_data1
-    val op_data2 = io.op_data2
-    val op_imm   = io.op_imm
-    val op_pc    = io.op_pc
+	//为啥可以采取这种粗暴的扩展方式，因为进行32位计算的都是有符号数。
+	val is_32 = io.exuType(0)
+	val op_data1 = Mux(is_32,Cat(32,io.op_data1(31),io.op_data1(31,0)),io.op_data1)
+	val op_data2 = Mux(is_32,Cat(32,io.op_data2(31),io.op_data2(31,0)),io.op_data2)
+	val op_imm   = Cat(Fill(32,io.op_imm(31)),io.op_imm)
+	val op_pc 	 = io.op_pc 
 
-    val rs2_data = Mux(io.exuType(0),io.op_imm,io.op_data2)
-
-    // subtraction, All data is assumed to be in the form of complement
-    val sub_data1 = op_data1
-    val sub_data2 = rs2_data//op_data2
-	////subresult(64)不是符号位,是进位,要分清
-    val subresult = Cat(0.U(1.W),sub_data1) + (sub_data2 ^ "hffff_ffff_ffff_ffff".U) + 1.U
-    
-    //  unsigend rs1 < rs2   must check this flag
-    val u_rs1_l_rs2 = !subresult(XLEN)
+	val rs2_is_imm = (!io.exuType(1))
+	val rs2_data = Mux(rs2_is_imm,op_imm,op_data2)
+	val rs1_is_pc = (io.exuType(6,5) === "b11".U)
+	val is_sub   = (io.exuType(6,5) === "b01".U)
+	//val rs1_is_0  = (io.exuType(6,5) === "b10".U)//重命名阶段，就需要分清哪些需要寄存器，哪些不需要寄存器。不需要寄存器的，该值就是0,这是仲裁与唤醒逻辑所需要的。
+	val rs1_data = Mux(rs1_is_pc,op_pc,op_data1)
+	val temp_rs2_data = Mux(is_sub,(rs2_data ^ "hffff_ffff_ffff_ffff".U),rs2_data)
+	val add_sub_result = Cat(0.U(1.W),rs1_data) + temp_rs2_data + is_sub
+	
+	//  unsigend rs1 < rs2   must check this flag
+    val u_rs1_l_rs2 = !add_sub_result(XLEN)
     //  unsigend rs1 < rs2   must check this flag   
-    val s_rs1_l_rs2 = Mux(sub_data1(XLEN-1)^sub_data2(XLEN-1),sub_data1(XLEN-1),subresult(XLEN-1))
+    val s_rs1_l_rs2 = Mux(rs1_data(XLEN-1)^rs2_data(XLEN-1),rs1_data(XLEN-1),add_sub_result(XLEN-1))
 
-    val sllw_temp  = op_data1(31,0) <<  rs2_data(4,0)        // (rs2_data & "h1f".U)
+	//val shift_rs1_data = Mux(is_32,Cat(32,rs1_data(31),rs1_data(31,0)),rs1_data)
+	val shift_rs2_data = Mux(is_32,rs2_data(4,0),rs2_data(5,0))
+	val sll_temp = rs1_data << shift_rs2_data
+	val srl_temp = rs1_data >> shift_rs2_data
+	val sra_temp = (rs1_data.asSInt >> shift_rs2_data).asUInt
+	val func = io.exuType(4,2)
 
-    val srlw_temp = op_data1(31,0) >>   rs2_data(4,0)        // (rs2_data & "h1f".U)
-
-    val sraw_temp      = ((op_data1(31,0)).asSInt >> (rs2_data & "h1f".U)).asUInt
-	val add_temp = op_data1 + rs2_data
-    val temp_result_data = MuxLookup(io.exuType(5,1),0.U(65.W), List(
-        ALUType.alu_add(5,1)    -> Cat(1.U(1.W),add_temp), //(op_data1 + rs2_data)
-        ALUType.alu_addw(5,1)   -> Cat(1.U(1.W),Mux(add_temp(31),Cat(Fill(32,1.U),add_temp(31,0)),Cat(0.U(32.W),add_temp(31,0)))),
-        ALUType.alu_auipc(5,1)  -> Cat(1.U(1.W),(op_pc + op_imm)),
-        ALUType.alu_and(5,1)    -> Cat(1.U(1.W),(op_data1 & rs2_data)),
-        
-        //  slt     slti 
-        ALUType.alu_slt(5,1)    -> Cat(1.U(1.W),(Cat(0.U((XLEN-1).W), s_rs1_l_rs2))),
-        ALUType.alu_sltu(5,1)   -> Cat(1.U(1.W),(Cat(0.U((XLEN-1).W), u_rs1_l_rs2))),
-        ALUType.alu_sub(5,1)    -> Cat(1.U(1.W),(subresult)(63,0)),
-        ALUType.alu_subw(5,1)   -> Cat(1.U(1.W),(Mux(subresult(31),Cat(Fill(32,1.U),subresult(31,0)),Cat(0.U(32.W),subresult(31,0))))),
-        //  sll        slli 
-        ALUType.alu_sll(5,1)    -> Cat(1.U(1.W),(op_data1 << (rs2_data(5,0)))(63,0)),  //(rs2_data &"h3f".U)
-        //  slliw       sllw 
-        ALUType.alu_sllw(5,1)   -> Cat(1.U(1.W),(Cat(Fill(32,sllw_temp(31)),sllw_temp(31,0)))),
-
-        //  srl         srli 
-        ALUType.alu_srl(5,1)    -> Cat(1.U(1.W),(op_data1 >> (rs2_data(5,0)))), //rs2_data & "h3f".U
-
-        // srlw         srliw 
-        ALUType.alu_srlw(5,1)   -> Cat(1.U(1.W),(Cat(Fill(32,srlw_temp(31)),srlw_temp(31,0)))),
-
-        // sra          srai 
-        ALUType.alu_sra(5,1)    -> Cat(1.U(1.W),((op_data1.asSInt >> (rs2_data(5,0))).asUInt)), //rs2_data & "h3f".U
-
-        //  sraw        sraiw 
-        ALUType.alu_sraw(5,1)   -> Cat(1.U(1.W),(Cat(Fill(32,sraw_temp(31)),sraw_temp(31,0)))),
-
-        //  xor         xori 
-        ALUType.alu_xor(5,1)    -> Cat(1.U(1.W),(op_data1 ^ rs2_data)),
-
-        // or           ori 
-        ALUType.alu_or(5,1)     -> Cat(1.U(1.W),(op_data1 | rs2_data)),
-
-		ALUType.alu_lui(5,1)    -> Cat(1.U(1.W),op_imm),
-
-		// jal 			jalr
-		ALUType.alu_jal(5,1)	-> Cat(1.U(1.W),op_pc + 4.U)
-    ))
-
-    val w_rs_en                 = temp_result_data(64)
-    val result_data             = temp_result_data(63,0)
-
-    val next_pc1 = Cat(1.U(1.W),op_pc + op_imm)
-    val next_pc2 = Cat(0.U(1.W),0.U(64.W)) 
-
-    val next_pc3 = Cat(1.U(1.W),(op_data1 + op_imm) & "hffff_ffff_ffff_fffe".U)
-    val temp_result_pc  = MuxLookup(io.exuType(5,0),0.U(65.W),List(
-        ALUType.alu_beq(5,0)    -> (Mux(op_data1 === op_data2, next_pc1,next_pc2)),
-        ALUType.alu_bge(5,0)    -> (Mux(!s_rs1_l_rs2,next_pc1,next_pc2)),
-        ALUType.alu_bgeu(5,0)   -> (Mux(!u_rs1_l_rs2,next_pc1,next_pc2)),
-        ALUType.alu_blt(5,0)    -> (Mux(s_rs1_l_rs2,next_pc1,next_pc2)),
-        ALUType.alu_bltu(5,0)   -> (Mux(u_rs1_l_rs2,next_pc1,next_pc2)),
-        ALUType.alu_bne(5,0)    -> (Mux(op_data1 === op_data2,next_pc2,next_pc1)),
-        ALUType.alu_jal(5,0)    -> (next_pc1),
-        ALUType.alu_jalr(5,0)   -> (next_pc3)
-    ))
-
-    val next_pc_valid   = temp_result_pc(64)
-    val result_pc       = temp_result_pc(63,0)
-
-	val reg_result_data = RegInit(0.U(64.W))
-	val reg_result_pc 	= RegInit(0.U(64.W))
-	val reg_next_pc_valid = RegInit(false.B)
-	val reg_w_rs_en 	= RegInit(false.B)
-
-	when(io.in_flush){
-		reg_result_data 	:= 0.U
-		reg_result_pc		:= 0.U
-		reg_next_pc_valid	:= false.B 
-		reg_w_rs_en			:= false.B
-	}.elsewhen(io.stall){
-		reg_result_data 	:= reg_result_data
-		reg_result_pc		:= reg_result_pc
-		reg_next_pc_valid	:= reg_next_pc_valid
-		reg_w_rs_en			:= reg_w_rs_en
-	}.otherwise{
-		reg_result_data 	:= result_data
-		reg_result_pc		:= result_pc
-		reg_next_pc_valid	:= next_pc_valid&io.valid
-		reg_w_rs_en			:= w_rs_en&io.valid
+	val result_data = MuxLookup(func,0.U,List(
+		ALUType.alu_add(4,2)	-> add_sub_result(63,0),
+		ALUType.alu_slt(4,2)	-> Cat(0.U((XLEN-1).W),s_rs1_l_rs2),
+		ALUType.alu_sltu(4,2)	-> Cat(0.U((XLEN-1).W),u_rs1_l_rs2),
+		ALUType.alu_and(4,2)	-> (rs1_data & rs2_data),
+		ALUType.alu_or(4,2)		-> (rs1_data | rs2_data),
+		ALUType.alu_xor(4,2)	-> (rs1_data ^ rs2_data),
+		ALUType.alu_sll(4,2)	-> sll_temp(63,0),
+		ALUType.alu_srl(4,2)	-> srl_temp(63,0),
+		ALUType.alu_sra(4,2)	-> sra_temp(63,0),
+	))
+	val is_br 		= WireInit(false.B)
+	val temp_result_pc = WireInit(0.U(65.W))
+	if(has_br_unit){
+		is_br 		:= (io.opType(2,0) === Op_type.bru)
+		
+		val is_eq 	= (op_data1 === op_data2)
+		val add_pc = Cat(1.U(1.W),op_pc + op_imm)
+		when(is_br){
+			temp_result_pc := MuxLookup(func,0.U,List(
+				BRUType.bru_beq(4,2)	-> Mux(is_eq,add_pc,0.U),
+				BRUType.bru_bne(4,2)	-> Mux(is_eq,0.U,add_pc),
+				BRUType.bru_blt(4,2)	-> Mux(s_rs1_l_rs2,add_pc,0.U),
+				BRUType.bru_bltu(4,2)	-> Mux(u_rs1_l_rs2,add_pc,0.U),
+				BRUType.bru_bge(4,2)	-> Mux(s_rs1_l_rs2,0.U,add_pc),
+				BRUType.bru_bgeu(4,2)	-> Mux(u_rs1_l_rs2,0.U,add_pc),
+				BRUType.bru_jal(4,2)	-> add_pc,
+				BRUType.bru_jalr(4,2)	-> Cat(add_pc(64,1),0.U(1.W))
+			))
+		}
 	}
-	// reg_result_data 	:= Mux(io.stall,reg_result_data,result_data)
-	// reg_result_pc		:= Mux(io.stall,reg_result_pc,result_pc)
-	// reg_next_pc_valid	:= Mux(io.stall,reg_next_pc_valid,next_pc_valid&io.valid)
-	// reg_w_rs_en			:= Mux(io.stall,reg_w_rs_en,w_rs_en&io.valid)
+	
+	val dst_data 		= Mux(is_br,op_pc + 4.U,result_data)
+	val next_pc   		= temp_result_pc(63,0)
+	val valid_next_pc 	= temp_result_pc(64)
 
-    io.result_data      := reg_result_data
-    io.result_pc        := reg_result_pc
-    io.next_pc_valid    := reg_next_pc_valid
-    io.w_rs_en          := reg_w_rs_en
+	io.dst_data			:= dst_data
+	io.valid_next_pc	:= valid_next_pc & io.valid
+	io.next_pc			:= next_pc
 }
