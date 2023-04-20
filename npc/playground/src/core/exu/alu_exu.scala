@@ -123,7 +123,7 @@ class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
 	val is_br 		= WireInit(false.B)
 	val temp_result_pc = WireInit(0.U(65.W))
 	if(has_br_unit){
-		is_br 		:= (io.opType(2,0) === Op_type.bru)
+		is_br 		:= (io.opType(2,0) === Op_type.op_bru)
 		
 		val is_eq 	= (op_data1 === op_data2)
 		val add_pc = Cat(1.U(1.W),op_pc + op_imm)
