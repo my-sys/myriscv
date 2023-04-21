@@ -119,7 +119,7 @@ class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
 		ALUType.alu_or(4,2)		-> (op_data1 | rs2_data),
 		ALUType.alu_xor(4,2)	-> (op_data1 ^ rs2_data),
 		ALUType.alu_sll(4,2)	-> sll_temp(63,0),
-		ALUType.alu_srl(4,2)	-> srl_temp(63,0),
+		ALUType.alu_srl(4,2)	-> sr_temp(63,0),
 		//ALUType.alu_sra(4,2)	-> sra_temp(63,0),
 	))
 	val is_br 		= WireInit(false.B)
