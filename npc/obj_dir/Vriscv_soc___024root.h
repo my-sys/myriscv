@@ -435,10 +435,12 @@ VL_MODULE(Vriscv_soc___024root) {
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__reg_except_next_pc;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__reg_except_pc;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__reg_next_pc;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___op_data1_T_4;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data2;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs2_data;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs1_data;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__result_data;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__dst_data;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_bus_addr;
@@ -462,10 +464,10 @@ VL_MODULE(Vriscv_soc___024root) {
         QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__difftest_pc;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__inst_counter;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT___inst_counter_T_1;
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mstatus;
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mie;
     };
     struct {
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mstatus;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mie;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mtvec;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mscratch;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mepc;
