@@ -148,7 +148,7 @@ class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
 	val next_pc   		= temp_result_pc(63,0)
 	val valid_next_pc 	= temp_result_pc(64)
 
-	io.dst_data			:= dst_data
+	io.dst_data			:= Mux(is_32,Cat(Fill(32,dst_data(31)),dst_data(31,0)),dst_data)
 	io.valid_next_pc	:= valid_next_pc & io.valid
 	io.next_pc			:= next_pc
 }
