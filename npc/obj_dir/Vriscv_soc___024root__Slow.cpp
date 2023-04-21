@@ -61,6 +61,10 @@ void Vriscv_soc___024root___settle__TOP__2(Vriscv_soc___024root* vlSelf) {
     CData/*3:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_364;
     CData/*0:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_398;
     CData/*0:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_417;
+    CData/*0:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_484;
+    CData/*0:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_502;
+    CData/*0:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_550;
+    CData/*0:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_568;
     VlWide<4>/*127:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___reg_cache_wdata_T_2;
     VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___temp_result_pc_T_21;
     VlWide<3>/*95:0*/ __Vtemp3;
@@ -1437,6 +1441,171 @@ void Vriscv_soc___024root___settle__TOP__2(Vriscv_soc___024root* vlSelf) {
                                                                     == 
                                                                     (0x707fU 
                                                                      & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)))))))))))))))))))));
+    riscv_soc__DOT__core__DOT__decode__DOT___T_484 
+        = ((0x3013U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+           | ((0x3033U == (0xfe00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+              | ((0x40005033U == (0xfe00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                 | ((0x40005013U == (0xfc00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                    | ((0x4000501bU == (0xfe00707fU 
+                                        & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                       | ((0x4000503bU == (0xfe00707fU 
+                                           & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                          | ((0x5033U == (0xfe00707fU 
+                                          & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                             | ((0x5013U == (0xfc00707fU 
+                                             & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                | ((0x501bU == (0xfe00707fU 
+                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                   | ((0x503bU == (0xfe00707fU 
+                                                   & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                      | ((0x40000033U 
+                                          == (0xfe00707fU 
+                                              & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                         | ((0x4000003bU 
+                                             == (0xfe00707fU 
+                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                            | ((0x2023U 
+                                                == 
+                                                (0x707fU 
+                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                               | ((0x6033U 
+                                                   == 
+                                                   (0xfe00707fU 
+                                                    & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                  | ((0x6013U 
+                                                      == 
+                                                      (0x707fU 
+                                                       & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                     | ((0x4033U 
+                                                         == 
+                                                         (0xfe00707fU 
+                                                          & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                        | ((0x4013U 
+                                                            == 
+                                                            (0x707fU 
+                                                             & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                           | ((0x2004033U 
+                                                               == 
+                                                               (0xfe00707fU 
+                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                              | ((0x2005033U 
+                                                                  == 
+                                                                  (0xfe00707fU 
+                                                                   & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                 | ((0x200503bU 
+                                                                     == 
+                                                                     (0xfe00707fU 
+                                                                      & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                    | ((0x200403bU 
+                                                                        == 
+                                                                        (0xfe00707fU 
+                                                                         & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                       | ((0x2000033U 
+                                                                           == 
+                                                                           (0xfe00707fU 
+                                                                            & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                          | ((0x2001033U 
+                                                                              == 
+                                                                              (0xfe00707fU 
+                                                                               & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                             | ((0x2002033U 
+                                                                                == 
+                                                                                (0xfe00707fU 
+                                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                                | ((0x2003033U 
+                                                                                == 
+                                                                                (0xfe00707fU 
+                                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                                | ((0x200003bU 
+                                                                                == 
+                                                                                (0xfe00707fU 
+                                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                                | ((0x2006033U 
+                                                                                == 
+                                                                                (0xfe00707fU 
+                                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                                | ((0x2007033U 
+                                                                                == 
+                                                                                (0xfe00707fU 
+                                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                                | ((0x200703bU 
+                                                                                == 
+                                                                                (0xfe00707fU 
+                                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                                | ((0x200603bU 
+                                                                                == 
+                                                                                (0xfe00707fU 
+                                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                                | ((0x6fU 
+                                                                                != 
+                                                                                (0x7fU 
+                                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                                & (0x67U 
+                                                                                == 
+                                                                                (0x707fU 
+                                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)))))))))))))))))))))))))))))))));
+    riscv_soc__DOT__core__DOT__decode__DOT___T_550 
+        = ((0x501bU != (0xfe00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+           & ((0x503bU == (0xfe00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+              | ((0x40000033U == (0xfe00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                 | ((0x4000003bU == (0xfe00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                    | ((0x2023U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                       | ((0x6033U == (0xfe00707fU 
+                                       & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                          | ((0x6013U != (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                             & ((0x4033U == (0xfe00707fU 
+                                             & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                | ((0x4013U != (0x707fU 
+                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                   & ((0x2004033U == 
+                                       (0xfe00707fU 
+                                        & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                      | ((0x2005033U 
+                                          == (0xfe00707fU 
+                                              & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                         | ((0x200503bU 
+                                             == (0xfe00707fU 
+                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                            | ((0x200403bU 
+                                                == 
+                                                (0xfe00707fU 
+                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                               | ((0x2000033U 
+                                                   == 
+                                                   (0xfe00707fU 
+                                                    & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                  | ((0x2001033U 
+                                                      == 
+                                                      (0xfe00707fU 
+                                                       & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                     | ((0x2002033U 
+                                                         == 
+                                                         (0xfe00707fU 
+                                                          & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                        | ((0x2003033U 
+                                                            == 
+                                                            (0xfe00707fU 
+                                                             & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                           | ((0x200003bU 
+                                                               == 
+                                                               (0xfe00707fU 
+                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                              | ((0x2006033U 
+                                                                  == 
+                                                                  (0xfe00707fU 
+                                                                   & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                 | ((0x2007033U 
+                                                                     == 
+                                                                     (0xfe00707fU 
+                                                                      & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                    | ((0x200703bU 
+                                                                        == 
+                                                                        (0xfe00707fU 
+                                                                         & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                       | (0x200603bU 
+                                                                          == 
+                                                                          (0xfe00707fU 
+                                                                           & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)))))))))))))))))))))));
     if ((0x2002033U == (0xfe00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data))) {
         riscv_soc__DOT__core__DOT__decode__DOT___T_165 = 3U;
         riscv_soc__DOT__core__DOT__decode__DOT___T_239 = 0xaU;
@@ -1915,6 +2084,98 @@ void Vriscv_soc___024root___settle__TOP__2(Vriscv_soc___024root* vlSelf) {
                                                                   (0xfe00707fU 
                                                                    & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
                                                                  | (IData)(riscv_soc__DOT__core__DOT__decode__DOT___T_398))))))))))))))))))));
+    riscv_soc__DOT__core__DOT__decode__DOT___T_502 
+        = ((0x5073U != (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+           & ((0x3003U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+              | ((3U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                 | ((0x4003U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                    | ((0x1003U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                       | ((0x5003U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                          | ((0x37U != (0x7fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                             & ((0x2003U == (0x707fU 
+                                             & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                | ((0x6003U == (0x707fU 
+                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                   | ((0x3023U == (0x707fU 
+                                                   & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                      | ((0x23U == 
+                                          (0x707fU 
+                                           & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                         | ((0x1023U 
+                                             == (0x707fU 
+                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                            | ((0x1033U 
+                                                == 
+                                                (0xfe00707fU 
+                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                               | ((0x1013U 
+                                                   == 
+                                                   (0xfc00707fU 
+                                                    & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                  | ((0x101bU 
+                                                      == 
+                                                      (0xfe00707fU 
+                                                       & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                     | ((0x103bU 
+                                                         == 
+                                                         (0xfe00707fU 
+                                                          & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                        | ((0x2033U 
+                                                            == 
+                                                            (0xfe00707fU 
+                                                             & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                           | ((0x2013U 
+                                                               == 
+                                                               (0x707fU 
+                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                              | (IData)(riscv_soc__DOT__core__DOT__decode__DOT___T_484)))))))))))))))))));
+    riscv_soc__DOT__core__DOT__decode__DOT___T_568 
+        = ((0x6003U != (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+           & ((0x3023U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+              | ((0x23U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                 | ((0x1023U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                    | ((0x1033U == (0xfe00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                       | ((0x1013U != (0xfc00707fU 
+                                       & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                          & ((0x101bU != (0xfe00707fU 
+                                          & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                             & ((0x103bU == (0xfe00707fU 
+                                             & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                | ((0x2033U == (0xfe00707fU 
+                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                   | ((0x2013U != (0x707fU 
+                                                   & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                      & ((0x3013U != 
+                                          (0x707fU 
+                                           & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                         & ((0x3033U 
+                                             == (0xfe00707fU 
+                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                            | ((0x40005033U 
+                                                == 
+                                                (0xfe00707fU 
+                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                               | ((0x40005013U 
+                                                   != 
+                                                   (0xfc00707fU 
+                                                    & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                  & ((0x4000501bU 
+                                                      != 
+                                                      (0xfe00707fU 
+                                                       & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                     & ((0x4000503bU 
+                                                         == 
+                                                         (0xfe00707fU 
+                                                          & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                        | ((0x5033U 
+                                                            == 
+                                                            (0xfe00707fU 
+                                                             & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                           | ((0x5013U 
+                                                               != 
+                                                               (0xfc00707fU 
+                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                              & (IData)(riscv_soc__DOT__core__DOT__decode__DOT___T_550)))))))))))))))))));
     if ((0x501bU == (0xfe00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data))) {
         riscv_soc__DOT__core__DOT__decode__DOT___T_180 = 2U;
         riscv_soc__DOT__core__DOT__decode__DOT___T_254 = 0x15U;
@@ -2333,6 +2594,104 @@ void Vriscv_soc___024root___settle__TOP__2(Vriscv_soc___024root* vlSelf) {
                                                             (0x707fU 
                                                              & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
                                                            & (IData)(riscv_soc__DOT__core__DOT__decode__DOT___T_417))))))))))))))))));
+    vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs1_is_reg 
+        = ((0x33U == (0xfe00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+           | ((0x13U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+              | ((0x1bU == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                 | ((0x3bU == (0xfe00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                    | ((0x7033U == (0xfe00707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                       | ((0x7013U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                          | ((0x17U != (0x7fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                             & ((0x63U == (0x707fU 
+                                           & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                | ((0x5063U == (0x707fU 
+                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                   | ((0x7063U == (0x707fU 
+                                                   & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                      | ((0x4063U == 
+                                          (0x707fU 
+                                           & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                         | ((0x6063U 
+                                             == (0x707fU 
+                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                            | ((0x1063U 
+                                                == 
+                                                (0x707fU 
+                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                               | ((0x3073U 
+                                                   == 
+                                                   (0x707fU 
+                                                    & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                  | ((0x7073U 
+                                                      != 
+                                                      (0x707fU 
+                                                       & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                     & ((0x2073U 
+                                                         == 
+                                                         (0x707fU 
+                                                          & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                        | ((0x6073U 
+                                                            != 
+                                                            (0x707fU 
+                                                             & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                           & ((0x1073U 
+                                                               == 
+                                                               (0x707fU 
+                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                              | (IData)(riscv_soc__DOT__core__DOT__decode__DOT___T_502)))))))))))))))))));
+    vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_588 
+        = ((0x17U != (0x7fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+           & ((0x63U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+              | ((0x5063U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                 | ((0x7063U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                    | ((0x4063U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                       | ((0x6063U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                          | ((0x1063U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                             | ((0x3073U != (0x707fU 
+                                             & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                & ((0x7073U != (0x707fU 
+                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                   & ((0x2073U != (0x707fU 
+                                                   & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                      & ((0x6073U != 
+                                          (0x707fU 
+                                           & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                         & ((0x1073U 
+                                             != (0x707fU 
+                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                            & ((0x5073U 
+                                                != 
+                                                (0x707fU 
+                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                               & ((0x3003U 
+                                                   != 
+                                                   (0x707fU 
+                                                    & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                  & ((3U 
+                                                      != 
+                                                      (0x707fU 
+                                                       & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                     & ((0x4003U 
+                                                         != 
+                                                         (0x707fU 
+                                                          & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                        & ((0x1003U 
+                                                            != 
+                                                            (0x707fU 
+                                                             & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                           & ((0x5003U 
+                                                               != 
+                                                               (0x707fU 
+                                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                              & ((0x37U 
+                                                                  != 
+                                                                  (0x7fU 
+                                                                   & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                 & ((0x2003U 
+                                                                     != 
+                                                                     (0x707fU 
+                                                                      & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
+                                                                    & (IData)(riscv_soc__DOT__core__DOT__decode__DOT___T_568)))))))))))))))))))));
     if ((0x1023U == (0x707fU & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data))) {
         riscv_soc__DOT__core__DOT__decode__DOT___T_195 = 5U;
         riscv_soc__DOT__core__DOT__decode__DOT___T_269 = 6U;
@@ -4269,6 +4628,8 @@ void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_284 = VL_RAND_RESET_I(7);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType = VL_RAND_RESET_I(4);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_434 = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs1_is_reg = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_588 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___imm_data_T_47 = VL_RAND_RESET_I(32);
     vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg_io_r_csr_mepc = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg_io_r_csr_mstatus = VL_RAND_RESET_Q(64);
