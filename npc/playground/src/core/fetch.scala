@@ -23,24 +23,29 @@ class IBuf extends Module{
 	val ibuf_valid  = RegInit(VecInit(Seq.fill(4)(false.B)))
 	val reg_head 	= RegInit(0.U(2.W))
 	val reg_tail 	= RegInit(0.U(2.W))
-	val reg_full_size = RegInit(0.U(3.W))
-	val full_size 	= (ibuf_valid(0)+ibuf_valid(1))+(ibuf_valid(2)+ibuf_valid(3))
-	reg_full_size := full_size
-	val allow_in	= WireInit(false.B)
-	allow_in 		:= (full_size < 3.U)
+	//val reg_ibuf_size = RegInit(0.U(3.W))
+	//val full_size 	= (ibuf_valid(0)+ibuf_valid(1))+(ibuf_valid(2)+ibuf_valid(3))
+	//reg_full_size := full_size
 	
 	val ready 		= io.put_pc.ready
 	val valid 		= io.cache_buf.valid 
 	val pc 			= io.cache_buf.bits.pc 
 	val inst 		= io.cache_buf.bits.inst 
+	val can_deq 	= ready & ibuf_valid(reg_tail)
+
+	val enq_size    = valid
+	val deq_size    = can_deq
+	val result_size = reg_ibuf_size + enq_size - deq_size
+	val allow_in	= result_size < 3.U	// 缓冲区的设计有误
 	when(flush){
 		reg_head	:= 0.U 
 		reg_tail 	:= 0.U 
+		reg_ibuf_size := 0.U
 		for(i <- 0 until 4){
 			ibuf_valid(i) := false.B
 		}
 	}.otherwise{
-		when(ready & ibuf_valid(reg_tail)){
+		when(can_deq){
 			reg_tail	:= reg_tail + 1.U
 			ibuf_valid(reg_tail)	:= false.B 
 		}
@@ -50,10 +55,11 @@ class IBuf extends Module{
 			ibuf_inst(reg_head)		:= inst
 			ibuf_valid(reg_head)	:= true.B 
 		}
+		reg_ibuf_size 	:= result_size
 	}
 
 	
-	io.cache_buf.ready 	:= Mux(reg_full_size <3.U,true.B,false.B)
+	io.cache_buf.ready 	:= allow_in
 
 	io.put_pc.valid 	:= ibuf_valid(reg_tail)
 	io.put_pc.bits.pc 	:= ibuf_pc(reg_tail)
