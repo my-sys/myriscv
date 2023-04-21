@@ -127,6 +127,8 @@ class MEM_EXU extends Module{
 			reg_bus_valid	:= false.B 
 			reg_bus_size	:= 0.U 
 
+			reg_exuType		:= 0.U 
+
 			reg_dest_addr	:= 0.U 
 			reg_result_data	:= 0.U 
 			reg_w_rs_en		:= false.B 
@@ -134,6 +136,7 @@ class MEM_EXU extends Module{
 			reg_difftest_peripheral := false.B
 			when(valid){
 				reg_ls_state	:= ls_busy
+				reg_exuType		:= exuType
 				reg_bus_addr	:= mem_addr
 				reg_bus_wdata	:= mem_w_data
 				reg_bus_wstrb	:= mem_wstrb
