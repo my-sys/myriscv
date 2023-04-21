@@ -104,9 +104,9 @@ class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
 
 	//val shift_rs1_data = Mux(is_32,Cat(32,rs1_data(31),rs1_data(31,0)),rs1_data)
 	val shift_rs2_data = Mux(is_32,rs2_data(4,0),rs2_data(5,0))
-	val sll_temp = rs1_data << shift_rs2_data
-	val srl_temp = rs1_data >> shift_rs2_data
-	val sra_temp = (rs1_data.asSInt >> shift_rs2_data).asUInt
+	val sll_temp = op_data1 << shift_rs2_data
+	val srl_temp = Mux(is_32,Cat(Fill(32,0.U(1.W)),op_data1(31,0)),op_data1) >> shift_rs2_data
+	val sra_temp = (op_data1.asSInt >> shift_rs2_data).asUInt
 	val is_sra   = is_sub//(io.exuType(6,5) === "b01".U)
 	val sr_temp  = Mux(is_sra,sra_temp,srl_temp)
 	val func = io.exuType(4,2)
@@ -115,9 +115,9 @@ class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
 		ALUType.alu_add(4,2)	-> add_sub_result(63,0),
 		ALUType.alu_slt(4,2)	-> Cat(0.U((XLEN-1).W),s_rs1_l_rs2),
 		ALUType.alu_sltu(4,2)	-> Cat(0.U((XLEN-1).W),u_rs1_l_rs2),
-		ALUType.alu_and(4,2)	-> (rs1_data & rs2_data),
-		ALUType.alu_or(4,2)		-> (rs1_data | rs2_data),
-		ALUType.alu_xor(4,2)	-> (rs1_data ^ rs2_data),
+		ALUType.alu_and(4,2)	-> (op_data1 & rs2_data),
+		ALUType.alu_or(4,2)		-> (op_data1 | rs2_data),
+		ALUType.alu_xor(4,2)	-> (op_data1 ^ rs2_data),
 		ALUType.alu_sll(4,2)	-> sll_temp(63,0),
 		ALUType.alu_srl(4,2)	-> srl_temp(63,0),
 		//ALUType.alu_sra(4,2)	-> sra_temp(63,0),
