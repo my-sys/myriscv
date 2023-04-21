@@ -9,11 +9,11 @@ object ALUType{
 	val alu_addiw 	= "b000_0_1".U 
 	val alu_addw 	= "b000_1_1".U 
 
-	val alu_slt 	= "b010_1_0".U 
-	val alu_slti 	= "b010_0_0".U 
+	val alu_slt 	= "b01_010_1_0".U 
+	val alu_slti 	= "b01_010_0_0".U 
 
-	val alu_sltiu   = "b011_0_0".U 
-	val alu_sltu 	= "b011_1_0".U 
+	val alu_sltiu   = "b01_011_0_0".U 
+	val alu_sltu 	= "b01_011_1_0".U 
 
 	val alu_and 	= "b111_1_0".U 
 	val alu_andi 	= "b111_0_0".U 
