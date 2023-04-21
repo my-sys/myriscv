@@ -107,6 +107,8 @@ class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
 	val sll_temp = rs1_data << shift_rs2_data
 	val srl_temp = rs1_data >> shift_rs2_data
 	val sra_temp = (rs1_data.asSInt >> shift_rs2_data).asUInt
+	val is_sra   = is_sub//(io.exuType(6,5) === "b01".U)
+	val sr_temp  = Mux(is_sra,sra_temp,srl_temp)
 	val func = io.exuType(4,2)
 
 	val result_data = MuxLookup(func,0.U,List(
@@ -118,7 +120,7 @@ class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
 		ALUType.alu_xor(4,2)	-> (rs1_data ^ rs2_data),
 		ALUType.alu_sll(4,2)	-> sll_temp(63,0),
 		ALUType.alu_srl(4,2)	-> srl_temp(63,0),
-		ALUType.alu_sra(4,2)	-> sra_temp(63,0),
+		//ALUType.alu_sra(4,2)	-> sra_temp(63,0),
 	))
 	val is_br 		= WireInit(false.B)
 	val temp_result_pc = WireInit(0.U(65.W))
