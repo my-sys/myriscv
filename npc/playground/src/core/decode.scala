@@ -70,10 +70,10 @@ class Decode extends Module{
 		reg_opType		:= opType
 		reg_exuType		:= exuType
 		reg_rs1_addr	:= rs1_addr
-		reg_rs1_data	:= io.normal_rd.rs1_data
+		reg_rs1_data	:= Mux(rs1_is_reg,io.normal_rd.rs1_data,0.U)
 
 		reg_rs2_addr	:= rs2_addr
-		reg_rs2_data	:= io.normal_rd.rs2_data
+		reg_rs2_data	:= Mux(rs2_is_reg,io.normal_rd.rs2_data,0.U)
 		reg_imm			:= imm_data
 		reg_pc			:= pc 
 
