@@ -170,6 +170,10 @@ class ICache_stage2 extends Module{
 	val LRU_1 	= reg_lru_1(index)
 	val chose_bit = 1.U << index 
 	val neg_chose_bit = ~chose_bit
+
+	val bus_idle :: bus_busy :: Nil = Enum(2)
+	val reg_bus_state = RegInit(bus_idle)
+	
 	when((reg_bus_state === bus_idle)&valid){
 		when(hit_0){
 			reg_lru_0 := reg_lru_0 & neg_chose_bit
@@ -188,8 +192,7 @@ class ICache_stage2 extends Module{
 		}
 	}
 
-	val bus_idle :: bus_busy :: Nil = Enum(2)
-	val reg_bus_state = RegInit(bus_idle)
+
 	switch(reg_bus_state){
 		is(bus_idle){
 			reg_cache_write := false.B
