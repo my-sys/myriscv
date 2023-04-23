@@ -4,8 +4,8 @@ import chisel3.util._
 class Crossbar_1 extends Module{
 	val io = IO(new Bundle{
 		val fetch = new Bundle{
-			val cpu_addr	= Decoupled(new CPU_ADDR_IO)
-			val cpu_data 	= Flipped(Decoupled(new CPU_DATA_IO))
+			val cpu_addr	= Flipped(Decoupled(new CPU_ADDR_IO))
+			val cpu_data 	= Decoupled(new CPU_DATA_IO)
 		}
 		val wb	 = Flipped(new Bundle{
 			val valid = Output(Bool())
