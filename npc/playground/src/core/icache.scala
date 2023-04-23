@@ -388,6 +388,7 @@ class ICache extends Module{
 	cache_stage1.io.sram.sram_data(1)	:= sram1_data.rdata
 	cache_stage1.io.sram.sram_tag(1)	:= sram1_tag.rdata(53,0)
 	cache_stage1.io.sram.ready 			:= reg_sram_r_ready
+	cache_stage2.io.cache_stage1 <> cache_stage1.io.cache_stage1
 	io.cache_bus <> cache_stage2.io.cache_bus
 	io.cpu_rdata <> cache_stage2.io.rdata
 }
