@@ -269,6 +269,7 @@ class ICache_stage2 extends Module{
 	
 	io.rdata.valid 		:= reg_valid
 	io.rdata.bits.data	:= reg_rdata
+	io.rdata.bits.pc 	:= reg_cpu_addr
 	
 	//------------------------- bus ---------------------------
 	io.cache_bus.w.valid 		:= false.B 
