@@ -113,7 +113,7 @@ class Fetch extends Module{
 	// 	}
 	// }
 
-	val reg_bus_valid 	= = RegInit(true.B)
+	val reg_bus_valid 	= RegInit(true.B)
 
 	ibuf.io.flush 				:= flush
 	ibuf.io.cache_buf.bits.pc 	:= io.cpu_data.bits.pc
