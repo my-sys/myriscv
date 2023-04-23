@@ -91,7 +91,7 @@ class Crossbar_1 extends Module{
 		io.fetch.cpu_addr.ready 	:= io.bus1.ready
 	} 
 
-	io.bus1.bits.addr 		:= io.fetch.cpu_addr.addr 
+	io.bus1.bits.addr 		:= io.fetch.cpu_addr.bits.addr 
 	io.bus1.valid 			:= fetch_low_address & io.fetch.cpu_addr.valid
 
 //----------------     wb           ----------

@@ -115,9 +115,11 @@ class Fetch extends Module{
 
 	val reg_bus_valid 	= RegInit(true.B)
 
+	val addr = io.cpu_data.bits.pc
+	val inst = Mux(addr(2),io.cpu_data.bits.data(63,32),io.cpu_data.bits.data(31,0))
 	ibuf.io.flush 				:= flush
 	ibuf.io.cache_buf.bits.pc 	:= io.cpu_data.bits.pc
-	ibuf.io.cache_buf.bits.inst	:= io.cpu_data.bits.inst
+	ibuf.io.cache_buf.bits.inst	:= io.cpu_data.bits.data
 	ibuf.io.cache_buf.valid 	:= io.cpu_data.valid &(!reg_flush ) &(!flush)
 
 	val ready = ibuf.io.cache_buf.ready 
