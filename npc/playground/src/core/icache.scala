@@ -111,7 +111,7 @@ class ICache_stage1 extends Module{
 	io.sram.sram_addr 	:= index
 	
 	io.cache_stage1.valid 				:= reg_valid & io.sram.ready
-	io.cache_stage1.bits.cpu_addr		:= cpu_addr
+	io.cache_stage1.bits.cpu_addr		:= reg_cpu_addr
 	io.cache_stage1.bits.sram(0).hit 		:= hit_0
 	io.cache_stage1.bits.sram(0).tag_valid 	:= tag_valid_0
 	io.cache_stage1.bits.sram(0).rdata 		:= rdata0
