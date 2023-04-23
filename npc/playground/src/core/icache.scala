@@ -133,15 +133,15 @@ class ICache_stage2 extends Module{
 	val hit_1 		= io.cache_stage1.bits.sram(1).hit
 	val tag_valid_0 = io.cache_stage1.bits.sram(0).tag_valid
 	val tag_valid_1	= io.cache_stage1.bits.sram(1).tag_valid
-	val rdata_0 	= io.cache_stage1.bits.sram(0).rdata
-	val rdata_1 	= io.cache_stage1.bits.sram(1).rdata
+	val rdata0 	= io.cache_stage1.bits.sram(0).rdata
+	val rdata1 	= io.cache_stage1.bits.sram(1).rdata
 
 	val cpu_addr 	= io.cache_stage1.bits.cpu_addr
 	val index 		= io.cache_stage1.bits.cpu_addr(9,4)
 	val valid 		= io.cache_stage1.valid &(!io.flush)
-	val offset 		= io.cache_stage1.bits.cpu_addr(3,0)
-	val rdata0 		= Mux(offset(3),rdata_0(127,64),rdata_0(63,0))
-	val rdata1 		= Mux(offset(3),rdata_1(127,64),rdata_1(63,0))
+	//val offset 		= io.cache_stage1.bits.cpu_addr(3,0)
+	// val rdata0 		= Mux(offset(3),rdata_0(127,64),rdata_0(63,0))
+	// val rdata1 		= Mux(offset(3),rdata_1(127,64),rdata_1(63,0))
 
 	//val reg_offset	= RegInit(0.U(4.W))
 	
@@ -173,7 +173,7 @@ class ICache_stage2 extends Module{
 
 	val bus_idle :: bus_busy :: Nil = Enum(2)
 	val reg_bus_state = RegInit(bus_idle)
-	
+
 	when((reg_bus_state === bus_idle)&valid){
 		when(hit_0){
 			reg_lru_0 := reg_lru_0 & neg_chose_bit
