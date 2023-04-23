@@ -147,7 +147,7 @@ class Fetch extends Module{
 	}
 
 	io.cpu_addr.valid 		:= reg_bus_valid
-	io.cpu_addr.bits.pc_0 	:= reg_pc_0
+	io.cpu_addr.bits.addr 	:= reg_pc_0
 	io.cpu_data.ready 		:= ready
 	io.put_pc <> ibuf.io.put_pc
 	io.out_flush := reg_flush | flush
