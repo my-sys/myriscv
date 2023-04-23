@@ -21,8 +21,8 @@ class SRAM_RDATA_TAG_IO extends Bundle{
 	val valid 		= Output(Bool())
 	val sram_addr 	= Output(UInt(6.W))
 	
-	val sram_data 	= Vec(2,Input(128.W))
-	val sram_tag 	= Vec(2,Input(128.W))
+	val sram_data 	= Vec(2,Input(UInt(128.W)))
+	val sram_tag 	= Vec(2,Input(UInt(128.W)))
 	val ready 		= Input(Bool())
 }
 
