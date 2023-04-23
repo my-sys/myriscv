@@ -39,9 +39,9 @@ class Tag_valid_IO extends Bundle{
 }
 
 class Cache_Stage1_IO extends Bundle{
-	val tag 		= Output(UInt(54.W))
-	val index		= Output(UInt(6.W))
-	val offset 		= Output(UInt(4.W))
+	// val tag 		= Output(UInt(54.W))
+	// val index		= Output(UInt(6.W))
+	// val offset 		= Output(UInt(4.W))
 	val cpu_addr 	= Output(UInt(64.W))
 	val sram		= Vec(2,new SRAM_DATA_IO)
 }
@@ -64,6 +64,7 @@ class ICache_stage0 extends Module{
 	}
 	io.addr.valid := reg_valid
 	io.addr.bits.addr := reg_addr
+	io.cpu_addr.ready := ready
 }
 
 class ICache_stage1 extends Module{
