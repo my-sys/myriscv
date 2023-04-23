@@ -5,7 +5,7 @@ class Crossbar_1 extends Module{
 	val io = IO(new Bundle{
 		val fetch = new Bundle{
 			val cpu_addr	= Decoupled(new CPU_ADDR_IO)
-			val cpu_data 	= Flipped(Decouple(new CPU_DATA_IO))
+			val cpu_data 	= Flipped(Decoupled(new CPU_DATA_IO))
 		}
 		val wb	 = Flipped(new Bundle{
 			val valid = Output(Bool())
@@ -22,8 +22,8 @@ class Crossbar_1 extends Module{
 		})
 		// out
 		val ICache = new Bundle{
-			val cpu_raddr = Flipped(Decouple(new CPU_ADDR_IO))
-			val cpu_rdata = Decouple(new CPU_DATA_IO)
+			val cpu_raddr = Flipped(Decoupled(new CPU_ADDR_IO))
+			val cpu_rdata = Decoupled(new CPU_DATA_IO)
 		}
 		val DCache = new Bundle{
 			val valid = Output(Bool())
