@@ -1,11 +1,9 @@
 import chisel3._
 import chisel3.util._ 
-//import chisel3.util.experimental.BoringUtils
 
 ///1 "hff".U
 //2 "o377".U
 //3 "b1111_1111".U
-
 class Cache_IBuf_IO extends Bundle{
 	val pc 		= Output(UInt(64.W))
 	val inst 	= Output(UInt(32.W))
@@ -24,9 +22,7 @@ class IBuf extends Module{
 	val reg_head 	= RegInit(0.U(2.W))
 	val reg_tail 	= RegInit(0.U(2.W))
 	val reg_ibuf_size = RegInit(0.U(3.W))
-	//val full_size 	= (ibuf_valid(0)+ibuf_valid(1))+(ibuf_valid(2)+ibuf_valid(3))
-	//reg_full_size := full_size
-	
+
 	val ready 		= io.put_pc.ready
 	val valid 		= io.cache_buf.valid 
 	val pc 			= io.cache_buf.bits.pc 
@@ -58,79 +54,22 @@ class IBuf extends Module{
 		reg_ibuf_size 	:= result_size
 	}
 
-	
 	io.cache_buf.ready 	:= allow_in
 
 	io.put_pc.valid 	:= ibuf_valid(reg_tail)
 	io.put_pc.bits.pc 	:= ibuf_pc(reg_tail)
 	io.put_pc.bits.inst	:= ibuf_inst(reg_tail)
-
-	// val ready 		= io.put_pc.ready
-	// val reg_pc 		= RegInit(0.U(64.W))
-	// val reg_inst 	= RegInit(0.U(32.W))
-	// val reg_valid 	= RegInit(false.B)
-
-	// when(flush){
-	// 	reg_valid := false.B 
-	// }.otherwise{
-	// 	when(ready){
-	// 		reg_valid	:= io.cache_buf.valid
-	// 	}
-	// }
-
-	// when(ready){
-	// 	reg_pc		:= io.cache_buf.bits.pc 
-	// 	reg_inst	:= io.cache_buf.bits.inst
-	// }
-	// io.put_pc.valid 	:= reg_valid
-	// io.put_pc.bits.pc 	:= reg_pc
-	// io.put_pc.bits.inst	:= reg_inst
-
-	// io.cache_buf.ready	:= ready
 }
-
-
-// //----------------------------------
-
-// when(fire){
-// 	when(flush){
-// 		reg_pc := next_pc
-// 	}.elsewhen(reg_flush){
-// 		reg_pc := reg_next_pc
-// 	}.otherwise{
-// 		reg_pc := reg_pc + 4.U
-// 	}
-// 	reg_flush := false.B
-// }.otherwise{
-// 	reg_flush := Mux(flush,true.B,reg_flush)
-// }
-
-// when(flush | reg_flush){
-// 	reg_stage_valid := 0.U 
-// }.otherwise{
-// 	when(fire){
-// 		reg_stage_valid =Cat(1.U(1.W),reg_stage_valid(2,1))
-// 	}
-// 	.elsewhen(ready){
-// 		reg_stage_valid =Cat(0.U(1.W),reg_stage_valid(2,1))
-// 	}
-// }
 
 class Fetch extends Module{
 	val io = IO(new Bundle{
 		val next_pc 	= Input(UInt(64.W))
 		val flush 		= Input(Bool())
-		val bus = new Bundle{
-			val valid = Output(Bool())
-			val bits  = new Bundle{
-				val pc_0 	= Output(UInt(64.W))
-				val inst 	= Input(UInt(64.W))
-			}
-			val ready = Input(Bool())
-			def fire: Bool = valid & ready
-		}
-		val put_pc = Decoupled(new Get_Inst_IO)
-	})
+		val cpu_addr	= Decouple(new CPU_ADDR_IO)
+		val cpu_data 	= Flipped(Decouple(new CPU_DATA_IO))
+		val put_pc		= Decoupled(new Get_Inst_IO)
+		val out_flush   = Output(Bool())
+	}
 	val next_pc			= io.next_pc
 	val flush 			= io.flush
 	val ibuf 			= Module(new IBuf)
@@ -138,33 +77,63 @@ class Fetch extends Module{
 	val reg_flush 		= RegInit(false.B)
 	val reg_next_pc		= RegInit(0.U(64.W))
 
-	//val reg_cache_ibuf_valid = RegInit(true.B)
-	val reg_bus_valid 		 = RegInit(true.B)
-	
-	ibuf.io.flush 				:= flush
-	ibuf.io.cache_buf.bits.pc 	:= reg_pc_0
-	ibuf.io.cache_buf.bits.inst := Mux(reg_pc_0(2),io.bus.bits.inst(63,32),io.bus.bits.inst(31,0))
-	ibuf.io.cache_buf.valid 	:= (!reg_flush)&(!flush)&io.bus.fire
-
-	val ready = ibuf.io.cache_buf.ready
-// //用经历几次fire的周期数量与flush进行判断
-// 	when(flush){
-// 		reg_cache_ibuf_valid := false.B
-// 	}.otherwise{
+//*******  ****/
+	// val reg_fetch_count 	= RegInit(0.U(3.W))
+	// val reg_need_flush_size = RegInit(0.U(3.W))
+	// val fetch_add_1 = io.cpu_addr.fire
+	// val fetch_sub_1 = io.cpu_data.fire 
+	// val result_size = reg_fetch_count + fetch_add_1 - fetch_sub_1
+	// when(flush){
+	// 	reg_need_flush_size = result_size
+	// 	reg_fetch_count		= 0.U
+	// }.otherwise{
+	// 	reg_fetch_count := result_size
 
 	// }
 
-	when(io.bus.fire){
+	// val reg_not_flush = RegInit(true.B)
+	// when(flush){
+	// 	reg_not_flush := false.B 
+	// }.otherwise{
+	// 	when(flush1){
+	// 		reg_temp := false.B 
+	// 	}
+	// }
+	// val reg_inst_valid = RegInit("b100".U(3.W))
+	// when(io.cpu_addr.fire){
+	// 	when(flush){
+	// 		reg_inst_valid := Cat(1.U(1.W),reg_inst_valid(2,1))
+	// 	}.otherwise{
+	// 		reg_inst_valid := Cat(1.U(1.W),0.U(2.W))
+	// 	}
+		
+	// }.otherwise{
+	// 	when(flush){
+	// 		reg_inst_valid := 0.U 
+	// 	}
+	// }
+
+	val reg_bus_valid 	= = RegInit(true.B)
+
+	ibuf.io.flush 				:= flush
+	ibuf.io.cache_buf.bits.pc 	:= io.cpu_data.bits.pc
+	ibuf.io.cache_buf.bits.inst	:= io.cpu_data.bits.inst
+	ibuf.io.cache_buf.valid 	:= io.cpu_data.valid &(!reg_flush ) &(!flush)
+
+	val ready = ibuf.io.cache_buf.ready 
+
+
+	when(io.cpu_addr.fire){
 		when(flush){
-			reg_pc_0	:= next_pc
+			reg_pc_0 	:= next_pc
 		}.elsewhen(reg_flush){
-			reg_pc_0 	:= reg_next_pc
+			reg_pc_0	:= reg_next_pc
 		}.otherwise{
-			reg_pc_0 := reg_pc_0 + 4.U
+			reg_pc_0	:= reg_pc_0 + 4.U 
 		}
-		reg_flush	:= false.B
+		reg_flush	:= false.B 
 		when(!ready){
-			reg_bus_valid := false.B
+			reg_bus_valid := false.B 
 		}
 	}.otherwise{
 		reg_pc_0 	:= reg_pc_0
@@ -175,7 +144,9 @@ class Fetch extends Module{
 		}
 	}
 
-	io.bus.valid 			:= reg_bus_valid
-	io.bus.bits.pc_0 		:= reg_pc_0
+	io.cpu_addr.valid 		:= reg_bus_valid
+	io.cpu_addr.bits.pc_0 	:= reg_pc_0
+	io.cpu_data.ready 		:= ready
 	io.put_pc <> ibuf.io.put_pc
+	io.out_flush := reg_flush | flush
 }

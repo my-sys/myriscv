@@ -3,16 +3,10 @@ import chisel3._
 import chisel3.util._
 class Crossbar_1 extends Module{
 	val io = IO(new Bundle{
-		// in 
-		val fetch = Flipped(new Bundle{
-			val valid = Output(Bool())
-			val bits = new Bundle{
-				val addr 	= Output(UInt(64.W))
-				val rdata	= Input(UInt(64.W))
-			}
-			val ready = Input(Bool())
-			def fire: Bool = valid & ready
-		})
+		val fetch = new Bundle{
+			val cpu_addr	= Decouple(new CPU_ADDR_IO)
+			val cpu_data 	= Flipped(Decouple(new CPU_DATA_IO))
+		}
 		val wb	 = Flipped(new Bundle{
 			val valid = Output(Bool())
 			val bits = new Bundle{
@@ -28,16 +22,8 @@ class Crossbar_1 extends Module{
 		})
 		// out
 		val ICache = new Bundle{
-			val valid = Output(Bool())
-			val bits = new Bundle{
-				val addr    = Output(UInt(64.W))
-				val rdata 	= Input(UInt(64.W))
-				// val wdata 	= Output(UInt(64.W))
-				// val wstrb 	= Output(UInt(8.W))
-				// val is_w 	= Output(Bool())
-			}
-			val ready = Input(Bool())
-			def fire: Bool = valid & ready
+			val cpu_raddr = Flipped(Decouple(new CPU_ADDR_IO))
+			val cpu_rdata = Decouple(new CPU_DATA_IO)
 		}
 		val DCache = new Bundle{
 			val valid = Output(Bool())
@@ -51,7 +37,6 @@ class Crossbar_1 extends Module{
 			val ready = Input(Bool())	
 			def fire: Bool = valid & ready
 		}
-		
 		val bus1	= new Bundle{
 			val valid = Output(Bool())
 			val bits = new Bundle{
@@ -87,26 +72,28 @@ class Crossbar_1 extends Module{
 		}
 	})
 //---------------------------fetch----------------------
-	val fetch_low_address	= (io.fetch.bits.addr(63,31) === "h0".U)
-	io.ICache.bits.addr  := io.fetch.bits.addr 
-	// io.ICache.bits.wdata := 0.U 
-	// io.ICache.bits.wstrb := 0.U 
-	// io.ICache.bits.is_w  := false.B 
-	//io.ICache.valid 	 := io.fetch.bits.addr(31)&io.fetch.valid
-	io.ICache.valid 	 := (!fetch_low_address)&io.fetch.valid
+	val fetch_low_address	= (io.fetch.cpu_addr.bits.addr(63,31) === "h0".U)
+	io.ICache.cpu_raddr.bits.addr  := io.fetch.cpu_addr.bits.addr
+	io.ICache.cpu_raddr.valid 	   := (!fetch_low_address)&io.fetch.cpu_addr.valid
+
+	io.ICache.cpu_rdata.ready 		:= io.fetch.cpu_data.ready
 	when(!fetch_low_address){
-		io.fetch.ready 		:= io.ICache.ready
-		io.fetch.bits.rdata := io.ICache.bits.rdata
+		io.fetch.cpu_addr.ready 	:= io.ICache.cpu_raddr.ready
+
+		io.fetch.cpu_data.bits.pc 	:= io.ICache.cpu_rdata.bits.pc
+		io.fetch.cpu_data.bits.data := io.ICache.cpu_rdata.bits.data
+		io.fetch.cpu_data.valid 	:= io.ICache.cpu_rdata.valid
 	}.otherwise{
-		io.fetch.bits.rdata := io.bus1.bits.rdata
-		io.fetch.ready 		:= io.bus1.ready
-	}
-	
-	//io.bus1.bits.is_io 		:= !(io.fetch.bits.addr(31))
-	io.bus1.bits.addr 		:= io.fetch.bits.addr 
-	//io.bus1.valid 			:= (!(io.fetch.bits.addr(31)))&io.fetch.valid
-	io.bus1.valid 			:= fetch_low_address & io.fetch.valid
-	
+		io.fetch.cpu_data.bits.pc 	:= io.bus1.bits.addr
+		io.fetch.cpu_data.bits.data := io.bus1.bits.rdata
+		io.fetch.cpu_data.valid 	:= io.bus1.ready
+
+		io.fetch.cpu_addr.ready 	:= io.bus1.ready
+	} 
+
+	io.bus1.bits.addr 		:= io.fetch.cpu_addr.addr 
+	io.bus1.valid 			:= fetch_low_address & io.fetch.cpu_addr.valid
+
 //----------------     wb           ----------
 	val low_address 		= (io.wb.bits.addr(63,31)=== "h0".U)
 	val not_clint 			= ((io.wb.bits.addr(30,0)<"h0200_0000".U) |(io.wb.bits.addr(30,0)>"h0200_FFFF".U))
@@ -116,7 +103,7 @@ class Crossbar_1 extends Module{
 	io.DCache.bits.is_w		:= io.wb.bits.is_w
 	//io.DCache.valid 		:= io.wb.bits.addr(31)& io.wb.valid 
 	io.DCache.valid 		:= (!low_address)& io.wb.valid 
-	
+
 	//io.bus2.bits.is_io		:= !(io.wb.bits.addr(31))
 	io.bus2.bits.addr 		:= io.wb.bits.addr
 	io.bus2.bits.wdata 		:= io.wb.bits.wdata
@@ -130,7 +117,7 @@ class Crossbar_1 extends Module{
 	io.clint_bus.bits.is_w  := io.wb.bits.is_w
 	io.clint_bus.bits.wdata	:= io.wb.bits.wdata
 	io.clint_bus.valid		:= low_address &(!not_clint) & io.wb.valid
-	
+
 	when(!low_address){
 		io.wb.ready 		:= io.DCache.ready
 		io.wb.bits.rdata 	:= io.DCache.bits.rdata

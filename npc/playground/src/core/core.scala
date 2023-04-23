@@ -60,7 +60,8 @@ class Core extends Module{
 	commit.io.difftest_peripheral	:= execute.io.difftest_peripheral
 
 //-------------- Cache and cpu  handshake-------------------
-	cross_bar_1.io.fetch.valid		:= fetch.io.bus.valid
+	cross_bar_1.io.fetch.cpu_addr <> fetch.io.cpu_addr 
+	cross_bar_1.io.fetch.cpu_data <> fetch.io.cpu_data 
 	cross_bar_1.io.fetch.bits.addr 	:= fetch.io.bus.bits.pc_0
 	fetch.io.bus.ready 				:= cross_bar_1.io.fetch.ready 
 	fetch.io.bus.bits.inst 			:= cross_bar_1.io.fetch.bits.rdata 
@@ -75,9 +76,11 @@ class Core extends Module{
 	execute.io.bus.ready 		:= cross_bar_1.io.wb.ready
 
 	i_cache.io.is_fence_i := execute.io.fence_i
+	i_cache.io.flush 	  := fetch.io.out_flush
 	//d_cache.io.is_fence_i := false.B 
 
-	i_cache.io.cpu <> cross_bar_1.io.ICache 
+	i_cache.io.cpu_raddr <> cross_bar_1.io.ICache.cpu_raddr
+	i_cache.io.cpu_rdata <> cross_bar_1.io.ICache.cpu_rdata
 	d_cache.io.cpu <> cross_bar_1.io.DCache 
 	clint_de.io.bits <> cross_bar_1.io.clint_bus.bits
 	clint_de.io.valid := cross_bar_1.io.clint_bus.valid 
