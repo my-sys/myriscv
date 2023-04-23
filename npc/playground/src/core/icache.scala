@@ -204,7 +204,7 @@ class ICache_stage2 extends Module{
 				when((hit_0 & tag_valid_0) | (hit_1 & tag_valid_1)){
 					// read data from cache
 					// ------ cpu----- 
-					reg_rdata 			:= Mux(hit_0,rdata0,rdata2)
+					reg_rdata 			:= Mux(hit_0,rdata0,rdata1)
 					reg_valid			:= true.B 
 					reg_ready 			:= true.B
 					reg_bus_state		:= bus_idle
@@ -337,6 +337,12 @@ class ICache extends Module{
 
 	val r_index 	= cache_stage1.io.tag_valid.index 
 	val is_r_sram	= cache_stage1.io.sram.valid 
+
+	val sram0_data  = io.sram0_data	// 存放数据
+	val sram0_tag 	= io.sram0_tag	// 存放Tag， 以及控制位
+	
+	val sram1_data	= io.sram2_data
+	val sram1_tag	= io.sram2_tag
 
 	//----------------------------- sram0------------------------------
 	val sram_addr = Mux(is_w_sram,w_index,r_index)
