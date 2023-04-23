@@ -69,7 +69,7 @@ class Fetch extends Module{
 		val cpu_data 	= Flipped(Decouple(new CPU_DATA_IO))
 		val put_pc		= Decoupled(new Get_Inst_IO)
 		val out_flush   = Output(Bool())
-	}
+	})
 	val next_pc			= io.next_pc
 	val flush 			= io.flush
 	val ibuf 			= Module(new IBuf)
