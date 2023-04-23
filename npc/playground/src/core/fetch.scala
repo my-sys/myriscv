@@ -65,8 +65,8 @@ class Fetch extends Module{
 	val io = IO(new Bundle{
 		val next_pc 	= Input(UInt(64.W))
 		val flush 		= Input(Bool())
-		val cpu_addr	= Decouple(new CPU_ADDR_IO)
-		val cpu_data 	= Flipped(Decouple(new CPU_DATA_IO))
+		val cpu_addr	= Decoupled(new CPU_ADDR_IO)
+		val cpu_data 	= Flipped(Decoupled(new CPU_DATA_IO))
 		val put_pc		= Decoupled(new Get_Inst_IO)
 		val out_flush   = Output(Bool())
 	})

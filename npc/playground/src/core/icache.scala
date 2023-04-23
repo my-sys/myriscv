@@ -49,8 +49,8 @@ class Cache_Stage1_IO extends Bundle{
 class ICache_stage0 extends Module{
 	val io = IO(new Bundle{
 		val flush			= Input(Bool())
-		val cpu_addr 		= Flipped(Decouple(new CPU_ADDR_IO))
-		val addr 			= Decouple(new CPU_ADDR_IO)
+		val cpu_addr 		= Flipped(Decoupled(new CPU_ADDR_IO))
+		val addr 			= Decoupled(new CPU_ADDR_IO)
 	})
 	val ready = io.addr.ready
 	val reg_valid = RegInit(false.B)
@@ -69,10 +69,10 @@ class ICache_stage0 extends Module{
 class ICache_stage1 extends Module{
 	val io = IO(new Bundle{
 		val flush 			= Input(Bool())
-		val cpu_addr 		= Flipped(Decouple(new CPU_ADDR_IO))
+		val cpu_addr 		= Flipped(Decoupled(new CPU_ADDR_IO))
 		val tag_valid 		= new Tag_valid_IO
 		val sram 			= new SRAM_RDATA_TAG_IO
-		val cache_stage1 	= Decouple(new Cache_Stage1_IO)
+		val cache_stage1 	= Decoupled(new Cache_Stage1_IO)
 	})
 	//io.sram.ready 表示本次发射得到数据，io.cache_stage1.ready 表示下一阶段准备接收数据
 	val valid = io.cpu_addr.valid  & (!io.flush)
@@ -124,10 +124,10 @@ class ICache_stage1 extends Module{
 class ICache_stage2 extends Module{
 	val io = IO(new Bundle{
 		val flush 			= Input(Bool())
-		val cache_stage1	= Flipped(Decouple(new Cache_Stage1_IO))
+		val cache_stage1	= Flipped(Decoupled(new Cache_Stage1_IO))
 		val cache_bus 		= new SimpleBus
 		val sram_w 			= new SRAM_WDATA_TAG_IO
-		val rdata 			= Decouple(new CPU_DATA_IO)
+		val rdata 			= Decoupled(new CPU_DATA_IO)
 	})
 	val hit_0 		= io.cache_stage1.bits.sram(0).hit
 	val hit_1 		= io.cache_stage1.bits.sram(1).hit
@@ -281,8 +281,8 @@ class ICache_stage2 extends Module{
 class ICache extends Module{
 	val io = IO(new Bundle{
 		val flush 	  = Input(Bool())
-		val cpu_raddr = Flipped(Decouple(new CPU_ADDR_IO))
-		val cpu_rdata = Decouple(new CPU_DATA_IO)
+		val cpu_raddr = Flipped(Decoupled(new CPU_ADDR_IO))
+		val cpu_rdata = Decoupled(new CPU_DATA_IO)
 		val is_fence_i = Input(Bool())
 		
 		val sram0_data 	= new SRAM_Interface 
