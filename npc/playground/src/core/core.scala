@@ -62,9 +62,9 @@ class Core extends Module{
 //-------------- Cache and cpu  handshake-------------------
 	cross_bar_1.io.fetch.cpu_addr <> fetch.io.cpu_addr 
 	cross_bar_1.io.fetch.cpu_data <> fetch.io.cpu_data 
-	cross_bar_1.io.fetch.bits.addr 	:= fetch.io.bus.bits.pc_0
-	fetch.io.bus.ready 				:= cross_bar_1.io.fetch.ready 
-	fetch.io.bus.bits.inst 			:= cross_bar_1.io.fetch.bits.rdata 
+	// cross_bar_1.io.fetch.bits.addr 	:= fetch.io.bus.bits.pc_0
+	// fetch.io.bus.ready 				:= cross_bar_1.io.fetch.ready 
+	// fetch.io.bus.bits.inst 			:= cross_bar_1.io.fetch.bits.rdata 
 
 	cross_bar_1.io.wb.valid			:= execute.io.bus.valid
 	cross_bar_1.io.wb.bits.addr 	:= execute.io.bus.bits.addr
