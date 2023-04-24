@@ -200,10 +200,14 @@ class ICache_stage2 extends Module{
 	switch(reg_bus_state){
 		is(bus_idle){
 			reg_cache_write := false.B
-			reg_cpu_addr	:= cpu_addr
+			
 			reg_chosen_tag	:= 0.U
 			//reg_offset		:= offset
-			reg_valid		:= false.B
+			when(ready){
+				reg_valid		:= false.B
+				reg_cpu_addr	:= cpu_addr
+			}
+			//
 			reg_ready		:= true.B 
 			reg_bus_state	:= bus_idle
 			reg_r_valid		:= false.B
