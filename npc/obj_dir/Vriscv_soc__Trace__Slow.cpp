@@ -847,7 +847,7 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+351,"riscv_soc core i_cache cache_stage2 LRU_1", false,-1);
         tracep->declQuad(c+352,"riscv_soc core i_cache cache_stage2 chose_bit", false,-1, 63,0);
         tracep->declQuad(c+354,"riscv_soc core i_cache cache_stage2 neg_chose_bit", false,-1, 63,0);
-        tracep->declBit(c+356,"riscv_soc core i_cache cache_stage2 reg_bus_state", false,-1);
+        tracep->declBus(c+356,"riscv_soc core i_cache cache_stage2 reg_bus_state", false,-1, 1,0);
         tracep->declBit(c+802,"riscv_soc core d_cache clock", false,-1);
         tracep->declBit(c+803,"riscv_soc core d_cache reset", false,-1);
         tracep->declBit(c+173,"riscv_soc core d_cache io_cpu_valid", false,-1);
@@ -2494,7 +2494,7 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                                  & (IData)(
                                                            (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage1__DOT__reg_cpu_addr 
                                                             >> 4U)))))),64);
-        tracep->fullBit(oldp+356,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_bus_state));
+        tracep->fullCData(oldp+356,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_bus_state),2);
         tracep->fullQData(oldp+357,((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_bus_addr 
                                      >> 0xaU)),54);
         tracep->fullCData(oldp+359,((0x3fU & (IData)(
