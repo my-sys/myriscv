@@ -259,11 +259,11 @@ class ICache_stage2 extends Module{
 			}
 			when(io.cache_bus.r.bits.rlast){
 				reg_cache_write 	:= true.B 
-				reg_bus_state 		:= Mux(ready,bus_idle,busy_wait)
+				reg_bus_state 		:= Mux(ready,bus_idle,bus_wait)
 				reg_ready 			:= true.B
 			}
 		}
-		is(busy_wait){
+		is(bus_wait){
 			reg_cache_write 	:= false.B
 			when(ready){
 				reg_valid	  := false.B
