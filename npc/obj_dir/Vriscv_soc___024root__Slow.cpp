@@ -3958,10 +3958,8 @@ void Vriscv_soc___024root___settle__TOP__2(Vriscv_soc___024root* vlSelf) {
             = vlSelf->riscv_soc__DOT__sram0__DOT__sram_Q[3U];
     }
     vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage1_io_tag_valid_tag_valid_0 
-        = (1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass0_val) 
-                 | (IData)((vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram0_valid 
-                            >> (0x3fU & (IData)((vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage0__DOT__reg_addr 
-                                                 >> 4U)))))));
+        = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass0_val) 
+           | (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_temp_sram0_valid));
     VL_EXTEND_WQ(128,54, __Vtemp248, (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_cpu_addr 
                                       >> 0xaU));
     VL_EXTEND_WQ(128,54, __Vtemp249, (0x3fffffffffffffULL 
@@ -4005,10 +4003,8 @@ void Vriscv_soc___024root___settle__TOP__2(Vriscv_soc___024root* vlSelf) {
             = vlSelf->riscv_soc__DOT__sram2__DOT__sram_Q[3U];
     }
     vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage1_io_tag_valid_tag_valid_1 
-        = (1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass1_val) 
-                 | (IData)((vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram1_valid 
-                            >> (0x3fU & (IData)((vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage0__DOT__reg_addr 
-                                                 >> 4U)))))));
+        = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass1_val) 
+           | (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_temp_sram1_valid));
     VL_EXTEND_WQ(128,54, __Vtemp252, (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_cpu_addr 
                                       >> 0xaU));
     VL_EXTEND_WQ(128,54, __Vtemp253, (0x3fffffffffffffULL 
@@ -4449,6 +4445,8 @@ void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__is_sram1_write = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT___reg_sram0_valid_T = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT___reg_sram1_valid_T = VL_RAND_RESET_Q(64);
+    vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_temp_sram0_valid = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_temp_sram1_valid = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass0_val = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass1_val = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram_r_ready = VL_RAND_RESET_I(1);

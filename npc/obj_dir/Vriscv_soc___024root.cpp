@@ -459,22 +459,6 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__3(Vriscv_soc___024root* 
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_sram2_valid 
             = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___reg_sram2_valid_T;
     }
-    if (vlSelf->reset) {
-        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram0_valid = 0ULL;
-    } else if (vlSelf->riscv_soc__DOT__core__DOT__execute_io_fence_i) {
-        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram0_valid = 0ULL;
-    } else if (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__is_sram0_write) {
-        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram0_valid 
-            = vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT___reg_sram0_valid_T;
-    }
-    if (vlSelf->reset) {
-        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram1_valid = 0ULL;
-    } else if (vlSelf->riscv_soc__DOT__core__DOT__execute_io_fence_i) {
-        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram1_valid = 0ULL;
-    } else if (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__is_sram1_write) {
-        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram1_valid 
-            = vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT___reg_sram1_valid_T;
-    }
     vlSelf->riscv_soc__DOT__core__DOT__cross_bar__DOT__reg_aw_ok 
         = ((~ (IData)(vlSelf->reset)) & ((~ (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_b_valid)) 
                                          & (((IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_aw_ready) 
@@ -1161,6 +1145,22 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__3(Vriscv_soc___024root* 
                     : (0xfffffffffffffff0ULL & vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage1__DOT__reg_cpu_addr));
         }
     }
+    vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_temp_sram0_valid 
+        = (1U & ((~ (IData)(vlSelf->reset)) & (IData)(
+                                                      (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram0_valid 
+                                                       >> 
+                                                       (0x3fU 
+                                                        & (IData)(
+                                                                  (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage0__DOT__reg_addr 
+                                                                   >> 4U)))))));
+    vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_temp_sram1_valid 
+        = (1U & ((~ (IData)(vlSelf->reset)) & (IData)(
+                                                      (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram1_valid 
+                                                       >> 
+                                                       (0x3fU 
+                                                        & (IData)(
+                                                                  (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage0__DOT__reg_addr 
+                                                                   >> 4U)))))));
     if (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__is_sram0_write) {
         VL_EXTEND_WQ(128,54, __Vtemp359, (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_cpu_addr 
                                           >> 0xaU));
@@ -2096,6 +2096,22 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__3(Vriscv_soc___024root* 
             = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_r_valid)
                 ? 0U : ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_r_valid)
                          ? 1U : (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar__DOT___GEN_10)));
+    }
+    if (vlSelf->reset) {
+        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram0_valid = 0ULL;
+    } else if (vlSelf->riscv_soc__DOT__core__DOT__execute_io_fence_i) {
+        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram0_valid = 0ULL;
+    } else if (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__is_sram0_write) {
+        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram0_valid 
+            = vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT___reg_sram0_valid_T;
+    }
+    if (vlSelf->reset) {
+        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram1_valid = 0ULL;
+    } else if (vlSelf->riscv_soc__DOT__core__DOT__execute_io_fence_i) {
+        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram1_valid = 0ULL;
+    } else if (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__is_sram1_write) {
+        vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram1_valid 
+            = vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT___reg_sram1_valid_T;
     }
     if (vlSelf->reset) {
         vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage0__DOT__reg_valid = 0U;
@@ -5800,10 +5816,8 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__3(Vriscv_soc___024root* 
             = vlSelf->riscv_soc__DOT__sram0__DOT__sram_Q[3U];
     }
     vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage1_io_tag_valid_tag_valid_0 
-        = (1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass0_val) 
-                 | (IData)((vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram0_valid 
-                            >> (0x3fU & (IData)((vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage0__DOT__reg_addr 
-                                                 >> 4U)))))));
+        = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass0_val) 
+           | (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_temp_sram0_valid));
     VL_EXTEND_WQ(128,54, __Vtemp518, (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_cpu_addr 
                                       >> 0xaU));
     VL_EXTEND_WQ(128,54, __Vtemp519, (0x3fffffffffffffULL 
@@ -5847,10 +5861,8 @@ VL_INLINE_OPT void Vriscv_soc___024root___sequent__TOP__3(Vriscv_soc___024root* 
             = vlSelf->riscv_soc__DOT__sram2__DOT__sram_Q[3U];
     }
     vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage1_io_tag_valid_tag_valid_1 
-        = (1U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass1_val) 
-                 | (IData)((vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram1_valid 
-                            >> (0x3fU & (IData)((vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage0__DOT__reg_addr 
-                                                 >> 4U)))))));
+        = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass1_val) 
+           | (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_temp_sram1_valid));
     VL_EXTEND_WQ(128,54, __Vtemp522, (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_cpu_addr 
                                       >> 0xaU));
     VL_EXTEND_WQ(128,54, __Vtemp523, (0x3fffffffffffffULL 
