@@ -24,7 +24,7 @@ class IBuf extends Module{
 	val reg_ibuf_size = RegInit(0.U(3.W))
 
 	val ready 		= io.put_pc.ready
-	val valid 		= io.cache_buf.valid 
+	val valid 		= io.cache_buf.fire
 	val pc 			= io.cache_buf.bits.pc 
 	val inst 		= io.cache_buf.bits.inst 
 	val can_deq 	= ready & ibuf_valid(reg_tail)
