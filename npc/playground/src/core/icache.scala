@@ -411,7 +411,9 @@ class ICache extends Module{
 
 
 	val reg_sram_r_ready = RegInit(true.B)
-	when(is_r_sram){
+	when(io.flush){
+		reg_sram_r_ready := true.B
+	}.elsewhen(is_r_sram){
 		reg_sram_r_ready := Mux(is_w_sram,false.B,true.B)
 	}
 	val temp_sram0_tag_data = Mux(w_r_pass0_val,sram_wtag,sram0_tag.rdata(53,0))
