@@ -792,6 +792,7 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBit(c+285,"riscv_soc core i_cache cache_stage1 io_cache_stage1_bits_sram_1_tag_valid", false,-1);
         tracep->declQuad(c+312,"riscv_soc core i_cache cache_stage1 io_cache_stage1_bits_sram_1_rdata", false,-1, 63,0);
         tracep->declBit(c+286,"riscv_soc core i_cache cache_stage1 valid", false,-1);
+        tracep->declBit(c+157,"riscv_soc core i_cache cache_stage1 ready", false,-1);
         tracep->declQuad(c+306,"riscv_soc core i_cache cache_stage1 reg_cpu_addr", false,-1, 63,0);
         tracep->declBit(c+329,"riscv_soc core i_cache cache_stage1 reg_valid", false,-1);
         tracep->declQuad(c+330,"riscv_soc core i_cache cache_stage1 reg_tag", false,-1, 53,0);
