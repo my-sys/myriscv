@@ -1579,27 +1579,7 @@ void Vriscv_soc___024root__traceChgSub0(Vriscv_soc___024root* vlSelf, VerilatedV
                                                                          & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
                                                                        & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_434)))))))))))))));
             tracep->chgBit(oldp+685,(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs1_is_reg));
-            tracep->chgBit(oldp+686,(((0x33U == (0xfe00707fU 
-                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
-                                      | ((0x13U != 
-                                          (0x707fU 
-                                           & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
-                                         & ((0x1bU 
-                                             != (0x707fU 
-                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
-                                            & ((0x3bU 
-                                                == 
-                                                (0xfe00707fU 
-                                                 & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
-                                               | ((0x7033U 
-                                                   == 
-                                                   (0xfe00707fU 
-                                                    & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
-                                                  | ((0x7013U 
-                                                      != 
-                                                      (0x707fU 
-                                                       & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
-                                                     & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_588)))))))));
+            tracep->chgBit(oldp+686,(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs2_is_reg));
             tracep->chgCData(oldp+687,((0x1fU & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data 
                                                  >> 7U))),5);
             tracep->chgCData(oldp+688,((0x1fU & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_exception))),5);

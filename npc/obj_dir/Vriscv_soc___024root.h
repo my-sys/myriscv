@@ -298,7 +298,7 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*3:0*/ riscv_soc__DOT__core__DOT__decode__DOT__instType;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_434;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__decode__DOT__rs1_is_reg;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__decode__DOT___T_588;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__decode__DOT__rs2_is_reg;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__commit__DOT__difftest_commit;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__commit__DOT__difftest_irq;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__commit__DOT__difftest_peripheral;
