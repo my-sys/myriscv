@@ -139,9 +139,11 @@ class ICache_stage2 extends Module{
 	val rdata0 	= io.cache_stage1.bits.sram(0).rdata
 	val rdata1 	= io.cache_stage1.bits.sram(1).rdata
 
+	val ready = io.rdata.ready
+
 	val cpu_addr 	= io.cache_stage1.bits.cpu_addr
 	val index 		= io.cache_stage1.bits.cpu_addr(9,4)
-	val valid 		= io.cache_stage1.valid &(!io.flush)
+	val valid 		= io.cache_stage1.valid &(!io.flush) & ready
 	//val offset 		= io.cache_stage1.bits.cpu_addr(3,0)
 	// val rdata0 		= Mux(offset(3),rdata_0(127,64),rdata_0(63,0))
 	// val rdata1 		= Mux(offset(3),rdata_1(127,64),rdata_1(63,0))
@@ -195,7 +197,6 @@ class ICache_stage2 extends Module{
 		}
 	}
 
-	val ready = io.rdata.ready
 	switch(reg_bus_state){
 		is(bus_idle){
 			reg_cache_write := false.B
@@ -217,7 +218,7 @@ class ICache_stage2 extends Module{
 					reg_rdata 			:= Mux(hit_0,rdata0,rdata1)
 					reg_valid			:= true.B 
 					reg_ready 			:= true.B
-					reg_bus_state		:= Mux(ready,bus_idle,bus_wait)
+					reg_bus_state		:= bus_idle//Mux(ready,bus_idle,bus_wait)
 				}.otherwise{
 					//------- bus----- 
 					reg_valid			:= false.B
@@ -259,17 +260,17 @@ class ICache_stage2 extends Module{
 			}
 			when(io.cache_bus.r.bits.rlast){
 				reg_cache_write 	:= true.B 
-				reg_bus_state 		:= Mux(ready,bus_idle,bus_wait)
+				reg_bus_state 		:= bus_idle//Mux(ready,bus_idle,bus_wait)
 				reg_ready 			:= true.B
 			}
 		}
-		is(bus_wait){
-			reg_cache_write 	:= false.B
-			when(ready){
-				reg_valid	  := false.B
-				reg_bus_state := bus_idle
-			}
-		}
+		// is(bus_wait){
+		// 	reg_cache_write 	:= false.B
+		// 	when(ready){
+		// 		reg_valid	  := false.B
+		// 		reg_bus_state := bus_idle
+		// 	}
+		// }
 	}
 
 	io.cache_stage1.ready := reg_ready & ready
