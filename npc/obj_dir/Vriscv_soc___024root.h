@@ -118,7 +118,7 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass0_val;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass1_val;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram_r_ready;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_4;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT___GEN_5;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage0__DOT__reg_valid;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage1__DOT__ready;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage1__DOT__reg_valid;
