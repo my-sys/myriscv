@@ -90,7 +90,7 @@ class ICache_stage1 extends Module{
 	val reg_tag 	= reg_cpu_addr(63,10)
 	val reg_index	= reg_cpu_addr(9,4)
 	val reg_offset	= reg_cpu_addr(3,0)
-	when(io.cache_stage1.ready){
+	when(ready){
 		reg_cpu_addr 	:= io.cpu_addr.bits.addr 
 		reg_valid	:= valid
 		// reg_sram0_valid := io.tag_valid.tag_valid(0)
