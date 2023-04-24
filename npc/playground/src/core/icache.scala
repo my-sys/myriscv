@@ -395,10 +395,10 @@ class ICache extends Module{
 	val temp_sram1_tag_data = Mux(w_r_pass1_val,sram_wtag,sram1_tag.rdata(53,0))
 	val temp_sram1_data = Mux(w_r_pass1_val,sram_wdata,sram1_data.rdata)
 
-	cache_stage1.io.sram.sram_data(0)	:= sram0_data.rdata
-	cache_stage1.io.sram.sram_tag(0)	:= sram0_tag.rdata(53,0)
-	cache_stage1.io.sram.sram_data(1)	:= sram1_data.rdata
-	cache_stage1.io.sram.sram_tag(1)	:= sram1_tag.rdata(53,0)
+	cache_stage1.io.sram.sram_data(0)	:= temp_sram0_data
+	cache_stage1.io.sram.sram_tag(0)	:= temp_sram0_tag_data
+	cache_stage1.io.sram.sram_data(1)	:= temp_sram1_data
+	cache_stage1.io.sram.sram_tag(1)	:= temp_sram1_tag_data
 	cache_stage1.io.sram.ready 			:= reg_sram_r_ready
 	cache_stage2.io.cache_stage1 <> cache_stage1.io.cache_stage1
 	io.cache_bus <> cache_stage2.io.cache_bus
