@@ -200,6 +200,10 @@ class ICache_stage2 extends Module{
 			reg_cpu_addr	:= cpu_addr
 			reg_chosen_tag	:= 0.U
 			//reg_offset		:= offset
+			reg_valid		:= false.B
+			reg_ready		:= true.B 
+			reg_bus_state	:= bus_idle
+			reg_r_valid		:= false.B
 			when(valid){
 			when(hit_0 | hit_1){
 			//一般情况下不会出现两个都中，如果两个都中，则说明tag为0 
