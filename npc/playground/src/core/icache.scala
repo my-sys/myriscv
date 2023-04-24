@@ -384,10 +384,14 @@ class ICache extends Module{
 	//上一行少考虑了如果取出的值与写入值相关，以及流水性问题，理解有错误
 //	cache_stage1.io.tag_valid.tag_valid(0) := reg_sram0_valid(r_index)//Mux(is_sram0_write &(r_index === w_index),1.U,reg_sram0_valid(r_index))
 //	cache_stage1.io.tag_valid.tag_valid(1) := reg_sram1_valid(r_index)//Mux(is_sram1_write &(r_index === w_index),1.U,reg_sram1_valid(r_index))
+	val reg_temp_sram0_valid = RegInit(false.B)
+	val reg_temp_sram1_valid = RegInit(false.B)
+	reg_temp_sram0_valid := reg_sram0_valid(r_index)
+	reg_temp_sram1_valid := reg_sram1_valid(r_index)
 	val w_r_pass0_val = is_sram0_write &(r_index === w_index)
 	val w_r_pass1_val = is_sram1_write &(r_index === w_index)
-	cache_stage1.io.tag_valid.tag_valid(0) := Mux(w_r_pass0_val,1.U,reg_sram0_valid(r_index))
-	cache_stage1.io.tag_valid.tag_valid(1) := Mux(w_r_pass1_val,1.U,reg_sram1_valid(r_index))
+	cache_stage1.io.tag_valid.tag_valid(0) := Mux(w_r_pass0_val,1.U,reg_temp_sram0_valid)
+	cache_stage1.io.tag_valid.tag_valid(1) := Mux(w_r_pass1_val,1.U,reg_temp_sram1_valid)
 
 
 	val reg_sram_r_ready = RegInit(true.B)
