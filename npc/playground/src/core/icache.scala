@@ -83,8 +83,8 @@ class ICache_stage1 extends Module{
 	//val reg_offset 	= RegInit(0.U(4.W))
 	val reg_cpu_addr = RegInit(0.U(64.W))
 	val reg_valid 	 = RegInit(false.B)
-	val reg_sram0_valid = RegInit(false.B)
-	val reg_sram1_valid = RegInit(false.B)
+	// val reg_sram0_valid = 
+	// val reg_sram1_valid = 
 	
 	val index = io.cpu_addr.bits.addr(9,4)
 	val reg_tag 	= reg_cpu_addr(63,10)
@@ -93,16 +93,16 @@ class ICache_stage1 extends Module{
 	when(io.cache_stage1.ready){
 		reg_cpu_addr 	:= io.cpu_addr.bits.addr 
 		reg_valid	:= valid
-		reg_sram0_valid := io.tag_valid.tag_valid(0)
-		reg_sram1_valid := io.tag_valid.tag_valid(1)
+		// reg_sram0_valid := io.tag_valid.tag_valid(0)
+		// reg_sram1_valid := io.tag_valid.tag_valid(1)
 	}
 	
 	val tag_0 	= io.sram.sram_tag(0)(53,0)
 	val tag_1 	= io.sram.sram_tag(1)(53,0)
 	val hit_0 	= (reg_tag === tag_0)
 	val hit_1 	= (reg_tag === tag_1)
-	val tag_valid_0	= reg_sram0_valid
-	val tag_valid_1 = reg_sram1_valid 
+	val tag_valid_0	= io.tag_valid.tag_valid(0)
+	val tag_valid_1 = io.tag_valid.tag_valid(1)
 	val rdata0 	= Mux(reg_offset(3),io.sram.sram_data(0)(127,64),io.sram.sram_data(0)(63,0))
 	val rdata1 	= Mux(reg_offset(3),io.sram.sram_data(1)(127,64),io.sram.sram_data(1)(63,0))
 	
