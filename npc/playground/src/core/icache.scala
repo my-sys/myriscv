@@ -174,7 +174,7 @@ class ICache_stage2 extends Module{
 	val chose_bit = 1.U << index 
 	val neg_chose_bit = ~chose_bit
 
-	val bus_idle :: bus_busy :: Nil = Enum(2)
+	val bus_idle :: bus_busy :: bus_wait :: Nil = Enum(3)
 	val reg_bus_state = RegInit(bus_idle)
 
 	when((reg_bus_state === bus_idle)&valid){
@@ -195,7 +195,7 @@ class ICache_stage2 extends Module{
 		}
 	}
 
-
+	val ready = io.rdata.ready
 	switch(reg_bus_state){
 		is(bus_idle){
 			reg_cache_write := false.B
@@ -217,7 +217,7 @@ class ICache_stage2 extends Module{
 					reg_rdata 			:= Mux(hit_0,rdata0,rdata1)
 					reg_valid			:= true.B 
 					reg_ready 			:= true.B
-					reg_bus_state		:= bus_idle
+					reg_bus_state		:= Mux(ready,bus_idle,bus_wait)
 				}.otherwise{
 					//------- bus----- 
 					reg_valid			:= false.B
@@ -259,12 +259,19 @@ class ICache_stage2 extends Module{
 			}
 			when(io.cache_bus.r.bits.rlast){
 				reg_cache_write 	:= true.B 
-				reg_bus_state 		:= bus_idle 
+				reg_bus_state 		:= Mux(ready,bus_idle,busy_wait)
 				reg_ready 			:= true.B
 			}
 		}
+		is(busy_wait){
+			reg_cache_write 	:= false.B
+			when(ready){
+				reg_valid	  := false.B
+				reg_bus_state := bus_idle
+			}
+		}
 	}
-	val ready = io.rdata.ready
+
 	io.cache_stage1.ready := reg_ready & ready
 	
 	io.sram_w.valid		:= reg_cache_write
