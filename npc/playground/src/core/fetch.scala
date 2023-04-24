@@ -32,7 +32,7 @@ class IBuf extends Module{
 	val enq_size    = valid
 	val deq_size    = can_deq
 	val result_size = reg_ibuf_size + enq_size - deq_size
-	val allow_in	= result_size < 3.U	// 缓冲区的设计有误
+	val allow_in	= reg_ibuf_size < 3.U	// 缓冲区的设计有误
 	when(flush){
 		reg_head	:= 0.U 
 		reg_tail 	:= 0.U 
