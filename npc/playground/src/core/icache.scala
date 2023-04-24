@@ -388,10 +388,12 @@ class ICache extends Module{
 //	cache_stage1.io.tag_valid.tag_valid(1) := reg_sram1_valid(r_index)//Mux(is_sram1_write &(r_index === w_index),1.U,reg_sram1_valid(r_index))
 	val reg_temp_sram0_valid = RegInit(false.B)
 	val reg_temp_sram1_valid = RegInit(false.B)
+	val reg_temp_r_index	 = RegInit(0.U(6.W))
 	reg_temp_sram0_valid := reg_sram0_valid(r_index)
 	reg_temp_sram1_valid := reg_sram1_valid(r_index)
-	val w_r_pass0_val = is_sram0_write &(r_index === w_index)
-	val w_r_pass1_val = is_sram1_write &(r_index === w_index)
+	reg_temp_r_index	 := r_index
+	val w_r_pass0_val = is_sram0_write &(reg_temp_r_index === w_index)
+	val w_r_pass1_val = is_sram1_write &(reg_temp_r_index === w_index)
 	cache_stage1.io.tag_valid.tag_valid(0) := Mux(w_r_pass0_val,1.U,reg_temp_sram0_valid)
 	cache_stage1.io.tag_valid.tag_valid(1) := Mux(w_r_pass1_val,1.U,reg_temp_sram1_valid)
 
