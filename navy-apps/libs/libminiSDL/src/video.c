@@ -7,7 +7,7 @@
 void SDL_BlitSurface(SDL_Surface *src, SDL_Rect *srcrect, SDL_Surface *dst, SDL_Rect *dstrect) {
   assert(dst && src);
   assert(dst->format->BitsPerPixel == src->format->BitsPerPixel);
-  if(src->format->palette!=NULL){
+  if(src->format->palette==NULL){
       uint32_t *temp_src = src->pixels;
       uint32_t *temp_dst = dst->pixels;
       int w1= src->w;
@@ -51,7 +51,7 @@ void SDL_BlitSurface(SDL_Surface *src, SDL_Rect *srcrect, SDL_Surface *dst, SDL_
 }
 
 void SDL_FillRect(SDL_Surface *dst, SDL_Rect *dstrect, uint32_t color) {
-  if(dst->format->palette!=NULL){  
+  if(dst->format->palette==NULL){  
     uint32_t *temp = dst->pixels;
     int w = dst->w;
     int h = dst->h;
@@ -103,7 +103,7 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
   uint32_t* color_buf = (uint32_t *)malloc(w*h*(sizeof(uint32_t)));
   //printf("0x%x\n",color_buf);
   //printf("SDL_UpdateRect 1\n");
-  if(s->format->palette != NULL){
+  if(s->format->palette == NULL){
     //printf("SDL_UpdateRect 2\n");
     uint32_t *temp = s->pixels;
     //printf("SDL_UpdateRect 3 %d,%d\n",w,h);
@@ -123,14 +123,16 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
     //printf("SDL_UpdateRect 5\n");
   }else{
     //printf("SDL_UpdateRect 8_\n");
-    uint8_t *temp = s->pixels;
+    uint8_t *temp = (s->pixels + x + y*(s->w));
+	uint8_t temp1 = 0;
     for(int i = 0; i < h; i++){
       for(int j = 0; j < w; j++){
         //printf("%d,w %d,h %d\n",i,w,h);
         //printf(" %d,%d,%d\n",i*w+j,*(temp + x + (y+i)* (s->w) + j),s->format->palette->colors[0]);
-        color_buf[i*w+j] =((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff00)
-                           +((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff)<<16)
-                           +((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff0000)>>16));
+		temp1 = *(temp + i*(s->w)+j);
+        color_buf[i*w+j] =((s->format->palette->colors[temp1].val&0xff00)
+                           +((s->format->palette->colors[temp1].val&0xff)<<16)
+                           +((s->format->palette->colors[temp1].val&0xff0000)>>16));
         // color_buf[i*w+j] =s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].r<<16
         //                   +s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].g<<8
         //                   +s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].b; 
