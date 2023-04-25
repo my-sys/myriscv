@@ -40,14 +40,10 @@ void SDL_BlitSurface(SDL_Surface *src, SDL_Rect *srcrect, SDL_Surface *dst, SDL_
 
       int dst_rect_x = (dstrect != NULL)?dstrect->x:0;
       int dst_rect_y = (dstrect != NULL)?dstrect->y:0;
-	  uint8_t * temp1 = NULL;
-	  uint8_t * temp2 = NULL;
       for(int i = 0; i<src_rect_h;i++){
-		temp1 = temp_dst + dst_rect_x + (dst_rect_y+i)*w2;
-		temp2 = temp_src+src_rect_x+(src_rect_y + i)*w1;
         for(int j = 0; j<src_rect_w;j++){
           //*(temp_src+srcrect->x +(srcrect->y + i)*w1+j) = *(temp_dst + dstrect->x + (dstrect->y+i)*w2+j);
-          *(temp1+j) = *(temp2+j);
+          *(temp_dst + dst_rect_x + (dst_rect_y+i)*w2+j) = *(temp_src+src_rect_x+(src_rect_y + i)*w1+j);
         }
       }
 
@@ -87,11 +83,9 @@ void SDL_FillRect(SDL_Surface *dst, SDL_Rect *dstrect, uint32_t color) {
       if(dst->format->palette->colors[k].val == color)break;
     }
     assert(k < dst->format->palette->ncolors);
-	uint8_t *temp1 = NULL;
     for(int i = 0;i<h1;i++){
-	  temp1 = temp+x+(y+i)*w;
       for(int j = 0; j<w1;j++){
-          *(temp1 + j)=k;
+          *(temp+x+(y+i)*w + j)=k;
       }
     }
   }
@@ -129,23 +123,19 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
     //printf("SDL_UpdateRect 5\n");
   }else{
     //printf("SDL_UpdateRect 8_\n");
-    uint8_t *temp = (s->pixels + x + y*(s->w));
-	uint8_t temp1 = 0;
-	uint8_t *temp2 = NULL;
+    uint8_t *temp = s->pixels;
     for(int i = 0; i < h; i++){
-		temp2 = temp + i * (s->w);
       for(int j = 0; j < w; j++){
         //printf("%d,w %d,h %d\n",i,w,h);
         //printf(" %d,%d,%d\n",i*w+j,*(temp + x + (y+i)* (s->w) + j),s->format->palette->colors[0]);
-		temp1 = *(temp2 + j);
-		color_buf[i*w+j] =((s->format->palette->colors[temp1].val&0xff00)
-                           +((s->format->palette->colors[temp1].val&0xff)<<16)
-                           +((s->format->palette->colors[temp1].val&0xff0000)>>16));
+        color_buf[i*w+j] =((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff00)
+                           +((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff)<<16)
+                           +((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff0000)>>16));
         // color_buf[i*w+j] =s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].r<<16
         //                   +s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].g<<8
         //                   +s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].b; 
       }
-    }
+    } 
   }
   // if((x+y+w+h) == 0){
   //   NDL_DrawRect(s->pixels,0,0,s->w,s->h);
