@@ -27,7 +27,7 @@ void SDL_BlitSurface(SDL_Surface *src, SDL_Rect *srcrect, SDL_Surface *dst, SDL_
         }
       }
   }else{
-      printf("SDL_BlitSurface 8_\n");
+      //printf("SDL_BlitSurface 8_\n");
       uint8_t *temp_src = src->pixels;
       uint8_t *temp_dst = dst->pixels;
       int w1= src->w;
@@ -40,10 +40,14 @@ void SDL_BlitSurface(SDL_Surface *src, SDL_Rect *srcrect, SDL_Surface *dst, SDL_
 
       int dst_rect_x = (dstrect != NULL)?dstrect->x:0;
       int dst_rect_y = (dstrect != NULL)?dstrect->y:0;
+	  uint8_t * temp1 = NULL;
+	  uint8_t * temp2 = NULL;
       for(int i = 0; i<src_rect_h;i++){
+		temp1 = temp_dst + dst_rect_x + (dst_rect_y+i)*w2;
+		temp2 = temp_src+src_rect_x+(src_rect_y + i)*w1;
         for(int j = 0; j<src_rect_w;j++){
           //*(temp_src+srcrect->x +(srcrect->y + i)*w1+j) = *(temp_dst + dstrect->x + (dstrect->y+i)*w2+j);
-          *(temp_dst + dst_rect_x + (dst_rect_y+i)*w2+j) = *(temp_src+src_rect_x+(src_rect_y + i)*w1+j);
+          *(temp1+j) = *(temp2+j);
         }
       }
 
