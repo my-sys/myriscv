@@ -10,6 +10,8 @@
 //==========
 
 class Vriscv_soc__Syms;
+class Vriscv_soc_VerilatedVcd;
+
 
 //----------
 
