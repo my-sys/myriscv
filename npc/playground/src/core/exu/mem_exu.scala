@@ -165,10 +165,11 @@ class MEM_EXU extends Module{
 	io.ready 		:= reg_ready
 	io.difftest_peripheral := reg_difftest_peripheral
 	
-	io.bus.valid 		:= reg_bus_valid
-	io.bus.bits.addr	:= reg_bus_addr
-	io.bus.bits.wdata	:= reg_bus_wdata
-	io.bus.bits.wstrb	:= reg_bus_wstrb
-	io.bus.bits.is_w	:= reg_bus_is_w
-	io.bus.bits.size	:= reg_bus_size
+	val chose_chancel = valid && (reg_ls_state === ls_idle)
+	io.bus.valid 		:= Mux(chose_chancel,valid,reg_bus_valid)
+	io.bus.bits.addr	:= Mux(chose_chancel,mem_addr,reg_bus_addr)
+	io.bus.bits.wdata	:= Mux(chose_chancel,mem_w_data,reg_bus_wdata)
+	io.bus.bits.wstrb	:= Mux(chose_chancel,mem_wstrb,reg_bus_wstrb)
+	io.bus.bits.is_w	:= Mux(chose_chancel,w_mem_en,reg_bus_is_w)
+	io.bus.bits.size	:= Mux(chose_chancel,bus_size,reg_bus_size)
 }
