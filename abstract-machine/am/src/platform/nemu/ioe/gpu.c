@@ -28,14 +28,10 @@ void __am_gpu_fbdraw(AM_GPU_FBDRAW_T *ctl) {
   int w = ctl->w;
   int h = ctl->h;
   int i,j;
-  int temp_j_400 = y*400;
-  int temp_j_w = 0;
   for(j=0;j<h;j++){
     for(i=0;i<w;i++){
-      fb[temp_j_400+x+i]=temp[temp_j_w+i];
+      fb[(y+j)*400+x+i]=temp[j*w+i];
     }
-	temp_j_400 = temp_j_400 + 400;
-	temp_j_w	= temp_j_w + w;
   }
 
 //   uint64_t *fb = (uint64_t *)(uintptr_t)FB_ADDR;
