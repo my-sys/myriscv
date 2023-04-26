@@ -40,11 +40,15 @@ void SDL_BlitSurface(SDL_Surface *src, SDL_Rect *srcrect, SDL_Surface *dst, SDL_
 
       int dst_rect_x = (dstrect != NULL)?dstrect->x:0;
       int dst_rect_y = (dstrect != NULL)?dstrect->y:0;
+	  int temp_w2 = dst_rect_y*w2;
+	  int temp_w1 = src_rect_y*w1;
       for(int i = 0; i<src_rect_h;i++){
         for(int j = 0; j<src_rect_w;j++){
           //*(temp_src+srcrect->x +(srcrect->y + i)*w1+j) = *(temp_dst + dstrect->x + (dstrect->y+i)*w2+j);
-          *(temp_dst + dst_rect_x + (dst_rect_y+i)*w2+j) = *(temp_src+src_rect_x+(src_rect_y + i)*w1+j);
+          *(temp_dst + dst_rect_x + temp_w2+j) = *(temp_src+src_rect_x+temp_w1+j);
         }
+		temp_w2 = temp_w2 + w2;
+		temp_w1 = temp_w1 + w1;
       }
 
   }
@@ -84,10 +88,12 @@ void SDL_FillRect(SDL_Surface *dst, SDL_Rect *dstrect, uint32_t color) {
       if(dst->format->palette->colors[k].val == color)break;
     }
     assert(k < dst->format->palette->ncolors);
+	int y_i_w = y*w;
     for(int i = 0;i<h1;i++){
       for(int j = 0; j<w1;j++){
-          *(temp+x+(y+i)*w + j)=k;
+          *(temp+x+y_i_w + j)=k;
       }
+	  y_i_w = y_i_w + w;
     }
   }
 
@@ -127,20 +133,23 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
   }else{
     //printf("SDL_UpdateRect 8_\n");
     uint8_t *temp = s->pixels;
+	int i_w = 0; int y_i_s_w = y*(s->w);
+	//乘法需要60多个周期，尽量避免乘法。尤其在循环体中
     for(int i = 0; i < h; i++){
       for(int j = 0; j < w; j++){
         //printf("%d,w %d,h %d\n",i,w,h);
         //printf(" %d,%d,%d\n",i*w+j,*(temp + x + (y+i)* (s->w) + j),s->format->palette->colors[0]);
         //color_buf[i*w+j] =(s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val);
 
-		color_buf[i*w+j] =((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff00)
-                           +((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff)<<16)
-                           +((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff0000)>>16));
+		color_buf[i_w+j] =((s->format->palette->colors[*(temp + x + y_i_s_w + j)].val&0xff00)
+                           +((s->format->palette->colors[*(temp + x + y_i_s_w + j)].val&0xff)<<16)
+                           +((s->format->palette->colors[*(temp + x + y_i_s_w + j)].val&0xff0000)>>16));
        
 	    // color_buf[i*w+j] =(s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].r<<16)
         //                   +(s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].g<<8)
         //                   +s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].b; 
       }
+	  i_w = i_w + w;y_i_s_w = y_i_s_w + (s->w);
     } 
   }
   // if((x+y+w+h) == 0){
