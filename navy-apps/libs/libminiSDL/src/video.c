@@ -134,9 +134,9 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
         //                    +((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff)<<16)
         //                    +((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff0000)>>16));
        
-	    color_buf[i*w+j] =s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].r<<16
-                          +s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].g
-                          +s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].b>>16; 
+	    color_buf[i*w+j] =(s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].r<<16)
+                          +(s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].g<<8)
+                          +s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].b; 
       }
     } 
   }
