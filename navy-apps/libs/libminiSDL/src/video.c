@@ -77,9 +77,10 @@ void SDL_FillRect(SDL_Surface *dst, SDL_Rect *dstrect, uint32_t color) {
     int w1 = (dstrect!=NULL)?dstrect->w:w;
     //printf("w = %d, h = %d\n",w,h);
     int k;
+	color = ((color & 0xff0000)>>16) + ((color & 0xff )<<16)+ color & 0xff00ff00;
     for(k = 0; k < dst->format->palette->ncolors; k++){
       //if(dst->format->palette->colors[k] == color)break;
-      color = (color & 0xff0000)>>16 + (color & 0xff )<<16+ color & 0xff00ff00;
+      //color = (color & 0xff0000)>>16 + (color & 0xff )<<16+ color & 0xff00ff00;
       if(dst->format->palette->colors[k].val == color)break;
     }
     assert(k < dst->format->palette->ncolors);
@@ -130,13 +131,13 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
         //printf(" %d,%d,%d\n",i*w+j,*(temp + x + (y+i)* (s->w) + j),s->format->palette->colors[0]);
         //color_buf[i*w+j] =(s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val);
 
-		// color_buf[i*w+j] =((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff00)
-        //                    +((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff)<<16)
-        //                    +((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff0000)>>16));
+		color_buf[i*w+j] =((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff00)
+                           +((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff)<<16)
+                           +((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff0000)>>16));
        
-	    color_buf[i*w+j] =(s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].r<<16)
-                          +(s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].g<<8)
-                          +s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].b; 
+	    // color_buf[i*w+j] =(s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].r<<16)
+        //                   +(s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].g<<8)
+        //                   +s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].b; 
       }
     } 
   }
