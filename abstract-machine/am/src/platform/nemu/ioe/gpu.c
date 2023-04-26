@@ -39,7 +39,7 @@ void __am_gpu_fbdraw(AM_GPU_FBDRAW_T *ctl) {
   int x = 0;///((ctl->x)>>1);
   int y = 0;//ctl->y;
   int w = 200;//(ctl->w+1)>>1;
-  int h = ctl->h;
+  int h = 300;//ctl->h;
   int i,j;
   for(j=0;j<h;j++){
     for(i=0;i<w;i++){
