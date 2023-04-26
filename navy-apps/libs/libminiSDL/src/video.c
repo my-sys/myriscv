@@ -93,7 +93,7 @@ void SDL_FillRect(SDL_Surface *dst, SDL_Rect *dstrect, uint32_t color) {
 
 }
 
-//static uint64_t color_buffer[200*300];
+static uint64_t color_buffer[200*300];
 void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
   //printf("SDL_UpdateRect \n");
   if((x+y+w+h) == 0){
@@ -102,8 +102,8 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
   //printf("SDL_UpdateRect 0\n");
   //uint32_t zz;
   //uint32_t color_buf[w*h];
-  uint32_t* color_buf = (uint32_t *)malloc(w*h*(sizeof(uint32_t)));
-  //uint32_t* color_buf = (uint32_t *)color_buffer;
+  //uint32_t* color_buf = (uint32_t *)malloc(w*h*(sizeof(uint32_t)));
+  uint32_t* color_buf = (uint32_t *)color_buffer;
   //printf("color_buf 0x%x\n",color_buf);
   //printf("SDL_UpdateRect 1\n");
   if(s->format->palette == NULL){
@@ -151,7 +151,7 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
   // }
   //printf("SDL_UpdateRect zz\n");
   NDL_DrawRect(color_buf,x,y,w,h);
-  free(color_buf);
+  //free(color_buf);
 }
 
 // APIs below are already implemented.
