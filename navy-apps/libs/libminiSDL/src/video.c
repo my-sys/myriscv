@@ -93,6 +93,7 @@ void SDL_FillRect(SDL_Surface *dst, SDL_Rect *dstrect, uint32_t color) {
 
 }
 
+static uint64_t color_buffer[200*300];
 void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
   //printf("SDL_UpdateRect \n");
   if((x+y+w+h) == 0){
@@ -101,7 +102,8 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
   //printf("SDL_UpdateRect 0\n");
   //uint32_t zz;
   //uint32_t color_buf[w*h];
-  uint32_t* color_buf = (uint32_t *)malloc(w*h*(sizeof(uint32_t)));
+  //uint32_t* color_buf = (uint32_t *)malloc(w*h*(sizeof(uint32_t)));
+  uint32_t* color_buf = (uint32_t *)color_buffer;
   //printf("0x%x\n",color_buf);
   //printf("SDL_UpdateRect 1\n");
   if(s->format->palette == NULL){
@@ -129,11 +131,11 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
       for(int j = 0; j < w; j++){
         //printf("%d,w %d,h %d\n",i,w,h);
         //printf(" %d,%d,%d\n",i*w+j,*(temp + x + (y+i)* (s->w) + j),s->format->palette->colors[0]);
-        color_buf[i*w+j] =(s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val);
+        //color_buf[i*w+j] =(s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val);
 
-		// color_buf[i*w+j] =((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff00)
-        //                    +((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff)<<16)
-        //                    +((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff0000)>>16));
+		color_buf[i*w+j] =((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff00)
+                           +((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff)<<16)
+                           +((s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val&0xff0000)>>16));
        
 	    // color_buf[i*w+j] =(s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].r<<16)
         //                   +(s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].g<<8)
