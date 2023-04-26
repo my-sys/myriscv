@@ -46,7 +46,7 @@ class MEM_EXU extends Module{
 				val wdata 	= Output(UInt(64.W))
 				val wstrb 	= Output(UInt(8.W))
 				val is_w 	= Output(Bool())
-				val size 	= Output(UInt(2.W))			
+				val size 	= Output(UInt(2.W))
 			}
 			val ready = Input(Bool())
 			def fire: Bool = valid & ready

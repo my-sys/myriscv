@@ -73,7 +73,7 @@ class Fetch extends Module{
 	val next_pc			= io.next_pc
 	val flush 			= io.flush
 	val ibuf 			= Module(new IBuf)
-	val reg_pc_0 		= RegInit("h8000_0000".U(64.W))
+	val reg_pc_0 		= RegInit("h8000_0000".U(32.W)) //RegInit("h8000_0000".U(64.W))
 	val reg_flush 		= RegInit(false.B)
 	val reg_next_pc		= RegInit(0.U(64.W))
 
