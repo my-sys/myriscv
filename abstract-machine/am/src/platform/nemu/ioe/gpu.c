@@ -30,7 +30,7 @@ void __am_gpu_fbdraw(AM_GPU_FBDRAW_T *ctl) {
   int i,j;
   for(j=0;j<h;j++){
     for(i=0;i<w;i++){
-      fb[(((y+j)<<8))+x+i]=temp[j*w+i];
+      fb[(((y+j)<<8)+((y+j)<<7))+x+i]=temp[j*w+i];
     }
   }
 
