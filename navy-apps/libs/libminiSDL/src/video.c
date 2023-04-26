@@ -261,7 +261,7 @@ void SDL_SetPalette(SDL_Surface *s, int flags, SDL_Color *colors, int firstcolor
   assert(s->format);
   assert(s->format->palette);
   assert(firstcolor == 0);
-
+  printf("SDL_SetPalette zzoo\n");
   s->format->palette->ncolors = ncolors;
   memcpy(s->format->palette->colors, colors, sizeof(SDL_Color) * ncolors);
 
