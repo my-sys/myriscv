@@ -166,7 +166,7 @@ class Fetch extends Module{
 	}
 
 	val get_pre_next_pc = pre_info_fifo(pre_info_tail)
-	io.get_pre_info.pre_next_pc = Mux(io.get_pre_info.valid,0.U,get_pre_next_pc)
+	io.get_pre_info.pre_next_pc := Mux(io.get_pre_info.valid,0.U,get_pre_next_pc)
 
 	val is_pre_head = RegInit(0.U(2.W))
 	val is_pre_tail = RegInit(0.U(2.W))
