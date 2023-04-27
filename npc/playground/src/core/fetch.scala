@@ -151,7 +151,10 @@ class Fetch extends Module{
 	val result_size = pre_info_size + pre_enq - pre_deq
 	val pre_info_not_full = result_size < 3.U
 	when(io.out_flush){
-		pre_info_fifo := 0.U 
+		pre_info_fifo(0) := 0.U 
+		pre_info_fifo(1) := 0.U 
+		pre_info_fifo(2) := 0.U 
+		pre_info_fifo(3) := 0.U 
 		pre_info_head	  := 0.U 
 		pre_info_tail	  := 0.U 
 	}.otherwise{
@@ -172,7 +175,10 @@ class Fetch extends Module{
 	val is_pre_tail = RegInit(0.U(2.W))
 	val is_pre_fifo = RegInit(VecInit(Seq.fill(4)(false.B)))
 	when(io.out_flush){
-		is_pre_fifo	:= 0.U 
+		is_pre_fifo(0)	:= false.B
+		is_pre_fifo(1)	:= false.B
+		is_pre_fifo(2)	:= false.B
+		is_pre_fifo(3)	:= false.B
 		is_pre_head	:= 0.U 
 		is_pre_tail	:= 0.U 
 	}.otherwise{
