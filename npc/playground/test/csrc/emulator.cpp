@@ -126,9 +126,11 @@ void Emulator::assert_fail_msg(){
 	  p = instbuf;
 	  printf("%d k\n",i);
       if((top->io_inst_counter%16) == i){
+		  printf("0x%lx, %s <------\n",iringbuf1[i],instbuf);
 		  disassemble(p,90,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
           printf("0x%lx, %s <------\n",iringbuf1[i],instbuf);
       }else{
+		  printf("0x%lx, %s\n",iringbuf1[i],instbuf);
 		  disassemble(p,90,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
 		  printf("0x%lx, %s\n",iringbuf1[i],instbuf);
 		  //disassemble(p,90,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
