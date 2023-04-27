@@ -122,7 +122,7 @@ void Emulator::execute_once(){
 void Emulator::assert_fail_msg(){
   char instbuf[100]={0};
   char *p;
-  for(int i = 0; i<16; i++){
+  for(int i = 1; i<16; i++){
 	  p = instbuf;
 	  printf("%d k\n",i);
       if((top->io_inst_counter%16) == i){
