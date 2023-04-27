@@ -143,7 +143,7 @@ class Fetch extends Module{
 
 	val pre_info_head 	= RegInit(0.U(2.W))
 	val pre_info_tail 	= RegInit(0.U(2.W))
-	val pre_info_size   = RegInit(4.U(3.W))
+	val pre_info_size   = RegInit(0.U(3.W))
 	//----taken--------------pre_pc-----------------------------
 	val pre_info_fifo 	= RegInit(VecInit(Seq.fill(4)(0.U(65.W))))
 	val pre_enq = io.cpu_addr.fire & is_pre
