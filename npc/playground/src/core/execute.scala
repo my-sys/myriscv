@@ -139,7 +139,7 @@ class Exu extends Module with CoreParameters{
 
 	alu_exu.io.get_pre_info <> io.get_pre_info
 	//alu_exu.io.br_info		<> io.br_info
-	alu_exu.io.is_pre	:= io.io.op_datas.bits.is_pre
+	alu_exu.io.is_pre	:= io.op_datas.bits.is_pre
 
 	//----------------MEM---------------------------------
 	//原因，5级流水中目前只需要处理fence_i ,因此暂时没必要弄复杂了
@@ -185,11 +185,11 @@ class Exu extends Module with CoreParameters{
 	val reg_taken 			= RegInit(false.B)
 	val reg_br_next_pc 		= RegInit(0.U(64.W))
 	when(alu_exu.io.valid & ready){
-		reg_br_valid		:= alu_exu.io.valid
-		reg_br_mispredict	:= alu_exu.io.mispredict
-		reg_br_pc			:= alu_exu.io.br_pc
-		reg_taken			:= alu_exu.io.taken
-		reg_br_next_pc		:= alu_exu.io.target_next_pc
+		reg_br_valid		:= alu_exu.io.br_info.valid
+		reg_br_mispredict	:= alu_exu.io.br_info.mispredict
+		reg_br_pc			:= alu_exu.io.br_info.br_pc
+		reg_taken			:= alu_exu.io.br_info.taken
+		reg_br_next_pc		:= alu_exu.io.br_info.target_next_pc
 	}.otherwise{
 		reg_br_valid	:= false.B
 	}
