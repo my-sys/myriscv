@@ -130,7 +130,7 @@ void Emulator::assert_fail_msg(){
 		  disassemble(p,90,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
           printf("0x%lx, %s <------\n",iringbuf1[i],instbuf);
       }else{
-		  printf("2 0x%lx, %s\n",iringbuf1[i],instbuf);
+		  printf("2 0x%lx, %s a\n",iringbuf1[i],instbuf);
 		  disassemble(p,90,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
 		  printf("0x%lx, %s\n",iringbuf1[i],instbuf);
 		  //disassemble(p,90,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
