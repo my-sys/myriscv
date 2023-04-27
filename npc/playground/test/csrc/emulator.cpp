@@ -124,6 +124,7 @@ void Emulator::assert_fail_msg(){
   char *p;
   for(int i = 0; i<16; i++){
 	  p = instbuf;
+	  printf("%d k\n",i);
       if((top->io_inst_counter%16) == i){
 		  disassemble(p,90,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
           printf("0x%lx, %s <------\n",iringbuf1[i],instbuf);
