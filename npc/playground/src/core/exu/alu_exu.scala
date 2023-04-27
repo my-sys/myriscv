@@ -164,12 +164,13 @@ class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
 	val valid_next_pc 	= temp_result_pc(64)
 
 	io.dst_data			:= Mux(is_32,Cat(Fill(32,dst_data(31)),dst_data(31,0)),dst_data)
-	io.valid_next_pc	:= valid_next_pc & io.valid
+	val flush 	= (pre & valid_next_pc &(next_pc =/= pre_next_pc))
+	io.valid_next_pc	:= io.valid & flush
 	io.next_pc			:= next_pc
 
 
 	io.br_info.valid 			:= is_br & io.valid
-	io.br_info.mispredict 		:= (valid_next_pc & (!is_pre)) | (next_pc =/= pre_next_pc)
+	io.br_info.mispredict 		:= (pre&(!valid_next_pc)) | flush | (valid_next_pc & (!is_pre))
 	io.br_info.br_pc			:= op_pc
 	io.br_info.taken 			:= valid_next_pc
 	io.br_info.target_next_pc 	:= next_pc
