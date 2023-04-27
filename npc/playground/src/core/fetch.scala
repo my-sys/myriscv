@@ -131,9 +131,6 @@ class Fetch extends Module{
 	val addr = io.cpu_data.bits.pc
 	val inst = Mux(addr(2),io.cpu_data.bits.data(63,32),io.cpu_data.bits.data(31,0))
 
-
-	
-
 //----------------------Pre Info--------------------------------
 	val br_predictor = Module(new Br_predictor)
 	br_predictor.io.br_info <> io.br_info
@@ -145,7 +142,7 @@ class Fetch extends Module{
 	val pre_info_tail 	= RegInit(0.U(2.W))
 	val pre_info_size   = RegInit(0.U(3.W))
 	//----taken--------------pre_pc-----------------------------
-	val pre_info_fifo 	= RegInit(VecInit(Seq.fill(4)(0.U(65.W))))
+	val pre_info_fifo 	= RegInit(VecInit(Seq.fill(4)(0.U(64.W))))
 	val pre_enq = io.cpu_addr.fire & is_pre
 	val pre_deq = io.get_pre_info.valid
 	val result_size = pre_info_size + pre_enq - pre_deq
