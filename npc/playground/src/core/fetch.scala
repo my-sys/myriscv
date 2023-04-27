@@ -157,6 +157,7 @@ class Fetch extends Module{
 		pre_info_fifo(3) := 0.U 
 		pre_info_head	  := 0.U 
 		pre_info_tail	  := 0.U 
+		pre_info_size	  := 0.U
 	}.otherwise{
 		pre_info_size := result_size
 		when(pre_enq.asBool){
