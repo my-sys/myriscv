@@ -37,6 +37,8 @@ class Core extends Module{
 //--------------- CPU section handshake --------------------
 	fetch.io.next_pc 			:= execute.io.next_pc
 	fetch.io.flush				:= execute.io.flush
+	fetch.io.get_pre_info <> execute.io.get_pre_info
+	fetch.io.br_info <> execute.io.br_info
 	fetch.io.put_pc <> decode.io.get_inst
 
 	decode.io.flush				:= execute.io.flush
@@ -44,6 +46,7 @@ class Core extends Module{
 	decode.io.csr_rd	<> commit.io.csr_rd
 
 	execute.io.op_datas <> decode.io.op_datas
+	
 	execute.io.irq.time_irq		:= clint_de.io.time_irq
 	execute.io.irq.soft_irq		:= clint_de.io.soft_irq
 	execute.io.mstatus			:= commit.io.csr_pass.csr_mstatus
