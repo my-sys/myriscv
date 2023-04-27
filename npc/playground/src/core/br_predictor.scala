@@ -69,7 +69,7 @@ class Br_predictor extends Module{
 	val btb_target_next_pc = btb_data(65,2)
 	val btb_br_type = btb_data(1,0)
 	
-	val pre_valid = btb_valid &(btb_tag === tag)
+	val pre_valid = true.B//btb_valid &(btb_tag === tag)
 	val pre_next_pc = WireInit(0.U)
 	when(pre_valid & pht_taken){
 		when(btb_br_type === BRType.br_return)
