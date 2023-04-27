@@ -3,6 +3,7 @@ import chisel3.util._
 class Get_Inst_IO extends Bundle{
 	val inst = Output(UInt(32.W))
 	val pc   = Output(UInt(64.W))
+	val is_pre = Output(Bool())
 }
 class Decode extends Module{
     val io = IO(new Bundle{
@@ -42,9 +43,11 @@ class Decode extends Module{
 
 	val reg_csr_addr 	= RegInit(0.U(12.W))
 	val reg_csr_data 	= RegInit(0.U(64.W))
+	val reg_is_pre 		= RegInit(false.B)
 
 	val inst         = io.get_inst.bits.inst 
 	val pc           = io.get_inst.bits.pc 
+	val is_pre 		 = io.get_inst.bits.is_pre
 	val decodefault	= List(0.U,0.U,0.U,false.B,false.B,false.B)
 
 	val opType :: exuType :: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg :: Nil = ListLookup(inst,decodefault,ISA.table)
@@ -83,6 +86,7 @@ class Decode extends Module{
 
 		reg_csr_addr	:= csr_addr
 		reg_csr_data 	:= io.csr_rd.csr_data
+		reg_is_pre		:= is_pre
 	}
 
 	io.get_inst.ready 		:= ready 
@@ -103,5 +107,6 @@ class Decode extends Module{
 
 	io.op_datas.bits.csr_addr		:= reg_csr_addr
 	io.op_datas.bits.csr_data		:= reg_csr_data
+	io.op_datas.bits.is_pre 		:= reg_is_pre
 	io.op_datas.valid 				:= reg_valid
 }

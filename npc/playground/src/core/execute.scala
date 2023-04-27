@@ -13,6 +13,7 @@ class Op_Datas_IO extends Bundle{
 	val inst 	 	= Input(UInt(32.W))
 	val dest_addr 	= Input(UInt(5.W))
 	val dest_is_reg = Input(Bool())
+	val is_pre 		= Input(Bool())
 
 	val csr_addr 	= Input(UInt(12.W))
 	val csr_data 	= Input(UInt(64.W))
@@ -66,7 +67,9 @@ class Exu extends Module with CoreParameters{
 		val next_pc    = Output(UInt(64.W))
 		val flush 	   = Output(Bool())
 		val fence_i	   = Output(Bool())
-		
+
+		val br_info	   = Flipped(new Br_Info_IO)
+		val get_pre_info = Flipped(new Get_Pre_Info_IO)
 
 		val bus = new Bundle{
 			val valid = Output(Bool())
@@ -134,6 +137,10 @@ class Exu extends Module with CoreParameters{
 	alu_exu.io.op_imm	:= op_imm
 	alu_exu.io.op_pc	:= op_pc
 
+	alu_exu.io.get_pre_info <> io.get_pre_info
+	//alu_exu.io.br_info		<> io.br_info
+	alu_exu.io.is_pre	:= io.io.op_datas.bits.is_pre
+
 	//----------------MEM---------------------------------
 	//原因，5级流水中目前只需要处理fence_i ,因此暂时没必要弄复杂了
 	mem_exu.io.valid		:= valid(1) & in_data_valid & (opType =/= Op_type.op_fence) & ready
@@ -167,10 +174,31 @@ class Exu extends Module with CoreParameters{
 	when(ready){
 		reg_dest_addr := dest_addr
 	}
-
+	
 	reg_sys_alu_w_valid :=  (alu_exu.io.valid | system_exu.io.valid)& io.op_datas.bits.dest_is_reg &(dest_addr =/= 0.U)&ready
 	
 	reg_sys_alu_wdata	:= Mux(system_exu.io.valid,system_exu.io.dst_data,alu_exu.io.dst_data)
+
+	val reg_br_valid 		= RegInit(false.B)
+	val reg_br_mispredict	= RegInit(false.B)
+	val reg_br_pc			= RegInit(0.U(64.W))
+	val reg_taken 			= RegInit(false.B)
+	val reg_br_next_pc 		= RegInit(0.U(64.W))
+	when(alu_exu.io.valid & ready){
+		reg_br_valid		:= alu_exu.io.valid
+		reg_br_mispredict	:= alu_exu.io.mispredict
+		reg_br_pc			:= alu_exu.io.br_pc
+		reg_taken			:= alu_exu.io.taken
+		reg_br_next_pc		:= alu_exu.io.target_next_pc
+	}.otherwise{
+		reg_br_valid	:= false.B
+	}
+	io.br_info.valid := reg_br_valid
+	io.br_info.mispredict	:= reg_br_mispredict
+	io.br_info.br_pc		:= reg_br_pc
+	io.br_info.taken		:= reg_taken
+	io.br_info.target_next_pc	:= reg_br_next_pc
+	io.br_info.br_type		:= 0.U 
 
 	val reg_csr_data 		= RegInit(0.U(64.W))
 	val reg_csr_addr 		= RegInit(0.U(12.W))

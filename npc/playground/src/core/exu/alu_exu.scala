@@ -66,6 +66,10 @@ object BRUType{
 class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
     val io = IO(new Bundle{
         val valid = Input(Bool())
+		val is_pre 		= Input(Bool())
+		val br_info		= new Br_Info_IO
+		val get_pre_info = new Get_Pre_Info_IO
+
 		val opType 		= Input(UInt(3.W))
         val exuType 	= Input(UInt(7.W))
 		////op_data1 如果不存在寄存器值，则应当为0
@@ -123,10 +127,21 @@ class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
 		//ALUType.alu_sra(4,2)	-> sra_temp(63,0),
 	))
 	val is_br 		= WireInit(false.B)
+	val is_pre 		= io.is_pre & io.valid
+	io.get_pre_info.valid := is_pre
+	val pre_next_pc = io.get_pre_info.pre_next_pc
 	val temp_result_pc = WireInit(0.U(65.W))
+	// val is_return  = WireInit(false.B)
+	// val is_call    = WireInit(false.B)
 	if(has_br_unit){
 		is_br 		:= (io.opType(2,0) === Op_type.op_bru)
-		
+		// val is_jalr = (BRUType.bru_jalr === io.exuType) & is_br
+		// val is_jal  = (BRUType.bru_jal === io.exuType) & is_br
+		// val is_rs1_ra   = 
+		// val is_dest_ra  = 
+		// val is_dest_x0   = 
+		// is_return = is_jalr & is_dest_x0 & is_rs1_ra
+		// is_call	  = (is_jalr | is_jal) & is_dest_ra
 		val is_eq 	= (op_data1 === op_data2)
 		val temp_1  = Mux(func === BRUType.bru_jalr(4,2),io.op_data1,op_pc)
 		val add_pc = Cat(1.U(1.W),temp_1 + op_imm)
@@ -151,4 +166,12 @@ class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
 	io.dst_data			:= Mux(is_32,Cat(Fill(32,dst_data(31)),dst_data(31,0)),dst_data)
 	io.valid_next_pc	:= valid_next_pc & io.valid
 	io.next_pc			:= next_pc
+
+
+	io.br_info.valid 			:= is_br & io.valid
+	io.br_info.mispredict 		:= (valid_next_pc & (!is_pre)) | (next_pc =/= pre_next_pc)
+	io.br_info.br_pc			:= op_pc
+	io.br_info.taken 			:= valid_next_pc
+	io.br_info.target_next_pc 	:= next_pc
+	io.br_info.br_type			:= 0.U
 }
