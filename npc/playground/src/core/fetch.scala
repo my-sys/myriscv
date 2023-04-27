@@ -137,7 +137,7 @@ class Fetch extends Module{
 //----------------------Pre Info--------------------------------
 	val br_predictor = new Br_predictor
 	br_predictor.io.br_info <> io.br_info
-	br_predictor.io.pc = reg_pc_0
+	br_predictor.io.pc := reg_pc_0
 	val is_pre 		= br_predictor.io.pre_valid
 	val pre_next_pc = br_predictor.io.pre_next_pc
 
@@ -152,11 +152,11 @@ class Fetch extends Module{
 	val pre_info_not_full = result_size < 3.U
 	when(io.out_flush){
 		pre_info_fifo := 0.U 
-		reg_head	  := 0.U 
-		tail_head	  := 0.U 
+		pre_info_head	  := 0.U 
+		pre_info_tail	  := 0.U 
 	}.otherwise{
 		pre_info_size := result_size
-		when(pre_enq){
+		when(pre_enq.asBool){
 			pre_info_fifo(pre_info_head) := pre_next_pc
 			pre_info_head	:= pre_info_head + 1.U 
 		}
