@@ -68,7 +68,7 @@ class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
         val valid = Input(Bool())
 		val is_pre 		= Input(Bool())
 		val br_info		= new Br_Info_IO
-		val get_pre_info = new Get_Pre_Info_IO
+		val get_pre_info = Flipped(new Get_Pre_Info_IO)
 
 		val opType 		= Input(UInt(3.W))
         val exuType 	= Input(UInt(7.W))
