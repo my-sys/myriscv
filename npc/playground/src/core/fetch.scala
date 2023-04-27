@@ -135,7 +135,7 @@ class Fetch extends Module{
 	
 
 //----------------------Pre Info--------------------------------
-	val br_predictor = new Br_predictor
+	val br_predictor = Module(new Br_predictor)
 	br_predictor.io.br_info <> io.br_info
 	br_predictor.io.pc := reg_pc_0
 	val is_pre 		= br_predictor.io.pre_valid
