@@ -149,7 +149,7 @@ class Fetch extends Module{
 	val pre_enq = io.cpu_addr.fire & is_pre
 	val pre_deq = io.get_pre_info.valid
 	val result_size = pre_info_size + pre_enq - pre_deq
-	val pre_info_not_full = result_size < 3.U
+	val pre_info_not_full = pre_info_size < 2.U
 	when(io.out_flush){
 		pre_info_fifo(0) := 0.U 
 		pre_info_fifo(1) := 0.U 
@@ -193,7 +193,7 @@ class Fetch extends Module{
 	}
 
 //--------------------------------------------------------------
-	val ready = ibuf.io.cache_buf.ready &(pre_info_not_full)
+	val ready = ibuf.io.cache_buf.ready 
 	when(io.cpu_addr.fire){
 		when(flush){
 			reg_pc_0 	:= next_pc
