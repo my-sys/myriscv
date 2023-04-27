@@ -23,7 +23,7 @@ class Br_predictor extends Module{
 		val pc 		= Input(UInt(64.W))
 		//-----------预测结果-----------------
 		val pre_next_pc = Output(UInt(64.W))
-		val pre_valid 	= Output(UInt(64.W))
+		val pre_valid 	= Output(Bool())
 	})
 	//index = 6 
 	//pc = Tag0 +index+Tag1 
