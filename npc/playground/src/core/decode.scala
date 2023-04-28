@@ -49,31 +49,30 @@ class Decode extends Module{
 	val pc           = io.get_inst.bits.pc 
 	val is_pre 		 = io.get_inst.bits.is_pre
 	val decodefault	= List(0.U,0.U,0.U,false.B,false.B,false.B)
-	val decoderesult = Wire(List(0.U))
-	when(ready){
-		decoderesult := ListLookup(inst,decodefault,ISA.table)
-	}
-	val opType :: exuType :: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg :: Nil = decoderesult
+
 	
 	val rs2_addr        = inst(24,20)
 	val rs1_addr        = inst(19,15)
 	val csr_addr        = inst(31,20)
 	val dest_addr    	= inst(11,7)
 
-    val imm_data             = MuxLookup(instType, 0.U, List(
-        Inst_type.Type_I    -> (Cat( Fill(20,inst(31)) ,inst(31,20))),  // sign extension
-        Inst_type.Type_U    -> (Cat(inst(31,12),0.U(12.W)) ), // sign extension 
-        Inst_type.Type_S    -> (Cat( Fill(20,inst(31)), Cat(inst(31,25),inst(11,7)) )), // sign extension
-        Inst_type.Type_J    -> (Cat( Fill(12,inst(31)),  Cat(Cat(inst(19,12),inst(20)),Cat(inst(30,21),0.U(1.W))) )), // sign extension
-        
-        Inst_type.Type_B    -> (Cat( Fill(20,inst(31)), Cat(Cat(inst(7),inst(30,25)), Cat(inst(11,8),0.U(1.W)))  )),
-        Inst_type.Type_CSR  -> (Cat( 0.U(27.W),inst(19,15))),
-        Inst_type.Type_IR   -> (Cat(0.U(26.W),inst(25,20)))
-        //Inst_type.Type_N    -> (),
-        //Inst_type.Type_R    -> (),
-    ))
+
 
 	when(ready){
+		val opType :: exuType :: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg :: Nil = ListLookup(inst,decodefault,ISA.table)
+		val imm_data             = MuxLookup(instType, 0.U, List(
+			Inst_type.Type_I    -> (Cat( Fill(20,inst(31)) ,inst(31,20))),  // sign extension
+			Inst_type.Type_U    -> (Cat(inst(31,12),0.U(12.W)) ), // sign extension 
+			Inst_type.Type_S    -> (Cat( Fill(20,inst(31)), Cat(inst(31,25),inst(11,7)) )), // sign extension
+			Inst_type.Type_J    -> (Cat( Fill(12,inst(31)),  Cat(Cat(inst(19,12),inst(20)),Cat(inst(30,21),0.U(1.W))) )), // sign extension
+			
+			Inst_type.Type_B    -> (Cat( Fill(20,inst(31)), Cat(Cat(inst(7),inst(30,25)), Cat(inst(11,8),0.U(1.W)))  )),
+			Inst_type.Type_CSR  -> (Cat( 0.U(27.W),inst(19,15))),
+			Inst_type.Type_IR   -> (Cat(0.U(26.W),inst(25,20)))
+			//Inst_type.Type_N    -> (),
+			//Inst_type.Type_R    -> (),
+		))
+
 		reg_opType		:= opType
 		reg_exuType		:= exuType
 		reg_rs1_addr	:= Mux(rs1_is_reg.asBool,rs1_addr,0.U)
