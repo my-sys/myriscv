@@ -164,16 +164,16 @@ class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
 	val next_pc   		= temp_result_pc(63,0)
 	val valid_next_pc 	= temp_result_pc(64)
 
-	io.dst_data			:= Mux(is_32,Cat(Fill(32,dst_data(31)),dst_data(31,0)),dst_data)
+	val br_valid 		= is_br & io.valid
+	io.dst_data			:= Mux(io.valid,Mux(is_32,Cat(Fill(32,dst_data(31)),dst_data(31,0)),dst_data),0.U)
 	val flush 	= (is_pre & valid_next_pc &(next_pc =/= pre_next_pc)) | (valid_next_pc & (!is_pre)) | (is_pre&(!valid_next_pc))
-	io.valid_next_pc	:= io.valid & flush
-	io.next_pc			:= next_pc
+	io.valid_next_pc	:= Mux(br_valid,flush,false.B)//io.valid & flush
+	io.next_pc			:= Mux(br_valid,next_pc,0.U)
 
-
-	io.br_info.valid 			:= is_br & io.valid
-	io.br_info.mispredict 		:= flush
-	io.br_info.br_pc			:= op_pc
-	io.br_info.taken 			:= valid_next_pc
-	io.br_info.target_next_pc 	:= next_pc
+	io.br_info.valid 			:= br_valid
+	io.br_info.mispredict 		:= Mux(br_valid,flush,false.B)
+	io.br_info.br_pc			:= Mux(br_valid,op_pc,0.U)
+	io.br_info.taken 			:= Mux(br_valid,valid_next_pc,false.B)
+	io.br_info.target_next_pc 	:= Mux(br_valid,next_pc,0.U)
 	io.br_info.br_type			:= 0.U
 }

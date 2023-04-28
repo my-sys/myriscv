@@ -97,11 +97,12 @@ class Exu extends Module with CoreParameters{
 	val dest_addr	= io.op_datas.bits.dest_addr
 	val csr_addr	= io.op_datas.bits.csr_addr 
 	val csr_data 	= Mux(io.csr.valid & (io.csr.csr_addr === csr_addr),io.csr.csr_data,io.op_datas.bits.csr_data)
-
+	
 	val alu_exu = Module(new ALU_EXU(true))
 	val mem_exu = Module(new MEM_EXU())
 	val mu_exu  = Module(new MU_EXU())
 	val system_exu = Module(new SYSTEM_EXU)
+
 	val ready = mu_exu.io.ready & mem_exu.io.ready
 
 	val reg_valid = RegInit(0.U(4.W))
@@ -127,7 +128,7 @@ class Exu extends Module with CoreParameters{
 			reg_valid := 0.U
 		}
 	}
-	
+
 	//-----------------ALU--------------------------------
 	alu_exu.io.valid	:= valid(0) & in_data_valid & ready
 	alu_exu.io.opType	:= opType
@@ -138,7 +139,6 @@ class Exu extends Module with CoreParameters{
 	alu_exu.io.op_pc	:= op_pc
 
 	alu_exu.io.get_pre_info <> io.get_pre_info
-	//alu_exu.io.br_info		<> io.br_info
 	alu_exu.io.is_pre	:= io.op_datas.bits.is_pre
 
 	//----------------MEM---------------------------------
@@ -173,11 +173,9 @@ class Exu extends Module with CoreParameters{
 	val reg_dest_addr 		 = RegInit(0.U(5.W))
 	when(ready){
 		reg_dest_addr := dest_addr
+		reg_sys_alu_w_valid :=  (alu_exu.io.valid | system_exu.io.valid)& io.op_datas.bits.dest_is_reg &(dest_addr =/= 0.U)
+		reg_sys_alu_wdata	:= Mux(system_exu.io.valid,system_exu.io.dst_data,alu_exu.io.dst_data)
 	}
-	
-	reg_sys_alu_w_valid :=  (alu_exu.io.valid | system_exu.io.valid)& io.op_datas.bits.dest_is_reg &(dest_addr =/= 0.U)&ready
-	
-	reg_sys_alu_wdata	:= Mux(system_exu.io.valid,system_exu.io.dst_data,alu_exu.io.dst_data)
 
 	val reg_br_valid 		= RegInit(false.B)
 	val reg_br_mispredict	= RegInit(false.B)
@@ -219,19 +217,18 @@ class Exu extends Module with CoreParameters{
 			reg_except_next_pc	:= system_exu.io.next_pc
 		}
 	}
-	reg_csr_data	:= system_exu.io.result_csr_data
-	reg_csr_addr	:= system_exu.io.result_csr_addr
-	reg_csr_is_w	:= system_exu.io.csr_is_w
 
-	val time_irq	= io.irq.time_irq && io.mstatus(3) && io.mie(7)
-	val soft_irq	= io.irq.soft_irq && io.mstatus(3) && io.mie(3)
+	reg_csr_data	:= Mux(ready&system_exu.io.valid,system_exu.io.result_csr_data,0.U)
+	reg_csr_addr	:= Mux(ready&system_exu.io.valid,system_exu.io.result_csr_addr,0.U)
+	reg_csr_is_w	:= Mux(ready&system_exu.io.valid,system_exu.io.csr_is_w,false.B)
+
+	val time_irq	= io.irq.time_irq & io.mstatus(3) & io.mie(7)
+	val soft_irq	= io.irq.soft_irq & io.mstatus(3) & io.mie(3)
 	val irq 		= time_irq | soft_irq
 	val is_except	= system_exu.io.is_except
 	val exception	= system_exu.io.exception
-	reg_is_except	:= is_except
-	reg_exception	:= exception//Mux(time_irq,7.U,Mux(soft_irq,3.U,exception))
-	// reg_is_mret		:= system_exu.io.is_mret
-	// reg_is_sret		:= system_exu.io.is_sret //该值在m模式下不使用，所以不需要关系
+	reg_is_except	:= Mux(ready&system_exu.io.valid,is_except,false.B)
+	reg_exception	:= Mux(ready&system_exu.io.valid,exception,0.U)
 
 	reg_is_time_irq	:= time_irq
 	reg_is_soft_irq := soft_irq
@@ -274,8 +271,10 @@ class Exu extends Module with CoreParameters{
 		reg_commit	:= in_data_valid
 		reg_difftest_inst := io.op_datas.bits.inst
 	}
-	//reg_commit := in_data_valid
-	reg_fence_i	:= in_data_valid & (io.op_datas.bits.opType === Op_type.op_fence) &(io.op_datas.bits.exuType === FENCEType.fence_i)
+
+	when(ready){
+		reg_fence_i	:= in_data_valid & (io.op_datas.bits.opType === Op_type.op_fence) &(io.op_datas.bits.exuType === FENCEType.fence_i)
+	}
 	io.fence_i 			:= reg_fence_i & ready
 	io.commit 			:= reg_commit & ready
 	io.difftest_peripheral	:= mem_exu.io.difftest_peripheral
