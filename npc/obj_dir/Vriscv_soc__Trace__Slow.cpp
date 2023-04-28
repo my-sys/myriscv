@@ -1670,14 +1670,14 @@ void Vriscv_soc___024root__traceInitSub0(Vriscv_soc___024root* vlSelf, Verilated
         tracep->declBus(c+248,"riscv_soc core decode reg_csr_addr", false,-1, 11,0);
         tracep->declQuad(c+249,"riscv_soc core decode reg_csr_data", false,-1, 63,0);
         tracep->declBit(c+247,"riscv_soc core decode reg_is_pre", false,-1);
-        tracep->declBus(c+838,"riscv_soc core decode instType", false,-1, 3,0);
-        tracep->declBit(c+839,"riscv_soc core decode dest_is_reg", false,-1);
-        tracep->declBit(c+840,"riscv_soc core decode rs1_is_reg", false,-1);
-        tracep->declBit(c+841,"riscv_soc core decode rs2_is_reg", false,-1);
         tracep->declBus(c+283,"riscv_soc core decode rs2_addr", false,-1, 4,0);
         tracep->declBus(c+280,"riscv_soc core decode rs1_addr", false,-1, 4,0);
         tracep->declBus(c+286,"riscv_soc core decode csr_addr", false,-1, 11,0);
-        tracep->declBus(c+842,"riscv_soc core decode dest_addr", false,-1, 4,0);
+        tracep->declBus(c+838,"riscv_soc core decode dest_addr", false,-1, 4,0);
+        tracep->declBus(c+839,"riscv_soc core decode instType", false,-1, 3,0);
+        tracep->declBit(c+840,"riscv_soc core decode dest_is_reg", false,-1);
+        tracep->declBit(c+841,"riscv_soc core decode rs1_is_reg", false,-1);
+        tracep->declBit(c+842,"riscv_soc core decode rs2_is_reg", false,-1);
         tracep->declBit(c+956,"riscv_soc core commit clock", false,-1);
         tracep->declBit(c+957,"riscv_soc core commit reset", false,-1);
         tracep->declBus(c+280,"riscv_soc core commit io_normal_rd_rs1_addr", false,-1, 4,0);
@@ -3890,8 +3890,10 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                                                     >> 7U)))
                                                          ? 0x88U
                                                          : 0x80U))))),64);
-        tracep->fullCData(oldp+838,(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType),4);
-        tracep->fullBit(oldp+839,(((0x33U == (0xfe00707fU 
+        tracep->fullCData(oldp+838,((0x1fU & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data 
+                                              >> 7U))),5);
+        tracep->fullCData(oldp+839,(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType),4);
+        tracep->fullBit(oldp+840,(((0x33U == (0xfe00707fU 
                                               & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
                                    | ((0x13U == (0x707fU 
                                                  & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
@@ -3934,10 +3936,8 @@ void Vriscv_soc___024root__traceFullSub0(Vriscv_soc___024root* vlSelf, Verilated
                                                                      (0x707fU 
                                                                       & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data)) 
                                                                     & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT___T_434)))))))))))))));
-        tracep->fullBit(oldp+840,(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs1_is_reg));
-        tracep->fullBit(oldp+841,(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs2_is_reg));
-        tracep->fullCData(oldp+842,((0x1fU & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_io_put_pc_bits_inst_MPORT_data 
-                                              >> 7U))),5);
+        tracep->fullBit(oldp+841,(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs1_is_reg));
+        tracep->fullBit(oldp+842,(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs2_is_reg));
         tracep->fullCData(oldp+843,((0x1fU & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_exception))),5);
         tracep->fullQData(oldp+844,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[0]),64);
         tracep->fullQData(oldp+846,(vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__regfile[1]),64);
