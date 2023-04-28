@@ -43,8 +43,8 @@ class MUL extends Module{
 	val mul_data1 = WireInit(0.U(130.W))
 	val mul_data2 = WireInit(0.U(130.W))
 	when(valid){
-	mul_data1 = Mux(is_32,Cat(Fill(98,rs1_data(31)),rs1_data(31,0)),Mux(is_rs1_signed,Cat(Fill(66,rs1_data(63)),rs1_data),Cat(0.U(66.W),rs1_data)))
-	mul_data2 = Mux(is_32,Cat(Fill(33,rs2_data(31)),rs2_data(31,0)),Mux(is_rs2_signed,Cat(rs2_data(63),rs2_data),Cat(0.U(1.W),rs2_data)))	
+	mul_data1 := Mux(is_32,Cat(Fill(98,rs1_data(31)),rs1_data(31,0)),Mux(is_rs1_signed,Cat(Fill(66,rs1_data(63)),rs1_data),Cat(0.U(66.W),rs1_data)))
+	mul_data2 := Mux(is_32,Cat(Fill(33,rs2_data(31)),rs2_data(31,0)),Mux(is_rs2_signed,Cat(rs2_data(63),rs2_data),Cat(0.U(1.W),rs2_data)))	
 	}
 
 	val temp_mul2 		= Cat(Fill(1,mul_data2(64)),Cat(mul_data2,0.U(1.W)))
