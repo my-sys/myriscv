@@ -28,7 +28,7 @@ VERILATOR_FLAGS += -Wall
 #VERILATOR_FLAGS += --gdbbt
 #-------------------------------------------
 #VERILATOR_FLAGS += --gdb
-VERILATOR_FLAGS += +define+SYNTHESIS
+#VERILATOR_FLAGS += +define+SYNTHESIS
 
 #VERILATOR_FLAGS += coverage_on  -file "verilator_config.vlt"
 BIN = ./obj_dir/V$(TOPNAME)
