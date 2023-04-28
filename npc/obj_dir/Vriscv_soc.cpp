@@ -3,6 +3,7 @@
 
 #include "Vriscv_soc.h"
 #include "Vriscv_soc__Syms.h"
+#include "verilated_vcd_c.h"
 #include "verilated_dpi.h"
 
 //============================================================
@@ -89,6 +90,7 @@ static void _eval_initial_loop(Vriscv_soc__Syms* __restrict vlSymsp) {
     // Evaluate till stable
     int __VclockLoop = 0;
     QData __Vchange = 1;
+    vlSymsp->__Vm_activity = true;
     do {
         VL_DEBUG_IF(VL_DBG_MSGF("+ Initial loop\n"););
         Vriscv_soc___024root___eval_settle(&(vlSymsp->TOP));
@@ -120,6 +122,7 @@ void Vriscv_soc::eval_step() {
     // Evaluate till stable
     int __VclockLoop = 0;
     QData __Vchange = 1;
+    vlSymsp->__Vm_activity = true;
     do {
         VL_DEBUG_IF(VL_DBG_MSGF("+ Clock loop\n"););
         Vriscv_soc___024root___eval(&(vlSymsp->TOP));
@@ -155,4 +158,31 @@ VerilatedContext* Vriscv_soc::contextp() const {
 
 const char* Vriscv_soc::name() const {
     return vlSymsp->name();
+}
+
+//============================================================
+// Trace configuration
+
+void Vriscv_soc___024root__traceInitTop(Vriscv_soc___024root* vlSelf, VerilatedVcd* tracep);
+
+static void traceInit(void* voidSelf, VerilatedVcd* tracep, uint32_t code) {
+    // Callback from tracep->open()
+    Vriscv_soc___024root* const __restrict vlSelf VL_ATTR_UNUSED = static_cast<Vriscv_soc___024root*>(voidSelf);
+    Vriscv_soc__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    if (!vlSymsp->_vm_contextp__->calcUnusedSigs()) {
+        VL_FATAL_MT(__FILE__, __LINE__, __FILE__,
+            "Turning on wave traces requires Verilated::traceEverOn(true) call before time 0.");
+    }
+    vlSymsp->__Vm_baseCode = code;
+    tracep->module(vlSymsp->name());
+    tracep->scopeEscape(' ');
+    Vriscv_soc___024root__traceInitTop(vlSelf, tracep);
+    tracep->scopeEscape('.');
+}
+
+void Vriscv_soc___024root__traceRegister(Vriscv_soc___024root* vlSelf, VerilatedVcd* tracep);
+
+void Vriscv_soc::trace(VerilatedVcdC* tfp, int, int) {
+    tfp->spTrace()->addInitCb(&traceInit, &(vlSymsp->TOP));
+    Vriscv_soc___024root__traceRegister(&(vlSymsp->TOP), tfp->spTrace());
 }
