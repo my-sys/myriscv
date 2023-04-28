@@ -145,14 +145,15 @@ class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
 		val is_eq 	= (op_data1 === op_data2)
 		val temp_1  = Mux(func === BRUType.bru_jalr(4,2),io.op_data1,op_pc)
 		val add_pc = Cat(1.U(1.W),temp_1 + op_imm)
+		val op_pc_4 = op_pc + 4.U
 		when(is_br){
 			temp_result_pc := MuxLookup(func,0.U,List(
-				BRUType.bru_beq(4,2)	-> Mux(is_eq,add_pc,0.U),
-				BRUType.bru_bne(4,2)	-> Mux(is_eq,0.U,add_pc),
-				BRUType.bru_blt(4,2)	-> Mux(s_rs1_l_rs2,add_pc,0.U),
-				BRUType.bru_bltu(4,2)	-> Mux(u_rs1_l_rs2,add_pc,0.U),
-				BRUType.bru_bge(4,2)	-> Mux(s_rs1_l_rs2,0.U,add_pc),
-				BRUType.bru_bgeu(4,2)	-> Mux(u_rs1_l_rs2,0.U,add_pc),
+				BRUType.bru_beq(4,2)	-> Mux(is_eq,add_pc,op_pc_4),
+				BRUType.bru_bne(4,2)	-> Mux(is_eq,op_pc_4,add_pc),
+				BRUType.bru_blt(4,2)	-> Mux(s_rs1_l_rs2,add_pc,op_pc_4),
+				BRUType.bru_bltu(4,2)	-> Mux(u_rs1_l_rs2,add_pc,op_pc_4),
+				BRUType.bru_bge(4,2)	-> Mux(s_rs1_l_rs2,op_pc_4,add_pc),
+				BRUType.bru_bgeu(4,2)	-> Mux(u_rs1_l_rs2,op_pc_4,add_pc),
 				BRUType.bru_jal(4,2)	-> add_pc,
 				BRUType.bru_jalr(4,2)	-> Cat(add_pc(64,1),0.U(1.W))
 			))
@@ -164,13 +165,13 @@ class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
 	val valid_next_pc 	= temp_result_pc(64)
 
 	io.dst_data			:= Mux(is_32,Cat(Fill(32,dst_data(31)),dst_data(31,0)),dst_data)
-	val flush 	= (is_pre & valid_next_pc &(next_pc =/= pre_next_pc)) | (valid_next_pc & (!is_pre))
+	val flush 	= (is_pre & valid_next_pc &(next_pc =/= pre_next_pc)) | (valid_next_pc & (!is_pre)) | (is_pre&(!valid_next_pc))
 	io.valid_next_pc	:= io.valid & flush
 	io.next_pc			:= next_pc
 
 
 	io.br_info.valid 			:= is_br & io.valid
-	io.br_info.mispredict 		:= (is_pre&(!valid_next_pc)) | flush
+	io.br_info.mispredict 		:= flush
 	io.br_info.br_pc			:= op_pc
 	io.br_info.taken 			:= valid_next_pc
 	io.br_info.target_next_pc 	:= next_pc
