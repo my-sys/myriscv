@@ -26,10 +26,10 @@ class SRAM extends Module{
 	val sram = RegInit(VecInit(Seq.fill(64)(0.U(128.W))))
 	val A = io.addr
 	val temp_data = sram(A)
-	val bwen = io.wmask
+	val bwen = ~io.wmask
 	val D = io.wdata
-	val cen = io.cen
-	val wen = io.wen
+	val cen = ~io.cen
+	val wen = ~io.wen
 	
 	when(cen & wen){
 		sram(A) := (D & bwen) | (temp_data & ~bwen)
