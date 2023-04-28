@@ -305,7 +305,6 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*1:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT___PHT_T_3;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT___PHT_T_7;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT___GEN_265;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT___T;
         CData/*2:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT___reg_head_T_1;
         CData/*2:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT___reg_head_T_3;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu_io_valid;
@@ -332,9 +331,9 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__reg_is_except;
         CData/*5:0*/ riscv_soc__DOT__core__DOT__execute__DOT__reg_exception;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__reg_is_time_irq;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__reg_is_soft_irq;
     };
     struct {
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__reg_is_soft_irq;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__time_irq;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__soft_irq;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__irq;
@@ -398,9 +397,9 @@ VL_MODULE(Vriscv_soc___024root) {
         CData/*0:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__irq;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT__reg_msip;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT__reg_ready;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT__reg_state;
     };
     struct {
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT__reg_state;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT___reg_msip_T_1;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT___GEN_5;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT___GEN_6;
@@ -464,9 +463,9 @@ VL_MODULE(Vriscv_soc___024root) {
         VlWide<3>/*66:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___GEN_38;
         VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__mul_data2;
         VlWide<3>/*66:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_temp_mul2;
+        VlWide<5>/*129:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_mul1;
     };
     struct {
-        VlWide<5>/*129:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_mul1;
         VlWide<5>/*129:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_result;
         VlWide<5>/*130:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT___reg_result_T_1;
         VlWide<3>/*66:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT___reg_temp_mul2_T;
@@ -530,9 +529,9 @@ VL_MODULE(Vriscv_soc___024root) {
         QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___reg_lru_2_T;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___reg_lru_2_T_1;
         QData/*59:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___reg_r_raddr_T;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_33;
     };
     struct {
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_33;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_52;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_83;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_94;
@@ -596,9 +595,9 @@ VL_MODULE(Vriscv_soc___024root) {
         QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mtval;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mcycle;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_minstret;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT___reg_mstatus_T_3;
     };
     struct {
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT___reg_mstatus_T_3;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT___reg_mepc_T_2;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT___reg_mcause_T_3;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT___reg_mtval_T_1;
