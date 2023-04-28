@@ -99,8 +99,10 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, uint8_t rflag,paddr_t wa
 			raddr = (raddr - 0x80000000)>>3;
 			*rdata = ram[raddr];
 			printf(" aa 0x%lx\n",*rdata);
-		}
+		}else{
 		raddr = (raddr - 0x80000000)>>3;
 		*rdata = ram[raddr];
+		}
+
 	}
 }
