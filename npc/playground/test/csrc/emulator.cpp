@@ -72,7 +72,7 @@ void Emulator::execute_once(){
     REGS(8);REGS(9);REGS(10);REGS(11);REGS(12);REGS(13);REGS(14);REGS(15);
     REGS(16);REGS(17);REGS(18);REGS(19);REGS(20);REGS(21);REGS(22);REGS(23);
     REGS(24);REGS(25);REGS(26);REGS(27);REGS(28);REGS(29);REGS(30);REGS(31);
-#undef REGS(x)
+#undef REGS
 
 	cpu.csr[5]  = top->io_difftest_mstatus;
 	cpu.csr[10] = top->io_difftest_mtvec;
