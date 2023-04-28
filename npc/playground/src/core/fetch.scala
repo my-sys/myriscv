@@ -23,9 +23,9 @@ class IBuf extends Module{
 	})
 	val flush		= io.flush
 
-	val ibuf_pc 	= RegInit(VecInit(Seq.fill(4,(0.U(64.W)))))
-	val ibuf_inst 	= RegInit(VecInit(Seq.fill(4,(0.U(32.W)))))
-	val ibuf_is_pre 	= RegInit(VecInit(Seq.fill(4,(false.b))))
+	val ibuf_pc 	= RegInit(VecInit(Seq.fill(4)(0.U(64.W)))))
+	val ibuf_inst 	= RegInit(VecInit(Seq.fill(4)(0.U(32.W)))))
+	val ibuf_is_pre 	= RegInit(VecInit(Seq.fill(4)(false.b))))
 
 	val ibuf_valid  = RegInit(VecInit(Seq.fill(4)(false.B)))
 	val reg_head 	= RegInit(0.U(2.W))
