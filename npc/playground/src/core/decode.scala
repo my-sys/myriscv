@@ -49,8 +49,12 @@ class Decode extends Module{
 	val pc           = io.get_inst.bits.pc 
 	val is_pre 		 = io.get_inst.bits.is_pre
 	val decodefault	= List(0.U,0.U,0.U,false.B,false.B,false.B)
-
-	val opType :: exuType :: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg :: Nil = ListLookup(inst,decodefault,ISA.table)
+	val decoderesult = decodefault
+	when(ready){
+		decoderesult := ListLookup(inst,decodefault,ISA.table)
+	}
+	val opType :: exuType :: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg :: Nil = decoderesult
+	
 	val rs2_addr        = inst(24,20)
 	val rs1_addr        = inst(19,15)
 	val csr_addr        = inst(31,20)
