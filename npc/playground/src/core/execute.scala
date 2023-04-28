@@ -223,8 +223,8 @@ class Exu extends Module with CoreParameters{
 	reg_csr_addr	:= system_exu.io.result_csr_addr
 	reg_csr_is_w	:= system_exu.io.csr_is_w
 
-	val time_irq	= io.irq.time_irq & io.mstatus(3) & io.mie(7)
-	val soft_irq	= io.irq.soft_irq & io.mstatus(3) & io.mie(3)
+	val time_irq	= io.irq.time_irq && io.mstatus(3) && io.mie(7)
+	val soft_irq	= io.irq.soft_irq && io.mstatus(3) && io.mie(3)
 	val irq 		= time_irq | soft_irq
 	val is_except	= system_exu.io.is_except
 	val exception	= system_exu.io.exception
