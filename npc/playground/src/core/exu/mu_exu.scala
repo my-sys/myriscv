@@ -67,14 +67,21 @@ class MUL extends Module{
 	val reg_cnt			= RegInit(0.U(7.W))
 	switch(reg_state){
 		is(mul_start){
-			reg_ready 		:= Mux(io.kill,true.B,Mux(valid,false.B,true.B))
-			reg_state		:= Mux(io.kill,mul_start,Mux(valid,mul_busy,reg_state))
-			reg_temp_mul2 	:= temp_mul2
-			reg_mul1 		:= mul_data1
+			reg_ready 		:= true.B//Mux(io.kill,true.B,Mux(valid,false.B,true.B))
+			reg_state		:= mul_start//Mux(io.kill,mul_start,Mux(valid,mul_busy,reg_state))
+			reg_temp_mul2 	:= 0.U//temp_mul2
+			reg_mul1 		:= 0.U//mul_data1
 			reg_result		:= 0.U 
-			reg_exuType		:= exuType
+			reg_exuType		:= 0.U//exuType
 			reg_dest_is_w	:= false.B 
 			reg_cnt 		:= 0.U 
+			when(valid){
+				reg_ready 	:= false.B
+				reg_state	:= mul_busy
+				reg_temp_mul2 := temp_mul2
+				reg_mul1	:= mul_data1
+				reg_exuType	:= exuType
+			}
 		}
 		is(mul_busy){
 			reg_result		:= reg_result + pp
@@ -159,16 +166,25 @@ class DIV extends Module{
 	val reg_ready 		= RegInit(true.B)
 	switch(reg_state){
 		is(div_start){
-			reg_divisor 	:= divisor
-			reg_dividend 	:= Cat(dividend,0.U(1.W))
-			reg_rem			:= Mux(divisor(64)^dividend(64),rem+divisor,rem+(~divisor)+1.U)
-			reg_state 		:= Mux(io.kill,div_start,Mux(valid,div_busy,div_start))
-			reg_ready 		:= Mux(io.kill,true.B,Mux(valid,false.B,true.B))
-			reg_exuType		:= Mux(valid,exuType,0.U)
-			reg_q 			:= Cat(dividend,0.U(1.W))
+			reg_divisor 	:= 0.U//divisor
+			reg_dividend 	:= 0.U//Cat(dividend,0.U(1.W))
+			reg_rem			:= 0.U//Mux(divisor(64)^dividend(64),rem+divisor,rem+(~divisor)+1.U)
+			reg_state 		:= div_start//Mux(io.kill,div_start,Mux(valid,div_busy,div_start))
+			reg_ready 		:= true.B//Mux(io.kill,true.B,Mux(valid,false.B,true.B))
+			reg_exuType		:= 0.U//Mux(valid,exuType,0.U)
+			reg_q 			:= 0.U//Cat(dividend,0.U(1.W))
 			//reg_is_need_correct	:= false.B
 			reg_cnt 		:= 0.U
 			reg_dest_is_w	:= false.B
+			when(valid){
+				reg_divisor 	:= divisor
+				reg_dividend 	:= Cat(dividend,0.U(1.W))
+				reg_rem			:= Mux(divisor(64)^dividend(64),rem+divisor,rem+(~divisor)+1.U)
+				reg_state		:= div_busy
+				reg_ready		:= false.B
+				reg_exuType		:= exuType
+				reg_q 			:= Cat(dividend,0.U(1.W))
+			}
 		}
 		is(div_busy){
 			reg_cnt		:= Mux(io.kill,0.U,reg_cnt + 1.U)
