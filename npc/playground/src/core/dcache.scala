@@ -64,17 +64,17 @@ class DCache extends Module{
 	val cache_wstrb 	= Mux(reg_offset(3),Cat(reg_wstrb,0.U(8.W)),Cat(0.U(8.W),reg_wstrb))
 	
 //-----------------------------sram0--------------------------------
-	val enable_sram = !(io.cpu.valid | reg_cache_write)
+	//val enable_sram = !(io.cpu.valid | reg_cache_write)
 	val is_sram0_write 		= reg_cache_write &(reg_chosen_tag === 0.U)
 	val sram0_A				= Mux(reg_cache_state =/= cache_idle,reg_index,Index)
 	sram0_data.wen 			:= ~(is_sram0_write)
-	sram0_data.cen 			:= enable_sram//~(true.B)
+	sram0_data.cen 			:= ~(true.B)
 	sram0_data.wmask 		:= ~(cache_mask)
 	sram0_data.addr 		:= sram0_A
 	sram0_data.wdata 		:= reg_cache_wdata
 	
 	sram0_tag.wen			:= ~(is_sram0_write)
-	sram0_tag.cen			:= enable_sram
+	sram0_tag.cen			:= ~(true.B)
 	sram0_tag.wmask 		:= 0.U
 	sram0_tag.addr 			:= sram0_A
 	sram0_tag.wdata 		:= reg_tag
@@ -99,13 +99,13 @@ class DCache extends Module{
 	val is_sram2_write 		= reg_cache_write &(reg_chosen_tag === 1.U)
 	val sram2_A = sram0_A
 	sram2_data.wen 			:= ~(is_sram2_write)
-	sram2_data.cen 			:= enable_sram
+	sram2_data.cen 			:= ~(true.B)
 	sram2_data.wmask 		:= ~(cache_mask)
 	sram2_data.addr 		:= sram2_A
 	sram2_data.wdata 		:= reg_cache_wdata
 	
 	sram2_tag.wen 			:= ~(is_sram2_write)
-	sram2_tag.cen 			:= enable_sram
+	sram2_tag.cen 			:= ~(true.B)
 	sram2_tag.wmask 		:= 0.U
 	sram2_tag.addr 			:= sram2_A
 	sram2_tag.wdata 		:= reg_tag 
