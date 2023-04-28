@@ -49,7 +49,7 @@ class Decode extends Module{
 	val pc           = io.get_inst.bits.pc 
 	val is_pre 		 = io.get_inst.bits.is_pre
 	val decodefault	= List(0.U,0.U,0.U,false.B,false.B,false.B)
-	val decoderesult = decodefault
+	val decoderesult = Wire(List(0.U))
 	when(ready){
 		decoderesult := ListLookup(inst,decodefault,ISA.table)
 	}
