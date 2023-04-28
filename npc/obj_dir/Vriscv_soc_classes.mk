@@ -10,7 +10,7 @@ VM_C11 = 1
 # Coverage output mode?  0/1 (from --coverage)
 VM_COVERAGE = 0
 # Parallel builds?  0/1 (from --output-split)
-VM_PARALLEL_BUILDS = 0
+VM_PARALLEL_BUILDS = 1
 # Threaded output mode?  0/1/N threads (from --threads)
 VM_THREADS = 0
 # Tracing output mode?  0/1 (from --trace/--trace-fst)
@@ -27,11 +27,14 @@ VM_TRACE_FST_WRITER_THREAD = 0
 VM_CLASSES_FAST += \
 	Vriscv_soc \
 	Vriscv_soc___024root \
+	Vriscv_soc___024root__1 \
+	Vriscv_soc___024root__2 \
 	Vriscv_soc___024unit \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \
 	Vriscv_soc___024root__Slow \
+	Vriscv_soc___024root__1__Slow \
 	Vriscv_soc___024unit__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization
