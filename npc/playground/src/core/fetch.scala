@@ -184,7 +184,7 @@ class Fetch extends Module{
 			is_pre_head := is_pre_head + 1.U 
 			is_pre_fifo(is_pre_head) := is_pre
 		}
-		when(io.cpu_data.valid){
+		when(io.cpu_data.fire){
 			is_pre_tail := is_pre_tail + 1.U
 		}
 	}
