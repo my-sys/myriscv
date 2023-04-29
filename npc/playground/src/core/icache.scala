@@ -259,7 +259,7 @@ class ICache_stage2 extends Module{
 					reg_rdata 			:= Mux(reg_offset(3),io.cache_bus.r.bits.rdata,reg_cache_wdata(63,0))
 					reg_cache_wdata		:= Cat(io.cache_bus.r.bits.rdata,reg_cache_wdata(63,0))				
 				}.otherwise{
-					reg_cache_wdata 		:= io.cache_bus.r.bits.rdata				
+					reg_cache_wdata 	:= io.cache_bus.r.bits.rdata				
 				}
 			}
 			when(io.cache_bus.r.bits.rlast){
