@@ -69,10 +69,10 @@ class Decode extends Module{
 		//Inst_type.Type_N    -> (),
 		//Inst_type.Type_R    -> (),
 	))
-	val change_rs1_addr = Mux(rs1_is_reg.asBool,rs1_addr,0.U)
-	val change_rs1_data = Mux(rs1_is_reg.asBool,io.normal_rd.rs1_data,0.U)
-	val change_rs2_addr = Mux(rs2_is_reg.asBool,rs2_addr,0.U)
-	val change_rs2_data = Mux(rs2_is_reg.asBool,io.normal_rd.rs2_data,0.U)
+	val change_rs1_addr = Mux(rs1_is_reg,rs1_addr,0.U)
+	val change_rs1_data = Mux(rs1_is_reg,io.normal_rd.rs1_data,0.U)
+	val change_rs2_addr = Mux(rs2_is_reg,rs2_addr,0.U)
+	val change_rs2_data = Mux(rs2_is_reg,io.normal_rd.rs2_data,0.U)
 	when(ready){
 
 
