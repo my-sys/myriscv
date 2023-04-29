@@ -31,6 +31,48 @@ class Vriscv_soc VL_NOT_FINAL {
     // propagate new values into/out from the Verilated model.
     VL_IN8(&clock,0,0);
     VL_IN8(&reset,0,0);
+    VL_OUT64(&io_difftest_reg_0,63,0);
+    VL_OUT64(&io_difftest_reg_1,63,0);
+    VL_OUT64(&io_difftest_reg_2,63,0);
+    VL_OUT64(&io_difftest_reg_3,63,0);
+    VL_OUT64(&io_difftest_reg_4,63,0);
+    VL_OUT64(&io_difftest_reg_5,63,0);
+    VL_OUT64(&io_difftest_reg_6,63,0);
+    VL_OUT64(&io_difftest_reg_7,63,0);
+    VL_OUT64(&io_difftest_reg_8,63,0);
+    VL_OUT64(&io_difftest_reg_9,63,0);
+    VL_OUT64(&io_difftest_reg_10,63,0);
+    VL_OUT64(&io_difftest_reg_11,63,0);
+    VL_OUT64(&io_difftest_reg_12,63,0);
+    VL_OUT64(&io_difftest_reg_13,63,0);
+    VL_OUT64(&io_difftest_reg_14,63,0);
+    VL_OUT64(&io_difftest_reg_15,63,0);
+    VL_OUT64(&io_difftest_reg_16,63,0);
+    VL_OUT64(&io_difftest_reg_17,63,0);
+    VL_OUT64(&io_difftest_reg_18,63,0);
+    VL_OUT64(&io_difftest_reg_19,63,0);
+    VL_OUT64(&io_difftest_reg_20,63,0);
+    VL_OUT64(&io_difftest_reg_21,63,0);
+    VL_OUT64(&io_difftest_reg_22,63,0);
+    VL_OUT64(&io_difftest_reg_23,63,0);
+    VL_OUT64(&io_difftest_reg_24,63,0);
+    VL_OUT64(&io_difftest_reg_25,63,0);
+    VL_OUT64(&io_difftest_reg_26,63,0);
+    VL_OUT64(&io_difftest_reg_27,63,0);
+    VL_OUT64(&io_difftest_reg_28,63,0);
+    VL_OUT64(&io_difftest_reg_29,63,0);
+    VL_OUT64(&io_difftest_reg_30,63,0);
+    VL_OUT64(&io_difftest_reg_31,63,0);
+    VL_OUT64(&io_difftest_pc,63,0);
+    VL_OUT(&io_difftest_inst,31,0);
+    VL_OUT8(&io_difftest_commit,0,0);
+    VL_OUT64(&io_inst_counter,63,0);
+    VL_OUT8(&io_difftest_irq,0,0);
+    VL_OUT64(&io_difftest_mstatus,63,0);
+    VL_OUT64(&io_difftest_mcause,63,0);
+    VL_OUT64(&io_difftest_mepc,63,0);
+    VL_OUT64(&io_difftest_mtvec,63,0);
+    VL_OUT8(&io_difftest_peripheral,0,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.
