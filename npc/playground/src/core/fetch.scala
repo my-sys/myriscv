@@ -43,6 +43,7 @@ class IBuf extends Module{
 	val deq_size    = can_deq
 	val result_size = reg_ibuf_size + enq_size - deq_size
 	val allow_in	= reg_ibuf_size < 3.U	// 缓冲区的设计有误
+	val ibuf_pc_read = ibuf_pc(reg_tail)
 	when(flush){
 		reg_head	:= 0.U 
 		reg_tail 	:= 0.U 
@@ -68,7 +69,7 @@ class IBuf extends Module{
 	io.cache_buf.ready 	:= allow_in
 
 	io.put_pc.valid 	:= ibuf_valid(reg_tail)
-	io.put_pc.bits.pc 	:= ibuf_pc(reg_tail)
+	io.put_pc.bits.pc 	:= ibuf_pc_read
 	io.put_pc.bits.inst	:= ibuf_inst(reg_tail)
 	io.put_pc.bits.is_pre := ibuf_is_pre(reg_tail)
 }
