@@ -56,30 +56,33 @@ class Decode extends Module{
 	val csr_addr        = inst(31,20)
 	val dest_addr    	= inst(11,7)
 
-
-
+	val opType :: exuType :: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg :: Nil = ListLookup(inst,decodefault,ISA.table)
+	val imm_data             = MuxLookup(instType, 0.U, List(
+		Inst_type.Type_I    -> (Cat( Fill(20,inst(31)) ,inst(31,20))),  // sign extension
+		Inst_type.Type_U    -> (Cat(inst(31,12),0.U(12.W)) ), // sign extension 
+		Inst_type.Type_S    -> (Cat( Fill(20,inst(31)), Cat(inst(31,25),inst(11,7)) )), // sign extension
+		Inst_type.Type_J    -> (Cat( Fill(12,inst(31)),  Cat(Cat(inst(19,12),inst(20)),Cat(inst(30,21),0.U(1.W))) )), // sign extension
+		
+		Inst_type.Type_B    -> (Cat( Fill(20,inst(31)), Cat(Cat(inst(7),inst(30,25)), Cat(inst(11,8),0.U(1.W)))  )),
+		Inst_type.Type_CSR  -> (Cat( 0.U(27.W),inst(19,15))),
+		Inst_type.Type_IR   -> (Cat(0.U(26.W),inst(25,20)))
+		//Inst_type.Type_N    -> (),
+		//Inst_type.Type_R    -> (),
+	))
+	val change_rs1_addr = Mux(rs1_is_reg.asBool,rs1_addr,0.U)
+	val change_rs1_data = Mux(rs1_is_reg.asBool,io.normal_rd.rs1_data,0.U)
+	val change_rs2_addr = Mux(rs2_is_reg.asBool,rs2_addr,0.U)
+	val change_rs2_data = Mux(rs2_is_reg.asBool,io.normal_rd.rs2_data,0.U)
 	when(ready){
-		val opType :: exuType :: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg :: Nil = ListLookup(inst,decodefault,ISA.table)
-		val imm_data             = MuxLookup(instType, 0.U, List(
-			Inst_type.Type_I    -> (Cat( Fill(20,inst(31)) ,inst(31,20))),  // sign extension
-			Inst_type.Type_U    -> (Cat(inst(31,12),0.U(12.W)) ), // sign extension 
-			Inst_type.Type_S    -> (Cat( Fill(20,inst(31)), Cat(inst(31,25),inst(11,7)) )), // sign extension
-			Inst_type.Type_J    -> (Cat( Fill(12,inst(31)),  Cat(Cat(inst(19,12),inst(20)),Cat(inst(30,21),0.U(1.W))) )), // sign extension
-			
-			Inst_type.Type_B    -> (Cat( Fill(20,inst(31)), Cat(Cat(inst(7),inst(30,25)), Cat(inst(11,8),0.U(1.W)))  )),
-			Inst_type.Type_CSR  -> (Cat( 0.U(27.W),inst(19,15))),
-			Inst_type.Type_IR   -> (Cat(0.U(26.W),inst(25,20)))
-			//Inst_type.Type_N    -> (),
-			//Inst_type.Type_R    -> (),
-		))
+
 
 		reg_opType		:= opType
 		reg_exuType		:= exuType
-		reg_rs1_addr	:= Mux(rs1_is_reg.asBool,rs1_addr,0.U)
-		reg_rs1_data	:= Mux(rs1_is_reg.asBool,io.normal_rd.rs1_data,0.U)
+		reg_rs1_addr	:= change_rs1_addr
+		reg_rs1_data	:= change_rs1_data
 
-		reg_rs2_addr	:= Mux(rs2_is_reg.asBool,rs2_addr,0.U)
-		reg_rs2_data	:= Mux(rs2_is_reg.asBool,io.normal_rd.rs2_data,0.U)
+		reg_rs2_addr	:= change_rs2_addr
+		reg_rs2_data	:= change_rs2_data
 		reg_imm			:= imm_data
 		reg_pc			:= pc 
 
