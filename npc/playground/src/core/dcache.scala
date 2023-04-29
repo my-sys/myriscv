@@ -17,10 +17,10 @@ class DCache extends Module{
 		)
 		//val is_fence_i = Input(Bool())
 
-		// val sram0_data 	= new SRAM_Interface
-		// val sram0_tag 	= new SRAM_Interface
-		// val sram2_data 	= new SRAM_Interface
-		// val sram2_tag 	= new SRAM_Interface
+		val sram0_data 	= new SRAM_Interface
+		val sram0_tag 	= new SRAM_Interface
+		val sram2_data 	= new SRAM_Interface
+		val sram2_tag 	= new SRAM_Interface
 		// val up_mem 		= Flipped(Decoupled())
 
 		// val clean_cache = Flipped(Decoupled())
@@ -36,10 +36,10 @@ class DCache extends Module{
 	val wstrb 		= io.cpu.bits.wstrb
 	val is_w 		= io.cpu.bits.is_w
 	
-	val sram0_data 		= Module(new SRAM).io//= io.sram0_data	//Module(new SRAM) // 存放数据
-	val sram0_tag 		= Module(new SRAM).io//= io.sram0_tag	//Module(new SRAM) // 存放Tag， 以及控制位
-	val sram2_data 		= Module(new SRAM).io//= io.sram2_data	//Module(new SRAM) // 存放数据
-	val sram2_tag 		= Module(new SRAM).io//= io.sram2_tag	//Module(new SRAM) // 存放Tag，以及控制位
+	val sram0_data 		= io.sram0_data//= Module(new SRAM).io//= io.sram0_data	//Module(new SRAM) // 存放数据
+	val sram0_tag 		= io.sram0_tag//= Module(new SRAM).io//= io.sram0_tag	//Module(new SRAM) // 存放Tag， 以及控制位
+	val sram2_data 		= io.sram2_data//= Module(new SRAM).io//= io.sram2_data	//Module(new SRAM) // 存放数据
+	val sram2_tag 		= io.sram2_tag//= Module(new SRAM).io//= io.sram2_tag	//Module(new SRAM) // 存放Tag，以及控制位
 	
 	val cache_idle	:: read_cache :: cache_and_bus :: cache_end :: Nil = Enum(4)
 	val reg_cache_state	= RegInit(cache_idle)

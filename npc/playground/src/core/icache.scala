@@ -308,10 +308,10 @@ class ICache extends Module{
 		val cpu_rdata = Decoupled(new CPU_DATA_IO)
 		val is_fence_i = Input(Bool())
 		
-		// val sram0_data 	= new SRAM_Interface 
-		// val sram0_tag 	= new SRAM_Interface
-		// val sram2_data 	= new SRAM_Interface
-		// val sram2_tag 	= new SRAM_Interface
+		val sram0_data 	= new SRAM_Interface 
+		val sram0_tag 	= new SRAM_Interface
+		val sram2_data 	= new SRAM_Interface
+		val sram2_tag 	= new SRAM_Interface
 
 		// cache <----> crossbar <----> AXI
 		val cache_bus 	= new SimpleBus		
@@ -361,16 +361,16 @@ class ICache extends Module{
 	val r_index 	= cache_stage1.io.tag_valid.index 
 	val is_r_sram	= cache_stage1.io.sram.valid 
 
-	// val sram0_data  = io.sram0_data	// 存放数据
-	// val sram0_tag 	= io.sram0_tag	// 存放Tag， 以及控制位
+	val sram0_data  = io.sram0_data	// 存放数据
+	val sram0_tag 	= io.sram0_tag	// 存放Tag， 以及控制位
 	
-	// val sram1_data	= io.sram2_data
-	// val sram1_tag	= io.sram2_tag
+	val sram1_data	= io.sram2_data
+	val sram1_tag	= io.sram2_tag
 
-	val sram0_data  = Module(new SRAM).io 
-	val sram0_tag	= Module(new SRAM).io 
-	val sram1_data	= Module(new SRAM).io 
-	val sram1_tag	= Module(new SRAM).io 
+	// val sram0_data  = Module(new SRAM).io 
+	// val sram0_tag	= Module(new SRAM).io 
+	// val sram1_data	= Module(new SRAM).io 
+	// val sram1_tag	= Module(new SRAM).io 
 
 	//----------------------------- sram0------------------------------
 	val sram_addr = Mux(is_w_sram,w_index,r_index)
