@@ -26,80 +26,80 @@ import chisel3.util.experimental.BoringUtils
 
   
 class riscv_soc extends Module{
-  val io = IO(new Bundle{
-    val difftest_reg  	= Output(Vec(32, UInt(64.W)))
-    val difftest_pc   	= Output(UInt(64.W))
-    val difftest_inst 	= Output(UInt(32.W))
-	val difftest_commit = Output(Bool())
-	val inst_counter 	= Output(UInt(64.W))
-	val difftest_irq 	= Output(Bool())
-	val difftest_mstatus = Output(UInt(64.W))
-	val difftest_mcause  = Output(UInt(64.W))
-	val difftest_mepc 	= Output(UInt(64.W))
-	val difftest_mtvec  = Output(UInt(64.W))
-	val difftest_peripheral = Output(Bool())
-  })
+//   val io = IO(new Bundle{
+//     val difftest_reg  	= Output(Vec(32, UInt(64.W)))
+//     val difftest_pc   	= Output(UInt(64.W))
+//     val difftest_inst 	= Output(UInt(32.W))
+// 	val difftest_commit = Output(Bool())
+// 	val inst_counter 	= Output(UInt(64.W))
+// 	val difftest_irq 	= Output(Bool())
+// 	val difftest_mstatus = Output(UInt(64.W))
+// 	val difftest_mcause  = Output(UInt(64.W))
+// 	val difftest_mepc 	= Output(UInt(64.W))
+// 	val difftest_mtvec  = Output(UInt(64.W))
+// 	val difftest_peripheral = Output(Bool())
+//   })
   val core = Module(new Core)
   val axi_ram = Module(new AXI_RAM)
-  val sram0 = Module(new SRAM)
-  val sram1 = Module(new SRAM)
-  val sram2 = Module(new SRAM)
-  val sram3 = Module(new SRAM)
-  val sram4 = Module(new SRAM)
-  val sram5 = Module(new SRAM)
-  val sram6 = Module(new SRAM)
-  val sram7 = Module(new SRAM)
-  val difftest_inst     = WireInit(2.U(64.W))
-  //val temp_inst         = core.io.out.raddr
+//   val sram0 = Module(new SRAM)
+//   val sram1 = Module(new SRAM)
+//   val sram2 = Module(new SRAM)
+//   val sram3 = Module(new SRAM)
+//   val sram4 = Module(new SRAM)
+//   val sram5 = Module(new SRAM)
+//   val sram6 = Module(new SRAM)
+//   val sram7 = Module(new SRAM)
+//   val difftest_inst     = WireInit(2.U(64.W))
+//   //val temp_inst         = core.io.out.raddr
   
-  val difftest_reg      = VecInit(Seq.fill(32)(0.U(64.W)))
-  val difftest_pc       = WireInit(0.U(64.W))
-  val difftest_commit   = WireInit(false.B)
-  val difftest_irq 		= WireInit(false.B)
-  val inst_counter		= WireInit(0.U(64.W))
+//   val difftest_reg      = VecInit(Seq.fill(32)(0.U(64.W)))
+//   val difftest_pc       = WireInit(0.U(64.W))
+//   val difftest_commit   = WireInit(false.B)
+//   val difftest_irq 		= WireInit(false.B)
+//   val inst_counter		= WireInit(0.U(64.W))
 
-  val difftest_mstatus  = WireInit(0.U(64.W))
-  val difftest_mcause   = WireInit(0.U(64.W))
-  val difftest_mepc     = WireInit(0.U(64.W))
-  val difftest_mtvec    = WireInit(0.U(64.W))
-  val difftest_peripheral = WireInit(false.B)
+//   val difftest_mstatus  = WireInit(0.U(64.W))
+//   val difftest_mcause   = WireInit(0.U(64.W))
+//   val difftest_mepc     = WireInit(0.U(64.W))
+//   val difftest_mtvec    = WireInit(0.U(64.W))
+//   val difftest_peripheral = WireInit(false.B)
   
-  BoringUtils.addSink(difftest_reg,"DIFFTEST_REG")
-  BoringUtils.addSink(difftest_pc,"DIFFTEST_PC")
-  BoringUtils.addSink(difftest_inst,"DIFFTEST_INST")
-  BoringUtils.addSink(difftest_commit, "DIFFTEST_COMMIT")
-  BoringUtils.addSink(inst_counter, "INST_COUNTER")
-  BoringUtils.addSink(difftest_irq, "DIFFTEST_IRQ")
+//   BoringUtils.addSink(difftest_reg,"DIFFTEST_REG")
+//   BoringUtils.addSink(difftest_pc,"DIFFTEST_PC")
+//   BoringUtils.addSink(difftest_inst,"DIFFTEST_INST")
+//   BoringUtils.addSink(difftest_commit, "DIFFTEST_COMMIT")
+//   BoringUtils.addSink(inst_counter, "INST_COUNTER")
+//   BoringUtils.addSink(difftest_irq, "DIFFTEST_IRQ")
 
-  BoringUtils.addSink(difftest_mstatus, "DIFFTEST_MSTATUS")
-  BoringUtils.addSink(difftest_mcause, "DIFFTEST_MCAUSE")
-  BoringUtils.addSink(difftest_mepc, "DIFFTEST_MEPC")
-  BoringUtils.addSink(difftest_mtvec, "DIFFTEST_MTVEC")
-  BoringUtils.addSink(difftest_peripheral, "DIFFTEST_PERIPHERAL")
+//   BoringUtils.addSink(difftest_mstatus, "DIFFTEST_MSTATUS")
+//   BoringUtils.addSink(difftest_mcause, "DIFFTEST_MCAUSE")
+//   BoringUtils.addSink(difftest_mepc, "DIFFTEST_MEPC")
+//   BoringUtils.addSink(difftest_mtvec, "DIFFTEST_MTVEC")
+//   BoringUtils.addSink(difftest_peripheral, "DIFFTEST_PERIPHERAL")
 
-  io.difftest_reg     := difftest_reg
-  io.difftest_pc      := difftest_pc
-  io.difftest_inst    := difftest_inst 
-  io.difftest_commit  := difftest_commit
-  io.inst_counter	  := inst_counter
-  io.difftest_irq 	  := difftest_irq
+//   io.difftest_reg     := difftest_reg
+//   io.difftest_pc      := difftest_pc
+//   io.difftest_inst    := difftest_inst 
+//   io.difftest_commit  := difftest_commit
+//   io.inst_counter	  := inst_counter
+//   io.difftest_irq 	  := difftest_irq
 
-  io.difftest_mstatus	:= difftest_mstatus
-  io.difftest_mcause	:= difftest_mcause
-  io.difftest_mepc		:= difftest_mepc
-  io.difftest_mtvec		:= difftest_mtvec
-  io.difftest_peripheral := difftest_peripheral
+//   io.difftest_mstatus	:= difftest_mstatus
+//   io.difftest_mcause	:= difftest_mcause
+//   io.difftest_mepc		:= difftest_mepc
+//   io.difftest_mtvec		:= difftest_mtvec
+//   io.difftest_peripheral := difftest_peripheral
 
 	axi_ram.io.ram_bus <> core.io.axi_bus
 
-	core.io.sram0 <>sram0.io 
-	core.io.sram1 <>sram1.io 
-	core.io.sram2 <>sram2.io 
-	core.io.sram3 <>sram3.io 
-	core.io.sram4 <>sram4.io 
-	core.io.sram5 <>sram5.io 
-	core.io.sram6 <>sram6.io 
-	core.io.sram7 <>sram7.io 
+	// core.io.sram0 <>sram0.io 
+	// core.io.sram1 <>sram1.io 
+	// core.io.sram2 <>sram2.io 
+	// core.io.sram3 <>sram3.io 
+	// core.io.sram4 <>sram4.io 
+	// core.io.sram5 <>sram5.io 
+	// core.io.sram6 <>sram6.io 
+	// core.io.sram7 <>sram7.io 
 //   core.io.in.rdata    :=  axi_ram.io.rdata
 //   axi_ram.io.waddr    :=  core.io.out.waddr 
 //   axi_ram.io.wdata    :=  core.io.out.wdata

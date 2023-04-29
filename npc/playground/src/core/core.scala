@@ -95,13 +95,13 @@ class Core extends Module{
 	cross_bar.io.bus1 <> cross_bar_1.io.bus1 
 	cross_bar.io.bus2 <> cross_bar_1.io.bus2
 	io.axi_bus	<> cross_bar.io.AXI_Bus
-	io.sram0 	<> i_cache.io.sram0_data
-	io.sram1 	<> i_cache.io.sram0_tag 
-	io.sram2 	<> i_cache.io.sram2_data 
-	io.sram3 	<> i_cache.io.sram2_tag
+	// io.sram0 	<> i_cache.io.sram0_data
+	// io.sram1 	<> i_cache.io.sram0_tag 
+	// io.sram2 	<> i_cache.io.sram2_data 
+	// io.sram3 	<> i_cache.io.sram2_tag
 
-	io.sram4 	<> d_cache.io.sram0_data 
-	io.sram5 	<> d_cache.io.sram0_tag
-	io.sram6 	<> d_cache.io.sram2_data 
-	io.sram7 	<> d_cache.io.sram2_tag
+	// io.sram4 	<> d_cache.io.sram0_data 
+	// io.sram5 	<> d_cache.io.sram0_tag
+	// io.sram6 	<> d_cache.io.sram2_data 
+	// io.sram7 	<> d_cache.io.sram2_tag
 }
