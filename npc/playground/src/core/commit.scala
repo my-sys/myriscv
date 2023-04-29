@@ -33,7 +33,7 @@ class Commit extends Module{
 		val difftest_peripheral = Input(Bool())
 	})
 	val csr_reg = Module(new CsrRegCtrl)
-	val reg_file = Vec(3,Reg())//Mem(32,UInt(64.W))
+	val reg_file = Mem(32,UInt(64.W))
 
 	val rs1_addr = io.normal_rd.rs1_addr
 	val rs2_addr = io.normal_rd.rs2_addr
