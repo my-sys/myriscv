@@ -33,15 +33,17 @@ class Commit extends Module{
 		val difftest_peripheral = Input(Bool())
 	})
 	val csr_reg = Module(new CsrRegCtrl)
-	val reg_file = new RegCtrl
+	val reg_file = Mem(32,UInt(64.W))
 
 	val rs1_addr = io.normal_rd.rs1_addr
 	val rs2_addr = io.normal_rd.rs2_addr
+	val read_rs1_from_file = reg_file.read(rs1_addr)
+	val read_rs2_from_file = reg_file.read(rs2_addr)
 	//处理寄存器读写同时进行时的相关问题
-    val rs1_data        = Mux((io.normal_wb.dest_addr === rs1_addr)&io.normal_wb.valid, io.normal_wb.dest_data,reg_file.read(rs1_addr))
-    val rs2_data        = Mux((io.normal_wb.dest_addr === rs2_addr)&io.normal_wb.valid, io.normal_wb.dest_data,reg_file.read(rs2_addr))
+    val rs1_data        = Mux((io.normal_wb.dest_addr === rs1_addr)&io.normal_wb.valid, io.normal_wb.dest_data,read_rs1_from_file)
+    val rs2_data        = Mux((io.normal_wb.dest_addr === rs2_addr)&io.normal_wb.valid, io.normal_wb.dest_data,read_rs2_from_file)
     when(io.normal_wb.valid){
-        reg_file.write(io.normal_wb.dest_addr,io.normal_wb.dest_data)
+        reg_file(io.normal_wb.dest_addr) := io.normal_wb.dest_data
     }
 	io.normal_rd.rs1_data	:= rs1_data
 	io.normal_rd.rs2_data	:= rs2_data
