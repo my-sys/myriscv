@@ -28,11 +28,13 @@ VM_CLASSES_FAST += \
 	Vriscv_soc \
 	Vriscv_soc___024root \
 	Vriscv_soc___024root__1 \
+	Vriscv_soc___024root__2 \
 	Vriscv_soc___024unit \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \
 	Vriscv_soc___024root__Slow \
+	Vriscv_soc___024root__1__Slow \
 	Vriscv_soc___024unit__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization
