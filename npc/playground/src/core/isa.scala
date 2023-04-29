@@ -114,8 +114,8 @@ def SFENCE_VMA  = BitPat("b0001001_?????_?????_000_00000_1110011")
     def REMUW   = BitPat("b0000001_?????_?????_111_?????_0111011")
     def REMW    = BitPat("b0000001_?????_?????_110_?????_0111011")
 
-	val Y = 1.U(2.W) 
-	val N = 0.U(2.W)
+	val Y = 1.U(1.W) 
+	val N = 0.U(1.W)
     val table = Array(
 							//val opType 		:: exuType 			:: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg
         ADD         -> List(Op_type.op_alu,     ALUType.alu_add,     Inst_type.Type_R,Y,			Y,			Y),
