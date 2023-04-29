@@ -29,10 +29,10 @@ class Br_predictor extends Module{
 	//pc = Tag0 +index+Tag1 
 	// 1      ()        64        2
 	//valid ----Tag------ Taget pc---- BrType 
-	val BTB = Mem(64,UInt(128.W))//RegInit(VecInit(Seq.fill(64)(0.U(128.W))))
+	val BTB = RegInit(VecInit(Seq.fill(64)(0.U(128.W))))
 	//val PHT = Mem(64,UInt(2.W))
-	val RAS = Mem(6,UInt(64.W))//RegInit(VecInit(Seq.fill(6)(0.U(64.W))))//Mem(6,UInt(64.W))
-	val PHT = Mem(64,UInt(2.W))//RegInit(Vec(Seq.fill(64)("b10".U(2.W))))
+	val RAS = RegInit(VecInit(Seq.fill(6)(0.U(64.W))))//Mem(6,UInt(64.W))
+	val PHT = RegInit(Vec(Seq.fill(64)("b10".U(2.W))))
 	val reg_head = RegInit(0.U(3.W))
 	
 	//-------commit 阶段更新 更新BTB以及PHT---------------------
@@ -45,7 +45,7 @@ class Br_predictor extends Module{
 	val update_index 	= br_pc(8,3)
 	val update_Tag 		= Cat(br_pc(63,9),br_pc(2))
 	val update_br_type  = io.br_info.br_type
-	val update_pht_data = PHT.read(update_index)
+	val update_pht_data = PHT(update_index)
 	
 	val update_btb_data = Cat(1.U(1.W),Cat(update_Tag,Cat(update_target_pc,update_br_type)))
 	val chage_pht_counter = Mux(update_taken,Mux(update_pht_data === "b11".U,update_pht_data,update_pht_data + 1.U),Mux(update_pht_data === "b00".U,update_pht_data,update_pht_data - 1.U))
@@ -61,8 +61,8 @@ class Br_predictor extends Module{
 	val index 	= pc(8,3)
 	val tag   	= Cat(pc(63,9),pc(2))
 	
-	val btb_data 	= BTB.read(index)
-	val pht_data 	= PHT.read(index)
+	val btb_data 	= BTB(index)
+	val pht_data 	= PHT(index)
 	val pht_taken   = pht_data(1)
 	val btb_valid 	= btb_data(122)
 	val btb_tag 	= btb_data(121,66)
