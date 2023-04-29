@@ -13,14 +13,14 @@ class SRAM_Interface extends Bundle{
 class Core extends Module{
 	val io = IO(new Bundle{
 		val axi_bus = new AXI4Bus
-		val sram0 	= new SRAM_Interface
-		val sram1 	= new SRAM_Interface
-		val sram2 	= new SRAM_Interface
-		val sram3 	= new SRAM_Interface
-		val sram4 	= new SRAM_Interface
-		val sram5 	= new SRAM_Interface
-		val sram6 	= new SRAM_Interface
-		val sram7 	= new SRAM_Interface
+		// val sram0 	= new SRAM_Interface
+		// val sram1 	= new SRAM_Interface
+		// val sram2 	= new SRAM_Interface
+		// val sram3 	= new SRAM_Interface
+		// val sram4 	= new SRAM_Interface
+		// val sram5 	= new SRAM_Interface
+		// val sram6 	= new SRAM_Interface
+		// val sram7 	= new SRAM_Interface
 	})
 
 	val i_cache 		= Module(new ICache)
