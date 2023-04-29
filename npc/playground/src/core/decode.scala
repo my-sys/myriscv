@@ -48,7 +48,7 @@ class Decode extends Module{
 	val inst         = io.get_inst.bits.inst 
 	val pc           = io.get_inst.bits.pc 
 	val is_pre 		 = io.get_inst.bits.is_pre
-	val decodefault	= List(0.U,0.U,0.U,false.B,false.B,false.B)
+	//val decodefault	= List(0.U,0.U,0.U,false.B,false.B,false.B)
 
 	
 	val rs2_addr        = inst(24,20)
@@ -56,7 +56,7 @@ class Decode extends Module{
 	val csr_addr        = inst(31,20)
 	val dest_addr    	= inst(11,7)
 
-	val opType :: exuType :: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg :: Nil = ListLookup(inst,decodefault,ISA.table)
+	val opType :: exuType :: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg :: Nil = ListLookup(inst,0.U,ISA.table)
 	val imm_data             = MuxLookup(instType, 0.U, List(
 		Inst_type.Type_I    -> (Cat( Fill(20,inst(31)) ,inst(31,20))),  // sign extension
 		Inst_type.Type_U    -> (Cat(inst(31,12),0.U(12.W)) ), // sign extension 
