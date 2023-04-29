@@ -75,6 +75,7 @@ class IBuf extends Module{
 	io.put_pc.bits.pc 	:= ibuf_pc_read
 	io.put_pc.bits.inst	:= ibuf_inst_read
 	io.put_pc.bits.is_pre := ibuf_is_pre_read
+}
 
 class Fetch extends Module{
 	val io = IO(new Bundle{
