@@ -62,7 +62,7 @@ class Br_predictor extends Module{
 	val tag   	= Cat(pc(63,9),pc(2))
 	
 	val btb_data 	= BTB(index)
-	val pht_data 	= PHT(index)
+	val pht_data 	= PHT.read(index)
 	val pht_taken   = pht_data(1)
 	val btb_valid 	= btb_data(122)
 	val btb_tag 	= btb_data(121,66)
