@@ -89,427 +89,429 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__is_eq;
     CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__chose_chancel;
     VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN;
-    VlWide<3>/*95:0*/ __Vtemp877;
-    VlWide<4>/*127:0*/ __Vtemp912;
-    VlWide<4>/*127:0*/ __Vtemp913;
-    VlWide<4>/*127:0*/ __Vtemp914;
-    VlWide<4>/*127:0*/ __Vtemp915;
-    VlWide<3>/*95:0*/ __Vtemp918;
-    VlWide<3>/*95:0*/ __Vtemp919;
-    VlWide<3>/*95:0*/ __Vtemp920;
-    VlWide<3>/*95:0*/ __Vtemp921;
-    VlWide<3>/*95:0*/ __Vtemp922;
-    VlWide<64>/*2047:0*/ __Vtemp938;
-    VlWide<68>/*2175:0*/ __Vtemp939;
-    VlWide<72>/*2303:0*/ __Vtemp940;
-    VlWide<76>/*2431:0*/ __Vtemp941;
-    VlWide<80>/*2559:0*/ __Vtemp942;
-    VlWide<84>/*2687:0*/ __Vtemp943;
-    VlWide<88>/*2815:0*/ __Vtemp944;
-    VlWide<92>/*2943:0*/ __Vtemp945;
-    VlWide<96>/*3071:0*/ __Vtemp946;
-    VlWide<100>/*3199:0*/ __Vtemp947;
-    VlWide<104>/*3327:0*/ __Vtemp948;
-    VlWide<108>/*3455:0*/ __Vtemp949;
-    VlWide<112>/*3583:0*/ __Vtemp950;
-    VlWide<116>/*3711:0*/ __Vtemp951;
-    VlWide<120>/*3839:0*/ __Vtemp952;
-    VlWide<124>/*3967:0*/ __Vtemp953;
-    VlWide<128>/*4095:0*/ __Vtemp954;
-    VlWide<132>/*4223:0*/ __Vtemp955;
-    VlWide<136>/*4351:0*/ __Vtemp956;
-    VlWide<140>/*4479:0*/ __Vtemp957;
-    VlWide<144>/*4607:0*/ __Vtemp958;
-    VlWide<148>/*4735:0*/ __Vtemp959;
-    VlWide<152>/*4863:0*/ __Vtemp960;
-    VlWide<156>/*4991:0*/ __Vtemp961;
-    VlWide<160>/*5119:0*/ __Vtemp962;
-    VlWide<164>/*5247:0*/ __Vtemp963;
-    VlWide<168>/*5375:0*/ __Vtemp964;
-    VlWide<172>/*5503:0*/ __Vtemp965;
-    VlWide<176>/*5631:0*/ __Vtemp966;
-    VlWide<180>/*5759:0*/ __Vtemp967;
-    VlWide<184>/*5887:0*/ __Vtemp968;
-    VlWide<188>/*6015:0*/ __Vtemp969;
-    VlWide<192>/*6143:0*/ __Vtemp970;
-    VlWide<196>/*6271:0*/ __Vtemp971;
-    VlWide<200>/*6399:0*/ __Vtemp972;
-    VlWide<204>/*6527:0*/ __Vtemp973;
-    VlWide<208>/*6655:0*/ __Vtemp974;
-    VlWide<212>/*6783:0*/ __Vtemp975;
-    VlWide<216>/*6911:0*/ __Vtemp976;
-    VlWide<220>/*7039:0*/ __Vtemp977;
-    VlWide<224>/*7167:0*/ __Vtemp978;
-    VlWide<228>/*7295:0*/ __Vtemp979;
-    VlWide<232>/*7423:0*/ __Vtemp980;
-    VlWide<236>/*7551:0*/ __Vtemp981;
-    VlWide<240>/*7679:0*/ __Vtemp982;
-    VlWide<244>/*7807:0*/ __Vtemp983;
-    VlWide<248>/*7935:0*/ __Vtemp984;
-    VlWide<252>/*8063:0*/ __Vtemp985;
-    VlWide<256>/*8191:0*/ __Vtemp986;
-    VlWide<64>/*2047:0*/ __Vtemp1002;
-    VlWide<68>/*2175:0*/ __Vtemp1003;
-    VlWide<72>/*2303:0*/ __Vtemp1004;
-    VlWide<76>/*2431:0*/ __Vtemp1005;
-    VlWide<80>/*2559:0*/ __Vtemp1006;
-    VlWide<84>/*2687:0*/ __Vtemp1007;
-    VlWide<88>/*2815:0*/ __Vtemp1008;
-    VlWide<92>/*2943:0*/ __Vtemp1009;
-    VlWide<96>/*3071:0*/ __Vtemp1010;
-    VlWide<100>/*3199:0*/ __Vtemp1011;
-    VlWide<104>/*3327:0*/ __Vtemp1012;
-    VlWide<108>/*3455:0*/ __Vtemp1013;
-    VlWide<112>/*3583:0*/ __Vtemp1014;
-    VlWide<116>/*3711:0*/ __Vtemp1015;
-    VlWide<120>/*3839:0*/ __Vtemp1016;
-    VlWide<124>/*3967:0*/ __Vtemp1017;
-    VlWide<128>/*4095:0*/ __Vtemp1018;
-    VlWide<132>/*4223:0*/ __Vtemp1019;
-    VlWide<136>/*4351:0*/ __Vtemp1020;
-    VlWide<140>/*4479:0*/ __Vtemp1021;
-    VlWide<144>/*4607:0*/ __Vtemp1022;
-    VlWide<148>/*4735:0*/ __Vtemp1023;
-    VlWide<152>/*4863:0*/ __Vtemp1024;
-    VlWide<156>/*4991:0*/ __Vtemp1025;
-    VlWide<160>/*5119:0*/ __Vtemp1026;
-    VlWide<164>/*5247:0*/ __Vtemp1027;
-    VlWide<168>/*5375:0*/ __Vtemp1028;
-    VlWide<172>/*5503:0*/ __Vtemp1029;
-    VlWide<176>/*5631:0*/ __Vtemp1030;
-    VlWide<180>/*5759:0*/ __Vtemp1031;
-    VlWide<184>/*5887:0*/ __Vtemp1032;
-    VlWide<188>/*6015:0*/ __Vtemp1033;
-    VlWide<192>/*6143:0*/ __Vtemp1034;
-    VlWide<196>/*6271:0*/ __Vtemp1035;
-    VlWide<200>/*6399:0*/ __Vtemp1036;
-    VlWide<204>/*6527:0*/ __Vtemp1037;
-    VlWide<208>/*6655:0*/ __Vtemp1038;
-    VlWide<212>/*6783:0*/ __Vtemp1039;
-    VlWide<216>/*6911:0*/ __Vtemp1040;
-    VlWide<220>/*7039:0*/ __Vtemp1041;
-    VlWide<224>/*7167:0*/ __Vtemp1042;
-    VlWide<228>/*7295:0*/ __Vtemp1043;
-    VlWide<232>/*7423:0*/ __Vtemp1044;
-    VlWide<236>/*7551:0*/ __Vtemp1045;
-    VlWide<240>/*7679:0*/ __Vtemp1046;
-    VlWide<244>/*7807:0*/ __Vtemp1047;
-    VlWide<248>/*7935:0*/ __Vtemp1048;
-    VlWide<252>/*8063:0*/ __Vtemp1049;
-    VlWide<256>/*8191:0*/ __Vtemp1050;
-    VlWide<64>/*2047:0*/ __Vtemp1066;
-    VlWide<68>/*2175:0*/ __Vtemp1067;
-    VlWide<72>/*2303:0*/ __Vtemp1068;
-    VlWide<76>/*2431:0*/ __Vtemp1069;
-    VlWide<80>/*2559:0*/ __Vtemp1070;
-    VlWide<84>/*2687:0*/ __Vtemp1071;
-    VlWide<88>/*2815:0*/ __Vtemp1072;
-    VlWide<92>/*2943:0*/ __Vtemp1073;
-    VlWide<96>/*3071:0*/ __Vtemp1074;
-    VlWide<100>/*3199:0*/ __Vtemp1075;
-    VlWide<104>/*3327:0*/ __Vtemp1076;
-    VlWide<108>/*3455:0*/ __Vtemp1077;
-    VlWide<112>/*3583:0*/ __Vtemp1078;
-    VlWide<116>/*3711:0*/ __Vtemp1079;
-    VlWide<120>/*3839:0*/ __Vtemp1080;
-    VlWide<124>/*3967:0*/ __Vtemp1081;
-    VlWide<128>/*4095:0*/ __Vtemp1082;
-    VlWide<132>/*4223:0*/ __Vtemp1083;
-    VlWide<136>/*4351:0*/ __Vtemp1084;
-    VlWide<140>/*4479:0*/ __Vtemp1085;
-    VlWide<144>/*4607:0*/ __Vtemp1086;
-    VlWide<148>/*4735:0*/ __Vtemp1087;
-    VlWide<152>/*4863:0*/ __Vtemp1088;
-    VlWide<156>/*4991:0*/ __Vtemp1089;
-    VlWide<160>/*5119:0*/ __Vtemp1090;
-    VlWide<164>/*5247:0*/ __Vtemp1091;
-    VlWide<168>/*5375:0*/ __Vtemp1092;
-    VlWide<172>/*5503:0*/ __Vtemp1093;
-    VlWide<176>/*5631:0*/ __Vtemp1094;
-    VlWide<180>/*5759:0*/ __Vtemp1095;
-    VlWide<184>/*5887:0*/ __Vtemp1096;
-    VlWide<188>/*6015:0*/ __Vtemp1097;
-    VlWide<192>/*6143:0*/ __Vtemp1098;
-    VlWide<196>/*6271:0*/ __Vtemp1099;
-    VlWide<200>/*6399:0*/ __Vtemp1100;
-    VlWide<204>/*6527:0*/ __Vtemp1101;
-    VlWide<208>/*6655:0*/ __Vtemp1102;
-    VlWide<212>/*6783:0*/ __Vtemp1103;
-    VlWide<216>/*6911:0*/ __Vtemp1104;
-    VlWide<220>/*7039:0*/ __Vtemp1105;
-    VlWide<224>/*7167:0*/ __Vtemp1106;
-    VlWide<228>/*7295:0*/ __Vtemp1107;
-    VlWide<232>/*7423:0*/ __Vtemp1108;
-    VlWide<236>/*7551:0*/ __Vtemp1109;
-    VlWide<240>/*7679:0*/ __Vtemp1110;
-    VlWide<244>/*7807:0*/ __Vtemp1111;
-    VlWide<248>/*7935:0*/ __Vtemp1112;
-    VlWide<252>/*8063:0*/ __Vtemp1113;
-    VlWide<256>/*8191:0*/ __Vtemp1114;
-    VlWide<64>/*2047:0*/ __Vtemp1130;
-    VlWide<68>/*2175:0*/ __Vtemp1131;
-    VlWide<72>/*2303:0*/ __Vtemp1132;
-    VlWide<76>/*2431:0*/ __Vtemp1133;
-    VlWide<80>/*2559:0*/ __Vtemp1134;
-    VlWide<84>/*2687:0*/ __Vtemp1135;
-    VlWide<88>/*2815:0*/ __Vtemp1136;
-    VlWide<92>/*2943:0*/ __Vtemp1137;
-    VlWide<96>/*3071:0*/ __Vtemp1138;
-    VlWide<100>/*3199:0*/ __Vtemp1139;
-    VlWide<104>/*3327:0*/ __Vtemp1140;
-    VlWide<108>/*3455:0*/ __Vtemp1141;
-    VlWide<112>/*3583:0*/ __Vtemp1142;
-    VlWide<116>/*3711:0*/ __Vtemp1143;
-    VlWide<120>/*3839:0*/ __Vtemp1144;
-    VlWide<124>/*3967:0*/ __Vtemp1145;
-    VlWide<128>/*4095:0*/ __Vtemp1146;
-    VlWide<132>/*4223:0*/ __Vtemp1147;
-    VlWide<136>/*4351:0*/ __Vtemp1148;
-    VlWide<140>/*4479:0*/ __Vtemp1149;
-    VlWide<144>/*4607:0*/ __Vtemp1150;
-    VlWide<148>/*4735:0*/ __Vtemp1151;
-    VlWide<152>/*4863:0*/ __Vtemp1152;
-    VlWide<156>/*4991:0*/ __Vtemp1153;
-    VlWide<160>/*5119:0*/ __Vtemp1154;
-    VlWide<164>/*5247:0*/ __Vtemp1155;
-    VlWide<168>/*5375:0*/ __Vtemp1156;
-    VlWide<172>/*5503:0*/ __Vtemp1157;
-    VlWide<176>/*5631:0*/ __Vtemp1158;
-    VlWide<180>/*5759:0*/ __Vtemp1159;
-    VlWide<184>/*5887:0*/ __Vtemp1160;
-    VlWide<188>/*6015:0*/ __Vtemp1161;
-    VlWide<192>/*6143:0*/ __Vtemp1162;
-    VlWide<196>/*6271:0*/ __Vtemp1163;
-    VlWide<200>/*6399:0*/ __Vtemp1164;
-    VlWide<204>/*6527:0*/ __Vtemp1165;
-    VlWide<208>/*6655:0*/ __Vtemp1166;
-    VlWide<212>/*6783:0*/ __Vtemp1167;
-    VlWide<216>/*6911:0*/ __Vtemp1168;
-    VlWide<220>/*7039:0*/ __Vtemp1169;
-    VlWide<224>/*7167:0*/ __Vtemp1170;
-    VlWide<228>/*7295:0*/ __Vtemp1171;
-    VlWide<232>/*7423:0*/ __Vtemp1172;
-    VlWide<236>/*7551:0*/ __Vtemp1173;
-    VlWide<240>/*7679:0*/ __Vtemp1174;
-    VlWide<244>/*7807:0*/ __Vtemp1175;
-    VlWide<248>/*7935:0*/ __Vtemp1176;
-    VlWide<252>/*8063:0*/ __Vtemp1177;
-    VlWide<256>/*8191:0*/ __Vtemp1178;
-    VlWide<4>/*127:0*/ __Vtemp1181;
-    VlWide<4>/*127:0*/ __Vtemp1182;
-    VlWide<4>/*127:0*/ __Vtemp1185;
-    VlWide<4>/*127:0*/ __Vtemp1186;
-    VlWide<4>/*127:0*/ __Vtemp1194;
-    VlWide<4>/*127:0*/ __Vtemp1195;
-    VlWide<16>/*511:0*/ __Vtemp1198;
-    VlWide<3>/*95:0*/ __Vtemp1201;
-    VlWide<3>/*95:0*/ __Vtemp1204;
+    VlWide<3>/*95:0*/ __Vtemp882;
+    VlWide<4>/*127:0*/ __Vtemp917;
+    VlWide<4>/*127:0*/ __Vtemp919;
+    VlWide<4>/*127:0*/ __Vtemp920;
+    VlWide<4>/*127:0*/ __Vtemp921;
+    VlWide<4>/*127:0*/ __Vtemp922;
+    VlWide<3>/*95:0*/ __Vtemp925;
+    VlWide<3>/*95:0*/ __Vtemp926;
+    VlWide<3>/*95:0*/ __Vtemp927;
+    VlWide<3>/*95:0*/ __Vtemp928;
+    VlWide<3>/*95:0*/ __Vtemp929;
+    VlWide<64>/*2047:0*/ __Vtemp945;
+    VlWide<68>/*2175:0*/ __Vtemp946;
+    VlWide<72>/*2303:0*/ __Vtemp947;
+    VlWide<76>/*2431:0*/ __Vtemp948;
+    VlWide<80>/*2559:0*/ __Vtemp949;
+    VlWide<84>/*2687:0*/ __Vtemp950;
+    VlWide<88>/*2815:0*/ __Vtemp951;
+    VlWide<92>/*2943:0*/ __Vtemp952;
+    VlWide<96>/*3071:0*/ __Vtemp953;
+    VlWide<100>/*3199:0*/ __Vtemp954;
+    VlWide<104>/*3327:0*/ __Vtemp955;
+    VlWide<108>/*3455:0*/ __Vtemp956;
+    VlWide<112>/*3583:0*/ __Vtemp957;
+    VlWide<116>/*3711:0*/ __Vtemp958;
+    VlWide<120>/*3839:0*/ __Vtemp959;
+    VlWide<124>/*3967:0*/ __Vtemp960;
+    VlWide<128>/*4095:0*/ __Vtemp961;
+    VlWide<132>/*4223:0*/ __Vtemp962;
+    VlWide<136>/*4351:0*/ __Vtemp963;
+    VlWide<140>/*4479:0*/ __Vtemp964;
+    VlWide<144>/*4607:0*/ __Vtemp965;
+    VlWide<148>/*4735:0*/ __Vtemp966;
+    VlWide<152>/*4863:0*/ __Vtemp967;
+    VlWide<156>/*4991:0*/ __Vtemp968;
+    VlWide<160>/*5119:0*/ __Vtemp969;
+    VlWide<164>/*5247:0*/ __Vtemp970;
+    VlWide<168>/*5375:0*/ __Vtemp971;
+    VlWide<172>/*5503:0*/ __Vtemp972;
+    VlWide<176>/*5631:0*/ __Vtemp973;
+    VlWide<180>/*5759:0*/ __Vtemp974;
+    VlWide<184>/*5887:0*/ __Vtemp975;
+    VlWide<188>/*6015:0*/ __Vtemp976;
+    VlWide<192>/*6143:0*/ __Vtemp977;
+    VlWide<196>/*6271:0*/ __Vtemp978;
+    VlWide<200>/*6399:0*/ __Vtemp979;
+    VlWide<204>/*6527:0*/ __Vtemp980;
+    VlWide<208>/*6655:0*/ __Vtemp981;
+    VlWide<212>/*6783:0*/ __Vtemp982;
+    VlWide<216>/*6911:0*/ __Vtemp983;
+    VlWide<220>/*7039:0*/ __Vtemp984;
+    VlWide<224>/*7167:0*/ __Vtemp985;
+    VlWide<228>/*7295:0*/ __Vtemp986;
+    VlWide<232>/*7423:0*/ __Vtemp987;
+    VlWide<236>/*7551:0*/ __Vtemp988;
+    VlWide<240>/*7679:0*/ __Vtemp989;
+    VlWide<244>/*7807:0*/ __Vtemp990;
+    VlWide<248>/*7935:0*/ __Vtemp991;
+    VlWide<252>/*8063:0*/ __Vtemp992;
+    VlWide<256>/*8191:0*/ __Vtemp993;
+    VlWide<64>/*2047:0*/ __Vtemp1009;
+    VlWide<68>/*2175:0*/ __Vtemp1010;
+    VlWide<72>/*2303:0*/ __Vtemp1011;
+    VlWide<76>/*2431:0*/ __Vtemp1012;
+    VlWide<80>/*2559:0*/ __Vtemp1013;
+    VlWide<84>/*2687:0*/ __Vtemp1014;
+    VlWide<88>/*2815:0*/ __Vtemp1015;
+    VlWide<92>/*2943:0*/ __Vtemp1016;
+    VlWide<96>/*3071:0*/ __Vtemp1017;
+    VlWide<100>/*3199:0*/ __Vtemp1018;
+    VlWide<104>/*3327:0*/ __Vtemp1019;
+    VlWide<108>/*3455:0*/ __Vtemp1020;
+    VlWide<112>/*3583:0*/ __Vtemp1021;
+    VlWide<116>/*3711:0*/ __Vtemp1022;
+    VlWide<120>/*3839:0*/ __Vtemp1023;
+    VlWide<124>/*3967:0*/ __Vtemp1024;
+    VlWide<128>/*4095:0*/ __Vtemp1025;
+    VlWide<132>/*4223:0*/ __Vtemp1026;
+    VlWide<136>/*4351:0*/ __Vtemp1027;
+    VlWide<140>/*4479:0*/ __Vtemp1028;
+    VlWide<144>/*4607:0*/ __Vtemp1029;
+    VlWide<148>/*4735:0*/ __Vtemp1030;
+    VlWide<152>/*4863:0*/ __Vtemp1031;
+    VlWide<156>/*4991:0*/ __Vtemp1032;
+    VlWide<160>/*5119:0*/ __Vtemp1033;
+    VlWide<164>/*5247:0*/ __Vtemp1034;
+    VlWide<168>/*5375:0*/ __Vtemp1035;
+    VlWide<172>/*5503:0*/ __Vtemp1036;
+    VlWide<176>/*5631:0*/ __Vtemp1037;
+    VlWide<180>/*5759:0*/ __Vtemp1038;
+    VlWide<184>/*5887:0*/ __Vtemp1039;
+    VlWide<188>/*6015:0*/ __Vtemp1040;
+    VlWide<192>/*6143:0*/ __Vtemp1041;
+    VlWide<196>/*6271:0*/ __Vtemp1042;
+    VlWide<200>/*6399:0*/ __Vtemp1043;
+    VlWide<204>/*6527:0*/ __Vtemp1044;
+    VlWide<208>/*6655:0*/ __Vtemp1045;
+    VlWide<212>/*6783:0*/ __Vtemp1046;
+    VlWide<216>/*6911:0*/ __Vtemp1047;
+    VlWide<220>/*7039:0*/ __Vtemp1048;
+    VlWide<224>/*7167:0*/ __Vtemp1049;
+    VlWide<228>/*7295:0*/ __Vtemp1050;
+    VlWide<232>/*7423:0*/ __Vtemp1051;
+    VlWide<236>/*7551:0*/ __Vtemp1052;
+    VlWide<240>/*7679:0*/ __Vtemp1053;
+    VlWide<244>/*7807:0*/ __Vtemp1054;
+    VlWide<248>/*7935:0*/ __Vtemp1055;
+    VlWide<252>/*8063:0*/ __Vtemp1056;
+    VlWide<256>/*8191:0*/ __Vtemp1057;
+    VlWide<64>/*2047:0*/ __Vtemp1073;
+    VlWide<68>/*2175:0*/ __Vtemp1074;
+    VlWide<72>/*2303:0*/ __Vtemp1075;
+    VlWide<76>/*2431:0*/ __Vtemp1076;
+    VlWide<80>/*2559:0*/ __Vtemp1077;
+    VlWide<84>/*2687:0*/ __Vtemp1078;
+    VlWide<88>/*2815:0*/ __Vtemp1079;
+    VlWide<92>/*2943:0*/ __Vtemp1080;
+    VlWide<96>/*3071:0*/ __Vtemp1081;
+    VlWide<100>/*3199:0*/ __Vtemp1082;
+    VlWide<104>/*3327:0*/ __Vtemp1083;
+    VlWide<108>/*3455:0*/ __Vtemp1084;
+    VlWide<112>/*3583:0*/ __Vtemp1085;
+    VlWide<116>/*3711:0*/ __Vtemp1086;
+    VlWide<120>/*3839:0*/ __Vtemp1087;
+    VlWide<124>/*3967:0*/ __Vtemp1088;
+    VlWide<128>/*4095:0*/ __Vtemp1089;
+    VlWide<132>/*4223:0*/ __Vtemp1090;
+    VlWide<136>/*4351:0*/ __Vtemp1091;
+    VlWide<140>/*4479:0*/ __Vtemp1092;
+    VlWide<144>/*4607:0*/ __Vtemp1093;
+    VlWide<148>/*4735:0*/ __Vtemp1094;
+    VlWide<152>/*4863:0*/ __Vtemp1095;
+    VlWide<156>/*4991:0*/ __Vtemp1096;
+    VlWide<160>/*5119:0*/ __Vtemp1097;
+    VlWide<164>/*5247:0*/ __Vtemp1098;
+    VlWide<168>/*5375:0*/ __Vtemp1099;
+    VlWide<172>/*5503:0*/ __Vtemp1100;
+    VlWide<176>/*5631:0*/ __Vtemp1101;
+    VlWide<180>/*5759:0*/ __Vtemp1102;
+    VlWide<184>/*5887:0*/ __Vtemp1103;
+    VlWide<188>/*6015:0*/ __Vtemp1104;
+    VlWide<192>/*6143:0*/ __Vtemp1105;
+    VlWide<196>/*6271:0*/ __Vtemp1106;
+    VlWide<200>/*6399:0*/ __Vtemp1107;
+    VlWide<204>/*6527:0*/ __Vtemp1108;
+    VlWide<208>/*6655:0*/ __Vtemp1109;
+    VlWide<212>/*6783:0*/ __Vtemp1110;
+    VlWide<216>/*6911:0*/ __Vtemp1111;
+    VlWide<220>/*7039:0*/ __Vtemp1112;
+    VlWide<224>/*7167:0*/ __Vtemp1113;
+    VlWide<228>/*7295:0*/ __Vtemp1114;
+    VlWide<232>/*7423:0*/ __Vtemp1115;
+    VlWide<236>/*7551:0*/ __Vtemp1116;
+    VlWide<240>/*7679:0*/ __Vtemp1117;
+    VlWide<244>/*7807:0*/ __Vtemp1118;
+    VlWide<248>/*7935:0*/ __Vtemp1119;
+    VlWide<252>/*8063:0*/ __Vtemp1120;
+    VlWide<256>/*8191:0*/ __Vtemp1121;
+    VlWide<64>/*2047:0*/ __Vtemp1137;
+    VlWide<68>/*2175:0*/ __Vtemp1138;
+    VlWide<72>/*2303:0*/ __Vtemp1139;
+    VlWide<76>/*2431:0*/ __Vtemp1140;
+    VlWide<80>/*2559:0*/ __Vtemp1141;
+    VlWide<84>/*2687:0*/ __Vtemp1142;
+    VlWide<88>/*2815:0*/ __Vtemp1143;
+    VlWide<92>/*2943:0*/ __Vtemp1144;
+    VlWide<96>/*3071:0*/ __Vtemp1145;
+    VlWide<100>/*3199:0*/ __Vtemp1146;
+    VlWide<104>/*3327:0*/ __Vtemp1147;
+    VlWide<108>/*3455:0*/ __Vtemp1148;
+    VlWide<112>/*3583:0*/ __Vtemp1149;
+    VlWide<116>/*3711:0*/ __Vtemp1150;
+    VlWide<120>/*3839:0*/ __Vtemp1151;
+    VlWide<124>/*3967:0*/ __Vtemp1152;
+    VlWide<128>/*4095:0*/ __Vtemp1153;
+    VlWide<132>/*4223:0*/ __Vtemp1154;
+    VlWide<136>/*4351:0*/ __Vtemp1155;
+    VlWide<140>/*4479:0*/ __Vtemp1156;
+    VlWide<144>/*4607:0*/ __Vtemp1157;
+    VlWide<148>/*4735:0*/ __Vtemp1158;
+    VlWide<152>/*4863:0*/ __Vtemp1159;
+    VlWide<156>/*4991:0*/ __Vtemp1160;
+    VlWide<160>/*5119:0*/ __Vtemp1161;
+    VlWide<164>/*5247:0*/ __Vtemp1162;
+    VlWide<168>/*5375:0*/ __Vtemp1163;
+    VlWide<172>/*5503:0*/ __Vtemp1164;
+    VlWide<176>/*5631:0*/ __Vtemp1165;
+    VlWide<180>/*5759:0*/ __Vtemp1166;
+    VlWide<184>/*5887:0*/ __Vtemp1167;
+    VlWide<188>/*6015:0*/ __Vtemp1168;
+    VlWide<192>/*6143:0*/ __Vtemp1169;
+    VlWide<196>/*6271:0*/ __Vtemp1170;
+    VlWide<200>/*6399:0*/ __Vtemp1171;
+    VlWide<204>/*6527:0*/ __Vtemp1172;
+    VlWide<208>/*6655:0*/ __Vtemp1173;
+    VlWide<212>/*6783:0*/ __Vtemp1174;
+    VlWide<216>/*6911:0*/ __Vtemp1175;
+    VlWide<220>/*7039:0*/ __Vtemp1176;
+    VlWide<224>/*7167:0*/ __Vtemp1177;
+    VlWide<228>/*7295:0*/ __Vtemp1178;
+    VlWide<232>/*7423:0*/ __Vtemp1179;
+    VlWide<236>/*7551:0*/ __Vtemp1180;
+    VlWide<240>/*7679:0*/ __Vtemp1181;
+    VlWide<244>/*7807:0*/ __Vtemp1182;
+    VlWide<248>/*7935:0*/ __Vtemp1183;
+    VlWide<252>/*8063:0*/ __Vtemp1184;
+    VlWide<256>/*8191:0*/ __Vtemp1185;
+    VlWide<4>/*127:0*/ __Vtemp1188;
+    VlWide<4>/*127:0*/ __Vtemp1189;
+    VlWide<4>/*127:0*/ __Vtemp1192;
+    VlWide<4>/*127:0*/ __Vtemp1193;
+    VlWide<4>/*127:0*/ __Vtemp1201;
+    VlWide<4>/*127:0*/ __Vtemp1202;
+    VlWide<16>/*511:0*/ __Vtemp1205;
     VlWide<3>/*95:0*/ __Vtemp1208;
-    VlWide<3>/*95:0*/ __Vtemp1212;
+    VlWide<3>/*95:0*/ __Vtemp1211;
+    VlWide<3>/*95:0*/ __Vtemp1215;
     VlWide<3>/*95:0*/ __Vtemp1219;
-    VlWide<3>/*95:0*/ __Vtemp1223;
-    VlWide<5>/*159:0*/ __Vtemp1225;
-    VlWide<5>/*159:0*/ __Vtemp1226;
-    VlWide<17>/*543:0*/ __Vtemp1228;
-    VlWide<3>/*95:0*/ __Vtemp1232;
-    VlWide<64>/*2047:0*/ __Vtemp1251;
-    VlWide<68>/*2175:0*/ __Vtemp1252;
-    VlWide<72>/*2303:0*/ __Vtemp1253;
-    VlWide<76>/*2431:0*/ __Vtemp1254;
-    VlWide<80>/*2559:0*/ __Vtemp1255;
-    VlWide<84>/*2687:0*/ __Vtemp1256;
-    VlWide<88>/*2815:0*/ __Vtemp1257;
-    VlWide<92>/*2943:0*/ __Vtemp1258;
-    VlWide<96>/*3071:0*/ __Vtemp1259;
-    VlWide<100>/*3199:0*/ __Vtemp1260;
-    VlWide<104>/*3327:0*/ __Vtemp1261;
-    VlWide<108>/*3455:0*/ __Vtemp1262;
-    VlWide<112>/*3583:0*/ __Vtemp1263;
-    VlWide<116>/*3711:0*/ __Vtemp1264;
-    VlWide<120>/*3839:0*/ __Vtemp1265;
-    VlWide<124>/*3967:0*/ __Vtemp1266;
-    VlWide<128>/*4095:0*/ __Vtemp1267;
-    VlWide<132>/*4223:0*/ __Vtemp1268;
-    VlWide<136>/*4351:0*/ __Vtemp1269;
-    VlWide<140>/*4479:0*/ __Vtemp1270;
-    VlWide<144>/*4607:0*/ __Vtemp1271;
-    VlWide<148>/*4735:0*/ __Vtemp1272;
-    VlWide<152>/*4863:0*/ __Vtemp1273;
-    VlWide<156>/*4991:0*/ __Vtemp1274;
-    VlWide<160>/*5119:0*/ __Vtemp1275;
-    VlWide<164>/*5247:0*/ __Vtemp1276;
-    VlWide<168>/*5375:0*/ __Vtemp1277;
-    VlWide<172>/*5503:0*/ __Vtemp1278;
-    VlWide<176>/*5631:0*/ __Vtemp1279;
-    VlWide<180>/*5759:0*/ __Vtemp1280;
-    VlWide<184>/*5887:0*/ __Vtemp1281;
-    VlWide<188>/*6015:0*/ __Vtemp1282;
-    VlWide<192>/*6143:0*/ __Vtemp1283;
-    VlWide<196>/*6271:0*/ __Vtemp1284;
-    VlWide<200>/*6399:0*/ __Vtemp1285;
-    VlWide<204>/*6527:0*/ __Vtemp1286;
-    VlWide<208>/*6655:0*/ __Vtemp1287;
-    VlWide<212>/*6783:0*/ __Vtemp1288;
-    VlWide<216>/*6911:0*/ __Vtemp1289;
-    VlWide<220>/*7039:0*/ __Vtemp1290;
-    VlWide<224>/*7167:0*/ __Vtemp1291;
-    VlWide<228>/*7295:0*/ __Vtemp1292;
-    VlWide<232>/*7423:0*/ __Vtemp1293;
-    VlWide<236>/*7551:0*/ __Vtemp1294;
-    VlWide<240>/*7679:0*/ __Vtemp1295;
-    VlWide<244>/*7807:0*/ __Vtemp1296;
-    VlWide<248>/*7935:0*/ __Vtemp1297;
-    VlWide<252>/*8063:0*/ __Vtemp1298;
-    VlWide<256>/*8191:0*/ __Vtemp1299;
-    VlWide<64>/*2047:0*/ __Vtemp1315;
-    VlWide<68>/*2175:0*/ __Vtemp1316;
-    VlWide<72>/*2303:0*/ __Vtemp1317;
-    VlWide<76>/*2431:0*/ __Vtemp1318;
-    VlWide<80>/*2559:0*/ __Vtemp1319;
-    VlWide<84>/*2687:0*/ __Vtemp1320;
-    VlWide<88>/*2815:0*/ __Vtemp1321;
-    VlWide<92>/*2943:0*/ __Vtemp1322;
-    VlWide<96>/*3071:0*/ __Vtemp1323;
-    VlWide<100>/*3199:0*/ __Vtemp1324;
-    VlWide<104>/*3327:0*/ __Vtemp1325;
-    VlWide<108>/*3455:0*/ __Vtemp1326;
-    VlWide<112>/*3583:0*/ __Vtemp1327;
-    VlWide<116>/*3711:0*/ __Vtemp1328;
-    VlWide<120>/*3839:0*/ __Vtemp1329;
-    VlWide<124>/*3967:0*/ __Vtemp1330;
-    VlWide<128>/*4095:0*/ __Vtemp1331;
-    VlWide<132>/*4223:0*/ __Vtemp1332;
-    VlWide<136>/*4351:0*/ __Vtemp1333;
-    VlWide<140>/*4479:0*/ __Vtemp1334;
-    VlWide<144>/*4607:0*/ __Vtemp1335;
-    VlWide<148>/*4735:0*/ __Vtemp1336;
-    VlWide<152>/*4863:0*/ __Vtemp1337;
-    VlWide<156>/*4991:0*/ __Vtemp1338;
-    VlWide<160>/*5119:0*/ __Vtemp1339;
-    VlWide<164>/*5247:0*/ __Vtemp1340;
-    VlWide<168>/*5375:0*/ __Vtemp1341;
-    VlWide<172>/*5503:0*/ __Vtemp1342;
-    VlWide<176>/*5631:0*/ __Vtemp1343;
-    VlWide<180>/*5759:0*/ __Vtemp1344;
-    VlWide<184>/*5887:0*/ __Vtemp1345;
-    VlWide<188>/*6015:0*/ __Vtemp1346;
-    VlWide<192>/*6143:0*/ __Vtemp1347;
-    VlWide<196>/*6271:0*/ __Vtemp1348;
-    VlWide<200>/*6399:0*/ __Vtemp1349;
-    VlWide<204>/*6527:0*/ __Vtemp1350;
-    VlWide<208>/*6655:0*/ __Vtemp1351;
-    VlWide<212>/*6783:0*/ __Vtemp1352;
-    VlWide<216>/*6911:0*/ __Vtemp1353;
-    VlWide<220>/*7039:0*/ __Vtemp1354;
-    VlWide<224>/*7167:0*/ __Vtemp1355;
-    VlWide<228>/*7295:0*/ __Vtemp1356;
-    VlWide<232>/*7423:0*/ __Vtemp1357;
-    VlWide<236>/*7551:0*/ __Vtemp1358;
-    VlWide<240>/*7679:0*/ __Vtemp1359;
-    VlWide<244>/*7807:0*/ __Vtemp1360;
-    VlWide<248>/*7935:0*/ __Vtemp1361;
-    VlWide<252>/*8063:0*/ __Vtemp1362;
-    VlWide<256>/*8191:0*/ __Vtemp1363;
-    VlWide<64>/*2047:0*/ __Vtemp1379;
-    VlWide<68>/*2175:0*/ __Vtemp1380;
-    VlWide<72>/*2303:0*/ __Vtemp1381;
-    VlWide<76>/*2431:0*/ __Vtemp1382;
-    VlWide<80>/*2559:0*/ __Vtemp1383;
-    VlWide<84>/*2687:0*/ __Vtemp1384;
-    VlWide<88>/*2815:0*/ __Vtemp1385;
-    VlWide<92>/*2943:0*/ __Vtemp1386;
-    VlWide<96>/*3071:0*/ __Vtemp1387;
-    VlWide<100>/*3199:0*/ __Vtemp1388;
-    VlWide<104>/*3327:0*/ __Vtemp1389;
-    VlWide<108>/*3455:0*/ __Vtemp1390;
-    VlWide<112>/*3583:0*/ __Vtemp1391;
-    VlWide<116>/*3711:0*/ __Vtemp1392;
-    VlWide<120>/*3839:0*/ __Vtemp1393;
-    VlWide<124>/*3967:0*/ __Vtemp1394;
-    VlWide<128>/*4095:0*/ __Vtemp1395;
-    VlWide<132>/*4223:0*/ __Vtemp1396;
-    VlWide<136>/*4351:0*/ __Vtemp1397;
-    VlWide<140>/*4479:0*/ __Vtemp1398;
-    VlWide<144>/*4607:0*/ __Vtemp1399;
-    VlWide<148>/*4735:0*/ __Vtemp1400;
-    VlWide<152>/*4863:0*/ __Vtemp1401;
-    VlWide<156>/*4991:0*/ __Vtemp1402;
-    VlWide<160>/*5119:0*/ __Vtemp1403;
-    VlWide<164>/*5247:0*/ __Vtemp1404;
-    VlWide<168>/*5375:0*/ __Vtemp1405;
-    VlWide<172>/*5503:0*/ __Vtemp1406;
-    VlWide<176>/*5631:0*/ __Vtemp1407;
-    VlWide<180>/*5759:0*/ __Vtemp1408;
-    VlWide<184>/*5887:0*/ __Vtemp1409;
-    VlWide<188>/*6015:0*/ __Vtemp1410;
-    VlWide<192>/*6143:0*/ __Vtemp1411;
-    VlWide<196>/*6271:0*/ __Vtemp1412;
-    VlWide<200>/*6399:0*/ __Vtemp1413;
-    VlWide<204>/*6527:0*/ __Vtemp1414;
-    VlWide<208>/*6655:0*/ __Vtemp1415;
-    VlWide<212>/*6783:0*/ __Vtemp1416;
-    VlWide<216>/*6911:0*/ __Vtemp1417;
-    VlWide<220>/*7039:0*/ __Vtemp1418;
-    VlWide<224>/*7167:0*/ __Vtemp1419;
-    VlWide<228>/*7295:0*/ __Vtemp1420;
-    VlWide<232>/*7423:0*/ __Vtemp1421;
-    VlWide<236>/*7551:0*/ __Vtemp1422;
-    VlWide<240>/*7679:0*/ __Vtemp1423;
-    VlWide<244>/*7807:0*/ __Vtemp1424;
-    VlWide<248>/*7935:0*/ __Vtemp1425;
-    VlWide<252>/*8063:0*/ __Vtemp1426;
-    VlWide<256>/*8191:0*/ __Vtemp1427;
-    VlWide<64>/*2047:0*/ __Vtemp1443;
-    VlWide<68>/*2175:0*/ __Vtemp1444;
-    VlWide<72>/*2303:0*/ __Vtemp1445;
-    VlWide<76>/*2431:0*/ __Vtemp1446;
-    VlWide<80>/*2559:0*/ __Vtemp1447;
-    VlWide<84>/*2687:0*/ __Vtemp1448;
-    VlWide<88>/*2815:0*/ __Vtemp1449;
-    VlWide<92>/*2943:0*/ __Vtemp1450;
-    VlWide<96>/*3071:0*/ __Vtemp1451;
-    VlWide<100>/*3199:0*/ __Vtemp1452;
-    VlWide<104>/*3327:0*/ __Vtemp1453;
-    VlWide<108>/*3455:0*/ __Vtemp1454;
-    VlWide<112>/*3583:0*/ __Vtemp1455;
-    VlWide<116>/*3711:0*/ __Vtemp1456;
-    VlWide<120>/*3839:0*/ __Vtemp1457;
-    VlWide<124>/*3967:0*/ __Vtemp1458;
-    VlWide<128>/*4095:0*/ __Vtemp1459;
-    VlWide<132>/*4223:0*/ __Vtemp1460;
-    VlWide<136>/*4351:0*/ __Vtemp1461;
-    VlWide<140>/*4479:0*/ __Vtemp1462;
-    VlWide<144>/*4607:0*/ __Vtemp1463;
-    VlWide<148>/*4735:0*/ __Vtemp1464;
-    VlWide<152>/*4863:0*/ __Vtemp1465;
-    VlWide<156>/*4991:0*/ __Vtemp1466;
-    VlWide<160>/*5119:0*/ __Vtemp1467;
-    VlWide<164>/*5247:0*/ __Vtemp1468;
-    VlWide<168>/*5375:0*/ __Vtemp1469;
-    VlWide<172>/*5503:0*/ __Vtemp1470;
-    VlWide<176>/*5631:0*/ __Vtemp1471;
-    VlWide<180>/*5759:0*/ __Vtemp1472;
-    VlWide<184>/*5887:0*/ __Vtemp1473;
-    VlWide<188>/*6015:0*/ __Vtemp1474;
-    VlWide<192>/*6143:0*/ __Vtemp1475;
-    VlWide<196>/*6271:0*/ __Vtemp1476;
-    VlWide<200>/*6399:0*/ __Vtemp1477;
-    VlWide<204>/*6527:0*/ __Vtemp1478;
-    VlWide<208>/*6655:0*/ __Vtemp1479;
-    VlWide<212>/*6783:0*/ __Vtemp1480;
-    VlWide<216>/*6911:0*/ __Vtemp1481;
-    VlWide<220>/*7039:0*/ __Vtemp1482;
-    VlWide<224>/*7167:0*/ __Vtemp1483;
-    VlWide<228>/*7295:0*/ __Vtemp1484;
-    VlWide<232>/*7423:0*/ __Vtemp1485;
-    VlWide<236>/*7551:0*/ __Vtemp1486;
-    VlWide<240>/*7679:0*/ __Vtemp1487;
-    VlWide<244>/*7807:0*/ __Vtemp1488;
-    VlWide<248>/*7935:0*/ __Vtemp1489;
-    VlWide<252>/*8063:0*/ __Vtemp1490;
-    VlWide<256>/*8191:0*/ __Vtemp1491;
-    VlWide<8>/*255:0*/ __Vtemp1495;
-    VlWide<8>/*255:0*/ __Vtemp1498;
+    VlWide<3>/*95:0*/ __Vtemp1226;
+    VlWide<3>/*95:0*/ __Vtemp1230;
+    VlWide<5>/*159:0*/ __Vtemp1232;
+    VlWide<5>/*159:0*/ __Vtemp1233;
+    VlWide<17>/*543:0*/ __Vtemp1235;
+    VlWide<3>/*95:0*/ __Vtemp1239;
+    VlWide<64>/*2047:0*/ __Vtemp1258;
+    VlWide<68>/*2175:0*/ __Vtemp1259;
+    VlWide<72>/*2303:0*/ __Vtemp1260;
+    VlWide<76>/*2431:0*/ __Vtemp1261;
+    VlWide<80>/*2559:0*/ __Vtemp1262;
+    VlWide<84>/*2687:0*/ __Vtemp1263;
+    VlWide<88>/*2815:0*/ __Vtemp1264;
+    VlWide<92>/*2943:0*/ __Vtemp1265;
+    VlWide<96>/*3071:0*/ __Vtemp1266;
+    VlWide<100>/*3199:0*/ __Vtemp1267;
+    VlWide<104>/*3327:0*/ __Vtemp1268;
+    VlWide<108>/*3455:0*/ __Vtemp1269;
+    VlWide<112>/*3583:0*/ __Vtemp1270;
+    VlWide<116>/*3711:0*/ __Vtemp1271;
+    VlWide<120>/*3839:0*/ __Vtemp1272;
+    VlWide<124>/*3967:0*/ __Vtemp1273;
+    VlWide<128>/*4095:0*/ __Vtemp1274;
+    VlWide<132>/*4223:0*/ __Vtemp1275;
+    VlWide<136>/*4351:0*/ __Vtemp1276;
+    VlWide<140>/*4479:0*/ __Vtemp1277;
+    VlWide<144>/*4607:0*/ __Vtemp1278;
+    VlWide<148>/*4735:0*/ __Vtemp1279;
+    VlWide<152>/*4863:0*/ __Vtemp1280;
+    VlWide<156>/*4991:0*/ __Vtemp1281;
+    VlWide<160>/*5119:0*/ __Vtemp1282;
+    VlWide<164>/*5247:0*/ __Vtemp1283;
+    VlWide<168>/*5375:0*/ __Vtemp1284;
+    VlWide<172>/*5503:0*/ __Vtemp1285;
+    VlWide<176>/*5631:0*/ __Vtemp1286;
+    VlWide<180>/*5759:0*/ __Vtemp1287;
+    VlWide<184>/*5887:0*/ __Vtemp1288;
+    VlWide<188>/*6015:0*/ __Vtemp1289;
+    VlWide<192>/*6143:0*/ __Vtemp1290;
+    VlWide<196>/*6271:0*/ __Vtemp1291;
+    VlWide<200>/*6399:0*/ __Vtemp1292;
+    VlWide<204>/*6527:0*/ __Vtemp1293;
+    VlWide<208>/*6655:0*/ __Vtemp1294;
+    VlWide<212>/*6783:0*/ __Vtemp1295;
+    VlWide<216>/*6911:0*/ __Vtemp1296;
+    VlWide<220>/*7039:0*/ __Vtemp1297;
+    VlWide<224>/*7167:0*/ __Vtemp1298;
+    VlWide<228>/*7295:0*/ __Vtemp1299;
+    VlWide<232>/*7423:0*/ __Vtemp1300;
+    VlWide<236>/*7551:0*/ __Vtemp1301;
+    VlWide<240>/*7679:0*/ __Vtemp1302;
+    VlWide<244>/*7807:0*/ __Vtemp1303;
+    VlWide<248>/*7935:0*/ __Vtemp1304;
+    VlWide<252>/*8063:0*/ __Vtemp1305;
+    VlWide<256>/*8191:0*/ __Vtemp1306;
+    VlWide<64>/*2047:0*/ __Vtemp1322;
+    VlWide<68>/*2175:0*/ __Vtemp1323;
+    VlWide<72>/*2303:0*/ __Vtemp1324;
+    VlWide<76>/*2431:0*/ __Vtemp1325;
+    VlWide<80>/*2559:0*/ __Vtemp1326;
+    VlWide<84>/*2687:0*/ __Vtemp1327;
+    VlWide<88>/*2815:0*/ __Vtemp1328;
+    VlWide<92>/*2943:0*/ __Vtemp1329;
+    VlWide<96>/*3071:0*/ __Vtemp1330;
+    VlWide<100>/*3199:0*/ __Vtemp1331;
+    VlWide<104>/*3327:0*/ __Vtemp1332;
+    VlWide<108>/*3455:0*/ __Vtemp1333;
+    VlWide<112>/*3583:0*/ __Vtemp1334;
+    VlWide<116>/*3711:0*/ __Vtemp1335;
+    VlWide<120>/*3839:0*/ __Vtemp1336;
+    VlWide<124>/*3967:0*/ __Vtemp1337;
+    VlWide<128>/*4095:0*/ __Vtemp1338;
+    VlWide<132>/*4223:0*/ __Vtemp1339;
+    VlWide<136>/*4351:0*/ __Vtemp1340;
+    VlWide<140>/*4479:0*/ __Vtemp1341;
+    VlWide<144>/*4607:0*/ __Vtemp1342;
+    VlWide<148>/*4735:0*/ __Vtemp1343;
+    VlWide<152>/*4863:0*/ __Vtemp1344;
+    VlWide<156>/*4991:0*/ __Vtemp1345;
+    VlWide<160>/*5119:0*/ __Vtemp1346;
+    VlWide<164>/*5247:0*/ __Vtemp1347;
+    VlWide<168>/*5375:0*/ __Vtemp1348;
+    VlWide<172>/*5503:0*/ __Vtemp1349;
+    VlWide<176>/*5631:0*/ __Vtemp1350;
+    VlWide<180>/*5759:0*/ __Vtemp1351;
+    VlWide<184>/*5887:0*/ __Vtemp1352;
+    VlWide<188>/*6015:0*/ __Vtemp1353;
+    VlWide<192>/*6143:0*/ __Vtemp1354;
+    VlWide<196>/*6271:0*/ __Vtemp1355;
+    VlWide<200>/*6399:0*/ __Vtemp1356;
+    VlWide<204>/*6527:0*/ __Vtemp1357;
+    VlWide<208>/*6655:0*/ __Vtemp1358;
+    VlWide<212>/*6783:0*/ __Vtemp1359;
+    VlWide<216>/*6911:0*/ __Vtemp1360;
+    VlWide<220>/*7039:0*/ __Vtemp1361;
+    VlWide<224>/*7167:0*/ __Vtemp1362;
+    VlWide<228>/*7295:0*/ __Vtemp1363;
+    VlWide<232>/*7423:0*/ __Vtemp1364;
+    VlWide<236>/*7551:0*/ __Vtemp1365;
+    VlWide<240>/*7679:0*/ __Vtemp1366;
+    VlWide<244>/*7807:0*/ __Vtemp1367;
+    VlWide<248>/*7935:0*/ __Vtemp1368;
+    VlWide<252>/*8063:0*/ __Vtemp1369;
+    VlWide<256>/*8191:0*/ __Vtemp1370;
+    VlWide<64>/*2047:0*/ __Vtemp1386;
+    VlWide<68>/*2175:0*/ __Vtemp1387;
+    VlWide<72>/*2303:0*/ __Vtemp1388;
+    VlWide<76>/*2431:0*/ __Vtemp1389;
+    VlWide<80>/*2559:0*/ __Vtemp1390;
+    VlWide<84>/*2687:0*/ __Vtemp1391;
+    VlWide<88>/*2815:0*/ __Vtemp1392;
+    VlWide<92>/*2943:0*/ __Vtemp1393;
+    VlWide<96>/*3071:0*/ __Vtemp1394;
+    VlWide<100>/*3199:0*/ __Vtemp1395;
+    VlWide<104>/*3327:0*/ __Vtemp1396;
+    VlWide<108>/*3455:0*/ __Vtemp1397;
+    VlWide<112>/*3583:0*/ __Vtemp1398;
+    VlWide<116>/*3711:0*/ __Vtemp1399;
+    VlWide<120>/*3839:0*/ __Vtemp1400;
+    VlWide<124>/*3967:0*/ __Vtemp1401;
+    VlWide<128>/*4095:0*/ __Vtemp1402;
+    VlWide<132>/*4223:0*/ __Vtemp1403;
+    VlWide<136>/*4351:0*/ __Vtemp1404;
+    VlWide<140>/*4479:0*/ __Vtemp1405;
+    VlWide<144>/*4607:0*/ __Vtemp1406;
+    VlWide<148>/*4735:0*/ __Vtemp1407;
+    VlWide<152>/*4863:0*/ __Vtemp1408;
+    VlWide<156>/*4991:0*/ __Vtemp1409;
+    VlWide<160>/*5119:0*/ __Vtemp1410;
+    VlWide<164>/*5247:0*/ __Vtemp1411;
+    VlWide<168>/*5375:0*/ __Vtemp1412;
+    VlWide<172>/*5503:0*/ __Vtemp1413;
+    VlWide<176>/*5631:0*/ __Vtemp1414;
+    VlWide<180>/*5759:0*/ __Vtemp1415;
+    VlWide<184>/*5887:0*/ __Vtemp1416;
+    VlWide<188>/*6015:0*/ __Vtemp1417;
+    VlWide<192>/*6143:0*/ __Vtemp1418;
+    VlWide<196>/*6271:0*/ __Vtemp1419;
+    VlWide<200>/*6399:0*/ __Vtemp1420;
+    VlWide<204>/*6527:0*/ __Vtemp1421;
+    VlWide<208>/*6655:0*/ __Vtemp1422;
+    VlWide<212>/*6783:0*/ __Vtemp1423;
+    VlWide<216>/*6911:0*/ __Vtemp1424;
+    VlWide<220>/*7039:0*/ __Vtemp1425;
+    VlWide<224>/*7167:0*/ __Vtemp1426;
+    VlWide<228>/*7295:0*/ __Vtemp1427;
+    VlWide<232>/*7423:0*/ __Vtemp1428;
+    VlWide<236>/*7551:0*/ __Vtemp1429;
+    VlWide<240>/*7679:0*/ __Vtemp1430;
+    VlWide<244>/*7807:0*/ __Vtemp1431;
+    VlWide<248>/*7935:0*/ __Vtemp1432;
+    VlWide<252>/*8063:0*/ __Vtemp1433;
+    VlWide<256>/*8191:0*/ __Vtemp1434;
+    VlWide<64>/*2047:0*/ __Vtemp1450;
+    VlWide<68>/*2175:0*/ __Vtemp1451;
+    VlWide<72>/*2303:0*/ __Vtemp1452;
+    VlWide<76>/*2431:0*/ __Vtemp1453;
+    VlWide<80>/*2559:0*/ __Vtemp1454;
+    VlWide<84>/*2687:0*/ __Vtemp1455;
+    VlWide<88>/*2815:0*/ __Vtemp1456;
+    VlWide<92>/*2943:0*/ __Vtemp1457;
+    VlWide<96>/*3071:0*/ __Vtemp1458;
+    VlWide<100>/*3199:0*/ __Vtemp1459;
+    VlWide<104>/*3327:0*/ __Vtemp1460;
+    VlWide<108>/*3455:0*/ __Vtemp1461;
+    VlWide<112>/*3583:0*/ __Vtemp1462;
+    VlWide<116>/*3711:0*/ __Vtemp1463;
+    VlWide<120>/*3839:0*/ __Vtemp1464;
+    VlWide<124>/*3967:0*/ __Vtemp1465;
+    VlWide<128>/*4095:0*/ __Vtemp1466;
+    VlWide<132>/*4223:0*/ __Vtemp1467;
+    VlWide<136>/*4351:0*/ __Vtemp1468;
+    VlWide<140>/*4479:0*/ __Vtemp1469;
+    VlWide<144>/*4607:0*/ __Vtemp1470;
+    VlWide<148>/*4735:0*/ __Vtemp1471;
+    VlWide<152>/*4863:0*/ __Vtemp1472;
+    VlWide<156>/*4991:0*/ __Vtemp1473;
+    VlWide<160>/*5119:0*/ __Vtemp1474;
+    VlWide<164>/*5247:0*/ __Vtemp1475;
+    VlWide<168>/*5375:0*/ __Vtemp1476;
+    VlWide<172>/*5503:0*/ __Vtemp1477;
+    VlWide<176>/*5631:0*/ __Vtemp1478;
+    VlWide<180>/*5759:0*/ __Vtemp1479;
+    VlWide<184>/*5887:0*/ __Vtemp1480;
+    VlWide<188>/*6015:0*/ __Vtemp1481;
+    VlWide<192>/*6143:0*/ __Vtemp1482;
+    VlWide<196>/*6271:0*/ __Vtemp1483;
+    VlWide<200>/*6399:0*/ __Vtemp1484;
+    VlWide<204>/*6527:0*/ __Vtemp1485;
+    VlWide<208>/*6655:0*/ __Vtemp1486;
+    VlWide<212>/*6783:0*/ __Vtemp1487;
+    VlWide<216>/*6911:0*/ __Vtemp1488;
+    VlWide<220>/*7039:0*/ __Vtemp1489;
+    VlWide<224>/*7167:0*/ __Vtemp1490;
+    VlWide<228>/*7295:0*/ __Vtemp1491;
+    VlWide<232>/*7423:0*/ __Vtemp1492;
+    VlWide<236>/*7551:0*/ __Vtemp1493;
+    VlWide<240>/*7679:0*/ __Vtemp1494;
+    VlWide<244>/*7807:0*/ __Vtemp1495;
+    VlWide<248>/*7935:0*/ __Vtemp1496;
+    VlWide<252>/*8063:0*/ __Vtemp1497;
+    VlWide<256>/*8191:0*/ __Vtemp1498;
+    VlWide<8>/*255:0*/ __Vtemp1502;
+    VlWide<8>/*255:0*/ __Vtemp1505;
+    QData/*63:0*/ riscv_soc__DOT__core__DOT___cross_bar_1_io_fetch_cpu_data_bits_data;
     QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1;
     QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data2;
     QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs2_data;
@@ -523,7 +525,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT___axi_ram_io_ram_bus_r_bits_rlast 
         = ((0U == (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_rlen)) 
            & (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_valid));
-    __Vtemp877[1U] = (IData)((((QData)((IData)((((- (IData)(
+    __Vtemp882[1U] = (IData)((((QData)((IData)((((- (IData)(
                                                             (1U 
                                                              & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb) 
                                                                 >> 0xfU)))) 
@@ -568,7 +570,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                                                 (1U 
                                                                                 & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb) 
                                                                                 >> 8U))))))))))));
-    __Vtemp877[2U] = (IData)(((((QData)((IData)((((- (IData)(
+    __Vtemp882[2U] = (IData)(((((QData)((IData)((((- (IData)(
                                                              (1U 
                                                               & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb) 
                                                                  >> 0xfU)))) 
@@ -644,9 +646,9 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                              & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb) 
                                                                 >> 4U))))))));
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_mask[2U] 
-        = __Vtemp877[1U];
+        = __Vtemp882[1U];
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_mask[3U] 
-        = __Vtemp877[2U];
+        = __Vtemp882[2U];
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT___PHT_ext_R1_data 
         = vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT__PHT_ext__DOT__Memory
         [(0x3fU & (IData)((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_br_pc 
@@ -661,22 +663,10 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__is_sram2_write 
         = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_write) 
            & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_chosen_tag));
-    vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage1__DOT__ready 
-        = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram_r_ready) 
-           & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_ready) 
-              & (3U > (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__reg_ibuf_size))));
-    if ((0U != (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_0 
-                >> 0x1fU))) {
-        vlSelf->riscv_soc__DOT__core__DOT___cross_bar_1_io_fetch_cpu_data_bits_pc 
-            = vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_cpu_addr;
-        vlSelf->riscv_soc__DOT__core__DOT___cross_bar_1_io_fetch_cpu_data_bits_data 
-            = vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_rdata;
-    } else {
-        vlSelf->riscv_soc__DOT__core__DOT___cross_bar_1_io_fetch_cpu_data_bits_pc 
-            = vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_0;
-        vlSelf->riscv_soc__DOT__core__DOT___cross_bar_1_io_fetch_cpu_data_bits_data 
-            = vlSelf->riscv_soc__DOT___axi_ram_io_ram_bus_r_bits_rdata;
-    }
+    riscv_soc__DOT__core__DOT___cross_bar_1_io_fetch_cpu_data_bits_data 
+        = ((0U != (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_0 
+                   >> 0x1fU)) ? vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_rdata
+            : vlSelf->riscv_soc__DOT___axi_ram_io_ram_bus_r_bits_rdata);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT___BTB_ext_R0_data[0U] 
         = vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT__BTB_ext__DOT__Memory
         [(0x3fU & (IData)((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_0 
@@ -915,18 +905,55 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                      | (5U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_opType)))
                      ? 2U : ((1U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_opType)) 
                              | (2U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_opType)))));
-    vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst 
-        = vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_ext__DOT__Memory
-        [vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__reg_tail];
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT___GEN_2 
+        = (1U & ((((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__is_pre_fifo_3) 
+                   << 3U) | (((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__is_pre_fifo_2) 
+                              << 2U) | (((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__is_pre_fifo_1) 
+                                         << 1U) | (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__is_pre_fifo_0)))) 
+                 >> (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__is_pre_tail)));
+    vlSelf->riscv_soc__DOT__core__DOT___cross_bar_1_io_fetch_cpu_data_bits_pc 
+        = ((0U != (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_0 
+                   >> 0x1fU)) ? vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_cpu_addr
+            : vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_0);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__allow_in 
+        = (3U > (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__reg_ibuf_size));
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_0 
+        = (1U & ((((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_valid_3) 
+                   << 3U) | (((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_valid_2) 
+                              << 2U) | (((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_valid_1) 
+                                         << 1U) | (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_valid_0)))) 
+                 >> (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__reg_tail)));
+    vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage1__DOT__ready 
+        = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_sram_r_ready) 
+           & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_ready) 
+              & (3U > (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__reg_ibuf_size))));
+    __Vtemp917[0U] = vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_0;
+    __Vtemp917[1U] = vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_1;
+    __Vtemp917[2U] = (IData)((((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_3)) 
+                               << 0x20U) | (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_2))));
+    __Vtemp917[3U] = (IData)(((((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_3)) 
+                                << 0x20U) | (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_2))) 
+                              >> 0x20U));
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 
+        = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__reg_tail) 
+                             << 5U))) ? 0U : (__Vtemp917[
+                                              (((IData)(0x1fU) 
+                                                + (0x7fU 
+                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__reg_tail) 
+                                                      << 5U))) 
+                                               >> 5U)] 
+                                              << ((IData)(0x20U) 
+                                                  - 
+                                                  (0x1fU 
+                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__reg_tail) 
+                                                      << 5U))))) 
+           | (__Vtemp917[(3U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__reg_tail))] 
+              >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__reg_tail) 
+                           << 5U))));
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__ready 
         = (((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_ready) 
             & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_ready)) 
            & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_ready));
-    vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT___cache_stage1_io_tag_valid_index 
-        = (0x3fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage1__DOT__ready)
-                     ? (IData)((vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage0__DOT__reg_addr 
-                                >> 4U)) : (IData)((vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage1__DOT__reg_cpu_addr 
-                                                   >> 4U))));
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT__pre_valid 
         = (((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT___BTB_ext_R0_data[3U] 
              >> 0x1aU) & ((0xffffffffffffffULL & (((QData)((IData)(
@@ -948,6 +975,16 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     riscv_soc__DOT__core__DOT__execute__DOT__valid 
         = ((4U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_opType))
             ? 8U : (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT___GEN));
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT____Vcellinp__ibuf__io_cache_buf_bits_inst 
+        = ((1U & (IData)((vlSelf->riscv_soc__DOT__core__DOT___cross_bar_1_io_fetch_cpu_data_bits_pc 
+                          >> 2U))) ? (IData)((riscv_soc__DOT__core__DOT___cross_bar_1_io_fetch_cpu_data_bits_data 
+                                              >> 0x20U))
+            : (IData)(riscv_soc__DOT__core__DOT___cross_bar_1_io_fetch_cpu_data_bits_data));
+    vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT___cache_stage1_io_tag_valid_index 
+        = (0x3fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage1__DOT__ready)
+                     ? (IData)((vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage0__DOT__reg_addr 
+                                >> 4U)) : (IData)((vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage1__DOT__reg_cpu_addr 
+                                                   >> 4U))));
     vlSelf->riscv_soc__DOT__core__DOT___execute_io_csr_except_is_except 
         = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_is_except) 
            & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__ready));
@@ -960,10 +997,6 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT__core__DOT___execute_io_commit 
         = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_commit) 
            & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__ready));
-    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__can_deq 
-        = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__ready) 
-           & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_valid_ext__DOT__Memory
-           [vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__reg_tail]);
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT___io_csr_valid_T 
         = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_csr_is_w) 
            & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__ready));
@@ -1006,56 +1039,56 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
             ? vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_csr_data
             : vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mie);
     vlSelf->riscv_soc__DOT__core__DOT___commit_io_csr_rd_csr_data 
-        = ((((vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst 
+        = ((((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 
               >> 0x14U) == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_csr_addr)) 
             & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT___io_csr_valid_T))
             ? vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_csr_data
-            : ((0xb02U == (vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst 
+            : ((0xb02U == (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 
                            >> 0x14U)) ? vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_minstret
-                : ((0xb00U == (vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst 
+                : ((0xb00U == (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 
                                >> 0x14U)) ? vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mcycle
-                    : ((0x344U == (vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst 
+                    : ((0x344U == (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 
                                    >> 0x14U)) ? 0ULL
-                        : ((0x343U == (vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst 
+                        : ((0x343U == (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 
                                        >> 0x14U)) ? vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mtval
-                            : ((0x342U == (vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst 
+                            : ((0x342U == (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 
                                            >> 0x14U))
                                 ? vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mcause
-                                : ((0x341U == (vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst 
+                                : ((0x341U == (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 
                                                >> 0x14U))
                                     ? vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mepc
-                                    : ((0x340U == (vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst 
+                                    : ((0x340U == (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 
                                                    >> 0x14U))
                                         ? vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mscratch
                                         : ((0x306U 
-                                            == (vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst 
+                                            == (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 
                                                 >> 0x14U))
                                             ? 0ULL : 
                                            ((0x305U 
-                                             == (vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst 
+                                             == (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 
                                                  >> 0x14U))
                                              ? vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mtvec
                                              : ((0x304U 
                                                  == 
-                                                 (vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst 
+                                                 (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 
                                                   >> 0x14U))
                                                  ? vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mie
                                                  : 
                                                 (((((0x303U 
                                                      == 
-                                                     (vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst 
+                                                     (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 
                                                       >> 0x14U)) 
                                                     | (0x302U 
                                                        == 
-                                                       (vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst 
+                                                       (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 
                                                         >> 0x14U))) 
                                                    | (0x301U 
                                                       == 
-                                                      (vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst 
+                                                      (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 
                                                        >> 0x14U))) 
                                                   | (0x300U 
                                                      != 
-                                                     (vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst 
+                                                     (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 
                                                       >> 0x14U)))
                                                   ? 0ULL
                                                   : vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mstatus))))))))))));
@@ -1157,27 +1190,27 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
         = ((3U == (3U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                          >> 5U))) ? vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc
             : riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1);
-    VL_EXTEND_WQ(127,64, __Vtemp912, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__rs2_data);
-    VL_EXTEND_WI(124,3, __Vtemp913, (7U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_addr)));
-    __Vtemp914[0U] = (__Vtemp913[0U] << 3U);
-    __Vtemp914[1U] = ((__Vtemp913[0U] >> 0x1dU) | (
-                                                   __Vtemp913[1U] 
+    VL_EXTEND_WQ(127,64, __Vtemp919, vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__rs2_data);
+    VL_EXTEND_WI(124,3, __Vtemp920, (7U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_addr)));
+    __Vtemp921[0U] = (__Vtemp920[0U] << 3U);
+    __Vtemp921[1U] = ((__Vtemp920[0U] >> 0x1dU) | (
+                                                   __Vtemp920[1U] 
                                                    << 3U));
-    __Vtemp914[2U] = ((__Vtemp913[1U] >> 0x1dU) | (
-                                                   __Vtemp913[2U] 
+    __Vtemp921[2U] = ((__Vtemp920[1U] >> 0x1dU) | (
+                                                   __Vtemp920[2U] 
                                                    << 3U));
-    __Vtemp914[3U] = ((__Vtemp913[2U] >> 0x1dU) | (
-                                                   __Vtemp913[3U] 
+    __Vtemp921[3U] = ((__Vtemp920[2U] >> 0x1dU) | (
+                                                   __Vtemp920[3U] 
                                                    << 3U));
-    VL_SHIFTL_WWW(127,127,127, __Vtemp915, __Vtemp912, __Vtemp914);
+    VL_SHIFTL_WWW(127,127,127, __Vtemp922, __Vtemp919, __Vtemp921);
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_w_data[0U] 
-        = __Vtemp915[0U];
+        = __Vtemp922[0U];
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_w_data[1U] 
-        = __Vtemp915[1U];
+        = __Vtemp922[1U];
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_w_data[2U] 
-        = __Vtemp915[2U];
+        = __Vtemp922[2U];
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_w_data[3U] 
-        = (0x7fffffffU & __Vtemp915[3U]);
+        = (0x7fffffffU & __Vtemp922[3U]);
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT___GEN 
         = (0xffU & ((0xaU == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType))
                      ? (0x7ffU & ((IData)(0xfU) << 
@@ -1236,145 +1269,145 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
         = (0x3fU & ((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType))
                      ? (0x1fU & (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs2_data))
                      : (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs2_data)));
-    VL_EXTEND_WQ(65,64, __Vtemp918, riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs1_data);
-    VL_EXTEND_WQ(65,64, __Vtemp919, ((- (QData)((IData)(
+    VL_EXTEND_WQ(65,64, __Vtemp925, riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs1_data);
+    VL_EXTEND_WQ(65,64, __Vtemp926, ((- (QData)((IData)(
                                                         (1U 
                                                          == 
                                                          (3U 
                                                           & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                              >> 5U)))))) 
                                      ^ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs2_data));
-    VL_ADD_W(3, __Vtemp920, __Vtemp918, __Vtemp919);
-    VL_EXTEND_WI(65,1, __Vtemp921, (1U == (3U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
+    VL_ADD_W(3, __Vtemp927, __Vtemp925, __Vtemp926);
+    VL_EXTEND_WI(65,1, __Vtemp928, (1U == (3U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                  >> 5U))));
-    VL_ADD_W(3, __Vtemp922, __Vtemp920, __Vtemp921);
+    VL_ADD_W(3, __Vtemp929, __Vtemp927, __Vtemp928);
     riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[0U] 
-        = __Vtemp922[0U];
+        = __Vtemp929[0U];
     riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[1U] 
-        = __Vtemp922[1U];
+        = __Vtemp929[1U];
     riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U] 
-        = (1U & __Vtemp922[2U]);
+        = (1U & __Vtemp929[2U]);
     vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass0_val 
         = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__is_sram0_write) 
            & (IData)(riscv_soc__DOT__core__DOT__i_cache__DOT___w_r_pass1_val_T));
     vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass1_val 
         = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__is_sram1_write) 
            & (IData)(riscv_soc__DOT__core__DOT__i_cache__DOT___w_r_pass1_val_T));
-    __Vtemp938[0U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_48[0U];
-    __Vtemp938[1U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_48[1U];
-    __Vtemp938[2U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_48[2U];
-    __Vtemp938[3U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_48[3U];
-    __Vtemp938[4U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_49[0U];
-    __Vtemp938[5U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_49[1U];
-    __Vtemp938[6U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_49[2U];
-    __Vtemp938[7U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_49[3U];
-    __Vtemp938[8U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_50[0U];
-    __Vtemp938[9U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_50[1U];
-    __Vtemp938[0xaU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_50[2U];
-    __Vtemp938[0xbU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_50[3U];
-    __Vtemp938[0xcU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_51[0U];
-    __Vtemp938[0xdU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_51[1U];
-    __Vtemp938[0xeU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_51[2U];
-    __Vtemp938[0xfU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_51[3U];
-    __Vtemp938[0x10U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_52[0U];
-    __Vtemp938[0x11U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_52[1U];
-    __Vtemp938[0x12U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_52[2U];
-    __Vtemp938[0x13U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_52[3U];
-    __Vtemp938[0x14U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_53[0U];
-    __Vtemp938[0x15U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_53[1U];
-    __Vtemp938[0x16U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_53[2U];
-    __Vtemp938[0x17U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_53[3U];
-    __Vtemp938[0x18U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_54[0U];
-    __Vtemp938[0x19U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_54[1U];
-    __Vtemp938[0x1aU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_54[2U];
-    __Vtemp938[0x1bU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_54[3U];
-    __Vtemp938[0x1cU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_55[0U];
-    __Vtemp938[0x1dU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_55[1U];
-    __Vtemp938[0x1eU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_55[2U];
-    __Vtemp938[0x1fU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_55[3U];
-    __Vtemp938[0x20U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_56[0U];
-    __Vtemp938[0x21U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_56[1U];
-    __Vtemp938[0x22U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_56[2U];
-    __Vtemp938[0x23U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_56[3U];
-    __Vtemp938[0x24U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_57[0U];
-    __Vtemp938[0x25U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_57[1U];
-    __Vtemp938[0x26U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_57[2U];
-    __Vtemp938[0x27U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_57[3U];
-    __Vtemp938[0x28U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_58[0U];
-    __Vtemp938[0x29U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_58[1U];
-    __Vtemp938[0x2aU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_58[2U];
-    __Vtemp938[0x2bU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_58[3U];
-    __Vtemp938[0x2cU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_59[0U];
-    __Vtemp938[0x2dU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_59[1U];
-    __Vtemp938[0x2eU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_59[2U];
-    __Vtemp938[0x2fU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_59[3U];
-    __Vtemp938[0x30U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_60[0U];
-    __Vtemp938[0x31U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_60[1U];
-    __Vtemp938[0x32U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_60[2U];
-    __Vtemp938[0x33U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_60[3U];
-    __Vtemp938[0x34U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_61[0U];
-    __Vtemp938[0x35U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_61[1U];
-    __Vtemp938[0x36U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_61[2U];
-    __Vtemp938[0x37U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_61[3U];
-    __Vtemp938[0x38U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_62[0U];
-    __Vtemp938[0x39U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_62[1U];
-    __Vtemp938[0x3aU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_62[2U];
-    __Vtemp938[0x3bU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_62[3U];
-    __Vtemp938[0x3cU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_63[0U];
-    __Vtemp938[0x3dU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_63[1U];
-    __Vtemp938[0x3eU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_63[2U];
-    __Vtemp938[0x3fU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_63[3U];
-    VL_CONCAT_WWW(2176,2048,128, __Vtemp939, __Vtemp938, vlSelf->riscv_soc__DOT__sram0__DOT__sram_47);
-    VL_CONCAT_WWW(2304,2176,128, __Vtemp940, __Vtemp939, vlSelf->riscv_soc__DOT__sram0__DOT__sram_46);
-    VL_CONCAT_WWW(2432,2304,128, __Vtemp941, __Vtemp940, vlSelf->riscv_soc__DOT__sram0__DOT__sram_45);
-    VL_CONCAT_WWW(2560,2432,128, __Vtemp942, __Vtemp941, vlSelf->riscv_soc__DOT__sram0__DOT__sram_44);
-    VL_CONCAT_WWW(2688,2560,128, __Vtemp943, __Vtemp942, vlSelf->riscv_soc__DOT__sram0__DOT__sram_43);
-    VL_CONCAT_WWW(2816,2688,128, __Vtemp944, __Vtemp943, vlSelf->riscv_soc__DOT__sram0__DOT__sram_42);
-    VL_CONCAT_WWW(2944,2816,128, __Vtemp945, __Vtemp944, vlSelf->riscv_soc__DOT__sram0__DOT__sram_41);
-    VL_CONCAT_WWW(3072,2944,128, __Vtemp946, __Vtemp945, vlSelf->riscv_soc__DOT__sram0__DOT__sram_40);
-    VL_CONCAT_WWW(3200,3072,128, __Vtemp947, __Vtemp946, vlSelf->riscv_soc__DOT__sram0__DOT__sram_39);
-    VL_CONCAT_WWW(3328,3200,128, __Vtemp948, __Vtemp947, vlSelf->riscv_soc__DOT__sram0__DOT__sram_38);
-    VL_CONCAT_WWW(3456,3328,128, __Vtemp949, __Vtemp948, vlSelf->riscv_soc__DOT__sram0__DOT__sram_37);
-    VL_CONCAT_WWW(3584,3456,128, __Vtemp950, __Vtemp949, vlSelf->riscv_soc__DOT__sram0__DOT__sram_36);
-    VL_CONCAT_WWW(3712,3584,128, __Vtemp951, __Vtemp950, vlSelf->riscv_soc__DOT__sram0__DOT__sram_35);
-    VL_CONCAT_WWW(3840,3712,128, __Vtemp952, __Vtemp951, vlSelf->riscv_soc__DOT__sram0__DOT__sram_34);
-    VL_CONCAT_WWW(3968,3840,128, __Vtemp953, __Vtemp952, vlSelf->riscv_soc__DOT__sram0__DOT__sram_33);
-    VL_CONCAT_WWW(4096,3968,128, __Vtemp954, __Vtemp953, vlSelf->riscv_soc__DOT__sram0__DOT__sram_32);
-    VL_CONCAT_WWW(4224,4096,128, __Vtemp955, __Vtemp954, vlSelf->riscv_soc__DOT__sram0__DOT__sram_31);
-    VL_CONCAT_WWW(4352,4224,128, __Vtemp956, __Vtemp955, vlSelf->riscv_soc__DOT__sram0__DOT__sram_30);
-    VL_CONCAT_WWW(4480,4352,128, __Vtemp957, __Vtemp956, vlSelf->riscv_soc__DOT__sram0__DOT__sram_29);
-    VL_CONCAT_WWW(4608,4480,128, __Vtemp958, __Vtemp957, vlSelf->riscv_soc__DOT__sram0__DOT__sram_28);
-    VL_CONCAT_WWW(4736,4608,128, __Vtemp959, __Vtemp958, vlSelf->riscv_soc__DOT__sram0__DOT__sram_27);
-    VL_CONCAT_WWW(4864,4736,128, __Vtemp960, __Vtemp959, vlSelf->riscv_soc__DOT__sram0__DOT__sram_26);
-    VL_CONCAT_WWW(4992,4864,128, __Vtemp961, __Vtemp960, vlSelf->riscv_soc__DOT__sram0__DOT__sram_25);
-    VL_CONCAT_WWW(5120,4992,128, __Vtemp962, __Vtemp961, vlSelf->riscv_soc__DOT__sram0__DOT__sram_24);
-    VL_CONCAT_WWW(5248,5120,128, __Vtemp963, __Vtemp962, vlSelf->riscv_soc__DOT__sram0__DOT__sram_23);
-    VL_CONCAT_WWW(5376,5248,128, __Vtemp964, __Vtemp963, vlSelf->riscv_soc__DOT__sram0__DOT__sram_22);
-    VL_CONCAT_WWW(5504,5376,128, __Vtemp965, __Vtemp964, vlSelf->riscv_soc__DOT__sram0__DOT__sram_21);
-    VL_CONCAT_WWW(5632,5504,128, __Vtemp966, __Vtemp965, vlSelf->riscv_soc__DOT__sram0__DOT__sram_20);
-    VL_CONCAT_WWW(5760,5632,128, __Vtemp967, __Vtemp966, vlSelf->riscv_soc__DOT__sram0__DOT__sram_19);
-    VL_CONCAT_WWW(5888,5760,128, __Vtemp968, __Vtemp967, vlSelf->riscv_soc__DOT__sram0__DOT__sram_18);
-    VL_CONCAT_WWW(6016,5888,128, __Vtemp969, __Vtemp968, vlSelf->riscv_soc__DOT__sram0__DOT__sram_17);
-    VL_CONCAT_WWW(6144,6016,128, __Vtemp970, __Vtemp969, vlSelf->riscv_soc__DOT__sram0__DOT__sram_16);
-    VL_CONCAT_WWW(6272,6144,128, __Vtemp971, __Vtemp970, vlSelf->riscv_soc__DOT__sram0__DOT__sram_15);
-    VL_CONCAT_WWW(6400,6272,128, __Vtemp972, __Vtemp971, vlSelf->riscv_soc__DOT__sram0__DOT__sram_14);
-    VL_CONCAT_WWW(6528,6400,128, __Vtemp973, __Vtemp972, vlSelf->riscv_soc__DOT__sram0__DOT__sram_13);
-    VL_CONCAT_WWW(6656,6528,128, __Vtemp974, __Vtemp973, vlSelf->riscv_soc__DOT__sram0__DOT__sram_12);
-    VL_CONCAT_WWW(6784,6656,128, __Vtemp975, __Vtemp974, vlSelf->riscv_soc__DOT__sram0__DOT__sram_11);
-    VL_CONCAT_WWW(6912,6784,128, __Vtemp976, __Vtemp975, vlSelf->riscv_soc__DOT__sram0__DOT__sram_10);
-    VL_CONCAT_WWW(7040,6912,128, __Vtemp977, __Vtemp976, vlSelf->riscv_soc__DOT__sram0__DOT__sram_9);
-    VL_CONCAT_WWW(7168,7040,128, __Vtemp978, __Vtemp977, vlSelf->riscv_soc__DOT__sram0__DOT__sram_8);
-    VL_CONCAT_WWW(7296,7168,128, __Vtemp979, __Vtemp978, vlSelf->riscv_soc__DOT__sram0__DOT__sram_7);
-    VL_CONCAT_WWW(7424,7296,128, __Vtemp980, __Vtemp979, vlSelf->riscv_soc__DOT__sram0__DOT__sram_6);
-    VL_CONCAT_WWW(7552,7424,128, __Vtemp981, __Vtemp980, vlSelf->riscv_soc__DOT__sram0__DOT__sram_5);
-    VL_CONCAT_WWW(7680,7552,128, __Vtemp982, __Vtemp981, vlSelf->riscv_soc__DOT__sram0__DOT__sram_4);
-    VL_CONCAT_WWW(7808,7680,128, __Vtemp983, __Vtemp982, vlSelf->riscv_soc__DOT__sram0__DOT__sram_3);
-    VL_CONCAT_WWW(7936,7808,128, __Vtemp984, __Vtemp983, vlSelf->riscv_soc__DOT__sram0__DOT__sram_2);
-    VL_CONCAT_WWW(8064,7936,128, __Vtemp985, __Vtemp984, vlSelf->riscv_soc__DOT__sram0__DOT__sram_1);
-    VL_CONCAT_WWW(8192,8064,128, __Vtemp986, __Vtemp985, vlSelf->riscv_soc__DOT__sram0__DOT__sram_0);
+    __Vtemp945[0U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_48[0U];
+    __Vtemp945[1U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_48[1U];
+    __Vtemp945[2U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_48[2U];
+    __Vtemp945[3U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_48[3U];
+    __Vtemp945[4U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_49[0U];
+    __Vtemp945[5U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_49[1U];
+    __Vtemp945[6U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_49[2U];
+    __Vtemp945[7U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_49[3U];
+    __Vtemp945[8U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_50[0U];
+    __Vtemp945[9U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_50[1U];
+    __Vtemp945[0xaU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_50[2U];
+    __Vtemp945[0xbU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_50[3U];
+    __Vtemp945[0xcU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_51[0U];
+    __Vtemp945[0xdU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_51[1U];
+    __Vtemp945[0xeU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_51[2U];
+    __Vtemp945[0xfU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_51[3U];
+    __Vtemp945[0x10U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_52[0U];
+    __Vtemp945[0x11U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_52[1U];
+    __Vtemp945[0x12U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_52[2U];
+    __Vtemp945[0x13U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_52[3U];
+    __Vtemp945[0x14U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_53[0U];
+    __Vtemp945[0x15U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_53[1U];
+    __Vtemp945[0x16U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_53[2U];
+    __Vtemp945[0x17U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_53[3U];
+    __Vtemp945[0x18U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_54[0U];
+    __Vtemp945[0x19U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_54[1U];
+    __Vtemp945[0x1aU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_54[2U];
+    __Vtemp945[0x1bU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_54[3U];
+    __Vtemp945[0x1cU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_55[0U];
+    __Vtemp945[0x1dU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_55[1U];
+    __Vtemp945[0x1eU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_55[2U];
+    __Vtemp945[0x1fU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_55[3U];
+    __Vtemp945[0x20U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_56[0U];
+    __Vtemp945[0x21U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_56[1U];
+    __Vtemp945[0x22U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_56[2U];
+    __Vtemp945[0x23U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_56[3U];
+    __Vtemp945[0x24U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_57[0U];
+    __Vtemp945[0x25U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_57[1U];
+    __Vtemp945[0x26U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_57[2U];
+    __Vtemp945[0x27U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_57[3U];
+    __Vtemp945[0x28U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_58[0U];
+    __Vtemp945[0x29U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_58[1U];
+    __Vtemp945[0x2aU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_58[2U];
+    __Vtemp945[0x2bU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_58[3U];
+    __Vtemp945[0x2cU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_59[0U];
+    __Vtemp945[0x2dU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_59[1U];
+    __Vtemp945[0x2eU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_59[2U];
+    __Vtemp945[0x2fU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_59[3U];
+    __Vtemp945[0x30U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_60[0U];
+    __Vtemp945[0x31U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_60[1U];
+    __Vtemp945[0x32U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_60[2U];
+    __Vtemp945[0x33U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_60[3U];
+    __Vtemp945[0x34U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_61[0U];
+    __Vtemp945[0x35U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_61[1U];
+    __Vtemp945[0x36U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_61[2U];
+    __Vtemp945[0x37U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_61[3U];
+    __Vtemp945[0x38U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_62[0U];
+    __Vtemp945[0x39U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_62[1U];
+    __Vtemp945[0x3aU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_62[2U];
+    __Vtemp945[0x3bU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_62[3U];
+    __Vtemp945[0x3cU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_63[0U];
+    __Vtemp945[0x3dU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_63[1U];
+    __Vtemp945[0x3eU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_63[2U];
+    __Vtemp945[0x3fU] = vlSelf->riscv_soc__DOT__sram0__DOT__sram_63[3U];
+    VL_CONCAT_WWW(2176,2048,128, __Vtemp946, __Vtemp945, vlSelf->riscv_soc__DOT__sram0__DOT__sram_47);
+    VL_CONCAT_WWW(2304,2176,128, __Vtemp947, __Vtemp946, vlSelf->riscv_soc__DOT__sram0__DOT__sram_46);
+    VL_CONCAT_WWW(2432,2304,128, __Vtemp948, __Vtemp947, vlSelf->riscv_soc__DOT__sram0__DOT__sram_45);
+    VL_CONCAT_WWW(2560,2432,128, __Vtemp949, __Vtemp948, vlSelf->riscv_soc__DOT__sram0__DOT__sram_44);
+    VL_CONCAT_WWW(2688,2560,128, __Vtemp950, __Vtemp949, vlSelf->riscv_soc__DOT__sram0__DOT__sram_43);
+    VL_CONCAT_WWW(2816,2688,128, __Vtemp951, __Vtemp950, vlSelf->riscv_soc__DOT__sram0__DOT__sram_42);
+    VL_CONCAT_WWW(2944,2816,128, __Vtemp952, __Vtemp951, vlSelf->riscv_soc__DOT__sram0__DOT__sram_41);
+    VL_CONCAT_WWW(3072,2944,128, __Vtemp953, __Vtemp952, vlSelf->riscv_soc__DOT__sram0__DOT__sram_40);
+    VL_CONCAT_WWW(3200,3072,128, __Vtemp954, __Vtemp953, vlSelf->riscv_soc__DOT__sram0__DOT__sram_39);
+    VL_CONCAT_WWW(3328,3200,128, __Vtemp955, __Vtemp954, vlSelf->riscv_soc__DOT__sram0__DOT__sram_38);
+    VL_CONCAT_WWW(3456,3328,128, __Vtemp956, __Vtemp955, vlSelf->riscv_soc__DOT__sram0__DOT__sram_37);
+    VL_CONCAT_WWW(3584,3456,128, __Vtemp957, __Vtemp956, vlSelf->riscv_soc__DOT__sram0__DOT__sram_36);
+    VL_CONCAT_WWW(3712,3584,128, __Vtemp958, __Vtemp957, vlSelf->riscv_soc__DOT__sram0__DOT__sram_35);
+    VL_CONCAT_WWW(3840,3712,128, __Vtemp959, __Vtemp958, vlSelf->riscv_soc__DOT__sram0__DOT__sram_34);
+    VL_CONCAT_WWW(3968,3840,128, __Vtemp960, __Vtemp959, vlSelf->riscv_soc__DOT__sram0__DOT__sram_33);
+    VL_CONCAT_WWW(4096,3968,128, __Vtemp961, __Vtemp960, vlSelf->riscv_soc__DOT__sram0__DOT__sram_32);
+    VL_CONCAT_WWW(4224,4096,128, __Vtemp962, __Vtemp961, vlSelf->riscv_soc__DOT__sram0__DOT__sram_31);
+    VL_CONCAT_WWW(4352,4224,128, __Vtemp963, __Vtemp962, vlSelf->riscv_soc__DOT__sram0__DOT__sram_30);
+    VL_CONCAT_WWW(4480,4352,128, __Vtemp964, __Vtemp963, vlSelf->riscv_soc__DOT__sram0__DOT__sram_29);
+    VL_CONCAT_WWW(4608,4480,128, __Vtemp965, __Vtemp964, vlSelf->riscv_soc__DOT__sram0__DOT__sram_28);
+    VL_CONCAT_WWW(4736,4608,128, __Vtemp966, __Vtemp965, vlSelf->riscv_soc__DOT__sram0__DOT__sram_27);
+    VL_CONCAT_WWW(4864,4736,128, __Vtemp967, __Vtemp966, vlSelf->riscv_soc__DOT__sram0__DOT__sram_26);
+    VL_CONCAT_WWW(4992,4864,128, __Vtemp968, __Vtemp967, vlSelf->riscv_soc__DOT__sram0__DOT__sram_25);
+    VL_CONCAT_WWW(5120,4992,128, __Vtemp969, __Vtemp968, vlSelf->riscv_soc__DOT__sram0__DOT__sram_24);
+    VL_CONCAT_WWW(5248,5120,128, __Vtemp970, __Vtemp969, vlSelf->riscv_soc__DOT__sram0__DOT__sram_23);
+    VL_CONCAT_WWW(5376,5248,128, __Vtemp971, __Vtemp970, vlSelf->riscv_soc__DOT__sram0__DOT__sram_22);
+    VL_CONCAT_WWW(5504,5376,128, __Vtemp972, __Vtemp971, vlSelf->riscv_soc__DOT__sram0__DOT__sram_21);
+    VL_CONCAT_WWW(5632,5504,128, __Vtemp973, __Vtemp972, vlSelf->riscv_soc__DOT__sram0__DOT__sram_20);
+    VL_CONCAT_WWW(5760,5632,128, __Vtemp974, __Vtemp973, vlSelf->riscv_soc__DOT__sram0__DOT__sram_19);
+    VL_CONCAT_WWW(5888,5760,128, __Vtemp975, __Vtemp974, vlSelf->riscv_soc__DOT__sram0__DOT__sram_18);
+    VL_CONCAT_WWW(6016,5888,128, __Vtemp976, __Vtemp975, vlSelf->riscv_soc__DOT__sram0__DOT__sram_17);
+    VL_CONCAT_WWW(6144,6016,128, __Vtemp977, __Vtemp976, vlSelf->riscv_soc__DOT__sram0__DOT__sram_16);
+    VL_CONCAT_WWW(6272,6144,128, __Vtemp978, __Vtemp977, vlSelf->riscv_soc__DOT__sram0__DOT__sram_15);
+    VL_CONCAT_WWW(6400,6272,128, __Vtemp979, __Vtemp978, vlSelf->riscv_soc__DOT__sram0__DOT__sram_14);
+    VL_CONCAT_WWW(6528,6400,128, __Vtemp980, __Vtemp979, vlSelf->riscv_soc__DOT__sram0__DOT__sram_13);
+    VL_CONCAT_WWW(6656,6528,128, __Vtemp981, __Vtemp980, vlSelf->riscv_soc__DOT__sram0__DOT__sram_12);
+    VL_CONCAT_WWW(6784,6656,128, __Vtemp982, __Vtemp981, vlSelf->riscv_soc__DOT__sram0__DOT__sram_11);
+    VL_CONCAT_WWW(6912,6784,128, __Vtemp983, __Vtemp982, vlSelf->riscv_soc__DOT__sram0__DOT__sram_10);
+    VL_CONCAT_WWW(7040,6912,128, __Vtemp984, __Vtemp983, vlSelf->riscv_soc__DOT__sram0__DOT__sram_9);
+    VL_CONCAT_WWW(7168,7040,128, __Vtemp985, __Vtemp984, vlSelf->riscv_soc__DOT__sram0__DOT__sram_8);
+    VL_CONCAT_WWW(7296,7168,128, __Vtemp986, __Vtemp985, vlSelf->riscv_soc__DOT__sram0__DOT__sram_7);
+    VL_CONCAT_WWW(7424,7296,128, __Vtemp987, __Vtemp986, vlSelf->riscv_soc__DOT__sram0__DOT__sram_6);
+    VL_CONCAT_WWW(7552,7424,128, __Vtemp988, __Vtemp987, vlSelf->riscv_soc__DOT__sram0__DOT__sram_5);
+    VL_CONCAT_WWW(7680,7552,128, __Vtemp989, __Vtemp988, vlSelf->riscv_soc__DOT__sram0__DOT__sram_4);
+    VL_CONCAT_WWW(7808,7680,128, __Vtemp990, __Vtemp989, vlSelf->riscv_soc__DOT__sram0__DOT__sram_3);
+    VL_CONCAT_WWW(7936,7808,128, __Vtemp991, __Vtemp990, vlSelf->riscv_soc__DOT__sram0__DOT__sram_2);
+    VL_CONCAT_WWW(8064,7936,128, __Vtemp992, __Vtemp991, vlSelf->riscv_soc__DOT__sram0__DOT__sram_1);
+    VL_CONCAT_WWW(8192,8064,128, __Vtemp993, __Vtemp992, vlSelf->riscv_soc__DOT__sram0__DOT__sram_0);
     vlSelf->riscv_soc__DOT__sram0__DOT___GEN_1[0U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
-                             << 7U))) ? 0U : (__Vtemp986[
+                             << 7U))) ? 0U : (__Vtemp993[
                                               ((IData)(1U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
@@ -1384,13 +1417,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                       << 7U))))) 
-           | (__Vtemp986[(0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
+           | (__Vtemp993[(0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                    << 2U))] >> (0x1fU 
                                                 & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                    << 7U))));
     vlSelf->riscv_soc__DOT__sram0__DOT___GEN_1[1U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
-                             << 7U))) ? 0U : (__Vtemp986[
+                             << 7U))) ? 0U : (__Vtemp993[
                                               ((IData)(2U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
@@ -1400,13 +1433,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                       << 7U))))) 
-           | (__Vtemp986[((IData)(1U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
+           | (__Vtemp993[((IData)(1U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                   << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                            << 7U))));
     vlSelf->riscv_soc__DOT__sram0__DOT___GEN_1[2U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
-                             << 7U))) ? 0U : (__Vtemp986[
+                             << 7U))) ? 0U : (__Vtemp993[
                                               ((IData)(3U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
@@ -1416,13 +1449,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                       << 7U))))) 
-           | (__Vtemp986[((IData)(2U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
+           | (__Vtemp993[((IData)(2U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                   << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                            << 7U))));
     vlSelf->riscv_soc__DOT__sram0__DOT___GEN_1[3U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
-                             << 7U))) ? 0U : (__Vtemp986[
+                             << 7U))) ? 0U : (__Vtemp993[
                                               ((IData)(4U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
@@ -1432,125 +1465,125 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                       << 7U))))) 
-           | (__Vtemp986[((IData)(3U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
+           | (__Vtemp993[((IData)(3U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                   << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                            << 7U))));
-    __Vtemp1002[0U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_48[0U];
-    __Vtemp1002[1U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_48[1U];
-    __Vtemp1002[2U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_48[2U];
-    __Vtemp1002[3U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_48[3U];
-    __Vtemp1002[4U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_49[0U];
-    __Vtemp1002[5U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_49[1U];
-    __Vtemp1002[6U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_49[2U];
-    __Vtemp1002[7U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_49[3U];
-    __Vtemp1002[8U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_50[0U];
-    __Vtemp1002[9U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_50[1U];
-    __Vtemp1002[0xaU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_50[2U];
-    __Vtemp1002[0xbU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_50[3U];
-    __Vtemp1002[0xcU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_51[0U];
-    __Vtemp1002[0xdU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_51[1U];
-    __Vtemp1002[0xeU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_51[2U];
-    __Vtemp1002[0xfU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_51[3U];
-    __Vtemp1002[0x10U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_52[0U];
-    __Vtemp1002[0x11U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_52[1U];
-    __Vtemp1002[0x12U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_52[2U];
-    __Vtemp1002[0x13U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_52[3U];
-    __Vtemp1002[0x14U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_53[0U];
-    __Vtemp1002[0x15U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_53[1U];
-    __Vtemp1002[0x16U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_53[2U];
-    __Vtemp1002[0x17U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_53[3U];
-    __Vtemp1002[0x18U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_54[0U];
-    __Vtemp1002[0x19U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_54[1U];
-    __Vtemp1002[0x1aU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_54[2U];
-    __Vtemp1002[0x1bU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_54[3U];
-    __Vtemp1002[0x1cU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_55[0U];
-    __Vtemp1002[0x1dU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_55[1U];
-    __Vtemp1002[0x1eU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_55[2U];
-    __Vtemp1002[0x1fU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_55[3U];
-    __Vtemp1002[0x20U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_56[0U];
-    __Vtemp1002[0x21U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_56[1U];
-    __Vtemp1002[0x22U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_56[2U];
-    __Vtemp1002[0x23U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_56[3U];
-    __Vtemp1002[0x24U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_57[0U];
-    __Vtemp1002[0x25U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_57[1U];
-    __Vtemp1002[0x26U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_57[2U];
-    __Vtemp1002[0x27U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_57[3U];
-    __Vtemp1002[0x28U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_58[0U];
-    __Vtemp1002[0x29U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_58[1U];
-    __Vtemp1002[0x2aU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_58[2U];
-    __Vtemp1002[0x2bU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_58[3U];
-    __Vtemp1002[0x2cU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_59[0U];
-    __Vtemp1002[0x2dU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_59[1U];
-    __Vtemp1002[0x2eU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_59[2U];
-    __Vtemp1002[0x2fU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_59[3U];
-    __Vtemp1002[0x30U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_60[0U];
-    __Vtemp1002[0x31U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_60[1U];
-    __Vtemp1002[0x32U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_60[2U];
-    __Vtemp1002[0x33U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_60[3U];
-    __Vtemp1002[0x34U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_61[0U];
-    __Vtemp1002[0x35U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_61[1U];
-    __Vtemp1002[0x36U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_61[2U];
-    __Vtemp1002[0x37U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_61[3U];
-    __Vtemp1002[0x38U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_62[0U];
-    __Vtemp1002[0x39U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_62[1U];
-    __Vtemp1002[0x3aU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_62[2U];
-    __Vtemp1002[0x3bU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_62[3U];
-    __Vtemp1002[0x3cU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_63[0U];
-    __Vtemp1002[0x3dU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_63[1U];
-    __Vtemp1002[0x3eU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_63[2U];
-    __Vtemp1002[0x3fU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_63[3U];
-    VL_CONCAT_WWW(2176,2048,128, __Vtemp1003, __Vtemp1002, vlSelf->riscv_soc__DOT__sram1__DOT__sram_47);
-    VL_CONCAT_WWW(2304,2176,128, __Vtemp1004, __Vtemp1003, vlSelf->riscv_soc__DOT__sram1__DOT__sram_46);
-    VL_CONCAT_WWW(2432,2304,128, __Vtemp1005, __Vtemp1004, vlSelf->riscv_soc__DOT__sram1__DOT__sram_45);
-    VL_CONCAT_WWW(2560,2432,128, __Vtemp1006, __Vtemp1005, vlSelf->riscv_soc__DOT__sram1__DOT__sram_44);
-    VL_CONCAT_WWW(2688,2560,128, __Vtemp1007, __Vtemp1006, vlSelf->riscv_soc__DOT__sram1__DOT__sram_43);
-    VL_CONCAT_WWW(2816,2688,128, __Vtemp1008, __Vtemp1007, vlSelf->riscv_soc__DOT__sram1__DOT__sram_42);
-    VL_CONCAT_WWW(2944,2816,128, __Vtemp1009, __Vtemp1008, vlSelf->riscv_soc__DOT__sram1__DOT__sram_41);
-    VL_CONCAT_WWW(3072,2944,128, __Vtemp1010, __Vtemp1009, vlSelf->riscv_soc__DOT__sram1__DOT__sram_40);
-    VL_CONCAT_WWW(3200,3072,128, __Vtemp1011, __Vtemp1010, vlSelf->riscv_soc__DOT__sram1__DOT__sram_39);
-    VL_CONCAT_WWW(3328,3200,128, __Vtemp1012, __Vtemp1011, vlSelf->riscv_soc__DOT__sram1__DOT__sram_38);
-    VL_CONCAT_WWW(3456,3328,128, __Vtemp1013, __Vtemp1012, vlSelf->riscv_soc__DOT__sram1__DOT__sram_37);
-    VL_CONCAT_WWW(3584,3456,128, __Vtemp1014, __Vtemp1013, vlSelf->riscv_soc__DOT__sram1__DOT__sram_36);
-    VL_CONCAT_WWW(3712,3584,128, __Vtemp1015, __Vtemp1014, vlSelf->riscv_soc__DOT__sram1__DOT__sram_35);
-    VL_CONCAT_WWW(3840,3712,128, __Vtemp1016, __Vtemp1015, vlSelf->riscv_soc__DOT__sram1__DOT__sram_34);
-    VL_CONCAT_WWW(3968,3840,128, __Vtemp1017, __Vtemp1016, vlSelf->riscv_soc__DOT__sram1__DOT__sram_33);
-    VL_CONCAT_WWW(4096,3968,128, __Vtemp1018, __Vtemp1017, vlSelf->riscv_soc__DOT__sram1__DOT__sram_32);
-    VL_CONCAT_WWW(4224,4096,128, __Vtemp1019, __Vtemp1018, vlSelf->riscv_soc__DOT__sram1__DOT__sram_31);
-    VL_CONCAT_WWW(4352,4224,128, __Vtemp1020, __Vtemp1019, vlSelf->riscv_soc__DOT__sram1__DOT__sram_30);
-    VL_CONCAT_WWW(4480,4352,128, __Vtemp1021, __Vtemp1020, vlSelf->riscv_soc__DOT__sram1__DOT__sram_29);
-    VL_CONCAT_WWW(4608,4480,128, __Vtemp1022, __Vtemp1021, vlSelf->riscv_soc__DOT__sram1__DOT__sram_28);
-    VL_CONCAT_WWW(4736,4608,128, __Vtemp1023, __Vtemp1022, vlSelf->riscv_soc__DOT__sram1__DOT__sram_27);
-    VL_CONCAT_WWW(4864,4736,128, __Vtemp1024, __Vtemp1023, vlSelf->riscv_soc__DOT__sram1__DOT__sram_26);
-    VL_CONCAT_WWW(4992,4864,128, __Vtemp1025, __Vtemp1024, vlSelf->riscv_soc__DOT__sram1__DOT__sram_25);
-    VL_CONCAT_WWW(5120,4992,128, __Vtemp1026, __Vtemp1025, vlSelf->riscv_soc__DOT__sram1__DOT__sram_24);
-    VL_CONCAT_WWW(5248,5120,128, __Vtemp1027, __Vtemp1026, vlSelf->riscv_soc__DOT__sram1__DOT__sram_23);
-    VL_CONCAT_WWW(5376,5248,128, __Vtemp1028, __Vtemp1027, vlSelf->riscv_soc__DOT__sram1__DOT__sram_22);
-    VL_CONCAT_WWW(5504,5376,128, __Vtemp1029, __Vtemp1028, vlSelf->riscv_soc__DOT__sram1__DOT__sram_21);
-    VL_CONCAT_WWW(5632,5504,128, __Vtemp1030, __Vtemp1029, vlSelf->riscv_soc__DOT__sram1__DOT__sram_20);
-    VL_CONCAT_WWW(5760,5632,128, __Vtemp1031, __Vtemp1030, vlSelf->riscv_soc__DOT__sram1__DOT__sram_19);
-    VL_CONCAT_WWW(5888,5760,128, __Vtemp1032, __Vtemp1031, vlSelf->riscv_soc__DOT__sram1__DOT__sram_18);
-    VL_CONCAT_WWW(6016,5888,128, __Vtemp1033, __Vtemp1032, vlSelf->riscv_soc__DOT__sram1__DOT__sram_17);
-    VL_CONCAT_WWW(6144,6016,128, __Vtemp1034, __Vtemp1033, vlSelf->riscv_soc__DOT__sram1__DOT__sram_16);
-    VL_CONCAT_WWW(6272,6144,128, __Vtemp1035, __Vtemp1034, vlSelf->riscv_soc__DOT__sram1__DOT__sram_15);
-    VL_CONCAT_WWW(6400,6272,128, __Vtemp1036, __Vtemp1035, vlSelf->riscv_soc__DOT__sram1__DOT__sram_14);
-    VL_CONCAT_WWW(6528,6400,128, __Vtemp1037, __Vtemp1036, vlSelf->riscv_soc__DOT__sram1__DOT__sram_13);
-    VL_CONCAT_WWW(6656,6528,128, __Vtemp1038, __Vtemp1037, vlSelf->riscv_soc__DOT__sram1__DOT__sram_12);
-    VL_CONCAT_WWW(6784,6656,128, __Vtemp1039, __Vtemp1038, vlSelf->riscv_soc__DOT__sram1__DOT__sram_11);
-    VL_CONCAT_WWW(6912,6784,128, __Vtemp1040, __Vtemp1039, vlSelf->riscv_soc__DOT__sram1__DOT__sram_10);
-    VL_CONCAT_WWW(7040,6912,128, __Vtemp1041, __Vtemp1040, vlSelf->riscv_soc__DOT__sram1__DOT__sram_9);
-    VL_CONCAT_WWW(7168,7040,128, __Vtemp1042, __Vtemp1041, vlSelf->riscv_soc__DOT__sram1__DOT__sram_8);
-    VL_CONCAT_WWW(7296,7168,128, __Vtemp1043, __Vtemp1042, vlSelf->riscv_soc__DOT__sram1__DOT__sram_7);
-    VL_CONCAT_WWW(7424,7296,128, __Vtemp1044, __Vtemp1043, vlSelf->riscv_soc__DOT__sram1__DOT__sram_6);
-    VL_CONCAT_WWW(7552,7424,128, __Vtemp1045, __Vtemp1044, vlSelf->riscv_soc__DOT__sram1__DOT__sram_5);
-    VL_CONCAT_WWW(7680,7552,128, __Vtemp1046, __Vtemp1045, vlSelf->riscv_soc__DOT__sram1__DOT__sram_4);
-    VL_CONCAT_WWW(7808,7680,128, __Vtemp1047, __Vtemp1046, vlSelf->riscv_soc__DOT__sram1__DOT__sram_3);
-    VL_CONCAT_WWW(7936,7808,128, __Vtemp1048, __Vtemp1047, vlSelf->riscv_soc__DOT__sram1__DOT__sram_2);
-    VL_CONCAT_WWW(8064,7936,128, __Vtemp1049, __Vtemp1048, vlSelf->riscv_soc__DOT__sram1__DOT__sram_1);
-    VL_CONCAT_WWW(8192,8064,128, __Vtemp1050, __Vtemp1049, vlSelf->riscv_soc__DOT__sram1__DOT__sram_0);
+    __Vtemp1009[0U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_48[0U];
+    __Vtemp1009[1U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_48[1U];
+    __Vtemp1009[2U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_48[2U];
+    __Vtemp1009[3U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_48[3U];
+    __Vtemp1009[4U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_49[0U];
+    __Vtemp1009[5U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_49[1U];
+    __Vtemp1009[6U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_49[2U];
+    __Vtemp1009[7U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_49[3U];
+    __Vtemp1009[8U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_50[0U];
+    __Vtemp1009[9U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_50[1U];
+    __Vtemp1009[0xaU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_50[2U];
+    __Vtemp1009[0xbU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_50[3U];
+    __Vtemp1009[0xcU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_51[0U];
+    __Vtemp1009[0xdU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_51[1U];
+    __Vtemp1009[0xeU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_51[2U];
+    __Vtemp1009[0xfU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_51[3U];
+    __Vtemp1009[0x10U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_52[0U];
+    __Vtemp1009[0x11U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_52[1U];
+    __Vtemp1009[0x12U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_52[2U];
+    __Vtemp1009[0x13U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_52[3U];
+    __Vtemp1009[0x14U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_53[0U];
+    __Vtemp1009[0x15U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_53[1U];
+    __Vtemp1009[0x16U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_53[2U];
+    __Vtemp1009[0x17U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_53[3U];
+    __Vtemp1009[0x18U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_54[0U];
+    __Vtemp1009[0x19U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_54[1U];
+    __Vtemp1009[0x1aU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_54[2U];
+    __Vtemp1009[0x1bU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_54[3U];
+    __Vtemp1009[0x1cU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_55[0U];
+    __Vtemp1009[0x1dU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_55[1U];
+    __Vtemp1009[0x1eU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_55[2U];
+    __Vtemp1009[0x1fU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_55[3U];
+    __Vtemp1009[0x20U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_56[0U];
+    __Vtemp1009[0x21U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_56[1U];
+    __Vtemp1009[0x22U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_56[2U];
+    __Vtemp1009[0x23U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_56[3U];
+    __Vtemp1009[0x24U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_57[0U];
+    __Vtemp1009[0x25U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_57[1U];
+    __Vtemp1009[0x26U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_57[2U];
+    __Vtemp1009[0x27U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_57[3U];
+    __Vtemp1009[0x28U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_58[0U];
+    __Vtemp1009[0x29U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_58[1U];
+    __Vtemp1009[0x2aU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_58[2U];
+    __Vtemp1009[0x2bU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_58[3U];
+    __Vtemp1009[0x2cU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_59[0U];
+    __Vtemp1009[0x2dU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_59[1U];
+    __Vtemp1009[0x2eU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_59[2U];
+    __Vtemp1009[0x2fU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_59[3U];
+    __Vtemp1009[0x30U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_60[0U];
+    __Vtemp1009[0x31U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_60[1U];
+    __Vtemp1009[0x32U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_60[2U];
+    __Vtemp1009[0x33U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_60[3U];
+    __Vtemp1009[0x34U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_61[0U];
+    __Vtemp1009[0x35U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_61[1U];
+    __Vtemp1009[0x36U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_61[2U];
+    __Vtemp1009[0x37U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_61[3U];
+    __Vtemp1009[0x38U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_62[0U];
+    __Vtemp1009[0x39U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_62[1U];
+    __Vtemp1009[0x3aU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_62[2U];
+    __Vtemp1009[0x3bU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_62[3U];
+    __Vtemp1009[0x3cU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_63[0U];
+    __Vtemp1009[0x3dU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_63[1U];
+    __Vtemp1009[0x3eU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_63[2U];
+    __Vtemp1009[0x3fU] = vlSelf->riscv_soc__DOT__sram1__DOT__sram_63[3U];
+    VL_CONCAT_WWW(2176,2048,128, __Vtemp1010, __Vtemp1009, vlSelf->riscv_soc__DOT__sram1__DOT__sram_47);
+    VL_CONCAT_WWW(2304,2176,128, __Vtemp1011, __Vtemp1010, vlSelf->riscv_soc__DOT__sram1__DOT__sram_46);
+    VL_CONCAT_WWW(2432,2304,128, __Vtemp1012, __Vtemp1011, vlSelf->riscv_soc__DOT__sram1__DOT__sram_45);
+    VL_CONCAT_WWW(2560,2432,128, __Vtemp1013, __Vtemp1012, vlSelf->riscv_soc__DOT__sram1__DOT__sram_44);
+    VL_CONCAT_WWW(2688,2560,128, __Vtemp1014, __Vtemp1013, vlSelf->riscv_soc__DOT__sram1__DOT__sram_43);
+    VL_CONCAT_WWW(2816,2688,128, __Vtemp1015, __Vtemp1014, vlSelf->riscv_soc__DOT__sram1__DOT__sram_42);
+    VL_CONCAT_WWW(2944,2816,128, __Vtemp1016, __Vtemp1015, vlSelf->riscv_soc__DOT__sram1__DOT__sram_41);
+    VL_CONCAT_WWW(3072,2944,128, __Vtemp1017, __Vtemp1016, vlSelf->riscv_soc__DOT__sram1__DOT__sram_40);
+    VL_CONCAT_WWW(3200,3072,128, __Vtemp1018, __Vtemp1017, vlSelf->riscv_soc__DOT__sram1__DOT__sram_39);
+    VL_CONCAT_WWW(3328,3200,128, __Vtemp1019, __Vtemp1018, vlSelf->riscv_soc__DOT__sram1__DOT__sram_38);
+    VL_CONCAT_WWW(3456,3328,128, __Vtemp1020, __Vtemp1019, vlSelf->riscv_soc__DOT__sram1__DOT__sram_37);
+    VL_CONCAT_WWW(3584,3456,128, __Vtemp1021, __Vtemp1020, vlSelf->riscv_soc__DOT__sram1__DOT__sram_36);
+    VL_CONCAT_WWW(3712,3584,128, __Vtemp1022, __Vtemp1021, vlSelf->riscv_soc__DOT__sram1__DOT__sram_35);
+    VL_CONCAT_WWW(3840,3712,128, __Vtemp1023, __Vtemp1022, vlSelf->riscv_soc__DOT__sram1__DOT__sram_34);
+    VL_CONCAT_WWW(3968,3840,128, __Vtemp1024, __Vtemp1023, vlSelf->riscv_soc__DOT__sram1__DOT__sram_33);
+    VL_CONCAT_WWW(4096,3968,128, __Vtemp1025, __Vtemp1024, vlSelf->riscv_soc__DOT__sram1__DOT__sram_32);
+    VL_CONCAT_WWW(4224,4096,128, __Vtemp1026, __Vtemp1025, vlSelf->riscv_soc__DOT__sram1__DOT__sram_31);
+    VL_CONCAT_WWW(4352,4224,128, __Vtemp1027, __Vtemp1026, vlSelf->riscv_soc__DOT__sram1__DOT__sram_30);
+    VL_CONCAT_WWW(4480,4352,128, __Vtemp1028, __Vtemp1027, vlSelf->riscv_soc__DOT__sram1__DOT__sram_29);
+    VL_CONCAT_WWW(4608,4480,128, __Vtemp1029, __Vtemp1028, vlSelf->riscv_soc__DOT__sram1__DOT__sram_28);
+    VL_CONCAT_WWW(4736,4608,128, __Vtemp1030, __Vtemp1029, vlSelf->riscv_soc__DOT__sram1__DOT__sram_27);
+    VL_CONCAT_WWW(4864,4736,128, __Vtemp1031, __Vtemp1030, vlSelf->riscv_soc__DOT__sram1__DOT__sram_26);
+    VL_CONCAT_WWW(4992,4864,128, __Vtemp1032, __Vtemp1031, vlSelf->riscv_soc__DOT__sram1__DOT__sram_25);
+    VL_CONCAT_WWW(5120,4992,128, __Vtemp1033, __Vtemp1032, vlSelf->riscv_soc__DOT__sram1__DOT__sram_24);
+    VL_CONCAT_WWW(5248,5120,128, __Vtemp1034, __Vtemp1033, vlSelf->riscv_soc__DOT__sram1__DOT__sram_23);
+    VL_CONCAT_WWW(5376,5248,128, __Vtemp1035, __Vtemp1034, vlSelf->riscv_soc__DOT__sram1__DOT__sram_22);
+    VL_CONCAT_WWW(5504,5376,128, __Vtemp1036, __Vtemp1035, vlSelf->riscv_soc__DOT__sram1__DOT__sram_21);
+    VL_CONCAT_WWW(5632,5504,128, __Vtemp1037, __Vtemp1036, vlSelf->riscv_soc__DOT__sram1__DOT__sram_20);
+    VL_CONCAT_WWW(5760,5632,128, __Vtemp1038, __Vtemp1037, vlSelf->riscv_soc__DOT__sram1__DOT__sram_19);
+    VL_CONCAT_WWW(5888,5760,128, __Vtemp1039, __Vtemp1038, vlSelf->riscv_soc__DOT__sram1__DOT__sram_18);
+    VL_CONCAT_WWW(6016,5888,128, __Vtemp1040, __Vtemp1039, vlSelf->riscv_soc__DOT__sram1__DOT__sram_17);
+    VL_CONCAT_WWW(6144,6016,128, __Vtemp1041, __Vtemp1040, vlSelf->riscv_soc__DOT__sram1__DOT__sram_16);
+    VL_CONCAT_WWW(6272,6144,128, __Vtemp1042, __Vtemp1041, vlSelf->riscv_soc__DOT__sram1__DOT__sram_15);
+    VL_CONCAT_WWW(6400,6272,128, __Vtemp1043, __Vtemp1042, vlSelf->riscv_soc__DOT__sram1__DOT__sram_14);
+    VL_CONCAT_WWW(6528,6400,128, __Vtemp1044, __Vtemp1043, vlSelf->riscv_soc__DOT__sram1__DOT__sram_13);
+    VL_CONCAT_WWW(6656,6528,128, __Vtemp1045, __Vtemp1044, vlSelf->riscv_soc__DOT__sram1__DOT__sram_12);
+    VL_CONCAT_WWW(6784,6656,128, __Vtemp1046, __Vtemp1045, vlSelf->riscv_soc__DOT__sram1__DOT__sram_11);
+    VL_CONCAT_WWW(6912,6784,128, __Vtemp1047, __Vtemp1046, vlSelf->riscv_soc__DOT__sram1__DOT__sram_10);
+    VL_CONCAT_WWW(7040,6912,128, __Vtemp1048, __Vtemp1047, vlSelf->riscv_soc__DOT__sram1__DOT__sram_9);
+    VL_CONCAT_WWW(7168,7040,128, __Vtemp1049, __Vtemp1048, vlSelf->riscv_soc__DOT__sram1__DOT__sram_8);
+    VL_CONCAT_WWW(7296,7168,128, __Vtemp1050, __Vtemp1049, vlSelf->riscv_soc__DOT__sram1__DOT__sram_7);
+    VL_CONCAT_WWW(7424,7296,128, __Vtemp1051, __Vtemp1050, vlSelf->riscv_soc__DOT__sram1__DOT__sram_6);
+    VL_CONCAT_WWW(7552,7424,128, __Vtemp1052, __Vtemp1051, vlSelf->riscv_soc__DOT__sram1__DOT__sram_5);
+    VL_CONCAT_WWW(7680,7552,128, __Vtemp1053, __Vtemp1052, vlSelf->riscv_soc__DOT__sram1__DOT__sram_4);
+    VL_CONCAT_WWW(7808,7680,128, __Vtemp1054, __Vtemp1053, vlSelf->riscv_soc__DOT__sram1__DOT__sram_3);
+    VL_CONCAT_WWW(7936,7808,128, __Vtemp1055, __Vtemp1054, vlSelf->riscv_soc__DOT__sram1__DOT__sram_2);
+    VL_CONCAT_WWW(8064,7936,128, __Vtemp1056, __Vtemp1055, vlSelf->riscv_soc__DOT__sram1__DOT__sram_1);
+    VL_CONCAT_WWW(8192,8064,128, __Vtemp1057, __Vtemp1056, vlSelf->riscv_soc__DOT__sram1__DOT__sram_0);
     vlSelf->riscv_soc__DOT__sram1__DOT___GEN_1[0U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
-                             << 7U))) ? 0U : (__Vtemp1050[
+                             << 7U))) ? 0U : (__Vtemp1057[
                                               ((IData)(1U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
@@ -1560,13 +1593,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                       << 7U))))) 
-           | (__Vtemp1050[(0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
+           | (__Vtemp1057[(0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                     << 2U))] >> (0x1fU 
                                                  & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                     << 7U))));
     vlSelf->riscv_soc__DOT__sram1__DOT___GEN_1[1U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
-                             << 7U))) ? 0U : (__Vtemp1050[
+                             << 7U))) ? 0U : (__Vtemp1057[
                                               ((IData)(2U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
@@ -1576,13 +1609,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                       << 7U))))) 
-           | (__Vtemp1050[((IData)(1U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
+           | (__Vtemp1057[((IData)(1U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                            << 7U))));
     vlSelf->riscv_soc__DOT__sram1__DOT___GEN_1[2U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
-                             << 7U))) ? 0U : (__Vtemp1050[
+                             << 7U))) ? 0U : (__Vtemp1057[
                                               ((IData)(3U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
@@ -1592,13 +1625,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                       << 7U))))) 
-           | (__Vtemp1050[((IData)(2U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
+           | (__Vtemp1057[((IData)(2U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                            << 7U))));
     vlSelf->riscv_soc__DOT__sram1__DOT___GEN_1[3U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
-                             << 7U))) ? 0U : (__Vtemp1050[
+                             << 7U))) ? 0U : (__Vtemp1057[
                                               ((IData)(4U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
@@ -1608,125 +1641,125 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                       << 7U))))) 
-           | (__Vtemp1050[((IData)(3U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
+           | (__Vtemp1057[((IData)(3U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                            << 7U))));
-    __Vtemp1066[0U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_48[0U];
-    __Vtemp1066[1U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_48[1U];
-    __Vtemp1066[2U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_48[2U];
-    __Vtemp1066[3U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_48[3U];
-    __Vtemp1066[4U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_49[0U];
-    __Vtemp1066[5U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_49[1U];
-    __Vtemp1066[6U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_49[2U];
-    __Vtemp1066[7U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_49[3U];
-    __Vtemp1066[8U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_50[0U];
-    __Vtemp1066[9U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_50[1U];
-    __Vtemp1066[0xaU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_50[2U];
-    __Vtemp1066[0xbU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_50[3U];
-    __Vtemp1066[0xcU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_51[0U];
-    __Vtemp1066[0xdU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_51[1U];
-    __Vtemp1066[0xeU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_51[2U];
-    __Vtemp1066[0xfU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_51[3U];
-    __Vtemp1066[0x10U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_52[0U];
-    __Vtemp1066[0x11U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_52[1U];
-    __Vtemp1066[0x12U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_52[2U];
-    __Vtemp1066[0x13U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_52[3U];
-    __Vtemp1066[0x14U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_53[0U];
-    __Vtemp1066[0x15U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_53[1U];
-    __Vtemp1066[0x16U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_53[2U];
-    __Vtemp1066[0x17U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_53[3U];
-    __Vtemp1066[0x18U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_54[0U];
-    __Vtemp1066[0x19U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_54[1U];
-    __Vtemp1066[0x1aU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_54[2U];
-    __Vtemp1066[0x1bU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_54[3U];
-    __Vtemp1066[0x1cU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_55[0U];
-    __Vtemp1066[0x1dU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_55[1U];
-    __Vtemp1066[0x1eU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_55[2U];
-    __Vtemp1066[0x1fU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_55[3U];
-    __Vtemp1066[0x20U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_56[0U];
-    __Vtemp1066[0x21U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_56[1U];
-    __Vtemp1066[0x22U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_56[2U];
-    __Vtemp1066[0x23U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_56[3U];
-    __Vtemp1066[0x24U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_57[0U];
-    __Vtemp1066[0x25U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_57[1U];
-    __Vtemp1066[0x26U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_57[2U];
-    __Vtemp1066[0x27U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_57[3U];
-    __Vtemp1066[0x28U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_58[0U];
-    __Vtemp1066[0x29U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_58[1U];
-    __Vtemp1066[0x2aU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_58[2U];
-    __Vtemp1066[0x2bU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_58[3U];
-    __Vtemp1066[0x2cU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_59[0U];
-    __Vtemp1066[0x2dU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_59[1U];
-    __Vtemp1066[0x2eU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_59[2U];
-    __Vtemp1066[0x2fU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_59[3U];
-    __Vtemp1066[0x30U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_60[0U];
-    __Vtemp1066[0x31U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_60[1U];
-    __Vtemp1066[0x32U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_60[2U];
-    __Vtemp1066[0x33U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_60[3U];
-    __Vtemp1066[0x34U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_61[0U];
-    __Vtemp1066[0x35U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_61[1U];
-    __Vtemp1066[0x36U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_61[2U];
-    __Vtemp1066[0x37U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_61[3U];
-    __Vtemp1066[0x38U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_62[0U];
-    __Vtemp1066[0x39U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_62[1U];
-    __Vtemp1066[0x3aU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_62[2U];
-    __Vtemp1066[0x3bU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_62[3U];
-    __Vtemp1066[0x3cU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_63[0U];
-    __Vtemp1066[0x3dU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_63[1U];
-    __Vtemp1066[0x3eU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_63[2U];
-    __Vtemp1066[0x3fU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_63[3U];
-    VL_CONCAT_WWW(2176,2048,128, __Vtemp1067, __Vtemp1066, vlSelf->riscv_soc__DOT__sram2__DOT__sram_47);
-    VL_CONCAT_WWW(2304,2176,128, __Vtemp1068, __Vtemp1067, vlSelf->riscv_soc__DOT__sram2__DOT__sram_46);
-    VL_CONCAT_WWW(2432,2304,128, __Vtemp1069, __Vtemp1068, vlSelf->riscv_soc__DOT__sram2__DOT__sram_45);
-    VL_CONCAT_WWW(2560,2432,128, __Vtemp1070, __Vtemp1069, vlSelf->riscv_soc__DOT__sram2__DOT__sram_44);
-    VL_CONCAT_WWW(2688,2560,128, __Vtemp1071, __Vtemp1070, vlSelf->riscv_soc__DOT__sram2__DOT__sram_43);
-    VL_CONCAT_WWW(2816,2688,128, __Vtemp1072, __Vtemp1071, vlSelf->riscv_soc__DOT__sram2__DOT__sram_42);
-    VL_CONCAT_WWW(2944,2816,128, __Vtemp1073, __Vtemp1072, vlSelf->riscv_soc__DOT__sram2__DOT__sram_41);
-    VL_CONCAT_WWW(3072,2944,128, __Vtemp1074, __Vtemp1073, vlSelf->riscv_soc__DOT__sram2__DOT__sram_40);
-    VL_CONCAT_WWW(3200,3072,128, __Vtemp1075, __Vtemp1074, vlSelf->riscv_soc__DOT__sram2__DOT__sram_39);
-    VL_CONCAT_WWW(3328,3200,128, __Vtemp1076, __Vtemp1075, vlSelf->riscv_soc__DOT__sram2__DOT__sram_38);
-    VL_CONCAT_WWW(3456,3328,128, __Vtemp1077, __Vtemp1076, vlSelf->riscv_soc__DOT__sram2__DOT__sram_37);
-    VL_CONCAT_WWW(3584,3456,128, __Vtemp1078, __Vtemp1077, vlSelf->riscv_soc__DOT__sram2__DOT__sram_36);
-    VL_CONCAT_WWW(3712,3584,128, __Vtemp1079, __Vtemp1078, vlSelf->riscv_soc__DOT__sram2__DOT__sram_35);
-    VL_CONCAT_WWW(3840,3712,128, __Vtemp1080, __Vtemp1079, vlSelf->riscv_soc__DOT__sram2__DOT__sram_34);
-    VL_CONCAT_WWW(3968,3840,128, __Vtemp1081, __Vtemp1080, vlSelf->riscv_soc__DOT__sram2__DOT__sram_33);
-    VL_CONCAT_WWW(4096,3968,128, __Vtemp1082, __Vtemp1081, vlSelf->riscv_soc__DOT__sram2__DOT__sram_32);
-    VL_CONCAT_WWW(4224,4096,128, __Vtemp1083, __Vtemp1082, vlSelf->riscv_soc__DOT__sram2__DOT__sram_31);
-    VL_CONCAT_WWW(4352,4224,128, __Vtemp1084, __Vtemp1083, vlSelf->riscv_soc__DOT__sram2__DOT__sram_30);
-    VL_CONCAT_WWW(4480,4352,128, __Vtemp1085, __Vtemp1084, vlSelf->riscv_soc__DOT__sram2__DOT__sram_29);
-    VL_CONCAT_WWW(4608,4480,128, __Vtemp1086, __Vtemp1085, vlSelf->riscv_soc__DOT__sram2__DOT__sram_28);
-    VL_CONCAT_WWW(4736,4608,128, __Vtemp1087, __Vtemp1086, vlSelf->riscv_soc__DOT__sram2__DOT__sram_27);
-    VL_CONCAT_WWW(4864,4736,128, __Vtemp1088, __Vtemp1087, vlSelf->riscv_soc__DOT__sram2__DOT__sram_26);
-    VL_CONCAT_WWW(4992,4864,128, __Vtemp1089, __Vtemp1088, vlSelf->riscv_soc__DOT__sram2__DOT__sram_25);
-    VL_CONCAT_WWW(5120,4992,128, __Vtemp1090, __Vtemp1089, vlSelf->riscv_soc__DOT__sram2__DOT__sram_24);
-    VL_CONCAT_WWW(5248,5120,128, __Vtemp1091, __Vtemp1090, vlSelf->riscv_soc__DOT__sram2__DOT__sram_23);
-    VL_CONCAT_WWW(5376,5248,128, __Vtemp1092, __Vtemp1091, vlSelf->riscv_soc__DOT__sram2__DOT__sram_22);
-    VL_CONCAT_WWW(5504,5376,128, __Vtemp1093, __Vtemp1092, vlSelf->riscv_soc__DOT__sram2__DOT__sram_21);
-    VL_CONCAT_WWW(5632,5504,128, __Vtemp1094, __Vtemp1093, vlSelf->riscv_soc__DOT__sram2__DOT__sram_20);
-    VL_CONCAT_WWW(5760,5632,128, __Vtemp1095, __Vtemp1094, vlSelf->riscv_soc__DOT__sram2__DOT__sram_19);
-    VL_CONCAT_WWW(5888,5760,128, __Vtemp1096, __Vtemp1095, vlSelf->riscv_soc__DOT__sram2__DOT__sram_18);
-    VL_CONCAT_WWW(6016,5888,128, __Vtemp1097, __Vtemp1096, vlSelf->riscv_soc__DOT__sram2__DOT__sram_17);
-    VL_CONCAT_WWW(6144,6016,128, __Vtemp1098, __Vtemp1097, vlSelf->riscv_soc__DOT__sram2__DOT__sram_16);
-    VL_CONCAT_WWW(6272,6144,128, __Vtemp1099, __Vtemp1098, vlSelf->riscv_soc__DOT__sram2__DOT__sram_15);
-    VL_CONCAT_WWW(6400,6272,128, __Vtemp1100, __Vtemp1099, vlSelf->riscv_soc__DOT__sram2__DOT__sram_14);
-    VL_CONCAT_WWW(6528,6400,128, __Vtemp1101, __Vtemp1100, vlSelf->riscv_soc__DOT__sram2__DOT__sram_13);
-    VL_CONCAT_WWW(6656,6528,128, __Vtemp1102, __Vtemp1101, vlSelf->riscv_soc__DOT__sram2__DOT__sram_12);
-    VL_CONCAT_WWW(6784,6656,128, __Vtemp1103, __Vtemp1102, vlSelf->riscv_soc__DOT__sram2__DOT__sram_11);
-    VL_CONCAT_WWW(6912,6784,128, __Vtemp1104, __Vtemp1103, vlSelf->riscv_soc__DOT__sram2__DOT__sram_10);
-    VL_CONCAT_WWW(7040,6912,128, __Vtemp1105, __Vtemp1104, vlSelf->riscv_soc__DOT__sram2__DOT__sram_9);
-    VL_CONCAT_WWW(7168,7040,128, __Vtemp1106, __Vtemp1105, vlSelf->riscv_soc__DOT__sram2__DOT__sram_8);
-    VL_CONCAT_WWW(7296,7168,128, __Vtemp1107, __Vtemp1106, vlSelf->riscv_soc__DOT__sram2__DOT__sram_7);
-    VL_CONCAT_WWW(7424,7296,128, __Vtemp1108, __Vtemp1107, vlSelf->riscv_soc__DOT__sram2__DOT__sram_6);
-    VL_CONCAT_WWW(7552,7424,128, __Vtemp1109, __Vtemp1108, vlSelf->riscv_soc__DOT__sram2__DOT__sram_5);
-    VL_CONCAT_WWW(7680,7552,128, __Vtemp1110, __Vtemp1109, vlSelf->riscv_soc__DOT__sram2__DOT__sram_4);
-    VL_CONCAT_WWW(7808,7680,128, __Vtemp1111, __Vtemp1110, vlSelf->riscv_soc__DOT__sram2__DOT__sram_3);
-    VL_CONCAT_WWW(7936,7808,128, __Vtemp1112, __Vtemp1111, vlSelf->riscv_soc__DOT__sram2__DOT__sram_2);
-    VL_CONCAT_WWW(8064,7936,128, __Vtemp1113, __Vtemp1112, vlSelf->riscv_soc__DOT__sram2__DOT__sram_1);
-    VL_CONCAT_WWW(8192,8064,128, __Vtemp1114, __Vtemp1113, vlSelf->riscv_soc__DOT__sram2__DOT__sram_0);
+    __Vtemp1073[0U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_48[0U];
+    __Vtemp1073[1U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_48[1U];
+    __Vtemp1073[2U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_48[2U];
+    __Vtemp1073[3U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_48[3U];
+    __Vtemp1073[4U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_49[0U];
+    __Vtemp1073[5U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_49[1U];
+    __Vtemp1073[6U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_49[2U];
+    __Vtemp1073[7U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_49[3U];
+    __Vtemp1073[8U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_50[0U];
+    __Vtemp1073[9U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_50[1U];
+    __Vtemp1073[0xaU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_50[2U];
+    __Vtemp1073[0xbU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_50[3U];
+    __Vtemp1073[0xcU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_51[0U];
+    __Vtemp1073[0xdU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_51[1U];
+    __Vtemp1073[0xeU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_51[2U];
+    __Vtemp1073[0xfU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_51[3U];
+    __Vtemp1073[0x10U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_52[0U];
+    __Vtemp1073[0x11U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_52[1U];
+    __Vtemp1073[0x12U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_52[2U];
+    __Vtemp1073[0x13U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_52[3U];
+    __Vtemp1073[0x14U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_53[0U];
+    __Vtemp1073[0x15U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_53[1U];
+    __Vtemp1073[0x16U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_53[2U];
+    __Vtemp1073[0x17U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_53[3U];
+    __Vtemp1073[0x18U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_54[0U];
+    __Vtemp1073[0x19U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_54[1U];
+    __Vtemp1073[0x1aU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_54[2U];
+    __Vtemp1073[0x1bU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_54[3U];
+    __Vtemp1073[0x1cU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_55[0U];
+    __Vtemp1073[0x1dU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_55[1U];
+    __Vtemp1073[0x1eU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_55[2U];
+    __Vtemp1073[0x1fU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_55[3U];
+    __Vtemp1073[0x20U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_56[0U];
+    __Vtemp1073[0x21U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_56[1U];
+    __Vtemp1073[0x22U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_56[2U];
+    __Vtemp1073[0x23U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_56[3U];
+    __Vtemp1073[0x24U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_57[0U];
+    __Vtemp1073[0x25U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_57[1U];
+    __Vtemp1073[0x26U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_57[2U];
+    __Vtemp1073[0x27U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_57[3U];
+    __Vtemp1073[0x28U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_58[0U];
+    __Vtemp1073[0x29U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_58[1U];
+    __Vtemp1073[0x2aU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_58[2U];
+    __Vtemp1073[0x2bU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_58[3U];
+    __Vtemp1073[0x2cU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_59[0U];
+    __Vtemp1073[0x2dU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_59[1U];
+    __Vtemp1073[0x2eU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_59[2U];
+    __Vtemp1073[0x2fU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_59[3U];
+    __Vtemp1073[0x30U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_60[0U];
+    __Vtemp1073[0x31U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_60[1U];
+    __Vtemp1073[0x32U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_60[2U];
+    __Vtemp1073[0x33U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_60[3U];
+    __Vtemp1073[0x34U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_61[0U];
+    __Vtemp1073[0x35U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_61[1U];
+    __Vtemp1073[0x36U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_61[2U];
+    __Vtemp1073[0x37U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_61[3U];
+    __Vtemp1073[0x38U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_62[0U];
+    __Vtemp1073[0x39U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_62[1U];
+    __Vtemp1073[0x3aU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_62[2U];
+    __Vtemp1073[0x3bU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_62[3U];
+    __Vtemp1073[0x3cU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_63[0U];
+    __Vtemp1073[0x3dU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_63[1U];
+    __Vtemp1073[0x3eU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_63[2U];
+    __Vtemp1073[0x3fU] = vlSelf->riscv_soc__DOT__sram2__DOT__sram_63[3U];
+    VL_CONCAT_WWW(2176,2048,128, __Vtemp1074, __Vtemp1073, vlSelf->riscv_soc__DOT__sram2__DOT__sram_47);
+    VL_CONCAT_WWW(2304,2176,128, __Vtemp1075, __Vtemp1074, vlSelf->riscv_soc__DOT__sram2__DOT__sram_46);
+    VL_CONCAT_WWW(2432,2304,128, __Vtemp1076, __Vtemp1075, vlSelf->riscv_soc__DOT__sram2__DOT__sram_45);
+    VL_CONCAT_WWW(2560,2432,128, __Vtemp1077, __Vtemp1076, vlSelf->riscv_soc__DOT__sram2__DOT__sram_44);
+    VL_CONCAT_WWW(2688,2560,128, __Vtemp1078, __Vtemp1077, vlSelf->riscv_soc__DOT__sram2__DOT__sram_43);
+    VL_CONCAT_WWW(2816,2688,128, __Vtemp1079, __Vtemp1078, vlSelf->riscv_soc__DOT__sram2__DOT__sram_42);
+    VL_CONCAT_WWW(2944,2816,128, __Vtemp1080, __Vtemp1079, vlSelf->riscv_soc__DOT__sram2__DOT__sram_41);
+    VL_CONCAT_WWW(3072,2944,128, __Vtemp1081, __Vtemp1080, vlSelf->riscv_soc__DOT__sram2__DOT__sram_40);
+    VL_CONCAT_WWW(3200,3072,128, __Vtemp1082, __Vtemp1081, vlSelf->riscv_soc__DOT__sram2__DOT__sram_39);
+    VL_CONCAT_WWW(3328,3200,128, __Vtemp1083, __Vtemp1082, vlSelf->riscv_soc__DOT__sram2__DOT__sram_38);
+    VL_CONCAT_WWW(3456,3328,128, __Vtemp1084, __Vtemp1083, vlSelf->riscv_soc__DOT__sram2__DOT__sram_37);
+    VL_CONCAT_WWW(3584,3456,128, __Vtemp1085, __Vtemp1084, vlSelf->riscv_soc__DOT__sram2__DOT__sram_36);
+    VL_CONCAT_WWW(3712,3584,128, __Vtemp1086, __Vtemp1085, vlSelf->riscv_soc__DOT__sram2__DOT__sram_35);
+    VL_CONCAT_WWW(3840,3712,128, __Vtemp1087, __Vtemp1086, vlSelf->riscv_soc__DOT__sram2__DOT__sram_34);
+    VL_CONCAT_WWW(3968,3840,128, __Vtemp1088, __Vtemp1087, vlSelf->riscv_soc__DOT__sram2__DOT__sram_33);
+    VL_CONCAT_WWW(4096,3968,128, __Vtemp1089, __Vtemp1088, vlSelf->riscv_soc__DOT__sram2__DOT__sram_32);
+    VL_CONCAT_WWW(4224,4096,128, __Vtemp1090, __Vtemp1089, vlSelf->riscv_soc__DOT__sram2__DOT__sram_31);
+    VL_CONCAT_WWW(4352,4224,128, __Vtemp1091, __Vtemp1090, vlSelf->riscv_soc__DOT__sram2__DOT__sram_30);
+    VL_CONCAT_WWW(4480,4352,128, __Vtemp1092, __Vtemp1091, vlSelf->riscv_soc__DOT__sram2__DOT__sram_29);
+    VL_CONCAT_WWW(4608,4480,128, __Vtemp1093, __Vtemp1092, vlSelf->riscv_soc__DOT__sram2__DOT__sram_28);
+    VL_CONCAT_WWW(4736,4608,128, __Vtemp1094, __Vtemp1093, vlSelf->riscv_soc__DOT__sram2__DOT__sram_27);
+    VL_CONCAT_WWW(4864,4736,128, __Vtemp1095, __Vtemp1094, vlSelf->riscv_soc__DOT__sram2__DOT__sram_26);
+    VL_CONCAT_WWW(4992,4864,128, __Vtemp1096, __Vtemp1095, vlSelf->riscv_soc__DOT__sram2__DOT__sram_25);
+    VL_CONCAT_WWW(5120,4992,128, __Vtemp1097, __Vtemp1096, vlSelf->riscv_soc__DOT__sram2__DOT__sram_24);
+    VL_CONCAT_WWW(5248,5120,128, __Vtemp1098, __Vtemp1097, vlSelf->riscv_soc__DOT__sram2__DOT__sram_23);
+    VL_CONCAT_WWW(5376,5248,128, __Vtemp1099, __Vtemp1098, vlSelf->riscv_soc__DOT__sram2__DOT__sram_22);
+    VL_CONCAT_WWW(5504,5376,128, __Vtemp1100, __Vtemp1099, vlSelf->riscv_soc__DOT__sram2__DOT__sram_21);
+    VL_CONCAT_WWW(5632,5504,128, __Vtemp1101, __Vtemp1100, vlSelf->riscv_soc__DOT__sram2__DOT__sram_20);
+    VL_CONCAT_WWW(5760,5632,128, __Vtemp1102, __Vtemp1101, vlSelf->riscv_soc__DOT__sram2__DOT__sram_19);
+    VL_CONCAT_WWW(5888,5760,128, __Vtemp1103, __Vtemp1102, vlSelf->riscv_soc__DOT__sram2__DOT__sram_18);
+    VL_CONCAT_WWW(6016,5888,128, __Vtemp1104, __Vtemp1103, vlSelf->riscv_soc__DOT__sram2__DOT__sram_17);
+    VL_CONCAT_WWW(6144,6016,128, __Vtemp1105, __Vtemp1104, vlSelf->riscv_soc__DOT__sram2__DOT__sram_16);
+    VL_CONCAT_WWW(6272,6144,128, __Vtemp1106, __Vtemp1105, vlSelf->riscv_soc__DOT__sram2__DOT__sram_15);
+    VL_CONCAT_WWW(6400,6272,128, __Vtemp1107, __Vtemp1106, vlSelf->riscv_soc__DOT__sram2__DOT__sram_14);
+    VL_CONCAT_WWW(6528,6400,128, __Vtemp1108, __Vtemp1107, vlSelf->riscv_soc__DOT__sram2__DOT__sram_13);
+    VL_CONCAT_WWW(6656,6528,128, __Vtemp1109, __Vtemp1108, vlSelf->riscv_soc__DOT__sram2__DOT__sram_12);
+    VL_CONCAT_WWW(6784,6656,128, __Vtemp1110, __Vtemp1109, vlSelf->riscv_soc__DOT__sram2__DOT__sram_11);
+    VL_CONCAT_WWW(6912,6784,128, __Vtemp1111, __Vtemp1110, vlSelf->riscv_soc__DOT__sram2__DOT__sram_10);
+    VL_CONCAT_WWW(7040,6912,128, __Vtemp1112, __Vtemp1111, vlSelf->riscv_soc__DOT__sram2__DOT__sram_9);
+    VL_CONCAT_WWW(7168,7040,128, __Vtemp1113, __Vtemp1112, vlSelf->riscv_soc__DOT__sram2__DOT__sram_8);
+    VL_CONCAT_WWW(7296,7168,128, __Vtemp1114, __Vtemp1113, vlSelf->riscv_soc__DOT__sram2__DOT__sram_7);
+    VL_CONCAT_WWW(7424,7296,128, __Vtemp1115, __Vtemp1114, vlSelf->riscv_soc__DOT__sram2__DOT__sram_6);
+    VL_CONCAT_WWW(7552,7424,128, __Vtemp1116, __Vtemp1115, vlSelf->riscv_soc__DOT__sram2__DOT__sram_5);
+    VL_CONCAT_WWW(7680,7552,128, __Vtemp1117, __Vtemp1116, vlSelf->riscv_soc__DOT__sram2__DOT__sram_4);
+    VL_CONCAT_WWW(7808,7680,128, __Vtemp1118, __Vtemp1117, vlSelf->riscv_soc__DOT__sram2__DOT__sram_3);
+    VL_CONCAT_WWW(7936,7808,128, __Vtemp1119, __Vtemp1118, vlSelf->riscv_soc__DOT__sram2__DOT__sram_2);
+    VL_CONCAT_WWW(8064,7936,128, __Vtemp1120, __Vtemp1119, vlSelf->riscv_soc__DOT__sram2__DOT__sram_1);
+    VL_CONCAT_WWW(8192,8064,128, __Vtemp1121, __Vtemp1120, vlSelf->riscv_soc__DOT__sram2__DOT__sram_0);
     vlSelf->riscv_soc__DOT__sram2__DOT___GEN_1[0U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
-                             << 7U))) ? 0U : (__Vtemp1114[
+                             << 7U))) ? 0U : (__Vtemp1121[
                                               ((IData)(1U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
@@ -1736,13 +1769,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                       << 7U))))) 
-           | (__Vtemp1114[(0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
+           | (__Vtemp1121[(0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                     << 2U))] >> (0x1fU 
                                                  & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                     << 7U))));
     vlSelf->riscv_soc__DOT__sram2__DOT___GEN_1[1U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
-                             << 7U))) ? 0U : (__Vtemp1114[
+                             << 7U))) ? 0U : (__Vtemp1121[
                                               ((IData)(2U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
@@ -1752,13 +1785,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                       << 7U))))) 
-           | (__Vtemp1114[((IData)(1U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
+           | (__Vtemp1121[((IData)(1U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                            << 7U))));
     vlSelf->riscv_soc__DOT__sram2__DOT___GEN_1[2U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
-                             << 7U))) ? 0U : (__Vtemp1114[
+                             << 7U))) ? 0U : (__Vtemp1121[
                                               ((IData)(3U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
@@ -1768,13 +1801,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                       << 7U))))) 
-           | (__Vtemp1114[((IData)(2U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
+           | (__Vtemp1121[((IData)(2U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                            << 7U))));
     vlSelf->riscv_soc__DOT__sram2__DOT___GEN_1[3U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
-                             << 7U))) ? 0U : (__Vtemp1114[
+                             << 7U))) ? 0U : (__Vtemp1121[
                                               ((IData)(4U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
@@ -1784,125 +1817,125 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                       << 7U))))) 
-           | (__Vtemp1114[((IData)(3U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
+           | (__Vtemp1121[((IData)(3U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                            << 7U))));
-    __Vtemp1130[0U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_48[0U];
-    __Vtemp1130[1U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_48[1U];
-    __Vtemp1130[2U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_48[2U];
-    __Vtemp1130[3U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_48[3U];
-    __Vtemp1130[4U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_49[0U];
-    __Vtemp1130[5U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_49[1U];
-    __Vtemp1130[6U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_49[2U];
-    __Vtemp1130[7U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_49[3U];
-    __Vtemp1130[8U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_50[0U];
-    __Vtemp1130[9U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_50[1U];
-    __Vtemp1130[0xaU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_50[2U];
-    __Vtemp1130[0xbU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_50[3U];
-    __Vtemp1130[0xcU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_51[0U];
-    __Vtemp1130[0xdU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_51[1U];
-    __Vtemp1130[0xeU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_51[2U];
-    __Vtemp1130[0xfU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_51[3U];
-    __Vtemp1130[0x10U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_52[0U];
-    __Vtemp1130[0x11U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_52[1U];
-    __Vtemp1130[0x12U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_52[2U];
-    __Vtemp1130[0x13U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_52[3U];
-    __Vtemp1130[0x14U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_53[0U];
-    __Vtemp1130[0x15U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_53[1U];
-    __Vtemp1130[0x16U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_53[2U];
-    __Vtemp1130[0x17U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_53[3U];
-    __Vtemp1130[0x18U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_54[0U];
-    __Vtemp1130[0x19U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_54[1U];
-    __Vtemp1130[0x1aU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_54[2U];
-    __Vtemp1130[0x1bU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_54[3U];
-    __Vtemp1130[0x1cU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_55[0U];
-    __Vtemp1130[0x1dU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_55[1U];
-    __Vtemp1130[0x1eU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_55[2U];
-    __Vtemp1130[0x1fU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_55[3U];
-    __Vtemp1130[0x20U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_56[0U];
-    __Vtemp1130[0x21U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_56[1U];
-    __Vtemp1130[0x22U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_56[2U];
-    __Vtemp1130[0x23U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_56[3U];
-    __Vtemp1130[0x24U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_57[0U];
-    __Vtemp1130[0x25U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_57[1U];
-    __Vtemp1130[0x26U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_57[2U];
-    __Vtemp1130[0x27U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_57[3U];
-    __Vtemp1130[0x28U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_58[0U];
-    __Vtemp1130[0x29U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_58[1U];
-    __Vtemp1130[0x2aU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_58[2U];
-    __Vtemp1130[0x2bU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_58[3U];
-    __Vtemp1130[0x2cU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_59[0U];
-    __Vtemp1130[0x2dU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_59[1U];
-    __Vtemp1130[0x2eU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_59[2U];
-    __Vtemp1130[0x2fU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_59[3U];
-    __Vtemp1130[0x30U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_60[0U];
-    __Vtemp1130[0x31U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_60[1U];
-    __Vtemp1130[0x32U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_60[2U];
-    __Vtemp1130[0x33U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_60[3U];
-    __Vtemp1130[0x34U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_61[0U];
-    __Vtemp1130[0x35U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_61[1U];
-    __Vtemp1130[0x36U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_61[2U];
-    __Vtemp1130[0x37U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_61[3U];
-    __Vtemp1130[0x38U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_62[0U];
-    __Vtemp1130[0x39U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_62[1U];
-    __Vtemp1130[0x3aU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_62[2U];
-    __Vtemp1130[0x3bU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_62[3U];
-    __Vtemp1130[0x3cU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_63[0U];
-    __Vtemp1130[0x3dU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_63[1U];
-    __Vtemp1130[0x3eU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_63[2U];
-    __Vtemp1130[0x3fU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_63[3U];
-    VL_CONCAT_WWW(2176,2048,128, __Vtemp1131, __Vtemp1130, vlSelf->riscv_soc__DOT__sram3__DOT__sram_47);
-    VL_CONCAT_WWW(2304,2176,128, __Vtemp1132, __Vtemp1131, vlSelf->riscv_soc__DOT__sram3__DOT__sram_46);
-    VL_CONCAT_WWW(2432,2304,128, __Vtemp1133, __Vtemp1132, vlSelf->riscv_soc__DOT__sram3__DOT__sram_45);
-    VL_CONCAT_WWW(2560,2432,128, __Vtemp1134, __Vtemp1133, vlSelf->riscv_soc__DOT__sram3__DOT__sram_44);
-    VL_CONCAT_WWW(2688,2560,128, __Vtemp1135, __Vtemp1134, vlSelf->riscv_soc__DOT__sram3__DOT__sram_43);
-    VL_CONCAT_WWW(2816,2688,128, __Vtemp1136, __Vtemp1135, vlSelf->riscv_soc__DOT__sram3__DOT__sram_42);
-    VL_CONCAT_WWW(2944,2816,128, __Vtemp1137, __Vtemp1136, vlSelf->riscv_soc__DOT__sram3__DOT__sram_41);
-    VL_CONCAT_WWW(3072,2944,128, __Vtemp1138, __Vtemp1137, vlSelf->riscv_soc__DOT__sram3__DOT__sram_40);
-    VL_CONCAT_WWW(3200,3072,128, __Vtemp1139, __Vtemp1138, vlSelf->riscv_soc__DOT__sram3__DOT__sram_39);
-    VL_CONCAT_WWW(3328,3200,128, __Vtemp1140, __Vtemp1139, vlSelf->riscv_soc__DOT__sram3__DOT__sram_38);
-    VL_CONCAT_WWW(3456,3328,128, __Vtemp1141, __Vtemp1140, vlSelf->riscv_soc__DOT__sram3__DOT__sram_37);
-    VL_CONCAT_WWW(3584,3456,128, __Vtemp1142, __Vtemp1141, vlSelf->riscv_soc__DOT__sram3__DOT__sram_36);
-    VL_CONCAT_WWW(3712,3584,128, __Vtemp1143, __Vtemp1142, vlSelf->riscv_soc__DOT__sram3__DOT__sram_35);
-    VL_CONCAT_WWW(3840,3712,128, __Vtemp1144, __Vtemp1143, vlSelf->riscv_soc__DOT__sram3__DOT__sram_34);
-    VL_CONCAT_WWW(3968,3840,128, __Vtemp1145, __Vtemp1144, vlSelf->riscv_soc__DOT__sram3__DOT__sram_33);
-    VL_CONCAT_WWW(4096,3968,128, __Vtemp1146, __Vtemp1145, vlSelf->riscv_soc__DOT__sram3__DOT__sram_32);
-    VL_CONCAT_WWW(4224,4096,128, __Vtemp1147, __Vtemp1146, vlSelf->riscv_soc__DOT__sram3__DOT__sram_31);
-    VL_CONCAT_WWW(4352,4224,128, __Vtemp1148, __Vtemp1147, vlSelf->riscv_soc__DOT__sram3__DOT__sram_30);
-    VL_CONCAT_WWW(4480,4352,128, __Vtemp1149, __Vtemp1148, vlSelf->riscv_soc__DOT__sram3__DOT__sram_29);
-    VL_CONCAT_WWW(4608,4480,128, __Vtemp1150, __Vtemp1149, vlSelf->riscv_soc__DOT__sram3__DOT__sram_28);
-    VL_CONCAT_WWW(4736,4608,128, __Vtemp1151, __Vtemp1150, vlSelf->riscv_soc__DOT__sram3__DOT__sram_27);
-    VL_CONCAT_WWW(4864,4736,128, __Vtemp1152, __Vtemp1151, vlSelf->riscv_soc__DOT__sram3__DOT__sram_26);
-    VL_CONCAT_WWW(4992,4864,128, __Vtemp1153, __Vtemp1152, vlSelf->riscv_soc__DOT__sram3__DOT__sram_25);
-    VL_CONCAT_WWW(5120,4992,128, __Vtemp1154, __Vtemp1153, vlSelf->riscv_soc__DOT__sram3__DOT__sram_24);
-    VL_CONCAT_WWW(5248,5120,128, __Vtemp1155, __Vtemp1154, vlSelf->riscv_soc__DOT__sram3__DOT__sram_23);
-    VL_CONCAT_WWW(5376,5248,128, __Vtemp1156, __Vtemp1155, vlSelf->riscv_soc__DOT__sram3__DOT__sram_22);
-    VL_CONCAT_WWW(5504,5376,128, __Vtemp1157, __Vtemp1156, vlSelf->riscv_soc__DOT__sram3__DOT__sram_21);
-    VL_CONCAT_WWW(5632,5504,128, __Vtemp1158, __Vtemp1157, vlSelf->riscv_soc__DOT__sram3__DOT__sram_20);
-    VL_CONCAT_WWW(5760,5632,128, __Vtemp1159, __Vtemp1158, vlSelf->riscv_soc__DOT__sram3__DOT__sram_19);
-    VL_CONCAT_WWW(5888,5760,128, __Vtemp1160, __Vtemp1159, vlSelf->riscv_soc__DOT__sram3__DOT__sram_18);
-    VL_CONCAT_WWW(6016,5888,128, __Vtemp1161, __Vtemp1160, vlSelf->riscv_soc__DOT__sram3__DOT__sram_17);
-    VL_CONCAT_WWW(6144,6016,128, __Vtemp1162, __Vtemp1161, vlSelf->riscv_soc__DOT__sram3__DOT__sram_16);
-    VL_CONCAT_WWW(6272,6144,128, __Vtemp1163, __Vtemp1162, vlSelf->riscv_soc__DOT__sram3__DOT__sram_15);
-    VL_CONCAT_WWW(6400,6272,128, __Vtemp1164, __Vtemp1163, vlSelf->riscv_soc__DOT__sram3__DOT__sram_14);
-    VL_CONCAT_WWW(6528,6400,128, __Vtemp1165, __Vtemp1164, vlSelf->riscv_soc__DOT__sram3__DOT__sram_13);
-    VL_CONCAT_WWW(6656,6528,128, __Vtemp1166, __Vtemp1165, vlSelf->riscv_soc__DOT__sram3__DOT__sram_12);
-    VL_CONCAT_WWW(6784,6656,128, __Vtemp1167, __Vtemp1166, vlSelf->riscv_soc__DOT__sram3__DOT__sram_11);
-    VL_CONCAT_WWW(6912,6784,128, __Vtemp1168, __Vtemp1167, vlSelf->riscv_soc__DOT__sram3__DOT__sram_10);
-    VL_CONCAT_WWW(7040,6912,128, __Vtemp1169, __Vtemp1168, vlSelf->riscv_soc__DOT__sram3__DOT__sram_9);
-    VL_CONCAT_WWW(7168,7040,128, __Vtemp1170, __Vtemp1169, vlSelf->riscv_soc__DOT__sram3__DOT__sram_8);
-    VL_CONCAT_WWW(7296,7168,128, __Vtemp1171, __Vtemp1170, vlSelf->riscv_soc__DOT__sram3__DOT__sram_7);
-    VL_CONCAT_WWW(7424,7296,128, __Vtemp1172, __Vtemp1171, vlSelf->riscv_soc__DOT__sram3__DOT__sram_6);
-    VL_CONCAT_WWW(7552,7424,128, __Vtemp1173, __Vtemp1172, vlSelf->riscv_soc__DOT__sram3__DOT__sram_5);
-    VL_CONCAT_WWW(7680,7552,128, __Vtemp1174, __Vtemp1173, vlSelf->riscv_soc__DOT__sram3__DOT__sram_4);
-    VL_CONCAT_WWW(7808,7680,128, __Vtemp1175, __Vtemp1174, vlSelf->riscv_soc__DOT__sram3__DOT__sram_3);
-    VL_CONCAT_WWW(7936,7808,128, __Vtemp1176, __Vtemp1175, vlSelf->riscv_soc__DOT__sram3__DOT__sram_2);
-    VL_CONCAT_WWW(8064,7936,128, __Vtemp1177, __Vtemp1176, vlSelf->riscv_soc__DOT__sram3__DOT__sram_1);
-    VL_CONCAT_WWW(8192,8064,128, __Vtemp1178, __Vtemp1177, vlSelf->riscv_soc__DOT__sram3__DOT__sram_0);
+    __Vtemp1137[0U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_48[0U];
+    __Vtemp1137[1U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_48[1U];
+    __Vtemp1137[2U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_48[2U];
+    __Vtemp1137[3U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_48[3U];
+    __Vtemp1137[4U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_49[0U];
+    __Vtemp1137[5U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_49[1U];
+    __Vtemp1137[6U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_49[2U];
+    __Vtemp1137[7U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_49[3U];
+    __Vtemp1137[8U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_50[0U];
+    __Vtemp1137[9U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_50[1U];
+    __Vtemp1137[0xaU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_50[2U];
+    __Vtemp1137[0xbU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_50[3U];
+    __Vtemp1137[0xcU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_51[0U];
+    __Vtemp1137[0xdU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_51[1U];
+    __Vtemp1137[0xeU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_51[2U];
+    __Vtemp1137[0xfU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_51[3U];
+    __Vtemp1137[0x10U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_52[0U];
+    __Vtemp1137[0x11U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_52[1U];
+    __Vtemp1137[0x12U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_52[2U];
+    __Vtemp1137[0x13U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_52[3U];
+    __Vtemp1137[0x14U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_53[0U];
+    __Vtemp1137[0x15U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_53[1U];
+    __Vtemp1137[0x16U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_53[2U];
+    __Vtemp1137[0x17U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_53[3U];
+    __Vtemp1137[0x18U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_54[0U];
+    __Vtemp1137[0x19U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_54[1U];
+    __Vtemp1137[0x1aU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_54[2U];
+    __Vtemp1137[0x1bU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_54[3U];
+    __Vtemp1137[0x1cU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_55[0U];
+    __Vtemp1137[0x1dU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_55[1U];
+    __Vtemp1137[0x1eU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_55[2U];
+    __Vtemp1137[0x1fU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_55[3U];
+    __Vtemp1137[0x20U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_56[0U];
+    __Vtemp1137[0x21U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_56[1U];
+    __Vtemp1137[0x22U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_56[2U];
+    __Vtemp1137[0x23U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_56[3U];
+    __Vtemp1137[0x24U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_57[0U];
+    __Vtemp1137[0x25U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_57[1U];
+    __Vtemp1137[0x26U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_57[2U];
+    __Vtemp1137[0x27U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_57[3U];
+    __Vtemp1137[0x28U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_58[0U];
+    __Vtemp1137[0x29U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_58[1U];
+    __Vtemp1137[0x2aU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_58[2U];
+    __Vtemp1137[0x2bU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_58[3U];
+    __Vtemp1137[0x2cU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_59[0U];
+    __Vtemp1137[0x2dU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_59[1U];
+    __Vtemp1137[0x2eU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_59[2U];
+    __Vtemp1137[0x2fU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_59[3U];
+    __Vtemp1137[0x30U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_60[0U];
+    __Vtemp1137[0x31U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_60[1U];
+    __Vtemp1137[0x32U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_60[2U];
+    __Vtemp1137[0x33U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_60[3U];
+    __Vtemp1137[0x34U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_61[0U];
+    __Vtemp1137[0x35U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_61[1U];
+    __Vtemp1137[0x36U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_61[2U];
+    __Vtemp1137[0x37U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_61[3U];
+    __Vtemp1137[0x38U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_62[0U];
+    __Vtemp1137[0x39U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_62[1U];
+    __Vtemp1137[0x3aU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_62[2U];
+    __Vtemp1137[0x3bU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_62[3U];
+    __Vtemp1137[0x3cU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_63[0U];
+    __Vtemp1137[0x3dU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_63[1U];
+    __Vtemp1137[0x3eU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_63[2U];
+    __Vtemp1137[0x3fU] = vlSelf->riscv_soc__DOT__sram3__DOT__sram_63[3U];
+    VL_CONCAT_WWW(2176,2048,128, __Vtemp1138, __Vtemp1137, vlSelf->riscv_soc__DOT__sram3__DOT__sram_47);
+    VL_CONCAT_WWW(2304,2176,128, __Vtemp1139, __Vtemp1138, vlSelf->riscv_soc__DOT__sram3__DOT__sram_46);
+    VL_CONCAT_WWW(2432,2304,128, __Vtemp1140, __Vtemp1139, vlSelf->riscv_soc__DOT__sram3__DOT__sram_45);
+    VL_CONCAT_WWW(2560,2432,128, __Vtemp1141, __Vtemp1140, vlSelf->riscv_soc__DOT__sram3__DOT__sram_44);
+    VL_CONCAT_WWW(2688,2560,128, __Vtemp1142, __Vtemp1141, vlSelf->riscv_soc__DOT__sram3__DOT__sram_43);
+    VL_CONCAT_WWW(2816,2688,128, __Vtemp1143, __Vtemp1142, vlSelf->riscv_soc__DOT__sram3__DOT__sram_42);
+    VL_CONCAT_WWW(2944,2816,128, __Vtemp1144, __Vtemp1143, vlSelf->riscv_soc__DOT__sram3__DOT__sram_41);
+    VL_CONCAT_WWW(3072,2944,128, __Vtemp1145, __Vtemp1144, vlSelf->riscv_soc__DOT__sram3__DOT__sram_40);
+    VL_CONCAT_WWW(3200,3072,128, __Vtemp1146, __Vtemp1145, vlSelf->riscv_soc__DOT__sram3__DOT__sram_39);
+    VL_CONCAT_WWW(3328,3200,128, __Vtemp1147, __Vtemp1146, vlSelf->riscv_soc__DOT__sram3__DOT__sram_38);
+    VL_CONCAT_WWW(3456,3328,128, __Vtemp1148, __Vtemp1147, vlSelf->riscv_soc__DOT__sram3__DOT__sram_37);
+    VL_CONCAT_WWW(3584,3456,128, __Vtemp1149, __Vtemp1148, vlSelf->riscv_soc__DOT__sram3__DOT__sram_36);
+    VL_CONCAT_WWW(3712,3584,128, __Vtemp1150, __Vtemp1149, vlSelf->riscv_soc__DOT__sram3__DOT__sram_35);
+    VL_CONCAT_WWW(3840,3712,128, __Vtemp1151, __Vtemp1150, vlSelf->riscv_soc__DOT__sram3__DOT__sram_34);
+    VL_CONCAT_WWW(3968,3840,128, __Vtemp1152, __Vtemp1151, vlSelf->riscv_soc__DOT__sram3__DOT__sram_33);
+    VL_CONCAT_WWW(4096,3968,128, __Vtemp1153, __Vtemp1152, vlSelf->riscv_soc__DOT__sram3__DOT__sram_32);
+    VL_CONCAT_WWW(4224,4096,128, __Vtemp1154, __Vtemp1153, vlSelf->riscv_soc__DOT__sram3__DOT__sram_31);
+    VL_CONCAT_WWW(4352,4224,128, __Vtemp1155, __Vtemp1154, vlSelf->riscv_soc__DOT__sram3__DOT__sram_30);
+    VL_CONCAT_WWW(4480,4352,128, __Vtemp1156, __Vtemp1155, vlSelf->riscv_soc__DOT__sram3__DOT__sram_29);
+    VL_CONCAT_WWW(4608,4480,128, __Vtemp1157, __Vtemp1156, vlSelf->riscv_soc__DOT__sram3__DOT__sram_28);
+    VL_CONCAT_WWW(4736,4608,128, __Vtemp1158, __Vtemp1157, vlSelf->riscv_soc__DOT__sram3__DOT__sram_27);
+    VL_CONCAT_WWW(4864,4736,128, __Vtemp1159, __Vtemp1158, vlSelf->riscv_soc__DOT__sram3__DOT__sram_26);
+    VL_CONCAT_WWW(4992,4864,128, __Vtemp1160, __Vtemp1159, vlSelf->riscv_soc__DOT__sram3__DOT__sram_25);
+    VL_CONCAT_WWW(5120,4992,128, __Vtemp1161, __Vtemp1160, vlSelf->riscv_soc__DOT__sram3__DOT__sram_24);
+    VL_CONCAT_WWW(5248,5120,128, __Vtemp1162, __Vtemp1161, vlSelf->riscv_soc__DOT__sram3__DOT__sram_23);
+    VL_CONCAT_WWW(5376,5248,128, __Vtemp1163, __Vtemp1162, vlSelf->riscv_soc__DOT__sram3__DOT__sram_22);
+    VL_CONCAT_WWW(5504,5376,128, __Vtemp1164, __Vtemp1163, vlSelf->riscv_soc__DOT__sram3__DOT__sram_21);
+    VL_CONCAT_WWW(5632,5504,128, __Vtemp1165, __Vtemp1164, vlSelf->riscv_soc__DOT__sram3__DOT__sram_20);
+    VL_CONCAT_WWW(5760,5632,128, __Vtemp1166, __Vtemp1165, vlSelf->riscv_soc__DOT__sram3__DOT__sram_19);
+    VL_CONCAT_WWW(5888,5760,128, __Vtemp1167, __Vtemp1166, vlSelf->riscv_soc__DOT__sram3__DOT__sram_18);
+    VL_CONCAT_WWW(6016,5888,128, __Vtemp1168, __Vtemp1167, vlSelf->riscv_soc__DOT__sram3__DOT__sram_17);
+    VL_CONCAT_WWW(6144,6016,128, __Vtemp1169, __Vtemp1168, vlSelf->riscv_soc__DOT__sram3__DOT__sram_16);
+    VL_CONCAT_WWW(6272,6144,128, __Vtemp1170, __Vtemp1169, vlSelf->riscv_soc__DOT__sram3__DOT__sram_15);
+    VL_CONCAT_WWW(6400,6272,128, __Vtemp1171, __Vtemp1170, vlSelf->riscv_soc__DOT__sram3__DOT__sram_14);
+    VL_CONCAT_WWW(6528,6400,128, __Vtemp1172, __Vtemp1171, vlSelf->riscv_soc__DOT__sram3__DOT__sram_13);
+    VL_CONCAT_WWW(6656,6528,128, __Vtemp1173, __Vtemp1172, vlSelf->riscv_soc__DOT__sram3__DOT__sram_12);
+    VL_CONCAT_WWW(6784,6656,128, __Vtemp1174, __Vtemp1173, vlSelf->riscv_soc__DOT__sram3__DOT__sram_11);
+    VL_CONCAT_WWW(6912,6784,128, __Vtemp1175, __Vtemp1174, vlSelf->riscv_soc__DOT__sram3__DOT__sram_10);
+    VL_CONCAT_WWW(7040,6912,128, __Vtemp1176, __Vtemp1175, vlSelf->riscv_soc__DOT__sram3__DOT__sram_9);
+    VL_CONCAT_WWW(7168,7040,128, __Vtemp1177, __Vtemp1176, vlSelf->riscv_soc__DOT__sram3__DOT__sram_8);
+    VL_CONCAT_WWW(7296,7168,128, __Vtemp1178, __Vtemp1177, vlSelf->riscv_soc__DOT__sram3__DOT__sram_7);
+    VL_CONCAT_WWW(7424,7296,128, __Vtemp1179, __Vtemp1178, vlSelf->riscv_soc__DOT__sram3__DOT__sram_6);
+    VL_CONCAT_WWW(7552,7424,128, __Vtemp1180, __Vtemp1179, vlSelf->riscv_soc__DOT__sram3__DOT__sram_5);
+    VL_CONCAT_WWW(7680,7552,128, __Vtemp1181, __Vtemp1180, vlSelf->riscv_soc__DOT__sram3__DOT__sram_4);
+    VL_CONCAT_WWW(7808,7680,128, __Vtemp1182, __Vtemp1181, vlSelf->riscv_soc__DOT__sram3__DOT__sram_3);
+    VL_CONCAT_WWW(7936,7808,128, __Vtemp1183, __Vtemp1182, vlSelf->riscv_soc__DOT__sram3__DOT__sram_2);
+    VL_CONCAT_WWW(8064,7936,128, __Vtemp1184, __Vtemp1183, vlSelf->riscv_soc__DOT__sram3__DOT__sram_1);
+    VL_CONCAT_WWW(8192,8064,128, __Vtemp1185, __Vtemp1184, vlSelf->riscv_soc__DOT__sram3__DOT__sram_0);
     vlSelf->riscv_soc__DOT__sram3__DOT___GEN_1[0U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
-                             << 7U))) ? 0U : (__Vtemp1178[
+                             << 7U))) ? 0U : (__Vtemp1185[
                                               ((IData)(1U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
@@ -1912,13 +1945,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                       << 7U))))) 
-           | (__Vtemp1178[(0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
+           | (__Vtemp1185[(0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                     << 2U))] >> (0x1fU 
                                                  & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                     << 7U))));
     vlSelf->riscv_soc__DOT__sram3__DOT___GEN_1[1U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
-                             << 7U))) ? 0U : (__Vtemp1178[
+                             << 7U))) ? 0U : (__Vtemp1185[
                                               ((IData)(2U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
@@ -1928,13 +1961,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                       << 7U))))) 
-           | (__Vtemp1178[((IData)(1U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
+           | (__Vtemp1185[((IData)(1U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                            << 7U))));
     vlSelf->riscv_soc__DOT__sram3__DOT___GEN_1[2U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
-                             << 7U))) ? 0U : (__Vtemp1178[
+                             << 7U))) ? 0U : (__Vtemp1185[
                                               ((IData)(3U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
@@ -1944,13 +1977,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                       << 7U))))) 
-           | (__Vtemp1178[((IData)(2U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
+           | (__Vtemp1185[((IData)(2U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                            << 7U))));
     vlSelf->riscv_soc__DOT__sram3__DOT___GEN_1[3U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
-                             << 7U))) ? 0U : (__Vtemp1178[
+                             << 7U))) ? 0U : (__Vtemp1185[
                                               ((IData)(4U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
@@ -1960,7 +1993,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                       << 7U))))) 
-           | (__Vtemp1178[((IData)(3U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
+           | (__Vtemp1185[((IData)(3U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__sram_addr) 
                            << 7U))));
@@ -2015,9 +2048,9 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
         vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vcellinp__cache_stage1__io_sram_sram_data_0[3U] 
             = vlSelf->riscv_soc__DOT__sram0__DOT__Q[3U];
     }
-    VL_EXTEND_WQ(128,54, __Vtemp1181, (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_cpu_addr 
+    VL_EXTEND_WQ(128,54, __Vtemp1188, (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_cpu_addr 
                                        >> 0xaU));
-    VL_EXTEND_WQ(128,54, __Vtemp1182, (0x3fffffffffffffULL 
+    VL_EXTEND_WQ(128,54, __Vtemp1189, (0x3fffffffffffffULL 
                                        & (((QData)((IData)(
                                                            vlSelf->riscv_soc__DOT__sram1__DOT__Q[1U])) 
                                            << 0x20U) 
@@ -2028,16 +2061,16 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
             >> 0xaU) == (0x3fffffffffffffULL & (((QData)((IData)(
                                                                  ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass0_val)
                                                                    ? 
-                                                                  __Vtemp1181[1U]
+                                                                  __Vtemp1188[1U]
                                                                    : 
-                                                                  __Vtemp1182[1U]))) 
+                                                                  __Vtemp1189[1U]))) 
                                                  << 0x20U) 
                                                 | (QData)((IData)(
                                                                   ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass0_val)
                                                                     ? 
-                                                                   __Vtemp1181[0U]
+                                                                   __Vtemp1188[0U]
                                                                     : 
-                                                                   __Vtemp1182[0U]))))));
+                                                                   __Vtemp1189[0U]))))));
     if (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass1_val) {
         vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vcellinp__cache_stage1__io_sram_sram_data_1[0U] 
             = vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_cache_wdata[0U];
@@ -2057,9 +2090,9 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
         vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT____Vcellinp__cache_stage1__io_sram_sram_data_1[3U] 
             = vlSelf->riscv_soc__DOT__sram2__DOT__Q[3U];
     }
-    VL_EXTEND_WQ(128,54, __Vtemp1185, (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_cpu_addr 
+    VL_EXTEND_WQ(128,54, __Vtemp1192, (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_cpu_addr 
                                        >> 0xaU));
-    VL_EXTEND_WQ(128,54, __Vtemp1186, (0x3fffffffffffffULL 
+    VL_EXTEND_WQ(128,54, __Vtemp1193, (0x3fffffffffffffULL 
                                        & (((QData)((IData)(
                                                            vlSelf->riscv_soc__DOT__sram3__DOT__Q[1U])) 
                                            << 0x20U) 
@@ -2070,16 +2103,16 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
             >> 0xaU) == (0x3fffffffffffffULL & (((QData)((IData)(
                                                                  ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass1_val)
                                                                    ? 
-                                                                  __Vtemp1185[1U]
+                                                                  __Vtemp1192[1U]
                                                                    : 
-                                                                  __Vtemp1186[1U]))) 
+                                                                  __Vtemp1193[1U]))) 
                                                  << 0x20U) 
                                                 | (QData)((IData)(
                                                                   ((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass1_val)
                                                                     ? 
-                                                                   __Vtemp1185[0U]
+                                                                   __Vtemp1192[0U]
                                                                     : 
-                                                                   __Vtemp1186[0U]))))));
+                                                                   __Vtemp1193[0U]))))));
     vlSelf->riscv_soc__DOT__core__DOT___cross_bar_1_io_DCache_valid 
         = ((0U != (vlSelf->riscv_soc__DOT__core__DOT___execute_io_bus_bits_addr 
                    >> 0x1fU)) & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT___io_bus_valid_T));
@@ -2091,37 +2124,37 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT__core__DOT__cross_bar_1__DOT__not_clint 
         = ((0x2000000U > (0x7fffffffU & (IData)(vlSelf->riscv_soc__DOT__core__DOT___execute_io_bus_bits_addr))) 
            | (0x200ffffU < (0x7fffffffU & (IData)(vlSelf->riscv_soc__DOT__core__DOT___execute_io_bus_bits_addr))));
-    VL_EXTEND_WQ(127,64, __Vtemp1194, riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1);
-    VL_SHIFTL_WWI(127,127,6, __Vtemp1195, __Vtemp1194, (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__shift_rs2_data));
-    __Vtemp1198[0U] = (IData)((((QData)((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[1U])) 
+    VL_EXTEND_WQ(127,64, __Vtemp1201, riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1);
+    VL_SHIFTL_WWI(127,127,6, __Vtemp1202, __Vtemp1201, (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__shift_rs2_data));
+    __Vtemp1205[0U] = (IData)((((QData)((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[1U])) 
                                 << 0x20U) | (QData)((IData)(
                                                             riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[0U]))));
-    __Vtemp1198[1U] = (IData)(((((QData)((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[1U])) 
+    __Vtemp1205[1U] = (IData)(((((QData)((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[1U])) 
                                  << 0x20U) | (QData)((IData)(
                                                              riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[0U]))) 
                                >> 0x20U));
-    __Vtemp1198[2U] = (IData)((((QData)((IData)(__Vtemp1195[1U])) 
+    __Vtemp1205[2U] = (IData)((((QData)((IData)(__Vtemp1202[1U])) 
                                 << 0x20U) | (QData)((IData)(
-                                                            __Vtemp1195[0U]))));
-    __Vtemp1198[3U] = (IData)(((((QData)((IData)(__Vtemp1195[1U])) 
+                                                            __Vtemp1202[0U]))));
+    __Vtemp1205[3U] = (IData)(((((QData)((IData)(__Vtemp1202[1U])) 
                                  << 0x20U) | (QData)((IData)(
-                                                             __Vtemp1195[0U]))) 
+                                                             __Vtemp1202[0U]))) 
                                >> 0x20U));
-    __Vtemp1198[4U] = (IData)((QData)((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)));
-    __Vtemp1198[5U] = (IData)(((QData)((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)) 
+    __Vtemp1205[4U] = (IData)((QData)((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)));
+    __Vtemp1205[5U] = (IData)(((QData)((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)) 
                                >> 0x20U));
-    __Vtemp1198[6U] = (IData)((QData)((IData)((1U & 
+    __Vtemp1205[6U] = (IData)((QData)((IData)((1U & 
                                                (~ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])))));
-    __Vtemp1198[7U] = (IData)(((QData)((IData)((1U 
+    __Vtemp1205[7U] = (IData)(((QData)((IData)((1U 
                                                 & (~ 
                                                    riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])))) 
                                >> 0x20U));
-    __Vtemp1198[8U] = (IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1 
+    __Vtemp1205[8U] = (IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1 
                                ^ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs2_data));
-    __Vtemp1198[9U] = (IData)(((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1 
+    __Vtemp1205[9U] = (IData)(((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1 
                                 ^ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs2_data) 
                                >> 0x20U));
-    __Vtemp1198[0xaU] = (IData)(((1U == (3U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
+    __Vtemp1205[0xaU] = (IData)(((1U == (3U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                >> 5U)))
                                   ? VL_SHIFTRS_QQQ(64,64,64, riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1, (QData)((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__shift_rs2_data)))
                                   : VL_SHIFTR_QQQ(64,64,64, 
@@ -2129,7 +2162,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                     & (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType))
                                                     ? (QData)((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1))
                                                     : vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__rs1_data), (QData)((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__shift_rs2_data)))));
-    __Vtemp1198[0xbU] = (IData)((((1U == (3U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
+    __Vtemp1205[0xbU] = (IData)((((1U == (3U & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                 >> 5U)))
                                    ? VL_SHIFTRS_QQQ(64,64,64, riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1, (QData)((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__shift_rs2_data)))
                                    : VL_SHIFTR_QQQ(64,64,64, 
@@ -2138,115 +2171,115 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                      ? (QData)((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1))
                                                      : vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__rs1_data), (QData)((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__shift_rs2_data)))) 
                                  >> 0x20U));
-    __Vtemp1198[0xcU] = (IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1 
+    __Vtemp1205[0xcU] = (IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1 
                                  | riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs2_data));
-    __Vtemp1198[0xdU] = (IData)(((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1 
+    __Vtemp1205[0xdU] = (IData)(((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1 
                                   | riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs2_data) 
                                  >> 0x20U));
-    __Vtemp1198[0xeU] = (IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1 
+    __Vtemp1205[0xeU] = (IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1 
                                  & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs2_data));
-    __Vtemp1198[0xfU] = (IData)(((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1 
+    __Vtemp1205[0xfU] = (IData)(((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__op_data1 
                                   & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__rs2_data) 
                                  >> 0x20U));
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__dst_data 
         = ((1U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_opType))
             ? (4ULL + vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc)
-            : (((QData)((IData)(__Vtemp1198[(((IData)(0x3fU) 
+            : (((QData)((IData)(__Vtemp1205[(((IData)(0x3fU) 
                                               + (0x1c0U 
                                                  & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                     << 4U))) 
                                              >> 5U)])) 
-                << 0x20U) | (QData)((IData)(__Vtemp1198[
+                << 0x20U) | (QData)((IData)(__Vtemp1205[
                                             (0xeU & 
                                              ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                               >> 1U))]))));
-    VL_EXTEND_WQ(65,64, __Vtemp1201, (4ULL + vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc));
-    VL_EXTEND_WQ(65,64, __Vtemp1204, (4ULL + vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc));
     VL_EXTEND_WQ(65,64, __Vtemp1208, (4ULL + vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc));
-    VL_EXTEND_WQ(65,64, __Vtemp1212, (4ULL + vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc));
+    VL_EXTEND_WQ(65,64, __Vtemp1211, (4ULL + vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc));
+    VL_EXTEND_WQ(65,64, __Vtemp1215, (4ULL + vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc));
     VL_EXTEND_WQ(65,64, __Vtemp1219, (4ULL + vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc));
-    VL_EXTEND_WQ(65,64, __Vtemp1223, (4ULL + vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc));
+    VL_EXTEND_WQ(65,64, __Vtemp1226, (4ULL + vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc));
+    VL_EXTEND_WQ(65,64, __Vtemp1230, (4ULL + vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_pc));
     if (riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__is_eq) {
-        __Vtemp1225[0U] = (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1);
-        __Vtemp1225[1U] = (IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
+        __Vtemp1232[0U] = (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1);
+        __Vtemp1232[1U] = (IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                    >> 0x20U));
     } else {
-        __Vtemp1225[0U] = __Vtemp1223[0U];
-        __Vtemp1225[1U] = __Vtemp1223[1U];
+        __Vtemp1232[0U] = __Vtemp1230[0U];
+        __Vtemp1232[1U] = __Vtemp1230[1U];
     }
-    __Vtemp1225[2U] = ((((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__is_eq)
-                          ? __Vtemp1219[0U] : (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1)) 
+    __Vtemp1232[2U] = ((((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__is_eq)
+                          ? __Vtemp1226[0U] : (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1)) 
                         << 1U) | ((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__is_eq)
-                                   ? 1U : __Vtemp1223[2U]));
-    __Vtemp1225[3U] = ((((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__is_eq)
-                          ? __Vtemp1219[0U] : (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1)) 
+                                   ? 1U : __Vtemp1230[2U]));
+    __Vtemp1232[3U] = ((((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__is_eq)
+                          ? __Vtemp1226[0U] : (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1)) 
                         >> 0x1fU) | (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__is_eq)
-                                       ? __Vtemp1219[1U]
+                                       ? __Vtemp1226[1U]
                                        : (IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                                   >> 0x20U))) 
                                      << 1U));
-    __Vtemp1225[4U] = ((((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__is_eq)
-                          ? __Vtemp1219[1U] : (IData)(
+    __Vtemp1232[4U] = ((((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__is_eq)
+                          ? __Vtemp1226[1U] : (IData)(
                                                       (riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                                        >> 0x20U))) 
                         >> 0x1fU) | (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__is_eq)
-                                       ? __Vtemp1219[2U]
+                                       ? __Vtemp1226[2U]
                                        : 1U) << 1U));
-    VL_EXTEND_WW(131,130, __Vtemp1226, __Vtemp1225);
-    __Vtemp1228[0U] = __Vtemp1226[0U];
-    __Vtemp1228[1U] = __Vtemp1226[1U];
-    __Vtemp1228[2U] = __Vtemp1226[2U];
-    __Vtemp1228[3U] = __Vtemp1226[3U];
-    __Vtemp1228[4U] = (((IData)((0x8000000000000000ULL 
+    VL_EXTEND_WW(131,130, __Vtemp1233, __Vtemp1232);
+    __Vtemp1235[0U] = __Vtemp1233[0U];
+    __Vtemp1235[1U] = __Vtemp1233[1U];
+    __Vtemp1235[2U] = __Vtemp1233[2U];
+    __Vtemp1235[3U] = __Vtemp1233[3U];
+    __Vtemp1235[4U] = (((IData)((0x8000000000000000ULL 
                                  | (riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                     >> 1U))) << 3U) 
-                       | __Vtemp1226[4U]);
-    __Vtemp1228[5U] = (((IData)((0x8000000000000000ULL 
+                       | __Vtemp1233[4U]);
+    __Vtemp1235[5U] = (((IData)((0x8000000000000000ULL 
                                  | (riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                     >> 1U))) >> 0x1dU) 
                        | ((IData)(((0x8000000000000000ULL 
                                     | (riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                        >> 1U)) >> 0x20U)) 
                           << 3U));
-    __Vtemp1228[6U] = (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1) 
+    __Vtemp1235[6U] = (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1) 
                         << 3U) | ((IData)(((0x8000000000000000ULL 
                                             | (riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                                >> 1U)) 
                                            >> 0x20U)) 
                                   >> 0x1dU));
-    __Vtemp1228[7U] = (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1) 
+    __Vtemp1235[7U] = (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1) 
                         >> 0x1dU) | ((IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                               >> 0x20U)) 
                                      << 3U));
-    __Vtemp1228[8U] = (8U | (((IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
+    __Vtemp1235[8U] = (8U | (((IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                        >> 0x20U)) >> 0x1dU) 
                              | (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
                                   ? (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1)
-                                  : __Vtemp1212[0U]) 
+                                  : __Vtemp1219[0U]) 
                                 << 4U)));
-    __Vtemp1228[9U] = ((7U & (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
+    __Vtemp1235[9U] = ((7U & (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
                                 ? (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1)
-                                : __Vtemp1212[0U]) 
+                                : __Vtemp1219[0U]) 
                               >> 0x1cU)) | ((8U & (
                                                    ((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
                                                      ? (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1)
                                                      : 
-                                                    __Vtemp1212[0U]) 
+                                                    __Vtemp1219[0U]) 
                                                    >> 0x1cU)) 
                                             | (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
                                                  ? (IData)(
                                                            (riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                                             >> 0x20U))
                                                  : 
-                                                __Vtemp1212[1U]) 
+                                                __Vtemp1219[1U]) 
                                                << 4U)));
-    __Vtemp1228[0xaU] = ((7U & (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
+    __Vtemp1235[0xaU] = ((7U & (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
                                   ? (IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                              >> 0x20U))
-                                  : __Vtemp1212[1U]) 
+                                  : __Vtemp1219[1U]) 
                                 >> 0x1cU)) | ((((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
                                                  ? 
-                                                __Vtemp1208[0U]
+                                                __Vtemp1215[0U]
                                                  : (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1)) 
                                                << 5U) 
                                               | ((8U 
@@ -2255,83 +2288,83 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                                  (riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                                                   >> 0x20U))
                                                        : 
-                                                      __Vtemp1212[1U]) 
+                                                      __Vtemp1219[1U]) 
                                                      >> 0x1cU)) 
                                                  | (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
                                                       ? 1U
                                                       : 
-                                                     __Vtemp1212[2U]) 
+                                                     __Vtemp1219[2U]) 
                                                     << 4U))));
-    __Vtemp1228[0xbU] = ((7U & ((((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
-                                   ? __Vtemp1208[0U]
+    __Vtemp1235[0xbU] = ((7U & ((((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
+                                   ? __Vtemp1215[0U]
                                    : (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1)) 
                                  >> 0x1bU) | (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
                                                 ? 1U
-                                                : __Vtemp1212[2U]) 
+                                                : __Vtemp1219[2U]) 
                                               >> 0x1cU))) 
                          | ((0x18U & (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
-                                        ? __Vtemp1208[0U]
+                                        ? __Vtemp1215[0U]
                                         : (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1)) 
                                       >> 0x1bU)) | 
                             (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
-                               ? __Vtemp1208[1U] : (IData)(
+                               ? __Vtemp1215[1U] : (IData)(
                                                            (riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                                             >> 0x20U))) 
                              << 5U)));
-    __Vtemp1228[0xcU] = ((7U & (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
-                                  ? __Vtemp1208[1U]
+    __Vtemp1235[0xcU] = ((7U & (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
+                                  ? __Vtemp1215[1U]
                                   : (IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                              >> 0x20U))) 
                                 >> 0x1bU)) | ((((1U 
                                                  & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
                                                  ? 
-                                                __Vtemp1204[0U]
+                                                __Vtemp1211[0U]
                                                  : (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1)) 
                                                << 6U) 
                                               | ((0x18U 
                                                   & (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
                                                        ? 
-                                                      __Vtemp1208[1U]
+                                                      __Vtemp1215[1U]
                                                        : (IData)(
                                                                  (riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                                                   >> 0x20U))) 
                                                      >> 0x1bU)) 
                                                  | (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
                                                       ? 
-                                                     __Vtemp1208[2U]
+                                                     __Vtemp1215[2U]
                                                       : 1U) 
                                                     << 5U))));
-    __Vtemp1228[0xdU] = ((7U & ((((1U & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
-                                   ? __Vtemp1204[0U]
+    __Vtemp1235[0xdU] = ((7U & ((((1U & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
+                                   ? __Vtemp1211[0U]
                                    : (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1)) 
                                  >> 0x1aU) | (((IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__s_rs1_l_rs2)
-                                                ? __Vtemp1208[2U]
+                                                ? __Vtemp1215[2U]
                                                 : 1U) 
                                               >> 0x1bU))) 
                          | ((0x38U & (((1U & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
-                                        ? __Vtemp1204[0U]
+                                        ? __Vtemp1211[0U]
                                         : (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1)) 
                                       >> 0x1aU)) | 
                             (((1U & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
-                               ? __Vtemp1204[1U] : (IData)(
+                               ? __Vtemp1211[1U] : (IData)(
                                                            (riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                                             >> 0x20U))) 
                              << 6U)));
-    __Vtemp1228[0xeU] = ((7U & (((1U & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
-                                  ? __Vtemp1204[1U]
+    __Vtemp1235[0xeU] = ((7U & (((1U & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
+                                  ? __Vtemp1211[1U]
                                   : (IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                              >> 0x20U))) 
                                 >> 0x1aU)) | ((((1U 
                                                  & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
                                                  ? (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1)
                                                  : 
-                                                __Vtemp1201[0U]) 
+                                                __Vtemp1208[0U]) 
                                                << 7U) 
                                               | ((0x38U 
                                                   & (((1U 
                                                        & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
                                                        ? 
-                                                      __Vtemp1204[1U]
+                                                      __Vtemp1211[1U]
                                                        : (IData)(
                                                                  (riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                                                   >> 0x20U))) 
@@ -2339,29 +2372,29 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                  | (((1U 
                                                       & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
                                                       ? 
-                                                     __Vtemp1204[2U]
+                                                     __Vtemp1211[2U]
                                                       : 1U) 
                                                     << 6U))));
-    __Vtemp1228[0xfU] = ((7U & ((((1U & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
+    __Vtemp1235[0xfU] = ((7U & ((((1U & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
                                    ? (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1)
-                                   : __Vtemp1201[0U]) 
+                                   : __Vtemp1208[0U]) 
                                  >> 0x19U) | (((1U 
                                                 & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
-                                                ? __Vtemp1204[2U]
+                                                ? __Vtemp1211[2U]
                                                 : 1U) 
                                               >> 0x1aU))) 
                          | ((0x78U & (((1U & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
                                         ? (IData)(riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1)
-                                        : __Vtemp1201[0U]) 
+                                        : __Vtemp1208[0U]) 
                                       >> 0x19U)) | 
                             (((1U & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
                                ? (IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                           >> 0x20U))
-                               : __Vtemp1201[1U]) << 7U)));
-    __Vtemp1228[0x10U] = ((7U & (((1U & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
+                               : __Vtemp1208[1U]) << 7U)));
+    __Vtemp1235[0x10U] = ((7U & (((1U & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
                                    ? (IData)((riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                               >> 0x20U))
-                                   : __Vtemp1201[1U]) 
+                                   : __Vtemp1208[1U]) 
                                  >> 0x19U)) | ((0x78U 
                                                 & (((1U 
                                                      & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
@@ -2369,22 +2402,22 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                                (riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___add_pc_T_1 
                                                                 >> 0x20U))
                                                      : 
-                                                    __Vtemp1201[1U]) 
+                                                    __Vtemp1208[1U]) 
                                                    >> 0x19U)) 
                                                | (((1U 
                                                     & riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN[2U])
                                                     ? 1U
                                                     : 
-                                                   __Vtemp1201[2U]) 
+                                                   __Vtemp1208[2U]) 
                                                   << 7U)));
     if ((0x207U >= (0x3ffU & ((IData)(0x41U) * (7U 
                                                 & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                    >> 2U)))))) {
-        __Vtemp1232[0U] = (((0U == (0x1fU & ((IData)(0x41U) 
+        __Vtemp1239[0U] = (((0U == (0x1fU & ((IData)(0x41U) 
                                              * (7U 
                                                 & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                    >> 2U)))))
-                             ? 0U : (__Vtemp1228[((IData)(1U) 
+                             ? 0U : (__Vtemp1235[((IData)(1U) 
                                                   + 
                                                   (0x1fU 
                                                    & (((IData)(0x41U) 
@@ -2399,7 +2432,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                              * (7U 
                                                 & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                    >> 2U))))))) 
-                           | (__Vtemp1228[(0x1fU & 
+                           | (__Vtemp1235[(0x1fU & 
                                            (((IData)(0x41U) 
                                              * (7U 
                                                 & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
@@ -2409,11 +2442,11 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                            * (7U & 
                                               ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                >> 2U))))));
-        __Vtemp1232[1U] = (((0U == (0x1fU & ((IData)(0x41U) 
+        __Vtemp1239[1U] = (((0U == (0x1fU & ((IData)(0x41U) 
                                              * (7U 
                                                 & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                    >> 2U)))))
-                             ? 0U : (__Vtemp1228[((IData)(2U) 
+                             ? 0U : (__Vtemp1235[((IData)(2U) 
                                                   + 
                                                   (0x1fU 
                                                    & (((IData)(0x41U) 
@@ -2428,7 +2461,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                              * (7U 
                                                 & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                    >> 2U))))))) 
-                           | (__Vtemp1228[((IData)(1U) 
+                           | (__Vtemp1235[((IData)(1U) 
                                            + (0x1fU 
                                               & (((IData)(0x41U) 
                                                   * 
@@ -2440,11 +2473,11 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                            * (7U & 
                                               ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                >> 2U))))));
-        __Vtemp1232[2U] = (((0U == (0x1fU & ((IData)(0x41U) 
+        __Vtemp1239[2U] = (((0U == (0x1fU & ((IData)(0x41U) 
                                              * (7U 
                                                 & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                    >> 2U)))))
-                             ? 0U : (__Vtemp1228[((IData)(3U) 
+                             ? 0U : (__Vtemp1235[((IData)(3U) 
                                                   + 
                                                   (0x1fU 
                                                    & (((IData)(0x41U) 
@@ -2459,7 +2492,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                              * (7U 
                                                 & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                    >> 2U))))))) 
-                           | (__Vtemp1228[((IData)(2U) 
+                           | (__Vtemp1235[((IData)(2U) 
                                            + (0x1fU 
                                               & (((IData)(0x41U) 
                                                   * 
@@ -2472,137 +2505,137 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                               ((IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_exuType) 
                                                >> 2U))))));
     } else {
-        __Vtemp1232[0U] = 0U;
-        __Vtemp1232[1U] = 0U;
-        __Vtemp1232[2U] = 0U;
+        __Vtemp1239[0U] = 0U;
+        __Vtemp1239[1U] = 0U;
+        __Vtemp1239[2U] = 0U;
     }
     if ((1U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_opType))) {
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN_4[0U] 
-            = __Vtemp1232[0U];
+            = __Vtemp1239[0U];
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN_4[1U] 
-            = __Vtemp1232[1U];
+            = __Vtemp1239[1U];
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN_4[2U] 
-            = (1U & __Vtemp1232[2U]);
+            = (1U & __Vtemp1239[2U]);
     } else {
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN_4[0U] = 0U;
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN_4[1U] = 0U;
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN_4[2U] = 0U;
     }
-    __Vtemp1251[0U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_48[0U];
-    __Vtemp1251[1U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_48[1U];
-    __Vtemp1251[2U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_48[2U];
-    __Vtemp1251[3U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_48[3U];
-    __Vtemp1251[4U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_49[0U];
-    __Vtemp1251[5U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_49[1U];
-    __Vtemp1251[6U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_49[2U];
-    __Vtemp1251[7U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_49[3U];
-    __Vtemp1251[8U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_50[0U];
-    __Vtemp1251[9U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_50[1U];
-    __Vtemp1251[0xaU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_50[2U];
-    __Vtemp1251[0xbU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_50[3U];
-    __Vtemp1251[0xcU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_51[0U];
-    __Vtemp1251[0xdU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_51[1U];
-    __Vtemp1251[0xeU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_51[2U];
-    __Vtemp1251[0xfU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_51[3U];
-    __Vtemp1251[0x10U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_52[0U];
-    __Vtemp1251[0x11U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_52[1U];
-    __Vtemp1251[0x12U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_52[2U];
-    __Vtemp1251[0x13U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_52[3U];
-    __Vtemp1251[0x14U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_53[0U];
-    __Vtemp1251[0x15U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_53[1U];
-    __Vtemp1251[0x16U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_53[2U];
-    __Vtemp1251[0x17U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_53[3U];
-    __Vtemp1251[0x18U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_54[0U];
-    __Vtemp1251[0x19U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_54[1U];
-    __Vtemp1251[0x1aU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_54[2U];
-    __Vtemp1251[0x1bU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_54[3U];
-    __Vtemp1251[0x1cU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_55[0U];
-    __Vtemp1251[0x1dU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_55[1U];
-    __Vtemp1251[0x1eU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_55[2U];
-    __Vtemp1251[0x1fU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_55[3U];
-    __Vtemp1251[0x20U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_56[0U];
-    __Vtemp1251[0x21U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_56[1U];
-    __Vtemp1251[0x22U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_56[2U];
-    __Vtemp1251[0x23U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_56[3U];
-    __Vtemp1251[0x24U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_57[0U];
-    __Vtemp1251[0x25U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_57[1U];
-    __Vtemp1251[0x26U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_57[2U];
-    __Vtemp1251[0x27U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_57[3U];
-    __Vtemp1251[0x28U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_58[0U];
-    __Vtemp1251[0x29U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_58[1U];
-    __Vtemp1251[0x2aU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_58[2U];
-    __Vtemp1251[0x2bU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_58[3U];
-    __Vtemp1251[0x2cU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_59[0U];
-    __Vtemp1251[0x2dU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_59[1U];
-    __Vtemp1251[0x2eU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_59[2U];
-    __Vtemp1251[0x2fU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_59[3U];
-    __Vtemp1251[0x30U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_60[0U];
-    __Vtemp1251[0x31U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_60[1U];
-    __Vtemp1251[0x32U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_60[2U];
-    __Vtemp1251[0x33U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_60[3U];
-    __Vtemp1251[0x34U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_61[0U];
-    __Vtemp1251[0x35U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_61[1U];
-    __Vtemp1251[0x36U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_61[2U];
-    __Vtemp1251[0x37U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_61[3U];
-    __Vtemp1251[0x38U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_62[0U];
-    __Vtemp1251[0x39U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_62[1U];
-    __Vtemp1251[0x3aU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_62[2U];
-    __Vtemp1251[0x3bU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_62[3U];
-    __Vtemp1251[0x3cU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_63[0U];
-    __Vtemp1251[0x3dU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_63[1U];
-    __Vtemp1251[0x3eU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_63[2U];
-    __Vtemp1251[0x3fU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_63[3U];
-    VL_CONCAT_WWW(2176,2048,128, __Vtemp1252, __Vtemp1251, vlSelf->riscv_soc__DOT__sram4__DOT__sram_47);
-    VL_CONCAT_WWW(2304,2176,128, __Vtemp1253, __Vtemp1252, vlSelf->riscv_soc__DOT__sram4__DOT__sram_46);
-    VL_CONCAT_WWW(2432,2304,128, __Vtemp1254, __Vtemp1253, vlSelf->riscv_soc__DOT__sram4__DOT__sram_45);
-    VL_CONCAT_WWW(2560,2432,128, __Vtemp1255, __Vtemp1254, vlSelf->riscv_soc__DOT__sram4__DOT__sram_44);
-    VL_CONCAT_WWW(2688,2560,128, __Vtemp1256, __Vtemp1255, vlSelf->riscv_soc__DOT__sram4__DOT__sram_43);
-    VL_CONCAT_WWW(2816,2688,128, __Vtemp1257, __Vtemp1256, vlSelf->riscv_soc__DOT__sram4__DOT__sram_42);
-    VL_CONCAT_WWW(2944,2816,128, __Vtemp1258, __Vtemp1257, vlSelf->riscv_soc__DOT__sram4__DOT__sram_41);
-    VL_CONCAT_WWW(3072,2944,128, __Vtemp1259, __Vtemp1258, vlSelf->riscv_soc__DOT__sram4__DOT__sram_40);
-    VL_CONCAT_WWW(3200,3072,128, __Vtemp1260, __Vtemp1259, vlSelf->riscv_soc__DOT__sram4__DOT__sram_39);
-    VL_CONCAT_WWW(3328,3200,128, __Vtemp1261, __Vtemp1260, vlSelf->riscv_soc__DOT__sram4__DOT__sram_38);
-    VL_CONCAT_WWW(3456,3328,128, __Vtemp1262, __Vtemp1261, vlSelf->riscv_soc__DOT__sram4__DOT__sram_37);
-    VL_CONCAT_WWW(3584,3456,128, __Vtemp1263, __Vtemp1262, vlSelf->riscv_soc__DOT__sram4__DOT__sram_36);
-    VL_CONCAT_WWW(3712,3584,128, __Vtemp1264, __Vtemp1263, vlSelf->riscv_soc__DOT__sram4__DOT__sram_35);
-    VL_CONCAT_WWW(3840,3712,128, __Vtemp1265, __Vtemp1264, vlSelf->riscv_soc__DOT__sram4__DOT__sram_34);
-    VL_CONCAT_WWW(3968,3840,128, __Vtemp1266, __Vtemp1265, vlSelf->riscv_soc__DOT__sram4__DOT__sram_33);
-    VL_CONCAT_WWW(4096,3968,128, __Vtemp1267, __Vtemp1266, vlSelf->riscv_soc__DOT__sram4__DOT__sram_32);
-    VL_CONCAT_WWW(4224,4096,128, __Vtemp1268, __Vtemp1267, vlSelf->riscv_soc__DOT__sram4__DOT__sram_31);
-    VL_CONCAT_WWW(4352,4224,128, __Vtemp1269, __Vtemp1268, vlSelf->riscv_soc__DOT__sram4__DOT__sram_30);
-    VL_CONCAT_WWW(4480,4352,128, __Vtemp1270, __Vtemp1269, vlSelf->riscv_soc__DOT__sram4__DOT__sram_29);
-    VL_CONCAT_WWW(4608,4480,128, __Vtemp1271, __Vtemp1270, vlSelf->riscv_soc__DOT__sram4__DOT__sram_28);
-    VL_CONCAT_WWW(4736,4608,128, __Vtemp1272, __Vtemp1271, vlSelf->riscv_soc__DOT__sram4__DOT__sram_27);
-    VL_CONCAT_WWW(4864,4736,128, __Vtemp1273, __Vtemp1272, vlSelf->riscv_soc__DOT__sram4__DOT__sram_26);
-    VL_CONCAT_WWW(4992,4864,128, __Vtemp1274, __Vtemp1273, vlSelf->riscv_soc__DOT__sram4__DOT__sram_25);
-    VL_CONCAT_WWW(5120,4992,128, __Vtemp1275, __Vtemp1274, vlSelf->riscv_soc__DOT__sram4__DOT__sram_24);
-    VL_CONCAT_WWW(5248,5120,128, __Vtemp1276, __Vtemp1275, vlSelf->riscv_soc__DOT__sram4__DOT__sram_23);
-    VL_CONCAT_WWW(5376,5248,128, __Vtemp1277, __Vtemp1276, vlSelf->riscv_soc__DOT__sram4__DOT__sram_22);
-    VL_CONCAT_WWW(5504,5376,128, __Vtemp1278, __Vtemp1277, vlSelf->riscv_soc__DOT__sram4__DOT__sram_21);
-    VL_CONCAT_WWW(5632,5504,128, __Vtemp1279, __Vtemp1278, vlSelf->riscv_soc__DOT__sram4__DOT__sram_20);
-    VL_CONCAT_WWW(5760,5632,128, __Vtemp1280, __Vtemp1279, vlSelf->riscv_soc__DOT__sram4__DOT__sram_19);
-    VL_CONCAT_WWW(5888,5760,128, __Vtemp1281, __Vtemp1280, vlSelf->riscv_soc__DOT__sram4__DOT__sram_18);
-    VL_CONCAT_WWW(6016,5888,128, __Vtemp1282, __Vtemp1281, vlSelf->riscv_soc__DOT__sram4__DOT__sram_17);
-    VL_CONCAT_WWW(6144,6016,128, __Vtemp1283, __Vtemp1282, vlSelf->riscv_soc__DOT__sram4__DOT__sram_16);
-    VL_CONCAT_WWW(6272,6144,128, __Vtemp1284, __Vtemp1283, vlSelf->riscv_soc__DOT__sram4__DOT__sram_15);
-    VL_CONCAT_WWW(6400,6272,128, __Vtemp1285, __Vtemp1284, vlSelf->riscv_soc__DOT__sram4__DOT__sram_14);
-    VL_CONCAT_WWW(6528,6400,128, __Vtemp1286, __Vtemp1285, vlSelf->riscv_soc__DOT__sram4__DOT__sram_13);
-    VL_CONCAT_WWW(6656,6528,128, __Vtemp1287, __Vtemp1286, vlSelf->riscv_soc__DOT__sram4__DOT__sram_12);
-    VL_CONCAT_WWW(6784,6656,128, __Vtemp1288, __Vtemp1287, vlSelf->riscv_soc__DOT__sram4__DOT__sram_11);
-    VL_CONCAT_WWW(6912,6784,128, __Vtemp1289, __Vtemp1288, vlSelf->riscv_soc__DOT__sram4__DOT__sram_10);
-    VL_CONCAT_WWW(7040,6912,128, __Vtemp1290, __Vtemp1289, vlSelf->riscv_soc__DOT__sram4__DOT__sram_9);
-    VL_CONCAT_WWW(7168,7040,128, __Vtemp1291, __Vtemp1290, vlSelf->riscv_soc__DOT__sram4__DOT__sram_8);
-    VL_CONCAT_WWW(7296,7168,128, __Vtemp1292, __Vtemp1291, vlSelf->riscv_soc__DOT__sram4__DOT__sram_7);
-    VL_CONCAT_WWW(7424,7296,128, __Vtemp1293, __Vtemp1292, vlSelf->riscv_soc__DOT__sram4__DOT__sram_6);
-    VL_CONCAT_WWW(7552,7424,128, __Vtemp1294, __Vtemp1293, vlSelf->riscv_soc__DOT__sram4__DOT__sram_5);
-    VL_CONCAT_WWW(7680,7552,128, __Vtemp1295, __Vtemp1294, vlSelf->riscv_soc__DOT__sram4__DOT__sram_4);
-    VL_CONCAT_WWW(7808,7680,128, __Vtemp1296, __Vtemp1295, vlSelf->riscv_soc__DOT__sram4__DOT__sram_3);
-    VL_CONCAT_WWW(7936,7808,128, __Vtemp1297, __Vtemp1296, vlSelf->riscv_soc__DOT__sram4__DOT__sram_2);
-    VL_CONCAT_WWW(8064,7936,128, __Vtemp1298, __Vtemp1297, vlSelf->riscv_soc__DOT__sram4__DOT__sram_1);
-    VL_CONCAT_WWW(8192,8064,128, __Vtemp1299, __Vtemp1298, vlSelf->riscv_soc__DOT__sram4__DOT__sram_0);
+    __Vtemp1258[0U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_48[0U];
+    __Vtemp1258[1U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_48[1U];
+    __Vtemp1258[2U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_48[2U];
+    __Vtemp1258[3U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_48[3U];
+    __Vtemp1258[4U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_49[0U];
+    __Vtemp1258[5U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_49[1U];
+    __Vtemp1258[6U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_49[2U];
+    __Vtemp1258[7U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_49[3U];
+    __Vtemp1258[8U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_50[0U];
+    __Vtemp1258[9U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_50[1U];
+    __Vtemp1258[0xaU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_50[2U];
+    __Vtemp1258[0xbU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_50[3U];
+    __Vtemp1258[0xcU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_51[0U];
+    __Vtemp1258[0xdU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_51[1U];
+    __Vtemp1258[0xeU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_51[2U];
+    __Vtemp1258[0xfU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_51[3U];
+    __Vtemp1258[0x10U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_52[0U];
+    __Vtemp1258[0x11U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_52[1U];
+    __Vtemp1258[0x12U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_52[2U];
+    __Vtemp1258[0x13U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_52[3U];
+    __Vtemp1258[0x14U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_53[0U];
+    __Vtemp1258[0x15U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_53[1U];
+    __Vtemp1258[0x16U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_53[2U];
+    __Vtemp1258[0x17U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_53[3U];
+    __Vtemp1258[0x18U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_54[0U];
+    __Vtemp1258[0x19U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_54[1U];
+    __Vtemp1258[0x1aU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_54[2U];
+    __Vtemp1258[0x1bU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_54[3U];
+    __Vtemp1258[0x1cU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_55[0U];
+    __Vtemp1258[0x1dU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_55[1U];
+    __Vtemp1258[0x1eU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_55[2U];
+    __Vtemp1258[0x1fU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_55[3U];
+    __Vtemp1258[0x20U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_56[0U];
+    __Vtemp1258[0x21U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_56[1U];
+    __Vtemp1258[0x22U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_56[2U];
+    __Vtemp1258[0x23U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_56[3U];
+    __Vtemp1258[0x24U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_57[0U];
+    __Vtemp1258[0x25U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_57[1U];
+    __Vtemp1258[0x26U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_57[2U];
+    __Vtemp1258[0x27U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_57[3U];
+    __Vtemp1258[0x28U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_58[0U];
+    __Vtemp1258[0x29U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_58[1U];
+    __Vtemp1258[0x2aU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_58[2U];
+    __Vtemp1258[0x2bU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_58[3U];
+    __Vtemp1258[0x2cU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_59[0U];
+    __Vtemp1258[0x2dU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_59[1U];
+    __Vtemp1258[0x2eU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_59[2U];
+    __Vtemp1258[0x2fU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_59[3U];
+    __Vtemp1258[0x30U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_60[0U];
+    __Vtemp1258[0x31U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_60[1U];
+    __Vtemp1258[0x32U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_60[2U];
+    __Vtemp1258[0x33U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_60[3U];
+    __Vtemp1258[0x34U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_61[0U];
+    __Vtemp1258[0x35U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_61[1U];
+    __Vtemp1258[0x36U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_61[2U];
+    __Vtemp1258[0x37U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_61[3U];
+    __Vtemp1258[0x38U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_62[0U];
+    __Vtemp1258[0x39U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_62[1U];
+    __Vtemp1258[0x3aU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_62[2U];
+    __Vtemp1258[0x3bU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_62[3U];
+    __Vtemp1258[0x3cU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_63[0U];
+    __Vtemp1258[0x3dU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_63[1U];
+    __Vtemp1258[0x3eU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_63[2U];
+    __Vtemp1258[0x3fU] = vlSelf->riscv_soc__DOT__sram4__DOT__sram_63[3U];
+    VL_CONCAT_WWW(2176,2048,128, __Vtemp1259, __Vtemp1258, vlSelf->riscv_soc__DOT__sram4__DOT__sram_47);
+    VL_CONCAT_WWW(2304,2176,128, __Vtemp1260, __Vtemp1259, vlSelf->riscv_soc__DOT__sram4__DOT__sram_46);
+    VL_CONCAT_WWW(2432,2304,128, __Vtemp1261, __Vtemp1260, vlSelf->riscv_soc__DOT__sram4__DOT__sram_45);
+    VL_CONCAT_WWW(2560,2432,128, __Vtemp1262, __Vtemp1261, vlSelf->riscv_soc__DOT__sram4__DOT__sram_44);
+    VL_CONCAT_WWW(2688,2560,128, __Vtemp1263, __Vtemp1262, vlSelf->riscv_soc__DOT__sram4__DOT__sram_43);
+    VL_CONCAT_WWW(2816,2688,128, __Vtemp1264, __Vtemp1263, vlSelf->riscv_soc__DOT__sram4__DOT__sram_42);
+    VL_CONCAT_WWW(2944,2816,128, __Vtemp1265, __Vtemp1264, vlSelf->riscv_soc__DOT__sram4__DOT__sram_41);
+    VL_CONCAT_WWW(3072,2944,128, __Vtemp1266, __Vtemp1265, vlSelf->riscv_soc__DOT__sram4__DOT__sram_40);
+    VL_CONCAT_WWW(3200,3072,128, __Vtemp1267, __Vtemp1266, vlSelf->riscv_soc__DOT__sram4__DOT__sram_39);
+    VL_CONCAT_WWW(3328,3200,128, __Vtemp1268, __Vtemp1267, vlSelf->riscv_soc__DOT__sram4__DOT__sram_38);
+    VL_CONCAT_WWW(3456,3328,128, __Vtemp1269, __Vtemp1268, vlSelf->riscv_soc__DOT__sram4__DOT__sram_37);
+    VL_CONCAT_WWW(3584,3456,128, __Vtemp1270, __Vtemp1269, vlSelf->riscv_soc__DOT__sram4__DOT__sram_36);
+    VL_CONCAT_WWW(3712,3584,128, __Vtemp1271, __Vtemp1270, vlSelf->riscv_soc__DOT__sram4__DOT__sram_35);
+    VL_CONCAT_WWW(3840,3712,128, __Vtemp1272, __Vtemp1271, vlSelf->riscv_soc__DOT__sram4__DOT__sram_34);
+    VL_CONCAT_WWW(3968,3840,128, __Vtemp1273, __Vtemp1272, vlSelf->riscv_soc__DOT__sram4__DOT__sram_33);
+    VL_CONCAT_WWW(4096,3968,128, __Vtemp1274, __Vtemp1273, vlSelf->riscv_soc__DOT__sram4__DOT__sram_32);
+    VL_CONCAT_WWW(4224,4096,128, __Vtemp1275, __Vtemp1274, vlSelf->riscv_soc__DOT__sram4__DOT__sram_31);
+    VL_CONCAT_WWW(4352,4224,128, __Vtemp1276, __Vtemp1275, vlSelf->riscv_soc__DOT__sram4__DOT__sram_30);
+    VL_CONCAT_WWW(4480,4352,128, __Vtemp1277, __Vtemp1276, vlSelf->riscv_soc__DOT__sram4__DOT__sram_29);
+    VL_CONCAT_WWW(4608,4480,128, __Vtemp1278, __Vtemp1277, vlSelf->riscv_soc__DOT__sram4__DOT__sram_28);
+    VL_CONCAT_WWW(4736,4608,128, __Vtemp1279, __Vtemp1278, vlSelf->riscv_soc__DOT__sram4__DOT__sram_27);
+    VL_CONCAT_WWW(4864,4736,128, __Vtemp1280, __Vtemp1279, vlSelf->riscv_soc__DOT__sram4__DOT__sram_26);
+    VL_CONCAT_WWW(4992,4864,128, __Vtemp1281, __Vtemp1280, vlSelf->riscv_soc__DOT__sram4__DOT__sram_25);
+    VL_CONCAT_WWW(5120,4992,128, __Vtemp1282, __Vtemp1281, vlSelf->riscv_soc__DOT__sram4__DOT__sram_24);
+    VL_CONCAT_WWW(5248,5120,128, __Vtemp1283, __Vtemp1282, vlSelf->riscv_soc__DOT__sram4__DOT__sram_23);
+    VL_CONCAT_WWW(5376,5248,128, __Vtemp1284, __Vtemp1283, vlSelf->riscv_soc__DOT__sram4__DOT__sram_22);
+    VL_CONCAT_WWW(5504,5376,128, __Vtemp1285, __Vtemp1284, vlSelf->riscv_soc__DOT__sram4__DOT__sram_21);
+    VL_CONCAT_WWW(5632,5504,128, __Vtemp1286, __Vtemp1285, vlSelf->riscv_soc__DOT__sram4__DOT__sram_20);
+    VL_CONCAT_WWW(5760,5632,128, __Vtemp1287, __Vtemp1286, vlSelf->riscv_soc__DOT__sram4__DOT__sram_19);
+    VL_CONCAT_WWW(5888,5760,128, __Vtemp1288, __Vtemp1287, vlSelf->riscv_soc__DOT__sram4__DOT__sram_18);
+    VL_CONCAT_WWW(6016,5888,128, __Vtemp1289, __Vtemp1288, vlSelf->riscv_soc__DOT__sram4__DOT__sram_17);
+    VL_CONCAT_WWW(6144,6016,128, __Vtemp1290, __Vtemp1289, vlSelf->riscv_soc__DOT__sram4__DOT__sram_16);
+    VL_CONCAT_WWW(6272,6144,128, __Vtemp1291, __Vtemp1290, vlSelf->riscv_soc__DOT__sram4__DOT__sram_15);
+    VL_CONCAT_WWW(6400,6272,128, __Vtemp1292, __Vtemp1291, vlSelf->riscv_soc__DOT__sram4__DOT__sram_14);
+    VL_CONCAT_WWW(6528,6400,128, __Vtemp1293, __Vtemp1292, vlSelf->riscv_soc__DOT__sram4__DOT__sram_13);
+    VL_CONCAT_WWW(6656,6528,128, __Vtemp1294, __Vtemp1293, vlSelf->riscv_soc__DOT__sram4__DOT__sram_12);
+    VL_CONCAT_WWW(6784,6656,128, __Vtemp1295, __Vtemp1294, vlSelf->riscv_soc__DOT__sram4__DOT__sram_11);
+    VL_CONCAT_WWW(6912,6784,128, __Vtemp1296, __Vtemp1295, vlSelf->riscv_soc__DOT__sram4__DOT__sram_10);
+    VL_CONCAT_WWW(7040,6912,128, __Vtemp1297, __Vtemp1296, vlSelf->riscv_soc__DOT__sram4__DOT__sram_9);
+    VL_CONCAT_WWW(7168,7040,128, __Vtemp1298, __Vtemp1297, vlSelf->riscv_soc__DOT__sram4__DOT__sram_8);
+    VL_CONCAT_WWW(7296,7168,128, __Vtemp1299, __Vtemp1298, vlSelf->riscv_soc__DOT__sram4__DOT__sram_7);
+    VL_CONCAT_WWW(7424,7296,128, __Vtemp1300, __Vtemp1299, vlSelf->riscv_soc__DOT__sram4__DOT__sram_6);
+    VL_CONCAT_WWW(7552,7424,128, __Vtemp1301, __Vtemp1300, vlSelf->riscv_soc__DOT__sram4__DOT__sram_5);
+    VL_CONCAT_WWW(7680,7552,128, __Vtemp1302, __Vtemp1301, vlSelf->riscv_soc__DOT__sram4__DOT__sram_4);
+    VL_CONCAT_WWW(7808,7680,128, __Vtemp1303, __Vtemp1302, vlSelf->riscv_soc__DOT__sram4__DOT__sram_3);
+    VL_CONCAT_WWW(7936,7808,128, __Vtemp1304, __Vtemp1303, vlSelf->riscv_soc__DOT__sram4__DOT__sram_2);
+    VL_CONCAT_WWW(8064,7936,128, __Vtemp1305, __Vtemp1304, vlSelf->riscv_soc__DOT__sram4__DOT__sram_1);
+    VL_CONCAT_WWW(8192,8064,128, __Vtemp1306, __Vtemp1305, vlSelf->riscv_soc__DOT__sram4__DOT__sram_0);
     vlSelf->riscv_soc__DOT__sram4__DOT___GEN_1[0U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
-                             << 7U))) ? 0U : (__Vtemp1299[
+                             << 7U))) ? 0U : (__Vtemp1306[
                                               ((IData)(1U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
@@ -2612,13 +2645,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                       << 7U))))) 
-           | (__Vtemp1299[(0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
+           | (__Vtemp1306[(0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                     << 2U))] >> (0x1fU 
                                                  & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                     << 7U))));
     vlSelf->riscv_soc__DOT__sram4__DOT___GEN_1[1U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
-                             << 7U))) ? 0U : (__Vtemp1299[
+                             << 7U))) ? 0U : (__Vtemp1306[
                                               ((IData)(2U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
@@ -2628,13 +2661,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                       << 7U))))) 
-           | (__Vtemp1299[((IData)(1U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
+           | (__Vtemp1306[((IData)(1U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                            << 7U))));
     vlSelf->riscv_soc__DOT__sram4__DOT___GEN_1[2U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
-                             << 7U))) ? 0U : (__Vtemp1299[
+                             << 7U))) ? 0U : (__Vtemp1306[
                                               ((IData)(3U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
@@ -2644,13 +2677,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                       << 7U))))) 
-           | (__Vtemp1299[((IData)(2U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
+           | (__Vtemp1306[((IData)(2U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                            << 7U))));
     vlSelf->riscv_soc__DOT__sram4__DOT___GEN_1[3U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
-                             << 7U))) ? 0U : (__Vtemp1299[
+                             << 7U))) ? 0U : (__Vtemp1306[
                                               ((IData)(4U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
@@ -2660,125 +2693,125 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                       << 7U))))) 
-           | (__Vtemp1299[((IData)(3U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
+           | (__Vtemp1306[((IData)(3U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                            << 7U))));
-    __Vtemp1315[0U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_48[0U];
-    __Vtemp1315[1U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_48[1U];
-    __Vtemp1315[2U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_48[2U];
-    __Vtemp1315[3U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_48[3U];
-    __Vtemp1315[4U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_49[0U];
-    __Vtemp1315[5U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_49[1U];
-    __Vtemp1315[6U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_49[2U];
-    __Vtemp1315[7U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_49[3U];
-    __Vtemp1315[8U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_50[0U];
-    __Vtemp1315[9U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_50[1U];
-    __Vtemp1315[0xaU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_50[2U];
-    __Vtemp1315[0xbU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_50[3U];
-    __Vtemp1315[0xcU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_51[0U];
-    __Vtemp1315[0xdU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_51[1U];
-    __Vtemp1315[0xeU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_51[2U];
-    __Vtemp1315[0xfU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_51[3U];
-    __Vtemp1315[0x10U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_52[0U];
-    __Vtemp1315[0x11U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_52[1U];
-    __Vtemp1315[0x12U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_52[2U];
-    __Vtemp1315[0x13U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_52[3U];
-    __Vtemp1315[0x14U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_53[0U];
-    __Vtemp1315[0x15U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_53[1U];
-    __Vtemp1315[0x16U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_53[2U];
-    __Vtemp1315[0x17U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_53[3U];
-    __Vtemp1315[0x18U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_54[0U];
-    __Vtemp1315[0x19U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_54[1U];
-    __Vtemp1315[0x1aU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_54[2U];
-    __Vtemp1315[0x1bU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_54[3U];
-    __Vtemp1315[0x1cU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_55[0U];
-    __Vtemp1315[0x1dU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_55[1U];
-    __Vtemp1315[0x1eU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_55[2U];
-    __Vtemp1315[0x1fU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_55[3U];
-    __Vtemp1315[0x20U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_56[0U];
-    __Vtemp1315[0x21U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_56[1U];
-    __Vtemp1315[0x22U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_56[2U];
-    __Vtemp1315[0x23U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_56[3U];
-    __Vtemp1315[0x24U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_57[0U];
-    __Vtemp1315[0x25U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_57[1U];
-    __Vtemp1315[0x26U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_57[2U];
-    __Vtemp1315[0x27U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_57[3U];
-    __Vtemp1315[0x28U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_58[0U];
-    __Vtemp1315[0x29U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_58[1U];
-    __Vtemp1315[0x2aU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_58[2U];
-    __Vtemp1315[0x2bU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_58[3U];
-    __Vtemp1315[0x2cU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_59[0U];
-    __Vtemp1315[0x2dU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_59[1U];
-    __Vtemp1315[0x2eU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_59[2U];
-    __Vtemp1315[0x2fU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_59[3U];
-    __Vtemp1315[0x30U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_60[0U];
-    __Vtemp1315[0x31U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_60[1U];
-    __Vtemp1315[0x32U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_60[2U];
-    __Vtemp1315[0x33U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_60[3U];
-    __Vtemp1315[0x34U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_61[0U];
-    __Vtemp1315[0x35U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_61[1U];
-    __Vtemp1315[0x36U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_61[2U];
-    __Vtemp1315[0x37U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_61[3U];
-    __Vtemp1315[0x38U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_62[0U];
-    __Vtemp1315[0x39U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_62[1U];
-    __Vtemp1315[0x3aU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_62[2U];
-    __Vtemp1315[0x3bU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_62[3U];
-    __Vtemp1315[0x3cU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_63[0U];
-    __Vtemp1315[0x3dU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_63[1U];
-    __Vtemp1315[0x3eU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_63[2U];
-    __Vtemp1315[0x3fU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_63[3U];
-    VL_CONCAT_WWW(2176,2048,128, __Vtemp1316, __Vtemp1315, vlSelf->riscv_soc__DOT__sram5__DOT__sram_47);
-    VL_CONCAT_WWW(2304,2176,128, __Vtemp1317, __Vtemp1316, vlSelf->riscv_soc__DOT__sram5__DOT__sram_46);
-    VL_CONCAT_WWW(2432,2304,128, __Vtemp1318, __Vtemp1317, vlSelf->riscv_soc__DOT__sram5__DOT__sram_45);
-    VL_CONCAT_WWW(2560,2432,128, __Vtemp1319, __Vtemp1318, vlSelf->riscv_soc__DOT__sram5__DOT__sram_44);
-    VL_CONCAT_WWW(2688,2560,128, __Vtemp1320, __Vtemp1319, vlSelf->riscv_soc__DOT__sram5__DOT__sram_43);
-    VL_CONCAT_WWW(2816,2688,128, __Vtemp1321, __Vtemp1320, vlSelf->riscv_soc__DOT__sram5__DOT__sram_42);
-    VL_CONCAT_WWW(2944,2816,128, __Vtemp1322, __Vtemp1321, vlSelf->riscv_soc__DOT__sram5__DOT__sram_41);
-    VL_CONCAT_WWW(3072,2944,128, __Vtemp1323, __Vtemp1322, vlSelf->riscv_soc__DOT__sram5__DOT__sram_40);
-    VL_CONCAT_WWW(3200,3072,128, __Vtemp1324, __Vtemp1323, vlSelf->riscv_soc__DOT__sram5__DOT__sram_39);
-    VL_CONCAT_WWW(3328,3200,128, __Vtemp1325, __Vtemp1324, vlSelf->riscv_soc__DOT__sram5__DOT__sram_38);
-    VL_CONCAT_WWW(3456,3328,128, __Vtemp1326, __Vtemp1325, vlSelf->riscv_soc__DOT__sram5__DOT__sram_37);
-    VL_CONCAT_WWW(3584,3456,128, __Vtemp1327, __Vtemp1326, vlSelf->riscv_soc__DOT__sram5__DOT__sram_36);
-    VL_CONCAT_WWW(3712,3584,128, __Vtemp1328, __Vtemp1327, vlSelf->riscv_soc__DOT__sram5__DOT__sram_35);
-    VL_CONCAT_WWW(3840,3712,128, __Vtemp1329, __Vtemp1328, vlSelf->riscv_soc__DOT__sram5__DOT__sram_34);
-    VL_CONCAT_WWW(3968,3840,128, __Vtemp1330, __Vtemp1329, vlSelf->riscv_soc__DOT__sram5__DOT__sram_33);
-    VL_CONCAT_WWW(4096,3968,128, __Vtemp1331, __Vtemp1330, vlSelf->riscv_soc__DOT__sram5__DOT__sram_32);
-    VL_CONCAT_WWW(4224,4096,128, __Vtemp1332, __Vtemp1331, vlSelf->riscv_soc__DOT__sram5__DOT__sram_31);
-    VL_CONCAT_WWW(4352,4224,128, __Vtemp1333, __Vtemp1332, vlSelf->riscv_soc__DOT__sram5__DOT__sram_30);
-    VL_CONCAT_WWW(4480,4352,128, __Vtemp1334, __Vtemp1333, vlSelf->riscv_soc__DOT__sram5__DOT__sram_29);
-    VL_CONCAT_WWW(4608,4480,128, __Vtemp1335, __Vtemp1334, vlSelf->riscv_soc__DOT__sram5__DOT__sram_28);
-    VL_CONCAT_WWW(4736,4608,128, __Vtemp1336, __Vtemp1335, vlSelf->riscv_soc__DOT__sram5__DOT__sram_27);
-    VL_CONCAT_WWW(4864,4736,128, __Vtemp1337, __Vtemp1336, vlSelf->riscv_soc__DOT__sram5__DOT__sram_26);
-    VL_CONCAT_WWW(4992,4864,128, __Vtemp1338, __Vtemp1337, vlSelf->riscv_soc__DOT__sram5__DOT__sram_25);
-    VL_CONCAT_WWW(5120,4992,128, __Vtemp1339, __Vtemp1338, vlSelf->riscv_soc__DOT__sram5__DOT__sram_24);
-    VL_CONCAT_WWW(5248,5120,128, __Vtemp1340, __Vtemp1339, vlSelf->riscv_soc__DOT__sram5__DOT__sram_23);
-    VL_CONCAT_WWW(5376,5248,128, __Vtemp1341, __Vtemp1340, vlSelf->riscv_soc__DOT__sram5__DOT__sram_22);
-    VL_CONCAT_WWW(5504,5376,128, __Vtemp1342, __Vtemp1341, vlSelf->riscv_soc__DOT__sram5__DOT__sram_21);
-    VL_CONCAT_WWW(5632,5504,128, __Vtemp1343, __Vtemp1342, vlSelf->riscv_soc__DOT__sram5__DOT__sram_20);
-    VL_CONCAT_WWW(5760,5632,128, __Vtemp1344, __Vtemp1343, vlSelf->riscv_soc__DOT__sram5__DOT__sram_19);
-    VL_CONCAT_WWW(5888,5760,128, __Vtemp1345, __Vtemp1344, vlSelf->riscv_soc__DOT__sram5__DOT__sram_18);
-    VL_CONCAT_WWW(6016,5888,128, __Vtemp1346, __Vtemp1345, vlSelf->riscv_soc__DOT__sram5__DOT__sram_17);
-    VL_CONCAT_WWW(6144,6016,128, __Vtemp1347, __Vtemp1346, vlSelf->riscv_soc__DOT__sram5__DOT__sram_16);
-    VL_CONCAT_WWW(6272,6144,128, __Vtemp1348, __Vtemp1347, vlSelf->riscv_soc__DOT__sram5__DOT__sram_15);
-    VL_CONCAT_WWW(6400,6272,128, __Vtemp1349, __Vtemp1348, vlSelf->riscv_soc__DOT__sram5__DOT__sram_14);
-    VL_CONCAT_WWW(6528,6400,128, __Vtemp1350, __Vtemp1349, vlSelf->riscv_soc__DOT__sram5__DOT__sram_13);
-    VL_CONCAT_WWW(6656,6528,128, __Vtemp1351, __Vtemp1350, vlSelf->riscv_soc__DOT__sram5__DOT__sram_12);
-    VL_CONCAT_WWW(6784,6656,128, __Vtemp1352, __Vtemp1351, vlSelf->riscv_soc__DOT__sram5__DOT__sram_11);
-    VL_CONCAT_WWW(6912,6784,128, __Vtemp1353, __Vtemp1352, vlSelf->riscv_soc__DOT__sram5__DOT__sram_10);
-    VL_CONCAT_WWW(7040,6912,128, __Vtemp1354, __Vtemp1353, vlSelf->riscv_soc__DOT__sram5__DOT__sram_9);
-    VL_CONCAT_WWW(7168,7040,128, __Vtemp1355, __Vtemp1354, vlSelf->riscv_soc__DOT__sram5__DOT__sram_8);
-    VL_CONCAT_WWW(7296,7168,128, __Vtemp1356, __Vtemp1355, vlSelf->riscv_soc__DOT__sram5__DOT__sram_7);
-    VL_CONCAT_WWW(7424,7296,128, __Vtemp1357, __Vtemp1356, vlSelf->riscv_soc__DOT__sram5__DOT__sram_6);
-    VL_CONCAT_WWW(7552,7424,128, __Vtemp1358, __Vtemp1357, vlSelf->riscv_soc__DOT__sram5__DOT__sram_5);
-    VL_CONCAT_WWW(7680,7552,128, __Vtemp1359, __Vtemp1358, vlSelf->riscv_soc__DOT__sram5__DOT__sram_4);
-    VL_CONCAT_WWW(7808,7680,128, __Vtemp1360, __Vtemp1359, vlSelf->riscv_soc__DOT__sram5__DOT__sram_3);
-    VL_CONCAT_WWW(7936,7808,128, __Vtemp1361, __Vtemp1360, vlSelf->riscv_soc__DOT__sram5__DOT__sram_2);
-    VL_CONCAT_WWW(8064,7936,128, __Vtemp1362, __Vtemp1361, vlSelf->riscv_soc__DOT__sram5__DOT__sram_1);
-    VL_CONCAT_WWW(8192,8064,128, __Vtemp1363, __Vtemp1362, vlSelf->riscv_soc__DOT__sram5__DOT__sram_0);
+    __Vtemp1322[0U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_48[0U];
+    __Vtemp1322[1U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_48[1U];
+    __Vtemp1322[2U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_48[2U];
+    __Vtemp1322[3U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_48[3U];
+    __Vtemp1322[4U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_49[0U];
+    __Vtemp1322[5U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_49[1U];
+    __Vtemp1322[6U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_49[2U];
+    __Vtemp1322[7U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_49[3U];
+    __Vtemp1322[8U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_50[0U];
+    __Vtemp1322[9U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_50[1U];
+    __Vtemp1322[0xaU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_50[2U];
+    __Vtemp1322[0xbU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_50[3U];
+    __Vtemp1322[0xcU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_51[0U];
+    __Vtemp1322[0xdU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_51[1U];
+    __Vtemp1322[0xeU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_51[2U];
+    __Vtemp1322[0xfU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_51[3U];
+    __Vtemp1322[0x10U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_52[0U];
+    __Vtemp1322[0x11U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_52[1U];
+    __Vtemp1322[0x12U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_52[2U];
+    __Vtemp1322[0x13U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_52[3U];
+    __Vtemp1322[0x14U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_53[0U];
+    __Vtemp1322[0x15U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_53[1U];
+    __Vtemp1322[0x16U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_53[2U];
+    __Vtemp1322[0x17U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_53[3U];
+    __Vtemp1322[0x18U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_54[0U];
+    __Vtemp1322[0x19U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_54[1U];
+    __Vtemp1322[0x1aU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_54[2U];
+    __Vtemp1322[0x1bU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_54[3U];
+    __Vtemp1322[0x1cU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_55[0U];
+    __Vtemp1322[0x1dU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_55[1U];
+    __Vtemp1322[0x1eU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_55[2U];
+    __Vtemp1322[0x1fU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_55[3U];
+    __Vtemp1322[0x20U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_56[0U];
+    __Vtemp1322[0x21U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_56[1U];
+    __Vtemp1322[0x22U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_56[2U];
+    __Vtemp1322[0x23U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_56[3U];
+    __Vtemp1322[0x24U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_57[0U];
+    __Vtemp1322[0x25U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_57[1U];
+    __Vtemp1322[0x26U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_57[2U];
+    __Vtemp1322[0x27U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_57[3U];
+    __Vtemp1322[0x28U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_58[0U];
+    __Vtemp1322[0x29U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_58[1U];
+    __Vtemp1322[0x2aU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_58[2U];
+    __Vtemp1322[0x2bU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_58[3U];
+    __Vtemp1322[0x2cU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_59[0U];
+    __Vtemp1322[0x2dU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_59[1U];
+    __Vtemp1322[0x2eU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_59[2U];
+    __Vtemp1322[0x2fU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_59[3U];
+    __Vtemp1322[0x30U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_60[0U];
+    __Vtemp1322[0x31U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_60[1U];
+    __Vtemp1322[0x32U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_60[2U];
+    __Vtemp1322[0x33U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_60[3U];
+    __Vtemp1322[0x34U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_61[0U];
+    __Vtemp1322[0x35U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_61[1U];
+    __Vtemp1322[0x36U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_61[2U];
+    __Vtemp1322[0x37U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_61[3U];
+    __Vtemp1322[0x38U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_62[0U];
+    __Vtemp1322[0x39U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_62[1U];
+    __Vtemp1322[0x3aU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_62[2U];
+    __Vtemp1322[0x3bU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_62[3U];
+    __Vtemp1322[0x3cU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_63[0U];
+    __Vtemp1322[0x3dU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_63[1U];
+    __Vtemp1322[0x3eU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_63[2U];
+    __Vtemp1322[0x3fU] = vlSelf->riscv_soc__DOT__sram5__DOT__sram_63[3U];
+    VL_CONCAT_WWW(2176,2048,128, __Vtemp1323, __Vtemp1322, vlSelf->riscv_soc__DOT__sram5__DOT__sram_47);
+    VL_CONCAT_WWW(2304,2176,128, __Vtemp1324, __Vtemp1323, vlSelf->riscv_soc__DOT__sram5__DOT__sram_46);
+    VL_CONCAT_WWW(2432,2304,128, __Vtemp1325, __Vtemp1324, vlSelf->riscv_soc__DOT__sram5__DOT__sram_45);
+    VL_CONCAT_WWW(2560,2432,128, __Vtemp1326, __Vtemp1325, vlSelf->riscv_soc__DOT__sram5__DOT__sram_44);
+    VL_CONCAT_WWW(2688,2560,128, __Vtemp1327, __Vtemp1326, vlSelf->riscv_soc__DOT__sram5__DOT__sram_43);
+    VL_CONCAT_WWW(2816,2688,128, __Vtemp1328, __Vtemp1327, vlSelf->riscv_soc__DOT__sram5__DOT__sram_42);
+    VL_CONCAT_WWW(2944,2816,128, __Vtemp1329, __Vtemp1328, vlSelf->riscv_soc__DOT__sram5__DOT__sram_41);
+    VL_CONCAT_WWW(3072,2944,128, __Vtemp1330, __Vtemp1329, vlSelf->riscv_soc__DOT__sram5__DOT__sram_40);
+    VL_CONCAT_WWW(3200,3072,128, __Vtemp1331, __Vtemp1330, vlSelf->riscv_soc__DOT__sram5__DOT__sram_39);
+    VL_CONCAT_WWW(3328,3200,128, __Vtemp1332, __Vtemp1331, vlSelf->riscv_soc__DOT__sram5__DOT__sram_38);
+    VL_CONCAT_WWW(3456,3328,128, __Vtemp1333, __Vtemp1332, vlSelf->riscv_soc__DOT__sram5__DOT__sram_37);
+    VL_CONCAT_WWW(3584,3456,128, __Vtemp1334, __Vtemp1333, vlSelf->riscv_soc__DOT__sram5__DOT__sram_36);
+    VL_CONCAT_WWW(3712,3584,128, __Vtemp1335, __Vtemp1334, vlSelf->riscv_soc__DOT__sram5__DOT__sram_35);
+    VL_CONCAT_WWW(3840,3712,128, __Vtemp1336, __Vtemp1335, vlSelf->riscv_soc__DOT__sram5__DOT__sram_34);
+    VL_CONCAT_WWW(3968,3840,128, __Vtemp1337, __Vtemp1336, vlSelf->riscv_soc__DOT__sram5__DOT__sram_33);
+    VL_CONCAT_WWW(4096,3968,128, __Vtemp1338, __Vtemp1337, vlSelf->riscv_soc__DOT__sram5__DOT__sram_32);
+    VL_CONCAT_WWW(4224,4096,128, __Vtemp1339, __Vtemp1338, vlSelf->riscv_soc__DOT__sram5__DOT__sram_31);
+    VL_CONCAT_WWW(4352,4224,128, __Vtemp1340, __Vtemp1339, vlSelf->riscv_soc__DOT__sram5__DOT__sram_30);
+    VL_CONCAT_WWW(4480,4352,128, __Vtemp1341, __Vtemp1340, vlSelf->riscv_soc__DOT__sram5__DOT__sram_29);
+    VL_CONCAT_WWW(4608,4480,128, __Vtemp1342, __Vtemp1341, vlSelf->riscv_soc__DOT__sram5__DOT__sram_28);
+    VL_CONCAT_WWW(4736,4608,128, __Vtemp1343, __Vtemp1342, vlSelf->riscv_soc__DOT__sram5__DOT__sram_27);
+    VL_CONCAT_WWW(4864,4736,128, __Vtemp1344, __Vtemp1343, vlSelf->riscv_soc__DOT__sram5__DOT__sram_26);
+    VL_CONCAT_WWW(4992,4864,128, __Vtemp1345, __Vtemp1344, vlSelf->riscv_soc__DOT__sram5__DOT__sram_25);
+    VL_CONCAT_WWW(5120,4992,128, __Vtemp1346, __Vtemp1345, vlSelf->riscv_soc__DOT__sram5__DOT__sram_24);
+    VL_CONCAT_WWW(5248,5120,128, __Vtemp1347, __Vtemp1346, vlSelf->riscv_soc__DOT__sram5__DOT__sram_23);
+    VL_CONCAT_WWW(5376,5248,128, __Vtemp1348, __Vtemp1347, vlSelf->riscv_soc__DOT__sram5__DOT__sram_22);
+    VL_CONCAT_WWW(5504,5376,128, __Vtemp1349, __Vtemp1348, vlSelf->riscv_soc__DOT__sram5__DOT__sram_21);
+    VL_CONCAT_WWW(5632,5504,128, __Vtemp1350, __Vtemp1349, vlSelf->riscv_soc__DOT__sram5__DOT__sram_20);
+    VL_CONCAT_WWW(5760,5632,128, __Vtemp1351, __Vtemp1350, vlSelf->riscv_soc__DOT__sram5__DOT__sram_19);
+    VL_CONCAT_WWW(5888,5760,128, __Vtemp1352, __Vtemp1351, vlSelf->riscv_soc__DOT__sram5__DOT__sram_18);
+    VL_CONCAT_WWW(6016,5888,128, __Vtemp1353, __Vtemp1352, vlSelf->riscv_soc__DOT__sram5__DOT__sram_17);
+    VL_CONCAT_WWW(6144,6016,128, __Vtemp1354, __Vtemp1353, vlSelf->riscv_soc__DOT__sram5__DOT__sram_16);
+    VL_CONCAT_WWW(6272,6144,128, __Vtemp1355, __Vtemp1354, vlSelf->riscv_soc__DOT__sram5__DOT__sram_15);
+    VL_CONCAT_WWW(6400,6272,128, __Vtemp1356, __Vtemp1355, vlSelf->riscv_soc__DOT__sram5__DOT__sram_14);
+    VL_CONCAT_WWW(6528,6400,128, __Vtemp1357, __Vtemp1356, vlSelf->riscv_soc__DOT__sram5__DOT__sram_13);
+    VL_CONCAT_WWW(6656,6528,128, __Vtemp1358, __Vtemp1357, vlSelf->riscv_soc__DOT__sram5__DOT__sram_12);
+    VL_CONCAT_WWW(6784,6656,128, __Vtemp1359, __Vtemp1358, vlSelf->riscv_soc__DOT__sram5__DOT__sram_11);
+    VL_CONCAT_WWW(6912,6784,128, __Vtemp1360, __Vtemp1359, vlSelf->riscv_soc__DOT__sram5__DOT__sram_10);
+    VL_CONCAT_WWW(7040,6912,128, __Vtemp1361, __Vtemp1360, vlSelf->riscv_soc__DOT__sram5__DOT__sram_9);
+    VL_CONCAT_WWW(7168,7040,128, __Vtemp1362, __Vtemp1361, vlSelf->riscv_soc__DOT__sram5__DOT__sram_8);
+    VL_CONCAT_WWW(7296,7168,128, __Vtemp1363, __Vtemp1362, vlSelf->riscv_soc__DOT__sram5__DOT__sram_7);
+    VL_CONCAT_WWW(7424,7296,128, __Vtemp1364, __Vtemp1363, vlSelf->riscv_soc__DOT__sram5__DOT__sram_6);
+    VL_CONCAT_WWW(7552,7424,128, __Vtemp1365, __Vtemp1364, vlSelf->riscv_soc__DOT__sram5__DOT__sram_5);
+    VL_CONCAT_WWW(7680,7552,128, __Vtemp1366, __Vtemp1365, vlSelf->riscv_soc__DOT__sram5__DOT__sram_4);
+    VL_CONCAT_WWW(7808,7680,128, __Vtemp1367, __Vtemp1366, vlSelf->riscv_soc__DOT__sram5__DOT__sram_3);
+    VL_CONCAT_WWW(7936,7808,128, __Vtemp1368, __Vtemp1367, vlSelf->riscv_soc__DOT__sram5__DOT__sram_2);
+    VL_CONCAT_WWW(8064,7936,128, __Vtemp1369, __Vtemp1368, vlSelf->riscv_soc__DOT__sram5__DOT__sram_1);
+    VL_CONCAT_WWW(8192,8064,128, __Vtemp1370, __Vtemp1369, vlSelf->riscv_soc__DOT__sram5__DOT__sram_0);
     vlSelf->riscv_soc__DOT__sram5__DOT___GEN_1[0U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
-                             << 7U))) ? 0U : (__Vtemp1363[
+                             << 7U))) ? 0U : (__Vtemp1370[
                                               ((IData)(1U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
@@ -2788,13 +2821,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                       << 7U))))) 
-           | (__Vtemp1363[(0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
+           | (__Vtemp1370[(0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                     << 2U))] >> (0x1fU 
                                                  & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                     << 7U))));
     vlSelf->riscv_soc__DOT__sram5__DOT___GEN_1[1U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
-                             << 7U))) ? 0U : (__Vtemp1363[
+                             << 7U))) ? 0U : (__Vtemp1370[
                                               ((IData)(2U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
@@ -2804,13 +2837,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                       << 7U))))) 
-           | (__Vtemp1363[((IData)(1U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
+           | (__Vtemp1370[((IData)(1U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                            << 7U))));
     vlSelf->riscv_soc__DOT__sram5__DOT___GEN_1[2U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
-                             << 7U))) ? 0U : (__Vtemp1363[
+                             << 7U))) ? 0U : (__Vtemp1370[
                                               ((IData)(3U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
@@ -2820,13 +2853,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                       << 7U))))) 
-           | (__Vtemp1363[((IData)(2U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
+           | (__Vtemp1370[((IData)(2U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                            << 7U))));
     vlSelf->riscv_soc__DOT__sram5__DOT___GEN_1[3U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
-                             << 7U))) ? 0U : (__Vtemp1363[
+                             << 7U))) ? 0U : (__Vtemp1370[
                                               ((IData)(4U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
@@ -2836,125 +2869,125 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                       << 7U))))) 
-           | (__Vtemp1363[((IData)(3U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
+           | (__Vtemp1370[((IData)(3U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                            << 7U))));
-    __Vtemp1379[0U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_48[0U];
-    __Vtemp1379[1U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_48[1U];
-    __Vtemp1379[2U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_48[2U];
-    __Vtemp1379[3U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_48[3U];
-    __Vtemp1379[4U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_49[0U];
-    __Vtemp1379[5U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_49[1U];
-    __Vtemp1379[6U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_49[2U];
-    __Vtemp1379[7U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_49[3U];
-    __Vtemp1379[8U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_50[0U];
-    __Vtemp1379[9U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_50[1U];
-    __Vtemp1379[0xaU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_50[2U];
-    __Vtemp1379[0xbU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_50[3U];
-    __Vtemp1379[0xcU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_51[0U];
-    __Vtemp1379[0xdU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_51[1U];
-    __Vtemp1379[0xeU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_51[2U];
-    __Vtemp1379[0xfU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_51[3U];
-    __Vtemp1379[0x10U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_52[0U];
-    __Vtemp1379[0x11U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_52[1U];
-    __Vtemp1379[0x12U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_52[2U];
-    __Vtemp1379[0x13U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_52[3U];
-    __Vtemp1379[0x14U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_53[0U];
-    __Vtemp1379[0x15U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_53[1U];
-    __Vtemp1379[0x16U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_53[2U];
-    __Vtemp1379[0x17U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_53[3U];
-    __Vtemp1379[0x18U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_54[0U];
-    __Vtemp1379[0x19U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_54[1U];
-    __Vtemp1379[0x1aU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_54[2U];
-    __Vtemp1379[0x1bU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_54[3U];
-    __Vtemp1379[0x1cU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_55[0U];
-    __Vtemp1379[0x1dU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_55[1U];
-    __Vtemp1379[0x1eU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_55[2U];
-    __Vtemp1379[0x1fU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_55[3U];
-    __Vtemp1379[0x20U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_56[0U];
-    __Vtemp1379[0x21U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_56[1U];
-    __Vtemp1379[0x22U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_56[2U];
-    __Vtemp1379[0x23U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_56[3U];
-    __Vtemp1379[0x24U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_57[0U];
-    __Vtemp1379[0x25U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_57[1U];
-    __Vtemp1379[0x26U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_57[2U];
-    __Vtemp1379[0x27U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_57[3U];
-    __Vtemp1379[0x28U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_58[0U];
-    __Vtemp1379[0x29U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_58[1U];
-    __Vtemp1379[0x2aU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_58[2U];
-    __Vtemp1379[0x2bU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_58[3U];
-    __Vtemp1379[0x2cU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_59[0U];
-    __Vtemp1379[0x2dU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_59[1U];
-    __Vtemp1379[0x2eU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_59[2U];
-    __Vtemp1379[0x2fU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_59[3U];
-    __Vtemp1379[0x30U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_60[0U];
-    __Vtemp1379[0x31U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_60[1U];
-    __Vtemp1379[0x32U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_60[2U];
-    __Vtemp1379[0x33U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_60[3U];
-    __Vtemp1379[0x34U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_61[0U];
-    __Vtemp1379[0x35U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_61[1U];
-    __Vtemp1379[0x36U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_61[2U];
-    __Vtemp1379[0x37U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_61[3U];
-    __Vtemp1379[0x38U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_62[0U];
-    __Vtemp1379[0x39U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_62[1U];
-    __Vtemp1379[0x3aU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_62[2U];
-    __Vtemp1379[0x3bU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_62[3U];
-    __Vtemp1379[0x3cU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_63[0U];
-    __Vtemp1379[0x3dU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_63[1U];
-    __Vtemp1379[0x3eU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_63[2U];
-    __Vtemp1379[0x3fU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_63[3U];
-    VL_CONCAT_WWW(2176,2048,128, __Vtemp1380, __Vtemp1379, vlSelf->riscv_soc__DOT__sram6__DOT__sram_47);
-    VL_CONCAT_WWW(2304,2176,128, __Vtemp1381, __Vtemp1380, vlSelf->riscv_soc__DOT__sram6__DOT__sram_46);
-    VL_CONCAT_WWW(2432,2304,128, __Vtemp1382, __Vtemp1381, vlSelf->riscv_soc__DOT__sram6__DOT__sram_45);
-    VL_CONCAT_WWW(2560,2432,128, __Vtemp1383, __Vtemp1382, vlSelf->riscv_soc__DOT__sram6__DOT__sram_44);
-    VL_CONCAT_WWW(2688,2560,128, __Vtemp1384, __Vtemp1383, vlSelf->riscv_soc__DOT__sram6__DOT__sram_43);
-    VL_CONCAT_WWW(2816,2688,128, __Vtemp1385, __Vtemp1384, vlSelf->riscv_soc__DOT__sram6__DOT__sram_42);
-    VL_CONCAT_WWW(2944,2816,128, __Vtemp1386, __Vtemp1385, vlSelf->riscv_soc__DOT__sram6__DOT__sram_41);
-    VL_CONCAT_WWW(3072,2944,128, __Vtemp1387, __Vtemp1386, vlSelf->riscv_soc__DOT__sram6__DOT__sram_40);
-    VL_CONCAT_WWW(3200,3072,128, __Vtemp1388, __Vtemp1387, vlSelf->riscv_soc__DOT__sram6__DOT__sram_39);
-    VL_CONCAT_WWW(3328,3200,128, __Vtemp1389, __Vtemp1388, vlSelf->riscv_soc__DOT__sram6__DOT__sram_38);
-    VL_CONCAT_WWW(3456,3328,128, __Vtemp1390, __Vtemp1389, vlSelf->riscv_soc__DOT__sram6__DOT__sram_37);
-    VL_CONCAT_WWW(3584,3456,128, __Vtemp1391, __Vtemp1390, vlSelf->riscv_soc__DOT__sram6__DOT__sram_36);
-    VL_CONCAT_WWW(3712,3584,128, __Vtemp1392, __Vtemp1391, vlSelf->riscv_soc__DOT__sram6__DOT__sram_35);
-    VL_CONCAT_WWW(3840,3712,128, __Vtemp1393, __Vtemp1392, vlSelf->riscv_soc__DOT__sram6__DOT__sram_34);
-    VL_CONCAT_WWW(3968,3840,128, __Vtemp1394, __Vtemp1393, vlSelf->riscv_soc__DOT__sram6__DOT__sram_33);
-    VL_CONCAT_WWW(4096,3968,128, __Vtemp1395, __Vtemp1394, vlSelf->riscv_soc__DOT__sram6__DOT__sram_32);
-    VL_CONCAT_WWW(4224,4096,128, __Vtemp1396, __Vtemp1395, vlSelf->riscv_soc__DOT__sram6__DOT__sram_31);
-    VL_CONCAT_WWW(4352,4224,128, __Vtemp1397, __Vtemp1396, vlSelf->riscv_soc__DOT__sram6__DOT__sram_30);
-    VL_CONCAT_WWW(4480,4352,128, __Vtemp1398, __Vtemp1397, vlSelf->riscv_soc__DOT__sram6__DOT__sram_29);
-    VL_CONCAT_WWW(4608,4480,128, __Vtemp1399, __Vtemp1398, vlSelf->riscv_soc__DOT__sram6__DOT__sram_28);
-    VL_CONCAT_WWW(4736,4608,128, __Vtemp1400, __Vtemp1399, vlSelf->riscv_soc__DOT__sram6__DOT__sram_27);
-    VL_CONCAT_WWW(4864,4736,128, __Vtemp1401, __Vtemp1400, vlSelf->riscv_soc__DOT__sram6__DOT__sram_26);
-    VL_CONCAT_WWW(4992,4864,128, __Vtemp1402, __Vtemp1401, vlSelf->riscv_soc__DOT__sram6__DOT__sram_25);
-    VL_CONCAT_WWW(5120,4992,128, __Vtemp1403, __Vtemp1402, vlSelf->riscv_soc__DOT__sram6__DOT__sram_24);
-    VL_CONCAT_WWW(5248,5120,128, __Vtemp1404, __Vtemp1403, vlSelf->riscv_soc__DOT__sram6__DOT__sram_23);
-    VL_CONCAT_WWW(5376,5248,128, __Vtemp1405, __Vtemp1404, vlSelf->riscv_soc__DOT__sram6__DOT__sram_22);
-    VL_CONCAT_WWW(5504,5376,128, __Vtemp1406, __Vtemp1405, vlSelf->riscv_soc__DOT__sram6__DOT__sram_21);
-    VL_CONCAT_WWW(5632,5504,128, __Vtemp1407, __Vtemp1406, vlSelf->riscv_soc__DOT__sram6__DOT__sram_20);
-    VL_CONCAT_WWW(5760,5632,128, __Vtemp1408, __Vtemp1407, vlSelf->riscv_soc__DOT__sram6__DOT__sram_19);
-    VL_CONCAT_WWW(5888,5760,128, __Vtemp1409, __Vtemp1408, vlSelf->riscv_soc__DOT__sram6__DOT__sram_18);
-    VL_CONCAT_WWW(6016,5888,128, __Vtemp1410, __Vtemp1409, vlSelf->riscv_soc__DOT__sram6__DOT__sram_17);
-    VL_CONCAT_WWW(6144,6016,128, __Vtemp1411, __Vtemp1410, vlSelf->riscv_soc__DOT__sram6__DOT__sram_16);
-    VL_CONCAT_WWW(6272,6144,128, __Vtemp1412, __Vtemp1411, vlSelf->riscv_soc__DOT__sram6__DOT__sram_15);
-    VL_CONCAT_WWW(6400,6272,128, __Vtemp1413, __Vtemp1412, vlSelf->riscv_soc__DOT__sram6__DOT__sram_14);
-    VL_CONCAT_WWW(6528,6400,128, __Vtemp1414, __Vtemp1413, vlSelf->riscv_soc__DOT__sram6__DOT__sram_13);
-    VL_CONCAT_WWW(6656,6528,128, __Vtemp1415, __Vtemp1414, vlSelf->riscv_soc__DOT__sram6__DOT__sram_12);
-    VL_CONCAT_WWW(6784,6656,128, __Vtemp1416, __Vtemp1415, vlSelf->riscv_soc__DOT__sram6__DOT__sram_11);
-    VL_CONCAT_WWW(6912,6784,128, __Vtemp1417, __Vtemp1416, vlSelf->riscv_soc__DOT__sram6__DOT__sram_10);
-    VL_CONCAT_WWW(7040,6912,128, __Vtemp1418, __Vtemp1417, vlSelf->riscv_soc__DOT__sram6__DOT__sram_9);
-    VL_CONCAT_WWW(7168,7040,128, __Vtemp1419, __Vtemp1418, vlSelf->riscv_soc__DOT__sram6__DOT__sram_8);
-    VL_CONCAT_WWW(7296,7168,128, __Vtemp1420, __Vtemp1419, vlSelf->riscv_soc__DOT__sram6__DOT__sram_7);
-    VL_CONCAT_WWW(7424,7296,128, __Vtemp1421, __Vtemp1420, vlSelf->riscv_soc__DOT__sram6__DOT__sram_6);
-    VL_CONCAT_WWW(7552,7424,128, __Vtemp1422, __Vtemp1421, vlSelf->riscv_soc__DOT__sram6__DOT__sram_5);
-    VL_CONCAT_WWW(7680,7552,128, __Vtemp1423, __Vtemp1422, vlSelf->riscv_soc__DOT__sram6__DOT__sram_4);
-    VL_CONCAT_WWW(7808,7680,128, __Vtemp1424, __Vtemp1423, vlSelf->riscv_soc__DOT__sram6__DOT__sram_3);
-    VL_CONCAT_WWW(7936,7808,128, __Vtemp1425, __Vtemp1424, vlSelf->riscv_soc__DOT__sram6__DOT__sram_2);
-    VL_CONCAT_WWW(8064,7936,128, __Vtemp1426, __Vtemp1425, vlSelf->riscv_soc__DOT__sram6__DOT__sram_1);
-    VL_CONCAT_WWW(8192,8064,128, __Vtemp1427, __Vtemp1426, vlSelf->riscv_soc__DOT__sram6__DOT__sram_0);
+    __Vtemp1386[0U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_48[0U];
+    __Vtemp1386[1U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_48[1U];
+    __Vtemp1386[2U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_48[2U];
+    __Vtemp1386[3U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_48[3U];
+    __Vtemp1386[4U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_49[0U];
+    __Vtemp1386[5U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_49[1U];
+    __Vtemp1386[6U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_49[2U];
+    __Vtemp1386[7U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_49[3U];
+    __Vtemp1386[8U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_50[0U];
+    __Vtemp1386[9U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_50[1U];
+    __Vtemp1386[0xaU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_50[2U];
+    __Vtemp1386[0xbU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_50[3U];
+    __Vtemp1386[0xcU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_51[0U];
+    __Vtemp1386[0xdU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_51[1U];
+    __Vtemp1386[0xeU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_51[2U];
+    __Vtemp1386[0xfU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_51[3U];
+    __Vtemp1386[0x10U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_52[0U];
+    __Vtemp1386[0x11U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_52[1U];
+    __Vtemp1386[0x12U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_52[2U];
+    __Vtemp1386[0x13U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_52[3U];
+    __Vtemp1386[0x14U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_53[0U];
+    __Vtemp1386[0x15U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_53[1U];
+    __Vtemp1386[0x16U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_53[2U];
+    __Vtemp1386[0x17U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_53[3U];
+    __Vtemp1386[0x18U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_54[0U];
+    __Vtemp1386[0x19U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_54[1U];
+    __Vtemp1386[0x1aU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_54[2U];
+    __Vtemp1386[0x1bU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_54[3U];
+    __Vtemp1386[0x1cU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_55[0U];
+    __Vtemp1386[0x1dU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_55[1U];
+    __Vtemp1386[0x1eU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_55[2U];
+    __Vtemp1386[0x1fU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_55[3U];
+    __Vtemp1386[0x20U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_56[0U];
+    __Vtemp1386[0x21U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_56[1U];
+    __Vtemp1386[0x22U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_56[2U];
+    __Vtemp1386[0x23U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_56[3U];
+    __Vtemp1386[0x24U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_57[0U];
+    __Vtemp1386[0x25U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_57[1U];
+    __Vtemp1386[0x26U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_57[2U];
+    __Vtemp1386[0x27U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_57[3U];
+    __Vtemp1386[0x28U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_58[0U];
+    __Vtemp1386[0x29U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_58[1U];
+    __Vtemp1386[0x2aU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_58[2U];
+    __Vtemp1386[0x2bU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_58[3U];
+    __Vtemp1386[0x2cU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_59[0U];
+    __Vtemp1386[0x2dU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_59[1U];
+    __Vtemp1386[0x2eU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_59[2U];
+    __Vtemp1386[0x2fU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_59[3U];
+    __Vtemp1386[0x30U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_60[0U];
+    __Vtemp1386[0x31U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_60[1U];
+    __Vtemp1386[0x32U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_60[2U];
+    __Vtemp1386[0x33U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_60[3U];
+    __Vtemp1386[0x34U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_61[0U];
+    __Vtemp1386[0x35U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_61[1U];
+    __Vtemp1386[0x36U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_61[2U];
+    __Vtemp1386[0x37U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_61[3U];
+    __Vtemp1386[0x38U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_62[0U];
+    __Vtemp1386[0x39U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_62[1U];
+    __Vtemp1386[0x3aU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_62[2U];
+    __Vtemp1386[0x3bU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_62[3U];
+    __Vtemp1386[0x3cU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_63[0U];
+    __Vtemp1386[0x3dU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_63[1U];
+    __Vtemp1386[0x3eU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_63[2U];
+    __Vtemp1386[0x3fU] = vlSelf->riscv_soc__DOT__sram6__DOT__sram_63[3U];
+    VL_CONCAT_WWW(2176,2048,128, __Vtemp1387, __Vtemp1386, vlSelf->riscv_soc__DOT__sram6__DOT__sram_47);
+    VL_CONCAT_WWW(2304,2176,128, __Vtemp1388, __Vtemp1387, vlSelf->riscv_soc__DOT__sram6__DOT__sram_46);
+    VL_CONCAT_WWW(2432,2304,128, __Vtemp1389, __Vtemp1388, vlSelf->riscv_soc__DOT__sram6__DOT__sram_45);
+    VL_CONCAT_WWW(2560,2432,128, __Vtemp1390, __Vtemp1389, vlSelf->riscv_soc__DOT__sram6__DOT__sram_44);
+    VL_CONCAT_WWW(2688,2560,128, __Vtemp1391, __Vtemp1390, vlSelf->riscv_soc__DOT__sram6__DOT__sram_43);
+    VL_CONCAT_WWW(2816,2688,128, __Vtemp1392, __Vtemp1391, vlSelf->riscv_soc__DOT__sram6__DOT__sram_42);
+    VL_CONCAT_WWW(2944,2816,128, __Vtemp1393, __Vtemp1392, vlSelf->riscv_soc__DOT__sram6__DOT__sram_41);
+    VL_CONCAT_WWW(3072,2944,128, __Vtemp1394, __Vtemp1393, vlSelf->riscv_soc__DOT__sram6__DOT__sram_40);
+    VL_CONCAT_WWW(3200,3072,128, __Vtemp1395, __Vtemp1394, vlSelf->riscv_soc__DOT__sram6__DOT__sram_39);
+    VL_CONCAT_WWW(3328,3200,128, __Vtemp1396, __Vtemp1395, vlSelf->riscv_soc__DOT__sram6__DOT__sram_38);
+    VL_CONCAT_WWW(3456,3328,128, __Vtemp1397, __Vtemp1396, vlSelf->riscv_soc__DOT__sram6__DOT__sram_37);
+    VL_CONCAT_WWW(3584,3456,128, __Vtemp1398, __Vtemp1397, vlSelf->riscv_soc__DOT__sram6__DOT__sram_36);
+    VL_CONCAT_WWW(3712,3584,128, __Vtemp1399, __Vtemp1398, vlSelf->riscv_soc__DOT__sram6__DOT__sram_35);
+    VL_CONCAT_WWW(3840,3712,128, __Vtemp1400, __Vtemp1399, vlSelf->riscv_soc__DOT__sram6__DOT__sram_34);
+    VL_CONCAT_WWW(3968,3840,128, __Vtemp1401, __Vtemp1400, vlSelf->riscv_soc__DOT__sram6__DOT__sram_33);
+    VL_CONCAT_WWW(4096,3968,128, __Vtemp1402, __Vtemp1401, vlSelf->riscv_soc__DOT__sram6__DOT__sram_32);
+    VL_CONCAT_WWW(4224,4096,128, __Vtemp1403, __Vtemp1402, vlSelf->riscv_soc__DOT__sram6__DOT__sram_31);
+    VL_CONCAT_WWW(4352,4224,128, __Vtemp1404, __Vtemp1403, vlSelf->riscv_soc__DOT__sram6__DOT__sram_30);
+    VL_CONCAT_WWW(4480,4352,128, __Vtemp1405, __Vtemp1404, vlSelf->riscv_soc__DOT__sram6__DOT__sram_29);
+    VL_CONCAT_WWW(4608,4480,128, __Vtemp1406, __Vtemp1405, vlSelf->riscv_soc__DOT__sram6__DOT__sram_28);
+    VL_CONCAT_WWW(4736,4608,128, __Vtemp1407, __Vtemp1406, vlSelf->riscv_soc__DOT__sram6__DOT__sram_27);
+    VL_CONCAT_WWW(4864,4736,128, __Vtemp1408, __Vtemp1407, vlSelf->riscv_soc__DOT__sram6__DOT__sram_26);
+    VL_CONCAT_WWW(4992,4864,128, __Vtemp1409, __Vtemp1408, vlSelf->riscv_soc__DOT__sram6__DOT__sram_25);
+    VL_CONCAT_WWW(5120,4992,128, __Vtemp1410, __Vtemp1409, vlSelf->riscv_soc__DOT__sram6__DOT__sram_24);
+    VL_CONCAT_WWW(5248,5120,128, __Vtemp1411, __Vtemp1410, vlSelf->riscv_soc__DOT__sram6__DOT__sram_23);
+    VL_CONCAT_WWW(5376,5248,128, __Vtemp1412, __Vtemp1411, vlSelf->riscv_soc__DOT__sram6__DOT__sram_22);
+    VL_CONCAT_WWW(5504,5376,128, __Vtemp1413, __Vtemp1412, vlSelf->riscv_soc__DOT__sram6__DOT__sram_21);
+    VL_CONCAT_WWW(5632,5504,128, __Vtemp1414, __Vtemp1413, vlSelf->riscv_soc__DOT__sram6__DOT__sram_20);
+    VL_CONCAT_WWW(5760,5632,128, __Vtemp1415, __Vtemp1414, vlSelf->riscv_soc__DOT__sram6__DOT__sram_19);
+    VL_CONCAT_WWW(5888,5760,128, __Vtemp1416, __Vtemp1415, vlSelf->riscv_soc__DOT__sram6__DOT__sram_18);
+    VL_CONCAT_WWW(6016,5888,128, __Vtemp1417, __Vtemp1416, vlSelf->riscv_soc__DOT__sram6__DOT__sram_17);
+    VL_CONCAT_WWW(6144,6016,128, __Vtemp1418, __Vtemp1417, vlSelf->riscv_soc__DOT__sram6__DOT__sram_16);
+    VL_CONCAT_WWW(6272,6144,128, __Vtemp1419, __Vtemp1418, vlSelf->riscv_soc__DOT__sram6__DOT__sram_15);
+    VL_CONCAT_WWW(6400,6272,128, __Vtemp1420, __Vtemp1419, vlSelf->riscv_soc__DOT__sram6__DOT__sram_14);
+    VL_CONCAT_WWW(6528,6400,128, __Vtemp1421, __Vtemp1420, vlSelf->riscv_soc__DOT__sram6__DOT__sram_13);
+    VL_CONCAT_WWW(6656,6528,128, __Vtemp1422, __Vtemp1421, vlSelf->riscv_soc__DOT__sram6__DOT__sram_12);
+    VL_CONCAT_WWW(6784,6656,128, __Vtemp1423, __Vtemp1422, vlSelf->riscv_soc__DOT__sram6__DOT__sram_11);
+    VL_CONCAT_WWW(6912,6784,128, __Vtemp1424, __Vtemp1423, vlSelf->riscv_soc__DOT__sram6__DOT__sram_10);
+    VL_CONCAT_WWW(7040,6912,128, __Vtemp1425, __Vtemp1424, vlSelf->riscv_soc__DOT__sram6__DOT__sram_9);
+    VL_CONCAT_WWW(7168,7040,128, __Vtemp1426, __Vtemp1425, vlSelf->riscv_soc__DOT__sram6__DOT__sram_8);
+    VL_CONCAT_WWW(7296,7168,128, __Vtemp1427, __Vtemp1426, vlSelf->riscv_soc__DOT__sram6__DOT__sram_7);
+    VL_CONCAT_WWW(7424,7296,128, __Vtemp1428, __Vtemp1427, vlSelf->riscv_soc__DOT__sram6__DOT__sram_6);
+    VL_CONCAT_WWW(7552,7424,128, __Vtemp1429, __Vtemp1428, vlSelf->riscv_soc__DOT__sram6__DOT__sram_5);
+    VL_CONCAT_WWW(7680,7552,128, __Vtemp1430, __Vtemp1429, vlSelf->riscv_soc__DOT__sram6__DOT__sram_4);
+    VL_CONCAT_WWW(7808,7680,128, __Vtemp1431, __Vtemp1430, vlSelf->riscv_soc__DOT__sram6__DOT__sram_3);
+    VL_CONCAT_WWW(7936,7808,128, __Vtemp1432, __Vtemp1431, vlSelf->riscv_soc__DOT__sram6__DOT__sram_2);
+    VL_CONCAT_WWW(8064,7936,128, __Vtemp1433, __Vtemp1432, vlSelf->riscv_soc__DOT__sram6__DOT__sram_1);
+    VL_CONCAT_WWW(8192,8064,128, __Vtemp1434, __Vtemp1433, vlSelf->riscv_soc__DOT__sram6__DOT__sram_0);
     vlSelf->riscv_soc__DOT__sram6__DOT___GEN_1[0U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
-                             << 7U))) ? 0U : (__Vtemp1427[
+                             << 7U))) ? 0U : (__Vtemp1434[
                                               ((IData)(1U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
@@ -2964,13 +2997,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                       << 7U))))) 
-           | (__Vtemp1427[(0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
+           | (__Vtemp1434[(0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                     << 2U))] >> (0x1fU 
                                                  & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                     << 7U))));
     vlSelf->riscv_soc__DOT__sram6__DOT___GEN_1[1U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
-                             << 7U))) ? 0U : (__Vtemp1427[
+                             << 7U))) ? 0U : (__Vtemp1434[
                                               ((IData)(2U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
@@ -2980,13 +3013,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                       << 7U))))) 
-           | (__Vtemp1427[((IData)(1U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
+           | (__Vtemp1434[((IData)(1U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                            << 7U))));
     vlSelf->riscv_soc__DOT__sram6__DOT___GEN_1[2U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
-                             << 7U))) ? 0U : (__Vtemp1427[
+                             << 7U))) ? 0U : (__Vtemp1434[
                                               ((IData)(3U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
@@ -2996,13 +3029,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                       << 7U))))) 
-           | (__Vtemp1427[((IData)(2U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
+           | (__Vtemp1434[((IData)(2U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                            << 7U))));
     vlSelf->riscv_soc__DOT__sram6__DOT___GEN_1[3U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
-                             << 7U))) ? 0U : (__Vtemp1427[
+                             << 7U))) ? 0U : (__Vtemp1434[
                                               ((IData)(4U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
@@ -3012,125 +3045,125 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                       << 7U))))) 
-           | (__Vtemp1427[((IData)(3U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
+           | (__Vtemp1434[((IData)(3U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                            << 7U))));
-    __Vtemp1443[0U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_48[0U];
-    __Vtemp1443[1U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_48[1U];
-    __Vtemp1443[2U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_48[2U];
-    __Vtemp1443[3U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_48[3U];
-    __Vtemp1443[4U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_49[0U];
-    __Vtemp1443[5U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_49[1U];
-    __Vtemp1443[6U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_49[2U];
-    __Vtemp1443[7U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_49[3U];
-    __Vtemp1443[8U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_50[0U];
-    __Vtemp1443[9U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_50[1U];
-    __Vtemp1443[0xaU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_50[2U];
-    __Vtemp1443[0xbU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_50[3U];
-    __Vtemp1443[0xcU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_51[0U];
-    __Vtemp1443[0xdU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_51[1U];
-    __Vtemp1443[0xeU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_51[2U];
-    __Vtemp1443[0xfU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_51[3U];
-    __Vtemp1443[0x10U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_52[0U];
-    __Vtemp1443[0x11U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_52[1U];
-    __Vtemp1443[0x12U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_52[2U];
-    __Vtemp1443[0x13U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_52[3U];
-    __Vtemp1443[0x14U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_53[0U];
-    __Vtemp1443[0x15U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_53[1U];
-    __Vtemp1443[0x16U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_53[2U];
-    __Vtemp1443[0x17U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_53[3U];
-    __Vtemp1443[0x18U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_54[0U];
-    __Vtemp1443[0x19U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_54[1U];
-    __Vtemp1443[0x1aU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_54[2U];
-    __Vtemp1443[0x1bU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_54[3U];
-    __Vtemp1443[0x1cU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_55[0U];
-    __Vtemp1443[0x1dU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_55[1U];
-    __Vtemp1443[0x1eU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_55[2U];
-    __Vtemp1443[0x1fU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_55[3U];
-    __Vtemp1443[0x20U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_56[0U];
-    __Vtemp1443[0x21U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_56[1U];
-    __Vtemp1443[0x22U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_56[2U];
-    __Vtemp1443[0x23U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_56[3U];
-    __Vtemp1443[0x24U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_57[0U];
-    __Vtemp1443[0x25U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_57[1U];
-    __Vtemp1443[0x26U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_57[2U];
-    __Vtemp1443[0x27U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_57[3U];
-    __Vtemp1443[0x28U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_58[0U];
-    __Vtemp1443[0x29U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_58[1U];
-    __Vtemp1443[0x2aU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_58[2U];
-    __Vtemp1443[0x2bU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_58[3U];
-    __Vtemp1443[0x2cU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_59[0U];
-    __Vtemp1443[0x2dU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_59[1U];
-    __Vtemp1443[0x2eU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_59[2U];
-    __Vtemp1443[0x2fU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_59[3U];
-    __Vtemp1443[0x30U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_60[0U];
-    __Vtemp1443[0x31U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_60[1U];
-    __Vtemp1443[0x32U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_60[2U];
-    __Vtemp1443[0x33U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_60[3U];
-    __Vtemp1443[0x34U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_61[0U];
-    __Vtemp1443[0x35U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_61[1U];
-    __Vtemp1443[0x36U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_61[2U];
-    __Vtemp1443[0x37U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_61[3U];
-    __Vtemp1443[0x38U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_62[0U];
-    __Vtemp1443[0x39U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_62[1U];
-    __Vtemp1443[0x3aU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_62[2U];
-    __Vtemp1443[0x3bU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_62[3U];
-    __Vtemp1443[0x3cU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_63[0U];
-    __Vtemp1443[0x3dU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_63[1U];
-    __Vtemp1443[0x3eU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_63[2U];
-    __Vtemp1443[0x3fU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_63[3U];
-    VL_CONCAT_WWW(2176,2048,128, __Vtemp1444, __Vtemp1443, vlSelf->riscv_soc__DOT__sram7__DOT__sram_47);
-    VL_CONCAT_WWW(2304,2176,128, __Vtemp1445, __Vtemp1444, vlSelf->riscv_soc__DOT__sram7__DOT__sram_46);
-    VL_CONCAT_WWW(2432,2304,128, __Vtemp1446, __Vtemp1445, vlSelf->riscv_soc__DOT__sram7__DOT__sram_45);
-    VL_CONCAT_WWW(2560,2432,128, __Vtemp1447, __Vtemp1446, vlSelf->riscv_soc__DOT__sram7__DOT__sram_44);
-    VL_CONCAT_WWW(2688,2560,128, __Vtemp1448, __Vtemp1447, vlSelf->riscv_soc__DOT__sram7__DOT__sram_43);
-    VL_CONCAT_WWW(2816,2688,128, __Vtemp1449, __Vtemp1448, vlSelf->riscv_soc__DOT__sram7__DOT__sram_42);
-    VL_CONCAT_WWW(2944,2816,128, __Vtemp1450, __Vtemp1449, vlSelf->riscv_soc__DOT__sram7__DOT__sram_41);
-    VL_CONCAT_WWW(3072,2944,128, __Vtemp1451, __Vtemp1450, vlSelf->riscv_soc__DOT__sram7__DOT__sram_40);
-    VL_CONCAT_WWW(3200,3072,128, __Vtemp1452, __Vtemp1451, vlSelf->riscv_soc__DOT__sram7__DOT__sram_39);
-    VL_CONCAT_WWW(3328,3200,128, __Vtemp1453, __Vtemp1452, vlSelf->riscv_soc__DOT__sram7__DOT__sram_38);
-    VL_CONCAT_WWW(3456,3328,128, __Vtemp1454, __Vtemp1453, vlSelf->riscv_soc__DOT__sram7__DOT__sram_37);
-    VL_CONCAT_WWW(3584,3456,128, __Vtemp1455, __Vtemp1454, vlSelf->riscv_soc__DOT__sram7__DOT__sram_36);
-    VL_CONCAT_WWW(3712,3584,128, __Vtemp1456, __Vtemp1455, vlSelf->riscv_soc__DOT__sram7__DOT__sram_35);
-    VL_CONCAT_WWW(3840,3712,128, __Vtemp1457, __Vtemp1456, vlSelf->riscv_soc__DOT__sram7__DOT__sram_34);
-    VL_CONCAT_WWW(3968,3840,128, __Vtemp1458, __Vtemp1457, vlSelf->riscv_soc__DOT__sram7__DOT__sram_33);
-    VL_CONCAT_WWW(4096,3968,128, __Vtemp1459, __Vtemp1458, vlSelf->riscv_soc__DOT__sram7__DOT__sram_32);
-    VL_CONCAT_WWW(4224,4096,128, __Vtemp1460, __Vtemp1459, vlSelf->riscv_soc__DOT__sram7__DOT__sram_31);
-    VL_CONCAT_WWW(4352,4224,128, __Vtemp1461, __Vtemp1460, vlSelf->riscv_soc__DOT__sram7__DOT__sram_30);
-    VL_CONCAT_WWW(4480,4352,128, __Vtemp1462, __Vtemp1461, vlSelf->riscv_soc__DOT__sram7__DOT__sram_29);
-    VL_CONCAT_WWW(4608,4480,128, __Vtemp1463, __Vtemp1462, vlSelf->riscv_soc__DOT__sram7__DOT__sram_28);
-    VL_CONCAT_WWW(4736,4608,128, __Vtemp1464, __Vtemp1463, vlSelf->riscv_soc__DOT__sram7__DOT__sram_27);
-    VL_CONCAT_WWW(4864,4736,128, __Vtemp1465, __Vtemp1464, vlSelf->riscv_soc__DOT__sram7__DOT__sram_26);
-    VL_CONCAT_WWW(4992,4864,128, __Vtemp1466, __Vtemp1465, vlSelf->riscv_soc__DOT__sram7__DOT__sram_25);
-    VL_CONCAT_WWW(5120,4992,128, __Vtemp1467, __Vtemp1466, vlSelf->riscv_soc__DOT__sram7__DOT__sram_24);
-    VL_CONCAT_WWW(5248,5120,128, __Vtemp1468, __Vtemp1467, vlSelf->riscv_soc__DOT__sram7__DOT__sram_23);
-    VL_CONCAT_WWW(5376,5248,128, __Vtemp1469, __Vtemp1468, vlSelf->riscv_soc__DOT__sram7__DOT__sram_22);
-    VL_CONCAT_WWW(5504,5376,128, __Vtemp1470, __Vtemp1469, vlSelf->riscv_soc__DOT__sram7__DOT__sram_21);
-    VL_CONCAT_WWW(5632,5504,128, __Vtemp1471, __Vtemp1470, vlSelf->riscv_soc__DOT__sram7__DOT__sram_20);
-    VL_CONCAT_WWW(5760,5632,128, __Vtemp1472, __Vtemp1471, vlSelf->riscv_soc__DOT__sram7__DOT__sram_19);
-    VL_CONCAT_WWW(5888,5760,128, __Vtemp1473, __Vtemp1472, vlSelf->riscv_soc__DOT__sram7__DOT__sram_18);
-    VL_CONCAT_WWW(6016,5888,128, __Vtemp1474, __Vtemp1473, vlSelf->riscv_soc__DOT__sram7__DOT__sram_17);
-    VL_CONCAT_WWW(6144,6016,128, __Vtemp1475, __Vtemp1474, vlSelf->riscv_soc__DOT__sram7__DOT__sram_16);
-    VL_CONCAT_WWW(6272,6144,128, __Vtemp1476, __Vtemp1475, vlSelf->riscv_soc__DOT__sram7__DOT__sram_15);
-    VL_CONCAT_WWW(6400,6272,128, __Vtemp1477, __Vtemp1476, vlSelf->riscv_soc__DOT__sram7__DOT__sram_14);
-    VL_CONCAT_WWW(6528,6400,128, __Vtemp1478, __Vtemp1477, vlSelf->riscv_soc__DOT__sram7__DOT__sram_13);
-    VL_CONCAT_WWW(6656,6528,128, __Vtemp1479, __Vtemp1478, vlSelf->riscv_soc__DOT__sram7__DOT__sram_12);
-    VL_CONCAT_WWW(6784,6656,128, __Vtemp1480, __Vtemp1479, vlSelf->riscv_soc__DOT__sram7__DOT__sram_11);
-    VL_CONCAT_WWW(6912,6784,128, __Vtemp1481, __Vtemp1480, vlSelf->riscv_soc__DOT__sram7__DOT__sram_10);
-    VL_CONCAT_WWW(7040,6912,128, __Vtemp1482, __Vtemp1481, vlSelf->riscv_soc__DOT__sram7__DOT__sram_9);
-    VL_CONCAT_WWW(7168,7040,128, __Vtemp1483, __Vtemp1482, vlSelf->riscv_soc__DOT__sram7__DOT__sram_8);
-    VL_CONCAT_WWW(7296,7168,128, __Vtemp1484, __Vtemp1483, vlSelf->riscv_soc__DOT__sram7__DOT__sram_7);
-    VL_CONCAT_WWW(7424,7296,128, __Vtemp1485, __Vtemp1484, vlSelf->riscv_soc__DOT__sram7__DOT__sram_6);
-    VL_CONCAT_WWW(7552,7424,128, __Vtemp1486, __Vtemp1485, vlSelf->riscv_soc__DOT__sram7__DOT__sram_5);
-    VL_CONCAT_WWW(7680,7552,128, __Vtemp1487, __Vtemp1486, vlSelf->riscv_soc__DOT__sram7__DOT__sram_4);
-    VL_CONCAT_WWW(7808,7680,128, __Vtemp1488, __Vtemp1487, vlSelf->riscv_soc__DOT__sram7__DOT__sram_3);
-    VL_CONCAT_WWW(7936,7808,128, __Vtemp1489, __Vtemp1488, vlSelf->riscv_soc__DOT__sram7__DOT__sram_2);
-    VL_CONCAT_WWW(8064,7936,128, __Vtemp1490, __Vtemp1489, vlSelf->riscv_soc__DOT__sram7__DOT__sram_1);
-    VL_CONCAT_WWW(8192,8064,128, __Vtemp1491, __Vtemp1490, vlSelf->riscv_soc__DOT__sram7__DOT__sram_0);
+    __Vtemp1450[0U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_48[0U];
+    __Vtemp1450[1U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_48[1U];
+    __Vtemp1450[2U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_48[2U];
+    __Vtemp1450[3U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_48[3U];
+    __Vtemp1450[4U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_49[0U];
+    __Vtemp1450[5U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_49[1U];
+    __Vtemp1450[6U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_49[2U];
+    __Vtemp1450[7U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_49[3U];
+    __Vtemp1450[8U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_50[0U];
+    __Vtemp1450[9U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_50[1U];
+    __Vtemp1450[0xaU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_50[2U];
+    __Vtemp1450[0xbU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_50[3U];
+    __Vtemp1450[0xcU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_51[0U];
+    __Vtemp1450[0xdU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_51[1U];
+    __Vtemp1450[0xeU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_51[2U];
+    __Vtemp1450[0xfU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_51[3U];
+    __Vtemp1450[0x10U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_52[0U];
+    __Vtemp1450[0x11U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_52[1U];
+    __Vtemp1450[0x12U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_52[2U];
+    __Vtemp1450[0x13U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_52[3U];
+    __Vtemp1450[0x14U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_53[0U];
+    __Vtemp1450[0x15U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_53[1U];
+    __Vtemp1450[0x16U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_53[2U];
+    __Vtemp1450[0x17U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_53[3U];
+    __Vtemp1450[0x18U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_54[0U];
+    __Vtemp1450[0x19U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_54[1U];
+    __Vtemp1450[0x1aU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_54[2U];
+    __Vtemp1450[0x1bU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_54[3U];
+    __Vtemp1450[0x1cU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_55[0U];
+    __Vtemp1450[0x1dU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_55[1U];
+    __Vtemp1450[0x1eU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_55[2U];
+    __Vtemp1450[0x1fU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_55[3U];
+    __Vtemp1450[0x20U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_56[0U];
+    __Vtemp1450[0x21U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_56[1U];
+    __Vtemp1450[0x22U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_56[2U];
+    __Vtemp1450[0x23U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_56[3U];
+    __Vtemp1450[0x24U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_57[0U];
+    __Vtemp1450[0x25U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_57[1U];
+    __Vtemp1450[0x26U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_57[2U];
+    __Vtemp1450[0x27U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_57[3U];
+    __Vtemp1450[0x28U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_58[0U];
+    __Vtemp1450[0x29U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_58[1U];
+    __Vtemp1450[0x2aU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_58[2U];
+    __Vtemp1450[0x2bU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_58[3U];
+    __Vtemp1450[0x2cU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_59[0U];
+    __Vtemp1450[0x2dU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_59[1U];
+    __Vtemp1450[0x2eU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_59[2U];
+    __Vtemp1450[0x2fU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_59[3U];
+    __Vtemp1450[0x30U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_60[0U];
+    __Vtemp1450[0x31U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_60[1U];
+    __Vtemp1450[0x32U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_60[2U];
+    __Vtemp1450[0x33U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_60[3U];
+    __Vtemp1450[0x34U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_61[0U];
+    __Vtemp1450[0x35U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_61[1U];
+    __Vtemp1450[0x36U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_61[2U];
+    __Vtemp1450[0x37U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_61[3U];
+    __Vtemp1450[0x38U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_62[0U];
+    __Vtemp1450[0x39U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_62[1U];
+    __Vtemp1450[0x3aU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_62[2U];
+    __Vtemp1450[0x3bU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_62[3U];
+    __Vtemp1450[0x3cU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_63[0U];
+    __Vtemp1450[0x3dU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_63[1U];
+    __Vtemp1450[0x3eU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_63[2U];
+    __Vtemp1450[0x3fU] = vlSelf->riscv_soc__DOT__sram7__DOT__sram_63[3U];
+    VL_CONCAT_WWW(2176,2048,128, __Vtemp1451, __Vtemp1450, vlSelf->riscv_soc__DOT__sram7__DOT__sram_47);
+    VL_CONCAT_WWW(2304,2176,128, __Vtemp1452, __Vtemp1451, vlSelf->riscv_soc__DOT__sram7__DOT__sram_46);
+    VL_CONCAT_WWW(2432,2304,128, __Vtemp1453, __Vtemp1452, vlSelf->riscv_soc__DOT__sram7__DOT__sram_45);
+    VL_CONCAT_WWW(2560,2432,128, __Vtemp1454, __Vtemp1453, vlSelf->riscv_soc__DOT__sram7__DOT__sram_44);
+    VL_CONCAT_WWW(2688,2560,128, __Vtemp1455, __Vtemp1454, vlSelf->riscv_soc__DOT__sram7__DOT__sram_43);
+    VL_CONCAT_WWW(2816,2688,128, __Vtemp1456, __Vtemp1455, vlSelf->riscv_soc__DOT__sram7__DOT__sram_42);
+    VL_CONCAT_WWW(2944,2816,128, __Vtemp1457, __Vtemp1456, vlSelf->riscv_soc__DOT__sram7__DOT__sram_41);
+    VL_CONCAT_WWW(3072,2944,128, __Vtemp1458, __Vtemp1457, vlSelf->riscv_soc__DOT__sram7__DOT__sram_40);
+    VL_CONCAT_WWW(3200,3072,128, __Vtemp1459, __Vtemp1458, vlSelf->riscv_soc__DOT__sram7__DOT__sram_39);
+    VL_CONCAT_WWW(3328,3200,128, __Vtemp1460, __Vtemp1459, vlSelf->riscv_soc__DOT__sram7__DOT__sram_38);
+    VL_CONCAT_WWW(3456,3328,128, __Vtemp1461, __Vtemp1460, vlSelf->riscv_soc__DOT__sram7__DOT__sram_37);
+    VL_CONCAT_WWW(3584,3456,128, __Vtemp1462, __Vtemp1461, vlSelf->riscv_soc__DOT__sram7__DOT__sram_36);
+    VL_CONCAT_WWW(3712,3584,128, __Vtemp1463, __Vtemp1462, vlSelf->riscv_soc__DOT__sram7__DOT__sram_35);
+    VL_CONCAT_WWW(3840,3712,128, __Vtemp1464, __Vtemp1463, vlSelf->riscv_soc__DOT__sram7__DOT__sram_34);
+    VL_CONCAT_WWW(3968,3840,128, __Vtemp1465, __Vtemp1464, vlSelf->riscv_soc__DOT__sram7__DOT__sram_33);
+    VL_CONCAT_WWW(4096,3968,128, __Vtemp1466, __Vtemp1465, vlSelf->riscv_soc__DOT__sram7__DOT__sram_32);
+    VL_CONCAT_WWW(4224,4096,128, __Vtemp1467, __Vtemp1466, vlSelf->riscv_soc__DOT__sram7__DOT__sram_31);
+    VL_CONCAT_WWW(4352,4224,128, __Vtemp1468, __Vtemp1467, vlSelf->riscv_soc__DOT__sram7__DOT__sram_30);
+    VL_CONCAT_WWW(4480,4352,128, __Vtemp1469, __Vtemp1468, vlSelf->riscv_soc__DOT__sram7__DOT__sram_29);
+    VL_CONCAT_WWW(4608,4480,128, __Vtemp1470, __Vtemp1469, vlSelf->riscv_soc__DOT__sram7__DOT__sram_28);
+    VL_CONCAT_WWW(4736,4608,128, __Vtemp1471, __Vtemp1470, vlSelf->riscv_soc__DOT__sram7__DOT__sram_27);
+    VL_CONCAT_WWW(4864,4736,128, __Vtemp1472, __Vtemp1471, vlSelf->riscv_soc__DOT__sram7__DOT__sram_26);
+    VL_CONCAT_WWW(4992,4864,128, __Vtemp1473, __Vtemp1472, vlSelf->riscv_soc__DOT__sram7__DOT__sram_25);
+    VL_CONCAT_WWW(5120,4992,128, __Vtemp1474, __Vtemp1473, vlSelf->riscv_soc__DOT__sram7__DOT__sram_24);
+    VL_CONCAT_WWW(5248,5120,128, __Vtemp1475, __Vtemp1474, vlSelf->riscv_soc__DOT__sram7__DOT__sram_23);
+    VL_CONCAT_WWW(5376,5248,128, __Vtemp1476, __Vtemp1475, vlSelf->riscv_soc__DOT__sram7__DOT__sram_22);
+    VL_CONCAT_WWW(5504,5376,128, __Vtemp1477, __Vtemp1476, vlSelf->riscv_soc__DOT__sram7__DOT__sram_21);
+    VL_CONCAT_WWW(5632,5504,128, __Vtemp1478, __Vtemp1477, vlSelf->riscv_soc__DOT__sram7__DOT__sram_20);
+    VL_CONCAT_WWW(5760,5632,128, __Vtemp1479, __Vtemp1478, vlSelf->riscv_soc__DOT__sram7__DOT__sram_19);
+    VL_CONCAT_WWW(5888,5760,128, __Vtemp1480, __Vtemp1479, vlSelf->riscv_soc__DOT__sram7__DOT__sram_18);
+    VL_CONCAT_WWW(6016,5888,128, __Vtemp1481, __Vtemp1480, vlSelf->riscv_soc__DOT__sram7__DOT__sram_17);
+    VL_CONCAT_WWW(6144,6016,128, __Vtemp1482, __Vtemp1481, vlSelf->riscv_soc__DOT__sram7__DOT__sram_16);
+    VL_CONCAT_WWW(6272,6144,128, __Vtemp1483, __Vtemp1482, vlSelf->riscv_soc__DOT__sram7__DOT__sram_15);
+    VL_CONCAT_WWW(6400,6272,128, __Vtemp1484, __Vtemp1483, vlSelf->riscv_soc__DOT__sram7__DOT__sram_14);
+    VL_CONCAT_WWW(6528,6400,128, __Vtemp1485, __Vtemp1484, vlSelf->riscv_soc__DOT__sram7__DOT__sram_13);
+    VL_CONCAT_WWW(6656,6528,128, __Vtemp1486, __Vtemp1485, vlSelf->riscv_soc__DOT__sram7__DOT__sram_12);
+    VL_CONCAT_WWW(6784,6656,128, __Vtemp1487, __Vtemp1486, vlSelf->riscv_soc__DOT__sram7__DOT__sram_11);
+    VL_CONCAT_WWW(6912,6784,128, __Vtemp1488, __Vtemp1487, vlSelf->riscv_soc__DOT__sram7__DOT__sram_10);
+    VL_CONCAT_WWW(7040,6912,128, __Vtemp1489, __Vtemp1488, vlSelf->riscv_soc__DOT__sram7__DOT__sram_9);
+    VL_CONCAT_WWW(7168,7040,128, __Vtemp1490, __Vtemp1489, vlSelf->riscv_soc__DOT__sram7__DOT__sram_8);
+    VL_CONCAT_WWW(7296,7168,128, __Vtemp1491, __Vtemp1490, vlSelf->riscv_soc__DOT__sram7__DOT__sram_7);
+    VL_CONCAT_WWW(7424,7296,128, __Vtemp1492, __Vtemp1491, vlSelf->riscv_soc__DOT__sram7__DOT__sram_6);
+    VL_CONCAT_WWW(7552,7424,128, __Vtemp1493, __Vtemp1492, vlSelf->riscv_soc__DOT__sram7__DOT__sram_5);
+    VL_CONCAT_WWW(7680,7552,128, __Vtemp1494, __Vtemp1493, vlSelf->riscv_soc__DOT__sram7__DOT__sram_4);
+    VL_CONCAT_WWW(7808,7680,128, __Vtemp1495, __Vtemp1494, vlSelf->riscv_soc__DOT__sram7__DOT__sram_3);
+    VL_CONCAT_WWW(7936,7808,128, __Vtemp1496, __Vtemp1495, vlSelf->riscv_soc__DOT__sram7__DOT__sram_2);
+    VL_CONCAT_WWW(8064,7936,128, __Vtemp1497, __Vtemp1496, vlSelf->riscv_soc__DOT__sram7__DOT__sram_1);
+    VL_CONCAT_WWW(8192,8064,128, __Vtemp1498, __Vtemp1497, vlSelf->riscv_soc__DOT__sram7__DOT__sram_0);
     vlSelf->riscv_soc__DOT__sram7__DOT___GEN_1[0U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
-                             << 7U))) ? 0U : (__Vtemp1491[
+                             << 7U))) ? 0U : (__Vtemp1498[
                                               ((IData)(1U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
@@ -3140,13 +3173,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                       << 7U))))) 
-           | (__Vtemp1491[(0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
+           | (__Vtemp1498[(0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                     << 2U))] >> (0x1fU 
                                                  & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                     << 7U))));
     vlSelf->riscv_soc__DOT__sram7__DOT___GEN_1[1U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
-                             << 7U))) ? 0U : (__Vtemp1491[
+                             << 7U))) ? 0U : (__Vtemp1498[
                                               ((IData)(2U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
@@ -3156,13 +3189,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                       << 7U))))) 
-           | (__Vtemp1491[((IData)(1U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
+           | (__Vtemp1498[((IData)(1U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                            << 7U))));
     vlSelf->riscv_soc__DOT__sram7__DOT___GEN_1[2U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
-                             << 7U))) ? 0U : (__Vtemp1491[
+                             << 7U))) ? 0U : (__Vtemp1498[
                                               ((IData)(3U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
@@ -3172,13 +3205,13 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                       << 7U))))) 
-           | (__Vtemp1491[((IData)(2U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
+           | (__Vtemp1498[((IData)(2U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                            << 7U))));
     vlSelf->riscv_soc__DOT__sram7__DOT___GEN_1[3U] 
         = (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
-                             << 7U))) ? 0U : (__Vtemp1491[
+                             << 7U))) ? 0U : (__Vtemp1498[
                                               ((IData)(4U) 
                                                + (0xfcU 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
@@ -3188,7 +3221,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                   (0x1fU 
                                                    & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                       << 7U))))) 
-           | (__Vtemp1491[((IData)(3U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
+           | (__Vtemp1498[((IData)(3U) + (0xfcU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                                                    << 2U)))] 
               >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__sram0_A) 
                            << 7U))));
@@ -3211,17 +3244,17 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
             ? (((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN_4[1U])) 
                 << 0x20U) | (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN_4[0U])))
             : 0ULL);
-    __Vtemp1495[0U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo_0);
-    __Vtemp1495[1U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo_0 
+    __Vtemp1502[0U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo_0);
+    __Vtemp1502[1U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo_0 
                                >> 0x20U));
-    __Vtemp1495[2U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo_1);
-    __Vtemp1495[3U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo_1 
+    __Vtemp1502[2U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo_1);
+    __Vtemp1502[3U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo_1 
                                >> 0x20U));
-    __Vtemp1495[4U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo_2);
-    __Vtemp1495[5U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo_2 
+    __Vtemp1502[4U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo_2);
+    __Vtemp1502[5U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo_2 
                                >> 0x20U));
-    __Vtemp1495[6U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo_3);
-    __Vtemp1495[7U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo_3 
+    __Vtemp1502[6U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo_3);
+    __Vtemp1502[7U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo_3 
                                >> 0x20U));
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___io_br_info_mispredict_T 
         = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__br_valid) 
@@ -3230,7 +3263,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                 & ((((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN_4[1U])) 
                      << 0x20U) | (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT___GEN_4[0U]))) 
                    != ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__is_pre)
-                        ? (((QData)((IData)(__Vtemp1495[
+                        ? (((QData)((IData)(__Vtemp1502[
                                             (((IData)(0x3fU) 
                                               + (0xffU 
                                                  & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_tail) 
@@ -3245,7 +3278,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                            | (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_tail) 
                                                 << 6U)))
                                 ? 0ULL : ((QData)((IData)(
-                                                          __Vtemp1495[
+                                                          __Vtemp1502[
                                                           (((IData)(0x1fU) 
                                                             + 
                                                             (0xffU 
@@ -3256,7 +3289,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                               - (0x1fU 
                                                  & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_tail) 
                                                     << 6U))))) 
-                              | ((QData)((IData)(__Vtemp1495[
+                              | ((QData)((IData)(__Vtemp1502[
                                                  (6U 
                                                   & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_tail) 
                                                      << 1U))])) 
@@ -3325,20 +3358,20 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
             & (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_valid)) 
            | ((1U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar__DOT___GEN)) 
               & (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_w_ready)));
-    __Vtemp1498[0U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_r_raddr);
-    __Vtemp1498[1U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_r_raddr 
+    __Vtemp1505[0U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_r_raddr);
+    __Vtemp1505[1U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_r_raddr 
                                >> 0x20U));
-    __Vtemp1498[2U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_r_raddr);
-    __Vtemp1498[3U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_r_raddr 
+    __Vtemp1505[2U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_r_raddr);
+    __Vtemp1505[3U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_r_raddr 
                                >> 0x20U));
-    __Vtemp1498[4U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_0);
-    __Vtemp1498[5U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_0 
+    __Vtemp1505[4U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_0);
+    __Vtemp1505[5U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_0 
                                >> 0x20U));
-    __Vtemp1498[6U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT___execute_io_bus_bits_addr);
-    __Vtemp1498[7U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT___execute_io_bus_bits_addr 
+    __Vtemp1505[6U] = (IData)(vlSelf->riscv_soc__DOT__core__DOT___execute_io_bus_bits_addr);
+    __Vtemp1505[7U] = (IData)((vlSelf->riscv_soc__DOT__core__DOT___execute_io_bus_bits_addr 
                                >> 0x20U));
     vlSelf->riscv_soc__DOT___core_io_axi_bus_ar_bits_araddr 
-        = (((QData)((IData)(__Vtemp1498[(((IData)(0x3fU) 
+        = (((QData)((IData)(__Vtemp1505[(((IData)(0x3fU) 
                                           + (0xffU 
                                              & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar__DOT___GEN_0) 
                                                 << 6U))) 
@@ -3349,7 +3382,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                             << 6U))))) 
            | (((0U == (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar__DOT___GEN_0) 
                                 << 6U))) ? 0ULL : ((QData)((IData)(
-                                                                   __Vtemp1498[
+                                                                   __Vtemp1505[
                                                                    (((IData)(0x1fU) 
                                                                      + 
                                                                      (0xffU 
@@ -3362,7 +3395,7 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
                                                     (0x1fU 
                                                      & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar__DOT___GEN_0) 
                                                         << 6U))))) 
-              | ((QData)((IData)(__Vtemp1498[(6U & 
+              | ((QData)((IData)(__Vtemp1505[(6U & 
                                               ((IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar__DOT___GEN_0) 
                                                << 1U))])) 
                  >> (0x1fU & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar__DOT___GEN_0) 
@@ -3393,14 +3426,6 @@ void Vriscv_soc___024root___settle__TOP__4(Vriscv_soc___024root* vlSelf) {
         vlSelf->riscv_soc__DOT__core__DOT___cross_bar_1_io_fetch_cpu_data_valid 
             = vlSelf->riscv_soc__DOT__core__DOT__cross_bar__DOT___io_bus1_ready_T_1;
     }
-    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__enq_size 
-        = ((3U > (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__reg_ibuf_size)) 
-           & (((IData)(vlSelf->riscv_soc__DOT__core__DOT___cross_bar_1_io_fetch_cpu_data_valid) 
-               & (~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_flush))) 
-              & (~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT___io_flush_T))));
-    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN 
-        = ((~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT___io_flush_T)) 
-           & (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__enq_size));
 }
 
 void Vriscv_soc___024root___eval_initial(Vriscv_soc___024root* vlSelf) {
@@ -3493,10 +3518,8 @@ void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT__core__DOT___execute_io_bus_bits_wdata = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT___execute_io_bus_bits_wstrb = VL_RAND_RESET_I(8);
     vlSelf->riscv_soc__DOT__core__DOT___execute_io_bus_bits_is_w = VL_RAND_RESET_I(1);
-    vlSelf->riscv_soc__DOT__core__DOT___fetch_io_put_pc_bits_inst = VL_RAND_RESET_I(32);
     vlSelf->riscv_soc__DOT__core__DOT___cross_bar_1_io_fetch_cpu_addr_ready = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT___cross_bar_1_io_fetch_cpu_data_valid = VL_RAND_RESET_I(1);
-    vlSelf->riscv_soc__DOT__core__DOT___cross_bar_1_io_fetch_cpu_data_bits_data = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT___cross_bar_1_io_fetch_cpu_data_bits_pc = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT___cross_bar_1_io_wb_bits_rdata = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT___cross_bar_1_io_DCache_valid = VL_RAND_RESET_I(1);
@@ -3655,27 +3678,39 @@ void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vlSelf) {
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__is_pre_fifo_1 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__is_pre_fifo_2 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__is_pre_fifo_3 = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT___GEN_2 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT___io_out_flush_T = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT____Vcellinp__ibuf__io_cache_buf_bits_inst = VL_RAND_RESET_I(32);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__unnamedblk1__DOT___T_3 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__unnamedblk1__DOT__unnamedblk2__DOT__pre_enq = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_pc_0 = VL_RAND_RESET_Q(64);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_pc_1 = VL_RAND_RESET_Q(64);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_pc_2 = VL_RAND_RESET_Q(64);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_pc_3 = VL_RAND_RESET_Q(64);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_0 = VL_RAND_RESET_I(32);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_1 = VL_RAND_RESET_I(32);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_2 = VL_RAND_RESET_I(32);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_3 = VL_RAND_RESET_I(32);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_is_pre_0 = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_is_pre_1 = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_is_pre_2 = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_is_pre_3 = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_valid_0 = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_valid_1 = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_valid_2 = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_valid_3 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__reg_head = VL_RAND_RESET_I(2);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__reg_tail = VL_RAND_RESET_I(2);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__reg_ibuf_size = VL_RAND_RESET_I(3);
-    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__enq_size = VL_RAND_RESET_I(1);
-    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__can_deq = VL_RAND_RESET_I(1);
-    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN = VL_RAND_RESET_I(1);
-    for (int __Vi0=0; __Vi0<4; ++__Vi0) {
-        vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_pc_ext__DOT__Memory[__Vi0] = VL_RAND_RESET_Q(64);
-    }
-    for (int __Vi0=0; __Vi0<4; ++__Vi0) {
-        vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_ext__DOT__Memory[__Vi0] = VL_RAND_RESET_I(32);
-    }
-    for (int __Vi0=0; __Vi0<4; ++__Vi0) {
-        vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_is_pre_ext__DOT__Memory[__Vi0] = VL_RAND_RESET_I(1);
-    }
-    for (int __Vi0=0; __Vi0<4; ++__Vi0) {
-        vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_valid_ext__DOT__Memory[__Vi0] = VL_RAND_RESET_I(1);
-    }
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_0 = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__allow_in = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT___GEN_4 = VL_RAND_RESET_I(32);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__unnamedblk1__DOT__enq_size = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__unnamedblk1__DOT__can_deq = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__unnamedblk1__DOT___GEN_7 = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__unnamedblk1__DOT___GEN_8 = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__unnamedblk1__DOT___GEN_9 = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__unnamedblk1__DOT___GEN_10 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT___PHT_ext_R1_data = VL_RAND_RESET_I(2);
     VL_RAND_RESET_W(128, vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT___BTB_ext_R0_data);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT__reg_head = VL_RAND_RESET_I(3);
@@ -4525,11 +4560,13 @@ void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vlSelf) {
     vlSelf->__Vdly__riscv_soc__DOT__core__DOT__cross_bar__DOT__r_lockId = VL_RAND_RESET_I(2);
     vlSelf->__Vdly__riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_tail = VL_RAND_RESET_I(2);
     vlSelf->__Vdly__riscv_soc__DOT__core__DOT__fetch__DOT__is_pre_tail = VL_RAND_RESET_I(2);
-    vlSelf->__Vdlyvset__riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_pc_ext__DOT__Memory__v0 = 0;
-    vlSelf->__Vdlyvset__riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_inst_ext__DOT__Memory__v0 = 0;
-    vlSelf->__Vdlyvset__riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_is_pre_ext__DOT__Memory__v0 = 0;
     vlSelf->__Vdly__riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT__reg_head = VL_RAND_RESET_I(3);
     vlSelf->__Vdlyvset__riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT__RAS_ext__DOT__Memory__v0 = 0;
+    vlSelf->__Vdly__riscv_soc__DOT__core__DOT__clint_de__DOT__reg_msip = VL_RAND_RESET_I(1);
+    vlSelf->__Vdly__riscv_soc__DOT__core__DOT__clint_de__DOT__reg_mtime = VL_RAND_RESET_Q(64);
+    vlSelf->__Vdly__riscv_soc__DOT__core__DOT__clint_de__DOT__reg_mtimecmp = VL_RAND_RESET_Q(64);
+    vlSelf->__Vdly__riscv_soc__DOT__core__DOT__clint_de__DOT__reg_ready = VL_RAND_RESET_I(1);
+    vlSelf->__Vdly__riscv_soc__DOT__core__DOT__clint_de__DOT__reg_state = VL_RAND_RESET_I(1);
     vlSelf->__Vdly__riscv_soc__DOT__axi_ram__DOT__reg_raddr = VL_RAND_RESET_Q(64);
     vlSelf->__Vdly__riscv_soc__DOT__axi_ram__DOT__reg_rlen = VL_RAND_RESET_I(4);
     vlSelf->__Vdly__riscv_soc__DOT__axi_ram__DOT__reg_ar_ready = VL_RAND_RESET_I(1);
