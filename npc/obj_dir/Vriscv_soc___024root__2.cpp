@@ -145,15 +145,15 @@ VL_INLINE_OPT void Vriscv_soc___024root___combo__TOP__6(Vriscv_soc___024root* vl
     VL_EXTEND_WQ(67,64, __Vtemp3206, vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_w_waddr);
     VL_EXTEND_WQ(67,64, __Vtemp3207, ((((1U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___LRU_2_T))
                                          ? (((QData)((IData)(
-                                                             vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__SRAM_3__DOT__Q[1U])) 
+                                                             vlSelf->riscv_soc__DOT__sram7__DOT__Q[1U])) 
                                              << 0x20U) 
                                             | (QData)((IData)(
-                                                              vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__SRAM_3__DOT__Q[0U])))
+                                                              vlSelf->riscv_soc__DOT__sram7__DOT__Q[0U])))
                                          : (((QData)((IData)(
-                                                             vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__SRAM_1__DOT__Q[1U])) 
+                                                             vlSelf->riscv_soc__DOT__sram5__DOT__Q[1U])) 
                                              << 0x20U) 
                                             | (QData)((IData)(
-                                                              vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__SRAM_1__DOT__Q[0U])))) 
+                                                              vlSelf->riscv_soc__DOT__sram5__DOT__Q[0U])))) 
                                        << 0xaU) | (QData)((IData)(
                                                                   ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_index) 
                                                                    << 4U)))));
@@ -171,7 +171,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___combo__TOP__6(Vriscv_soc___024root* vl
                                       ? (((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__hit_0) 
                                           | (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__hit_2))
                                           ? __Vtemp3206[0U]
-                                          : ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___T_10)
+                                          : ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___T)
                                               ? ((1U 
                                                   & (((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___tag_dirty_0_T) 
                                                       & (~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___LRU_2_T))) 
@@ -189,7 +189,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___combo__TOP__6(Vriscv_soc___024root* vl
                                       ? (((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__hit_0) 
                                           | (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__hit_2))
                                           ? __Vtemp3206[1U]
-                                          : ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___T_10)
+                                          : ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___T)
                                               ? ((1U 
                                                   & (((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___tag_dirty_0_T) 
                                                       & (~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___LRU_2_T))) 
@@ -207,7 +207,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___combo__TOP__6(Vriscv_soc___024root* vl
                                       ? (((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__hit_0) 
                                           | (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__hit_2))
                                           ? __Vtemp3206[2U]
-                                          : ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___T_10)
+                                          : ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___T)
                                               ? ((1U 
                                                   & (((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___tag_dirty_0_T) 
                                                       & (~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___LRU_2_T))) 
