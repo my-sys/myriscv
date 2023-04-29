@@ -71,10 +71,11 @@ class Br_predictor extends Module{
 	
 	val pre_valid = btb_valid &(btb_tag === tag) & pht_taken
 	val pre_next_pc = WireInit(0.U)
+	val ras_ready = RAS(reg_head)
 	when(pre_valid ){
 		when(btb_br_type === BRType.br_return)
 		{
-			pre_next_pc := RAS(reg_head)
+			pre_next_pc := ras_ready
 			reg_head	  := reg_head - 1.U 
 		}.elsewhen(btb_br_type === BRType.br_call){
 			pre_next_pc	:= btb_target_next_pc
