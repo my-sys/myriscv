@@ -29,7 +29,7 @@ class Br_predictor extends Module{
 	//pc = Tag0 +index+Tag1 
 	// 1      ()        64        2
 	//valid ----Tag------ Taget pc---- BrType 
-	val BTB = RegInit(VecInit(Seq.fill(64)(0.U(128.W))))
+	val BTB = Mem(64,UInt(0.U(128.W)))//RegInit(VecInit(Seq.fill(64)(0.U(128.W))))
 	//val PHT = Mem(64,UInt(2.W))
 	val RAS = RegInit(VecInit(Seq.fill(6)(0.U(64.W))))//Mem(6,UInt(64.W))
 	val PHT = Mem(64,UInt(2.W))//RegInit(Vec(Seq.fill(64)("b10".U(2.W))))
@@ -61,7 +61,7 @@ class Br_predictor extends Module{
 	val index 	= pc(8,3)
 	val tag   	= Cat(pc(63,9),pc(2))
 	
-	val btb_data 	= BTB(index)
+	val btb_data 	= BTB.read(index)
 	val pht_data 	= PHT.read(index)
 	val pht_taken   = pht_data(1)
 	val btb_valid 	= btb_data(122)
