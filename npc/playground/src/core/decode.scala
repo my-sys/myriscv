@@ -71,7 +71,7 @@ class Decode extends Module{
 	))
 	val temp_rs1_is_reg = (rs1_is_reg === 1.U)
 	val temp_rs2_is_reg = (rs2_is_reg === 1.U)
-	val change_rs1_addr = Mux(temp_rs1_is_regrs1_addr,0.U)
+	val change_rs1_addr = Mux(temp_rs1_is_reg,rs1_addr,0.U)
 	val change_rs1_data = Mux(temp_rs1_is_reg,io.normal_rd.rs1_data,0.U)
 	val change_rs2_addr = Mux(temp_rs2_is_reg,rs2_addr,0.U)
 	val change_rs2_data = Mux(temp_rs2_is_reg,io.normal_rd.rs2_data,0.U)
