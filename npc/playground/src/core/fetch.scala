@@ -23,11 +23,11 @@ class IBuf extends Module{
 	})
 	val flush		= io.flush
 
-	val ibuf_pc 	= RegInit(VecInit(Seq.fill(4)(0.U(64.W))))
-	val ibuf_inst 	= RegInit(VecInit(Seq.fill(4)(0.U(32.W))))
-	val ibuf_is_pre 	= RegInit(VecInit(Seq.fill(4)(false.B)))
+	val ibuf_pc 	= Mem(4,UInt(64.W))//RegInit(VecInit(Seq.fill(4)(0.U(64.W))))
+	val ibuf_inst 	= Mem(4,UInt(32.W))//RegInit(VecInit(Seq.fill(4)(0.U(32.W))))
+	val ibuf_is_pre = Mem(4,false.B)//RegInit(VecInit(Seq.fill(4)(false.B)))
 
-	val ibuf_valid  = RegInit(VecInit(Seq.fill(4)(false.B)))
+	val ibuf_valid  = Mem(4,false.B)//RegInit(VecInit(Seq.fill(4)(false.B)))
 	val reg_head 	= RegInit(0.U(2.W))
 	val reg_tail 	= RegInit(0.U(2.W))
 	val reg_ibuf_size = RegInit(0.U(3.W))
@@ -43,7 +43,10 @@ class IBuf extends Module{
 	val deq_size    = can_deq
 	val result_size = reg_ibuf_size + enq_size - deq_size
 	val allow_in	= reg_ibuf_size < 3.U	// 缓冲区的设计有误
-	val ibuf_pc_read = ibuf_pc(reg_tail)
+	val ibuf_pc_read = ibuf_pc.read(reg_tail)
+	val ibuf_inst_read = ibuf_inst.read(reg_tail)
+	val ibuf_is_pre_read = ibuf_is_pre.read(reg_tail)
+	val ibuf_valid_read = ibuf_valid.read(reg_tail)
 	when(flush){
 		reg_head	:= 0.U 
 		reg_tail 	:= 0.U 
@@ -68,11 +71,10 @@ class IBuf extends Module{
 
 	io.cache_buf.ready 	:= allow_in
 
-	io.put_pc.valid 	:= ibuf_valid(reg_tail)
+	io.put_pc.valid 	:= ibuf_valid_read
 	io.put_pc.bits.pc 	:= ibuf_pc_read
-	io.put_pc.bits.inst	:= ibuf_inst(reg_tail)
-	io.put_pc.bits.is_pre := ibuf_is_pre(reg_tail)
-}
+	io.put_pc.bits.inst	:= ibuf_inst_read
+	io.put_pc.bits.is_pre := ibuf_is_pre_read
 
 class Fetch extends Module{
 	val io = IO(new Bundle{
