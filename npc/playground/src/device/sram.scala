@@ -23,9 +23,9 @@ class SRAM extends Module{
 		val rdata 	= Output(UInt(128.W))
 	})
 	val Q    = RegInit(0.U(128.W))
-	val sram = Mem(64,UInt(128.W))//RegInit(VecInit(Seq.fill(64)(0.U(128.W))))
+	val sram = RegInit(VecInit(Seq.fill(64)(0.U(128.W))))
 	val A = io.addr
-	val temp_data = sram.read(A)
+	val temp_data = sram(A)
 	val bwen = ~io.wmask
 	val D = io.wdata
 	val cen = ~io.cen
