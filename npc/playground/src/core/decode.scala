@@ -69,7 +69,7 @@ class Decode extends Module{
 		//Inst_type.Type_N    -> (),
 		//Inst_type.Type_R    -> (),
 	))
-	val  rs2_is_reg = 1.U
+	//val  rs2_is_reg = 1.U
 	val temp_rs1_is_reg = (rs1_is_reg === 1.U)
 	val temp_rs2_is_reg = (rs2_is_reg === 1.U)
 	val change_rs1_addr = Mux(temp_rs1_is_reg,rs1_addr,0.U)
