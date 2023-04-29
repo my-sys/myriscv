@@ -57,7 +57,7 @@ class Decode extends Module{
 	val dest_addr    	= inst(11,7)
 
 	val opType :: exuType :: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg :: Nil = ListLookup(inst,decodefault,ISA.table)
-	val imm_data             = MuxLookup(instType, 0.U, List(
+	val imm_data             = MuxLookup(instType, 0.U(32.W), List(
 		Inst_type.Type_I    -> (Cat( Fill(20,inst(31)) ,inst(31,20))),  // sign extension
 		Inst_type.Type_U    -> (Cat(inst(31,12),0.U(12.W)) ), // sign extension 
 		Inst_type.Type_S    -> (Cat( Fill(20,inst(31)), Cat(inst(31,25),inst(11,7)) )), // sign extension
