@@ -25,9 +25,9 @@ class IBuf extends Module{
 
 	val ibuf_pc 	= Mem(4,UInt(64.W))//RegInit(VecInit(Seq.fill(4)(0.U(64.W))))
 	val ibuf_inst 	= Mem(4,UInt(32.W))//RegInit(VecInit(Seq.fill(4)(0.U(32.W))))
-	val ibuf_is_pre = Mem(4,false.B)//RegInit(VecInit(Seq.fill(4)(false.B)))
+	val ibuf_is_pre = Mem(4,Bool())//RegInit(VecInit(Seq.fill(4)(false.B)))
 
-	val ibuf_valid  = Mem(4,false.B)//RegInit(VecInit(Seq.fill(4)(false.B)))
+	val ibuf_valid  = Mem(4,Bool())//RegInit(VecInit(Seq.fill(4)(false.B)))
 	val reg_head 	= RegInit(0.U(2.W))
 	val reg_tail 	= RegInit(0.U(2.W))
 	val reg_ibuf_size = RegInit(0.U(3.W))
