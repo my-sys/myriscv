@@ -18,7 +18,7 @@ object Zhoutao_top extends App{
 
 	// riscv_soc()
 	def top = new riscv_soc()
-	val useMFC = false.B
+	val useMFC = false
 	val generator = Seq(chisel3.stage.ChiselGeneratorAnnotation(() => top))
     if (useMFC){
         (new ChiselStage).execute(args, generator :+ CIRCTTargetAnnotation(CIRCTTarget.Verilog))
