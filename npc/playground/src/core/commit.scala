@@ -91,5 +91,5 @@ class Commit extends Module{
 	BoringUtils.addSource(difftest_irq,"DIFFTEST_IRQ")
 	BoringUtils.addSource(difftest_peripheral,"DIFFTEST_PERIPHERAL")
 
-	BoringUtils.addSource(VecInit((0 to 31).map(i => reg_file.read(i.U))),"DIFFTEST_REG")
+	BoringUtils.addSource(VecInit((0 to 31).map(i => reg_file(i.U))),"DIFFTEST_REG")
 }
