@@ -46,7 +46,9 @@ IMG ?=
 verilog:
 	$(call git_commit, "generate verilog")
 	mkdir -p $(BUILD_DIR)
-	mill playground.runMain Zhoutao_top -td $(BUILD_DIR)
+#mill playground.runMain Zhoutao_top -td $(BUILD_DIR)
+	mill -i __.test.runMain Zhoutao_top -td $(BUILD_DIR)
+
 	@echo "generate verilog success!"
 
 
