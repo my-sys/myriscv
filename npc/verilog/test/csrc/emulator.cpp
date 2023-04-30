@@ -6,6 +6,54 @@
 #include "difftest.h"
 #include "disasm.h"
 #include "./device/device.h"
+#include "verilated_dpi.h"
+uint64_t *top_io_difftest_pc = NULL;
+uint64_t *top_io_difftest_inst = NULL;
+uint64_t *top_io_difftest_commit = NULL;
+uint64_t *top_io_difftest_mstatus = NULL;
+uint64_t *top_io_difftest_mtvec = NULL;
+uint64_t *top_io_difftest_mepc = NULL;
+uint64_t *top_io_difftest_mcause = NULL;
+uint64_t *top_io_difftest_reg = NULL;
+uint64_t *top_io_inst_counter = NULL;
+uint64_t *top_io_difftest_irq = NULL;
+uint64_t *top_io_difftest_peripheral = NULL;
+
+extern "C" void set_difftest_gpr_ptr(const svOpenArrayHandle r) {
+  top_io_difftest_reg = (uint64_t *)(((VerilatedDpiOpenVar*)r)->datap());
+}
+extern "C" void set_difftest_pc_ptr(const svOpenArrayHandle r) {
+  top_io_difftest_pc = (uint64_t *)(((VerilatedDpiOpenVar*)r)->datap());
+}
+extern "C" void set_difftest_inst_ptr(const svOpenArrayHandle r) {
+  top_io_difftest_inst = (uint64_t *)(((VerilatedDpiOpenVar*)r)->datap());
+}
+extern "C" void set_difftest_commit_ptr(const svOpenArrayHandle r) {
+  top_io_difftest_commit = (uint64_t *)(((VerilatedDpiOpenVar*)r)->datap());
+}
+extern "C" void set_difftest_mstatus_ptr(const svOpenArrayHandle r) {
+  top_io_difftest_mstatus = (uint64_t *)(((VerilatedDpiOpenVar*)r)->datap());
+}
+extern "C" void set_difftest_mtvec_ptr(const svOpenArrayHandle r) {
+  top_io_difftest_mtvec = (uint64_t *)(((VerilatedDpiOpenVar*)r)->datap());
+}
+extern "C" void set_difftest_mepc_ptr(const svOpenArrayHandle r) {
+  top_io_difftest_mepc = (uint64_t *)(((VerilatedDpiOpenVar*)r)->datap());
+}
+extern "C" void set_difftest_mcause_ptr(const svOpenArrayHandle r) {
+  top_io_difftest_mcause = (uint64_t *)(((VerilatedDpiOpenVar*)r)->datap());
+}
+extern "C" void set_difftest_inst_counter_ptr(const svOpenArrayHandle r) {
+  top_io_inst_counter = (uint64_t *)(((VerilatedDpiOpenVar*)r)->datap());
+}
+
+extern "C" void set_difftest_irq(const svOpenArrayHandle r) {
+  top_io_difftest_irq = (uint64_t *)(((VerilatedDpiOpenVar*)r)->datap());
+}
+extern "C" void set_difftest_peripheral(const svOpenArrayHandle r) {
+  top_io_difftest_peripheral = (uint64_t *)(((VerilatedDpiOpenVar*)r)->datap());
+}
+
 static uint64_t iringbuf1[16] = {0};
 static uint64_t iringbuf2[16] = {0};
 CPU_state cpu = {};
@@ -20,6 +68,10 @@ Emulator::Emulator(){
     top->trace(m_trace,1);
     m_trace->open("waveform.vcd");
 #endif
+
+//----difftest----
+
+//------------
 	reset(10);
 };
 
@@ -54,7 +106,7 @@ void Emulator::is_satrt_wave(bool flag){
 void Emulator::execute_once(){
 	int i = 0;
 	execute_cycle();
-	while(top->io_difftest_commit == 0){
+	while(*top_io_difftest_commit == 0){
 		if(i>100){printf("~~~~~Dead cycle~~~~~\n");
 			npc_state.state 	= NPC_ABORT;
 			npc_state.halt_pc	= cpu.pc;
@@ -64,25 +116,28 @@ void Emulator::execute_once(){
 		i++;
 	}
 	
-	cpu.pc = top->io_difftest_pc;
-	cpu.inst = top->io_difftest_inst;
-#define REGS(x) cpu.gpr[x] = top->io_difftest_reg_##x
-    REGS(0);REGS(1);REGS(2);REGS(3);REGS(4);REGS(5);REGS(6);REGS(7);
-    REGS(8);REGS(9);REGS(10);REGS(11);REGS(12);REGS(13);REGS(14);REGS(15);
-    REGS(16);REGS(17);REGS(18);REGS(19);REGS(20);REGS(21);REGS(22);REGS(23);
-    REGS(24);REGS(25);REGS(26);REGS(27);REGS(28);REGS(29);REGS(30);REGS(31);
-#undef REGS
+	cpu.pc = *top_io_difftest_pc;
+	cpu.inst = *top_io_difftest_inst;
+	for(int i = 0; i<32;i++){
+		cpu.gpr[i] = top_io_difftest_reg[i];
+	}
+// #define REGS(x) cpu.gpr[x] = *top_io_difftest_reg_##x
+//     REGS(0);REGS(1);REGS(2);REGS(3);REGS(4);REGS(5);REGS(6);REGS(7);
+//     REGS(8);REGS(9);REGS(10);REGS(11);REGS(12);REGS(13);REGS(14);REGS(15);
+//     REGS(16);REGS(17);REGS(18);REGS(19);REGS(20);REGS(21);REGS(22);REGS(23);
+//     REGS(24);REGS(25);REGS(26);REGS(27);REGS(28);REGS(29);REGS(30);REGS(31);
+// #undef REGS
 
-	cpu.csr[5]  = top->io_difftest_mstatus;
-	cpu.csr[10] = top->io_difftest_mtvec;
-	cpu.csr[13] = top->io_difftest_mepc;
-	cpu.csr[14] = top->io_difftest_mcause;
+	cpu.csr[5] = *top_io_difftest_mstatus;
+	cpu.csr[10] = *top_io_difftest_mtvec;
+	cpu.csr[13] = *top_io_difftest_mepc;
+	cpu.csr[14] = *top_io_difftest_mcause;
 
-	iringbuf1[top->io_inst_counter%16] = cpu.pc;
-	iringbuf2[top->io_inst_counter%16] = cpu.inst;
+	iringbuf1[*top_io_inst_counter%16] = cpu.pc;
+	iringbuf2[*top_io_inst_counter%16] = cpu.inst;
 #ifdef CONFIG_DIFFTEST 
-	if(top->io_difftest_peripheral)difftest_skip_ref();
-	difftest_step(top->io_difftest_pc,top->io_difftest_irq);
+	if(*top_io_difftest_peripheral)difftest_skip_ref();
+	difftest_step(*top_io_difftest_pc,*top_io_difftest_irq);
 #endif
 
 #ifdef CONFIG_ITRACE_ALL
@@ -123,7 +178,7 @@ void Emulator::assert_fail_msg(){
   char *p;
   for(int i = 0; i<16; i++){
 	  p = instbuf;
-      if((top->io_inst_counter%16) == i){
+      if((*top_io_inst_counter%16) == i){
 		  disassemble(p,90,iringbuf1[i],(uint8_t *)&iringbuf2[i],4);
           printf("0x%lx, %s <------\n",iringbuf1[i],instbuf);
       }else{
@@ -164,9 +219,9 @@ bool Emulator::isa_difftest_checkregs(CPU_state *ref, vaddr_t pc){
 }
 
 void Emulator::isa_reg_display(){
-	printf("inst_counter: = %lx\n",top->io_inst_counter);
+	printf("inst_counter: = %lx\n",*top_io_inst_counter);
 	printf("cycles:= %lx\n ",cycles);
-#define gpr(x) top->io_difftest_reg_##x
+#define gpr(x) top_io_difftest_reg[x]
     printf("$0($0) = %lx, $1(ra) = %lx, $2(sp) = %lx, $3(gp) = %lx \n",gpr(0),gpr(1),gpr(2),gpr(3));
     printf("$4(tp) = %lx, $5(t0) = %lx, $6(t1) = %lx, $7(t2) = %lx \n",gpr(4),gpr(5),gpr(6),gpr(7));
     printf("$8(s0) = %lx, $9(s1) = %lx, $10(a0) = %lx, $11(a1) = %lx \n",gpr(8),gpr(9),gpr(10),gpr(11));
@@ -203,14 +258,14 @@ void Emulator::reset(int n){
 };
 
 void Emulator::read_regs(uint64_t* reg){
-#define REGS(x) reg[x] = top->io_difftest_reg_##x
+#define REGS(x) reg[x] = top_io_difftest_reg[x]
     REGS(0);REGS(1);REGS(2);REGS(3);REGS(4);REGS(5);REGS(6);REGS(7);
     REGS(8);REGS(9);REGS(10);REGS(11);REGS(12);REGS(13);REGS(14);REGS(15);
     REGS(16);REGS(17);REGS(18);REGS(19);REGS(20);REGS(21);REGS(22);REGS(23);
     REGS(24);REGS(25);REGS(26);REGS(27);REGS(28);REGS(29);REGS(30);REGS(31);
 
-    reg[32] = top->io_difftest_pc;
-    reg[33] = top->io_difftest_inst;
+    reg[32] = *top_io_difftest_pc;
+    reg[33] = *top_io_difftest_inst;
 };
 
 // void Emulator::read_pc_and_inst(uint64_t* reg){

@@ -4,9 +4,15 @@ export PATH := $(PATH):$(abspath ./utils)
 
 
 # project source
+ifeq ("verilog","verilog")
+VSRCS = $(shell find $(abspath ./verilog/test/vsrc) -name "*.v") $(shell find $(abspath ./verilog/src) -name "*.v")
+CSRCS = $(shell find $(abspath ./verilog/test/csrc) -name "*.c" -or -name "*.cc" -or -name "*.cpp") $(shell find $(abspath ./verilog/test/csrc/device) -name "*.c")
+INCLUDE_DIR = $(abspath ./verilog/test/include)
+else
 VSRCS = $(shell find $(abspath ./playground/test/vsrc) -name "*.v") $(shell find $(abspath ./build) -name "*.v")
 CSRCS = $(shell find $(abspath ./playground/test/csrc) -name "*.c" -or -name "*.cc" -or -name "*.cpp") $(shell find $(abspath ./playground/test/csrc/device) -name "*.c")
 INCLUDE_DIR = $(abspath ./playground/test/include)
+endif
 # Generate C++ in executable form
 VERILATOR_FLAGS += -cc --exe
 # Generate makefile dependencies (not shown as complicates the Makefile)
@@ -14,7 +20,7 @@ VERILATOR_FLAGS += -cc --exe
 # Optimize
 VERILATOR_FLAGS += --x-assign fast -O3
 # Warn abount lint issues; may not want this on less solid designs
-VERILATOR_FLAGS += -Wall
+#VERILATOR_FLAGS += -Wall
 # Make waveforms
 VERILATOR_FLAGS += --trace
 #-------------------------------------------
@@ -32,7 +38,8 @@ VERILATOR_FLAGS += --trace
 
 #VERILATOR_FLAGS += coverage_on  -file "verilator_config.vlt"
 BIN = ./obj_dir/V$(TOPNAME)
-CFLAGS = -O3 -Wall -I$(INCLUDE_DIR) 
+#CFLAGS = -O3 -Wall -I$(INCLUDE_DIR) 
+CFLAGS = -O3 -I$(INCLUDE_DIR) 
 LDFLAGS = -lpthread -lSDL2 -ldl -lpcre -lreadline
 
 CFLAGS += $(shell llvm-config --cxxflags) -fPIE 
@@ -46,8 +53,8 @@ IMG ?=
 verilog:
 	$(call git_commit, "generate verilog")
 	mkdir -p $(BUILD_DIR)
-#mill playground.runMain Zhoutao_top -td $(BUILD_DIR)
-	mill -i __.test.runMain Zhoutao_top -td $(BUILD_DIR)
+	mill playground.runMain Zhoutao_top -td $(BUILD_DIR)
+#mill -i __.test.runMain Zhoutao_top -td $(BUILD_DIR)
 
 	@echo "generate verilog success!"
 
@@ -78,8 +85,8 @@ compile1:$(VSRCS) $(CSRCS)
 	@echo "--- BUILD ---------"
 	make -j3 -C obj_dir -f V$(TOPNAME).mk 
 
-run: 
-	make verilog 
+run:
+#	make verilog
 	make compile
 	$(call git_commit, "sim RTL xingk")
 	obj_dir/V$(TOPNAME)  $(ARGS_DIFF) $(IMG)
