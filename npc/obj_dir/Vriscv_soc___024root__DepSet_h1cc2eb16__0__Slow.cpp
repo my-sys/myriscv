@@ -239,6 +239,9 @@ VL_ATTR_COLD void Vriscv_soc___024root___stl_sequent__TOP__0(Vriscv_soc___024roo
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_100 
         = ((3U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_state)) 
            & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_write));
+    vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_104 
+        = ((3U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_state)) 
+           & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_r_valid));
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___reg_sram0_valid_T 
         = (vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_sram0_valid 
            | (1ULL << (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_index)));
@@ -257,9 +260,6 @@ VL_ATTR_COLD void Vriscv_soc___024root___stl_sequent__TOP__0(Vriscv_soc___024roo
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___reg_sram2_dirty_T_1 
         = ((~ (1ULL << (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_index))) 
            & vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_sram2_dirty);
-    vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_104 
-        = ((3U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_state)) 
-           & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_r_valid));
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_102 
         = ((3U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_state)) 
            & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_w_valid));
@@ -1317,12 +1317,6 @@ VL_ATTR_COLD void Vriscv_soc___024root___stl_sequent__TOP__0(Vriscv_soc___024roo
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_53 
             = ((~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT____VdfgTmp_hdb124cd4__0)) 
                & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_w_wlast));
-        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_49 
-            = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT____VdfgTmp_hdb124cd4__0) 
-               | (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_w_valid));
-        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_50 
-            = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT____VdfgTmp_hdb124cd4__0) 
-               | (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_b_ready));
         if (vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT____VdfgTmp_hdb124cd4__0) {
             vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_55 = 1U;
             vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_52 
@@ -1339,15 +1333,21 @@ VL_ATTR_COLD void Vriscv_soc___024root___stl_sequent__TOP__0(Vriscv_soc___024roo
             vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_52 
                 = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_w_wdata;
         }
+        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_49 
+            = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT____VdfgTmp_hdb124cd4__0) 
+               | (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_w_valid));
+        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_50 
+            = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT____VdfgTmp_hdb124cd4__0) 
+               | (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_b_ready));
     } else {
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_53 
             = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_w_wlast;
+        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_55 
+            = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cnt;
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_49 
             = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_w_valid;
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_50 
             = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_b_ready;
-        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_55 
-            = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cnt;
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_52 
             = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_w_wdata;
     }
@@ -3486,6 +3486,9 @@ VL_ATTR_COLD void Vriscv_soc___024root___stl_sequent__TOP__0(Vriscv_soc___024roo
                | (IData)(vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_bus_valid));
     }
     if (vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___T_13) {
+        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_79 
+            = ((~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache_io_cache_bus_r_bits_rlast)) 
+               & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_r_valid));
         if (vlSelf->riscv_soc__DOT__core__DOT__d_cache_io_cache_bus_r_bits_rlast) {
             vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_80 = 0xffffU;
             if (vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_is_w) {
@@ -3540,14 +3543,11 @@ VL_ATTR_COLD void Vriscv_soc___024root___stl_sequent__TOP__0(Vriscv_soc___024roo
             vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_82[2U] = 0U;
             vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_82[3U] = 0U;
         }
-        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_79 
-            = ((~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache_io_cache_bus_r_bits_rlast)) 
-               & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_r_valid));
     } else {
-        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_80 
-            = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb;
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_79 
             = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_r_valid;
+        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_80 
+            = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb;
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_83 
             = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata;
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT___GEN_82[0U] 

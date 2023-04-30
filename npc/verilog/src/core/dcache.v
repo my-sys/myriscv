@@ -251,131 +251,83 @@ module DCache(
   assign io_cache_bus_r_valid = reg_r_valid; // @[dcache.scala 337:41]
   assign io_cache_bus_r_bits_raddr = reg_r_raddr; // @[dcache.scala 336:41]
 
-  always @(posedge clock) begin
+always @(posedge clock)begin 
     if (reset) begin // @[dcache.scala 45:42]
       reg_cache_state <= 2'h0; // @[dcache.scala 45:42]
+	  reg_wdata <= 64'h0;
+	  reg_wstrb <= 8'h0;
+	  reg_is_w <= 1'h0;
+	  reg_tag <= 54'h0;
+	  reg_index <= 6'h0;
+	  reg_offset <= 4'h0;
+	  reg_ready <= 1'h0;
+	  reg_cache_write <= 1'h0;
+	  reg_r_valid <= 1'h0;
     end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
-      if (io_cpu_valid) begin // @[dcache.scala 184:43]
+      reg_ready <= 1'h0;
+	  reg_cache_write <= 1'h0;
+	  reg_r_valid <= 1'h0;
+	  if (io_cpu_valid) begin // @[dcache.scala 184:43]
         reg_cache_state <= 2'h1; // @[dcache.scala 193:49]
+		reg_wdata <= io_cpu_bits_wdata;
+		reg_wstrb <= io_cpu_bits_wstrb;
+		reg_is_w <= io_cpu_bits_is_w;
+		reg_tag <= Tag;
+		reg_index <= Index;
+		reg_offset <= Offset;
       end else begin
         reg_cache_state <= 2'h0; // @[dcache.scala 197:49]
       end
+
     end else if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
       if (hit_0 | hit_2) begin // @[dcache.scala 211:44]
         reg_cache_state <= _GEN_31;
+		reg_ready <= _GEN_32;
+		reg_cache_write <= _GEN_29;
+		reg_r_valid <= _GEN_35;
       end else begin
         reg_cache_state <= 2'h2;
+		reg_r_valid <= 1'h1;
       end
+
     end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
       reg_cache_state <= _GEN_98;
+	  reg_ready <= _GEN_99;
+	  reg_cache_write <= _GEN_97;
+	  reg_r_valid <= _GEN_79;
     end else begin
       reg_cache_state <= _GEN_105;
+	  reg_ready <= _GEN_101;
+	  reg_cache_write <= _GEN_100;
+	  reg_r_valid <= _GEN_104;
     end
-    if (reset) begin // @[dcache.scala 47:42]
-      reg_wdata <= 64'h0; // @[dcache.scala 47:42]
-    end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
-      if (io_cpu_valid) begin // @[dcache.scala 184:43]
-        reg_wdata <= io_cpu_bits_wdata; // @[dcache.scala 186:57]
-      end
-    end
-    if (reset) begin // @[dcache.scala 48:42]
-      reg_wstrb <= 8'h0; // @[dcache.scala 48:42]
-    end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
-      if (io_cpu_valid) begin // @[dcache.scala 184:43]
-        reg_wstrb <= io_cpu_bits_wstrb; // @[dcache.scala 187:57]
-      end
-    end
-    if (reset) begin // @[dcache.scala 49:42]
-      reg_is_w <= 1'h0; // @[dcache.scala 49:42]
-    end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
-      if (io_cpu_valid) begin // @[dcache.scala 184:43]
-        reg_is_w <= io_cpu_bits_is_w; // @[dcache.scala 188:57]
-      end
-    end
-    if (reset) begin // @[dcache.scala 50:42]
-      reg_tag <= 54'h0; // @[dcache.scala 50:42]
-    end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
-      if (io_cpu_valid) begin // @[dcache.scala 184:43]
-        reg_tag <= Tag; // @[dcache.scala 189:57]
-      end
-    end
-    if (reset) begin // @[dcache.scala 51:42]
-      reg_index <= 6'h0; // @[dcache.scala 51:42]
-    end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
-      if (io_cpu_valid) begin // @[dcache.scala 184:43]
-        reg_index <= Index; // @[dcache.scala 190:57]
-      end
-    end
-    if (reset) begin // @[dcache.scala 52:42]
-      reg_offset <= 4'h0; // @[dcache.scala 52:42]
-    end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
-      if (io_cpu_valid) begin // @[dcache.scala 184:43]
-        reg_offset <= Offset; // @[dcache.scala 191:57]
-      end
-    end
-    if (reset) begin // @[dcache.scala 54:42]
-      reg_ready <= 1'h0; // @[dcache.scala 54:42]
-    end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
-      reg_ready <= 1'h0; // @[dcache.scala 199:41]
-    end else if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
-      if (hit_0 | hit_2) begin // @[dcache.scala 211:44]
-        reg_ready <= _GEN_32;
-      end
-    end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
-      reg_ready <= _GEN_99;
-    end else begin
-      reg_ready <= _GEN_101;
-    end
+
     if (reset) begin // @[dcache.scala 55:42]
       reg_rdata <= 64'h0; // @[dcache.scala 55:42]
+	  reg_cache_wstrb <= 16'h0; // @[dcache.scala 58:38]
+	  reg_cache_wdata <= 128'h0;
     end else if (!(2'h0 == reg_cache_state)) begin // @[dcache.scala 182:32]
       if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
         if (hit_0 | hit_2) begin // @[dcache.scala 211:44]
           reg_rdata <= _GEN_33;
+		  reg_cache_wdata <= _GEN_30;
         end
-      end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
-        reg_rdata <= _GEN_83;
-      end
-    end
-    if (reset) begin // @[dcache.scala 57:38]
-      reg_cache_write <= 1'h0; // @[dcache.scala 57:38]
-    end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
-      reg_cache_write <= 1'h0; // @[dcache.scala 201:41]
-    end else if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
-      if (hit_0 | hit_2) begin // @[dcache.scala 211:44]
-        reg_cache_write <= _GEN_29;
-      end
-    end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
-      reg_cache_write <= _GEN_97;
-    end else begin
-      reg_cache_write <= _GEN_100;
-    end
-    if (reset) begin // @[dcache.scala 58:38]
-      reg_cache_wstrb <= 16'h0; // @[dcache.scala 58:38]
-    end else if (!(2'h0 == reg_cache_state)) begin // @[dcache.scala 182:32]
-      if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
+
         if (reg_offset[3]) begin // @[dcache.scala 64:38]
           reg_cache_wstrb <= _cache_wstrb_T_1;
         end else begin
           reg_cache_wstrb <= _cache_wstrb_T_2;
         end
       end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
-        reg_cache_wstrb <= _GEN_80;
+        reg_rdata <= _GEN_83;
+		reg_cache_wstrb <= _GEN_80;
+		reg_cache_wdata <= _GEN_82;
       end
     end
-    if (reset) begin // @[dcache.scala 59:38]
-      reg_cache_wdata <= 128'h0; // @[dcache.scala 59:38]
-    end else if (!(2'h0 == reg_cache_state)) begin // @[dcache.scala 182:32]
-      if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
-        if (hit_0 | hit_2) begin // @[dcache.scala 211:44]
-          reg_cache_wdata <= _GEN_30;
-        end
-      end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
-        reg_cache_wdata <= _GEN_82;
-      end
-    end
+
     if (reset) begin // @[dcache.scala 60:42]
       reg_chosen_tag <= 1'h0; // @[dcache.scala 60:42]
+	  
     end else if (!(2'h0 == reg_cache_state)) begin // @[dcache.scala 182:32]
       if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
         if (hit_0 | hit_2) begin // @[dcache.scala 211:44]
@@ -385,6 +337,7 @@ module DCache(
         end
       end
     end
+
     if (reset) begin // @[dcache.scala 83:42]
       reg_sram0_valid <= 64'h0; // @[dcache.scala 83:42]
     end else if (is_sram0_write) begin // @[dcache.scala 90:35]
@@ -413,71 +366,44 @@ module DCache(
         reg_sram2_dirty <= _reg_sram2_dirty_T_1;
       end
     end
-    reg_r_raddr <= _GEN_166[63:0]; // @[dcache.scala 128:{42,42}]
-    if (reset) begin // @[dcache.scala 129:42]
-      reg_r_valid <= 1'h0; // @[dcache.scala 129:42]
-    end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
-      reg_r_valid <= 1'h0; // @[dcache.scala 205:41]
-    end else if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
-      if (hit_0 | hit_2) begin // @[dcache.scala 211:44]
-        reg_r_valid <= _GEN_35;
-      end else begin
-        reg_r_valid <= 1'h1;
-      end
-    end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
-      reg_r_valid <= _GEN_79;
-    end else begin
-      reg_r_valid <= _GEN_104;
-    end
-    reg_w_waddr <= _GEN_167[63:0]; // @[dcache.scala 131:{42,42}]
+
     if (reset) begin // @[dcache.scala 132:42]
       reg_w_wdata <= 64'h0; // @[dcache.scala 132:42]
+	  reg_w_wlast <= 1'h0;
+	  reg_cnt <= 2'h0;
     end else if (!(2'h0 == reg_cache_state)) begin // @[dcache.scala 182:32]
       if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
         if (!(hit_0 | hit_2)) begin // @[dcache.scala 211:44]
           reg_w_wdata <= _GEN_52;
+		  reg_w_wlast <= _GEN_53;
+		  reg_cnt <= _GEN_55;
         end
       end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
         reg_w_wdata <= _GEN_94;
+		reg_w_wlast <= _GEN_91;
+		reg_cnt <= _GEN_93;
       end
     end
-    if (reset) begin // @[dcache.scala 133:42]
-      reg_w_wlast <= 1'h0; // @[dcache.scala 133:42]
-    end else if (!(2'h0 == reg_cache_state)) begin // @[dcache.scala 182:32]
-      if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
-        if (!(hit_0 | hit_2)) begin // @[dcache.scala 211:44]
-          reg_w_wlast <= _GEN_53;
-        end
-      end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
-        reg_w_wlast <= _GEN_91;
-      end
-    end
+
     if (reset) begin // @[dcache.scala 134:42]
       reg_w_valid <= 1'h0; // @[dcache.scala 134:42]
+	  reg_b_ready <= 1'h0;
     end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
       reg_w_valid <= 1'h0; // @[dcache.scala 203:41]
+	  reg_b_ready <= 1'h0;
     end else if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
       if (!(hit_0 | hit_2)) begin // @[dcache.scala 211:44]
         reg_w_valid <= _GEN_49;
+		reg_b_ready <= _GEN_50;
       end
     end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
       reg_w_valid <= _GEN_92;
+	  reg_b_ready <= _GEN_96;
     end else begin
       reg_w_valid <= _GEN_102;
+	  reg_b_ready <= _GEN_103;
     end
-    if (reset) begin // @[dcache.scala 136:42]
-      reg_b_ready <= 1'h0; // @[dcache.scala 136:42]
-    end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
-      reg_b_ready <= 1'h0; // @[dcache.scala 204:41]
-    end else if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
-      if (!(hit_0 | hit_2)) begin // @[dcache.scala 211:44]
-        reg_b_ready <= _GEN_50;
-      end
-    end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
-      reg_b_ready <= _GEN_96;
-    end else begin
-      reg_b_ready <= _GEN_103;
-    end
+
     if (reset) begin // @[dcache.scala 155:58]
       reg_lru_2 <= 64'h0; // @[dcache.scala 155:58]
     end else if (reg_start_operation) begin // @[dcache.scala 159:34]
@@ -496,18 +422,270 @@ module DCache(
     end else if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
       reg_start_operation <= 1'h0; // @[dcache.scala 209:45]
     end
-    if (reset) begin // @[dcache.scala 177:42]
-      reg_cnt <= 2'h0; // @[dcache.scala 177:42]
-    end else if (!(2'h0 == reg_cache_state)) begin // @[dcache.scala 182:32]
-      if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
-        if (!(hit_0 | hit_2)) begin // @[dcache.scala 211:44]
-          reg_cnt <= _GEN_55;
-        end
-      end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
-        reg_cnt <= _GEN_93;
-      end
-    end
+
+	reg_w_waddr <= _GEN_167[63:0]; // @[dcache.scala 131:{42,42}]
+    reg_r_raddr <= _GEN_166[63:0]; // @[dcache.scala 128:{42,42}]
     reg_rbus_finish <= reset | _GEN_156; // @[dcache.scala 178:{38,38}]
     reg_wbus_finish <= reset | _GEN_160; // @[dcache.scala 179:{38,38}]
-  end
+end 
+
+//   always @(posedge clock) begin
+//     if (reset) begin // @[dcache.scala 45:42]
+//       reg_cache_state <= 2'h0; // @[dcache.scala 45:42]
+//     end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       if (io_cpu_valid) begin // @[dcache.scala 184:43]
+//         reg_cache_state <= 2'h1; // @[dcache.scala 193:49]
+//       end else begin
+//         reg_cache_state <= 2'h0; // @[dcache.scala 197:49]
+//       end
+//     end else if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       if (hit_0 | hit_2) begin // @[dcache.scala 211:44]
+//         reg_cache_state <= _GEN_31;
+//       end else begin
+//         reg_cache_state <= 2'h2;
+//       end
+//     end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       reg_cache_state <= _GEN_98;
+//     end else begin
+//       reg_cache_state <= _GEN_105;
+//     end
+//     if (reset) begin // @[dcache.scala 47:42]
+//       reg_wdata <= 64'h0; // @[dcache.scala 47:42]
+//     end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       if (io_cpu_valid) begin // @[dcache.scala 184:43]
+//         reg_wdata <= io_cpu_bits_wdata; // @[dcache.scala 186:57]
+//       end
+//     end
+//     if (reset) begin // @[dcache.scala 48:42]
+//       reg_wstrb <= 8'h0; // @[dcache.scala 48:42]
+//     end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       if (io_cpu_valid) begin // @[dcache.scala 184:43]
+//         reg_wstrb <= io_cpu_bits_wstrb; // @[dcache.scala 187:57]
+//       end
+//     end
+//     if (reset) begin // @[dcache.scala 49:42]
+//       reg_is_w <= 1'h0; // @[dcache.scala 49:42]
+//     end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       if (io_cpu_valid) begin // @[dcache.scala 184:43]
+//         reg_is_w <= io_cpu_bits_is_w; // @[dcache.scala 188:57]
+//       end
+//     end
+//     if (reset) begin // @[dcache.scala 50:42]
+//       reg_tag <= 54'h0; // @[dcache.scala 50:42]
+//     end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       if (io_cpu_valid) begin // @[dcache.scala 184:43]
+//         reg_tag <= Tag; // @[dcache.scala 189:57]
+//       end
+//     end
+//     if (reset) begin // @[dcache.scala 51:42]
+//       reg_index <= 6'h0; // @[dcache.scala 51:42]
+//     end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       if (io_cpu_valid) begin // @[dcache.scala 184:43]
+//         reg_index <= Index; // @[dcache.scala 190:57]
+//       end
+//     end
+//     if (reset) begin // @[dcache.scala 52:42]
+//       reg_offset <= 4'h0; // @[dcache.scala 52:42]
+//     end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       if (io_cpu_valid) begin // @[dcache.scala 184:43]
+//         reg_offset <= Offset; // @[dcache.scala 191:57]
+//       end
+//     end
+//     if (reset) begin // @[dcache.scala 54:42]
+//       reg_ready <= 1'h0; // @[dcache.scala 54:42]
+//     end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       reg_ready <= 1'h0; // @[dcache.scala 199:41]
+//     end else if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       if (hit_0 | hit_2) begin // @[dcache.scala 211:44]
+//         reg_ready <= _GEN_32;
+//       end
+//     end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       reg_ready <= _GEN_99;
+//     end else begin
+//       reg_ready <= _GEN_101;
+//     end
+//     if (reset) begin // @[dcache.scala 55:42]
+//       reg_rdata <= 64'h0; // @[dcache.scala 55:42]
+//     end else if (!(2'h0 == reg_cache_state)) begin // @[dcache.scala 182:32]
+//       if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
+//         if (hit_0 | hit_2) begin // @[dcache.scala 211:44]
+//           reg_rdata <= _GEN_33;
+//         end
+//       end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
+//         reg_rdata <= _GEN_83;
+//       end
+//     end
+//     if (reset) begin // @[dcache.scala 57:38]
+//       reg_cache_write <= 1'h0; // @[dcache.scala 57:38]
+//     end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       reg_cache_write <= 1'h0; // @[dcache.scala 201:41]
+//     end else if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       if (hit_0 | hit_2) begin // @[dcache.scala 211:44]
+//         reg_cache_write <= _GEN_29;
+//       end
+//     end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       reg_cache_write <= _GEN_97;
+//     end else begin
+//       reg_cache_write <= _GEN_100;
+//     end
+//     if (reset) begin // @[dcache.scala 58:38]
+//       reg_cache_wstrb <= 16'h0; // @[dcache.scala 58:38]
+//     end else if (!(2'h0 == reg_cache_state)) begin // @[dcache.scala 182:32]
+//       if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
+//         if (reg_offset[3]) begin // @[dcache.scala 64:38]
+//           reg_cache_wstrb <= _cache_wstrb_T_1;
+//         end else begin
+//           reg_cache_wstrb <= _cache_wstrb_T_2;
+//         end
+//       end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
+//         reg_cache_wstrb <= _GEN_80;
+//       end
+//     end
+//     if (reset) begin // @[dcache.scala 59:38]
+//       reg_cache_wdata <= 128'h0; // @[dcache.scala 59:38]
+//     end else if (!(2'h0 == reg_cache_state)) begin // @[dcache.scala 182:32]
+//       if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
+//         if (hit_0 | hit_2) begin // @[dcache.scala 211:44]
+//           reg_cache_wdata <= _GEN_30;
+//         end
+//       end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
+//         reg_cache_wdata <= _GEN_82;
+//       end
+//     end
+//     if (reset) begin // @[dcache.scala 60:42]
+//       reg_chosen_tag <= 1'h0; // @[dcache.scala 60:42]
+//     end else if (!(2'h0 == reg_cache_state)) begin // @[dcache.scala 182:32]
+//       if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
+//         if (hit_0 | hit_2) begin // @[dcache.scala 211:44]
+//           reg_chosen_tag <= _reg_chosen_tag_T; // @[dcache.scala 214:49]
+//         end else begin
+//           reg_chosen_tag <= _GEN_44;
+//         end
+//       end
+//     end
+//     if (reset) begin // @[dcache.scala 83:42]
+//       reg_sram0_valid <= 64'h0; // @[dcache.scala 83:42]
+//     end else if (is_sram0_write) begin // @[dcache.scala 90:35]
+//       reg_sram0_valid <= _reg_sram0_valid_T; // @[dcache.scala 91:33]
+//     end
+//     if (reset) begin // @[dcache.scala 84:42]
+//       reg_sram0_dirty <= 64'h0; // @[dcache.scala 84:42]
+//     end else if (is_sram0_write) begin // @[dcache.scala 90:35]
+//       if (reg_is_w) begin // @[dcache.scala 92:39]
+//         reg_sram0_dirty <= _reg_sram0_dirty_T;
+//       end else begin
+//         reg_sram0_dirty <= _reg_sram0_dirty_T_1;
+//       end
+//     end
+//     if (reset) begin // @[dcache.scala 113:42]
+//       reg_sram2_valid <= 64'h0; // @[dcache.scala 113:42]
+//     end else if (is_sram2_write) begin // @[dcache.scala 118:35]
+//       reg_sram2_valid <= _reg_sram2_valid_T; // @[dcache.scala 119:41]
+//     end
+//     if (reset) begin // @[dcache.scala 114:42]
+//       reg_sram2_dirty <= 64'h0; // @[dcache.scala 114:42]
+//     end else if (is_sram2_write) begin // @[dcache.scala 118:35]
+//       if (reg_is_w) begin // @[dcache.scala 120:47]
+//         reg_sram2_dirty <= _reg_sram2_dirty_T;
+//       end else begin
+//         reg_sram2_dirty <= _reg_sram2_dirty_T_1;
+//       end
+//     end
+//     reg_r_raddr <= _GEN_166[63:0]; // @[dcache.scala 128:{42,42}]
+//     if (reset) begin // @[dcache.scala 129:42]
+//       reg_r_valid <= 1'h0; // @[dcache.scala 129:42]
+//     end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       reg_r_valid <= 1'h0; // @[dcache.scala 205:41]
+//     end else if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       if (hit_0 | hit_2) begin // @[dcache.scala 211:44]
+//         reg_r_valid <= _GEN_35;
+//       end else begin
+//         reg_r_valid <= 1'h1;
+//       end
+//     end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       reg_r_valid <= _GEN_79;
+//     end else begin
+//       reg_r_valid <= _GEN_104;
+//     end
+//     reg_w_waddr <= _GEN_167[63:0]; // @[dcache.scala 131:{42,42}]
+//     if (reset) begin // @[dcache.scala 132:42]
+//       reg_w_wdata <= 64'h0; // @[dcache.scala 132:42]
+//     end else if (!(2'h0 == reg_cache_state)) begin // @[dcache.scala 182:32]
+//       if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
+//         if (!(hit_0 | hit_2)) begin // @[dcache.scala 211:44]
+//           reg_w_wdata <= _GEN_52;
+//         end
+//       end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
+//         reg_w_wdata <= _GEN_94;
+//       end
+//     end
+//     if (reset) begin // @[dcache.scala 133:42]
+//       reg_w_wlast <= 1'h0; // @[dcache.scala 133:42]
+//     end else if (!(2'h0 == reg_cache_state)) begin // @[dcache.scala 182:32]
+//       if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
+//         if (!(hit_0 | hit_2)) begin // @[dcache.scala 211:44]
+//           reg_w_wlast <= _GEN_53;
+//         end
+//       end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
+//         reg_w_wlast <= _GEN_91;
+//       end
+//     end
+//     if (reset) begin // @[dcache.scala 134:42]
+//       reg_w_valid <= 1'h0; // @[dcache.scala 134:42]
+//     end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       reg_w_valid <= 1'h0; // @[dcache.scala 203:41]
+//     end else if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       if (!(hit_0 | hit_2)) begin // @[dcache.scala 211:44]
+//         reg_w_valid <= _GEN_49;
+//       end
+//     end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       reg_w_valid <= _GEN_92;
+//     end else begin
+//       reg_w_valid <= _GEN_102;
+//     end
+//     if (reset) begin // @[dcache.scala 136:42]
+//       reg_b_ready <= 1'h0; // @[dcache.scala 136:42]
+//     end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       reg_b_ready <= 1'h0; // @[dcache.scala 204:41]
+//     end else if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       if (!(hit_0 | hit_2)) begin // @[dcache.scala 211:44]
+//         reg_b_ready <= _GEN_50;
+//       end
+//     end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       reg_b_ready <= _GEN_96;
+//     end else begin
+//       reg_b_ready <= _GEN_103;
+//     end
+//     if (reset) begin // @[dcache.scala 155:58]
+//       reg_lru_2 <= 64'h0; // @[dcache.scala 155:58]
+//     end else if (reg_start_operation) begin // @[dcache.scala 159:34]
+//       if (hit_0) begin // @[dcache.scala 160:28]
+//         reg_lru_2 <= _reg_lru_2_T; // @[dcache.scala 162:35]
+//       end else if (hit_2) begin // @[dcache.scala 163:34]
+//         reg_lru_2 <= _reg_lru_2_T_1; // @[dcache.scala 165:35]
+//       end else begin
+//         reg_lru_2 <= _GEN_9;
+//       end
+//     end
+//     if (reset) begin // @[dcache.scala 158:50]
+//       reg_start_operation <= 1'h0; // @[dcache.scala 158:50]
+//     end else if (2'h0 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       reg_start_operation <= _GEN_23;
+//     end else if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
+//       reg_start_operation <= 1'h0; // @[dcache.scala 209:45]
+//     end
+//     if (reset) begin // @[dcache.scala 177:42]
+//       reg_cnt <= 2'h0; // @[dcache.scala 177:42]
+//     end else if (!(2'h0 == reg_cache_state)) begin // @[dcache.scala 182:32]
+//       if (2'h1 == reg_cache_state) begin // @[dcache.scala 182:32]
+//         if (!(hit_0 | hit_2)) begin // @[dcache.scala 211:44]
+//           reg_cnt <= _GEN_55;
+//         end
+//       end else if (2'h2 == reg_cache_state) begin // @[dcache.scala 182:32]
+//         reg_cnt <= _GEN_93;
+//       end
+//     end
+//     reg_rbus_finish <= reset | _GEN_156; // @[dcache.scala 178:{38,38}]
+//     reg_wbus_finish <= reset | _GEN_160; // @[dcache.scala 179:{38,38}]
+//   end
 endmodule
