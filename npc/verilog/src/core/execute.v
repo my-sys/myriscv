@@ -300,13 +300,103 @@ module Exu(
   assign system_exu_io_mepc = io_mepc; // @[execute.scala 169:41]
   assign system_exu_io_mstatus = io_mstatus; // @[execute.scala 168:33]
 
-always @(posedge clock)begin 
+// always @(posedge clock)begin 
+//     if (reset) begin // @[execute.scala 107:32]
+//       reg_valid <= 4'h0; // @[execute.scala 107:32]
+// 	  reg_dest_addr <= 5'h0; // @[execute.scala 173:51]
+// 	  reg_except_pc <= 64'h0;
+// 	  reg_commit <= 1'h0;
+// 	  reg_difftest_inst <= 32'h0;
+//     end else if (ready) begin // @[execute.scala 123:20]
+//       if (in_data_valid) begin // @[execute.scala 124:36]
+//         if (3'h4 == io_op_datas_bits_opType) begin // @[Mux.scala 81:58]
+//           reg_valid <= 4'h8;
+//         end else begin
+//           reg_valid <= {{1'd0}, _valid_T_9};
+//         end
+//       end else begin
+//         reg_valid <= 4'h0; // @[execute.scala 127:35]
+//       end
+// 	  reg_dest_addr <= io_op_datas_bits_dest_addr; // @[execute.scala 175:31]
+// 	  reg_except_pc <= io_op_datas_bits_pc;
+// 	  reg_commit <= in_data_valid;
+// 	  reg_difftest_inst <= io_op_datas_bits_inst;
+//     end
+// end
+
+// always @(posedge clock)begin 
+// 	if(reset)begin 
+// 		reg_sys_alu_w_valid <= 1'h0;
+// 		reg_br_valid <= 1'h0;
+// 		reg_csr_data <= 64'h0;
+// 		reg_csr_addr <= 12'h0;
+// 		reg_csr_is_w <= 1'h0; 
+// 		reg_is_except <= 1'h0;
+// 		reg_exception <= 6'h0;
+// 		reg_is_time_irq <= 1'h0;
+// 		reg_is_soft_irq <= 1'h0;
+// 		reg_valid_next_pc <= 1'h0;
+// 		reg_fence_i <= 1'h0;
+// 	end else begin 
+//       reg_sys_alu_w_valid <= (alu_exu_io_valid | system_exu_io_valid) & io_op_datas_bits_dest_is_reg &
+//         io_op_datas_bits_dest_addr != 5'h0 & ready;
+// 	  reg_br_valid <= _GEN_3;
+// 	  reg_csr_data <= system_exu_io_result_csr_data;
+// 	  reg_csr_addr <= system_exu_io_result_csr_addr;
+// 	  reg_csr_is_w <= system_exu_io_csr_is_w;
+// 	  reg_is_except <= system_exu_io_is_except;
+// 	  reg_exception <= system_exu_io_exception;
+// 	  reg_is_time_irq <= time_irq;
+// 	  reg_is_soft_irq <= soft_irq;
+//       reg_valid_next_pc <= _reg_next_pc_T | alu_exu_io_valid_next_pc | system_exu_io_valid_next_pc; // @[execute.scala 264:41]
+//       reg_fence_i <= in_data_valid & io_op_datas_bits_opType == 3'h6 & io_op_datas_bits_exuType == 7'h5;
+// 	end
+
+//     if (reset) begin // @[execute.scala 172:43]
+//       reg_sys_alu_wdata <= 64'h0; // @[execute.scala 172:43]
+//     end else if (system_exu_io_valid) begin // @[execute.scala 180:39]
+//       reg_sys_alu_wdata <= system_exu_io_dst_data;
+//     end else begin
+//       reg_sys_alu_wdata <= alu_exu_io_dst_data;
+//     end
+
+//     if (reset) begin // @[execute.scala 183:42]
+//       reg_br_mispredict <= 1'h0; // @[execute.scala 183:42]
+// 	  reg_br_pc <= 64'h0;
+// 	  reg_taken <= 1'h0;
+// 	  reg_br_next_pc <= 64'h0;
+//     end else if (alu_exu_io_valid & ready) begin // @[execute.scala 187:39]
+//       reg_br_mispredict <= alu_exu_io_br_info_mispredict; // @[execute.scala 189:41]
+// 	  reg_br_pc <= alu_exu_io_br_info_br_pc;
+// 	  reg_taken <= alu_exu_io_br_info_taken;
+//       reg_br_next_pc <= alu_exu_io_br_info_target_next_pc; // @[execute.scala 192:41]
+//     end
+
+//     if (reset) begin // @[execute.scala 210:42]
+//       reg_except_next_pc <= 64'h0; // @[execute.scala 210:42]
+//     end else if (ready) begin // @[execute.scala 213:20]
+//       if (system_exu_io_valid_next_pc) begin // @[execute.scala 218:50]
+//         reg_except_next_pc <= system_exu_io_next_pc; // @[execute.scala 219:49]
+//       end else if (alu_exu_io_valid_next_pc) begin // @[execute.scala 215:47]
+//         reg_except_next_pc <= alu_exu_io_next_pc; // @[execute.scala 216:49]
+//       end
+//     end
+
+//     if (reset) begin // @[execute.scala 259:50]
+//       reg_next_pc <= 64'h0; // @[execute.scala 259:50]
+//     end else if (irq | system_exu_io_is_except) begin // @[execute.scala 261:31]
+//       reg_next_pc <= _reg_next_pc_T_2;
+//     end else if (alu_exu_io_valid_next_pc) begin // @[execute.scala 262:12]
+//       reg_next_pc <= alu_exu_io_next_pc;
+//     end else if (system_exu_io_valid_next_pc) begin // @[execute.scala 263:12]
+//       reg_next_pc <= system_exu_io_next_pc;
+//     end else begin
+//       reg_next_pc <= 64'h0;
+//     end
+// end 
+  always @(posedge clock) begin
     if (reset) begin // @[execute.scala 107:32]
       reg_valid <= 4'h0; // @[execute.scala 107:32]
-	  reg_dest_addr <= 5'h0; // @[execute.scala 173:51]
-	  reg_except_pc <= 64'h0;
-	  reg_commit <= 1'h0;
-	  reg_difftest_inst <= 32'h0;
     end else if (ready) begin // @[execute.scala 123:20]
       if (in_data_valid) begin // @[execute.scala 124:36]
         if (3'h4 == io_op_datas_bits_opType) begin // @[Mux.scala 81:58]
@@ -317,41 +407,13 @@ always @(posedge clock)begin
       end else begin
         reg_valid <= 4'h0; // @[execute.scala 127:35]
       end
-	  reg_dest_addr <= io_op_datas_bits_dest_addr; // @[execute.scala 175:31]
-	  reg_except_pc <= io_op_datas_bits_pc;
-	  reg_commit <= in_data_valid;
-	  reg_difftest_inst <= io_op_datas_bits_inst;
     end
-end
-
-always @(posedge clock)begin 
-	if(reset)begin 
-		reg_sys_alu_w_valid <= 1'h0;
-		reg_br_valid <= 1'h0;
-		reg_csr_data <= 64'h0;
-		reg_csr_addr <= 12'h0;
-		reg_csr_is_w <= 1'h0; 
-		reg_is_except <= 1'h0;
-		reg_exception <= 6'h0;
-		reg_is_time_irq <= 1'h0;
-		reg_is_soft_irq <= 1'h0;
-		reg_valid_next_pc <= 1'h0;
-		reg_fence_i <= 1'h0;
-	end else begin 
+    if (reset) begin // @[execute.scala 171:43]
+      reg_sys_alu_w_valid <= 1'h0; // @[execute.scala 171:43]
+    end else begin
       reg_sys_alu_w_valid <= (alu_exu_io_valid | system_exu_io_valid) & io_op_datas_bits_dest_is_reg &
-        io_op_datas_bits_dest_addr != 5'h0 & ready;
-	  reg_br_valid <= _GEN_3;
-	  reg_csr_data <= system_exu_io_result_csr_data;
-	  reg_csr_addr <= system_exu_io_result_csr_addr;
-	  reg_csr_is_w <= system_exu_io_csr_is_w;
-	  reg_is_except <= system_exu_io_is_except;
-	  reg_exception <= system_exu_io_exception;
-	  reg_is_time_irq <= time_irq;
-	  reg_is_soft_irq <= soft_irq;
-      reg_valid_next_pc <= _reg_next_pc_T | alu_exu_io_valid_next_pc | system_exu_io_valid_next_pc; // @[execute.scala 264:41]
-      reg_fence_i <= in_data_valid & io_op_datas_bits_opType == 3'h6 & io_op_datas_bits_exuType == 7'h5;
-	end
-
+        io_op_datas_bits_dest_addr != 5'h0 & ready; // @[execute.scala 178:29]
+    end
     if (reset) begin // @[execute.scala 172:43]
       reg_sys_alu_wdata <= 64'h0; // @[execute.scala 172:43]
     end else if (system_exu_io_valid) begin // @[execute.scala 180:39]
@@ -359,19 +421,71 @@ always @(posedge clock)begin
     end else begin
       reg_sys_alu_wdata <= alu_exu_io_dst_data;
     end
-
+    if (reset) begin // @[execute.scala 173:51]
+      reg_dest_addr <= 5'h0; // @[execute.scala 173:51]
+    end else if (ready) begin // @[execute.scala 174:20]
+      reg_dest_addr <= io_op_datas_bits_dest_addr; // @[execute.scala 175:31]
+    end
+    if (reset) begin // @[execute.scala 182:50]
+      reg_br_valid <= 1'h0; // @[execute.scala 182:50]
+    end else begin
+      reg_br_valid <= _GEN_3;
+    end
     if (reset) begin // @[execute.scala 183:42]
       reg_br_mispredict <= 1'h0; // @[execute.scala 183:42]
-	  reg_br_pc <= 64'h0;
-	  reg_taken <= 1'h0;
-	  reg_br_next_pc <= 64'h0;
     end else if (alu_exu_io_valid & ready) begin // @[execute.scala 187:39]
       reg_br_mispredict <= alu_exu_io_br_info_mispredict; // @[execute.scala 189:41]
-	  reg_br_pc <= alu_exu_io_br_info_br_pc;
-	  reg_taken <= alu_exu_io_br_info_taken;
+    end
+    if (reset) begin // @[execute.scala 184:50]
+      reg_br_pc <= 64'h0; // @[execute.scala 184:50]
+    end else if (alu_exu_io_valid & ready) begin // @[execute.scala 187:39]
+      reg_br_pc <= alu_exu_io_br_info_br_pc; // @[execute.scala 190:49]
+    end
+    if (reset) begin // @[execute.scala 185:50]
+      reg_taken <= 1'h0; // @[execute.scala 185:50]
+    end else if (alu_exu_io_valid & ready) begin // @[execute.scala 187:39]
+      reg_taken <= alu_exu_io_br_info_taken; // @[execute.scala 191:49]
+    end
+    if (reset) begin // @[execute.scala 186:50]
+      reg_br_next_pc <= 64'h0; // @[execute.scala 186:50]
+    end else if (alu_exu_io_valid & ready) begin // @[execute.scala 187:39]
       reg_br_next_pc <= alu_exu_io_br_info_target_next_pc; // @[execute.scala 192:41]
     end
-
+    if (reset) begin // @[execute.scala 203:50]
+      reg_csr_data <= 64'h0; // @[execute.scala 203:50]
+    end else begin
+      reg_csr_data <= system_exu_io_result_csr_data; // @[execute.scala 222:25]
+    end
+    if (reset) begin // @[execute.scala 204:50]
+      reg_csr_addr <= 12'h0; // @[execute.scala 204:50]
+    end else begin
+      reg_csr_addr <= system_exu_io_result_csr_addr; // @[execute.scala 223:25]
+    end
+    if (reset) begin // @[execute.scala 205:50]
+      reg_csr_is_w <= 1'h0; // @[execute.scala 205:50]
+    end else begin
+      reg_csr_is_w <= system_exu_io_csr_is_w; // @[execute.scala 224:25]
+    end
+    if (reset) begin // @[execute.scala 206:50]
+      reg_is_except <= 1'h0; // @[execute.scala 206:50]
+    end else begin
+      reg_is_except <= system_exu_io_is_except; // @[execute.scala 231:25]
+    end
+    if (reset) begin // @[execute.scala 207:50]
+      reg_exception <= 6'h0; // @[execute.scala 207:50]
+    end else begin
+      reg_exception <= system_exu_io_exception; // @[execute.scala 232:25]
+    end
+    if (reset) begin // @[execute.scala 208:42]
+      reg_is_time_irq <= 1'h0; // @[execute.scala 208:42]
+    end else begin
+      reg_is_time_irq <= time_irq; // @[execute.scala 236:25]
+    end
+    if (reset) begin // @[execute.scala 209:42]
+      reg_is_soft_irq <= 1'h0; // @[execute.scala 209:42]
+    end else begin
+      reg_is_soft_irq <= soft_irq; // @[execute.scala 237:25]
+    end
     if (reset) begin // @[execute.scala 210:42]
       reg_except_next_pc <= 64'h0; // @[execute.scala 210:42]
     end else if (ready) begin // @[execute.scala 213:20]
@@ -381,7 +495,11 @@ always @(posedge clock)begin
         reg_except_next_pc <= alu_exu_io_next_pc; // @[execute.scala 216:49]
       end
     end
-
+    if (reset) begin // @[execute.scala 211:50]
+      reg_except_pc <= 64'h0; // @[execute.scala 211:50]
+    end else if (ready) begin // @[execute.scala 213:20]
+      reg_except_pc <= io_op_datas_bits_pc; // @[execute.scala 214:33]
+    end
     if (reset) begin // @[execute.scala 259:50]
       reg_next_pc <= 64'h0; // @[execute.scala 259:50]
     end else if (irq | system_exu_io_is_except) begin // @[execute.scala 261:31]
@@ -393,5 +511,25 @@ always @(posedge clock)begin
     end else begin
       reg_next_pc <= 64'h0;
     end
-end 
+    if (reset) begin // @[execute.scala 260:42]
+      reg_valid_next_pc <= 1'h0; // @[execute.scala 260:42]
+    end else begin
+      reg_valid_next_pc <= _reg_next_pc_T | alu_exu_io_valid_next_pc | system_exu_io_valid_next_pc; // @[execute.scala 264:41]
+    end
+    if (reset) begin // @[execute.scala 269:42]
+      reg_fence_i <= 1'h0; // @[execute.scala 269:42]
+    end else begin
+      reg_fence_i <= in_data_valid & io_op_datas_bits_opType == 3'h6 & io_op_datas_bits_exuType == 7'h5; // @[execute.scala 278:25]
+    end
+    if (reset) begin // @[execute.scala 271:42]
+      reg_commit <= 1'h0; // @[execute.scala 271:42]
+    end else if (ready) begin // @[execute.scala 273:20]
+      reg_commit <= in_data_valid; // @[execute.scala 274:33]
+    end
+    if (reset) begin // @[execute.scala 272:40]
+      reg_difftest_inst <= 32'h0; // @[execute.scala 272:40]
+    end else if (ready) begin // @[execute.scala 273:20]
+      reg_difftest_inst <= io_op_datas_bits_inst; // @[execute.scala 275:35]
+    end
+  end
 endmodule
