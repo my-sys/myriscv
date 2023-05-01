@@ -19,14 +19,20 @@ object Inst_type{
 }
 
 object Op_type{
-    def op_n   = "b000".U 
-	def op_bru = "b001".U 
-	def op_alu = "b010".U 
-	def op_mu  = "b011".U 
-	def op_system = "b100".U 
-    def op_lsu = "b101".U 
-	def op_fence = "b110".U 
-	def op_amo = "b111".U
+    // def op_n   = "b000".U 
+	// def op_bru = "b001".U 
+	// def op_alu = "b010".U 
+	// def op_mu  = "b011".U 
+	// def op_system = "b100".U 
+    // def op_lsu = "b101".U 
+	// def op_fence = "b110".U 
+	// def op_amo = "b111".U
+	def op_mem = "b000".U 
+	def op_fence = "b100".U  //def op_amo = "b100".U
+	def op_alu = "b001".U 
+	def op_mu  = "b101".U 
+	def op_bru = "b010".U 
+	def op_system = "b011".U 
 }
 object ISA{
     def ADD     = BitPat("b0000000_?????_?????_000_?????_0110011")
@@ -140,17 +146,17 @@ def SFENCE_VMA  = BitPat("b0001001_?????_?????_000_00000_1110011")
         CSRRW       -> List(Op_type.op_system,  SYSType.system_csrrw,   Inst_type.Type_CSR,Y,		Y,			N),
         CSRRWI      -> List(Op_type.op_system,  SYSType.system_csrrwi,  Inst_type.Type_CSR,Y,		N,			N),
 
-        LD          -> List(Op_type.op_lsu,     LSUType.lsu_ld,      Inst_type.Type_I,	Y,			Y,			N),
-        LB          -> List(Op_type.op_lsu,     LSUType.lsu_lb,      Inst_type.Type_I,	Y,			Y,			N),
-        LBU         -> List(Op_type.op_lsu,     LSUType.lsu_lbu,     Inst_type.Type_I,	Y,			Y,			N),
-        LH          -> List(Op_type.op_lsu,     LSUType.lsu_lh,      Inst_type.Type_I,	Y,			Y,			N),
-        LHU         -> List(Op_type.op_lsu,     LSUType.lsu_lhu,     Inst_type.Type_I,	Y,			Y,			N),
+        LD          -> List(Op_type.op_mem,     LSUType.lsu_ld,      Inst_type.Type_I,	Y,			Y,			N),
+        LB          -> List(Op_type.op_mem,     LSUType.lsu_lb,      Inst_type.Type_I,	Y,			Y,			N),
+        LBU         -> List(Op_type.op_mem,     LSUType.lsu_lbu,     Inst_type.Type_I,	Y,			Y,			N),
+        LH          -> List(Op_type.op_mem,     LSUType.lsu_lh,      Inst_type.Type_I,	Y,			Y,			N),
+        LHU         -> List(Op_type.op_mem,     LSUType.lsu_lhu,     Inst_type.Type_I,	Y,			Y,			N),
         LUI         -> List(Op_type.op_alu,     ALUType.alu_lui,     Inst_type.Type_U,	Y,			N,			N),
-        LW          -> List(Op_type.op_lsu,     LSUType.lsu_lw,      Inst_type.Type_I,	Y,			Y,			N),
-        LWU         -> List(Op_type.op_lsu,     LSUType.lsu_lwu,     Inst_type.Type_I,	Y,			Y,			N),
-        SD          -> List(Op_type.op_lsu,     LSUType.lsu_sd,      Inst_type.Type_S,	N,			Y,			Y),
-        SB          -> List(Op_type.op_lsu,     LSUType.lsu_sb,      Inst_type.Type_S,	N,			Y,			Y),
-        SH          -> List(Op_type.op_lsu,     LSUType.lsu_sh,      Inst_type.Type_S,	N,			Y,			Y),
+        LW          -> List(Op_type.op_mem,     LSUType.lsu_lw,      Inst_type.Type_I,	Y,			Y,			N),
+        LWU         -> List(Op_type.op_mem,     LSUType.lsu_lwu,     Inst_type.Type_I,	Y,			Y,			N),
+        SD          -> List(Op_type.op_mem,     LSUType.lsu_sd,      Inst_type.Type_S,	N,			Y,			Y),
+        SB          -> List(Op_type.op_mem,     LSUType.lsu_sb,      Inst_type.Type_S,	N,			Y,			Y),
+        SH          -> List(Op_type.op_mem,     LSUType.lsu_sh,      Inst_type.Type_S,	N,			Y,			Y),
         SLL         -> List(Op_type.op_alu,     ALUType.alu_sll,     Inst_type.Type_R,	Y,			Y,			Y),
         SLLI        -> List(Op_type.op_alu,     ALUType.alu_slli,    Inst_type.Type_IR,	Y,			Y,			N),
         SLLIW       -> List(Op_type.op_alu,     ALUType.alu_slliw,   Inst_type.Type_IR,	Y,			Y,			N),
@@ -170,7 +176,7 @@ def SFENCE_VMA  = BitPat("b0001001_?????_?????_000_00000_1110011")
         SRLW        -> List(Op_type.op_alu,     ALUType.alu_srlw,    Inst_type.Type_R,	Y,			Y,			Y),
         SUB         -> List(Op_type.op_alu,     ALUType.alu_sub,     Inst_type.Type_R,	Y,			Y,			Y),
         SUBW        -> List(Op_type.op_alu,     ALUType.alu_subw,    Inst_type.Type_R,	Y,			Y,			Y),
-        SW          -> List(Op_type.op_lsu,     LSUType.lsu_sw,      Inst_type.Type_S,	N,			Y,			Y),
+        SW          -> List(Op_type.op_mem,     LSUType.lsu_sw,      Inst_type.Type_S,	N,			Y,			Y),
 
         OR          -> List(Op_type.op_alu,     ALUType.alu_or,      Inst_type.Type_R,	Y,			Y,			Y),
         ORI         -> List(Op_type.op_alu,     ALUType.alu_ori,     Inst_type.Type_I,	Y,			Y,			N),

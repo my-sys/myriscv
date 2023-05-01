@@ -19,9 +19,9 @@ object LSUType{
 //最低两位分别是指令的3 位，第5位(从0开始数)
 //中间三位与14~12位。原因尽量不改变相对位置。也许会降低解码阶段复杂程度
 object FENCEType{
-	def fence 		= "b000_01".U 
-	def fence_i 	= "b001_01".U 
-	def fence_vma	= "b000_10".U 
+	def fence 		= "b10_000_01".U 
+	def fence_i 	= "b10_001_01".U 
+	def fence_vma	= "b10_000_10".U 
 }
 //object SFENCE_VMA
 
