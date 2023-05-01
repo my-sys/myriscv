@@ -113,7 +113,7 @@ class Exu extends Module with CoreParameters{
 		Op_type.op_alu		-> "b0001".U ,
 		Op_type.op_bru 		-> "b0001".U ,
 
-		Op_type.op_lsu 		-> "b0010".U ,
+		Op_type.op_mem 		-> "b0010".U ,
 		Op_type.op_fence 	-> "b0010".U ,
 
 		Op_type.op_mu 		-> "b0100".U ,

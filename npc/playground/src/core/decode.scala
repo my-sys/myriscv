@@ -48,7 +48,7 @@ class Decode extends Module{
 	val inst         = io.get_inst.bits.inst 
 	val pc           = io.get_inst.bits.pc 
 	val is_pre 		 = io.get_inst.bits.is_pre
-	val decodefault	= List(Op_type.op_n,ALUType.alu_addi,Inst_type.Type_N,0.U,0.U,0.U)
+	val decodefault	= List(Op_type.op_mem,ALUType.alu_addi,Inst_type.Type_N,0.U,0.U,0.U)
 
 	
 	val rs2_addr        = inst(24,20)
