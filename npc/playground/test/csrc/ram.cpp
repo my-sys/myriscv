@@ -84,9 +84,9 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, uint8_t rflag,paddr_t wa
 		// }
 		waddr = (waddr - 0x80000000)>>3;
 		if(wen){
-			if(waddr == (0x1eafff0>>3)){
-				printf("w  0x81eafff0 = 0x%lx\n",wdata);
-			}
+			// if(waddr == (0x1eafff0>>3)){
+			// 	printf("w  0x81eafff0 = 0x%lx\n",wdata);
+			// }
 			ram[waddr] = (ram[waddr] & (~wmask)) | (wdata & wmask);
     	}
 	}
@@ -111,9 +111,9 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, uint8_t rflag,paddr_t wa
 		// }else{
 		raddr = (raddr - 0x80000000)>>3;
 		*rdata = ram[raddr];
-		if(raddr == ((0x1eafff0>>3))){
-			printf("r  0x81eafff0 = 0x%lx\n",*rdata);
-		}
+		// if(raddr == ((0x1eafff0>>3))){
+		// 	printf("r  0x81eafff0 = 0x%lx\n",*rdata);
+		// }
 		//}
 
 	}
