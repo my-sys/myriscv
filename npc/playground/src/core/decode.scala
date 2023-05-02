@@ -61,7 +61,7 @@ class Decode extends Module{
 	val fun_op = Cat(inst(6),Cat(inst(4),inst(2)))
 	// val temp_auipc_lui = Mux(inst(5),List(Op_type.op_alu,0.U,Inst_type.Type_U,true.B,false.B,false.B),
 	// List(Op_type.op_alu,"b1000000".U,))
-	val temp_system_is_pri = Mux(fun === "b000".U)
+	val temp_system_is_pri = (fun === "b000".U)
 	val temp_system_is_imm = inst(14)
 	val temp_system_rs1 = Mux(temp_system_is_imm,false.B,true.B)
 	//忽略了sret
