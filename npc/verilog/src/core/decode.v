@@ -71,7 +71,8 @@ module Decode(
   wire [3:0] _temp_op_itype_T_2 = fun == 3'h1 | is_sr ? 4'h4 : 4'hc; // @[decode.scala 80:51]
   wire [3:0] temp_op_itype = temp_op_is_imm ? _temp_op_itype_T_2 : 4'h6; // @[decode.scala 80:32]
   wire  temp_op_rs2 = temp_op_is_imm ? 1'h0 : 1'h1; // @[decode.scala 81:32]
-  wire [2:0] _temp_op_T_1 = io_get_inst_bits_inst[25] ? 3'h5 : 3'h1; // @[decode.scala 82:60]
+  wire [1:0] _temp_op_T_1 = io_get_inst_bits_inst[25] ? 2'h3 : 2'h2; // @[decode.scala 82:60]
+  wire [1:0] temp_op = temp_op_is_imm ? 2'h2 : _temp_op_T_1; // @[decode.scala 82:26]
   wire [6:0] temp_jal_jalr_1 = io_get_inst_bits_inst[3] ? 7'h4e : 7'h4a; // @[decode.scala 86:12]
   wire [3:0] temp_jal_jalr_2 = io_get_inst_bits_inst[3] ? 4'h2 : 4'hc; // @[decode.scala 87:12]
   wire  temp_jal_jalr_4 = io_get_inst_bits_inst[3] ? 1'h0 : 1'h1; // @[decode.scala 88:12]
@@ -85,11 +86,11 @@ module Decode(
   wire  _T_13 = 3'h0 == fun_op; // @[Lookup.scala 31:38]
   wire  _T_15 = 3'h1 == fun_op; // @[Lookup.scala 31:38]
   wire  _T_17 = 3'h6 == fun_op; // @[Lookup.scala 31:38]
-  wire [1:0] _T_18 = _T_17 ? 2'h3 : 2'h0; // @[Lookup.scala 34:39]
-  wire [2:0] _T_19 = _T_15 ? 3'h4 : {{1'd0}, _T_18}; // @[Lookup.scala 34:39]
-  wire [2:0] _T_20 = _T_13 ? 3'h0 : _T_19; // @[Lookup.scala 34:39]
-  wire [2:0] _T_21 = _T_11 ? 3'h2 : _T_20; // @[Lookup.scala 34:39]
-  wire [2:0] _T_22 = _T_9 ? 3'h2 : _T_21; // @[Lookup.scala 34:39]
+  wire [2:0] _T_18 = _T_17 ? 3'h4 : 3'h5; // @[Lookup.scala 34:39]
+  wire [2:0] _T_19 = _T_15 ? 3'h6 : _T_18; // @[Lookup.scala 34:39]
+  wire [2:0] _T_20 = _T_13 ? 3'h5 : _T_19; // @[Lookup.scala 34:39]
+  wire [2:0] _T_21 = _T_11 ? 3'h1 : _T_20; // @[Lookup.scala 34:39]
+  wire [2:0] _T_22 = _T_9 ? 3'h1 : _T_21; // @[Lookup.scala 34:39]
   wire [6:0] _T_24 = _T_17 ? temp_system_1 : 7'h0; // @[Lookup.scala 34:39]
   wire [6:0] _T_25 = _T_15 ? _T_3 : _T_24; // @[Lookup.scala 34:39]
   wire [6:0] _T_26 = _T_13 ? {{2'd0}, fun_exuType} : _T_25; // @[Lookup.scala 34:39]
@@ -160,13 +161,9 @@ module Decode(
       reg_opType <= 3'h0; // @[decode.scala 30:42]
     end else if (io_op_datas_ready) begin // @[decode.scala 120:20]
       if (_T_5) begin // @[Lookup.scala 34:39]
-        if (temp_op_is_imm) begin // @[decode.scala 82:26]
-          reg_opType <= 3'h1;
-        end else begin
-          reg_opType <= _temp_op_T_1;
-        end
+        reg_opType <= {{1'd0}, temp_op};
       end else if (_T_7) begin // @[Lookup.scala 34:39]
-        reg_opType <= 3'h1;
+        reg_opType <= 3'h2;
       end else begin
         reg_opType <= _T_22;
       end
@@ -265,6 +262,7 @@ module Decode(
       reg_is_pre <= io_get_inst_bits_is_pre; // @[decode.scala 139:41]
     end
   end
+
 //   reg  reg_valid; // @[decode.scala 17:42]
 //   reg [2:0] reg_opType; // @[decode.scala 30:42]
 //   reg [6:0] reg_exuType; // @[decode.scala 31:42]
