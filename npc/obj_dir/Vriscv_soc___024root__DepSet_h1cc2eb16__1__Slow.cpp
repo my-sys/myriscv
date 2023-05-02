@@ -659,6 +659,7 @@ VL_ATTR_COLD void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vl
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_is_pre = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_exuType = VL_RAND_RESET_I(5);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op = VL_RAND_RESET_I(3);
+    vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__temp_kk = VL_RAND_RESET_I(6);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType = VL_RAND_RESET_I(4);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs1_is_reg = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs2_is_reg = VL_RAND_RESET_I(1);
