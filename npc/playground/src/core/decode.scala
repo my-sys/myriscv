@@ -75,7 +75,7 @@ class Decode extends Module{
 	val temp_mem_rs2   = Mux(inst(5),true.B,false.B)
 	val temp_op_is_imm = !inst(5)
 	val is_sr = fun === ALUType.alu_srl(4,2)
-	val temp_kk = Cat(int(30),fun_exuType)
+	val temp_kk = Cat(inst(30),fun_exuType)
 	val temp_op_exuType = Mux(temp_op_is_imm,Mux(is_sr,temp_kk,fun_exuType),temp_kk)
 	val temp_op_itype = Mux(temp_op_is_imm,Mux((fun === ALUType.alu_sll(4,2)) | is_sr,Inst_type.Type_IR,Inst_type.Type_I),Inst_type.Type_R)
 	val temp_op_rs2   = Mux(temp_op_is_imm,false.B,true.B)
