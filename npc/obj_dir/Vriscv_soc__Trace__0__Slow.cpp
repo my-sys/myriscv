@@ -3426,7 +3426,7 @@ VL_ATTR_COLD void Vriscv_soc___024root__trace_full_sub_0(Vriscv_soc___024root* v
     bufp->fullBit(oldp+422,((1U & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
                                    >> 5U))));
     bufp->fullCData(oldp+423,(((8U & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst)
-                                ? 0x4fU : 0x4aU)),7);
+                                ? 0x4eU : 0x4aU)),7);
     bufp->fullCData(oldp+424,(((8U & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst)
                                 ? 2U : 0xcU)),4);
     bufp->fullBit(oldp+425,((1U & (~ (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 

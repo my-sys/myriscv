@@ -1380,7 +1380,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__1(Vriscv_soc___024ro
                                                   ? 
                                                  ((8U 
                                                    & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst)
-                                                   ? 0x4fU
+                                                   ? 0x4eU
                                                    : 0x4aU)
                                                   : 
                                                  ((4U 
