@@ -2605,17 +2605,15 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__1(Vriscv_soc___024ro
                                                       >> 0xeU)))))))))));
     if ((2U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))) {
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs2_is_reg 
-            = (1U & (~ (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
-                        >> 5U)));
+            = (1U & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
+                     >> 5U));
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType 
             = ((0x20U & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst)
-                ? (((1U == (7U & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
-                                  >> 0xcU))) | (5U 
-                                                == 
-                                                (7U 
-                                                 & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
-                                                    >> 0xcU))))
-                    ? 4U : 0xcU) : 6U);
+                ? 6U : (((1U == (7U & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
+                                       >> 0xcU))) | 
+                         (5U == (7U & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
+                                       >> 0xcU)))) ? 4U
+                         : 0xcU));
     } else {
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs2_is_reg 
             = (1U & ((3U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
