@@ -2,9 +2,11 @@ BUILD_DIR = ./build
 TOPNAME = riscv_soc
 export PATH := $(PATH):$(abspath ./utils)
 
+CHOSE_LANGUAGE = "chisel"
+#CHOSE_LANGUAGE = "verilog"
 
 # project source
-ifeq ("verilog","verilog")
+ifeq ("verilog",$(CHOSE_LANGUAGE))
 VSRCS = $(shell find $(abspath ./verilog/test/vsrc) -name "*.v") $(shell find $(abspath ./verilog/src) -name "*.v")
 CSRCS = $(shell find $(abspath ./verilog/test/csrc) -name "*.c" -or -name "*.cc" -or -name "*.cpp") $(shell find $(abspath ./verilog/test/csrc/device) -name "*.c")
 INCLUDE_DIR = $(abspath ./verilog/test/include)
@@ -85,11 +87,18 @@ compile1:$(VSRCS) $(CSRCS)
 	@echo "--- BUILD ---------"
 	make -j3 -C obj_dir -f V$(TOPNAME).mk 
 
+ifneq ("verilog",$(CHOSE_LANGUAGE))
 run:
-#	make verilog
+	make verilog
 	make compile
 	$(call git_commit, "sim RTL xingk")
 	obj_dir/V$(TOPNAME)  $(ARGS_DIFF) $(IMG)
+else 
+run:
+	make compile
+	$(call git_commit, "sim RTL xingk")
+	obj_dir/V$(TOPNAME)  $(ARGS_DIFF) $(IMG)
+endif
 
 gdb:
 	make verilog 
