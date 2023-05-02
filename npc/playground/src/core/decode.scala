@@ -78,14 +78,14 @@ class Decode extends Module{
 	// List(Op_type.op_bru,BRUType.bru_jalr,Inst_type.Type_I,true.B,true.B,false.B))
 	val temp_jal_jalr = List(Op_type.op_bru,BRUType.bru_jalr,Inst_type.Type_I,true.B,true.B,false.B)
 	val opType :: exuType :: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg :: Nil = ListLookup(fun_op,decodefault,Array(
-		"b010".U	-> List(Op_type.op_alu,Cat(0.U(2.W),fun_op),temp_op_itype,true.B,true.B,temp_op_rs2), // op
-		"b011".U 	-> List(Op_type.op_alu,Mux(inst(5),ALUType.alu_lui,ALUType.alu_auipc),Inst_type.Type_U,true.B,false.B,false.B),	// auipc,lui 
-		"b010".U 	-> List(Op_type.op_mu,fun_exuType,Inst_type.Type_R,true.B,true.B,true.B), //muldiv 
-		"b101".U 	-> temp_jal_jalr, // jalr,jal,
-		"b100".U 	-> List(Op_type.op_bru,Cat(1.U(2.W),fun_exuType),Inst_type.Type_B,false.B,true.B,true.B), // branch
-		"b000".U 	-> List(Op_type.op_mem,fun_exuType,temp_mem_itype,temp_mem_dest,true.B,temp_mem_rs2), // load, store
-		"b001".U 	-> List(Op_type.op_fence,Cat(2.U(2.W),fun_exuType),Inst_type.Type_N,false.B,false.B,false.B), // misc-mem0,amo
-		"b110".U 	-> temp_system, //system 
+		BitPat("b010")	-> List(Op_type.op_alu,Cat(0.U(2.W),fun_op),temp_op_itype,true.B,true.B,temp_op_rs2), // op
+		BitPat("b011") 	-> List(Op_type.op_alu,Mux(inst(5),ALUType.alu_lui,ALUType.alu_auipc),Inst_type.Type_U,true.B,false.B,false.B),	// auipc,lui 
+		BitPat("b010") 	-> List(Op_type.op_mu,fun_exuType,Inst_type.Type_R,true.B,true.B,true.B), //muldiv 
+		BitPat("b101") 	-> temp_jal_jalr, // jalr,jal,
+		BitPat("b100") 	-> List(Op_type.op_bru,Cat(1.U(2.W),fun_exuType),Inst_type.Type_B,false.B,true.B,true.B), // branch
+		BitPat("b000") 	-> List(Op_type.op_mem,fun_exuType,temp_mem_itype,temp_mem_dest,true.B,temp_mem_rs2), // load, store
+		BitPat("b001") 	-> List(Op_type.op_fence,Cat(2.U(2.W),fun_exuType),Inst_type.Type_N,false.B,false.B,false.B), // misc-mem0,amo
+		BitPat("b110") 	-> temp_system, //system 
 	))
 //val opType :: exuType :: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg :: Nil = ListLookup(inst,decodefault,ISA.table)
 	
