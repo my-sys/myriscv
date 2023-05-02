@@ -9,11 +9,11 @@ object ALUType{
 	val alu_addiw 	= "b000_0_1".U 
 	val alu_addw 	= "b000_1_1".U 
 
-	val alu_slt 	= "b01_010_1_0".U 
-	val alu_slti 	= "b01_010_0_0".U 
+	val alu_slt 	= "b010_1_0".U 
+	val alu_slti 	= "b010_0_0".U 
 
-	val alu_sltiu   = "b01_011_0_0".U 
-	val alu_sltu 	= "b01_011_1_0".U 
+	val alu_sltiu   = "b011_0_0".U 
+	val alu_sltu 	= "b011_1_0".U 
 
 	val alu_and 	= "b111_1_0".U 
 	val alu_andi 	= "b111_0_0".U 
@@ -42,8 +42,8 @@ object ALUType{
 	val alu_sraiw 	= "b1_101_0_1".U 
 	val alu_sraw 	= "b1_101_1_1".U 
 
-	val alu_lui 	= "b10_000_0_0".U 
-	val alu_auipc 	= "b11_000_0_0".U 
+	val alu_lui 	= "b00_000_0_0".U 
+	val alu_auipc 	= "b10_000_0_0".U 
 }
 
 object BRUType{
@@ -94,8 +94,8 @@ class ALU_EXU(has_br_unit: Boolean = false) extends Module with CoreParameters{
 
 	val rs2_is_imm = (!io.exuType(1))
 	val rs2_data = Mux(rs2_is_imm,op_imm,op_data2)
-	val rs1_is_pc = (io.exuType(6,5) === "b11".U)
-	val is_sub   = (io.exuType(6,5) === "b01".U)
+	val rs1_is_pc = (io.exuType(6))
+	val is_sub   = (io.exuType(5)) |(io.exuType(4,2) === "b010".U)|(io.exuType(4,2) === "b011".U)
 	//val rs1_is_0  = (io.exuType(6,5) === "b10".U)//重命名阶段，就需要分清哪些需要寄存器，哪些不需要寄存器。不需要寄存器的，该值就是0,这是仲裁与唤醒逻辑所需要的。
 	val rs1_data = Mux(rs1_is_pc,op_pc,op_data1)
 	val temp_rs2_data = Mux(is_sub,(rs2_data ^ "hffff_ffff_ffff_ffff".U),rs2_data)

@@ -28,9 +28,9 @@ object Op_type{
 	// def op_fence = "b110".U 
 	// def op_amo = "b111".U
 	def op_mem = "b000".U 
-	def op_fence = "b000".U  //def op_amo = "b100".U
+	def op_fence = "b100".U  //def op_amo = "b100".U
 	def op_alu = "b001".U 
-	def op_mu  = "b001".U  //"b101".U
+	def op_mu  = "b101".U  //"b101".U
 	def op_bru = "b010".U 
 	def op_system = "b011".U 
 }

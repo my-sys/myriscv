@@ -56,7 +56,37 @@ class Decode extends Module{
 	val csr_addr        = inst(31,20)
 	val dest_addr    	= inst(11,7)
 
-	val opType :: exuType :: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg :: Nil = ListLookup(inst,decodefault,ISA.table)
+	val fun = inst(14,12)
+	val fun_exuType = Cat(fun,Cat(inst(5),inst(3)))
+	val fun_op = Cat(inst(6),Cat(inst(4),inst(2)))
+	// val temp_auipc_lui = Mux(inst(5),List(Op_type.op_alu,0.U,Inst_type.Type_U,true.B,false.B,false.B),
+	// List(Op_type.op_alu,"b1000000".U,))
+	val temp_system_is_pri = Mux(fun === "b000".U)
+	val temp_system_is_imm = inst(14)
+	val temp_system_rs1 = Mux(temp_system_is_imm,false.B,true.B)
+	//忽略了sret
+	val temp_system = Mux(temp_system_is_pri,List(Op_type.op_system,Cat(inst(21,20),fun_exuType),Inst_type.Type_N,false.B,false.B,false.B),
+	List(Op_type.op_system,fun_exuType,Inst_type.Type_CSR,true.B,temp_system_rs1,false.B))
+	val temp_mem_itype = Mux(inst(5),Inst_type.Type_S,Inst_type.Type_I)
+	val temp_mem_dest  = Mux(inst(5),false.B,true.B)
+	val temp_mem_rs2   = Mux(inst(5),true.B,false.B)
+	val temp_op_is_imm = inst(5)
+	val temp_op_itype = Mux(temp_op_is_imm,Mux((fun === ALUType.alu_sll(4,2)) | (fun === ALUType.alu_srl(4,2)),Inst_type.Type_IR,Inst_type.Type_I),Inst_type.Type_R)
+	val temp_op_rs2   = Mux(temp_op_is_imm,false.B,true.B)
+	val temp_jal_jalr = Mux(inst(3),List(Op_type.op_bru,BRUType.bru_jal,Inst_type.Type_J,true.B,false.B,false.B),
+	List(Op_type.op_bru,BRUType.bru_jalr,Inst_type.Type_I,true.B,true.B,false.B))
+	val opType :: exuType :: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg :: Nil = ListLookup(fun_op,decodefault,Array(
+		"b010".U	-> List(Op_type.op_alu,Cat(0.U(2.W),fun_op),temp_op_itype,true.B,true.B,temp_op_rs2), // op
+		"b011".U 	-> List(Op_type.op_alu,Mux(inst(5),ALUType.alu_lui,ALUType.alu_auipc),Inst_type.Type_U,true.B,false.B,false.B),	// auipc,lui 
+		"b010".U 	-> List(Op_type.op_mu,fun_exuType,Inst_type.Type_R,true.B,true.B,true.B), //muldiv 
+		"b101".U 	-> temp_jal_jalr, // jalr,jal,
+		"b100".U 	-> List(Op_type.op_bru,Cat(1.U(2.W),fun_exuType),Inst_type.Type_B,false.B,true.B,true.B), // branch
+		"b000".U 	-> List(Op_type.op_mem,fun_exuType,temp_mem_itype,temp_mem_dest,true.B,temp_mem_rs2), // load, store
+		"b001".U 	-> List(Op_type.op_fence,Cat(2.U(2.W),fun_exuType),Inst_type.Type_N,false.B,false.B,false.B), // misc-mem0,amo
+		"b110".U 	-> temp_system, //system 
+	))
+//val opType :: exuType :: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg :: Nil = ListLookup(inst,decodefault,ISA.table)
+	
 	val imm_data             = MuxLookup(instType, 0.U(32.W), List(
 		Inst_type.Type_I    -> (Cat( Fill(20,inst(31)) ,inst(31,20))),  // sign extension
 		Inst_type.Type_U    -> (Cat(inst(31,12),0.U(12.W)) ), // sign extension 
