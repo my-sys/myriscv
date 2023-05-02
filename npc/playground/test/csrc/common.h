@@ -18,6 +18,7 @@ typedef uint64_t word_t;
 #define EN_TRACE 1
 //提供指令解析与追踪
 #define CONFIG_ITRACE
+//提供difftest
 #define CONFIG_DIFFTEST
 
 //----------------------------
