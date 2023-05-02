@@ -25,12 +25,12 @@ VL_ATTR_COLD void Vriscv_soc___024root___eval_initial(Vriscv_soc___024root* vlSe
 }
 
 void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_gpr_ptr__Vdpioc2_TOP(const VlUnpacked<QData/*63:0*/, 32> &a);
-void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_inst_ptr__Vdpioc2_TOP(const IData/*31:0*/ &a);
+void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_inst_ptr__Vdpioc2_TOP(const QData/*63:0*/ &a);
 void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_pc_ptr__Vdpioc2_TOP(const QData/*63:0*/ &a);
-void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_commit_ptr__Vdpioc2_TOP(const CData/*0:0*/ &a);
+void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_commit_ptr__Vdpioc2_TOP(const QData/*63:0*/ &a);
 void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_inst_counter_ptr__Vdpioc2_TOP(const QData/*63:0*/ &a);
-void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_irq__Vdpioc2_TOP(const CData/*0:0*/ &a);
-void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_peripheral__Vdpioc2_TOP(const CData/*0:0*/ &a);
+void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_irq__Vdpioc2_TOP(const QData/*63:0*/ &a);
+void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_peripheral__Vdpioc2_TOP(const QData/*63:0*/ &a);
 void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__set_difftest_mstatus_ptr__Vdpioc2_TOP(const QData/*63:0*/ &a);
 void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__set_difftest_mcause_ptr__Vdpioc2_TOP(const QData/*63:0*/ &a);
 void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__set_difftest_mtvec_ptr__Vdpioc2_TOP(const QData/*63:0*/ &a);
@@ -3289,12 +3289,12 @@ VL_ATTR_COLD void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vl
     for (int __Vi0 = 0; __Vi0 < 32; ++__Vi0) {
         vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__reg_file[__Vi0] = VL_RAND_RESET_Q(64);
     }
-    vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_commit = VL_RAND_RESET_I(1);
-    vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_inst = VL_RAND_RESET_I(32);
+    vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_commit = VL_RAND_RESET_Q(64);
+    vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_inst = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_pc = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__inst_counter = VL_RAND_RESET_Q(64);
-    vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_irq = VL_RAND_RESET_I(1);
-    vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_peripheral = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_irq = VL_RAND_RESET_Q(64);
+    vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_peripheral = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__commit__DOT___inst_counter_T_1 = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__irq = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT__reg_mstatus = VL_RAND_RESET_Q(64);

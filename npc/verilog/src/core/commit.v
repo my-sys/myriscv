@@ -134,30 +134,30 @@ always @(posedge clock) begin
 	end 
 end
 
-  reg  difftest_commit; // @[commit.scala 73:50]
-  reg [31:0] difftest_inst; // @[commit.scala 74:58]
+  reg [63:0] difftest_commit; // @[commit.scala 73:50]
+  reg [63:0] difftest_inst; // @[commit.scala 74:58]
   reg [63:0] difftest_pc; // @[commit.scala 75:58]
   reg [63:0] inst_counter; // @[commit.scala 76:58]
-  reg  difftest_irq; // @[commit.scala 77:58]
-  reg  difftest_peripheral; // @[commit.scala 78:50]
+  reg  [63:0]difftest_irq; // @[commit.scala 77:58]
+  reg  [63:0]difftest_peripheral; // @[commit.scala 78:50]
   wire [63:0] _inst_counter_T_1 = inst_counter + 64'h1; // @[commit.scala 83:55]
 always @(posedge clock)begin 
 	if(reset)begin 
 		
-		difftest_inst <= 32'h0;
+		difftest_inst <= 64'h0;
 		difftest_pc <= 64'h0;
 		inst_counter <= 64'h0;
-		difftest_irq <= 1'h0;
-		difftest_peripheral <= 1'h0;
-		difftest_commit <= 1'h0;
+		difftest_irq <= 64'h0;
+		difftest_peripheral <= 64'h0;
+		difftest_commit <= 64'h0;
 	end else begin 
 		
-		difftest_inst <= io_difftest_inst;
+		difftest_inst <= {32'h0,io_difftest_inst};
 		difftest_pc   <= io_csr_except_pc;
 		if(io_commit)inst_counter <= _inst_counter_T_1;
-		difftest_irq <= io_csr_except_is_time_irq | io_csr_except_is_soft_irq;
-		difftest_peripheral <= io_difftest_peripheral;
-		difftest_commit <= io_commit;
+		difftest_irq <= {63'h0,io_csr_except_is_time_irq | io_csr_except_is_soft_irq};
+		difftest_peripheral <= {63'h0,io_difftest_peripheral};
+		difftest_commit <= {63'h0,io_commit};
 	end 
 end
 

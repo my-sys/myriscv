@@ -21,10 +21,10 @@ VL_INLINE_OPT void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT_
 
 extern "C" void set_difftest_inst_ptr(const svOpenArrayHandle a);
 
-VL_INLINE_OPT void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_inst_ptr__Vdpioc2_TOP(const IData/*31:0*/ &a) {
+VL_INLINE_OPT void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_inst_ptr__Vdpioc2_TOP(const QData/*63:0*/ &a) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_inst_ptr__Vdpioc2_TOP\n"); );
     // Body
-    static const VerilatedVarProps a__Vopenprops(VLVT_UINT32, VLVD_IN, VerilatedVarProps::Packed(), 31, 0);
+    static const VerilatedVarProps a__Vopenprops(VLVT_UINT64, VLVD_IN, VerilatedVarProps::Packed(), 63, 0);
     VerilatedDpiOpenVar a__Vopenarray (&a__Vopenprops, &a);
     set_difftest_inst_ptr(&a__Vopenarray);
 }
@@ -41,10 +41,10 @@ VL_INLINE_OPT void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT_
 
 extern "C" void set_difftest_commit_ptr(const svOpenArrayHandle a);
 
-VL_INLINE_OPT void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_commit_ptr__Vdpioc2_TOP(const CData/*0:0*/ &a) {
+VL_INLINE_OPT void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_commit_ptr__Vdpioc2_TOP(const QData/*63:0*/ &a) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_commit_ptr__Vdpioc2_TOP\n"); );
     // Body
-    static const VerilatedVarProps a__Vopenprops(VLVT_UINT8, VLVD_IN, VerilatedVarProps::Packed(), 0, 0);
+    static const VerilatedVarProps a__Vopenprops(VLVT_UINT64, VLVD_IN, VerilatedVarProps::Packed(), 63, 0);
     VerilatedDpiOpenVar a__Vopenarray (&a__Vopenprops, &a);
     set_difftest_commit_ptr(&a__Vopenarray);
 }
@@ -61,20 +61,20 @@ VL_INLINE_OPT void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT_
 
 extern "C" void set_difftest_irq(const svOpenArrayHandle a);
 
-VL_INLINE_OPT void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_irq__Vdpioc2_TOP(const CData/*0:0*/ &a) {
+VL_INLINE_OPT void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_irq__Vdpioc2_TOP(const QData/*63:0*/ &a) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_irq__Vdpioc2_TOP\n"); );
     // Body
-    static const VerilatedVarProps a__Vopenprops(VLVT_UINT8, VLVD_IN, VerilatedVarProps::Packed(), 0, 0);
+    static const VerilatedVarProps a__Vopenprops(VLVT_UINT64, VLVD_IN, VerilatedVarProps::Packed(), 63, 0);
     VerilatedDpiOpenVar a__Vopenarray (&a__Vopenprops, &a);
     set_difftest_irq(&a__Vopenarray);
 }
 
 extern "C" void set_difftest_peripheral(const svOpenArrayHandle a);
 
-VL_INLINE_OPT void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_peripheral__Vdpioc2_TOP(const CData/*0:0*/ &a) {
+VL_INLINE_OPT void Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_peripheral__Vdpioc2_TOP(const QData/*63:0*/ &a) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vriscv_soc___024root____Vdpiimwrap_riscv_soc__DOT__core__DOT__commit__DOT__set_difftest_peripheral__Vdpioc2_TOP\n"); );
     // Body
-    static const VerilatedVarProps a__Vopenprops(VLVT_UINT8, VLVD_IN, VerilatedVarProps::Packed(), 0, 0);
+    static const VerilatedVarProps a__Vopenprops(VLVT_UINT64, VLVD_IN, VerilatedVarProps::Packed(), 63, 0);
     VerilatedDpiOpenVar a__Vopenarray (&a__Vopenprops, &a);
     set_difftest_peripheral(&a__Vopenarray);
 }
@@ -658,13 +658,8 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_bus_wdata 
         = (((QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT___GEN_34[1U])) 
             << 0x20U) | (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT___GEN_34[0U])));
-    vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_commit 
-        = ((~ (IData)(vlSelf->reset)) & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_commit));
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_is_except 
         = ((~ (IData)(vlSelf->reset)) & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__system_exu_io_is_except));
-    vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_irq 
-        = ((~ (IData)(vlSelf->reset)) & ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_csr_except_is_time_irq) 
-                                         | (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_csr_except_is_soft_irq)));
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_is_soft_irq 
         = ((~ (IData)(vlSelf->reset)) & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__soft_irq));
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_is_time_irq 
@@ -706,8 +701,6 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
         = ((IData)(vlSelf->reset) | (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___GEN_39));
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_ready 
         = ((IData)(vlSelf->reset) | (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT___GEN_32));
-    vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_peripheral 
-        = ((~ (IData)(vlSelf->reset)) & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_difftest_peripheral));
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_sys_alu_w_valid 
         = ((~ (IData)(vlSelf->reset)) & (((((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu_io_valid) 
                                             | (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__system_exu_io_valid)) 
@@ -843,6 +836,8 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
         __Vdlyvset__riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT__BTB__v0 = 1U;
         __Vdlyvset__riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT__RAS__v0 = 1U;
         __Vdly__riscv_soc__DOT__core__DOT__cross_bar__DOT__reg_r_cnt = 0U;
+        vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_commit = 0ULL;
+        vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_irq = 0ULL;
         vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__inst_counter = 0ULL;
         vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage1__DOT__reg_valid = 0U;
         vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT__reg_ready = 0U;
@@ -984,6 +979,11 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
                            & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache_io_cache_bus_r_ready)))
                         ? (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar__DOT___reg_r_cnt_T_5)
                         : (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar__DOT___GEN_23))));
+        vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_commit 
+            = (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_commit));
+        vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_irq 
+            = (QData)((IData)(((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_csr_except_is_time_irq) 
+                               | (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute_io_csr_except_is_soft_irq))));
         if (vlSelf->riscv_soc__DOT__core__DOT__execute_io_commit) {
             vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__inst_counter 
                 = vlSelf->riscv_soc__DOT__core__DOT__commit__DOT___inst_counter_T_1;
@@ -1256,7 +1256,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_mul1[3U] = 0U;
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_mul1[4U] = 0U;
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_sys_alu_wdata = 0ULL;
-        vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_inst = 0U;
+        vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_inst = 0ULL;
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_valid = 0U;
         vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_pc = 0ULL;
         __Vdly__riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_state = 0U;
@@ -1279,6 +1279,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_cnt = 0U;
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType = 0U;
         __Vdly__riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_dest_is_w = 0U;
+        vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_peripheral = 0ULL;
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_valid = 0U;
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_rs2_data = 0ULL;
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_rs1_data = 0ULL;
@@ -1499,7 +1500,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
                         : vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__dst_data)
                     : 0ULL));
         vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_inst 
-            = vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_difftest_inst;
+            = (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_difftest_inst));
         vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_pc 
             = vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_except_pc;
         if ((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_state))) {
@@ -1614,6 +1615,8 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
                 }
             }
         }
+        vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__difftest_peripheral 
+            = (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_difftest_peripheral));
         if (vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_state) {
             if (vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_state) {
                 if (vlSelf->riscv_soc__DOT__core_io_axi_bus_r_valid) {
