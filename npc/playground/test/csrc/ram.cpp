@@ -95,9 +95,8 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, uint8_t rflag,paddr_t wa
 			*rdata = rtc_read(raddr - 0x10005000);
 		}
 	}else{
-		if(raddr >0xfff80000000){
-			*rdata = 0;
-			return;
+		if((raddr&0xfffffff0) == 0x81eafff0){
+			printf("r 0x81eafff0 = 0x%lx\n",*rdata);
 		}
 		// if((raddr == 0x80008f70) |(raddr == 0x80008f78)){
 		// 	raddr = (raddr - 0x80000000)>>3;
