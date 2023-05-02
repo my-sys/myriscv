@@ -76,14 +76,14 @@ Emulator::Emulator(){
 };
 
 void Emulator::execute_cycle(){
-    top->clock = 0;
+    top->clock = 1;
     top->eval();
 #if EN_TRACE
 	if(start_wave){
 		m_trace->dump(2*cycles);
 	}
 #endif 
-    top->clock = 1;
+    top->clock = 0;
     top->eval();
 #if EN_TRACE
 	if(start_wave){
