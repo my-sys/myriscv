@@ -65,7 +65,7 @@ VL_ATTR_COLD void Vriscv_soc___024root___eval_settle(Vriscv_soc___024root* vlSel
 #ifdef VL_DEBUG
                 Vriscv_soc___024root___dump_triggers__stl(vlSelf);
 #endif
-                VL_FATAL_MT("/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 9684, "", "Settle region did not converge.");
+                VL_FATAL_MT("/home/xingk/ysyx-workbench/npc/build/riscv_soc.v", 9686, "", "Settle region did not converge.");
             }
             vlSelf->__VstlIterCount = ((IData)(1U) 
                                        + vlSelf->__VstlIterCount);
@@ -2155,22 +2155,20 @@ VL_ATTR_COLD void Vriscv_soc___024root___stl_sequent__TOP__0(Vriscv_soc___024roo
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs1_is_reg 
         = ((2U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
            | ((3U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
-              & ((2U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
-                 | ((5U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
-                     ? (~ (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
-                           >> 3U)) : ((4U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
-                                      | ((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
-                                         | ((1U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
-                                            & ((6U 
-                                                == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
-                                               & ((0U 
-                                                   != 
-                                                   (7U 
-                                                    & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
-                                                       >> 0xcU))) 
-                                                  & (~ 
-                                                     (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
-                                                      >> 0xeU)))))))))));
+              & ((5U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
+                  ? (~ (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
+                        >> 3U)) : ((4U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
+                                   | ((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
+                                      | ((1U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
+                                         & ((6U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
+                                            & ((0U 
+                                                != 
+                                                (7U 
+                                                 & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
+                                                    >> 0xcU))) 
+                                               & (~ 
+                                                  (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
+                                                   >> 0xeU))))))))));
     if ((2U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))) {
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs2_is_reg 
             = (1U & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
@@ -2185,29 +2183,27 @@ VL_ATTR_COLD void Vriscv_soc___024root___stl_sequent__TOP__0(Vriscv_soc___024roo
     } else {
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs2_is_reg 
             = (1U & ((3U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
-                     & ((2U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
-                        | ((5U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
-                           & ((4U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
-                              | ((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
-                                 & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
-                                    >> 5U)))))));
+                     & ((5U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
+                        & ((4U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
+                           | ((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
+                              & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
+                                 >> 5U))))));
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType 
             = ((3U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
-                ? 1U : ((2U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
-                         ? 6U : ((5U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
-                                  ? ((8U & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst)
-                                      ? 2U : 0xcU) : 
-                                 ((4U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
-                                   ? 7U : ((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
-                                            ? ((0x20U 
-                                                & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst)
-                                                ? 3U
-                                                : 0xcU)
-                                            : ((1U 
-                                                == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
-                                                ? 0U
-                                                : (
-                                                   (6U 
+                ? 1U : ((5U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
+                         ? ((8U & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst)
+                             ? 2U : 0xcU) : ((4U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
+                                              ? 7U : 
+                                             ((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
+                                               ? ((0x20U 
+                                                   & vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst)
+                                                   ? 3U
+                                                   : 0xcU)
+                                               : ((1U 
+                                                   == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
+                                                   ? 0U
+                                                   : 
+                                                  ((6U 
                                                     == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
                                                     ? 
                                                    ((0U 
@@ -2217,7 +2213,7 @@ VL_ATTR_COLD void Vriscv_soc___024root___stl_sequent__TOP__0(Vriscv_soc___024roo
                                                          >> 0xcU)))
                                                      ? 0U
                                                      : 5U)
-                                                    : 0U)))))));
+                                                    : 0U))))));
     }
     vlSelf->riscv_soc__DOT__core__DOT__commit__DOT___GEN_26 
         = ((0x1aU == (0x1fU & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 

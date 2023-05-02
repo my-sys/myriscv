@@ -3434,21 +3434,19 @@ VL_ATTR_COLD void Vriscv_soc___024root__trace_full_sub_0(Vriscv_soc___024root* v
     bufp->fullCData(oldp+426,(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType),4);
     bufp->fullBit(oldp+427,(((2U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
                              | ((3U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
-                                | ((2U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
-                                   | ((5U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
-                                      | ((4U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
-                                         & ((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
-                                             ? (~ (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
-                                                   >> 5U))
-                                             : ((1U 
-                                                 != (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
-                                                & ((0U 
-                                                    != 
-                                                    (7U 
-                                                     & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
-                                                        >> 0xcU))) 
-                                                   & (6U 
-                                                      == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))))))))))));
+                                | ((5U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
+                                   | ((4U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
+                                      & ((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
+                                          ? (~ (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
+                                                >> 5U))
+                                          : ((1U != (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
+                                             & ((0U 
+                                                 != 
+                                                 (7U 
+                                                  & (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__ibuf_io_put_pc_bits_inst 
+                                                     >> 0xcU))) 
+                                                & (6U 
+                                                   == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)))))))))));
     bufp->fullBit(oldp+428,(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs1_is_reg));
     bufp->fullBit(oldp+429,(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs2_is_reg));
     bufp->fullBit(oldp+430,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu_io_valid));
