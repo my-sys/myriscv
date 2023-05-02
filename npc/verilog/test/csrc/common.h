@@ -15,10 +15,10 @@ typedef uint64_t word_t;
 // calculate the length of an array
 #define ARRLEN(arr) (int)(sizeof(arr) / sizeof(arr[0]))
 //提供波形
-#define EN_TRACE 1
+//#define EN_TRACE 1
 //提供指令解析与追踪
-#define CONFIG_ITRACE
-#define CONFIG_DIFFTEST
+//#define CONFIG_ITRACE
+//#define CONFIG_DIFFTEST
 
 //----------------------------
 //#define CONFIG_ITRACE_ALL
