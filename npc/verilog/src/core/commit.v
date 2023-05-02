@@ -153,7 +153,7 @@ always @(posedge clock)begin
 		difftest_commit <= io_commit;
 		difftest_inst <= io_difftest_inst;
 		difftest_pc <= io_csr_except_pc;
-		inst_counter <= _inst_counter_T_1;
+		if(io_commit)inst_counter <= _inst_counter_T_1;
 		difftest_irq <= io_csr_except_is_time_irq | io_csr_except_is_soft_irq;
 		difftest_peripheral <= io_difftest_peripheral;
 	end 
