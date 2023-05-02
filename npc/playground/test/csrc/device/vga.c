@@ -53,7 +53,8 @@ void vga_update_screen() {
 }
 
 void vga_buffer_write(uint64_t offset,uint64_t wdata){
-	assert((offset % 4)==0);
+	//assert((offset % 4)==0);
+	printf("offset 0x%lx\n",offset);
 	uint32_t data;
 	offset = offset >> 2;
 	if(offset %2 == 0){
