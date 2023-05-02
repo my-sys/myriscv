@@ -143,19 +143,21 @@ end
   wire [63:0] _inst_counter_T_1 = inst_counter + 64'h1; // @[commit.scala 83:55]
 always @(posedge clock)begin 
 	if(reset)begin 
-		difftest_commit <= 1'h0;
+		
 		difftest_inst <= 32'h0;
 		difftest_pc <= 64'h0;
 		inst_counter <= 64'h0;
 		difftest_irq <= 1'h0;
 		difftest_peripheral <= 1'h0;
+		difftest_commit <= 1'h0;
 	end else begin 
-		difftest_commit <= io_commit;
+		
 		difftest_inst <= io_difftest_inst;
 		difftest_pc <= io_csr_except_pc;
 		if(io_commit)inst_counter <= _inst_counter_T_1;
 		difftest_irq <= io_csr_except_is_time_irq | io_csr_except_is_soft_irq;
 		difftest_peripheral <= io_difftest_peripheral;
+		difftest_commit <= io_commit;
 	end 
 end
 
