@@ -62,8 +62,35 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, uint8_t rflag,paddr_t wa
 	// if(((rflag!=0)  && (raddr < 0x80000000)) || ((wen != 0)&&(waddr<0x80000000))){
 	// 	difftest_skip_ref();
 	// }
-	if(waddr < 0x80000000){
-		if(wen){
+	// if(waddr < 0x80000000){
+	// 	if(wen){
+	// 		if(waddr < 0x01ffffff){ //VGA buffer
+	// 			vga_buffer_write(waddr,wdata);
+	// 		}else if((0x10000000<=waddr) & (waddr <=0x10000FFF)){ // uart
+	// 			// printf("waddr %lx, wmask %lx\n",waddr,wmask);
+	// 			// *rdata = 0;
+	// 			// return;
+	// 			assert((waddr == 0x10000000)&(wmask == 0xff));
+	// 			serial_write(waddr-0x10000000,wdata);
+	// 		}else if((0x10002000<=waddr) & (waddr <= 0x10002FFF)){ // vga
+	// 			vga_write(waddr - 0x10002000,wdata);
+	// 		}else if((0x10003000<=waddr)&(waddr <= 0x10003FFF)){ //keyboard
+	// 			assert(0);
+	// 		}
+	// 	}
+	// }else{
+	// 	//waddr = (waddr - 0x80000000)>>3;
+	// 	if(wen){
+	// 		waddr = (waddr - 0x80000000)>>3;
+	// 		ram[waddr] = (ram[waddr] & (~wmask)) | (wdata & wmask);
+    // 	}
+	// }
+
+	if(wen){
+		if(waddr >= 0x80000000){
+			waddr = (waddr - 0x80000000)>>3;
+			ram[waddr] = (ram[waddr] & (~wmask)) | (wdata & wmask);
+		}else{
 			if(waddr < 0x01ffffff){ //VGA buffer
 				vga_buffer_write(waddr,wdata);
 			}else if((0x10000000<=waddr) & (waddr <=0x10000FFF)){ // uart
@@ -78,17 +105,12 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, uint8_t rflag,paddr_t wa
 				assert(0);
 			}
 		}
-	}else{
-		waddr = (waddr - 0x80000000)>>3;
-		if(wen){
-			if(waddr == (0x1eafff0>>3)){
-				printf("w  0x81eafff0 = 0x%lx\n",wdata);
-			}
-			ram[waddr] = (ram[waddr] & (~wmask)) | (wdata & wmask);
-    	}
 	}
 	
-	if(raddr< 0x80000000){
+	if(raddr >= 0x80000000){
+		raddr = (raddr - 0x80000000)>>3;
+		*rdata = ram[raddr];
+	}else{
 		if(raddr < 0x01ffffff){	// vga buffer
 			*rdata = 0;
 		}else if((0x10000000<=raddr)&(raddr <= 0x10000fff)){ // uart
@@ -100,18 +122,31 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, uint8_t rflag,paddr_t wa
 		}else if((0x10005000<=raddr)&(raddr <= 0x2FFFFFFF)){
 			*rdata = rtc_read(raddr - 0x10005000);
 		}
-	}else{
-		// if((raddr == 0x80008f70) |(raddr == 0x80008f78)){
-		// 	raddr = (raddr - 0x80000000)>>3;
-		// 	*rdata = ram[raddr];
-		// 	printf(" aa 0x%lx\n",*rdata);
-		// }else{
-		raddr = (raddr - 0x80000000)>>3;
-		*rdata = ram[raddr];
-		if(raddr == ((0x1eafff0>>3))){
-			printf("r  0x81eafff0 = 0x%lx\n",*rdata);
-		}
-		//}
-
 	}
+	// if(raddr< 0x80000000){
+	// 	if(raddr < 0x01ffffff){	// vga buffer
+	// 		*rdata = 0;
+	// 	}else if((0x10000000<=raddr)&(raddr <= 0x10000fff)){ // uart
+	// 		*rdata = 0;
+	// 	}else if((0x10002000<=raddr) & (raddr <= 0x10002FFF)){ // vga
+	// 		*rdata = vga_read(raddr - 0x10002000);
+	// 	}else if((0x10003000<=raddr)&(raddr <= 0x10003FFF)){ //keyboard
+	// 		*rdata = keyboard_read(raddr - 0x10003000);
+	// 	}else if((0x10005000<=raddr)&(raddr <= 0x2FFFFFFF)){
+	// 		*rdata = rtc_read(raddr - 0x10005000);
+	// 	}
+	// }else{
+	// 	// if((raddr == 0x80008f70) |(raddr == 0x80008f78)){
+	// 	// 	raddr = (raddr - 0x80000000)>>3;
+	// 	// 	*rdata = ram[raddr];
+	// 	// 	printf(" aa 0x%lx\n",*rdata);
+	// 	// }else{
+	// 	raddr = (raddr - 0x80000000)>>3;
+	// 	*rdata = ram[raddr];
+	// 	// if(raddr == ((0x1eafff0>>3))){
+	// 	// 	printf("r  0x81eafff0 = 0x%lx\n",*rdata);
+	// 	// }
+	// 	//}
+
+	// }
 }

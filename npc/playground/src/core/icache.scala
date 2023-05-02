@@ -179,24 +179,30 @@ class ICache_stage2 extends Module{
 	val bus_idle :: bus_busy :: bus_wait :: Nil = Enum(3)
 	val reg_bus_state = RegInit(bus_idle)
 
+	val lru_0_and_neg_chose = reg_lru_0 & neg_chose_bit
+	val lru_0_or_chose = reg_lru_0 | chose_bit
+	val lru_1_and_neg_chose = reg_lru_1 & neg_chose_bit
+	val lru_1_or_chose = reg_lru_1 | chose_bit
 	when((reg_bus_state === bus_idle)&valid){
 		when(hit_0){
-			reg_lru_0 := reg_lru_0 & neg_chose_bit
-			reg_lru_1 := reg_lru_1 | chose_bit
+			reg_lru_0 := lru_0_and_neg_chose
+			reg_lru_1 := lru_1_or_chose
 		}.elsewhen(hit_1){
-			reg_lru_0 := reg_lru_0 | chose_bit
-			reg_lru_1 := reg_lru_1 & neg_chose_bit
+			reg_lru_0 := lru_0_or_chose
+			reg_lru_1 := lru_1_and_neg_chose
 		}.otherwise{
 			when(tag_valid_0 & tag_valid_1){
-				reg_lru_0 := Mux(LRU_1,reg_lru_0 | chose_bit,reg_lru_0 & neg_chose_bit)
-				reg_lru_1 := Mux(LRU_1,reg_lru_1 & neg_chose_bit,reg_lru_1 | chose_bit)
+				reg_lru_0 := Mux(LRU_1,lru_0_or_chose,lru_0_and_neg_chose)
+				reg_lru_1 := Mux(LRU_1,lru_1_and_neg_chose,lru_1_or_chose)
 			}.otherwise{
-				reg_lru_0 := Mux(tag_valid_0,reg_lru_0 | chose_bit,reg_lru_0 & neg_chose_bit)
-				reg_lru_1 := Mux(tag_valid_0,reg_lru_1 & neg_chose_bit,reg_lru_1 | chose_bit)
+				reg_lru_0 := Mux(tag_valid_0,lru_0_or_chose,lru_0_and_neg_chose)
+				reg_lru_1 := Mux(tag_valid_0,lru_1_and_neg_chose,lru_1_or_chose)
 			}
 		}
 	}
 
+	val hit_0_and_valid_0 = (hit_0 & tag_valid_0)
+	val hit_1_and_valid_1 = (hit_1 & tag_valid_1)
 	switch(reg_bus_state){
 		is(bus_idle){
 			reg_cache_write := false.B
@@ -216,7 +222,7 @@ class ICache_stage2 extends Module{
 			//一般情况下不会出现两个都中，如果两个都中，则说明tag为0 
 			// 此时必然有一个无效。这种情况下强制为hit_0先有效
 				reg_chosen_tag	:= Mux(hit_0,0.U,1.U)
-				when((hit_0 & tag_valid_0) | (hit_1 & tag_valid_1)){
+				when(hit_0_and_valid_0 | hit_1_and_valid_1){
 					// read data from cache
 					// ------ cpu----- 
 					reg_rdata 			:= Mux(hit_0,rdata0,rdata1)

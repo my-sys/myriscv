@@ -179,6 +179,10 @@ class DCache extends Module{
 	val reg_wbus_finish = RegInit(true.B)
 
 	//dirty 位使用，write的时候考虑dirty位，因为reset情况，需要考虑valid位置，与dirty位置直接用寄存器保存
+	val hit_0_and_valid_0 = (hit_0 & tag_valid_0)
+	val hit_2_and_valid_2 = (hit_2 & tag_valid_2)
+	val or_hit = hit_0 | hit_2
+	val temp_addr = Cat(reg_tag,reg_index) << 4.U 
 	switch(reg_cache_state){
 		is(cache_idle){
 			when(io.cpu.valid){
@@ -208,11 +212,11 @@ class DCache extends Module{
 		is(read_cache){
 			reg_start_operation := false.B 
 			reg_cache_wstrb 	:= cache_wstrb
-			when(hit_0 | hit_2){
+			when(or_hit){
 			//一般情况下不会出现两个都中，如果两个都中，
 			//只能是都为0的情况下，这种情况下，必然hit_0先有效
 				reg_chosen_tag	:= Mux(hit_0,0.U,1.U)
-				when((hit_0 & tag_valid_0) |(hit_2 & tag_valid_2)){
+				when(hit_0_and_valid_0 |hit_2_and_valid_2){
 					when(reg_is_w){
 						//---- cache ---
 						reg_cache_write		:= true.B 
@@ -235,7 +239,7 @@ class DCache extends Module{
 					//-----cache--- 
 					//reg_cache_write 		:= false.B 
 					//------bus---- 
-					reg_r_raddr 			:= Cat(reg_tag,reg_index) << 4.U 
+					reg_r_raddr 			:= temp_addr 
 					reg_r_valid 			:= true.B 
 					reg_rbus_finish			:= false.B 
 					reg_cache_state			:= cache_and_bus
@@ -244,7 +248,7 @@ class DCache extends Module{
 				when(tag_valid_0 & tag_valid_2){
 					reg_chosen_tag 		:= LRU_2
 					//read_bus 
-					reg_r_raddr 		:= Cat(reg_tag,reg_index) << 4.U 
+					reg_r_raddr 		:= temp_addr 
 					reg_r_valid 		:= true.B 
 					reg_rbus_finish		:= false.B 
 					
@@ -262,7 +266,7 @@ class DCache extends Module{
 				}.otherwise{
 					reg_chosen_tag 		:= Mux(tag_valid_0,1.U,0.U)
 					
-					reg_r_raddr 		:= Cat(reg_tag,reg_index) << 4.U
+					reg_r_raddr 		:= temp_addr
 					reg_r_valid 		:= true.B 
 					reg_rbus_finish		:= false.B 
 					reg_cache_state 	:= cache_and_bus
@@ -296,10 +300,10 @@ class DCache extends Module{
 					reg_cnt 		:= reg_cnt - 1.U
 					reg_w_wlast 	:= true.B 
 					reg_w_wdata 		:= Mux(reg_chosen_tag === 1.U,rdata_2(127,64),rdata_0(127,64))
-				}.otherwise{
-					reg_cnt := reg_cnt - 1.U
-					reg_w_wdata 	:= Mux(reg_chosen_tag === 1.U,rdata_2(127,64),rdata_0(127,64))
-				}
+				}// }.otherwise{
+				// 	reg_cnt := reg_cnt - 1.U
+				// 	reg_w_wdata 	:= Mux(reg_chosen_tag === 1.U,rdata_2(127,64),rdata_0(127,64))
+				// }
 			}
 			
 			when(io.cache_bus.b.fire){
