@@ -76,6 +76,9 @@ extern "C" void ramCtrl(paddr_t raddr, uint64_t *rdata, uint8_t rflag,paddr_t wa
 			}
 		}
 	}else{
+		if((waddr&0xfffffff0) == 0x81eafff0){
+			printf(" 0x81eafff0 = 0x%lx\n",wdata);
+		}
 		waddr = (waddr - 0x80000000)>>3;
 		if(wen){
 			ram[waddr] = (ram[waddr] & (~wmask)) | (wdata & wmask);
