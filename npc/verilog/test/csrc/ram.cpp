@@ -35,6 +35,9 @@ uint64_t init_ram(const char* img_file){
 		assert(0);
 	}
     fclose(fp);
+	uint64_t temp_raddr = 0x81eafff0;
+	temp_raddr = (temp_raddr - 0x80000000)>>3;
+	printf("ram kkk 0x%lx\n",ram[temp_raddr]);
 	return imgfile_size;
 }
 
