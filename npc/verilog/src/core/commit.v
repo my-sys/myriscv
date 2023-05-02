@@ -143,7 +143,6 @@ end
   wire [63:0] _inst_counter_T_1 = inst_counter + 64'h1; // @[commit.scala 83:55]
 always @(posedge clock)begin 
 	if(reset)begin 
-		
 		difftest_inst <= 64'h0;
 		difftest_pc <= 64'h0;
 		inst_counter <= 64'h0;
