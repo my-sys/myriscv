@@ -77,7 +77,7 @@ class Decode extends Module{
 	val is_sr = fun === ALUType.alu_srl(4,2)
 	val temp_kk = Cat(int(30),fun_exuType)
 	val temp_op_exuType = Mux(temp_op_is_imm,Mux(is_sr,temp_kk,fun_exuType),temp_kk)
-	val temp_op_itype = Mux(temp_op_is_imm,Mux((fun === ALUType.alu_sll(4,2)) | is_sr),Inst_type.Type_IR,Inst_type.Type_I),Inst_type.Type_R)
+	val temp_op_itype = Mux(temp_op_is_imm,Mux((fun === ALUType.alu_sll(4,2)) | is_sr,Inst_type.Type_IR,Inst_type.Type_I),Inst_type.Type_R)
 	val temp_op_rs2   = Mux(temp_op_is_imm,false.B,true.B)
 	// val temp_jal_jalr = Mux(inst(3),List(Op_type.op_bru,BRUType.bru_jal,Inst_type.Type_J,true.B,false.B,false.B),
 	// List(Op_type.op_bru,BRUType.bru_jalr,Inst_type.Type_I,true.B,true.B,false.B))
@@ -86,7 +86,7 @@ class Decode extends Module{
 	Mux(inst(3),Inst_type.Type_J,Inst_type.Type_I),true.B,
 	Mux(inst(3),false.B,true.B),false.B)
 	val opType :: exuType :: instType :: dest_is_reg :: rs1_is_reg :: rs2_is_reg :: Nil = ListLookup(fun_op,decodefault,Array(
-		BitPat("b010")	-> List(Op_type.op_alu,Cat(0.U(2.W),fun_op),temp_op_itype,true.B,true.B,temp_op_rs2), // op
+		BitPat("b010")	-> List(Op_type.op_alu,temp_op_exuType,temp_op_itype,true.B,true.B,temp_op_rs2), // op
 		BitPat("b011") 	-> List(Op_type.op_alu,Mux(inst(5),ALUType.alu_lui,ALUType.alu_auipc),Inst_type.Type_U,true.B,false.B,false.B),	// auipc,lui 
 		BitPat("b010") 	-> List(Op_type.op_mu,fun_exuType,Inst_type.Type_R,true.B,true.B,true.B), //muldiv 
 		BitPat("b101") 	-> temp_jal_jalr, // jalr,jal,
