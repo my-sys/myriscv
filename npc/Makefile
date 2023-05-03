@@ -20,7 +20,7 @@ VERILATOR_FLAGS += -cc --exe
 # Generate makefile dependencies (not shown as complicates the Makefile)
 #VERILATOR_FLAGS += -MMD 
 # Optimize
-#VERILATOR_FLAGS += --x-assign fast -O3
+VERILATOR_FLAGS += --x-assign fast -O3
 #VERILATOR_FLAGS += -O3 --x-assign fast --x-initial fast --noassert
 # Warn abount lint issues; may not want this on less solid designs
 #VERILATOR_FLAGS += -Wall
@@ -39,7 +39,7 @@ VERILATOR_FLAGS += --trace
 #VERILATOR_FLAGS += --gdbbt
 #-------------------------------------------
 #VERILATOR_FLAGS += --gdb
-VERILATOR_FLAGS += +define+SYNTHESIS
+#VERILATOR_FLAGS += +define+SYNTHESIS
 
 #VERILATOR_FLAGS += coverage_on  -file "verilator_config.vlt"
 BIN = ./obj_dir/V$(TOPNAME)
