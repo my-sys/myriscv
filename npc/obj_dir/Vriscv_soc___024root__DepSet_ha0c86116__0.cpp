@@ -2229,7 +2229,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
                         } else {
                             __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata 
                                 = ((8U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_offset))
-                                    ? (1ULL + vlSelf->riscv_soc__DOT__axi_ram__DOT__mem_rdata)
+                                    ? vlSelf->riscv_soc__DOT__axi_ram__DOT__mem_rdata
                                     : (((QData)((IData)(
                                                         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wdata[1U])) 
                                         << 0x20U) | (QData)((IData)(
