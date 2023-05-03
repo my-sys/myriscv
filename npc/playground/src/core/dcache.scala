@@ -146,8 +146,8 @@ class DCache extends Module{
 	val reg_b_ready 	= RegInit(false.B)
 	
 //------------------------------ get data from SRAM-----------------------------
-	val tag_0 			= sram0_tag.rdata(53,0)
-	val tag_2 			= sram2_tag.rdata(53,0)
+	val tag_0 			= sram.rdata(1)(53,0)
+	val tag_2 			= sram.rdata(3)(53,0)
 	val hit_0			= (reg_tag === tag_0)
 	val hit_2 			= (reg_tag === tag_2)
 	val tag_valid_0 	= reg_sram0_valid(reg_index)
