@@ -20,7 +20,7 @@ module RAMCtrl(
     input [63:0]    wmask,
     input           wen
 );
-    always @(posedge clock)begin
-        ramCtrl(raddr,rdata,rflag,waddr,wdata,wmask,wen);
-    end 
+	always @(*)begin 
+		ramCtrl(raddr,rdata,rflag,waddr,wdata,wmask,wen);
+	end
 endmodule

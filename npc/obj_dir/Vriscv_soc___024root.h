@@ -449,6 +449,7 @@ class Vriscv_soc___024root final : public VerilatedModule {
         QData/*63:0*/ riscv_soc__DOT__axi_ram__DOT___GEN_9;
         QData/*63:0*/ riscv_soc__DOT__axi_ram__DOT__reg_w_addr;
         QData/*63:0*/ riscv_soc__DOT__axi_ram__DOT___reg_w_addr_T_1;
+        QData/*63:0*/ __Vtask_ramCtrl__11__rdata;
         VlUnpacked<QData/*63:0*/, 4> riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo;
         VlUnpacked<CData/*0:0*/, 4> riscv_soc__DOT__core__DOT__fetch__DOT__is_pre_fifo;
         VlUnpacked<QData/*63:0*/, 4> riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_pc;
