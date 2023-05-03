@@ -276,8 +276,8 @@ class Exu extends Module with CoreParameters{
 	}
 	//reg_commit := in_data_valid
 	reg_fence_i	:= in_data_valid & (io.op_datas.bits.opType === Op_type.op_fence) &(io.op_datas.bits.exuType === FENCEType.fence_i)
-	io.fence_i 			:= reg_fence_i & ready
-	io.commit 			:= reg_commit & ready
+	io.fence_i 				:= reg_fence_i & ready
+	io.commit 				:= reg_commit & ready
 	io.difftest_peripheral	:= mem_exu.io.difftest_peripheral
 	io.difftest_inst		:= reg_difftest_inst
 }

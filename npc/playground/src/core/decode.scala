@@ -135,7 +135,7 @@ class Decode extends Module{
 		reg_dest_is_reg	:= dest_is_reg
 
 		reg_csr_addr	:= csr_addr
-		reg_csr_data 	:= io.csr_rd.csr_data
+		reg_csr_data 	:= Mux(opType === Op_type.system,io.csr_rd.csr_data,0.U)
 		reg_is_pre		:= is_pre
 	}
 

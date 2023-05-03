@@ -20,11 +20,13 @@ VERILATOR_FLAGS += -cc --exe
 # Generate makefile dependencies (not shown as complicates the Makefile)
 #VERILATOR_FLAGS += -MMD 
 # Optimize
-VERILATOR_FLAGS += --x-assign fast -O3
+VERILATOR_FLAGS += -O3 --x-assign fast --x-initial fast --noassert
 # Warn abount lint issues; may not want this on less solid designs
 #VERILATOR_FLAGS += -Wall
 # Make waveforms
-VERILATOR_FLAGS += --trace
+#VERILATOR_FLAGS += --trace
+
+
 #-------------------------------------------
 # Check SystemVerilog assertions
 #VERILATOR_FLAGS += --assert
