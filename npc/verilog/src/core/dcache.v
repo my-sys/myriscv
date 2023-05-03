@@ -167,6 +167,7 @@ parameter cache_idle = 2'b00,read_cache = 2'b01,cache_and_bus = 2'b10,cache_end 
   wire[63:0] temp_addr = {reg_tag,reg_index,4'b0};
   wire io_cache_bus_r_fire = io_cache_bus_r_valid & io_cache_bus_r_ready;
   wire io_cache_bus_b_fire = io_cache_bus_b_valid & io_cache_bus_b_ready;
+  wire [63:0] bus_r_data = io_cache_bus_r_bits_rdata;
   always @(posedge clock)begin 
 	if(reset)begin 
 		reg_start_operation <= 0;
@@ -290,14 +291,14 @@ parameter cache_idle = 2'b00,read_cache = 2'b01,cache_and_bus = 2'b10,cache_end 
 						reg_cache_wstrb <= 16'hffff; 
 						reg_rbus_finish	<= 1'b1;
 						if(reg_is_w)begin
-							reg_cache_wdata     <= (cache_wdata & cache_mask) | ({io_cache_bus_r_bits_rdata,reg_cache_wdata[63:0]} & ~cache_mask);
+							reg_cache_wdata     <= (cache_wdata & cache_mask) | ({bus_r_data,reg_cache_wdata[63:0]} & ~cache_mask);
 						end else begin
 							//----cpu---
-							reg_rdata 			<= reg_offset[3]? io_cache_bus_r_bits_rdata : reg_cache_wdata[63:0];
-							reg_cache_wdata		<= {io_cache_bus_r_bits_rdata,reg_cache_wdata[63:0]};
+							reg_rdata 			<= reg_offset[3]? bus_r_data : reg_cache_wdata[63:0];
+							reg_cache_wdata		<= {bus_r_data,reg_cache_wdata[63:0]};
 						end
 					end else begin
-						reg_cache_wdata 		<= {64'h0,io_cache_bus_r_bits_rdata};
+						reg_cache_wdata 		<= {64'h0,bus_r_data};
 					end
 				end
 				

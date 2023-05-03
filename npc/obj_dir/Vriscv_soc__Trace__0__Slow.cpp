@@ -820,6 +820,7 @@ VL_ATTR_COLD void Vriscv_soc___024root__trace_init_sub__TOP__0(Vriscv_soc___024r
     tracep->declQuad(c+412,"temp_addr", false,-1, 63,0);
     tracep->declBit(c+414,"io_cache_bus_r_fire", false,-1);
     tracep->declBit(c+415,"io_cache_bus_b_fire", false,-1);
+    tracep->declQuad(c+18,"bus_r_data", false,-1, 63,0);
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("decode ");
     tracep->declBit(c+871,"clock", false,-1);
