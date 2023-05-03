@@ -12,11 +12,11 @@ VM_TIMING = 0
 # Coverage output mode?  0/1 (from --coverage)
 VM_COVERAGE = 0
 # Parallel builds?  0/1 (from --output-split)
-VM_PARALLEL_BUILDS = 1
+VM_PARALLEL_BUILDS = 0
 # Tracing output mode?  0/1 (from --trace/--trace-fst)
-VM_TRACE = 0
+VM_TRACE = 1
 # Tracing output mode in VCD format?  0/1 (from --trace)
-VM_TRACE_VCD = 0
+VM_TRACE_VCD = 1
 # Tracing output mode in FST format?  0/1 (from --trace-fst)
 VM_TRACE_FST = 0
 
@@ -26,7 +26,6 @@ VM_CLASSES_FAST += \
 	Vriscv_soc \
 	Vriscv_soc___024root__DepSet_ha0c86116__0 \
 	Vriscv_soc___024root__DepSet_h1cc2eb16__0 \
-	Vriscv_soc___024root__DepSet_h1cc2eb16__1 \
 	Vriscv_soc___024unit__DepSet_h3361055e__0 \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
@@ -34,22 +33,24 @@ VM_CLASSES_SLOW += \
 	Vriscv_soc___024root__Slow \
 	Vriscv_soc___024root__DepSet_ha0c86116__0__Slow \
 	Vriscv_soc___024root__DepSet_h1cc2eb16__0__Slow \
-	Vriscv_soc___024root__DepSet_h1cc2eb16__1__Slow \
 	Vriscv_soc___024unit__Slow \
 	Vriscv_soc___024unit__DepSet_h891a475e__0__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization
 VM_SUPPORT_FAST += \
 	Vriscv_soc__Dpi \
+	Vriscv_soc__Trace__0 \
 
 # Generated support classes, non-fast-path, compile with low/medium optimization
 VM_SUPPORT_SLOW += \
 	Vriscv_soc__Syms \
+	Vriscv_soc__Trace__0__Slow \
 
 # Global classes, need linked once per executable, fast-path, compile with highest optimization
 VM_GLOBAL_FAST += \
 	verilated \
 	verilated_dpi \
+	verilated_vcd_c \
 	verilated_threads \
 
 # Global classes, need linked once per executable, non-fast-path, compile with low/medium optimization

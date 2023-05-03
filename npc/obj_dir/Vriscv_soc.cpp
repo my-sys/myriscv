@@ -3,6 +3,7 @@
 
 #include "Vriscv_soc.h"
 #include "Vriscv_soc__Syms.h"
+#include "verilated_vcd_c.h"
 #include "verilated_dpi.h"
 
 //============================================================
@@ -13,48 +14,6 @@ Vriscv_soc::Vriscv_soc(VerilatedContext* _vcontextp__, const char* _vcname__)
     , vlSymsp{new Vriscv_soc__Syms(contextp(), _vcname__, this)}
     , clock{vlSymsp->TOP.clock}
     , reset{vlSymsp->TOP.reset}
-    , io_difftest_commit{vlSymsp->TOP.io_difftest_commit}
-    , io_difftest_irq{vlSymsp->TOP.io_difftest_irq}
-    , io_difftest_peripheral{vlSymsp->TOP.io_difftest_peripheral}
-    , io_difftest_inst{vlSymsp->TOP.io_difftest_inst}
-    , io_difftest_reg_0{vlSymsp->TOP.io_difftest_reg_0}
-    , io_difftest_reg_1{vlSymsp->TOP.io_difftest_reg_1}
-    , io_difftest_reg_2{vlSymsp->TOP.io_difftest_reg_2}
-    , io_difftest_reg_3{vlSymsp->TOP.io_difftest_reg_3}
-    , io_difftest_reg_4{vlSymsp->TOP.io_difftest_reg_4}
-    , io_difftest_reg_5{vlSymsp->TOP.io_difftest_reg_5}
-    , io_difftest_reg_6{vlSymsp->TOP.io_difftest_reg_6}
-    , io_difftest_reg_7{vlSymsp->TOP.io_difftest_reg_7}
-    , io_difftest_reg_8{vlSymsp->TOP.io_difftest_reg_8}
-    , io_difftest_reg_9{vlSymsp->TOP.io_difftest_reg_9}
-    , io_difftest_reg_10{vlSymsp->TOP.io_difftest_reg_10}
-    , io_difftest_reg_11{vlSymsp->TOP.io_difftest_reg_11}
-    , io_difftest_reg_12{vlSymsp->TOP.io_difftest_reg_12}
-    , io_difftest_reg_13{vlSymsp->TOP.io_difftest_reg_13}
-    , io_difftest_reg_14{vlSymsp->TOP.io_difftest_reg_14}
-    , io_difftest_reg_15{vlSymsp->TOP.io_difftest_reg_15}
-    , io_difftest_reg_16{vlSymsp->TOP.io_difftest_reg_16}
-    , io_difftest_reg_17{vlSymsp->TOP.io_difftest_reg_17}
-    , io_difftest_reg_18{vlSymsp->TOP.io_difftest_reg_18}
-    , io_difftest_reg_19{vlSymsp->TOP.io_difftest_reg_19}
-    , io_difftest_reg_20{vlSymsp->TOP.io_difftest_reg_20}
-    , io_difftest_reg_21{vlSymsp->TOP.io_difftest_reg_21}
-    , io_difftest_reg_22{vlSymsp->TOP.io_difftest_reg_22}
-    , io_difftest_reg_23{vlSymsp->TOP.io_difftest_reg_23}
-    , io_difftest_reg_24{vlSymsp->TOP.io_difftest_reg_24}
-    , io_difftest_reg_25{vlSymsp->TOP.io_difftest_reg_25}
-    , io_difftest_reg_26{vlSymsp->TOP.io_difftest_reg_26}
-    , io_difftest_reg_27{vlSymsp->TOP.io_difftest_reg_27}
-    , io_difftest_reg_28{vlSymsp->TOP.io_difftest_reg_28}
-    , io_difftest_reg_29{vlSymsp->TOP.io_difftest_reg_29}
-    , io_difftest_reg_30{vlSymsp->TOP.io_difftest_reg_30}
-    , io_difftest_reg_31{vlSymsp->TOP.io_difftest_reg_31}
-    , io_difftest_pc{vlSymsp->TOP.io_difftest_pc}
-    , io_inst_counter{vlSymsp->TOP.io_inst_counter}
-    , io_difftest_mstatus{vlSymsp->TOP.io_difftest_mstatus}
-    , io_difftest_mcause{vlSymsp->TOP.io_difftest_mcause}
-    , io_difftest_mepc{vlSymsp->TOP.io_difftest_mepc}
-    , io_difftest_mtvec{vlSymsp->TOP.io_difftest_mtvec}
     , __PVT____024unit{vlSymsp->TOP.__PVT____024unit}
     , rootp{&(vlSymsp->TOP)}
 {
@@ -91,6 +50,7 @@ void Vriscv_soc::eval_step() {
     // Debug assertions
     Vriscv_soc___024root___eval_debug_assertions(&(vlSymsp->TOP));
 #endif  // VL_DEBUG
+    vlSymsp->__Vm_activity = true;
     vlSymsp->__Vm_deleter.deleteAll();
     if (VL_UNLIKELY(!vlSymsp->__Vm_didInit)) {
         vlSymsp->__Vm_didInit = true;
@@ -140,3 +100,39 @@ VL_ATTR_COLD void Vriscv_soc::final() {
 const char* Vriscv_soc::hierName() const { return vlSymsp->name(); }
 const char* Vriscv_soc::modelName() const { return "Vriscv_soc"; }
 unsigned Vriscv_soc::threads() const { return 1; }
+std::unique_ptr<VerilatedTraceConfig> Vriscv_soc::traceConfig() const {
+    return std::unique_ptr<VerilatedTraceConfig>{new VerilatedTraceConfig{false, false, false}};
+};
+
+//============================================================
+// Trace configuration
+
+void Vriscv_soc___024root__trace_init_top(Vriscv_soc___024root* vlSelf, VerilatedVcd* tracep);
+
+VL_ATTR_COLD static void trace_init(void* voidSelf, VerilatedVcd* tracep, uint32_t code) {
+    // Callback from tracep->open()
+    Vriscv_soc___024root* const __restrict vlSelf VL_ATTR_UNUSED = static_cast<Vriscv_soc___024root*>(voidSelf);
+    Vriscv_soc__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    if (!vlSymsp->_vm_contextp__->calcUnusedSigs()) {
+        VL_FATAL_MT(__FILE__, __LINE__, __FILE__,
+            "Turning on wave traces requires Verilated::traceEverOn(true) call before time 0.");
+    }
+    vlSymsp->__Vm_baseCode = code;
+    tracep->scopeEscape(' ');
+    tracep->pushNamePrefix(std::string{vlSymsp->name()} + ' ');
+    Vriscv_soc___024root__trace_init_top(vlSelf, tracep);
+    tracep->popNamePrefix();
+    tracep->scopeEscape('.');
+}
+
+VL_ATTR_COLD void Vriscv_soc___024root__trace_register(Vriscv_soc___024root* vlSelf, VerilatedVcd* tracep);
+
+VL_ATTR_COLD void Vriscv_soc::trace(VerilatedVcdC* tfp, int levels, int options) {
+    if (tfp->isOpen()) {
+        vl_fatal(__FILE__, __LINE__, __FILE__,"'Vriscv_soc::trace()' shall not be called after 'VerilatedVcdC::open()'.");
+    }
+    if (false && levels && options) {}  // Prevent unused
+    tfp->spTrace()->addModel(this);
+    tfp->spTrace()->addInitCb(&trace_init, &(vlSymsp->TOP));
+    Vriscv_soc___024root__trace_register(&(vlSymsp->TOP), tfp->spTrace());
+}

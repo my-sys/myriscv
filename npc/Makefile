@@ -2,8 +2,8 @@ BUILD_DIR = ./build
 TOPNAME = riscv_soc
 export PATH := $(PATH):$(abspath ./utils)
 
-CHOSE_LANGUAGE = "chisel"
-#CHOSE_LANGUAGE = "verilog"
+#CHOSE_LANGUAGE = "chisel"
+CHOSE_LANGUAGE = "verilog"
 
 # project source
 ifeq ("verilog",$(CHOSE_LANGUAGE))
@@ -24,7 +24,7 @@ VERILATOR_FLAGS += --x-assign fast -O3
 # Warn abount lint issues; may not want this on less solid designs
 #VERILATOR_FLAGS += -Wall
 # Make waveforms
-#VERILATOR_FLAGS += --trace
+VERILATOR_FLAGS += --trace
 #-------------------------------------------
 # Check SystemVerilog assertions
 #VERILATOR_FLAGS += --assert
