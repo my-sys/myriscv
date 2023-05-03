@@ -97,6 +97,8 @@ class AXI_RAM extends Module{
 	mem.io.wmask				:= Cat(io.ram_bus.w.bits.wstrb.asBools.map(Fill(8,_)).reverse)
 	mem.io.wen 					:= w_en
 
+	val reg_r_data = RegInit(0.U(64.W))
+	reg_r_data := mem.io.rdata
 	io.ram_bus.aw.ready 		:= reg_aw_ready
 	io.ram_bus.w.ready 			:= reg_w_ready 
 	io.ram_bus.b.valid 			:= reg_b_valid
@@ -105,7 +107,7 @@ class AXI_RAM extends Module{
 	io.ram_bus.ar.ready			:= reg_ar_ready
 	io.ram_bus.r.bits.rid 		:= 0.U 
 	io.ram_bus.r.bits.rresp		:= "b00".U
-	io.ram_bus.r.bits.rdata		:= mem.io.rdata
+	io.ram_bus.r.bits.rdata		:= reg_r_data
 	io.ram_bus.r.bits.rlast		:= r_rlast //reg_r_rlast
 	io.ram_bus.r.valid			:= reg_r_valid
 }

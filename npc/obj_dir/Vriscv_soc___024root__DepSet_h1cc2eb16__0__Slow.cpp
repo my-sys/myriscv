@@ -599,6 +599,7 @@ VL_ATTR_COLD void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vl
     vlSelf->riscv_soc__DOT__axi_ram__DOT___GEN_33 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__axi_ram__DOT___GEN_34 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__axi_ram__DOT___GEN_35 = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_data = VL_RAND_RESET_Q(64);
     VL_RAND_RESET_W(128, vlSelf->riscv_soc__DOT__sram0__DOT__Q);
     for (int __Vi0 = 0; __Vi0 < 64; ++__Vi0) {
         VL_RAND_RESET_W(128, vlSelf->riscv_soc__DOT__sram0__DOT__sram[__Vi0]);

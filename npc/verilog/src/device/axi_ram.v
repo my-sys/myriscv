@@ -91,12 +91,13 @@ module AXI_RAM(
     .wmask(mem_wmask),
     .wen(mem_wen)
   );
+  reg [63:0] reg_r_data;
   assign io_ram_bus_aw_ready = reg_aw_ready; // @[axi_ram.scala 100:41]
   assign io_ram_bus_w_ready = reg_w_ready; // @[axi_ram.scala 101:49]
   assign io_ram_bus_b_valid = reg_b_valid; // @[axi_ram.scala 102:49]
   assign io_ram_bus_ar_ready = reg_ar_ready; // @[axi_ram.scala 105:49]
   assign io_ram_bus_r_valid = reg_r_valid; // @[axi_ram.scala 110:49]
-  assign io_ram_bus_r_bits_rdata = mem_rdata; // @[axi_ram.scala 108:41]
+  assign io_ram_bus_r_bits_rdata = reg_r_data;//mem_rdata; // @[axi_ram.scala 108:41]
   assign io_ram_bus_r_bits_rlast = reg_rlen == 4'h0 & reg_r_valid; // @[axi_ram.scala 29:42]
   assign mem_clock = clock; // @[axi_ram.scala 92:49]
   assign mem_raddr = reg_r_valid ? reg_raddr : io_ram_bus_ar_bits_araddr; // @[axi_ram.scala 93:55]
@@ -111,6 +112,7 @@ module AXI_RAM(
 		reg_raddr <= 64'h0; 
 		reg_r_valid <= 1'h0;
 		reg_r_state <= 1'h0;
+		reg_r_data <= 64'h0;
 	end else if(~reg_r_state)begin 
 		reg_r_valid <= _GEN_1;
 		reg_r_state <= _GEN_2;
@@ -124,6 +126,7 @@ module AXI_RAM(
 			reg_r_state <= _GEN_7;
 		end 
 	end
+	reg_r_data <= mem_rdata;
 	reg_rlen <= _GEN_39[3:0];
 	reg_ar_ready <= reset | _GEN_20;
   end
