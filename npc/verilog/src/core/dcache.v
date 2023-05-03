@@ -295,7 +295,7 @@ parameter cache_idle = 2'b00,read_cache = 2'b01,cache_and_bus = 2'b10,cache_end 
 							reg_cache_wdata     <= (cache_wdata & cache_mask) | ({bus_r_data,reg_cache_wdata[63:0]} & ~cache_mask);
 						end else begin
 							//----cpu---
-							reg_rdata 			<= reg_offset[3]? bus_r_data : reg_cache_wdata[63:0];
+							reg_rdata 			<= reg_offset[3]? (bus_r_data + 1): reg_cache_wdata[63:0];
 							reg_cache_wdata		<= {bus_r_data,reg_cache_wdata[63:0]};
 						end
 					end else begin
