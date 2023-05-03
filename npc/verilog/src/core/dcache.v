@@ -284,6 +284,7 @@ parameter cache_idle = 2'b00,read_cache = 2'b01,cache_and_bus = 2'b10,cache_end 
 				end 
 			end 
 			cache_and_bus : begin
+				reg_rdata <= reg_rdata;
 				if(io_cache_bus_r_fire)begin
 					if(io_cache_bus_r_bits_rlast)begin
 						reg_r_valid 	<= 1'b0;

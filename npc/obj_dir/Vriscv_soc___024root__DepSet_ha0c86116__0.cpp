@@ -184,6 +184,8 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
     __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_index = 0;
     CData/*3:0*/ __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_offset;
     __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_offset = 0;
+    QData/*63:0*/ __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata;
+    __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata = 0;
     VlWide<4>/*127:0*/ __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wdata;
     VL_ZERO_W(128, __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wdata);
     CData/*0:0*/ __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_chosen_tag;
@@ -436,6 +438,8 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
         = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_chosen_tag;
     __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_state 
         = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_state;
+    __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata 
+        = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata;
     __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_offset 
         = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_offset;
     __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_index 
@@ -1344,7 +1348,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
         __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_index = 0U;
         __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_offset = 0U;
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_ready = 0U;
-        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata = 0ULL;
+        __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata = 0ULL;
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_write = 0U;
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wstrb = 0U;
         __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wdata[0U] = 0U;
@@ -2153,6 +2157,8 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
                 vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_r_valid = 0U;
                 __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_state = 0U;
             } else {
+                __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata 
+                    = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata;
                 if ((((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar__DOT__w_chosen)) 
                       & (IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_w_ready)) 
                      & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache_io_cache_bus_w_valid))) {
@@ -2221,7 +2227,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
                                                >> 0x20U)) 
                                       & (~ vlSelf->riscv_soc__DOT__sram4__DOT__bwen[3U])));
                         } else {
-                            vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata 
+                            __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata 
                                 = ((8U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_offset))
                                     ? vlSelf->riscv_soc__DOT__axi_ram__DOT__mem_rdata
                                     : (((QData)((IData)(
@@ -2287,7 +2293,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
                         __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_state = 3U;
                         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_ready = 1U;
                     } else {
-                        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata 
+                        __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata 
                             = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__hit_0)
                                 ? vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__rdata0
                                 : vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__rdata2);
@@ -3382,6 +3388,8 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
         = __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_chosen_tag;
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_state 
         = __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_state;
+    vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata 
+        = __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rdata;
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_offset 
         = __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_offset;
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_index 
