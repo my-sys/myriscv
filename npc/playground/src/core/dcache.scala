@@ -17,10 +17,11 @@ class DCache extends Module{
 		)
 		//val is_fence_i = Input(Bool())
 
-		val sram0_data 	= new SRAM_Interface
-		val sram0_tag 	= new SRAM_Interface
-		val sram2_data 	= new SRAM_Interface
-		val sram2_tag 	= new SRAM_Interface
+		// val sram0_data 	= new SRAM_Interface
+		// val sram0_tag 	= new SRAM_Interface
+		// val sram2_data 	= new SRAM_Interface
+		// val sram2_tag 	= new SRAM_Interface
+		val sram = new SRAM_Interface
 		// val up_mem 		= Flipped(Decoupled())
 
 		// val clean_cache = Flipped(Decoupled())
@@ -36,11 +37,11 @@ class DCache extends Module{
 	val wstrb 		= io.cpu.bits.wstrb
 	val is_w 		= io.cpu.bits.is_w
 	
-	val sram0_data 		= io.sram0_data//= Module(new SRAM).io//= io.sram0_data	//Module(new SRAM) // 存放数据
-	val sram0_tag 		= io.sram0_tag//= Module(new SRAM).io//= io.sram0_tag	//Module(new SRAM) // 存放Tag， 以及控制位
-	val sram2_data 		= io.sram2_data//= Module(new SRAM).io//= io.sram2_data	//Module(new SRAM) // 存放数据
-	val sram2_tag 		= io.sram2_tag//= Module(new SRAM).io//= io.sram2_tag	//Module(new SRAM) // 存放Tag，以及控制位
-	
+	// val sram0_data 		= io.sram0_data//= Module(new SRAM).io//= io.sram0_data	//Module(new SRAM) // 存放数据
+	// val sram0_tag 		= io.sram0_tag//= Module(new SRAM).io//= io.sram0_tag	//Module(new SRAM) // 存放Tag， 以及控制位
+	// val sram2_data 		= io.sram2_data//= Module(new SRAM).io//= io.sram2_data	//Module(new SRAM) // 存放数据
+	// val sram2_tag 		= io.sram2_tag//= Module(new SRAM).io//= io.sram2_tag	//Module(new SRAM) // 存放Tag，以及控制位
+	val sram = io.sram
 	val cache_idle	:: read_cache :: cache_and_bus :: cache_end :: Nil = Enum(4)
 	val reg_cache_state	= RegInit(cache_idle)
 //------------------------Reg-----------------------------------
@@ -66,18 +67,27 @@ class DCache extends Module{
 //-----------------------------sram0--------------------------------
 	//val enable_sram = !(io.cpu.valid | reg_cache_write)
 	val is_sram0_write 		= reg_cache_write &(reg_chosen_tag === 0.U)
+	val is_sram2_write 		= reg_cache_write &(reg_chosen_tag === 1.U)
 	val sram0_A				= Mux(reg_cache_state =/= cache_idle,reg_index,Index)
-	sram0_data.wen 			:= ~(is_sram0_write)
-	sram0_data.cen 			:= ~(true.B)
-	sram0_data.wmask 		:= ~(cache_mask)
-	sram0_data.addr 		:= sram0_A
-	sram0_data.wdata 		:= reg_cache_wdata
+	sram.addr := sram0_A 
+	sram.wen(0) := ~(is_sram0_write)
+	sram.wen(1) := ~(is_sram2_write)
+	sram.tag_wmask := 0.U 
+	sram.data_wmask := ~(cache_mask)
+	sram.tag_wdata := reg_tag
+	sram.data_wdata := reg_cache_wdata
+
+	// sram0_data.wen 			:= ~(is_sram0_write)
+	// sram0_data.cen 			:= ~(true.B)
+	// sram0_data.wmask 		:= ~(cache_mask)
+	// sram0_data.addr 		:= sram0_A
+	// sram0_data.wdata 		:= reg_cache_wdata
 	
-	sram0_tag.wen			:= ~(is_sram0_write)
-	sram0_tag.cen			:= ~(true.B)
-	sram0_tag.wmask 		:= 0.U
-	sram0_tag.addr 			:= sram0_A
-	sram0_tag.wdata 		:= reg_tag
+	// sram0_tag.wen			:= ~(is_sram0_write)
+	// sram0_tag.cen			:= ~(true.B)
+	// sram0_tag.wmask 		:= 0.U
+	// sram0_tag.addr 			:= sram0_A
+	// sram0_tag.wdata 		:= reg_tag
 	
 	val clear_cache = false.B
 	val reg_sram0_valid 	= RegInit(0.U(64.W))
@@ -96,19 +106,19 @@ class DCache extends Module{
 	}
 
 //---------------------------sram2-----------------------------
-	val is_sram2_write 		= reg_cache_write &(reg_chosen_tag === 1.U)
-	val sram2_A = sram0_A
-	sram2_data.wen 			:= ~(is_sram2_write)
-	sram2_data.cen 			:= ~(true.B)
-	sram2_data.wmask 		:= ~(cache_mask)
-	sram2_data.addr 		:= sram2_A
-	sram2_data.wdata 		:= reg_cache_wdata
+	// val is_sram2_write 		= reg_cache_write &(reg_chosen_tag === 1.U)
+	// val sram2_A = sram0_A
+	// sram2_data.wen 			:= ~(is_sram2_write)
+	// sram2_data.cen 			:= ~(true.B)
+	// sram2_data.wmask 		:= ~(cache_mask)
+	// sram2_data.addr 		:= sram2_A
+	// sram2_data.wdata 		:= reg_cache_wdata
 	
-	sram2_tag.wen 			:= ~(is_sram2_write)
-	sram2_tag.cen 			:= ~(true.B)
-	sram2_tag.wmask 		:= 0.U
-	sram2_tag.addr 			:= sram2_A
-	sram2_tag.wdata 		:= reg_tag 
+	// sram2_tag.wen 			:= ~(is_sram2_write)
+	// sram2_tag.cen 			:= ~(true.B)
+	// sram2_tag.wmask 		:= 0.U
+	// sram2_tag.addr 			:= sram2_A
+	// sram2_tag.wdata 		:= reg_tag 
 	
 	val reg_sram2_valid 	= RegInit(0.U(64.W))
 	val reg_sram2_dirty 	= RegInit(0.U(64.W))
@@ -144,10 +154,10 @@ class DCache extends Module{
 	val tag_valid_2 	= reg_sram2_valid(reg_index)
 	val tag_dirty_0 	= reg_sram0_dirty(reg_index)
 	val tag_dirty_2 	= reg_sram2_dirty(reg_index)
-	val rdata0			= Mux(reg_offset(3),sram0_data.rdata(127,64),sram0_data.rdata(63,0))
-	val rdata2 			= Mux(reg_offset(3),sram2_data.rdata(127,64),sram2_data.rdata(63,0))
-	val rdata_0			= sram0_data.rdata
-	val rdata_2 		= sram2_data.rdata
+	val rdata0			= Mux(reg_offset(3),sram.rdata(0)(127,64),sram.rdata(0)(63,0))
+	val rdata2 			= Mux(reg_offset(3),sram.rdata(2)(127,64),sram.rdata(2)(63,0))
+	val rdata_0			= sram.rdata(0)
+	val rdata_2 		= sram.rdata(2)
 	
 //--------------------------LRU--------------------------------------
 // 1 bit LRU 

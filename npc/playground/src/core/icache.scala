@@ -316,10 +316,11 @@ class ICache extends Module{
 		val cpu_rdata = Decoupled(new CPU_DATA_IO)
 		val is_fence_i = Input(Bool())
 		
-		val sram0_data 	= new SRAM_Interface 
-		val sram0_tag 	= new SRAM_Interface
-		val sram2_data 	= new SRAM_Interface
-		val sram2_tag 	= new SRAM_Interface
+		val sram 	= new SRAM_Interface
+		// val sram0_data 	= new SRAM_Interface 
+		// val sram0_tag 	= new SRAM_Interface
+		// val sram2_data 	= new SRAM_Interface
+		// val sram2_tag 	= new SRAM_Interface
 
 		// cache <----> crossbar <----> AXI
 		val cache_bus 	= new SimpleBus		
@@ -369,43 +370,53 @@ class ICache extends Module{
 	val r_index 	= cache_stage1.io.tag_valid.index 
 	val is_r_sram	= cache_stage1.io.sram.valid 
 
-	val sram0_data  = io.sram0_data	// 存放数据
-	val sram0_tag 	= io.sram0_tag	// 存放Tag， 以及控制位
+	// val sram0_data  = io.sram0_data	// 存放数据
+	// val sram0_tag 	= io.sram0_tag	// 存放Tag， 以及控制位
 	
-	val sram1_data	= io.sram2_data
-	val sram1_tag	= io.sram2_tag
+	// val sram1_data	= io.sram2_data
+	// val sram1_tag	= io.sram2_tag
 
 	// val sram0_data  = Module(new SRAM).io 
 	// val sram0_tag	= Module(new SRAM).io 
 	// val sram1_data	= Module(new SRAM).io 
 	// val sram1_tag	= Module(new SRAM).io 
 
+	val sram = io.sram 
 	//----------------------------- sram0------------------------------
-	val sram_addr = WireInit(0.U(6.W))
-	sram_addr := Mux(is_w_sram,w_index,r_index)
-	sram0_data.wen 			:= ~(is_sram0_write)
-	sram0_data.cen 			:= ~(true.B)
-	sram0_data.wmask 		:= 0.U//~(cache_mask)
-	sram0_data.addr 		:= sram_addr
-	sram0_data.wdata 		:= sram_wdata
+	// val sram_addr = WireInit(0.U(6.W))
+	// sram_addr := Mux(is_w_sram,w_index,r_index)
+	
+	sram.addr := Mux(is_w_sram,w_index,r_index)
+	sram.wen(0)	:= ~(is_sram0_write)
+	sram.wen(1) := ~(is_sram1_write)
+	sram.tag_wmask 	:= 0.U
+	sram.data_wmask := 0.U
+	sram.tag_wdata	:= sram_wtag
+	sram.data_wdata	:= sram_wdata
 
-	sram0_tag.wen			:= ~(is_sram0_write)
-	sram0_tag.cen			:= ~(true.B)
-	sram0_tag.wmask 		:= 0.U
-	sram0_tag.addr 			:= sram_addr
-	sram0_tag.wdata 		:= sram_wtag
-	//---------------------------- sram1------------------------------
-	sram1_data.wen 			:= ~(is_sram1_write)
-	sram1_data.cen 			:= ~(true.B)
-	sram1_data.wmask 		:= 0.U//~(cache_mask)
-	sram1_data.addr 		:= sram_addr
-	sram1_data.wdata 		:= sram_wdata
+	// sram0_data.wen 			:= ~(is_sram0_write)
+	// sram0_data.cen 			:= ~(true.B)
+	// sram0_data.wmask 		:= 0.U//~(cache_mask)
+	// sram0_data.addr 		:= sram_addr
+	// sram0_data.wdata 		:= sram_wdata
 
-	sram1_tag.wen			:= ~(is_sram1_write)
-	sram1_tag.cen			:= ~(true.B)
-	sram1_tag.wmask 		:= 0.U
-	sram1_tag.addr 			:= sram_addr
-	sram1_tag.wdata 		:= sram_wtag 
+	// sram0_tag.wen			:= ~(is_sram0_write)
+	// sram0_tag.cen			:= ~(true.B)
+	// sram0_tag.wmask 		:= 0.U
+	// sram0_tag.addr 			:= sram_addr
+	// sram0_tag.wdata 		:= sram_wtag
+	// //---------------------------- sram1------------------------------
+	// sram1_data.wen 			:= ~(is_sram1_write)
+	// sram1_data.cen 			:= ~(true.B)
+	// sram1_data.wmask 		:= 0.U//~(cache_mask)
+	// sram1_data.addr 		:= sram_addr
+	// sram1_data.wdata 		:= sram_wdata
+
+	// sram1_tag.wen			:= ~(is_sram1_write)
+	// sram1_tag.cen			:= ~(true.B)
+	// sram1_tag.wmask 		:= 0.U
+	// sram1_tag.addr 			:= sram_addr
+	// sram1_tag.wdata 		:= sram_wtag 
 	//---------------------------------------------------------------- 
 	//	= cache_stage1.io.sram.sram_addr
 	//为何不考虑 is_r_sram 与is_w_sram 冲突的问题，因为只要冲突，is_r_sram 的值就会放弃，所以reg_sram0_valid读出的值也是无效的
@@ -430,10 +441,10 @@ class ICache extends Module{
 	}.elsewhen(is_r_sram){
 		reg_sram_r_ready := Mux(is_w_sram,false.B,true.B)
 	}
-	val temp_sram0_tag_data = Mux(w_r_pass0_val,sram_wtag,sram0_tag.rdata(53,0))
-	val temp_sram0_data = Mux(w_r_pass0_val,sram_wdata,sram0_data.rdata)
-	val temp_sram1_tag_data = Mux(w_r_pass1_val,sram_wtag,sram1_tag.rdata(53,0))
-	val temp_sram1_data = Mux(w_r_pass1_val,sram_wdata,sram1_data.rdata)
+	val temp_sram0_tag_data = Mux(w_r_pass0_val,sram_wtag,sram.rdata(1)(53,0)) //sram0_tag
+	val temp_sram0_data = Mux(w_r_pass0_val,sram_wdata,sram.rdata(0)) //sram0_data
+	val temp_sram1_tag_data = Mux(w_r_pass1_val,sram_wtag,sram.rdata(3)(53,0)) //sram1_tag
+	val temp_sram1_data = Mux(w_r_pass1_val,sram_wdata,sram.rdata(2)) //sram1_data
 
 	cache_stage1.io.sram.sram_data(0)	:= temp_sram0_data
 	cache_stage1.io.sram.sram_tag(0)	:= temp_sram0_tag_data

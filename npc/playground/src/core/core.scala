@@ -1,26 +1,38 @@
 import chisel3._
 import chisel3.util._
 
+// class SRAM_Interface extends Bundle{
+// 	val addr 	= Output(UInt(6.W))
+// 	val cen 	= Output(Bool())
+// 	val wen 	= Output(Bool())
+// 	val wmask 	= Output(UInt(128.W))
+// 	val wdata 	= Output(UInt(128.W))
+// 	val rdata 	= Input(UInt(128.W))
+// }
 class SRAM_Interface extends Bundle{
 	val addr 	= Output(UInt(6.W))
-	val cen 	= Output(Bool())
-	val wen 	= Output(Bool())
-	val wmask 	= Output(UInt(128.W))
-	val wdata 	= Output(UInt(128.W))
-	val rdata 	= Input(UInt(128.W))
+	val wen 	= Vec(2,Output(Bool()))
+	val tag_wmask 	= Output(UInt(128.W))
+	val data_wmask  = Output(UInt(128.W))
+	val tag_wdata 	= Output(UInt(128.W))
+	val data_wdata  = Output(UInt(128.W))
+	//val wdata 	= Vec(2,Output(UInt(128.W)))
+	val rdata 	= Vec(4,UInt(128.W))
 }
 
 class Core extends Module{
 	val io = IO(new Bundle{
 		val axi_bus = new AXI4Bus
-		val sram0 	= new SRAM_Interface
-		val sram1 	= new SRAM_Interface
-		val sram2 	= new SRAM_Interface
-		val sram3 	= new SRAM_Interface
-		val sram4 	= new SRAM_Interface
-		val sram5 	= new SRAM_Interface
-		val sram6 	= new SRAM_Interface
-		val sram7 	= new SRAM_Interface
+		val isram   = new SRAM_Interface
+		val dsram 	= new SRAM_Interface
+		// val sram0 	= new SRAM_Interface
+		// val sram1 	= new SRAM_Interface
+		// val sram2 	= new SRAM_Interface
+		// val sram3 	= new SRAM_Interface
+		// val sram4 	= new SRAM_Interface
+		// val sram5 	= new SRAM_Interface
+		// val sram6 	= new SRAM_Interface
+		// val sram7 	= new SRAM_Interface
 	})
 
 	val i_cache 		= Module(new ICache)
@@ -95,13 +107,15 @@ class Core extends Module{
 	cross_bar.io.bus1 <> cross_bar_1.io.bus1 
 	cross_bar.io.bus2 <> cross_bar_1.io.bus2
 	io.axi_bus	<> cross_bar.io.AXI_Bus
-	io.sram0 	<> i_cache.io.sram0_data
-	io.sram1 	<> i_cache.io.sram0_tag 
-	io.sram2 	<> i_cache.io.sram2_data 
-	io.sram3 	<> i_cache.io.sram2_tag
+	io.isram <> i_cache.io.sram 
+	io.dsram <> d_cache.io.sram 
+	// io.sram0 	<> i_cache.io.sram0_data
+	// io.sram1 	<> i_cache.io.sram0_tag 
+	// io.sram2 	<> i_cache.io.sram2_data 
+	// io.sram3 	<> i_cache.io.sram2_tag
 
-	io.sram4 	<> d_cache.io.sram0_data 
-	io.sram5 	<> d_cache.io.sram0_tag
-	io.sram6 	<> d_cache.io.sram2_data 
-	io.sram7 	<> d_cache.io.sram2_tag
+	// io.sram4 	<> d_cache.io.sram0_data 
+	// io.sram5 	<> d_cache.io.sram0_tag
+	// io.sram6 	<> d_cache.io.sram2_data 
+	// io.sram7 	<> d_cache.io.sram2_tag
 }
