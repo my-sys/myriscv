@@ -17,7 +17,7 @@ class SRAM_Interface extends Bundle{
 	val tag_wdata 	= Output(UInt(128.W))
 	val data_wdata  = Output(UInt(128.W))
 	//val wdata 	= Vec(2,Output(UInt(128.W)))
-	val rdata 	= Vec(4,UInt(128.W))
+	val rdata 	= Vec(4,Input(UInt(128.W)))
 }
 
 class Core extends Module{
