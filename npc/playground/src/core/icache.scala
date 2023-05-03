@@ -379,8 +379,8 @@ class ICache extends Module{
 	// val sram1_tag	= Module(new SRAM).io 
 
 	//----------------------------- sram0------------------------------
-	val sram_addr := WireInit(0.U(6.W))
-	sram_addr = Mux(is_w_sram,w_index,r_index)
+	val sram_addr = WireInit(0.U(6.W))
+	sram_addr := Mux(is_w_sram,w_index,r_index)
 	sram0_data.wen 			:= ~(is_sram0_write)
 	sram0_data.cen 			:= ~(true.B)
 	sram0_data.wmask 		:= 0.U//~(cache_mask)
