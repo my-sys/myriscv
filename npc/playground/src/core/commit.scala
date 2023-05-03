@@ -84,12 +84,12 @@ class Commit extends Module{
 	difftest_irq	:= io.csr_except.is_time_irq | io.csr_except.is_soft_irq
 	difftest_peripheral	:= io.difftest_peripheral
 
-	// BoringUtils.addSource(inst_counter, "INST_COUNTER")
-	// BoringUtils.addSource(difftest_commit, "DIFFTEST_COMMIT")
-    // BoringUtils.addSource(difftest_pc,"DIFFTEST_PC")
-    // BoringUtils.addSource(difftest_inst,"DIFFTEST_INST")
-	// BoringUtils.addSource(difftest_irq,"DIFFTEST_IRQ")
-	// BoringUtils.addSource(difftest_peripheral,"DIFFTEST_PERIPHERAL")
+	BoringUtils.addSource(inst_counter, "INST_COUNTER")
+	BoringUtils.addSource(difftest_commit, "DIFFTEST_COMMIT")
+    BoringUtils.addSource(difftest_pc,"DIFFTEST_PC")
+    BoringUtils.addSource(difftest_inst,"DIFFTEST_INST")
+	BoringUtils.addSource(difftest_irq,"DIFFTEST_IRQ")
+	BoringUtils.addSource(difftest_peripheral,"DIFFTEST_PERIPHERAL")
 
-	// BoringUtils.addSource(VecInit((0 to 31).map(i => reg_file(i.U))),"DIFFTEST_REG")
+	BoringUtils.addSource(VecInit((0 to 31).map(i => reg_file(i.U))),"DIFFTEST_REG")
 }
