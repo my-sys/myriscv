@@ -65,7 +65,7 @@ Emulator::Emulator(){
 #if EN_TRACE
     Verilated::traceEverOn(true);
     m_trace = new VerilatedVcdC;
-    top->trace(m_trace,99);
+    top->trace(m_trace,1);
     m_trace->open("waveform.vcd");
 #endif
 
