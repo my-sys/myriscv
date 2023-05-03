@@ -220,6 +220,7 @@ module Core(
   wire [63:0] execute_io_op_datas_bits_rs2_data; // @[core.scala 44:41]
   wire [31:0] execute_io_op_datas_bits_imm; // @[core.scala 44:41]
   wire [63:0] execute_io_op_datas_bits_pc; // @[core.scala 44:41]
+  wire [31:0] execute_io_op_datas_bits_inst; // @[core.scala 44:41]
   wire [4:0] execute_io_op_datas_bits_dest_addr; // @[core.scala 44:41]
   wire  execute_io_op_datas_bits_dest_is_reg; // @[core.scala 44:41]
   wire  execute_io_op_datas_bits_is_pre; // @[core.scala 44:41]
@@ -244,6 +245,8 @@ module Core(
   wire [63:0] execute_io_csr_except_next_pc; // @[core.scala 44:41]
   wire [63:0] execute_io_csr_except_pc; // @[core.scala 44:41]
   wire  execute_io_commit; // @[core.scala 44:41]
+  wire [31:0] execute_io_difftest_inst; // @[core.scala 44:41]
+  wire  execute_io_difftest_peripheral; // @[core.scala 44:41]
   wire [63:0] execute_io_next_pc; // @[core.scala 44:41]
   wire  execute_io_flush; // @[core.scala 44:41]
   wire  execute_io_fence_i; // @[core.scala 44:41]
@@ -284,6 +287,7 @@ module Core(
   wire [63:0] decode_io_op_datas_bits_rs2_data; // @[core.scala 45:49]
   wire [31:0] decode_io_op_datas_bits_imm; // @[core.scala 45:49]
   wire [63:0] decode_io_op_datas_bits_pc; // @[core.scala 45:49]
+  wire [31:0] decode_io_op_datas_bits_inst; // @[core.scala 45:49]
   wire [4:0] decode_io_op_datas_bits_dest_addr; // @[core.scala 45:49]
   wire  decode_io_op_datas_bits_dest_is_reg; // @[core.scala 45:49]
   wire  decode_io_op_datas_bits_is_pre; // @[core.scala 45:49]
@@ -315,6 +319,8 @@ module Core(
   wire [63:0] commit_io_csr_pass_csr_mstatus; // @[core.scala 46:49]
   wire [63:0] commit_io_csr_pass_csr_mie; // @[core.scala 46:49]
   wire  commit_io_commit; // @[core.scala 46:49]
+  wire [31:0] commit_io_difftest_inst; // @[core.scala 46:49]
+  wire  commit_io_difftest_peripheral; // @[core.scala 46:49]
   wire  clint_de_clock; // @[core.scala 48:41]
   wire  clint_de_reset; // @[core.scala 48:41]
   wire  clint_de_io_valid; // @[core.scala 48:41]
@@ -519,6 +525,7 @@ module Core(
     .io_op_datas_bits_rs2_data(execute_io_op_datas_bits_rs2_data),
     .io_op_datas_bits_imm(execute_io_op_datas_bits_imm),
     .io_op_datas_bits_pc(execute_io_op_datas_bits_pc),
+    .io_op_datas_bits_inst(execute_io_op_datas_bits_inst),
     .io_op_datas_bits_dest_addr(execute_io_op_datas_bits_dest_addr),
     .io_op_datas_bits_dest_is_reg(execute_io_op_datas_bits_dest_is_reg),
     .io_op_datas_bits_is_pre(execute_io_op_datas_bits_is_pre),
@@ -543,6 +550,8 @@ module Core(
     .io_csr_except_next_pc(execute_io_csr_except_next_pc),
     .io_csr_except_pc(execute_io_csr_except_pc),
     .io_commit(execute_io_commit),
+    .io_difftest_inst(execute_io_difftest_inst),
+    .io_difftest_peripheral(execute_io_difftest_peripheral),
     .io_next_pc(execute_io_next_pc),
     .io_flush(execute_io_flush),
     .io_fence_i(execute_io_fence_i),
@@ -585,6 +594,7 @@ module Core(
     .io_op_datas_bits_rs2_data(decode_io_op_datas_bits_rs2_data),
     .io_op_datas_bits_imm(decode_io_op_datas_bits_imm),
     .io_op_datas_bits_pc(decode_io_op_datas_bits_pc),
+	.io_op_datas_bits_inst(decode_io_op_datas_bits_inst),
     .io_op_datas_bits_dest_addr(decode_io_op_datas_bits_dest_addr),
     .io_op_datas_bits_dest_is_reg(decode_io_op_datas_bits_dest_is_reg),
     .io_op_datas_bits_is_pre(decode_io_op_datas_bits_is_pre),
@@ -617,7 +627,9 @@ module Core(
     .io_csr_pass_csr_mepc(commit_io_csr_pass_csr_mepc),
     .io_csr_pass_csr_mstatus(commit_io_csr_pass_csr_mstatus),
     .io_csr_pass_csr_mie(commit_io_csr_pass_csr_mie),
-    .io_commit(commit_io_commit)
+    .io_commit(commit_io_commit),
+	.io_difftest_inst(commit_io_difftest_inst),
+    .io_difftest_peripheral(commit_io_difftest_peripheral)
   );
   Clint clint_de ( // @[core.scala 48:41]
     .clock(clint_de_clock),
@@ -751,6 +763,7 @@ module Core(
   assign execute_io_op_datas_bits_rs2_data = decode_io_op_datas_bits_rs2_data; // @[core.scala 60:29]
   assign execute_io_op_datas_bits_imm = decode_io_op_datas_bits_imm; // @[core.scala 60:29]
   assign execute_io_op_datas_bits_pc = decode_io_op_datas_bits_pc; // @[core.scala 60:29]
+  assign execute_io_op_datas_bits_inst = decode_io_op_datas_bits_inst;
   assign execute_io_op_datas_bits_dest_addr = decode_io_op_datas_bits_dest_addr; // @[core.scala 60:29]
   assign execute_io_op_datas_bits_dest_is_reg = decode_io_op_datas_bits_dest_is_reg; // @[core.scala 60:29]
   assign execute_io_op_datas_bits_is_pre = decode_io_op_datas_bits_is_pre; // @[core.scala 60:29]
@@ -794,6 +807,8 @@ module Core(
   assign commit_io_csr_except_next_pc = execute_io_csr_except_next_pc; // @[core.scala 71:49]
   assign commit_io_csr_except_pc = execute_io_csr_except_pc; // @[core.scala 71:49]
   assign commit_io_commit = execute_io_commit; // @[core.scala 72:57]
+  assign commit_io_difftest_inst = execute_io_difftest_inst; // @[core.scala 74:49]
+  assign commit_io_difftest_peripheral = execute_io_difftest_peripheral; // @[core.scala 75:41]
   assign clint_de_clock = clock;
   assign clint_de_reset = reset;
   assign clint_de_io_valid = cross_bar_1_io_clint_bus_valid; // @[core.scala 101:27]

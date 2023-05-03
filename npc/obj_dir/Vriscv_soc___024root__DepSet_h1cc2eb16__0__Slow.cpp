@@ -3129,7 +3129,6 @@ VL_ATTR_COLD void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vl
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT__pre_valid = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT___reg_head_T_1 = VL_RAND_RESET_I(3);
     vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor__DOT___reg_head_T_3 = VL_RAND_RESET_I(3);
-    vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__io_op_datas_bits_inst = VL_RAND_RESET_I(32);
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu_io_valid = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu_io_br_info_valid = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu_io_br_info_mispredict = VL_RAND_RESET_I(1);
@@ -3287,8 +3286,6 @@ VL_ATTR_COLD void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vl
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__instType = VL_RAND_RESET_I(4);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs1_is_reg = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__rs2_is_reg = VL_RAND_RESET_I(1);
-    vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__io_difftest_inst = VL_RAND_RESET_I(32);
-    vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__io_difftest_peripheral = VL_RAND_RESET_I(1);
     for (int __Vi0 = 0; __Vi0 < 32; ++__Vi0) {
         vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__reg_file[__Vi0] = VL_RAND_RESET_Q(64);
     }
