@@ -19,7 +19,7 @@ typedef uint64_t word_t;
 //提供指令解析与追踪
 #define CONFIG_ITRACE
 //提供difftest
-#define CONFIG_DIFFTEST
+//#define CONFIG_DIFFTEST
 
 //----------------------------
 //#define CONFIG_ITRACE_ALL
