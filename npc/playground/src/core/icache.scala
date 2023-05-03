@@ -203,6 +203,8 @@ class ICache_stage2 extends Module{
 
 	val hit_0_and_valid_0 = (hit_0 & tag_valid_0)
 	val hit_1_and_valid_1 = (hit_1 & tag_valid_1)
+	val hit_valid = hit_0_and_valid_0 | hit_1_and_valid_1
+	val is_hit = hit_0 | hit_1
 	switch(reg_bus_state){
 		is(bus_idle){
 			reg_cache_write := false.B
@@ -218,11 +220,11 @@ class ICache_stage2 extends Module{
 			reg_bus_state	:= bus_idle
 			reg_r_valid		:= false.B
 			when(valid){
-			when(hit_0 | hit_1){
+			when(is_hit){
 			//一般情况下不会出现两个都中，如果两个都中，则说明tag为0 
 			// 此时必然有一个无效。这种情况下强制为hit_0先有效
 				reg_chosen_tag	:= Mux(hit_0,0.U,1.U)
-				when(hit_0_and_valid_0 | hit_1_and_valid_1){
+				when(hit_valid){
 					// read data from cache
 					// ------ cpu----- 
 					reg_rdata 			:= Mux(hit_0,rdata0,rdata1)
