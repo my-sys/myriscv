@@ -52,21 +52,21 @@ module DCache(
   reg  reg_chosen_tag;
 
 parameter cache_idle = 2'b00,read_cache = 2'b01,cache_and_bus = 2'b10,cache_end = 2'b11;
-  wire [127:0] cache_mask = {reg_cache_wstrb[0] ? 8'hff : 8'h0,
- reg_cache_wstrb[1] ? 8'hff : 8'h0,reg_cache_wstrb[2] ? 8'hff : 8'h0,
- reg_cache_wstrb[3] ? 8'hff : 8'h0,
- reg_cache_wstrb[4] ? 8'hff : 8'h0,
- reg_cache_wstrb[5] ? 8'hff : 8'h0,
- reg_cache_wstrb[6] ? 8'hff : 8'h0,
- reg_cache_wstrb[7] ? 8'hff : 8'h0,
- reg_cache_wstrb[8] ? 8'hff : 8'h0,
- reg_cache_wstrb[9] ? 8'hff : 8'h0,
- reg_cache_wstrb[10] ? 8'hff : 8'h0,
- reg_cache_wstrb[11] ? 8'hff : 8'h0,
+  wire [127:0] cache_mask = {reg_cache_wstrb[15] ? 8'hff : 8'h0,
+ reg_cache_wstrb[14] ? 8'hff : 8'h0,reg_cache_wstrb[13] ? 8'hff : 8'h0,
  reg_cache_wstrb[12] ? 8'hff : 8'h0,
- reg_cache_wstrb[13] ? 8'hff : 8'h0,
- reg_cache_wstrb[14] ? 8'hff : 8'h0,
- reg_cache_wstrb[15] ? 8'hff : 8'h0};
+ reg_cache_wstrb[11] ? 8'hff : 8'h0,
+ reg_cache_wstrb[10] ? 8'hff : 8'h0,
+ reg_cache_wstrb[9] ? 8'hff : 8'h0,
+ reg_cache_wstrb[8] ? 8'hff : 8'h0,
+ reg_cache_wstrb[7] ? 8'hff : 8'h0,
+ reg_cache_wstrb[6] ? 8'hff : 8'h0,
+ reg_cache_wstrb[5] ? 8'hff : 8'h0,
+ reg_cache_wstrb[4] ? 8'hff : 8'h0,
+ reg_cache_wstrb[3] ? 8'hff : 8'h0,
+ reg_cache_wstrb[2] ? 8'hff : 8'h0,
+ reg_cache_wstrb[1] ? 8'hff : 8'h0,
+ reg_cache_wstrb[0] ? 8'hff : 8'h0};
   wire [127:0] cache_wdata = reg_offset[3] ? {reg_wdata,64'h0} :{64'h0,reg_wdata};
   wire [15:0] cache_wstrb = reg_offset[3] ? {reg_wstrb,8'h0}:{8'h0,reg_wstrb};
 
