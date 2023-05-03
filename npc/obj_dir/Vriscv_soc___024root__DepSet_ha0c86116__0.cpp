@@ -1360,8 +1360,8 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_w_valid = 0U;
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_b_ready = 0U;
         __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cnt = 0U;
-        __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rbus_finish = 0U;
-        __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_wbus_finish = 0U;
+        __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_rbus_finish = 1U;
+        __Vdly__riscv_soc__DOT__core__DOT__d_cache__DOT__reg_wbus_finish = 1U;
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_inst = 0U;
         vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_dest_addr = 0U;
         vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_exception = 0U;

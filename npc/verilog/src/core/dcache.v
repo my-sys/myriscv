@@ -192,8 +192,8 @@ parameter cache_idle = 2'b00,read_cache = 2'b01,cache_and_bus = 2'b10,cache_end 
 		reg_w_valid			<= 0;
 		reg_b_ready			<= 0;
 		reg_cnt				<= 0;
-		reg_rbus_finish		<= 0;
-		reg_wbus_finish		<= 0;
+		reg_rbus_finish		<= 1;
+		reg_wbus_finish		<= 1;
 	end else begin 
 		case (reg_cache_state)
 			cache_idle : begin 
