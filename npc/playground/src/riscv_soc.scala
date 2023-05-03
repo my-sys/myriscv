@@ -91,7 +91,7 @@ class riscv_soc extends Module{
   io.difftest_peripheral := difftest_peripheral
 
 	axi_ram.io.ram_bus <> core.io.axi_bus
-
+//----------ICache------------------------------
 	core.io.isram.rdata(0) := sram0.io.rdata
 	core.io.isram.rdata(1) := sram1.io.rdata 
 	core.io.isram.rdata(2) := sram2.io.rdata
@@ -106,15 +106,57 @@ class riscv_soc extends Module{
 	sram3.io.addr := core.io.isram.addr
 	sram3.io.cen  := false.B 
 
-	core.io.sram0 <>sram0.io 
-	core.io.sram1 <>sram1.io 
-	core.io.sram2 <>sram2.io 
-	core.io.sram3 <>sram3.io 
+	sram0.io.wen  := core.io.isram.wen(0)
+	sram0.io.wmask := core.io.isram.data_wmask
+	sram0.io.wdata := core.io.isram.data_wdata
+	sram1.io.wen  := core.io.isram.wen(0)
+	sram1.io.wmask := core.io.isram.tag_wmask
+	sram1.io.wdata := core.io.isram.tag_wdata
 
-	core.io.sram4 <>sram4.io 
-	core.io.sram5 <>sram5.io 
-	core.io.sram6 <>sram6.io 
-	core.io.sram7 <>sram7.io 
+	sram2.io.wen  := core.io.isram.wen(1)
+	sram2.io.wmask := core.io.isram.data_wmask
+	sram2.io.wdata := core.io.isram.data_wdata
+	sram3.io.wen  := core.io.isram.wen(1)
+	sram3.io.wmask := core.io.isram.tag_wmask
+	sram3.io.wdata := core.io.isram.tag_wdata
+
+//----------DCache-----------------------
+	core.io.dsram.rdata(0) := sram4.io.rdata
+	core.io.dsram.rdata(1) := sram5.io.rdata 
+	core.io.dsram.rdata(2) := sram6.io.rdata
+	core.io.dsram.rdata(3) := sram7.io.rdata 
+
+	sram4.io.addr := core.io.dsram.addr
+	sram4.io.cen  := false.B 
+	sram5.io.addr := core.io.dsram.addr
+	sram5.io.cen  := false.B 
+	sram6.io.addr := core.io.dsram.addr
+	sram6.io.cen  := false.B 
+	sram7.io.addr := core.io.dsram.addr
+	sram7.io.cen  := false.B 
+
+	sram4.io.wen  := core.io.dsram.wen(0)
+	sram4.io.wmask := core.io.dsram.data_wmask
+	sram4.io.wdata := core.io.dsram.data_wdata
+	sram5.io.wen  := core.io.dsram.wen(0)
+	sram5.io.wmask := core.io.dsram.tag_wmask
+	sram5.io.wdata := core.io.dsram.tag_wdata
+
+	sram6.io.wen  := core.io.dsram.wen(1)
+	sram6.io.wmask := core.io.dsram.data_wmask
+	sram6.io.wdata := core.io.dsram.data_wdata
+	sram7.io.wen  := core.io.dsram.wen(1)
+	sram7.io.wmask := core.io.dsram.tag_wmask
+	sram7.io.wdata := core.io.dsram.tag_wdata
+	// core.io.sram0 <>sram0.io 
+	// core.io.sram1 <>sram1.io 
+	// core.io.sram2 <>sram2.io 
+	// core.io.sram3 <>sram3.io 
+
+	// core.io.sram4 <>sram4.io 
+	// core.io.sram5 <>sram5.io 
+	// core.io.sram6 <>sram6.io 
+	// core.io.sram7 <>sram7.io 
 //   core.io.in.rdata    :=  axi_ram.io.rdata
 //   axi_ram.io.waddr    :=  core.io.out.waddr 
 //   axi_ram.io.wdata    :=  core.io.out.wdata
