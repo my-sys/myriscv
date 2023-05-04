@@ -1127,12 +1127,12 @@ VL_ATTR_COLD void Vriscv_soc___024root__trace_init_sub__TOP__0(Vriscv_soc___024r
     tracep->declBit(c+454,"reg_w_rs_en", false,-1);
     tracep->declBus(c+550,"reg_exuType", false,-1, 6,0);
     tracep->declBit(c+221,"reg_difftest_peripheral", false,-1);
-    tracep->declQuad(c+551,"mem_r_data", false,-1, 63,0);
-    tracep->declQuad(c+553,"mem_data_result", false,-1, 63,0);
-    tracep->declQuad(c+555,"mem_addr", false,-1, 63,0);
-    tracep->declBit(c+557,"w_mem_en", false,-1);
-    tracep->declQuad(c+558,"mem_wstrb", false,-1, 63,0);
-    tracep->declBit(c+560,"reg_ls_state", false,-1);
+    tracep->declBit(c+551,"reg_ls_state", false,-1);
+    tracep->declQuad(c+552,"mem_r_data", false,-1, 63,0);
+    tracep->declQuad(c+554,"mem_data_result", false,-1, 63,0);
+    tracep->declQuad(c+556,"mem_addr", false,-1, 63,0);
+    tracep->declBit(c+558,"w_mem_en", false,-1);
+    tracep->declQuad(c+559,"mem_wstrb", false,-1, 63,0);
     tracep->declArray(c+561,"mem_w_data", false,-1, 126,0);
     tracep->declBit(c+565,"chose_chancel", false,-1);
     tracep->popNamePrefix(1);
@@ -2768,61 +2768,64 @@ VL_ATTR_COLD void Vriscv_soc___024root__trace_full_sub_0(Vriscv_soc___024root* v
     bufp->fullBit(oldp+548,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_bus_is_w));
     bufp->fullBit(oldp+549,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_bus_valid));
     bufp->fullCData(oldp+550,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_exuType),7);
-    bufp->fullQData(oldp+551,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_r_data),64);
-    bufp->fullQData(oldp+553,(((0x18U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_exuType))
-                                ? (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_r_data))
-                                : ((8U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_exuType))
-                                    ? (((QData)((IData)(
-                                                        ((1U 
-                                                          & (IData)(
-                                                                    (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_r_data 
-                                                                     >> 0x1fU)))
-                                                          ? 0xffffffffU
-                                                          : 0U))) 
-                                        << 0x20U) | (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_r_data)))
-                                    : ((0x14U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_exuType))
-                                        ? (QData)((IData)(
-                                                          (0xffffU 
-                                                           & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_r_data))))
-                                        : ((4U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_exuType))
-                                            ? ((((1U 
-                                                  & (IData)(
-                                                            (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_r_data 
-                                                             >> 0xfU)))
-                                                  ? 0xffffffffffffULL
-                                                  : 0ULL) 
-                                                << 0x10U) 
-                                               | (QData)((IData)(
-                                                                 (0xffffU 
-                                                                  & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_r_data)))))
-                                            : ((0x10U 
+    bufp->fullBit(oldp+551,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_ls_state));
+    bufp->fullQData(oldp+552,(((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_ls_state)
+                                ? vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT___mem_r_data_T_22
+                                : 0ULL)),64);
+    bufp->fullQData(oldp+554,(((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_ls_state)
+                                ? ((0x18U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_exuType))
+                                    ? (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT____VdfgTmp_h1f3d8880__0))
+                                    : ((8U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_exuType))
+                                        ? (((QData)((IData)(
+                                                            (((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_ls_state) 
+                                                              & (IData)(
+                                                                        (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT___mem_r_data_T_22 
+                                                                         >> 0x1fU)))
+                                                              ? 0xffffffffU
+                                                              : 0U))) 
+                                            << 0x20U) 
+                                           | (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT____VdfgTmp_h1f3d8880__0)))
+                                        : ((0x14U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_exuType))
+                                            ? (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT____VdfgTmp_h1ef2845d__0))
+                                            : ((4U 
                                                 == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_exuType))
-                                                ? (QData)((IData)(
-                                                                  (0xffU 
-                                                                   & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_r_data))))
+                                                ? (
+                                                   ((((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_ls_state) 
+                                                      & (IData)(
+                                                                (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT___mem_r_data_T_22 
+                                                                 >> 0xfU)))
+                                                      ? 0xffffffffffffULL
+                                                      : 0ULL) 
+                                                    << 0x10U) 
+                                                   | (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT____VdfgTmp_h1ef2845d__0)))
                                                 : (
-                                                   (0U 
+                                                   (0x10U 
                                                     == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_exuType))
-                                                    ? 
-                                                   ((((1U 
-                                                       & (IData)(
-                                                                 (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_r_data 
-                                                                  >> 7U)))
-                                                       ? 0xffffffffffffffULL
-                                                       : 0ULL) 
-                                                     << 8U) 
-                                                    | (QData)((IData)(
-                                                                      (0xffU 
-                                                                       & (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_r_data)))))
+                                                    ? (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT____VdfgTmp_h1ff74da3__0))
                                                     : 
-                                                   ((0xcU 
+                                                   ((0U 
                                                      == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_exuType))
-                                                     ? vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_r_data
-                                                     : 0ULL)))))))),64);
-    bufp->fullQData(oldp+555,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_addr),64);
-    bufp->fullBit(oldp+557,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__w_mem_en));
-    bufp->fullQData(oldp+558,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_wstrb),64);
-    bufp->fullBit(oldp+560,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_ls_state));
+                                                     ? 
+                                                    (((((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_ls_state) 
+                                                        & (IData)(
+                                                                  (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT___mem_r_data_T_22 
+                                                                   >> 7U)))
+                                                        ? 0xffffffffffffffULL
+                                                        : 0ULL) 
+                                                      << 8U) 
+                                                     | (QData)((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT____VdfgTmp_h1ff74da3__0)))
+                                                     : 
+                                                    ((0xcU 
+                                                      == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_exuType))
+                                                      ? 
+                                                     ((IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__reg_ls_state)
+                                                       ? vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT___mem_r_data_T_22
+                                                       : 0ULL)
+                                                      : 0ULL)))))))
+                                : 0ULL)),64);
+    bufp->fullQData(oldp+556,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_addr),64);
+    bufp->fullBit(oldp+558,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__w_mem_en));
+    bufp->fullQData(oldp+559,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_wstrb),64);
     bufp->fullWData(oldp+561,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__mem_w_data),127);
     bufp->fullBit(oldp+565,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mem_exu__DOT__chose_chancel));
     bufp->fullBit(oldp+566,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div_io_valid));
