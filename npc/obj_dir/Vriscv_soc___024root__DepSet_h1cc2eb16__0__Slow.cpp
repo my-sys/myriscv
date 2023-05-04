@@ -273,9 +273,6 @@ VL_ATTR_COLD void Vriscv_soc___024root___stl_sequent__TOP__0(Vriscv_soc___024roo
     vlSelf->riscv_soc__DOT__sram6__DOT__wen = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_write) 
                                                & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_chosen_tag));
     if ((8U & (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_offset))) {
-        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_wstrb 
-            = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_wstrb) 
-               << 8U);
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_wdata[0U] = 0U;
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_wdata[1U] = 0U;
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_wdata[2U] 
@@ -283,15 +280,7 @@ VL_ATTR_COLD void Vriscv_soc___024root___stl_sequent__TOP__0(Vriscv_soc___024roo
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_wdata[3U] 
             = (IData)((vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_wdata 
                        >> 0x20U));
-        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__rdata0 
-            = (((QData)((IData)(vlSelf->riscv_soc__DOT__sram4__DOT__Q[3U])) 
-                << 0x20U) | (QData)((IData)(vlSelf->riscv_soc__DOT__sram4__DOT__Q[2U])));
-        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__rdata2 
-            = (((QData)((IData)(vlSelf->riscv_soc__DOT__sram6__DOT__Q[3U])) 
-                << 0x20U) | (QData)((IData)(vlSelf->riscv_soc__DOT__sram6__DOT__Q[2U])));
     } else {
-        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_wstrb 
-            = vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_wstrb;
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_wdata[0U] 
             = (IData)(vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_wdata);
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_wdata[1U] 
@@ -299,12 +288,6 @@ VL_ATTR_COLD void Vriscv_soc___024root___stl_sequent__TOP__0(Vriscv_soc___024roo
                        >> 0x20U));
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_wdata[2U] = 0U;
         vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_wdata[3U] = 0U;
-        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__rdata0 
-            = (((QData)((IData)(vlSelf->riscv_soc__DOT__sram4__DOT__Q[1U])) 
-                << 0x20U) | (QData)((IData)(vlSelf->riscv_soc__DOT__sram4__DOT__Q[0U])));
-        vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__rdata2 
-            = (((QData)((IData)(vlSelf->riscv_soc__DOT__sram6__DOT__Q[1U])) 
-                << 0x20U) | (QData)((IData)(vlSelf->riscv_soc__DOT__sram6__DOT__Q[0U])));
     }
     vlSelf->riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT___reg_mstatus_T_9 
         = ((0x300U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__reg_csr_addr))
@@ -2533,7 +2516,6 @@ VL_ATTR_COLD void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vl
     VL_RAND_RESET_W(128, vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_cache_wdata);
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_chosen_tag = VL_RAND_RESET_I(1);
     VL_RAND_RESET_W(128, vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_wdata);
-    vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__cache_wstrb = VL_RAND_RESET_I(16);
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_sram0_valid = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_sram0_dirty = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_sram2_valid = VL_RAND_RESET_Q(64);
@@ -2551,8 +2533,6 @@ VL_ATTR_COLD void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vl
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__tag_valid_2 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__tag_dirty_0 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__tag_dirty_2 = VL_RAND_RESET_I(1);
-    vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__rdata0 = VL_RAND_RESET_Q(64);
-    vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__rdata2 = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_lru_2 = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__LRU_2 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__d_cache__DOT__reg_start_operation = VL_RAND_RESET_I(1);

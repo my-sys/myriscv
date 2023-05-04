@@ -67,8 +67,8 @@ parameter cache_idle = 2'b00,read_cache = 2'b01,cache_and_bus = 2'b10,cache_end 
  reg_cache_wstrb[2] ? 8'hff : 8'h0,
  reg_cache_wstrb[1] ? 8'hff : 8'h0,
  reg_cache_wstrb[0] ? 8'hff : 8'h0};
-  wire [127:0] cache_wdata = reg_offset[3] ? {reg_wdata,64'h0} :{64'h0,reg_wdata};
-  wire [15:0] cache_wstrb = reg_offset[3] ? {reg_wstrb,8'h0}:{8'h0,reg_wstrb};
+wire [127:0] cache_wdata = reg_offset[3] ? {reg_wdata,64'h0} :{64'h0,reg_wdata};
+//wire [15:0] cache_wstrb = reg_offset[3] ? {reg_wstrb,8'h0}:{8'h0,reg_wstrb};
 
   wire  is_sram0_write = reg_cache_write & ~reg_chosen_tag;
   wire  is_sram2_write = reg_cache_write & reg_chosen_tag;
@@ -122,8 +122,8 @@ parameter cache_idle = 2'b00,read_cache = 2'b01,cache_and_bus = 2'b10,cache_end 
   wire  tag_dirty_0 = reg_sram0_dirty[reg_index];
   wire  tag_dirty_2 = reg_sram2_dirty[reg_index];
 
-  wire [63:0] rdata0 = reg_offset[3] ? io_sram_rdata_0[127:64] : io_sram_rdata_0[63:0]; // @[dcache.scala 157:46]
-  wire [63:0] rdata2 = reg_offset[3] ? io_sram_rdata_2[127:64] : io_sram_rdata_2[63:0]; // @[dcache.scala 158:46]
+  //wire [63:0] rdata0 = reg_offset[3] ? io_sram_rdata_0[127:64] : io_sram_rdata_0[63:0]; // @[dcache.scala 157:46]
+  //wire [63:0] rdata2 = reg_offset[3] ? io_sram_rdata_2[127:64] : io_sram_rdata_2[63:0]; // @[dcache.scala 158:46]
   wire [127:0] rdata_0 = io_sram_rdata_0;
   wire [127:0] rdata_2 = io_sram_rdata_2;
   reg [63:0] reg_lru_2; // @[dcache.scala 165:58]
@@ -161,8 +161,8 @@ parameter cache_idle = 2'b00,read_cache = 2'b01,cache_and_bus = 2'b10,cache_end 
   assign io_cache_bus_r_valid = reg_r_valid; // @[dcache.scala 351:41]
   assign io_cache_bus_r_bits_raddr = reg_r_raddr; // @[dcache.scala 350:41]
 
-  wire hit_0_and_valid_0 = (hit_0 & tag_valid_0);
-  wire hit_2_and_valid_2 = (hit_2 & tag_valid_2);
+//   wire hit_0_and_valid_0 = (hit_0 & tag_valid_0);
+//   wire hit_2_and_valid_2 = (hit_2 & tag_valid_2);
   //wire or_hit = hit_0 | hit_2;
   wire[63:0] temp_addr = {reg_tag,reg_index,4'b0};
   wire io_cache_bus_r_fire = io_cache_bus_r_valid & io_cache_bus_r_ready;
@@ -221,12 +221,12 @@ parameter cache_idle = 2'b00,read_cache = 2'b01,cache_and_bus = 2'b10,cache_end 
 			end 
 			read_cache :begin 
 				reg_start_operation <= 1'b0;
-				reg_cache_wstrb 	<= cache_wstrb;
+				reg_cache_wstrb 	<= reg_offset[3] ? {reg_wstrb,8'h0}:{8'h0,reg_wstrb};//cache_wstrb;
 				if(hit_0 | hit_2)begin
 				//一般情况下不会出现两个都中，如果两个都中，
 				//只能是都为0的情况下，这种情况下，必然hit_0先有效
 					reg_chosen_tag	<= hit_0 ? 1'b0:1'b1;
-					if(hit_0_and_valid_0 |hit_2_and_valid_2)begin
+					if((hit_0 & tag_valid_0) |(hit_2 & tag_valid_2))begin
 						if(reg_is_w)begin 
 							//---- cache ---
 							reg_cache_write		<= 1'b1;
@@ -239,7 +239,7 @@ parameter cache_idle = 2'b00,read_cache = 2'b01,cache_and_bus = 2'b10,cache_end 
 						end else begin
 							// read data from cache 
 							// ------ cpu 
-							reg_rdata 			<= hit_0? rdata0:rdata2;
+							reg_rdata 			<= hit_0? (reg_offset[3] ? io_sram_rdata_0[127:64] : io_sram_rdata_0[63:0]):(reg_offset[3] ? io_sram_rdata_2[127:64] : io_sram_rdata_2[63:0]);
 							reg_ready 			<= 1'b1;
 							reg_cache_state 	<= cache_end;
 						end
