@@ -34,7 +34,7 @@ void Vriscv_soc___024root__trace_chg_sub_0(Vriscv_soc___024root* vlSelf, Verilat
     VlWide<3>/*95:0*/ __Vtemp_h3fef5ac1__0;
     VlWide<3>/*95:0*/ __Vtemp_h346bf577__0;
     VlWide<3>/*95:0*/ __Vtemp_h28f9f554__0;
-    VlWide<5>/*159:0*/ __Vtemp_h5889a86a__0;
+    VlWide<5>/*159:0*/ __Vtemp_h2b09eb2b__0;
     VlWide<3>/*95:0*/ __Vtemp_h639dda77__1;
     VlWide<3>/*95:0*/ __Vtemp_h3fef5ac1__1;
     VlWide<3>/*95:0*/ __Vtemp_h2ede82b0__0;
@@ -1239,19 +1239,19 @@ void Vriscv_soc___024root__trace_chg_sub_0(Vriscv_soc___024root* vlSelf, Verilat
         bufp->chgCData(oldp+601,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_cnt),7);
         bufp->chgCData(oldp+602,(vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_exuType),7);
         if (vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_ready) {
-            __Vtemp_h5889a86a__0[0U] = vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_9[0U];
-            __Vtemp_h5889a86a__0[1U] = vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_9[1U];
-            __Vtemp_h5889a86a__0[2U] = vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_9[2U];
-            __Vtemp_h5889a86a__0[3U] = vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_9[3U];
-            __Vtemp_h5889a86a__0[4U] = vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_9[4U];
+            __Vtemp_h2b09eb2b__0[0U] = 0U;
+            __Vtemp_h2b09eb2b__0[1U] = 0U;
+            __Vtemp_h2b09eb2b__0[2U] = 0U;
+            __Vtemp_h2b09eb2b__0[3U] = 0U;
+            __Vtemp_h2b09eb2b__0[4U] = 0U;
         } else {
-            __Vtemp_h5889a86a__0[0U] = 0U;
-            __Vtemp_h5889a86a__0[1U] = 0U;
-            __Vtemp_h5889a86a__0[2U] = 0U;
-            __Vtemp_h5889a86a__0[3U] = 0U;
-            __Vtemp_h5889a86a__0[4U] = 0U;
+            __Vtemp_h2b09eb2b__0[0U] = vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_9[0U];
+            __Vtemp_h2b09eb2b__0[1U] = vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_9[1U];
+            __Vtemp_h2b09eb2b__0[2U] = vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_9[2U];
+            __Vtemp_h2b09eb2b__0[3U] = vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_9[3U];
+            __Vtemp_h2b09eb2b__0[4U] = vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___temp_result_T_9[4U];
         }
-        bufp->chgWData(oldp+603,(__Vtemp_h5889a86a__0),132);
+        bufp->chgWData(oldp+603,(__Vtemp_h2b09eb2b__0),132);
         bufp->chgBit(oldp+608,((0U == ((vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[0U] 
                                         | vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[1U]) 
                                        | vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem[2U]))));
