@@ -77,8 +77,12 @@ class MEM_EXU extends Module{
 	val reg_exuType			= RegInit(0.U(7.W))
 	val reg_difftest_peripheral = RegInit(false.B)
 
+	// 根据状态机,进行改变值
+	val ls_idle :: ls_busy :: Nil 	= Enum(2)
+	val reg_ls_state 				= RegInit(ls_idle)
+
 //----------------------------------------------------------------------------------------
-	val mem_r_data				= MuxLookup(reg_bus_addr(2,0),io.bus.bits.rdata,List(
+	val mem_r_data				= Mux(reg_ls_state ===ls_busy,MuxLookup(reg_bus_addr(2,0),io.bus.bits.rdata,List(
 		"b000".U 			-> io.bus.bits.rdata,
 		"b001".U 			-> io.bus.bits.rdata(63,8),
 		"b010".U 			-> io.bus.bits.rdata(63,16),
@@ -87,9 +91,9 @@ class MEM_EXU extends Module{
 		"b101".U 			-> io.bus.bits.rdata(63,40),
 		"b110".U 			-> io.bus.bits.rdata(63,48),
 		"b111".U 			-> io.bus.bits.rdata(63,56)
-	))
+	)),0.U)
 
-	val mem_data_result		= MuxLookup(reg_exuType,0.U(64.W),List(
+	val mem_data_result		= Mux(reg_ls_state ===ls_busy,MuxLookup(reg_exuType,0.U(64.W),List(
 		LSUType.lsu_ld 		-> mem_r_data,
 		LSUType.lsu_lb 		-> Cat(Fill(56,mem_r_data(7)),	mem_r_data(7,0)),
 		LSUType.lsu_lbu 	-> Cat(Fill(56,0.U(1.W)),		mem_r_data(7,0)),
@@ -97,22 +101,18 @@ class MEM_EXU extends Module{
 		LSUType.lsu_lhu 	-> Cat(Fill(48,0.U(1.W)),		mem_r_data(15,0)),
 		LSUType.lsu_lw 		-> Cat(Fill(32,mem_r_data(31)),	mem_r_data(31,0)),
 		LSUType.lsu_lwu 	-> Cat(Fill(32,0.U(1.W)),		mem_r_data(31,0))
-	))
+	)),0.U)
 
 	val mem_addr 	= rs1_data + imm
 	val w_mem_en	= valid & exuType(1)
 	val bus_size 	= exuType(3,2)
 	// 写没有处理好，缺少许多种情况
-	val mem_wstrb			= MuxLookup(io.exuType,0.U(64.W),List(
+	val mem_wstrb			= Mux(valid,MuxLookup(io.exuType,0.U(64.W),List(
 		LSUType.lsu_sb 		-> (("b0000_0001".U) << mem_addr(2,0)),
 		LSUType.lsu_sd		-> (("b1111_1111".U)<< mem_addr(2,0)),
 		LSUType.lsu_sh 		-> (("b0000_0011".U)<< mem_addr(2,0)),
 		LSUType.lsu_sw 		-> (("b0000_1111".U)<< mem_addr(2,0))
-	))
-
-	// 根据状态机,进行改变值
-	val ls_idle :: ls_busy :: Nil 	= Enum(2)
-	val reg_ls_state 				= RegInit(ls_idle)
+	)),0.U)
 
 	// move data to the appropriate position
 	// move data to the appropriate position

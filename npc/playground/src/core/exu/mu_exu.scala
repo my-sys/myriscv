@@ -82,7 +82,15 @@ class MUL extends Module{
 			}
 		}
 		is(mul_busy){
-			reg_result		:= reg_result + pp
+			reg_result		:= reg_result + MuxLookup(reg_temp_mul2(2,0),0.U(130.W),List(
+				"b000".U    ->  0.U,
+				"b001".U 	->  (reg_mul1),
+				"b010".U 	-> 	(reg_mul1),
+				"b011".U 	->	(reg_mul1 << 1.U),
+				"b100".U 	-> 	((~reg_mul1 + 1.U)<<1.U),
+				"b101".U 	-> 	(~reg_mul1 + 1.U),
+				"b110".U 	->	(~reg_mul1 + 1.U)
+			))
 			reg_mul1		:= reg_mul1 << 2.U
 			reg_temp_mul2	:= reg_temp_mul2 >> 2.U
 			reg_cnt 		:= Mux(io.kill,0.U,reg_cnt + 1.U)
