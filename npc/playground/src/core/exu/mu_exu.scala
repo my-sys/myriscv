@@ -41,8 +41,8 @@ class MUL extends Module{
 	val is_rs2_signed 	= io.exuType(0)
 
 
-	val mul_data1 = Mux(is_32,Cat(Fill(98,rs1_data(31)),rs1_data(31,0)),Mux(is_rs1_signed,Cat(Fill(66,rs1_data(63)),rs1_data),Cat(0.U(66.W),rs1_data)))
-	val mul_data2 = Mux(is_32,Cat(Fill(33,rs2_data(31)),rs2_data(31,0)),Mux(is_rs2_signed,Cat(rs2_data(63),rs2_data),Cat(0.U(1.W),rs2_data)))	
+	val mul_data1 = Mux(valid,Mux(is_32,Cat(Fill(98,rs1_data(31)),rs1_data(31,0)),Mux(is_rs1_signed,Cat(Fill(66,rs1_data(63)),rs1_data),Cat(0.U(66.W),rs1_data))),0.U)
+	val mul_data2 = Mux(valid,Mux(is_32,Cat(Fill(33,rs2_data(31)),rs2_data(31,0)),Mux(is_rs2_signed,Cat(rs2_data(63),rs2_data),Cat(0.U(1.W),rs2_data))),0.U)
 
 	val temp_mul2 		= Cat(Fill(1,mul_data2(64)),Cat(mul_data2,0.U(1.W)))
 	val reg_ready = RegInit(true.B)
@@ -54,6 +54,7 @@ class MUL extends Module{
 	val reg_exuType 	= RegInit(0.U(7.W))
 	val reg_dest_is_w	= RegInit(false.B)
 	val pp				= MuxLookup(reg_temp_mul2(2,0),0.U(130.W),List(
+		"b000".U    ->  0.U,
 		"b001".U 	->  (reg_mul1),
 		"b010".U 	-> 	(reg_mul1),
 		"b011".U 	->	(reg_mul1 << 1.U),
