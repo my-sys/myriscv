@@ -2,8 +2,8 @@ BUILD_DIR = ./build
 TOPNAME = riscv_soc
 export PATH := $(PATH):$(abspath ./utils)
 
-#CHOSE_LANGUAGE = "chisel"
-CHOSE_LANGUAGE = "verilog"
+CHOSE_LANGUAGE = "chisel"
+#CHOSE_LANGUAGE = "verilog"
 
 # project source
 ifeq ("verilog",$(CHOSE_LANGUAGE))
