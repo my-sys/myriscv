@@ -131,13 +131,13 @@ class DIV extends Module{
 	val is_32 			= io.exuType(0)
 	val is_signed		= !io.exuType(2)
 // dividend 需要扩展为65位有符号数
-	val dividend  		= Mux(is_32,Mux(is_signed,Cat(Fill(33,rs1_data(31)),rs1_data(31,0)),Cat(Fill(33,0.U(1.W)),rs1_data(31,0))),
-						Mux(is_signed,Cat(Fill(1,rs1_data(63)),rs1_data(63,0)),Cat(Fill(1,0.U(1.W)),rs1_data(63,0))))
+	val dividend  		= Mux(valid,Mux(is_32,Mux(is_signed,Cat(Fill(33,rs1_data(31)),rs1_data(31,0)),Cat(Fill(33,0.U(1.W)),rs1_data(31,0))),
+						Mux(is_signed,Cat(Fill(1,rs1_data(63)),rs1_data(63,0)),Cat(Fill(1,0.U(1.W)),rs1_data(63,0)))),0.U)
 // divisor 需要扩展为65位有符号数
-	val divisor			= Mux(is_32,Mux(is_signed,Cat(Fill(33,rs2_data(31)),rs2_data(31,0)),Cat(Fill(33,0.U(1.W)),rs2_data(31,0))),
-						Mux(is_signed,Cat(Fill(1,rs2_data(63)),rs2_data(63,0)),Cat(Fill(1,0.U(1.W)),rs2_data(63,0))))
+	val divisor			= Mux(valid,Mux(is_32,Mux(is_signed,Cat(Fill(33,rs2_data(31)),rs2_data(31,0)),Cat(Fill(33,0.U(1.W)),rs2_data(31,0))),
+						Mux(is_signed,Cat(Fill(1,rs2_data(63)),rs2_data(63,0)),Cat(Fill(1,0.U(1.W)),rs2_data(63,0)))),0.U)
 						
-	val rem 			= Mux(is_32,Mux(is_signed,Fill(65,rs1_data(31)),0.U),Mux(is_signed,Fill(65,rs1_data(63)),0.U))
+	val rem 			= Mux(valid,Mux(is_32,Mux(is_signed,Fill(65,rs1_data(31)),0.U),Mux(is_signed,Fill(65,rs1_data(63)),0.U)),0.U)
 
 	val reg_divisor 	= RegInit(0.U(65.W))
 	val reg_dividend  	= RegInit(0.U(66.W))
@@ -150,13 +150,13 @@ class DIV extends Module{
 	val reg_state		= RegInit(div_start)
 	val reg_cnt			= RegInit(0.U(7.W))
 	val reg_exuType		= RegInit(0.U(7.W))
-	//val temp_result 	= (Cat(reg_rem,reg_q)<<1.U)+Mux(reg_rem(64)^reg_divisor(64),Cat(reg_divisor,0.U(66.W)),Cat(neg_divisor,1.U(66.W)))
+	val temp_result 	= Mux(reg_ready,(Cat(reg_rem,reg_q)<<1.U)+Mux(reg_rem(64)^reg_divisor(64),Cat(reg_divisor,0.U(66.W)),Cat(neg_divisor,1.U(66.W))),0.U)
 	//val reg_is_need_correct = RegInit(false.B)
 	
 	val rem_is_0 = (reg_rem === 0.U)
 	val rem_is_neg_div = (reg_rem === neg_divisor)
 	val rem_is_div 	   = (reg_rem === reg_divisor)
-	val is_need_correct = ((reg_rem(64) ^ reg_dividend(65)) & (~rem_is_0)) | rem_is_neg_div | rem_is_div
+	val is_need_correct = Mux(reg_ready,((reg_rem(64) ^ reg_dividend(65)) & (~rem_is_0)) | rem_is_neg_div | rem_is_div,false.B)
 
 	//val reg_dest_data	= RegInit(0.U(64.W))
 	val reg_dest_is_w	= RegInit(false.B)
@@ -185,7 +185,6 @@ class DIV extends Module{
 		}
 		is(div_busy){
 			reg_cnt		:= Mux(io.kill,0.U,reg_cnt + 1.U)
-			val temp_result = (Cat(reg_rem,reg_q)<<1.U)+Mux(reg_rem(64)^reg_divisor(64),Cat(reg_divisor,0.U(66.W)),Cat(neg_divisor,1.U(66.W)))
 			reg_q 		:= temp_result(65,0)
 			reg_rem 	:= temp_result(130,66)
 			reg_state 	:= Mux(io.kill,div_start,Mux(reg_cnt === "h40".U,div_correct,reg_state))
