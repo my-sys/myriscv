@@ -150,6 +150,7 @@ class DIV extends Module{
 	val reg_state		= RegInit(div_start)
 	val reg_cnt			= RegInit(0.U(7.W))
 	val reg_exuType		= RegInit(0.U(7.W))
+	val reg_ready 		= RegInit(true.B)
 	val temp_result 	= Mux(reg_ready,(Cat(reg_rem,reg_q)<<1.U)+Mux(reg_rem(64)^reg_divisor(64),Cat(reg_divisor,0.U(66.W)),Cat(neg_divisor,1.U(66.W))),0.U)
 	//val reg_is_need_correct = RegInit(false.B)
 	
@@ -160,7 +161,7 @@ class DIV extends Module{
 
 	//val reg_dest_data	= RegInit(0.U(64.W))
 	val reg_dest_is_w	= RegInit(false.B)
-	val reg_ready 		= RegInit(true.B)
+	
 	switch(reg_state){
 		is(div_start){
 			reg_divisor 	:= 0.U//divisor
