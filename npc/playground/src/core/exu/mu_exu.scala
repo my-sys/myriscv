@@ -150,7 +150,7 @@ class DIV extends Module{
 	val reg_state		= RegInit(div_start)
 	val reg_cnt			= RegInit(0.U(7.W))
 	val reg_exuType		= RegInit(0.U(7.W))
-	val temp_result 	= (Cat(reg_rem,reg_q)<<1.U)+Mux(reg_rem(64)^reg_divisor(64),Cat(reg_divisor,0.U(66.W)),Cat(neg_divisor,1.U(66.W)))
+	//val temp_result 	= (Cat(reg_rem,reg_q)<<1.U)+Mux(reg_rem(64)^reg_divisor(64),Cat(reg_divisor,0.U(66.W)),Cat(neg_divisor,1.U(66.W)))
 	//val reg_is_need_correct = RegInit(false.B)
 	
 	val rem_is_0 = (reg_rem === 0.U)
@@ -185,6 +185,7 @@ class DIV extends Module{
 		}
 		is(div_busy){
 			reg_cnt		:= Mux(io.kill,0.U,reg_cnt + 1.U)
+			val temp_result = (Cat(reg_rem,reg_q)<<1.U)+Mux(reg_rem(64)^reg_divisor(64),Cat(reg_divisor,0.U(66.W)),Cat(neg_divisor,1.U(66.W)))
 			reg_q 		:= temp_result(65,0)
 			reg_rem 	:= temp_result(130,66)
 			reg_state 	:= Mux(io.kill,div_start,Mux(reg_cnt === "h40".U,div_correct,reg_state))
