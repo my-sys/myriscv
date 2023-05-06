@@ -17,43 +17,4 @@ int main(int argc, char *argv[]) {
   engine_start();
 
   return is_exit_status_bad();
- //
-// char c[1000] = {};
- /*strcpy(c,"    816/    98+   26 ");
- bool success = true;
- init_regex();
- word_t temp_num = expr(c,&success);
- if(success){
-     printf("%lu \n",temp_num);
- }*/ 
-/* init_regex();
- FILE *fptr;
- if((fptr = fopen("./tools/gen-expr/input","r"))==NULL){
-     printf("Error! can not open the file");
-     return -1;
- }
- 
-     while(fscanf(fptr,"%[^\n]", c)!=EOF){
-     printf("input expr %s\n",c);
-     fgetc(fptr);
-     char *str_num = strtok(c," ");
-     word_t num = strtoul(str_num,NULL,10);
-     char *expr_str = c + strlen(str_num) + 1;
-     bool success = true;
-     word_t temp_num = expr(expr_str, &success);
-     if(success){
-       // printf("input expr %s\n",c);
-        if(num == temp_num){printf("%lu, %lu, true\n",num,temp_num);}
-        else{printf("%lu, %lu, false",num,temp_num);} 
-        printf("--------------------------------------------------------\n");
-     }else{
-       // printf("input expr %s\n",c);
-        printf("Can not evaluate!!!!\n");
-        printf("--------------------------------------------------------\n");
-     }
-     memset(c,'\0',sizeof(c));
- }
- if(fptr!=NULL){fclose(fptr);}
-
- return 0;*/
 }
