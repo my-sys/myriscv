@@ -20,6 +20,7 @@ void __am_gpu_config(AM_GPU_CONFIG_T *cfg) {
   };
 }
 
+// 将要写入的图像信息，放在fb 的指定位置，fb的大小为400*300
 void __am_gpu_fbdraw(AM_GPU_FBDRAW_T *ctl) {
   uint32_t *fb = (uint32_t *)(uintptr_t)FB_ADDR;
   uint32_t *temp = (uint32_t *)ctl->pixels;

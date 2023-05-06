@@ -39,7 +39,7 @@ char  *strncpy   (char *dst, const char *src, size_t n);
 int    strcmp    (const char *s1, const char *s2);
 int    strncmp   (const char *s1, const char *s2, size_t n);
 char  *uitoa     (uint32_t value, char *str, int base);
-char  *gcvt      (double value, int n, char* str);
+// char  *gcvt      (double value, int n, char* str);
 char  *itoa      (int value, char *str, int base);
 char  *ltoa      (int64_t value, char *str, int base);
 char  *ultoa      (uint64_t value, char *str, int base);

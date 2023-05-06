@@ -12,6 +12,7 @@ int printf(const char *fmt, ...) {
   va_list ap;
   char *temp = buf;  
   memset(buf, 0, sizeof(buf));
+  //获取可变参数的参数列表
   va_start(ap,fmt);
   vsprintf(buf, fmt, ap);
   va_end(ap);
@@ -27,6 +28,7 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
   //panic("Not implemented");
     char* temp = out;
     va_list args; //parameters
+	//拷贝可变参数列表
     va_copy(args,ap);
 
     for(;*fmt;fmt++){
@@ -37,7 +39,6 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
             switch(*fmt){
                 case 'd':
                     itoa(va_arg(args, int),temp,10);
-
                     temp = temp + strlen(temp);
                     break;
                 case 'x':
@@ -57,14 +58,13 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
                     temp += strlen(temp);
                     break;
 
-                case 'f':
-                    gcvt(va_arg(args,double),7, temp);
-                    temp += strlen(temp);
-                    break;
+                // case 'f':
+                //     gcvt(va_arg(args,double),7, temp);
+                //     temp += strlen(temp);
+                //     break;
 
                 case 'p':
                     ultoa(va_arg(args,unsigned long int),temp,16);
-
                     temp = temp + strlen(temp);                    
                     break;
                 default:
@@ -74,6 +74,7 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
         }
     }
     *temp = '\0';
+	va_end(args);
     return 0;
 }
 

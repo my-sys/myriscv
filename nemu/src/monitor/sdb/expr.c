@@ -73,6 +73,7 @@ typedef struct token {
 static Token tokens[1000] __attribute__((used)) = {};
 static int nr_token __attribute__((used))  = 0;
 
+//将字符串按照设置的正则表达式规则进行划分
 static bool make_token(char *e) {
     if(e == NULL){
         printf("no expr,you may input error!!!\n");
@@ -191,6 +192,7 @@ uint32_t find_poistion_main_operator(uint32_t p , uint32_t q){
     return position;
 }
 
+//对经过正则表达式划分后的 token，进行处理
 word_t eval(uint32_t p, uint32_t q){
     if (p > q){
         printf("Bad expression \n");
@@ -251,6 +253,7 @@ word_t eval(uint32_t p, uint32_t q){
     }
 }
 
+//先分割后计算
 word_t expr(char *e, bool *success) {
   if (!make_token(e)) {
     *success = false;

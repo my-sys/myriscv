@@ -24,7 +24,7 @@ void init_wp_pool() {
   head = NULL;
   free_ = wp_pool;
 }
-
+//新创建的wp的next指针为空,因为在free中是最前面所以指向下一个列表向,在head中是最后面，因为是最新创建的
 WP* new_wp(){
     if(free_ == NULL){
         printf("watchpoints reach the maximum number\n");
@@ -36,6 +36,7 @@ WP* new_wp(){
     return temp;    
 }
 
+//watchpoint 主要对比旧值与新值的区别,释放时,释放的watchpoint放在free列表的最前面
 void free_wp(WP *wp){
     if(wp == NULL){
         printf("NULL can not be free!!!\n");
@@ -59,6 +60,7 @@ void free_wp(WP *wp){
     free_ = wp;
 }
 
+//判断是否有空位,将新创建的watchpoint放在,watchpoint点的最后
 void create_watchpoint(char *str){
     bool success = true;
     word_t temp_value = expr(str,&success);

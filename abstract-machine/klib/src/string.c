@@ -3,22 +3,24 @@
 #include <stdint.h>
 
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
-
+static 	char number_table[] = "0123456789abcdef";
+//判断字符串长度，不包含空字符串
 size_t strlen(const char *s) {
-
   //  panic("Not implemented");
   const char *start = s;
   while (*s){
       s++;
-
   }
-  return s - start;
+  return (s - start);
 }
 
 char *strcpy(char *dst, const char *src) {
   //panic("Not implemented");
   char *s = dst;
-  while((*dst++ = *src++));
+  while(*src){
+	*dst++ = *src++;
+  }
+  //while((*dst++ = *src++));
   return s;
 }
 
@@ -32,32 +34,37 @@ char *strncpy(char *dst, const char *src, size_t n) {
 
  while(n > 0){
      n--;
-     if((*dscan++ = *sscan++) == '\0'){
-         break;
-     }
+	 if(*sscan){
+		*dscan++ = *sscan++;
+	 }else{
+		*dscan++ = '\0';
+	 }
+    //  if((*dscan++ = *sscan++) == '\0'){
+    //      break;
+    //  }
  }
- while(n-- >0){
-     *dscan++ = '\0';
- }
+//n--是一个整体，即使判断循环的条件是n > 0,但仍然会执行最后的一次减法
+//  while(n-- >0){
+//      *dscan++ = '\0';
+//  }
  return dst;
 }
 
+//把src所指向的字符串追加到dest所指向的字符串的结尾
 char *strcat(char *dst, const char *src) {
 //  panic("Not implemented");
     char *s = dst;
-
     while (*dst){
         dst++;
     }
-
     while((*dst++ = *src++));
-
     return s;
 }
 
+//字符串比较，区分大小写
 int strcmp(const char *s1, const char *s2) {
   //panic("Not implemented");
-    while (*s1 != '\0' && *s1 == *s2){
+    while ((*s1 != '\0') && (*s1 == *s2)){
         s1++;
         s2++;
     }
@@ -79,6 +86,7 @@ int strncmp(const char *s1, const char *s2, size_t n) {
  return (*(unsigned char *)s1) - (*(unsigned char *)s2);
 }
 
+//复制n个字符串c，到s
 void *memset(void *s, int c, size_t n) {
   //panic("Not implemented");
     char *temp = s;
@@ -91,6 +99,9 @@ void *memset(void *s, int c, size_t n) {
 
 }
 
+// 从src复制n个字符到dst,并且避免覆盖的情况
+// 覆盖情况只有在src地址小于dst地址,并且中间有重叠时发生
+// 只需要调换拷贝方向就可以避免
 void *memmove(void *dst, const void *src, size_t n) {
   //panic("Not implemented");
   char *dst_temp = dst;
@@ -98,10 +109,10 @@ void *memmove(void *dst, const void *src, size_t n) {
 
   if(src_temp < dst_temp && dst_temp < src_temp + n){
       
-      src_temp += n;
-      dst_temp += n;
+      src_temp += (n-1);
+      dst_temp += (n-1);
       while(n--){
-          *--dst_temp = *--src_temp;
+          *dst_temp-- = *src_temp--;
       }
 
   } else{
@@ -141,14 +152,16 @@ int memcmp(const void *s1, const void *s2, size_t n) {
 }
 
 char* itoa(int value, char *str, int base){
+	char* temp_str = str;
     char reverse[42];
     char *temp = reverse;
+	char num_table[] = "0123456789abcdf";
     bool sign = (value >= 0)?true:false;
 
     value = (value >= 0)?value:-value;
     *temp++ = '\0';
     while (value >= 0){
-        *temp++ = "0123456789abcdf"[value%base];
+        *temp++ = num_table[value%base];
         value = value / base;
         if (value == 0)break;
 
@@ -160,25 +173,27 @@ char* itoa(int value, char *str, int base){
     }
 
     while (temp >= reverse){
-        *str++ = *temp--;
+        *temp_str++ = *temp--;
     }
 
     return str;
 }
 
 char* uitoa(uint32_t value, char *str, int base){
-    char reverse[32];
+    char* temp_str = str;
+	//char number_table[] = "0123456789abcdef";
+	char reverse[32];
     char* temp = reverse;
     *temp++ = '\0';
 
     while(value >=0){
-        *temp++ = "0123456789abcdef"[value%base];
+        *temp++ = number_table[value%base];
         value = value / base;
         if(value ==0)break;
     }
     temp--;
     while(temp >= reverse){
-        *str++ = *temp--;
+        *temp_str++ = *temp--;
     }
 
     return str;
@@ -187,18 +202,20 @@ char* uitoa(uint32_t value, char *str, int base){
 
 
 char* ltoa(int64_t value, char *str, int base){
-    char reverse[64];
+    char* temp_str = str;
+	//char number_table[] = "0123456789abcdef";
+	char reverse[65];
     char* temp = reverse;
     *temp++ = '\0';
 
     while(value >=0){
-        *temp++ = "0123456789abcdef"[value%base];
+        *temp++ = number_table[value%base];
         value = value / base;
         if(value ==0)break;
     }
     temp--;
     while(temp >= reverse){
-        *str++ = *temp--;
+        *temp_str++ = *temp--;
     }
 
     return str;
@@ -206,55 +223,23 @@ char* ltoa(int64_t value, char *str, int base){
 }
 
 char* ultoa(uint64_t value, char *str, int base){
+	char* temp_str = str;
     char reverse[64];
     char* temp = reverse;
     *temp++ = '\0';
 
     while(value >=0){
-        *temp++ = "0123456789abcdef"[value%base];
+        *temp++ = number_table[value%base];
         value = value / base;
         if(value ==0)break;
     }
     temp--;
     while(temp >= reverse){
-        *str++ = *temp--;
+        *temp_str++ = *temp--;
     }
 
     return str;
 
-}
-char* gcvt(double value, int n, char* str ){
-    /*char tbuf[80];
-    char*p = tbuf;
-
-    int int_part = (int)value;
-    double folat_part = value - int_part;
-    itoa(int_part,tbuf,10);
-
-    if(*p == 0 || *p == '-'){p++;}
-
-    while(*p != '\0'){p++;n--;}
-
-    *p++ = '.';
-    
-    int count = 20;
-    bool is_valid_int_value = false;
-    if(int_part != 0){ is_valid_int_value = true; }
-    while (n > 0 && folat_part != 0 && count >0){
-        *p++ = (int)(folat_part*10) + '0';
-        count --;
-        if(*(p-1) > '0'){
-            is_valid_int_value = true;
-        }
-        if(is_valid_int_value == true){
-            n--;
-        }
-    }
-    *p = '\0';
-
-    tbuf[71] = '\0';
-    strcpy(str,tbuf);*/
-    return str;
 }
 
 #endif

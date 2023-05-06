@@ -30,6 +30,7 @@ f(30) f(31)
 .align 3
 .globl __am_asm_trap
 __am_asm_trap:
+  #创建context区域,并把通用寄存器,mepc,mcause,mstatus的值付给其
   addi sp, sp, -CONTEXT_SIZE
 
   MAP(REGS, PUSH)
@@ -42,15 +43,16 @@ __am_asm_trap:
   STORE t1, OFFSET_STATUS(sp)
   STORE t2, OFFSET_EPC(sp)
 
-  # set mstatus.MPRV to pass difftest
+  # set mstatus.MPRV 1 to pass difftest
   li a0, (1 << 17)
   or t1, t1, a0
   csrw mstatus, t1
 
+  #context内容传给__am_irq_handle，也就是sp付给a0
   mv a0, sp
   jal __am_irq_handle
 
-  #xingk 切换堆栈
+  #xingk 切换堆栈,切换堆指针,从堆中将mstaus,mepc和通用寄存器恢复
   mv sp, a0 
   LOAD t1, OFFSET_STATUS(sp)
   LOAD t2, OFFSET_EPC(sp)
@@ -58,6 +60,6 @@ __am_asm_trap:
   csrw mepc, t2
 
   MAP(REGS, POP)
-
+  #堆释放context_size 占据的空间
   addi sp, sp, CONTEXT_SIZE
   mret
