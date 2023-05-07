@@ -1,3 +1,4 @@
+//本代码由chisel代码而来，只是为了加快仿真速度，考核而设计。
 module AXI_RAM(
   input         clock,
   input         reset,
@@ -10,6 +11,10 @@ module AXI_RAM(
   input  [7:0]  io_ram_bus_w_bits_wstrb,
   input         io_ram_bus_w_bits_wlast,
   output        io_ram_bus_b_valid,
+//io.ram_bus.b.bits.bresp chisel 
+//chisel当中被优化掉了，因此没有这根线。问题不大，当接SoC时，AXI是最外层的输出，这根线又会重新出现
+//在我写的chisel代码中是有这根线的，但是因为，内部逻辑并没有使用这根线的内容，chisel编译成verilog时优化掉了
+//为了不大改内容，应当保持这个接口不存在。
   output        io_ram_bus_ar_ready,
   input         io_ram_bus_ar_valid,
   input  [63:0] io_ram_bus_ar_bits_araddr,
@@ -32,43 +37,13 @@ module AXI_RAM(
   reg  reg_ar_ready; // @[axi_ram.scala 24:35]
   reg  reg_r_valid; // @[axi_ram.scala 25:34]
   reg  reg_r_state; // @[axi_ram.scala 28:34]
-  wire  _r_rlast_T = reg_rlen == 4'h0; // @[axi_ram.scala 29:34]
-  wire  _T_1 = io_ram_bus_ar_ready & io_ram_bus_ar_valid; // @[Decoupled.scala 52:35]
-  wire [63:0] _reg_raddr_T_1 = io_ram_bus_ar_bits_araddr + 64'h8; // @[axi_ram.scala 38:75]
-  wire  _GEN_0 = _T_1 ? 1'h0 : reg_ar_ready; // @[axi_ram.scala 24:35 32:49 33:46]
-  wire  _GEN_1 = _T_1 | reg_r_valid; // @[axi_ram.scala 25:34 32:49 34:46]
-  wire  _GEN_2 = _T_1 | reg_r_state; // @[axi_ram.scala 28:34 32:49 36:50]
-  wire [7:0] _GEN_4 = _T_1 ? io_ram_bus_ar_bits_arlen : {{4'd0}, reg_rlen}; // @[axi_ram.scala 22:32 32:49 39:50]
-  wire [3:0] _reg_rlen_T_1 = reg_rlen - 4'h1; // @[axi_ram.scala 49:65]
-  wire [63:0] _reg_raddr_T_3 = reg_raddr + 64'h8; // @[axi_ram.scala 51:66]
-  wire  _GEN_5 = _r_rlast_T ? 1'h0 : 1'h1; // @[axi_ram.scala 44:55 45:53 50:53]
-  wire  _GEN_6 = _r_rlast_T | reg_ar_ready; // @[axi_ram.scala 24:35 44:55 46:54]
-  wire  _GEN_7 = _r_rlast_T ? 1'h0 : reg_r_state; // @[axi_ram.scala 28:34 44:55 47:53]
-  wire [3:0] _GEN_8 = _r_rlast_T ? reg_rlen : _reg_rlen_T_1; // @[axi_ram.scala 22:32 44:55 49:53]
-  wire [63:0] _GEN_9 = _r_rlast_T ? reg_raddr : _reg_raddr_T_3; // @[axi_ram.scala 21:32 44:55 51:53]
-  wire  _GEN_11 = io_ram_bus_r_valid ? _GEN_6 : reg_ar_ready; // @[axi_ram.scala 24:35 43:48]
-  wire [3:0] _GEN_13 = io_ram_bus_r_valid ? _GEN_8 : reg_rlen; // @[axi_ram.scala 22:32 43:48]
-  wire  _GEN_16 = reg_r_state ? _GEN_11 : reg_ar_ready; // @[axi_ram.scala 30:28 24:35]
-  wire [3:0] _GEN_18 = reg_r_state ? _GEN_13 : reg_rlen; // @[axi_ram.scala 30:28 22:32]
-  wire  _GEN_20 = ~reg_r_state ? _GEN_0 : _GEN_16; // @[axi_ram.scala 30:28]
-  wire [7:0] _GEN_24 = ~reg_r_state ? _GEN_4 : {{4'd0}, _GEN_18}; // @[axi_ram.scala 30:28]
+ 
   reg [63:0] reg_w_addr; // @[axi_ram.scala 57:34]
   reg  reg_is_w; // @[axi_ram.scala 58:34]
   reg  reg_aw_ready; // @[axi_ram.scala 59:42]
   reg  reg_w_ready; // @[axi_ram.scala 60:34]
   reg  reg_b_valid; // @[axi_ram.scala 63:34]
-  wire  _T_5 = io_ram_bus_aw_ready & io_ram_bus_aw_valid; // @[Decoupled.scala 52:35]
-  wire  _T_6 = io_ram_bus_w_ready & io_ram_bus_w_valid; // @[Decoupled.scala 52:35]
-  wire [63:0] _reg_w_addr_T_1 = reg_w_addr + 64'h8; // @[axi_ram.scala 73:63]
-  wire  _GEN_25 = io_ram_bus_w_bits_wlast ? 1'h0 : reg_is_w; // @[axi_ram.scala 58:34 74:54 75:57]
-  wire  _GEN_26 = io_ram_bus_w_bits_wlast ? 1'h0 : reg_w_ready; // @[axi_ram.scala 60:34 74:54 76:49]
-  wire  _GEN_27 = io_ram_bus_w_bits_wlast | reg_aw_ready; // @[axi_ram.scala 59:42 74:54 77:49]
-  wire  _GEN_29 = _T_6 ? _GEN_25 : reg_is_w; // @[axi_ram.scala 58:34 72:40]
-  wire  _GEN_30 = _T_6 ? _GEN_26 : reg_w_ready; // @[axi_ram.scala 60:34 72:40]
-  wire  _GEN_31 = _T_6 ? _GEN_27 : reg_aw_ready; // @[axi_ram.scala 72:40 59:42]
-  wire  _GEN_33 = _T_5 | _GEN_29; // @[axi_ram.scala 66:33 68:33]
-  wire  _GEN_34 = _T_5 ? 1'h0 : _GEN_31; // @[axi_ram.scala 66:33 69:33]
-  wire  _GEN_35 = _T_5 | _GEN_30; // @[axi_ram.scala 66:33 70:33]
+
   wire [7:0] _mem_io_wmask_T_9 = io_ram_bus_w_bits_wstrb[0] ? 8'hff : 8'h0; // @[Bitwise.scala 77:12]
   wire [7:0] _mem_io_wmask_T_11 = io_ram_bus_w_bits_wstrb[1] ? 8'hff : 8'h0; // @[Bitwise.scala 77:12]
   wire [7:0] _mem_io_wmask_T_13 = io_ram_bus_w_bits_wstrb[2] ? 8'hff : 8'h0; // @[Bitwise.scala 77:12]
@@ -79,7 +54,6 @@ module AXI_RAM(
   wire [7:0] _mem_io_wmask_T_23 = io_ram_bus_w_bits_wstrb[7] ? 8'hff : 8'h0; // @[Bitwise.scala 77:12]
   wire [31:0] mem_io_wmask_lo = {_mem_io_wmask_T_15,_mem_io_wmask_T_13,_mem_io_wmask_T_11,_mem_io_wmask_T_9}; // @[Cat.scala 33:92]
   wire [31:0] mem_io_wmask_hi = {_mem_io_wmask_T_23,_mem_io_wmask_T_21,_mem_io_wmask_T_19,_mem_io_wmask_T_17}; // @[Cat.scala 33:92]
-  wire [7:0] _GEN_39 = reset ? 8'h0 : _GEN_24; // @[axi_ram.scala 22:{32,32}]
 
   RAMCtrl mem ( // @[axi_ram.scala 91:21]
     .clock(mem_clock),
@@ -107,48 +81,84 @@ module AXI_RAM(
   assign mem_wmask = {mem_io_wmask_hi,mem_io_wmask_lo}; // @[Cat.scala 33:92]
   assign mem_wen = reg_is_w & io_ram_bus_w_valid; // @[axi_ram.scala 65:29]
 
-  always @(posedge clock)begin 
+parameter r_idle = 1'b0,r_busy = 1'b1;
+wire  io_ram_bus_ar_fire = io_ram_bus_ar_ready & io_ram_bus_ar_valid;
+wire  io_ram_bus_r_fire = io_ram_bus_r_valid; //io_ram_bus_r_ready & io_ram_bus_r_valid, 1'b1 & io_ram_bus_r_valid;
+wire  io_ram_bus_aw_fire  = io_ram_bus_aw_ready & io_ram_bus_aw_valid;
+wire  io_ram_bus_w_fire   = io_ram_bus_w_ready & io_ram_bus_w_valid;
+always @(posedge clock)begin 
 	if(reset)begin 
-		reg_raddr <= 64'h0; 
-		reg_r_valid <= 1'h0;
-		reg_r_state <= 1'h0;
-		//reg_r_data <= 64'h0;
-	end else if(~reg_r_state)begin 
-		reg_r_valid <= _GEN_1;
-		reg_r_state <= _GEN_2;
-		if(_T_1)begin 
-			reg_raddr <= _reg_raddr_T_1;
-		end 
-	end else if (reg_r_state) begin
-		if (io_ram_bus_r_valid) begin
-			reg_raddr <= _GEN_9;
-			reg_r_valid <= _GEN_5;
-			reg_r_state <= _GEN_7;
-		end 
+		reg_ar_ready <= 1'b1;
+		reg_r_valid  <= 1'b0;
+		reg_r_state  <= r_idle;
+		reg_raddr	<= 64'b0;
+		reg_rlen    <= 4'b0;
+	end else begin
+		case (reg_r_state)
+			r_idle:begin 
+				if(io_ram_bus_ar_fire)begin 
+					reg_ar_ready <= 1'b0;
+					reg_r_valid  <= 1'b1;
+
+					reg_r_state  <= r_busy;
+					reg_raddr	 <= io_ram_bus_ar_bits_araddr + 64'h8;
+					reg_rlen	 <= io_ram_bus_ar_bits_arlen[3:0];
+				end 
+			end
+			r_busy:begin 
+				if(io_ram_bus_r_fire)begin 
+					if(reg_rlen == 0)begin
+						reg_r_valid <= 1'b0;
+						reg_ar_ready <= 1'b1;
+						reg_r_state <= r_idle;
+					end
+				end else begin 
+					reg_rlen <= reg_rlen - 4'h1;
+					reg_r_valid <= 1'b1;
+					reg_raddr  <= reg_raddr + 64'h8;
+				end 
+			end 
+		endcase
 	end
-	//reg_r_data <= mem_rdata;
-	reg_rlen <= _GEN_39[3:0];
-	reg_ar_ready <= reset | _GEN_20;
-  end
-  always @(posedge clock)begin 
-    if (reset) begin // @[axi_ram.scala 57:34]
-      reg_w_addr <= 64'h0; // @[axi_ram.scala 57:34]
-    end else if (_T_5) begin // @[axi_ram.scala 66:33]
-      reg_w_addr <= io_ram_bus_aw_bits_awaddr; // @[axi_ram.scala 67:29]
-    end else if (_T_6) begin // @[axi_ram.scala 72:40]
-      reg_w_addr <= _reg_w_addr_T_1; // @[axi_ram.scala 73:49]
-    end
-  end 
-  always @(posedge clock)begin
-	reg_aw_ready <= reset | _GEN_34;
-	if (reset) begin
-		reg_is_w <= 1'h0;
-		reg_w_ready <= 1'h0;
-		reg_b_valid <= 1'h0;
+end 
+
+always @(posedge clock)begin
+	if(reset)begin 
+		reg_w_addr <= 64'h0;
+		reg_is_w	<= 1'b0;
+		reg_aw_ready <= 1'b1;
+		reg_w_ready	<= 1'b0;
 	end else begin 
-		reg_is_w <= _GEN_33;
-		reg_w_ready <= _GEN_35;
-		reg_b_valid <= io_ram_bus_w_bits_wlast;
+		if(io_ram_bus_aw_fire)begin 
+			reg_w_addr <= io_ram_bus_aw_bits_awaddr;
+			reg_is_w   <= 1'b1;
+			reg_aw_ready <= 1'b0;
+			reg_w_ready <= 1'b1;
+		end else begin 
+			if(io_ram_bus_w_fire)begin 
+				reg_w_addr <= reg_w_addr + 64'h8;
+				if(io_ram_bus_w_bits_wlast)begin 
+					reg_is_w	<= 1'b0;
+					reg_w_ready <= 1'b0;
+					reg_aw_ready <= 1'b1;
+				end 
+			end
+		end 
 	end 
-  end
+end 
+
+always @(posedge clock)begin
+	if(reset)begin 
+		//reg_b_bresp <= 2'b0;  被chisel编译优化掉了，chisel编译成verilog时，优化掉了不用的线。为了与内在逻辑统一，暂时不使用吧
+		reg_b_valid <= 1'b0;
+	end else begin 
+		if(io_ram_bus_w_bits_wlast)begin 
+			//reg_b_bresp 	<= 2'b0;
+			reg_b_valid		<= 1'b1;
+		end else begin 
+			//if(io_ram_bus_b_ready)reg_b_valid <= 1'b0;
+			reg_b_valid <= 1'b0;
+		end 
+	end 
+end 
 endmodule

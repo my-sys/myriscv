@@ -4,6 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+// 将一张画布中的指定矩形区域复制到另一张画布的指定位置
 void SDL_BlitSurface(SDL_Surface *src, SDL_Rect *srcrect, SDL_Surface *dst, SDL_Rect *dstrect) {
   assert(dst && src);
   assert(dst->format->BitsPerPixel == src->format->BitsPerPixel);
@@ -54,6 +55,7 @@ void SDL_BlitSurface(SDL_Surface *src, SDL_Rect *srcrect, SDL_Surface *dst, SDL_
   }
 }
 
+// 往画布的指定矩形区域中填充指定的颜色
 void SDL_FillRect(SDL_Surface *dst, SDL_Rect *dstrect, uint32_t color) {
   if(dst->format->palette==NULL){  
     uint32_t *temp = dst->pixels;
@@ -81,6 +83,7 @@ void SDL_FillRect(SDL_Surface *dst, SDL_Rect *dstrect, uint32_t color) {
     int w1 = (dstrect!=NULL)?dstrect->w:w;
     //printf("w = %d, h = %d\n",w,h);
     int k;
+	// 这是为配合SDL_Color 另类的ABGR 情况，我觉得其实改nemu部分SDL应该也行，初始化的时候为ABGR类型就可以了。但还是不瞎弄了。
 	color = ((color & 0xff0000)>>16) + ((color & 0xff )<<16)+ color & 0xff00ff00;
     for(k = 0; k < dst->format->palette->ncolors; k++){
       //if(dst->format->palette->colors[k] == color)break;
@@ -105,33 +108,23 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
   if((x+y+w+h) == 0){
     w = s->w; h = s->h;
   }
-  //printf("SDL_UpdateRect 0\n");
-  //uint32_t zz;
-  //uint32_t color_buf[w*h];
+
   uint32_t* color_buf = (uint32_t *)malloc(w*h*(sizeof(uint32_t)));
-  //uint32_t* color_buf = (uint32_t *)color_buffer;
-  //printf("color_buf 0x%x\n",color_buf);
-  //printf("SDL_UpdateRect 1\n");
   if(s->format->palette == NULL){
     //printf("SDL_UpdateRect 2\n");
     uint32_t *temp = s->pixels;
-    //printf("SDL_UpdateRect 3 %d,%d\n",w,h);
-    //printf("s->pixels 0x%x \n",s->pixels);
     for(int i = 0; i < h; i++){
       for(int j = 0; j < w; j++){
         //printf("i %d w %d j %d\n",i,w,j);
         //printf("lll 0x%x,0x%x \n",&color_buf[i*w+j],(temp + x + (y+i)* (s->w) + j));
         color_buf[i*w+j] = *(temp + x + (y+i)* (s->w) + j);
         
-        //zz = i*w + j; 
-        //color_buf[zz] = 0; 
-        //color_buf[i*w+j] = 0; 
-        //printf("2\n");
       }
     } 
     //printf("SDL_UpdateRect 5\n");
   }else{
     //printf("SDL_UpdateRect 8_\n");
+	//仙剑采用的是调色盘，因此这里存储的是每个像素的代表颜色的序号，序号对应调色盘值才是真正的颜色。
     uint8_t *temp = s->pixels;
 	int i_w = 0; int y_i_s_w = y*(s->w);
 	//乘法需要60多个周期，尽量避免乘法。尤其在循环体中
@@ -141,6 +134,7 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
         //printf(" %d,%d,%d\n",i*w+j,*(temp + x + (y+i)* (s->w) + j),s->format->palette->colors[0]);
         //color_buf[i*w+j] =(s->format->palette->colors[*(temp + x + (y+i)* (s->w) + j)].val);
 
+		//设备的底层采用的是ARGB格式，而SDL_Color 定义为 r,g,b,a。意味着是ABGR。
 		color_buf[i_w+j] =((s->format->palette->colors[*(temp + x + y_i_s_w + j)].val&0xff00)
                            +((s->format->palette->colors[*(temp + x + y_i_s_w + j)].val&0xff)<<16)
                            +((s->format->palette->colors[*(temp + x + y_i_s_w + j)].val&0xff0000)>>16));

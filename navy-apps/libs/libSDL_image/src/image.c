@@ -21,6 +21,7 @@ SDL_Surface* IMG_Load(const char *filename) {
   //printf(" IMG_Load xingk3\n");
   fseek(fp,0,SEEK_END);
   //printf(" IMG_Load xingk3\n");
+  //返回文件的当前位置，这里的用法是用于获取文件的大小
   int size = ftell(fp);
   fseek(fp,0,SEEK_SET);
   //printf(" IMG_Load xingk5\n");
