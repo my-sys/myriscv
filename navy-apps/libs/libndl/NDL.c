@@ -12,6 +12,7 @@ static int evtdev = -1;
 static int fbdev = -1;
 static int screen_w = 0, screen_h = 0;
 
+//获取时间，单位毫秒
 uint32_t NDL_GetTicks() {
   struct timeval tv_begin;
   gettimeofday(&tv_begin,NULL);
@@ -22,11 +23,15 @@ uint32_t NDL_GetTicks() {
 int NDL_PollEvent(char *buf, int len) {
   //FILE *fp  = fopen("/dev/events","r");
   //int ret = fread(buf,1,len,fp);
+  //获取按键信息,fread 是对read的封装，这层画图函数，调用驱动，没必要进行再次封装，也是加速的考虑
   int fd = open("/dev/events",0);
   int ret = read(fd,buf,len);
   return ret;
 }
 
+// 设置画布的大小
+// 打开一张(*w) X (*h)的画布
+// 如果*w和*h均为0, 则将系统全屏幕作为画布, 并将*w和*h分别设为系统屏幕的大小
 void NDL_OpenCanvas(int *w, int *h) {
   if(*w == 0 && *h == 0){
     *w = 400;*h = 300;
@@ -51,6 +56,9 @@ void NDL_OpenCanvas(int *w, int *h) {
   screen_w = *w;screen_h = *h;
 }
 
+
+// 向画布`(x, y)`坐标处绘制`w*h`的矩形图像, 并将该绘制区域同步到屏幕上
+// 图像像素按行优先方式存储在`pixels`中, 每个像素用32位整数以`00RRGGBB`的方式描述颜色
 void NDL_DrawRect(uint32_t *pixels, int x, int y, int w, int h) {
   //FILE *fp = fopen("/dev/fb","r+");
 #ifdef __ISA_NATIVE__
@@ -64,13 +72,14 @@ void NDL_DrawRect(uint32_t *pixels, int x, int y, int w, int h) {
 #else
   int fd = open("/dev/fb",0);
   size_t temp_xy = (x<<16)+y;
+  //先设置写指针的位置再进行写入,这里将其当做了坐标，与通常的读写不同
   lseek(fd,temp_xy,SEEK_SET);
   //fseek(fp, temp_xy, SEEK_SET);
   size_t temp_wh = (w<<16) +h;
   //printf("%x,%d,%d,%x \n",(uint32_t)pixels,w,h,temp_wh);
   //fwrite(0x800b9900,4,600,fp);
   //write(5,pixels,800);
-  int ret = write(fd,pixels,temp_wh);
+  int ret = write(fd,pixels,temp_wh); //与通常不同,暂时不会存在问题，这其实就是与驱动的约定
   //printf("NDL_DrawRect %d\n",ret);
 #endif
 }

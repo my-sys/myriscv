@@ -132,8 +132,8 @@ static inline fixedpt fixedpt_muli(fixedpt A, int B) {
 
 /* Divides a fixedpt number with an integer, returns the result. */
 static inline fixedpt fixedpt_divi(fixedpt A, int B) {
-	return A/B;
-	//return (A/(B<<8))<<8;
+	//return A/B;
+	return (A/(B<<8))<<8; //这种方式,会把小数部分归0
 }
 
 /* Multiplies two fixedpt numbers, returns the result. */
@@ -156,6 +156,7 @@ static inline fixedpt fixedpt_abs(fixedpt A) {
     
 }
 
+//向下取整
 static inline fixedpt fixedpt_floor(fixedpt A) {
 	if(A>=0){
         return A&0xffffff00;
@@ -164,6 +165,7 @@ static inline fixedpt fixedpt_floor(fixedpt A) {
     }
 }
 
+//向上取整,需要注意-1.1向上取整为-1,  1.1向上取整为2
 static inline fixedpt fixedpt_ceil(fixedpt A) {
 	if(A>=0){
         return (A + 0xff)&0xffffff00;

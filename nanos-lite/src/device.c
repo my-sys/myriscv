@@ -22,6 +22,7 @@ size_t serial_write(const void *buf, size_t offset, size_t len) {
   return len;
 }
 
+//// 与AM_INPUT_KEYBRD_T定义相关的内容在am/include/amdev.h中
 size_t events_read(void *buf, size_t offset, size_t len) {
   AM_INPUT_KEYBRD_T ev = io_read(AM_INPUT_KEYBRD);
   int ret=0;
@@ -47,6 +48,7 @@ size_t events_read(void *buf, size_t offset, size_t len) {
     temp[ret+1] = '\0';
   }
   //strlen("event read %s,%d\n",buf,strlen("buf"))
+  // ret + 2 是因为多了'\n','\0'
   return ret + 2;
 }
 
@@ -60,7 +62,8 @@ size_t dispinfo_read(void *buf, size_t offset, size_t len) {
   return len_temp;
 }
 
-
+//该函数借用了offset[31,16]作为x, 借用offset[15,0]作为y,
+//借用len[31,16]作为w,借用len[15,0]作为h
 size_t fb_write(const void *buf, size_t offset, size_t len) {
   int x = offset >>16;
   int y = offset &0xffff;
@@ -81,6 +84,7 @@ size_t fb_write(const void *buf, size_t offset, size_t len) {
  * 
  * 
  * */ 
+//  ioe_write(reg,(void *)buf);
 size_t am_write(const void *buf, size_t type, size_t reg){
 
   // switch(type){
@@ -95,11 +99,13 @@ size_t am_write(const void *buf, size_t type, size_t reg){
 }
 
 /*********** 为兼容navy 的AM API 特意设计。不用可删除， libam    xingk**********************/
+//ioe_read(reg,buf);
 size_t am_read(void *buf, size_t type, size_t reg){
   ioe_read(reg,buf);
   return 0;
 }
 
+// 注册设备，是ioe_write,ioe_read 与不同的驱动函数对应
 void init_device() {
   Log("Initializing devices...");
   ioe_init();

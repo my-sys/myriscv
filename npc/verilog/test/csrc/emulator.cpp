@@ -165,14 +165,6 @@ void Emulator::execute_once(){
 	}
 };
 
-// void aaa(int j){
-//   char instbuf[20]={0};
-//   char *p = instbuf;
-//   uint8_t *inst = (uint8_t *)&iringbuf2[j];
-//   for (int i = 0; i < 4; i ++) {
-// 	p += snprintf(p, 4, " %02x", inst[i]);
-//   }
-// }
 void Emulator::assert_fail_msg(){
   char instbuf[100]={0};
   char *p;

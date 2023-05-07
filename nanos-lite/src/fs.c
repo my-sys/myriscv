@@ -3,10 +3,10 @@ typedef size_t (*ReadFn) (void *buf, size_t offset, size_t len);
 typedef size_t (*WriteFn) (const void *buf, size_t offset, size_t len);
 
 typedef struct {
-  char *name;
-  size_t size;
-  size_t disk_offset;
-  size_t open_offset;   // xingk
+  char *name; ////代表不同类型的驱动设备或文件的名称
+  size_t size; //文件的大小
+  size_t disk_offset; //文件在磁盘的位置，
+  size_t open_offset;   //文件指针相对于文件所在位置 xingk
   ReadFn read;
   WriteFn write;
 } Finfo;
@@ -35,6 +35,7 @@ static Finfo file_table[] __attribute__((used)) = {
 #include "files.h"
 };
 
+//从file_table 查找对应文件对应的序号
 int fs_open(const char *pathname, int flags, int mode){
   int len = sizeof(file_table)/sizeof(Finfo);
   for(int i = 0; i< len; i++){
@@ -47,10 +48,13 @@ size_t fs_read(int fd, void *buf, size_t len){
   if(file_table[fd].read != NULL){
     return file_table[fd].read(buf,file_table[fd].open_offset,len);
   }
+  //没有对应的读函数的，说明不是驱动，是文件。
   size_t size = file_table[fd].size;
+  //offset 大小由在磁盘的位置，以及目前的读指针位置
   size_t offset = file_table[fd].disk_offset + file_table[fd].open_offset;
   if(len+file_table[fd].open_offset > size)len = size - file_table[fd].open_offset;
   ramdisk_read(buf,offset,len);
+  //更改读指针
   file_table[fd].open_offset +=len;
   return len;
 }
