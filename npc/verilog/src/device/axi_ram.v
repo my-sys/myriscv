@@ -111,11 +111,11 @@ always @(posedge clock)begin
 						reg_r_valid <= 1'b0;
 						reg_ar_ready <= 1'b1;
 						reg_r_state <= r_idle;
+					end else begin 
+						reg_rlen <= reg_rlen - 4'h1;
+						reg_r_valid <= 1'b1;
+						reg_raddr  <= reg_raddr + 64'h8;
 					end
-				end else begin 
-					reg_rlen <= reg_rlen - 4'h1;
-					reg_r_valid <= 1'b1;
-					reg_raddr  <= reg_raddr + 64'h8;
 				end 
 			end 
 		endcase

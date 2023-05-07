@@ -3777,14 +3777,14 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
                         vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_valid = 0U;
                         vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_ar_ready = 1U;
                         __Vdly__riscv_soc__DOT__axi_ram__DOT__reg_r_state = 0U;
+                    } else {
+                        __Vdly__riscv_soc__DOT__axi_ram__DOT__reg_rlen 
+                            = (0xfU & ((IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_rlen) 
+                                       - (IData)(1U)));
+                        __Vdly__riscv_soc__DOT__axi_ram__DOT__reg_raddr 
+                            = (8ULL + vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_raddr);
+                        vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_valid = 1U;
                     }
-                } else {
-                    __Vdly__riscv_soc__DOT__axi_ram__DOT__reg_rlen 
-                        = (0xfU & ((IData)(vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_rlen) 
-                                   - (IData)(1U)));
-                    __Vdly__riscv_soc__DOT__axi_ram__DOT__reg_raddr 
-                        = (8ULL + vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_raddr);
-                    vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_r_valid = 1U;
                 }
             }
         } else if (vlSelf->riscv_soc__DOT__axi_ram__DOT__io_ram_bus_ar_fire) {
