@@ -77,6 +77,7 @@ always @(posedge clock)begin
 					reg_ready <= 1'b0;
 					reg_state <= 2'h1;
 					reg_temp_mul2 <= temp_mul2;
+					reg_mul1	<= mul_data1;
 					reg_exuType	<= io_exuType;
 				end 
 			end 
