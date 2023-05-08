@@ -1483,11 +1483,11 @@ VL_ATTR_COLD void Vriscv_soc___024root__trace_init_sub__TOP__0(Vriscv_soc___024r
     tracep->declBit(c+803,"is_sram0_write", false,-1);
     tracep->declBit(c+804,"is_sram1_write", false,-1);
     tracep->declQuad(c+805,"chose_bit", false,-1, 63,0);
-    tracep->declBit(c+807,"reg_temp_sram0_valid", false,-1);
-    tracep->declBit(c+808,"reg_temp_sram1_valid", false,-1);
-    tracep->declBus(c+809,"reg_temp_r_index", false,-1, 5,0);
-    tracep->declBit(c+810,"w_r_pass0_val", false,-1);
-    tracep->declBit(c+811,"w_r_pass1_val", false,-1);
+    tracep->declBit(c+807,"w_r_pass0_val", false,-1);
+    tracep->declBit(c+808,"w_r_pass1_val", false,-1);
+    tracep->declBit(c+809,"reg_temp_sram0_valid", false,-1);
+    tracep->declBit(c+810,"reg_temp_sram1_valid", false,-1);
+    tracep->declBus(c+811,"reg_temp_r_index", false,-1, 5,0);
     tracep->declBit(c+784,"reg_sram_r_ready", false,-1);
     tracep->pushNamePrefix("cache_stage0 ");
     tracep->declBit(c+874,"clock", false,-1);
@@ -3445,11 +3445,11 @@ VL_ATTR_COLD void Vriscv_soc___024root__trace_full_sub_0(Vriscv_soc___024root* v
     bufp->fullQData(oldp+805,((1ULL << (0x3fU & (IData)(
                                                         (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_cpu_addr 
                                                          >> 4U))))),64);
-    bufp->fullBit(oldp+807,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_temp_sram0_valid));
-    bufp->fullBit(oldp+808,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_temp_sram1_valid));
-    bufp->fullCData(oldp+809,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_temp_r_index),6);
-    bufp->fullBit(oldp+810,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass0_val));
-    bufp->fullBit(oldp+811,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass1_val));
+    bufp->fullBit(oldp+807,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass0_val));
+    bufp->fullBit(oldp+808,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__w_r_pass1_val));
+    bufp->fullBit(oldp+809,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_temp_sram0_valid));
+    bufp->fullBit(oldp+810,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_temp_sram1_valid));
+    bufp->fullCData(oldp+811,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__reg_temp_r_index),6);
     bufp->fullBit(oldp+812,(((~ (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache_io_flush)) 
                              & ((0ULL != (vlSelf->riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_0 
                                           >> 0x1fU)) 

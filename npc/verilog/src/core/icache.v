@@ -198,7 +198,16 @@ end
 wire io_cache_bus_r_fire = io_cache_bus_r_valid & io_cache_bus_r_ready;
 always @(posedge clock)begin 
 	if(reset)begin 
-
+		reg_cache_write <= 1'b0;
+		reg_chosen_tag	<= 1'b0;
+		reg_valid		<= 1'b0;
+		reg_cpu_addr	<= 64'h0;
+		reg_ready		<= 1'b1;
+		reg_bus_state	<= bus_idle;
+		reg_r_valid		<= 1'b0;
+		reg_rdata		<= 64'h0;
+		reg_r_raddr		<= 64'h0;
+		reg_cache_wdata <= 128'h0;
 	end else begin 
 		case (reg_bus_state)
 			bus_idle: begin 
@@ -376,20 +385,56 @@ module ICache(
   wire  is_sram0_write = is_w_sram & ~cache_stage2_io_sram_w_chose_tag; // @[icache.scala 345:46]
   wire  is_sram1_write = is_w_sram & cache_stage2_io_sram_w_chose_tag; // @[icache.scala 346:46]
   wire [63:0] chose_bit = 64'h1 << cache_stage2_io_sram_w_sram_addr; // @[icache.scala 348:39]
-  wire [63:0] _reg_sram0_valid_T = reg_sram0_valid | chose_bit; // @[icache.scala 354:52]
-  wire [63:0] _reg_sram1_valid_T = reg_sram1_valid | chose_bit; // @[icache.scala 362:52]
+
+  wire  _w_r_pass0_val_T = reg_temp_r_index == cache_stage2_io_sram_w_sram_addr; // @[icache.scala 432:63]
+  wire  w_r_pass0_val = is_sram0_write & _w_r_pass0_val_T; // @[icache.scala 432:44]
+  wire  w_r_pass1_val = is_sram1_write & _w_r_pass0_val_T; // @[icache.scala 433:44]
+
+
   reg  reg_temp_sram0_valid; // @[icache.scala 426:43]
   reg  reg_temp_sram1_valid; // @[icache.scala 427:43]
   reg [5:0] reg_temp_r_index; // @[icache.scala 428:43]
-  wire [63:0] _reg_temp_sram0_valid_T = reg_sram0_valid >> cache_stage1_io_tag_valid_index; // @[icache.scala 429:48]
-  wire [63:0] _reg_temp_sram1_valid_T = reg_sram1_valid >> cache_stage1_io_tag_valid_index; // @[icache.scala 430:48]
-  wire  _w_r_pass0_val_T = reg_temp_r_index == cache_stage2_io_sram_w_sram_addr; // @[icache.scala 432:63]
-  wire  w_r_pass0_val = is_sram0_write & reg_temp_r_index == cache_stage2_io_sram_w_sram_addr; // @[icache.scala 432:44]
-  wire  w_r_pass1_val = is_sram1_write & _w_r_pass0_val_T; // @[icache.scala 433:44]
+
   reg  reg_sram_r_ready; // @[icache.scala 438:39]
-  wire  _reg_sram_r_ready_T = is_w_sram ? 1'h0 : 1'h1; // @[icache.scala 442:40]
-  wire  _GEN_4 = cache_stage1_io_sram_valid ? _reg_sram_r_ready_T : reg_sram_r_ready; // @[icache.scala 441:30 442:34 438:39]
-  wire  _GEN_5 = io_flush | _GEN_4; // @[icache.scala 439:23 440:34]
+
+always @(posedge clock)begin
+	if(reset | io_is_fence_i)begin 
+		reg_sram0_valid <= 64'h0;
+	end else begin 
+		if(is_sram0_write) reg_sram0_valid <= reg_sram0_valid | chose_bit;
+		//else reg_sram0_valid <= reg_sram0_valid;
+	end 
+end 
+
+always @(posedge clock)begin 
+	if(reset | io_is_fence_i)begin 
+		reg_sram1_valid <= 64'h0;
+	end else begin 
+		if(is_sram1_write)reg_sram1_valid <= reg_sram1_valid | chose_bit;
+		//else reg_sram1_valid <= reg_sram1_valid;
+	end 
+end 
+
+always @(posedge clock)begin 
+	if(reset)begin 
+		reg_temp_sram0_valid 	<= 1'b0;
+		reg_temp_sram1_valid	<= 1'b0;
+		reg_temp_r_index		<= 6'h0;
+	end else begin 
+		//多了这个寄存器是为了保持与sram一致，因为sram的结果需要过一周期才能得到
+		reg_temp_sram0_valid	<= reg_sram0_valid[cache_stage1_io_tag_valid_index];
+		reg_temp_sram1_valid	<= reg_sram1_valid[cache_stage1_io_tag_valid_index];
+		reg_temp_r_index		<= cache_stage1_io_tag_valid_index;//r_index;
+	end 
+end 
+
+//val is_r_sram	= cache_stage1.io.sram.valid 
+//读写不能同时进行
+always @(posedge clock)begin 
+	if(reset | io_flush) reg_sram_r_ready <= 1'b1;
+	else if(cache_stage1_io_sram_valid) reg_sram_r_ready <= is_w_sram?1'b0:1'b1;
+end 
+
   ICache_stage0 cache_stage0 ( // @[icache.scala 329:34]
     .clock(cache_stage0_clock),
     .reset(cache_stage0_reset),
@@ -502,36 +547,36 @@ module ICache(
   assign cache_stage2_io_cache_bus_r_bits_rlast = io_cache_bus_r_bits_rlast; // @[icache.scala 455:22]
   assign cache_stage2_io_cache_bus_r_ready = io_cache_bus_r_ready; // @[icache.scala 455:22]
   assign cache_stage2_io_rdata_ready = io_cpu_rdata_ready; // @[icache.scala 456:22]
-  always @(posedge clock) begin
-    if (reset) begin // @[icache.scala 333:50]
-      reg_sram0_valid <= 64'h0; // @[icache.scala 333:50]
-    end else if (io_is_fence_i) begin // @[icache.scala 351:26]
-      reg_sram0_valid <= 64'h0; // @[icache.scala 352:33]
-    end else if (is_sram0_write) begin // @[icache.scala 353:35]
-      reg_sram0_valid <= _reg_sram0_valid_T; // @[icache.scala 354:33]
-    end
-    if (reset) begin // @[icache.scala 334:50]
-      reg_sram1_valid <= 64'h0; // @[icache.scala 334:50]
-    end else if (io_is_fence_i) begin // @[icache.scala 359:26]
-      reg_sram1_valid <= 64'h0; // @[icache.scala 360:33]
-    end else if (is_sram1_write) begin // @[icache.scala 361:35]
-      reg_sram1_valid <= _reg_sram1_valid_T; // @[icache.scala 362:33]
-    end
-    if (reset) begin // @[icache.scala 426:43]
-      reg_temp_sram0_valid <= 1'h0; // @[icache.scala 426:43]
-    end else begin
-      reg_temp_sram0_valid <= _reg_temp_sram0_valid_T[0]; // @[icache.scala 429:30]
-    end
-    if (reset) begin // @[icache.scala 427:43]
-      reg_temp_sram1_valid <= 1'h0; // @[icache.scala 427:43]
-    end else begin
-      reg_temp_sram1_valid <= _reg_temp_sram1_valid_T[0]; // @[icache.scala 430:30]
-    end
-    if (reset) begin // @[icache.scala 428:43]
-      reg_temp_r_index <= 6'h0; // @[icache.scala 428:43]
-    end else begin
-      reg_temp_r_index <= cache_stage1_io_tag_valid_index; // @[icache.scala 431:34]
-    end
-    reg_sram_r_ready <= reset | _GEN_5; // @[icache.scala 438:{39,39}]
-  end
+//   always @(posedge clock) begin
+//     if (reset) begin // @[icache.scala 333:50]
+//       reg_sram0_valid <= 64'h0; // @[icache.scala 333:50]
+//     end else if (io_is_fence_i) begin // @[icache.scala 351:26]
+//       reg_sram0_valid <= 64'h0; // @[icache.scala 352:33]
+//     end else if (is_sram0_write) begin // @[icache.scala 353:35]
+//       reg_sram0_valid <= _reg_sram0_valid_T; // @[icache.scala 354:33]
+//     end
+//     if (reset) begin // @[icache.scala 334:50]
+//       reg_sram1_valid <= 64'h0; // @[icache.scala 334:50]
+//     end else if (io_is_fence_i) begin // @[icache.scala 359:26]
+//       reg_sram1_valid <= 64'h0; // @[icache.scala 360:33]
+//     end else if (is_sram1_write) begin // @[icache.scala 361:35]
+//       reg_sram1_valid <= _reg_sram1_valid_T; // @[icache.scala 362:33]
+//     end
+//     if (reset) begin // @[icache.scala 426:43]
+//       reg_temp_sram0_valid <= 1'h0; // @[icache.scala 426:43]
+//     end else begin
+//       reg_temp_sram0_valid <= _reg_temp_sram0_valid_T[0]; // @[icache.scala 429:30]
+//     end
+//     if (reset) begin // @[icache.scala 427:43]
+//       reg_temp_sram1_valid <= 1'h0; // @[icache.scala 427:43]
+//     end else begin
+//       reg_temp_sram1_valid <= _reg_temp_sram1_valid_T[0]; // @[icache.scala 430:30]
+//     end
+//     if (reset) begin // @[icache.scala 428:43]
+//       reg_temp_r_index <= 6'h0; // @[icache.scala 428:43]
+//     end else begin
+//       reg_temp_r_index <= cache_stage1_io_tag_valid_index; // @[icache.scala 431:34]
+//     end
+//     reg_sram_r_ready <= reset | _GEN_5; // @[icache.scala 438:{39,39}]
+//   end
 endmodule
