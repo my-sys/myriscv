@@ -93,15 +93,16 @@ always @(posedge clock)begin
 	end else begin 
 		case (reg_state)
 			2'h0:begin 
-				reg_ready 	<= 1'b1;
-				//reg_state 	<= 2'h0;
-				reg_temp_mul2 <= 67'h0;
-				reg_mul1 	<= 130'h0;
-				reg_result  <= 130'h0;
-				reg_exuType <= 7'h0;
+				// reg_ready 	<= 1'b1;
+				// //reg_state 	<= 2'h0;
+				// reg_temp_mul2 <= 67'h0;
+				// reg_mul1 	<= 130'h0;
+				// reg_result  <= 130'h0;
+				// reg_exuType <= 7'h0;
 				reg_dest_is_w <= 1'b0;
-				//reg_cnt     <= 7'h0;
+				// //reg_cnt     <= 7'h0;
 				if(io_valid)begin 
+					reg_result  <= 130'h0;
 					reg_ready <= 1'b0;
 					reg_state <= 2'h1;
 					reg_temp_mul2 <= temp_mul2;
