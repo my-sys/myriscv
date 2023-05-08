@@ -40,6 +40,7 @@ module MUL(
 					(reg_temp_mul2[2:0] == 3'b100)?{pp_T[128:0],1'b0}:
 					(reg_temp_mul2[2:0] == 3'b101)?pp_T:
 					(reg_temp_mul2[2:0] == 3'b110)?pp_T:130'h0;
+  wire [129:0] result_T = reg_result + pp;
   reg [6:0] reg_cnt; // @[mu_exu.scala 65:50]
 
   wire  reg_not_h = reg_exuType[3:2] == 2'h0; // @[mu_exu.scala 108:45]
@@ -82,7 +83,7 @@ always @(posedge clock)begin
 				end 
 			end 
 			2'h1:begin   // mul_busy
-				reg_result 	<= reg_result + pp;
+				reg_result 	<= result_T;
 				reg_mul1	<= {reg_mul1[127:0],2'b0};
 				reg_temp_mul2	<= {2'b0,reg_temp_mul2[66:2]};
 				reg_cnt		<= reg_cnt + 7'h1;
@@ -90,7 +91,7 @@ always @(posedge clock)begin
 				//reg_ready  <= reg_ready;
 			end 
 			2'h2:begin 
-				reg_result		<= reg_result + pp;
+				reg_result		<= result_T;
 				reg_ready		<= 1'b1;
 				reg_state		<= 2'h0;
 				reg_cnt			<= 7'h0;

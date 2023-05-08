@@ -292,7 +292,7 @@ class Vriscv_soc___024root final : public VerilatedModule {
         VlWide<3>/*66:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_temp_mul2;
         VlWide<5>/*129:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_mul1;
         VlWide<5>/*129:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_result;
-        VlWide<5>/*129:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__pp;
+        VlWide<5>/*129:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__result_T;
         VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT____VdfgTmp_h72996d3e__0;
         IData/*31:0*/ riscv_soc__DOT__core__DOT__decode__DOT__reg_imm;
         IData/*31:0*/ riscv_soc__DOT__core__DOT__decode__DOT__reg_inst;
