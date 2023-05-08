@@ -1,3 +1,63 @@
+// object ALUType{
+// //第2位表示立即数，1表示没有立即数，0表示有立即数。尽量与指令对应减少复杂度
+// //第1位表示是否为32位操作，1表示是32位操作，0表示不是32位操作。
+// 	val alu_add 	= "b000_1_0".U 
+// 	val alu_addi 	= "b000_0_0".U 
+// 	val alu_addiw 	= "b000_0_1".U 
+// 	val alu_addw 	= "b000_1_1".U 
+
+// 	val alu_slt 	= "b010_1_0".U 
+// 	val alu_slti 	= "b010_0_0".U 
+
+// 	val alu_sltiu   = "b011_0_0".U 
+// 	val alu_sltu 	= "b011_1_0".U 
+
+// 	val alu_and 	= "b111_1_0".U 
+// 	val alu_andi 	= "b111_0_0".U 
+
+// 	val alu_or 		= "b110_1_0".U 
+// 	val alu_ori 	= "b110_0_0".U 
+
+// 	val alu_xor 	= "b100_1_0".U 
+// 	val alu_xori 	= "b100_0_0".U 
+
+// 	val alu_sll 	= "b001_1_0".U 
+// 	val alu_slli 	= "b001_0_0".U 
+// 	val alu_slliw 	= "b001_0_1".U 
+// 	val alu_sllw 	= "b001_1_1".U 
+
+// 	val alu_srl 	= "b101_1_0".U 
+// 	val alu_srli 	= "b101_0_0".U 
+// 	val alu_srliw 	= "b101_0_1".U 
+// 	val alu_srlw 	= "b101_1_1".U 
+
+// 	val alu_sub 	= "b1_000_1_0".U
+// 	val alu_subw 	= "b1_000_1_1".U 
+	
+// 	val alu_sra 	= "b1_101_1_0".U 
+// 	val alu_srai 	= "b1_101_0_0".U 
+// 	val alu_sraiw 	= "b1_101_0_1".U 
+// 	val alu_sraw 	= "b1_101_1_1".U 
+
+// 	val alu_lui 	= "b00_000_0_0".U 
+// 	val alu_auipc 	= "b10_000_0_0".U 
+// }
+// object BRUType{
+// //这里的低两位没有特殊含义，尽量与指令集的形式对应，这会有助于，解码阶段降低复杂度？
+// //上面一行的理解少考虑分支指令借用alu资源的情况，
+// //第2行对分支指令如何借用alu资源问题的考虑有所欠缺，比较用alu加法器，那地址计算呢？
+// 	val bru_beq 	= "b01_000_1_0".U  //0
+// 	val bru_bne 	= "b01_001_1_0".U  //1
+// 	val bru_blt		= "b01_100_1_0".U  //4
+// 	val bru_bltu 	= "b01_110_1_0".U //6
+// 	val bru_bge 	= "b01_101_1_0".U  //5
+// 	val bru_bgeu 	= "b01_111_1_0".U  //7
+// //这个要与其他分支指令不一样，暂时如下，不过这个值，是不是在取指令阶段的就已经确定了。指令预测还没有装上，就按这个先。
+// 	val bru_jal 	= "b10_011_1_0".U  //3
+// 	val bru_jalr 	= "b10_010_1_0".U  //2
+// }
+
+////本代码由chisel代码而来，只是为了加快仿真速度，考核而设计。正规的代码是chisel代码
 module ALU_EXU(
   input         io_valid,
   input         io_is_pre,
@@ -18,82 +78,71 @@ module ALU_EXU(
   output        io_valid_next_pc,
   output [63:0] io_next_pc
 );
-  wire  is_32 = io_exuType[0]; // @[alu_exu.scala 89:31]
-  wire [31:0] _op_data1_T_2 = io_op_data1[31] ? 32'hffffffff : 32'h0; // @[Bitwise.scala 77:12]
-  wire [63:0] _op_data1_T_4 = {_op_data1_T_2,io_op_data1[31:0]}; // @[Cat.scala 33:92]
-  wire [63:0] op_data1 = is_32 ? _op_data1_T_4 : io_op_data1; // @[alu_exu.scala 90:27]
-  wire [31:0] _op_data2_T_2 = io_op_data2[31] ? 32'hffffffff : 32'h0; // @[Bitwise.scala 77:12]
-  wire [63:0] _op_data2_T_4 = {_op_data2_T_2,io_op_data2[31:0]}; // @[Cat.scala 33:92]
-  wire [63:0] op_data2 = is_32 ? _op_data2_T_4 : io_op_data2; // @[alu_exu.scala 91:27]
-  wire [31:0] _op_imm_T_2 = io_op_imm[31] ? 32'hffffffff : 32'h0; // @[Bitwise.scala 77:12]
-  wire [63:0] op_imm = {_op_imm_T_2,io_op_imm}; // @[Cat.scala 33:92]
-  wire  rs2_is_imm = ~io_exuType[1]; // @[alu_exu.scala 95:27]
-  wire [63:0] rs2_data = rs2_is_imm ? op_imm : op_data2; // @[alu_exu.scala 96:27]
-  wire  rs1_is_pc = io_exuType[6]; // @[alu_exu.scala 97:36]
-  wire  _is_sub_T_2 = io_exuType[4:2] == 3'h2; // @[alu_exu.scala 98:58]
-  wire  is_sra = io_exuType[5] | io_exuType[4:2] == 3'h2 | io_exuType[4:2] == 3'h3; // @[alu_exu.scala 98:71]
-  wire [63:0] rs1_data = rs1_is_pc ? io_op_pc : op_data1; // @[alu_exu.scala 100:27]
-  wire [63:0] _temp_rs2_data_T = rs2_data ^ 64'hffffffffffffffff; // @[alu_exu.scala 101:50]
-  wire [63:0] temp_rs2_data = is_sra ? _temp_rs2_data_T : rs2_data; // @[alu_exu.scala 101:32]
-  wire [64:0] _add_sub_result_T = {1'h0,rs1_data}; // @[Cat.scala 33:92]
-  wire [64:0] _GEN_1 = {{1'd0}, temp_rs2_data}; // @[alu_exu.scala 102:53]
-  wire [64:0] _add_sub_result_T_2 = _add_sub_result_T + _GEN_1; // @[alu_exu.scala 102:53]
-  wire [64:0] _GEN_2 = {{64'd0}, is_sra}; // @[alu_exu.scala 102:69]
-  wire [64:0] add_sub_result = _add_sub_result_T_2 + _GEN_2; // @[alu_exu.scala 102:69]
-  wire  u_rs1_l_rs2 = ~add_sub_result[64]; // @[alu_exu.scala 105:23]
-  wire  s_rs1_l_rs2 = rs1_data[63] ^ rs2_data[63] ? rs1_data[63] : add_sub_result[63]; // @[alu_exu.scala 107:26]
-  wire [5:0] shift_rs2_data = is_32 ? {{1'd0}, rs2_data[4:0]} : rs2_data[5:0]; // @[alu_exu.scala 110:33]
-  wire [126:0] _GEN_0 = {{63'd0}, op_data1}; // @[alu_exu.scala 111:33]
-  wire [126:0] sll_temp = _GEN_0 << shift_rs2_data; // @[alu_exu.scala 111:33]
-  wire [63:0] _srl_temp_T_2 = {32'h0,op_data1[31:0]}; // @[Cat.scala 33:92]
-  wire [63:0] _srl_temp_T_3 = is_32 ? _srl_temp_T_2 : op_data1; // @[alu_exu.scala 112:27]
-  wire [63:0] srl_temp = _srl_temp_T_3 >> shift_rs2_data; // @[alu_exu.scala 112:82]
-  wire [63:0] _sra_temp_T = is_32 ? _op_data1_T_4 : io_op_data1; // @[alu_exu.scala 113:34]
-  wire [63:0] sra_temp = $signed(_sra_temp_T) >>> shift_rs2_data; // @[alu_exu.scala 113:60]
-  wire [63:0] sr_temp = is_sra ? sra_temp : srl_temp; // @[alu_exu.scala 115:27]
-  wire [63:0] _result_data_T_1 = {63'h0,s_rs1_l_rs2}; // @[Cat.scala 33:92]
-  wire [63:0] _result_data_T_2 = {63'h0,u_rs1_l_rs2}; // @[Cat.scala 33:92]
-  wire [63:0] _result_data_T_3 = op_data1 & rs2_data; // @[alu_exu.scala 122:54]
-  wire [63:0] _result_data_T_4 = op_data1 | rs2_data; // @[alu_exu.scala 123:62]
-  wire [63:0] _result_data_T_5 = op_data1 ^ rs2_data; // @[alu_exu.scala 124:54]
-  wire [63:0] _result_data_T_9 = 3'h2 == io_exuType[4:2] ? _result_data_T_1 : add_sub_result[63:0]; // @[Mux.scala 81:58]
-  wire [63:0] _result_data_T_11 = 3'h3 == io_exuType[4:2] ? _result_data_T_2 : _result_data_T_9; // @[Mux.scala 81:58]
-  wire [63:0] _result_data_T_13 = 3'h7 == io_exuType[4:2] ? _result_data_T_3 : _result_data_T_11; // @[Mux.scala 81:58]
-  wire [63:0] _result_data_T_15 = 3'h6 == io_exuType[4:2] ? _result_data_T_4 : _result_data_T_13; // @[Mux.scala 81:58]
-  wire [63:0] _result_data_T_17 = 3'h4 == io_exuType[4:2] ? _result_data_T_5 : _result_data_T_15; // @[Mux.scala 81:58]
-  wire [63:0] _result_data_T_19 = 3'h1 == io_exuType[4:2] ? sll_temp[63:0] : _result_data_T_17; // @[Mux.scala 81:58]
-  wire [63:0] result_data = 3'h5 == io_exuType[4:2] ? sr_temp : _result_data_T_19; // @[Mux.scala 81:58]
-  wire  is_pre = io_is_pre & io_valid; // @[alu_exu.scala 130:45]
-  wire  is_br = io_opType == 3'h1; // @[alu_exu.scala 137:52]
-  wire  is_eq = op_data1 == op_data2; // @[alu_exu.scala 145:45]
-  wire [63:0] temp_1 = _is_sub_T_2 ? io_op_data1 : io_op_pc; // @[alu_exu.scala 146:34]
-  wire [63:0] _add_pc_T_1 = temp_1 + op_imm; // @[alu_exu.scala 147:50]
-  wire [64:0] add_pc = {1'h1,_add_pc_T_1}; // @[Cat.scala 33:92]
-  wire [63:0] op_pc_4 = io_op_pc + 64'h4; // @[alu_exu.scala 148:37]
-  wire [64:0] _temp_result_pc_T = is_eq ? add_pc : {{1'd0}, op_pc_4}; // @[alu_exu.scala 151:63]
-  wire [64:0] _temp_result_pc_T_1 = is_eq ? {{1'd0}, op_pc_4} : add_pc; // @[alu_exu.scala 152:63]
-  wire [64:0] _temp_result_pc_T_2 = s_rs1_l_rs2 ? add_pc : {{1'd0}, op_pc_4}; // @[alu_exu.scala 153:63]
-  wire [64:0] _temp_result_pc_T_3 = u_rs1_l_rs2 ? add_pc : {{1'd0}, op_pc_4}; // @[alu_exu.scala 154:63]
-  wire [64:0] _temp_result_pc_T_4 = s_rs1_l_rs2 ? {{1'd0}, op_pc_4} : add_pc; // @[alu_exu.scala 155:63]
-  wire [64:0] _temp_result_pc_T_5 = u_rs1_l_rs2 ? {{1'd0}, op_pc_4} : add_pc; // @[alu_exu.scala 156:63]
-  wire [64:0] _temp_result_pc_T_7 = {add_pc[64:1],1'h0}; // @[Cat.scala 33:92]
-  wire [64:0] _temp_result_pc_T_9 = 3'h1 == io_exuType[4:2] ? _temp_result_pc_T_1 : _temp_result_pc_T; // @[Mux.scala 81:58]
-  wire [64:0] _temp_result_pc_T_11 = 3'h4 == io_exuType[4:2] ? _temp_result_pc_T_2 : _temp_result_pc_T_9; // @[Mux.scala 81:58]
-  wire [64:0] _temp_result_pc_T_13 = 3'h6 == io_exuType[4:2] ? _temp_result_pc_T_3 : _temp_result_pc_T_11; // @[Mux.scala 81:58]
-  wire [64:0] _temp_result_pc_T_15 = 3'h5 == io_exuType[4:2] ? _temp_result_pc_T_4 : _temp_result_pc_T_13; // @[Mux.scala 81:58]
-  wire [64:0] _temp_result_pc_T_17 = 3'h7 == io_exuType[4:2] ? _temp_result_pc_T_5 : _temp_result_pc_T_15; // @[Mux.scala 81:58]
-  wire [64:0] _temp_result_pc_T_19 = 3'h3 == io_exuType[4:2] ? add_pc : _temp_result_pc_T_17; // @[Mux.scala 81:58]
-  wire [64:0] _temp_result_pc_T_21 = 3'h2 == io_exuType[4:2] ? _temp_result_pc_T_7 : _temp_result_pc_T_19; // @[Mux.scala 81:58]
-  wire [64:0] temp_result_pc = is_br ? _temp_result_pc_T_21 : 65'h0; // @[alu_exu.scala 149:28 150:40]
-  wire [63:0] dst_data = is_br ? op_pc_4 : result_data; // @[alu_exu.scala 163:38]
-  wire [63:0] next_pc = temp_result_pc[63:0]; // @[alu_exu.scala 164:49]
-  wire  valid_next_pc = temp_result_pc[64]; // @[alu_exu.scala 165:49]
-  wire  br_valid = is_br & io_valid; // @[alu_exu.scala 167:41]
-  wire [31:0] _io_dst_data_T_2 = dst_data[31] ? 32'hffffffff : 32'h0; // @[Bitwise.scala 77:12]
-  wire [63:0] _io_dst_data_T_4 = {_io_dst_data_T_2,dst_data[31:0]}; // @[Cat.scala 33:92]
-  wire [63:0] _io_dst_data_T_5 = is_32 ? _io_dst_data_T_4 : dst_data; // @[alu_exu.scala 168:60]
-  wire  flush = is_pre & valid_next_pc & next_pc != io_get_pre_info_pre_next_pc | valid_next_pc & ~is_pre | is_pre & ~
-    valid_next_pc; // @[alu_exu.scala 169:109]
+  //为啥可以采取这种粗暴的扩展方式，因为进行32位计算的都是有符号数。
+  wire is_32 = io_exuType[0];
+  wire[31:0] op_data1_T = io_op_data1[31]?32'hffff_ffff:32'h0;
+  wire[31:0] op_data2_T = io_op_data2[31]?32'hffff_ffff:32'h0;
+  wire [63:0] op_data1 = is_32?{op_data1_T,io_op_data1[31:0]}:io_op_data1;
+  wire [63:0] op_data2 = is_32?{op_data2_T,io_op_data2[31:0]}:io_op_data2;
+  wire [31:0] op_imm_T = io_op_imm[31]?32'hffff_ffff:32'h0;
+  wire [63:0] op_imm = {op_imm_T,io_op_imm[31:0]};
+
+  wire rs2_is_imm =(!io_exuType[1]);
+  wire[63:0] rs2_data = rs2_is_imm?op_imm:op_data2;
+  wire rs1_is_pc = io_exuType[6];
+  wire is_sub = (io_exuType[5])|(io_exuType[4:2] == 3'b010)|(io_exuType[4:2] == 3'b011);
+//val rs1_is_0  = (io.exuType(6,5) === "b10".U)//重命名阶段，就需要分清哪些需要寄存器，哪些不需要寄存器。不需要寄存器的，该值就是0,这是仲裁与唤醒逻辑所需要的。
+  wire[63:0] rs1_data = rs1_is_pc ?io_op_pc:op_data1;
+  wire[63:0] temp_rs2_data = is_sub ? (rs2_data ^ 64'hffff_ffff_ffff_ffff):rs2_data;
+  wire[64:0] add_sub_result = {1'b0,rs1_data} + {1'b0,temp_rs2_data} + {64'h0,is_sub};
+
+  //  unsigend rs1 < rs2   must check this flag
+//说明,无符号当做65位计算，所以第二个减时为负数，第65位应该为1。 结果为负数，则小于，否则是大于等于。
+//我计算中并没有将第65位置1，所以结果是刚好相反的。(同号相减不会存在溢出)
+  wire u_rs1_l_rs2 = !add_sub_result[64];
+  //  unsigend rs1 < rs2   must check this flag 
+  ////符号不同时只需要判断rs1_data 的正负，如果同号只需要判断结果的正负
+  wire s_rs1_l_rs2 = (rs1_data[63]^rs2_data[63])?rs1_data[63]:add_sub_result[63];
+
+  wire [5:0]shift_rs2_data = is_32?{1'b0,rs2_data[4:0]}:rs2_data[5:0];
+  wire [63:0] sll_temp = op_data1 << shift_rs2_data;
+  wire [63:0] srl_temp = (is_32?{32'h0,op_data1[31:0]}:op_data1)>>shift_rs2_data;
+  wire [63:0] sra_temp = $signed(op_data1) >>> shift_rs2_data;
+  wire is_sra = is_sub;
+  wire [63:0] sr_temp = is_sra?sra_temp:srl_temp;
+  wire [2:0]func = io_exuType[4:2];
+  wire [63:0] result_data = (func == 3'b000)?add_sub_result[63:0]: //ALUType.alu_add(4,2)
+							(func == 3'b010)?{63'h0,s_rs1_l_rs2}:  //ALUType.alu_slt(4,2)
+							(func == 3'b011)?{63'h0,u_rs1_l_rs2}:  //ALUType.alu_sltu(4,2)
+							(func == 3'b111)?(op_data1 & rs2_data): //ALUType.alu_and(4,2)
+							(func == 3'b110)?(op_data1 | rs2_data): //ALUType.alu_or(4,2)
+							(func == 3'b100)?(op_data1 ^ rs2_data): //ALUType.alu_xor(4,2)
+							(func == 3'b001)?sll_temp[63:0]:			//ALUType.alu_sll(4,2)
+							(func == 3'b101)?sr_temp[63:0]:64'h0;		//ALUType.alu_srl(4,2)
+
+  wire is_pre = io_is_pre & io_valid;
+  wire is_br = (io_opType[2:0] == 3'b001);// Op_type.op_bru op_bru = 3'b001
+  wire is_eq = (op_data1 == op_data2);
+  wire [63:0]temp_1 = (func == 3'b010)? io_op_data1:io_op_pc;// Mux(func === BRUType.bru_jalr(4,2),io.op_data1,op_pc)
+  wire [64:0] add_pc = {1'b1,temp_1 + op_imm};
+  wire [64:0]op_pc_4 = {1'b0,io_op_pc + 64'h4};
+  wire[64:0] temp_result_pc = is_br?((func == 3'b000)?(is_eq? add_pc:op_pc_4):  //BRUType.bru_beq(4,2)
+  									(func == 3'b001)?(is_eq? op_pc_4:add_pc):   //BRUType.bru_bne(4,2)
+									(func == 3'b100)?(s_rs1_l_rs2? add_pc:op_pc_4):   //BRUType.bru_blt(4,2)
+									(func == 3'b110)?(u_rs1_l_rs2? add_pc:op_pc_4):  //BRUType.bru_bltu(4,2)
+									(func == 3'b101)?(s_rs1_l_rs2? op_pc_4:add_pc):  //BRUType.bru_bge(4,2)
+									(func == 3'b111)?(u_rs1_l_rs2? op_pc_4:add_pc):  //BRUType.bru_bgeu(4,2)
+									(func == 3'b011)?(add_pc):  //BRUType.bru_jal(4,2)
+									(func == 3'b010)?({add_pc[64:1],1'b0}):65'h0 //BRUType.bru_jalr(4,2)
+									):65'h0;
+
+  wire [63:0] dst_data = is_br?op_pc_4[63:0]:result_data;
+  wire [63:0] next_pc  = temp_result_pc[63:0];
+  wire valid_next_pc   = temp_result_pc[64];
+  wire br_valid = is_br & io_valid;
+  wire[63:0] _io_dst_data_T_5 = is_32?(dst_data[31]?{32'hffff_ffff,dst_data[31:0]}:{32'h0,dst_data[31:0]}):dst_data;
+  wire flush = (is_pre & valid_next_pc &(next_pc != io_get_pre_info_pre_next_pc)) | (valid_next_pc & (!is_pre)) | (is_pre&(!valid_next_pc));
+
   assign io_br_info_valid = is_br & io_valid; // @[alu_exu.scala 167:41]
   assign io_br_info_mispredict = br_valid & flush; // @[alu_exu.scala 174:47]
   assign io_br_info_br_pc = br_valid ? io_op_pc : 64'h0; // @[alu_exu.scala 175:55]

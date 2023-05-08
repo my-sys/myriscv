@@ -1,3 +1,4 @@
+//本代码由chisel代码而来，只是为了加快仿真速度，考核而设计。正规的代码是chisel代码
 module IBuf(
   input         clock,
   input         reset,

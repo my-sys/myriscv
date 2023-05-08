@@ -28,13 +28,13 @@ extern "C" {
     extern void set_difftest_inst_ptr(const svOpenArrayHandle a);
     // DPI import at /home/xingk/ysyx-workbench/npc/verilog/src/core/commit.v:168:30
     extern void set_difftest_irq(const svOpenArrayHandle a);
-    // DPI import at /home/xingk/ysyx-workbench/npc/verilog/src/core/csr_reg.v:126:30
+    // DPI import at /home/xingk/ysyx-workbench/npc/verilog/src/core/csr_reg.v:144:30
     extern void set_difftest_mcause_ptr(const svOpenArrayHandle a);
-    // DPI import at /home/xingk/ysyx-workbench/npc/verilog/src/core/csr_reg.v:128:30
+    // DPI import at /home/xingk/ysyx-workbench/npc/verilog/src/core/csr_reg.v:146:30
     extern void set_difftest_mepc_ptr(const svOpenArrayHandle a);
-    // DPI import at /home/xingk/ysyx-workbench/npc/verilog/src/core/csr_reg.v:125:30
+    // DPI import at /home/xingk/ysyx-workbench/npc/verilog/src/core/csr_reg.v:143:30
     extern void set_difftest_mstatus_ptr(const svOpenArrayHandle a);
-    // DPI import at /home/xingk/ysyx-workbench/npc/verilog/src/core/csr_reg.v:127:30
+    // DPI import at /home/xingk/ysyx-workbench/npc/verilog/src/core/csr_reg.v:145:30
     extern void set_difftest_mtvec_ptr(const svOpenArrayHandle a);
     // DPI import at /home/xingk/ysyx-workbench/npc/verilog/src/core/commit.v:165:30
     extern void set_difftest_pc_ptr(const svOpenArrayHandle a);

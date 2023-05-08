@@ -1,3 +1,21 @@
+	// val mvendorid	= "hf11".U
+	// val marchid		= "hf12".U 
+	// val mimpid		= "hf13".U 
+	// val mhartid		= "hf14".U 
+	// val mstatus		= "h300".U 
+	// val misa		= "h301".U 
+	// val medeleg		= "h302".U 
+	// val mideleg		= "h303".U 
+	// val mie			= "h304".U 
+	// val mtvec		= "h305".U 
+	// val mcounteren	= "h306".U 
+	// val mscratch	= "h340".U 
+	// val mepc		= "h341".U 
+	// val mcause		= "h342".U 
+	// val mtval		= "h343".U 
+	// val mip			= "h344".U 
+	// val mcycle		= "hB00".U 
+	// val minstret	= "hB02".U
 module CsrRegCtrl(
   input         clock,
   input         reset,
