@@ -86,6 +86,9 @@ wire  io_ram_bus_ar_fire = io_ram_bus_ar_ready & io_ram_bus_ar_valid;
 wire  io_ram_bus_r_fire = io_ram_bus_r_valid; //io_ram_bus_r_ready & io_ram_bus_r_valid, 1'b1 & io_ram_bus_r_valid;
 wire  io_ram_bus_aw_fire  = io_ram_bus_aw_ready & io_ram_bus_aw_valid;
 wire  io_ram_bus_w_fire   = io_ram_bus_w_ready & io_ram_bus_w_valid;
+
+//在设计中是读地址一直有效的，当ar_valid有效时，其读地址也一同送入进行取值了，
+//因此reg_addr第一次更新是地址+8，reg_len == 0 说明本次读传输结束
 always @(posedge clock)begin 
 	if(reset)begin 
 		reg_ar_ready <= 1'b1;
@@ -122,6 +125,7 @@ always @(posedge clock)begin
 	end
 end 
 
+//写不同，写必须判断写有效时才能更新写标志，因此慢一拍，地址更新策略也有所不同
 always @(posedge clock)begin
 	if(reset)begin 
 		reg_w_addr <= 64'h0;

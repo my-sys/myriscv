@@ -1,3 +1,4 @@
+//本代码由chisel代码而来，只是为了加快仿真速度，考核而设计。正规的代码是chisel代码
 module ICache_stage0(
   input         clock,
   input         reset,
@@ -9,6 +10,11 @@ module ICache_stage0(
   output        io_addr_valid,
   output [63:0] io_addr_bits_addr
 );
+//ICache_Stage0 阶段主要保存valid信号以及取指地址。
+//这两个信号必须在ready有效的时候才更新
+//如果存在flush则本次valid信号为无效，为何不冲刷寄存器，有如下考虑
+//fetch阶段冲刷信号会一直保留直到接收到值，并舍弃接收到的值。
+//当ready从无效变为有效时，冲刷信号都还在。
   reg  reg_valid; // @[icache.scala 56:32]
   reg [63:0] reg_addr; // @[icache.scala 57:32]
   wire  valid = io_cpu_addr_valid & ~io_flush; // @[icache.scala 59:40]
@@ -55,7 +61,9 @@ module ICache_stage1(
   output         io_cache_stage1_bits_sram_1_tag_valid,
   output [63:0]  io_cache_stage1_bits_sram_1_rdata
 );
+//valid 由!flush和 输入valid构成
   wire  valid = io_cpu_addr_valid & ~io_flush; // @[icache.scala 79:40]
+//下一阶段准备好接收，并且本阶段已经取得sram值置ready
   wire  ready = io_sram_ready & io_cache_stage1_ready; // @[icache.scala 80:49]
   reg [63:0] reg_cpu_addr; // @[icache.scala 84:35]
   reg  reg_valid; // @[icache.scala 85:35]
@@ -67,6 +75,7 @@ module ICache_stage1(
   assign io_cpu_addr_ready = io_sram_ready & io_cache_stage1_ready; // @[icache.scala 80:49]
   assign io_tag_valid_index = ready ? io_cpu_addr_bits_addr[9:4] : reg_index; // @[icache.scala 94:24]
   assign io_sram_valid = io_cpu_addr_valid & ~io_flush; // @[icache.scala 79:40]
+//为何有些信号没有经过本阶段的reg,因为本阶段请求读取sram,然后接收到sram。sram读取值只要本阶段地址不变就不会改变
   assign io_cache_stage1_valid = reg_valid & io_sram_ready; // @[icache.scala 116:70]
   assign io_cache_stage1_bits_cpu_addr = reg_cpu_addr; // @[icache.scala 117:49]
   assign io_cache_stage1_bits_sram_0_hit = reg_tag == tag_0; // @[icache.scala 104:36]
@@ -75,6 +84,7 @@ module ICache_stage1(
   assign io_cache_stage1_bits_sram_1_hit = reg_tag == tag_1; // @[icache.scala 105:36]
   assign io_cache_stage1_bits_sram_1_tag_valid = io_tag_valid_tag_valid_1; // @[icache.scala 123:49]
   assign io_cache_stage1_bits_sram_1_rdata = reg_offset[3] ? io_sram_sram_data_1[127:64] : io_sram_sram_data_1[63:0]; // @[icache.scala 109:30]
+//valid信号和地址信号需要存储
   always @(posedge clock) begin
     if (reset) begin // @[icache.scala 84:35]
       reg_cpu_addr <= 64'h0; // @[icache.scala 84:35]
@@ -96,7 +106,7 @@ module ICache_stage2(
   output         io_cache_stage1_ready,
   input          io_cache_stage1_valid,
   input  [63:0]  io_cache_stage1_bits_cpu_addr,
-  input          io_cache_stage1_bits_sram_0_hit,
+  input          io_cache_stage1_bits_sram_0_hit,  //hit_0
   input          io_cache_stage1_bits_sram_0_tag_valid,
   input  [63:0]  io_cache_stage1_bits_sram_0_rdata,
   input          io_cache_stage1_bits_sram_1_hit,
@@ -118,64 +128,149 @@ module ICache_stage2(
   output [63:0]  io_rdata_bits_pc
 );
 
-  wire [5:0] index = io_cache_stage1_bits_cpu_addr[9:4]; // @[icache.scala 145:64]
-  wire  valid = io_cache_stage1_valid & ~io_flush & io_rdata_ready; // @[icache.scala 146:70]
-  reg  reg_chosen_tag; // @[icache.scala 153:37]
-  reg [63:0] reg_rdata; // @[icache.scala 154:34]
-  reg  reg_valid; // @[icache.scala 155:34]
-  reg  reg_ready; // @[icache.scala 156:34]
-  wire [63:0] temp_addr = {io_cache_stage1_bits_cpu_addr[63:4],4'h0}; // @[Cat.scala 33:92]
-  reg [63:0] reg_r_raddr; // @[icache.scala 160:34]
-  reg  reg_r_valid; // @[icache.scala 161:34]
-  reg [127:0] reg_cache_wdata; // @[icache.scala 164:38]
-  reg  reg_cache_write; // @[icache.scala 165:42]
-  reg [63:0] reg_cpu_addr; // @[icache.scala 166:42]
-  wire [53:0] reg_tag = reg_cpu_addr[63:10]; // @[icache.scala 167:39]
-  wire [3:0] reg_offset = reg_cpu_addr[3:0]; // @[icache.scala 169:39]
-  reg [63:0] reg_lru_1; // @[icache.scala 173:58]
-  wire [63:0] _LRU_1_T = reg_lru_1 >> index; // @[icache.scala 175:36]
-  wire  LRU_1 = _LRU_1_T[0]; // @[icache.scala 175:36]
-  wire [63:0] chose_bit = 64'h1 << index; // @[icache.scala 176:29]
-  wire [63:0] neg_chose_bit = ~chose_bit; // @[icache.scala 177:29]
-  reg [1:0] reg_bus_state; // @[icache.scala 180:36]
-  wire [63:0] _reg_lru_1_T = reg_lru_1 | chose_bit; // @[icache.scala 185:48]
-  wire [63:0] _reg_lru_1_T_1 = reg_lru_1 & neg_chose_bit; // @[icache.scala 188:48]
-  wire  _T_2 = io_cache_stage1_bits_sram_0_tag_valid & io_cache_stage1_bits_sram_1_tag_valid; // @[icache.scala 190:42]
-  wire [63:0] _reg_lru_1_T_4 = LRU_1 ? _reg_lru_1_T_1 : _reg_lru_1_T; // @[icache.scala 192:49]
-  wire [63:0] _reg_lru_1_T_7 = io_cache_stage1_bits_sram_0_tag_valid ? _reg_lru_1_T_1 : _reg_lru_1_T; // @[icache.scala 195:49]
-  wire [63:0] _GEN_1 = io_cache_stage1_bits_sram_0_tag_valid & io_cache_stage1_bits_sram_1_tag_valid ? _reg_lru_1_T_4 :
-    _reg_lru_1_T_7; // @[icache.scala 190:56 192:43 195:43]
-  wire  _reg_chosen_tag_T = io_cache_stage1_bits_sram_0_hit ? 1'h0 : 1'h1; // @[icache.scala 218:55]
-  wire  _T_7 = io_cache_stage1_bits_sram_0_hit & io_cache_stage1_bits_sram_0_tag_valid | io_cache_stage1_bits_sram_1_hit
-     & io_cache_stage1_bits_sram_1_tag_valid; // @[icache.scala 219:60]
-  wire [63:0] _reg_rdata_T = io_cache_stage1_bits_sram_0_hit ? io_cache_stage1_bits_sram_0_rdata :
-    io_cache_stage1_bits_sram_1_rdata; // @[icache.scala 222:79]
-  wire [63:0] _GEN_10 = io_cache_stage1_bits_sram_0_hit & io_cache_stage1_bits_sram_0_tag_valid |
-    io_cache_stage1_bits_sram_1_hit & io_cache_stage1_bits_sram_1_tag_valid ? _reg_rdata_T : reg_rdata; // @[icache.scala 154:34 219:84 222:73]
-  wire [1:0] _GEN_12 = io_cache_stage1_bits_sram_0_hit & io_cache_stage1_bits_sram_0_tag_valid |
-    io_cache_stage1_bits_sram_1_hit & io_cache_stage1_bits_sram_1_tag_valid ? 2'h0 : 2'h1; // @[icache.scala 219:84 225:65 232:65]
-  wire [63:0] _GEN_13 = io_cache_stage1_bits_sram_0_hit & io_cache_stage1_bits_sram_0_tag_valid |
-    io_cache_stage1_bits_sram_1_hit & io_cache_stage1_bits_sram_1_tag_valid ? reg_r_raddr : temp_addr; // @[icache.scala 160:34 219:84 230:65]
-  wire  _GEN_14 = io_cache_stage1_bits_sram_0_hit & io_cache_stage1_bits_sram_0_tag_valid |
-    io_cache_stage1_bits_sram_1_hit & io_cache_stage1_bits_sram_1_tag_valid ? 1'h0 : 1'h1; // @[icache.scala 213:49 219:84 231:65]
-  wire  _GEN_15 = _T_2 ? LRU_1 : io_cache_stage1_bits_sram_0_tag_valid; // @[icache.scala 237:64 238:65 244:65]
-  wire  _GEN_19 = io_cache_stage1_bits_sram_0_hit | io_cache_stage1_bits_sram_1_hit ? _reg_chosen_tag_T : _GEN_15; // @[icache.scala 215:44 218:49]
-  wire  _GEN_21 = (io_cache_stage1_bits_sram_0_hit | io_cache_stage1_bits_sram_1_hit) & _T_7; // @[icache.scala 215:44 235:65]
-  wire  _GEN_24 = io_cache_stage1_bits_sram_0_hit | io_cache_stage1_bits_sram_1_hit ? _GEN_14 : 1'h1; // @[icache.scala 215:44]
-  wire  _GEN_25 = valid & _GEN_19; // @[icache.scala 214:36 204:41]
-  wire  _GEN_28 = valid ? _GEN_21 : 1'h1; // @[icache.scala 214:36 211:49]
-  wire  _GEN_31 = valid & _GEN_24; // @[icache.scala 214:36 213:49]
-  wire  _T_10 = io_cache_bus_r_valid & io_cache_bus_r_ready; // @[simplebus.scala 28:40]
-  wire [63:0] _reg_rdata_T_3 = reg_offset[3] ? io_cache_bus_r_bits_rdata : reg_cache_wdata[63:0]; // @[icache.scala 259:79]
-  wire [127:0] _reg_cache_wdata_T_1 = {io_cache_bus_r_bits_rdata,reg_cache_wdata[63:0]}; // @[Cat.scala 33:92]
-  wire  _GEN_32 = io_cache_bus_r_bits_rlast ? 1'h0 : reg_r_valid; // @[icache.scala 161:34 255:64 256:57]
-  wire  _GEN_33 = io_cache_bus_r_bits_rlast | reg_valid; // @[icache.scala 155:34 255:64 258:73]
-  wire [63:0] _GEN_34 = io_cache_bus_r_bits_rlast ? _reg_rdata_T_3 : reg_rdata; // @[icache.scala 154:34 255:64 259:73]
-  wire [127:0] _GEN_35 = io_cache_bus_r_bits_rlast ? _reg_cache_wdata_T_1 : {{64'd0}, io_cache_bus_r_bits_rdata}; // @[icache.scala 255:64 260:65 262:65]
-  wire  _GEN_40 = io_cache_bus_r_bits_rlast | reg_cache_write; // @[icache.scala 165:42 265:56 266:57]
-  wire  _GEN_42 = io_cache_bus_r_bits_rlast | reg_ready; // @[icache.scala 156:34 265:56 268:65]
-  wire  _GEN_49 = 2'h1 == reg_bus_state ? _GEN_42 : reg_ready; // @[icache.scala 200:30 156:34]
-  wire  _GEN_54 = 2'h0 == reg_bus_state ? _GEN_28 : _GEN_49; // @[icache.scala 200:30]
+// val hit_0 		= io.cache_stage1.bits.sram(0).hit  被chisel编译优化，消失
+// val hit_1 		= io.cache_stage1.bits.sram(1).hit
+// val tag_valid_0 = io.cache_stage1.bits.sram(0).tag_valid
+// val tag_valid_1	= io.cache_stage1.bits.sram(1).tag_valid
+// val rdata0 	= io.cache_stage1.bits.sram(0).rdata
+// val rdata1 	= io.cache_stage1.bits.sram(1).rdata
+//val cpu_addr 	= io.cache_stage1.bits.cpu_addr 被chisel编译优化，消失
+wire [5:0] index = io_cache_stage1_bits_cpu_addr[9:4];
+wire  valid = io_cache_stage1_valid & ~io_flush & io_rdata_ready;
+
+reg  reg_chosen_tag;
+reg [63:0] reg_rdata;
+reg  reg_valid;
+reg  reg_ready;
+
+//------bus--------------- 
+wire [63:0] temp_addr = {io_cache_stage1_bits_cpu_addr[63:4],4'h0};
+reg [63:0] reg_r_raddr;
+reg  reg_r_valid;
+
+//-----write cache -------
+reg [127:0] reg_cache_wdata;
+reg  reg_cache_write;
+reg [63:0] reg_cpu_addr;
+wire [53:0] reg_tag = reg_cpu_addr[63:10];
+wire [3:0] reg_offset = reg_cpu_addr[3:0];
+//wire [5:0] reg_index = reg_cpu_addr[9:4];
+
+//------------------------ LRU ------------------------------
+// 1 bit LRU 
+	////被chisel编译优化，消失
+	//val reg_lru_0				= RegInit(0.U(64.W))
+reg [63:0] reg_lru_1;
+wire [63:0] _LRU_1_T = (reg_lru_1 >> index);
+wire  LRU_1 = _LRU_1_T[0];
+wire [63:0] chose_bit = 64'h1 << index;
+wire [63:0] neg_chose_bit = ~chose_bit;
+
+parameter bus_idle = 1'b0,bus_busy = 1'b1;//bus_wait = 2'b10;
+reg  reg_bus_state;
+
+wire [63:0] lru_1_and_neg_chose = reg_lru_1 & neg_chose_bit;
+wire [63:0] lru_1_or_chose		= reg_lru_1 | chose_bit;
+
+always @(posedge clock)begin 
+	if(reset)begin 
+		reg_lru_1 <= 64'h0;
+	end else begin 
+		if((reg_bus_state == bus_idle)&valid)begin 
+			//hit_0,说明，值越低表示经常使用。hit_0中，则lru1对应位置1，hit_1 中 lru1对应位置0
+			if(io_cache_stage1_bits_sram_0_hit) reg_lru_1 <= lru_1_or_chose;
+			else if(io_cache_stage1_bits_sram_1_hit)reg_lru_1 <= lru_1_and_neg_chose;
+			else begin 
+				//tag_valid_0 & tag_valid_1 ,两个都有效，更换使用频率低(不经常使用)
+				if(io_cache_stage1_bits_sram_0_tag_valid & io_cache_stage1_bits_sram_1_tag_valid)begin
+					reg_lru_1 <= LRU_1?lru_1_and_neg_chose:lru_1_or_chose;
+				end else begin 
+					//存在无效的，先更换无效的
+					reg_lru_1 <= io_cache_stage1_bits_sram_0_tag_valid?lru_1_and_neg_chose: lru_1_or_chose;
+				end  
+			end 
+		end 
+	end 
+end 
+
+//val ready = io.rdata.ready
+//val cpu_addr 	= io.cache_stage1.bits.cpu_addr
+wire io_cache_bus_r_fire = io_cache_bus_r_valid & io_cache_bus_r_ready;
+always @(posedge clock)begin 
+	if(reset)begin 
+
+	end else begin 
+		case (reg_bus_state)
+			bus_idle: begin 
+				reg_cache_write <= 1'b0;
+				reg_chosen_tag  <= 1'b0;
+				if(io_rdata_ready)begin 
+					reg_valid	<= 1'b0;
+					reg_cpu_addr <= io_cache_stage1_bits_cpu_addr;
+				end
+				reg_ready		<= 1'b1;
+				reg_bus_state	<= bus_idle;
+				reg_r_valid		<= 1'b0;
+				if(valid)begin
+					//一般情况下不会出现两个都中，如果两个都中，则说明tag为0 
+					// 此时必然有一个无效。这种情况下强制为hit_0先有效
+					// is_hit
+					if(io_cache_stage1_bits_sram_0_hit | io_cache_stage1_bits_sram_1_hit)begin 
+						reg_chosen_tag <= io_cache_stage1_bits_sram_0_hit? 1'b0:1'b1;
+						//hit_valid , (hit_0 & hit0_valid) | (hit_1 & hit1_valid)
+						if((io_cache_stage1_bits_sram_0_hit & io_cache_stage1_bits_sram_0_tag_valid)|(io_cache_stage1_bits_sram_1_hit & io_cache_stage1_bits_sram_1_tag_valid))begin 
+							// read data from cache
+							// ------ cpu----- 
+							reg_rdata 		<= io_cache_stage1_bits_sram_0_hit? io_cache_stage1_bits_sram_0_rdata : io_cache_stage1_bits_sram_1_rdata;
+							reg_valid		<= 1'b1;
+							reg_ready 		<= 1'b1;
+							reg_bus_state	<= bus_idle;
+						end else begin 
+							//------- bus----- 
+							reg_valid			<= 1'b0;
+							reg_ready 			<= 1'b0;
+							reg_r_raddr 		<= temp_addr;
+							reg_r_valid 		<= 1'b1;
+							reg_bus_state		<= bus_busy;
+						end 
+					end else begin 
+						reg_valid			<= 1'b0;
+						reg_ready 			<= 1'b0;
+						if(io_cache_stage1_bits_sram_0_tag_valid & io_cache_stage1_bits_sram_1_tag_valid)begin 
+							reg_chosen_tag 		<= LRU_1;
+							reg_r_raddr 		<= temp_addr;
+							reg_r_valid 		<= 1'b1;
+							reg_bus_state		<= bus_busy;
+						end else begin 
+							reg_chosen_tag 		<= io_cache_stage1_bits_sram_0_tag_valid?1'b1:1'b0;
+							reg_r_raddr 		<= temp_addr;
+							reg_r_valid 		<= 1'b1;
+							reg_bus_state		<= bus_busy;
+						end 
+					end 
+				end
+			end 
+			bus_busy: begin 
+				if(io_cache_bus_r_fire)begin 
+					if(io_cache_bus_r_bits_rlast)begin 
+						reg_r_valid 	<= 1'b0;
+						//----cpu---
+						reg_valid			<= 1'b1;
+						reg_rdata 			<= reg_offset[3]?io_cache_bus_r_bits_rdata:reg_cache_wdata[63:0];
+						reg_cache_wdata		<= {io_cache_bus_r_bits_rdata,reg_cache_wdata[63:0]};
+					end else begin 
+						reg_cache_wdata 	<= {64'h0,io_cache_bus_r_bits_rdata};
+					end 
+				end 
+				if(io_cache_bus_r_bits_rlast)begin 
+					reg_cache_write 	<= 1'b1;
+					reg_bus_state 		<= bus_idle;
+					reg_ready 			<= 1'b1;
+				end 
+			end 
+		endcase
+	end 
+end
   assign io_cache_stage1_ready = reg_ready & io_rdata_ready; // @[icache.scala 280:44]
   assign io_cache_bus_r_valid = reg_r_valid; // @[icache.scala 301:41]
   assign io_cache_bus_r_bits_raddr = reg_r_raddr; // @[icache.scala 300:41]
@@ -186,113 +281,7 @@ module ICache_stage2(
   assign io_sram_w_chose_tag = reg_chosen_tag; // @[icache.scala 286:33]
   assign io_rdata_valid = reg_valid; // @[icache.scala 288:33]
   assign io_rdata_bits_data = reg_rdata; // @[icache.scala 289:33]
-  assign io_rdata_bits_pc = reg_cpu_addr; // @[icache.scala 290:33]
-  always @(posedge clock) begin
-    if (reset) begin // @[icache.scala 153:37]
-      reg_chosen_tag <= 1'h0; // @[icache.scala 153:37]
-    end else if (2'h0 == reg_bus_state) begin // @[icache.scala 200:30]
-      reg_chosen_tag <= _GEN_25;
-    end
-    if (reset) begin // @[icache.scala 154:34]
-      reg_rdata <= 64'h0; // @[icache.scala 154:34]
-    end else if (2'h0 == reg_bus_state) begin // @[icache.scala 200:30]
-      if (valid) begin // @[icache.scala 214:36]
-        if (io_cache_stage1_bits_sram_0_hit | io_cache_stage1_bits_sram_1_hit) begin // @[icache.scala 215:44]
-          reg_rdata <= _GEN_10;
-        end
-      end
-    end else if (2'h1 == reg_bus_state) begin // @[icache.scala 200:30]
-      if (_T_10) begin // @[icache.scala 254:50]
-        reg_rdata <= _GEN_34;
-      end
-    end
-    if (reset) begin // @[icache.scala 155:34]
-      reg_valid <= 1'h0; // @[icache.scala 155:34]
-    end else if (2'h0 == reg_bus_state) begin // @[icache.scala 200:30]
-      if (valid) begin // @[icache.scala 214:36]
-        reg_valid <= _GEN_21;
-      end else if (io_rdata_ready) begin // @[icache.scala 206:36]
-        reg_valid <= 1'h0; // @[icache.scala 207:57]
-      end
-    end else if (2'h1 == reg_bus_state) begin // @[icache.scala 200:30]
-      if (_T_10) begin // @[icache.scala 254:50]
-        reg_valid <= _GEN_33;
-      end
-    end
-    reg_ready <= reset | _GEN_54; // @[icache.scala 156:{34,34}]
-    if (reset) begin // @[icache.scala 160:34]
-      reg_r_raddr <= 64'h0; // @[icache.scala 160:34]
-    end else if (2'h0 == reg_bus_state) begin // @[icache.scala 200:30]
-      if (valid) begin // @[icache.scala 214:36]
-        if (io_cache_stage1_bits_sram_0_hit | io_cache_stage1_bits_sram_1_hit) begin // @[icache.scala 215:44]
-          reg_r_raddr <= _GEN_13;
-        end else begin
-          reg_r_raddr <= temp_addr;
-        end
-      end
-    end
-    if (reset) begin // @[icache.scala 161:34]
-      reg_r_valid <= 1'h0; // @[icache.scala 161:34]
-    end else if (2'h0 == reg_bus_state) begin // @[icache.scala 200:30]
-      reg_r_valid <= _GEN_31;
-    end else if (2'h1 == reg_bus_state) begin // @[icache.scala 200:30]
-      if (_T_10) begin // @[icache.scala 254:50]
-        reg_r_valid <= _GEN_32;
-      end
-    end
-    if (reset) begin // @[icache.scala 164:38]
-      reg_cache_wdata <= 128'h0; // @[icache.scala 164:38]
-    end else if (!(2'h0 == reg_bus_state)) begin // @[icache.scala 200:30]
-      if (2'h1 == reg_bus_state) begin // @[icache.scala 200:30]
-        if (_T_10) begin // @[icache.scala 254:50]
-          reg_cache_wdata <= _GEN_35;
-        end
-      end
-    end
-    if (reset) begin // @[icache.scala 165:42]
-      reg_cache_write <= 1'h0; // @[icache.scala 165:42]
-    end else if (2'h0 == reg_bus_state) begin // @[icache.scala 200:30]
-      reg_cache_write <= 1'h0; // @[icache.scala 202:41]
-    end else if (2'h1 == reg_bus_state) begin // @[icache.scala 200:30]
-      reg_cache_write <= _GEN_40;
-    end
-    if (reset) begin // @[icache.scala 166:42]
-      reg_cpu_addr <= 64'h0; // @[icache.scala 166:42]
-    end else if (2'h0 == reg_bus_state) begin // @[icache.scala 200:30]
-      if (io_rdata_ready) begin // @[icache.scala 206:36]
-        reg_cpu_addr <= io_cache_stage1_bits_cpu_addr; // @[icache.scala 208:49]
-      end
-    end
-    if (reset) begin // @[icache.scala 173:58]
-      reg_lru_1 <= 64'h0; // @[icache.scala 173:58]
-    end else if (reg_bus_state == 2'h0 & valid) begin // @[icache.scala 182:49]
-      if (io_cache_stage1_bits_sram_0_hit) begin // @[icache.scala 183:28]
-        reg_lru_1 <= _reg_lru_1_T; // @[icache.scala 185:35]
-      end else if (io_cache_stage1_bits_sram_1_hit) begin // @[icache.scala 186:34]
-        reg_lru_1 <= _reg_lru_1_T_1; // @[icache.scala 188:35]
-      end else begin
-        reg_lru_1 <= _GEN_1;
-      end
-    end
-    if (reset) begin // @[icache.scala 180:36]
-      reg_bus_state <= 2'h0; // @[icache.scala 180:36]
-    end else if (2'h0 == reg_bus_state) begin // @[icache.scala 200:30]
-      if (valid) begin // @[icache.scala 214:36]
-        if (io_cache_stage1_bits_sram_0_hit | io_cache_stage1_bits_sram_1_hit) begin // @[icache.scala 215:44]
-          reg_bus_state <= _GEN_12;
-        end else begin
-          reg_bus_state <= 2'h1;
-        end
-      end else begin
-        reg_bus_state <= 2'h0; // @[icache.scala 212:41]
-      end
-    end else if (2'h1 == reg_bus_state) begin // @[icache.scala 200:30]
-      if (io_cache_bus_r_bits_rlast) begin // @[icache.scala 265:56]
-        reg_bus_state <= 2'h0; // @[icache.scala 267:57]
-      end
-    end
-  end
-
+  assign io_rdata_bits_pc = reg_cpu_addr; // @[icache.scala 290:33] 
 endmodule
 
 module ICache(

@@ -1879,7 +1879,11 @@ void Vriscv_soc___024root__trace_chg_sub_0(Vriscv_soc___024root* vlSelf, Verilat
                                               & (IData)(
                                                         (vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage1__DOT__reg_cpu_addr 
                                                          >> 4U)))))),64);
-        bufp->chgCData(oldp+835,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_bus_state),2);
+        bufp->chgBit(oldp+835,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_bus_state));
+        bufp->chgQData(oldp+836,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__lru_1_and_neg_chose),64);
+        bufp->chgQData(oldp+838,(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__lru_1_or_chose),64);
+        bufp->chgBit(oldp+840,(((IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache_io_cache_bus_r_ready) 
+                                & (IData)(vlSelf->riscv_soc__DOT__core__DOT__i_cache__DOT__cache_stage2__DOT__reg_r_valid))));
         __Vtemp_h7748dece__0[0U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram
             [vlSelf->riscv_soc__DOT__core_io_isram_addr][0U];
         __Vtemp_h7748dece__0[1U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram
@@ -1888,7 +1892,7 @@ void Vriscv_soc___024root__trace_chg_sub_0(Vriscv_soc___024root* vlSelf, Verilat
             [vlSelf->riscv_soc__DOT__core_io_isram_addr][2U];
         __Vtemp_h7748dece__0[3U] = vlSelf->riscv_soc__DOT__sram0__DOT__sram
             [vlSelf->riscv_soc__DOT__core_io_isram_addr][3U];
-        bufp->chgWData(oldp+836,(__Vtemp_h7748dece__0),128);
+        bufp->chgWData(oldp+841,(__Vtemp_h7748dece__0),128);
         __Vtemp_h8b37abc5__0[0U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram
             [vlSelf->riscv_soc__DOT__core_io_isram_addr][0U];
         __Vtemp_h8b37abc5__0[1U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram
@@ -1897,7 +1901,7 @@ void Vriscv_soc___024root__trace_chg_sub_0(Vriscv_soc___024root* vlSelf, Verilat
             [vlSelf->riscv_soc__DOT__core_io_isram_addr][2U];
         __Vtemp_h8b37abc5__0[3U] = vlSelf->riscv_soc__DOT__sram1__DOT__sram
             [vlSelf->riscv_soc__DOT__core_io_isram_addr][3U];
-        bufp->chgWData(oldp+840,(__Vtemp_h8b37abc5__0),128);
+        bufp->chgWData(oldp+845,(__Vtemp_h8b37abc5__0),128);
         __Vtemp_he6da4d43__0[0U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram
             [vlSelf->riscv_soc__DOT__core_io_isram_addr][0U];
         __Vtemp_he6da4d43__0[1U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram
@@ -1906,7 +1910,7 @@ void Vriscv_soc___024root__trace_chg_sub_0(Vriscv_soc___024root* vlSelf, Verilat
             [vlSelf->riscv_soc__DOT__core_io_isram_addr][2U];
         __Vtemp_he6da4d43__0[3U] = vlSelf->riscv_soc__DOT__sram2__DOT__sram
             [vlSelf->riscv_soc__DOT__core_io_isram_addr][3U];
-        bufp->chgWData(oldp+844,(__Vtemp_he6da4d43__0),128);
+        bufp->chgWData(oldp+849,(__Vtemp_he6da4d43__0),128);
         __Vtemp_ha7b78b5e__0[0U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram
             [vlSelf->riscv_soc__DOT__core_io_isram_addr][0U];
         __Vtemp_ha7b78b5e__0[1U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram
@@ -1915,7 +1919,7 @@ void Vriscv_soc___024root__trace_chg_sub_0(Vriscv_soc___024root* vlSelf, Verilat
             [vlSelf->riscv_soc__DOT__core_io_isram_addr][2U];
         __Vtemp_ha7b78b5e__0[3U] = vlSelf->riscv_soc__DOT__sram3__DOT__sram
             [vlSelf->riscv_soc__DOT__core_io_isram_addr][3U];
-        bufp->chgWData(oldp+848,(__Vtemp_ha7b78b5e__0),128);
+        bufp->chgWData(oldp+853,(__Vtemp_ha7b78b5e__0),128);
         __Vtemp_h0490666a__0[0U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram
             [vlSelf->riscv_soc__DOT__core_io_dsram_addr][0U];
         __Vtemp_h0490666a__0[1U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram
@@ -1924,7 +1928,7 @@ void Vriscv_soc___024root__trace_chg_sub_0(Vriscv_soc___024root* vlSelf, Verilat
             [vlSelf->riscv_soc__DOT__core_io_dsram_addr][2U];
         __Vtemp_h0490666a__0[3U] = vlSelf->riscv_soc__DOT__sram4__DOT__sram
             [vlSelf->riscv_soc__DOT__core_io_dsram_addr][3U];
-        bufp->chgWData(oldp+852,(__Vtemp_h0490666a__0),128);
+        bufp->chgWData(oldp+857,(__Vtemp_h0490666a__0),128);
         __Vtemp_hca3bc04b__0[0U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram
             [vlSelf->riscv_soc__DOT__core_io_dsram_addr][0U];
         __Vtemp_hca3bc04b__0[1U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram
@@ -1933,7 +1937,7 @@ void Vriscv_soc___024root__trace_chg_sub_0(Vriscv_soc___024root* vlSelf, Verilat
             [vlSelf->riscv_soc__DOT__core_io_dsram_addr][2U];
         __Vtemp_hca3bc04b__0[3U] = vlSelf->riscv_soc__DOT__sram5__DOT__sram
             [vlSelf->riscv_soc__DOT__core_io_dsram_addr][3U];
-        bufp->chgWData(oldp+856,(__Vtemp_hca3bc04b__0),128);
+        bufp->chgWData(oldp+861,(__Vtemp_hca3bc04b__0),128);
         __Vtemp_h4060cfc7__0[0U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram
             [vlSelf->riscv_soc__DOT__core_io_dsram_addr][0U];
         __Vtemp_h4060cfc7__0[1U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram
@@ -1942,7 +1946,7 @@ void Vriscv_soc___024root__trace_chg_sub_0(Vriscv_soc___024root* vlSelf, Verilat
             [vlSelf->riscv_soc__DOT__core_io_dsram_addr][2U];
         __Vtemp_h4060cfc7__0[3U] = vlSelf->riscv_soc__DOT__sram6__DOT__sram
             [vlSelf->riscv_soc__DOT__core_io_dsram_addr][3U];
-        bufp->chgWData(oldp+860,(__Vtemp_h4060cfc7__0),128);
+        bufp->chgWData(oldp+865,(__Vtemp_h4060cfc7__0),128);
         __Vtemp_h09a85685__0[0U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram
             [vlSelf->riscv_soc__DOT__core_io_dsram_addr][0U];
         __Vtemp_h09a85685__0[1U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram
@@ -1951,10 +1955,10 @@ void Vriscv_soc___024root__trace_chg_sub_0(Vriscv_soc___024root* vlSelf, Verilat
             [vlSelf->riscv_soc__DOT__core_io_dsram_addr][2U];
         __Vtemp_h09a85685__0[3U] = vlSelf->riscv_soc__DOT__sram7__DOT__sram
             [vlSelf->riscv_soc__DOT__core_io_dsram_addr][3U];
-        bufp->chgWData(oldp+864,(__Vtemp_h09a85685__0),128);
+        bufp->chgWData(oldp+869,(__Vtemp_h09a85685__0),128);
     }
-    bufp->chgBit(oldp+868,(vlSelf->clock));
-    bufp->chgBit(oldp+869,(vlSelf->reset));
+    bufp->chgBit(oldp+873,(vlSelf->clock));
+    bufp->chgBit(oldp+874,(vlSelf->reset));
 }
 
 void Vriscv_soc___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused*/) {
