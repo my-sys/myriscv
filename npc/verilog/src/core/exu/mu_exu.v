@@ -64,10 +64,25 @@ always @(posedge clock)begin
     end else if (2'h2 == reg_state) begin // @[mu_exu.scala 66:26]
       reg_cnt <= 7'h0;
     end
+    if (reset) begin // @[mu_exu.scala 50:42]
+      reg_state <= 2'h0; // @[mu_exu.scala 50:42]
+    end else if (2'h0 == reg_state) begin // @[mu_exu.scala 66:26]
+      if (io_valid) begin // @[mu_exu.scala 76:36]
+        reg_state <= 2'h1; // @[mu_exu.scala 78:49]
+      end else begin
+        reg_state <= 2'h0; // @[mu_exu.scala 69:49]
+      end
+    end else if (2'h1 == reg_state) begin // @[mu_exu.scala 66:26]
+      if (reg_cnt == 7'h20) begin // @[mu_exu.scala 89:77]
+        reg_state <= 2'h2;
+      end
+    end else if (2'h2 == reg_state) begin // @[mu_exu.scala 66:26]
+      reg_state <= 2'h0;
+    end
 end 
 always @(posedge clock)begin 
 	if(reset)begin 
-		reg_state <= 2'h0;
+		//reg_state <= 2'h0;
 		reg_ready <= 1'b1;
 		reg_temp_mul2 <= 67'h0;
 		reg_mul1 	<= 130'h0;
@@ -79,7 +94,7 @@ always @(posedge clock)begin
 		case (reg_state)
 			2'h0:begin 
 				reg_ready 	<= 1'b1;
-				reg_state 	<= 2'h0;
+				//reg_state 	<= 2'h0;
 				reg_temp_mul2 <= 67'h0;
 				reg_mul1 	<= 130'h0;
 				reg_result  <= 130'h0;
@@ -98,7 +113,7 @@ always @(posedge clock)begin
 				reg_result 	<= result_T;
 				reg_mul1	<= {reg_mul1[127:0],2'b0};
 				reg_temp_mul2	<= {2'b0,reg_temp_mul2[66:2]};
-				reg_state   <= (reg_cnt == 7'h20)? 2'h2:reg_state;
+				//reg_state   <= (reg_cnt == 7'h20)? 2'h2:reg_state;
 				//reg_cnt		<= reg_cnt + 7'h1;
 
 				//reg_ready  <= reg_ready;
@@ -106,7 +121,7 @@ always @(posedge clock)begin
 			2'h2:begin 
 				reg_result		<= result_T;
 				reg_ready		<= 1'b1;
-				reg_state		<= 2'h0;
+				//reg_state		<= 2'h0;
 				//reg_cnt			<= 7'h0;
 				reg_dest_is_w	<= 1'b1;
 			end 
