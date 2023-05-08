@@ -68,9 +68,9 @@ parameter alu_lui = 7'b00_000_0_0, alu_auipc = 7'b10_000_0_0,bru_jal = 7'b10_011
   wire  is_sr = fun == 3'h5; // @[decode.scala 77:25]
   wire [5:0] temp_kk = {io_get_inst_bits_inst[30],fun_exuType};
   wire [5:0] temp_op_exuType 	= temp_op_is_imm? (is_sr?temp_kk:{1'b0,fun_exuType}):temp_kk;
-  wire [3:0] temp_op_itype 		= temp_op_is_imm?((fun ==alu_sll_4_2)| is_sr?Type_IR,Type_I):Type_R;
+  wire [3:0] temp_op_itype 		= temp_op_is_imm?((fun ==ALUType_alu_sll_4_2)| is_sr?Type_IR:Type_I):Type_R;
   wire temp_op_rs2 = !temp_op_is_imm;
-  wire [2:0] temp_op = temp_op_is_imm?op_alu:(io_get_inst_bits_inst[25],op_mu,op_alu);
+  wire [2:0] temp_op = temp_op_is_imm?op_alu:(io_get_inst_bits_inst[25]?op_mu:op_alu);
 
   wire is_op_system = (fun_op == 3'b110);
   wire is_op_fence  = (fun_op == 3'b001);
@@ -86,7 +86,7 @@ parameter alu_lui = 7'b00_000_0_0, alu_auipc = 7'b10_000_0_0,bru_jal = 7'b10_011
 					 is_op_mem?(op_mem):
 					 is_op_fence?(op_fence):
 					 is_op_system?op_system:3'b0;
-  wire[6:0] exuType = is_op_op_0?(temp_op_exuType):
+  wire[6:0] exuType = is_op_op_0?({1'b0,temp_op_exuType}):
   					is_op_op_1?(io_get_inst_bits_inst[5]?alu_lui:alu_auipc):
 					is_op_bru_j?(io_get_inst_bits_inst[3]?bru_jal:bru_jalr):
 					is_op_bru_b?{2'h1,fun_exuType}:
@@ -177,7 +177,7 @@ always @(posedge clock)begin
 		reg_csr_addr <= 12'h0;
 		reg_csr_data <= 64'h0;
 		reg_is_pre	<= 1'h0;
-	end else if(ready)begin 
+	end else if(io_op_datas_ready)begin 
 		reg_opType <= opType;
 		reg_exuType <= exuType;
 		reg_rs1_addr <= rs1_is_reg?rs1_addr:5'h0;
