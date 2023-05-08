@@ -2585,21 +2585,21 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
             = ((2U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
                 ? ((0x20U & vlSelf->riscv_soc__DOT__core__DOT__fetch_io_put_pc_bits_inst)
                     ? ((0x2000000U & vlSelf->riscv_soc__DOT__core__DOT__fetch_io_put_pc_bits_inst)
-                        ? 5U : 1U) : 1U) : ((3U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
-                                             ? 1U : 
+                        ? 3U : 2U) : 2U) : ((3U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
+                                             ? 2U : 
                                             (((5U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
                                               | (4U 
                                                  == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)))
-                                              ? 2U : 
+                                              ? 1U : 
                                              ((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
-                                               ? 0U
+                                               ? 5U
                                                : ((1U 
                                                    == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
-                                                   ? 4U
+                                                   ? 6U
                                                    : 
                                                   ((6U 
                                                     == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
-                                                    ? 3U
+                                                    ? 4U
                                                     : 0U))))));
     }
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT___valid_T_3 

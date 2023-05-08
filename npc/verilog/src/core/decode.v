@@ -31,7 +31,7 @@ module Decode(
   input         io_flush
 );
 parameter ALUType_alu_sll_4_2 = 3'b001;
-parameter op_mem = 3'b000,op_fence = 3'b100,op_alu = 3'b001,op_mu = 3'b101,op_bru = 3'b010,op_system = 3'b011;
+parameter op_mem = 3'b101,op_fence = 3'b110,op_alu = 3'b010,op_mu = 3'b011,op_bru = 3'b001,op_system = 3'b100;
 parameter Type_N = 4'b0000,Type_U = 4'b0001,Type_S = 4'b0011,Type_J = 4'b0010,Type_R = 4'b0110,Type_B = 4'b0111,Type_CSR = 4'b0101,Type_IR = 4'b0100,Type_I = 4'b1100;
 parameter alu_lui = 7'b00_000_0_0, alu_auipc = 7'b10_000_0_0,bru_jal = 7'b10_011_1_0,bru_jalr = 7'b10_010_1_0;
   reg  reg_valid; // @[decode.scala 17:42]

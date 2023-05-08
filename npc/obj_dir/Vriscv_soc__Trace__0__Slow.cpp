@@ -858,9 +858,9 @@ VL_ATTR_COLD void Vriscv_soc___024root__trace_init_sub__TOP__0(Vriscv_soc___024r
     tracep->declBus(c+897,"ALUType_alu_sll_4_2", false,-1, 2,0);
     tracep->declBus(c+898,"op_mem", false,-1, 2,0);
     tracep->declBus(c+899,"op_fence", false,-1, 2,0);
-    tracep->declBus(c+897,"op_alu", false,-1, 2,0);
-    tracep->declBus(c+900,"op_mu", false,-1, 2,0);
-    tracep->declBus(c+901,"op_bru", false,-1, 2,0);
+    tracep->declBus(c+900,"op_alu", false,-1, 2,0);
+    tracep->declBus(c+901,"op_mu", false,-1, 2,0);
+    tracep->declBus(c+897,"op_bru", false,-1, 2,0);
     tracep->declBus(c+902,"op_system", false,-1, 2,0);
     tracep->declBus(c+903,"Type_N", false,-1, 3,0);
     tracep->declBus(c+904,"Type_U", false,-1, 3,0);
@@ -2471,7 +2471,7 @@ VL_ATTR_COLD void Vriscv_soc___024root__trace_full_sub_0(Vriscv_soc___024root* v
                                          ? 4U : 0xcU))),4);
     bufp->fullCData(oldp+428,(((0x20U & vlSelf->riscv_soc__DOT__core__DOT__fetch_io_put_pc_bits_inst)
                                 ? ((0x2000000U & vlSelf->riscv_soc__DOT__core__DOT__fetch_io_put_pc_bits_inst)
-                                    ? 5U : 1U) : 1U)),3);
+                                    ? 3U : 2U) : 2U)),3);
     bufp->fullBit(oldp+429,((6U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))));
     bufp->fullBit(oldp+430,((1U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))));
     bufp->fullBit(oldp+431,((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))));
@@ -2483,19 +2483,19 @@ VL_ATTR_COLD void Vriscv_soc___024root__trace_full_sub_0(Vriscv_soc___024root* v
                                 ? ((0x20U & vlSelf->riscv_soc__DOT__core__DOT__fetch_io_put_pc_bits_inst)
                                     ? ((0x2000000U 
                                         & vlSelf->riscv_soc__DOT__core__DOT__fetch_io_put_pc_bits_inst)
-                                        ? 5U : 1U) : 1U)
+                                        ? 3U : 2U) : 2U)
                                 : ((3U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
-                                    ? 1U : (((5U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
+                                    ? 2U : (((5U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)) 
                                              | (4U 
                                                 == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op)))
-                                             ? 2U : 
+                                             ? 1U : 
                                             ((0U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
-                                              ? 0U : 
+                                              ? 5U : 
                                              ((1U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
-                                               ? 4U
+                                               ? 6U
                                                : ((6U 
                                                    == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
-                                                   ? 3U
+                                                   ? 4U
                                                    : 0U))))))),3);
     bufp->fullCData(oldp+437,(((2U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__fun_op))
                                 ? ((0x20U & vlSelf->riscv_soc__DOT__core__DOT__fetch_io_put_pc_bits_inst)
@@ -3733,11 +3733,11 @@ VL_ATTR_COLD void Vriscv_soc___024root__trace_full_sub_0(Vriscv_soc___024root* v
     bufp->fullCData(oldp+895,(3U),2);
     bufp->fullBit(oldp+896,(0U));
     bufp->fullCData(oldp+897,(1U),3);
-    bufp->fullCData(oldp+898,(0U),3);
-    bufp->fullCData(oldp+899,(4U),3);
-    bufp->fullCData(oldp+900,(5U),3);
-    bufp->fullCData(oldp+901,(2U),3);
-    bufp->fullCData(oldp+902,(3U),3);
+    bufp->fullCData(oldp+898,(5U),3);
+    bufp->fullCData(oldp+899,(6U),3);
+    bufp->fullCData(oldp+900,(2U),3);
+    bufp->fullCData(oldp+901,(3U),3);
+    bufp->fullCData(oldp+902,(4U),3);
     bufp->fullCData(oldp+903,(0U),4);
     bufp->fullCData(oldp+904,(1U),4);
     bufp->fullCData(oldp+905,(3U),4);
