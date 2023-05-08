@@ -86,8 +86,9 @@ always @(posedge clock)begin
 				reg_result 	<= result_T;
 				reg_mul1	<= {reg_mul1[127:0],2'b0};
 				reg_temp_mul2	<= {2'b0,reg_temp_mul2[66:2]};
-				reg_cnt		<= reg_cnt + 7'h1;
 				reg_state   <= (reg_cnt == 7'h20)? 2'h2:reg_state;
+				reg_cnt		<= reg_cnt + 7'h1;
+
 				//reg_ready  <= reg_ready;
 			end 
 			2'h2:begin 
