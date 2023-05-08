@@ -30,7 +30,10 @@ module Decode(
   output [63:0] io_op_datas_bits_csr_data,
   input         io_flush
 );
-
+parameter ALUType_alu_sll_4_2 = 3'b001;
+parameter op_mem = 3'b000,op_fence = 3'b100,op_alu = 3'b001,op_mu = 3'b101,op_bru = 3'b010,op_system = 3'b011;
+parameter Type_N = 4'b0000,Type_U = 4'b0001,Type_S = 4'b0011,Type_J = 4'b0010,Type_R = 4'b0110,Type_B = 4'b0111,Type_CSR = 4'b0101,Type_IR = 4'b0100,Type_I = 4'b1100;
+parameter alu_lui = 7'b00_000_0_0, alu_auipc = 7'b10_000_0_0,bru_jal = 7'b10_011_1_0,bru_jalr = 7'b10_010_1_0;
   reg  reg_valid; // @[decode.scala 17:42]
   reg [2:0] reg_opType; // @[decode.scala 30:42]
   reg [6:0] reg_exuType; // @[decode.scala 31:42]
@@ -55,81 +58,82 @@ module Decode(
   wire [2:0] fun_op = {io_get_inst_bits_inst[6],io_get_inst_bits_inst[4],io_get_inst_bits_inst[2]}; // @[Cat.scala 33:92]
   wire  temp_system_is_pri = fun == 3'h0; // @[decode.scala 64:39]
   wire  temp_system_is_imm = io_get_inst_bits_inst[14]; // @[decode.scala 65:38]
-  wire  temp_system_rs1 = temp_system_is_imm ? 1'h0 : 1'h1; // @[decode.scala 66:34]
-  wire [6:0] _temp_system_T_1 = {io_get_inst_bits_inst[21:20],fun,io_get_inst_bits_inst[5],io_get_inst_bits_inst[3]}; // @[Cat.scala 33:92]
-  wire [6:0] temp_system_1 = temp_system_is_pri ? _temp_system_T_1 : {{2'd0}, fun_exuType}; // @[decode.scala 70:53]
-  wire [2:0] temp_system_2 = temp_system_is_pri ? 3'h0 : 3'h5; // @[decode.scala 71:12]
-  wire  temp_system_3 = temp_system_is_pri ? 1'h0 : 1'h1; // @[decode.scala 71:72]
-  wire  temp_system_4 = temp_system_is_pri ? 1'h0 : temp_system_rs1; // @[decode.scala 72:12]
-  wire [3:0] temp_mem_itype = io_get_inst_bits_inst[5] ? 4'h3 : 4'hc; // @[decode.scala 73:33]
+//与指令格式对齐system 类型指令中，该位为1 表示无立即数，为0 表示有立即数
+  wire  temp_system_rs1 = temp_system_is_imm ? 1'h0 : 1'h1;
+
+  wire [3:0] temp_mem_itype = io_get_inst_bits_inst[5] ? Type_S : Type_I; // @[decode.scala 73:33]
   wire  temp_mem_dest = io_get_inst_bits_inst[5] ? 1'h0 : 1'h1; // @[decode.scala 74:33]
   wire  temp_op_is_imm = ~io_get_inst_bits_inst[5]; // @[decode.scala 76:30]
+  wire  temp_mem_rs2   = io_get_inst_bits_inst[5];
   wire  is_sr = fun == 3'h5; // @[decode.scala 77:25]
-  wire [5:0] temp_kk = {io_get_inst_bits_inst[30],fun,io_get_inst_bits_inst[5],io_get_inst_bits_inst[3]}; // @[Cat.scala 33:92]
-  wire [5:0] _temp_op_exuType_T = is_sr ? temp_kk : {{1'd0}, fun_exuType}; // @[decode.scala 79:53]
-  wire [5:0] temp_op_exuType = temp_op_is_imm ? _temp_op_exuType_T : temp_kk; // @[decode.scala 79:34]
-  wire [3:0] _temp_op_itype_T_2 = fun == 3'h1 | is_sr ? 4'h4 : 4'hc; // @[decode.scala 80:51]
-  wire [3:0] temp_op_itype = temp_op_is_imm ? _temp_op_itype_T_2 : 4'h6; // @[decode.scala 80:32]
-  wire  temp_op_rs2 = temp_op_is_imm ? 1'h0 : 1'h1; // @[decode.scala 81:32]
-  wire [1:0] _temp_op_T_1 = io_get_inst_bits_inst[25] ? 2'h3 : 2'h2; // @[decode.scala 82:60]
-  wire [1:0] temp_op = temp_op_is_imm ? 2'h2 : _temp_op_T_1; // @[decode.scala 82:26]
-  wire [6:0] temp_jal_jalr_1 = io_get_inst_bits_inst[3] ? 7'h4e : 7'h4a; // @[decode.scala 86:12]
-  wire [3:0] temp_jal_jalr_2 = io_get_inst_bits_inst[3] ? 4'h2 : 4'hc; // @[decode.scala 87:12]
-  wire  temp_jal_jalr_4 = io_get_inst_bits_inst[3] ? 1'h0 : 1'h1; // @[decode.scala 88:12]
-  wire [6:0] _T_1 = io_get_inst_bits_inst[5] ? 7'h0 : 7'h40; // @[decode.scala 91:59]
-  wire [6:0] _T_2 = {2'h1,fun,io_get_inst_bits_inst[5],io_get_inst_bits_inst[3]}; // @[Cat.scala 33:92]
-  wire [6:0] _T_3 = {2'h2,fun,io_get_inst_bits_inst[5],io_get_inst_bits_inst[3]}; // @[Cat.scala 33:92]
-  wire  _T_5 = 3'h2 == fun_op; // @[Lookup.scala 31:38]
-  wire  _T_7 = 3'h3 == fun_op; // @[Lookup.scala 31:38]
-  wire  _T_9 = 3'h5 == fun_op; // @[Lookup.scala 31:38]
-  wire  _T_11 = 3'h4 == fun_op; // @[Lookup.scala 31:38]
-  wire  _T_13 = 3'h0 == fun_op; // @[Lookup.scala 31:38]
-  wire  _T_15 = 3'h1 == fun_op; // @[Lookup.scala 31:38]
-  wire  _T_17 = 3'h6 == fun_op; // @[Lookup.scala 31:38]
-  wire [2:0] _T_18 = _T_17 ? 3'h4 : 3'h5; // @[Lookup.scala 34:39]
-  wire [2:0] _T_19 = _T_15 ? 3'h6 : _T_18; // @[Lookup.scala 34:39]
-  wire [2:0] _T_20 = _T_13 ? 3'h5 : _T_19; // @[Lookup.scala 34:39]
-  wire [2:0] _T_21 = _T_11 ? 3'h1 : _T_20; // @[Lookup.scala 34:39]
-  wire [2:0] _T_22 = _T_9 ? 3'h1 : _T_21; // @[Lookup.scala 34:39]
-  wire [6:0] _T_24 = _T_17 ? temp_system_1 : 7'h0; // @[Lookup.scala 34:39]
-  wire [6:0] _T_25 = _T_15 ? _T_3 : _T_24; // @[Lookup.scala 34:39]
-  wire [6:0] _T_26 = _T_13 ? {{2'd0}, fun_exuType} : _T_25; // @[Lookup.scala 34:39]
-  wire [6:0] _T_27 = _T_11 ? _T_2 : _T_26; // @[Lookup.scala 34:39]
-  wire [6:0] _T_28 = _T_9 ? temp_jal_jalr_1 : _T_27; // @[Lookup.scala 34:39]
-  wire [2:0] _T_30 = _T_17 ? temp_system_2 : 3'h0; // @[Lookup.scala 34:39]
-  wire [2:0] _T_31 = _T_15 ? 3'h0 : _T_30; // @[Lookup.scala 34:39]
-  wire [3:0] _T_32 = _T_13 ? temp_mem_itype : {{1'd0}, _T_31}; // @[Lookup.scala 34:39]
-  wire [3:0] _T_33 = _T_11 ? 4'h7 : _T_32; // @[Lookup.scala 34:39]
-  wire [3:0] _T_34 = _T_9 ? temp_jal_jalr_2 : _T_33; // @[Lookup.scala 34:39]
-  wire [3:0] _T_35 = _T_7 ? 4'h1 : _T_34; // @[Lookup.scala 34:39]
-  wire [3:0] instType = _T_5 ? temp_op_itype : _T_35; // @[Lookup.scala 34:39]
-  wire  _T_37 = _T_15 ? 1'h0 : _T_17 & temp_system_3; // @[Lookup.scala 34:39]
-  wire  _T_38 = _T_13 ? temp_mem_dest : _T_37; // @[Lookup.scala 34:39]
-  wire  _T_39 = _T_11 ? 1'h0 : _T_38; // @[Lookup.scala 34:39]
-  wire  dest_is_reg = _T_5 | (_T_7 | (_T_9 | _T_39)); // @[Lookup.scala 34:39]
-  wire  _T_43 = _T_15 ? 1'h0 : _T_17 & temp_system_4; // @[Lookup.scala 34:39]
-  wire  _T_46 = _T_9 ? temp_jal_jalr_4 : _T_11 | (_T_13 | _T_43); // @[Lookup.scala 34:39]
-  wire  _T_47 = _T_7 ? 1'h0 : _T_46; // @[Lookup.scala 34:39]
-  wire  rs1_is_reg = _T_5 | _T_47; // @[Lookup.scala 34:39]
-  wire  _T_52 = _T_9 ? 1'h0 : _T_11 | _T_13 & io_get_inst_bits_inst[5]; // @[Lookup.scala 34:39]
-  wire  _T_53 = _T_7 ? 1'h0 : _T_52; // @[Lookup.scala 34:39]
-  wire  rs2_is_reg = _T_5 ? temp_op_rs2 : _T_53; // @[Lookup.scala 34:39]
+  wire [5:0] temp_kk = {io_get_inst_bits_inst[30],fun_exuType};
+  wire [5:0] temp_op_exuType 	= temp_op_is_imm? (is_sr?temp_kk:{1'b0,fun_exuType}):temp_kk;
+  wire [3:0] temp_op_itype 		= temp_op_is_imm?((fun ==alu_sll_4_2)| is_sr?Type_IR,Type_I):Type_R;
+  wire temp_op_rs2 = !temp_op_is_imm;
+  wire [2:0] temp_op = temp_op_is_imm?op_alu:(io_get_inst_bits_inst[25],op_mu,op_alu);
+
+  wire is_op_system = (fun_op == 3'b110);
+  wire is_op_fence  = (fun_op == 3'b001);
+  wire is_op_mem	 = (fun_op == 3'b000);
+  wire is_op_bru_b	 = (fun_op == 3'b100);
+  wire is_op_bru_j  = (fun_op == 3'b101);
+  wire is_op_op_0   = (fun_op == 3'b010);
+  wire is_op_op_1   = (fun_op == 3'b011);
+
+  wire[2:0] opType = is_op_op_0 ?(temp_op):
+					 is_op_op_1 ?(op_alu):
+					 (is_op_bru_j | is_op_bru_b)?op_bru:
+					 is_op_mem?(op_mem):
+					 is_op_fence?(op_fence):
+					 is_op_system?op_system:3'b0;
+  wire[6:0] exuType = is_op_op_0?(temp_op_exuType):
+  					is_op_op_1?(io_get_inst_bits_inst[5]?alu_lui:alu_auipc):
+					is_op_bru_j?(io_get_inst_bits_inst[3]?bru_jal:bru_jalr):
+					is_op_bru_b?{2'h1,fun_exuType}:
+					is_op_mem?{2'h0,fun_exuType}:
+					is_op_fence?{2'h2,fun_exuType}:
+					is_op_system?(temp_system_is_pri?{io_get_inst_bits_inst[21:20],fun_exuType}:{2'h0,fun_exuType}):7'h0;
+
+  wire[3:0] instType = is_op_op_0?(temp_op_itype):
+  						is_op_op_1?Type_U:
+						is_op_bru_j?(io_get_inst_bits_inst[3]?Type_J:Type_I):
+						is_op_bru_b?Type_B:
+						is_op_mem?temp_mem_itype:
+						is_op_fence?Type_N:
+						is_op_system?(temp_system_is_pri?Type_N:Type_CSR):Type_N;
+
+  wire dest_is_reg = (is_op_op_0 | is_op_op_1 | is_op_bru_j)?1'b1:
+  					is_op_bru_b?1'b0:
+					is_op_mem?(temp_mem_dest):
+					is_op_fence?1'b0:
+					is_op_system?(temp_system_is_pri?1'b0:1'b1):1'b0;
+  wire rs1_is_reg = is_op_op_0?1'b1:
+					is_op_op_1?1'b0:
+					is_op_bru_j?(io_get_inst_bits_inst[3]?1'b0:1'b1):
+					is_op_bru_b?1'b1:
+					is_op_mem?1'b1:
+					is_op_fence?1'b0:
+					is_op_system?(temp_system_is_pri?1'b0:temp_system_rs1):
+					1'b0;
+
+  wire rs2_is_reg = is_op_op_0?temp_op_rs2:
+					is_op_op_1?1'b0:
+					is_op_bru_j?1'b0:
+					is_op_bru_b?1'b1:
+					is_op_mem?temp_mem_rs2:
+					is_op_fence?1'b0:
+					is_op_system?1'b0:1'b0;
+
   wire [19:0] _imm_data_T_2 = io_get_inst_bits_inst[31] ? 20'hfffff : 20'h0; // @[Bitwise.scala 77:12]
-  wire [31:0] _imm_data_T_4 = {_imm_data_T_2,csr_addr}; // @[Cat.scala 33:92]
-  wire [31:0] _imm_data_T_6 = {io_get_inst_bits_inst[31:12],12'h0}; // @[Cat.scala 33:92]
-  wire [31:0] _imm_data_T_13 = {_imm_data_T_2,io_get_inst_bits_inst[31:25],dest_addr}; // @[Cat.scala 33:92]
   wire [11:0] _imm_data_T_16 = io_get_inst_bits_inst[31] ? 12'hfff : 12'h0; // @[Bitwise.scala 77:12]
-  wire [31:0] _imm_data_T_23 = {_imm_data_T_16,io_get_inst_bits_inst[19:12],io_get_inst_bits_inst[20],
-    io_get_inst_bits_inst[30:21],1'h0}; // @[Cat.scala 33:92]
-  wire [31:0] _imm_data_T_33 = {_imm_data_T_2,io_get_inst_bits_inst[7],io_get_inst_bits_inst[30:25],
-    io_get_inst_bits_inst[11:8],1'h0}; // @[Cat.scala 33:92]
-  wire [31:0] _imm_data_T_35 = {27'h0,rs1_addr}; // @[Cat.scala 33:92]
-  wire [31:0] _imm_data_T_37 = {26'h0,io_get_inst_bits_inst[25:20]}; // @[Cat.scala 33:92]
-  wire [31:0] _imm_data_T_39 = 4'hc == instType ? _imm_data_T_4 : 32'h0; // @[Mux.scala 81:58]
-  wire [31:0] _imm_data_T_41 = 4'h1 == instType ? _imm_data_T_6 : _imm_data_T_39; // @[Mux.scala 81:58]
-  wire [31:0] _imm_data_T_43 = 4'h3 == instType ? _imm_data_T_13 : _imm_data_T_41; // @[Mux.scala 81:58]
-  wire [31:0] _imm_data_T_45 = 4'h2 == instType ? _imm_data_T_23 : _imm_data_T_43; // @[Mux.scala 81:58]
-  wire [31:0] _imm_data_T_47 = 4'h7 == instType ? _imm_data_T_33 : _imm_data_T_45; // @[Mux.scala 81:58]
+  wire [31:0]  imm_data_I = {_imm_data_T_2,csr_addr}; 
+  wire [31:0]  imm_data_U = {io_get_inst_bits_inst[31:12],12'h0};
+  wire [31:0]  imm_data_S = {_imm_data_T_2,io_get_inst_bits_inst[31:25],dest_addr}; 
+  wire [31:0]  imm_data_J = {_imm_data_T_16,io_get_inst_bits_inst[19:12],io_get_inst_bits_inst[20],io_get_inst_bits_inst[30:21],1'h0}; // @[Cat.scala 33:92]
+  wire [31:0]  imm_data_B = {_imm_data_T_2,io_get_inst_bits_inst[7],io_get_inst_bits_inst[30:25],io_get_inst_bits_inst[11:8],1'h0}; // @[Cat.scala 33:92]
+  wire [31:0]  imm_data_CSR = {27'h0,rs1_addr}; // @[Cat.scala 33:92]
+  wire [31:0]  imm_data_IR = {26'h0,io_get_inst_bits_inst[25:20]};
+
   assign io_get_inst_ready = io_op_datas_ready; // @[decode.scala 21:31]
   assign io_normal_rd_rs1_addr = io_get_inst_bits_inst[19:15]; // @[decode.scala 55:35]
   assign io_normal_rd_rs2_addr = io_get_inst_bits_inst[24:20]; // @[decode.scala 54:35]
@@ -149,117 +153,55 @@ module Decode(
   assign io_op_datas_bits_is_pre = reg_is_pre; // @[decode.scala 160:49]
   assign io_op_datas_bits_csr_addr = reg_csr_addr; // @[decode.scala 158:49]
   assign io_op_datas_bits_csr_data = reg_csr_data; // @[decode.scala 159:49]
-  always @(posedge clock) begin
-    if (reset) begin // @[decode.scala 17:42]
-      reg_valid <= 1'h0; // @[decode.scala 17:42]
-    end else if (io_flush) begin // @[decode.scala 22:20]
-      reg_valid <= 1'h0; // @[decode.scala 23:27]
-    end else if (io_op_datas_ready) begin // @[decode.scala 25:28]
-      reg_valid <= io_get_inst_valid; // @[decode.scala 26:41]
-    end
-    if (reset) begin // @[decode.scala 30:42]
-      reg_opType <= 3'h0; // @[decode.scala 30:42]
-    end else if (io_op_datas_ready) begin // @[decode.scala 120:20]
-      if (_T_5) begin // @[Lookup.scala 34:39]
-        reg_opType <= {{1'd0}, temp_op};
-      end else if (_T_7) begin // @[Lookup.scala 34:39]
-        reg_opType <= 3'h2;
-      end else begin
-        reg_opType <= _T_22;
-      end
-    end
-    if (reset) begin // @[decode.scala 31:42]
-      reg_exuType <= 7'h0; // @[decode.scala 31:42]
-    end else if (io_op_datas_ready) begin // @[decode.scala 120:20]
-      if (_T_5) begin // @[Lookup.scala 34:39]
-        reg_exuType <= {{1'd0}, temp_op_exuType};
-      end else if (_T_7) begin // @[Lookup.scala 34:39]
-        reg_exuType <= _T_1;
-      end else begin
-        reg_exuType <= _T_28;
-      end
-    end
-    if (reset) begin // @[decode.scala 32:42]
-      reg_rs1_addr <= 5'h0; // @[decode.scala 32:42]
-    end else if (io_op_datas_ready) begin // @[decode.scala 120:20]
-      if (rs1_is_reg) begin // @[decode.scala 116:34]
-        reg_rs1_addr <= rs1_addr;
-      end else begin
-        reg_rs1_addr <= 5'h0;
-      end
-    end
-    if (reset) begin // @[decode.scala 33:42]
-      reg_rs1_data <= 64'h0; // @[decode.scala 33:42]
-    end else if (io_op_datas_ready) begin // @[decode.scala 120:20]
-      if (rs1_is_reg) begin // @[decode.scala 117:34]
-        reg_rs1_data <= io_normal_rd_rs1_data;
-      end else begin
-        reg_rs1_data <= 64'h0;
-      end
-    end
-    if (reset) begin // @[decode.scala 35:42]
-      reg_rs2_addr <= 5'h0; // @[decode.scala 35:42]
-    end else if (io_op_datas_ready) begin // @[decode.scala 120:20]
-      if (rs2_is_reg) begin // @[decode.scala 118:34]
-        reg_rs2_addr <= rs2_addr;
-      end else begin
-        reg_rs2_addr <= 5'h0;
-      end
-    end
-    if (reset) begin // @[decode.scala 36:42]
-      reg_rs2_data <= 64'h0; // @[decode.scala 36:42]
-    end else if (io_op_datas_ready) begin // @[decode.scala 120:20]
-      if (rs2_is_reg) begin // @[decode.scala 119:34]
-        reg_rs2_data <= io_normal_rd_rs2_data;
-      end else begin
-        reg_rs2_data <= 64'h0;
-      end
-    end
-    if (reset) begin // @[decode.scala 37:42]
-      reg_imm <= 32'h0; // @[decode.scala 37:42]
-    end else if (io_op_datas_ready) begin // @[decode.scala 120:20]
-      if (4'h4 == instType) begin // @[Mux.scala 81:58]
-        reg_imm <= _imm_data_T_37;
-      end else if (4'h5 == instType) begin // @[Mux.scala 81:58]
-        reg_imm <= _imm_data_T_35;
-      end else begin
-        reg_imm <= _imm_data_T_47;
-      end
-    end
-    if (reset) begin // @[decode.scala 38:50]
-      reg_pc <= 64'h0; // @[decode.scala 38:50]
-    end else if (io_op_datas_ready) begin // @[decode.scala 120:20]
-      reg_pc <= io_get_inst_bits_pc; // @[decode.scala 131:41]
-    end
-    if (reset) begin // @[decode.scala 40:42]
-      reg_inst <= 32'h0; // @[decode.scala 40:42]
-    end else if (io_op_datas_ready) begin // @[decode.scala 120:20]
-      reg_inst <= io_get_inst_bits_inst; // @[decode.scala 133:41]
-    end
-    if (reset) begin // @[decode.scala 41:42]
-      reg_dest_addr <= 5'h0; // @[decode.scala 41:42]
-    end else if (io_op_datas_ready) begin // @[decode.scala 120:20]
-      reg_dest_addr <= dest_addr; // @[decode.scala 134:33]
-    end
-    if (reset) begin // @[decode.scala 42:38]
-      reg_dest_is_reg <= 1'h0; // @[decode.scala 42:38]
-    end else if (io_op_datas_ready) begin // @[decode.scala 120:20]
-      reg_dest_is_reg <= dest_is_reg; // @[decode.scala 135:33]
-    end
-    if (reset) begin // @[decode.scala 44:42]
-      reg_csr_addr <= 12'h0; // @[decode.scala 44:42]
-    end else if (io_op_datas_ready) begin // @[decode.scala 120:20]
-      reg_csr_addr <= csr_addr; // @[decode.scala 137:33]
-    end
-    if (reset) begin // @[decode.scala 45:42]
-      reg_csr_data <= 64'h0; // @[decode.scala 45:42]
-    end else if (io_op_datas_ready) begin // @[decode.scala 120:20]
-      reg_csr_data <= io_csr_rd_csr_data; // @[decode.scala 138:33]
-    end
-    if (reset) begin // @[decode.scala 46:42]
-      reg_is_pre <= 1'h0; // @[decode.scala 46:42]
-    end else if (io_op_datas_ready) begin // @[decode.scala 120:20]
-      reg_is_pre <= io_get_inst_bits_is_pre; // @[decode.scala 139:41]
-    end
-  end
+
+always @(posedge clock)begin 
+	if(reset|io_flush)reg_valid <= 1'b0;
+	else if(io_op_datas_ready)reg_valid <= io_get_inst_valid;
+end 
+always @(posedge clock)begin 
+	if(reset)begin 
+		reg_opType <= 3'h0;
+		reg_exuType <= 7'h0;
+		reg_rs1_addr <= 5'h0;
+		reg_rs1_data <= 64'h0;
+
+		reg_rs2_addr <= 5'h0;
+		reg_rs2_data <= 64'h0;
+		reg_imm		<= 32'h0;
+		reg_pc		<= 64'h0;
+
+		reg_inst	<= 32'h0;
+		reg_dest_addr <= 5'h0;
+		reg_dest_is_reg <= 1'h0;
+
+		reg_csr_addr <= 12'h0;
+		reg_csr_data <= 64'h0;
+		reg_is_pre	<= 1'h0;
+	end else if(ready)begin 
+		reg_opType <= opType;
+		reg_exuType <= exuType;
+		reg_rs1_addr <= rs1_is_reg?rs1_addr:5'h0;
+		reg_rs1_data <= rs1_is_reg?io_normal_rd_rs1_data:64'h0;
+
+		reg_rs2_addr <= rs2_is_reg?rs2_addr:5'h0;
+		reg_rs2_data <= rs2_is_reg?io_normal_rd_rs2_data:64'h0;
+		reg_imm		 <= (instType == Type_I)?imm_data_I:
+						(instType == Type_U)?imm_data_U:
+						(instType == Type_S)?imm_data_S:
+						(instType == Type_J)?imm_data_J:
+						(instType == Type_B)?imm_data_B:
+						(instType == Type_CSR)?imm_data_CSR:
+						(instType == Type_IR)?imm_data_IR:32'h0;
+
+		reg_pc		 <= io_get_inst_bits_pc;
+
+		reg_inst 		<= io_get_inst_bits_inst;
+		reg_dest_addr	<= dest_addr;
+		reg_dest_is_reg	<= dest_is_reg;
+
+		reg_csr_addr	<= csr_addr;
+		reg_csr_data 	<= io_csr_rd_csr_data;//Mux(opType === Op_type.system,io.csr_rd.csr_data,0.U)
+		reg_is_pre		<= io_get_inst_bits_is_pre;
+	end 
+end 
 endmodule
