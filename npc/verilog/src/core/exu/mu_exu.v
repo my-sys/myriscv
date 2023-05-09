@@ -210,41 +210,52 @@ module DIV(
   wire [131:0] _temp_result_T = rem_q_lshift_1 + {{1'd0}, _temp_result_T_7};
   wire [131:0] temp_result = !reg_ready ? _temp_result_T : 132'h0;
 
-  wire  rem_is_0 = reg_rem == 65'h0; // @[mu_exu.scala 158:33]
-  wire  rem_is_neg_div = reg_rem == neg_divisor; // @[mu_exu.scala 159:39]
-  wire  rem_is_div = reg_rem == reg_divisor; // @[mu_exu.scala 160:39]
-  wire  is_need_correct = (!reg_ready) & ((reg_rem[64] ^ reg_dividend[65]) & ~rem_is_0 | rem_is_neg_div | rem_is_div); // @[mu_exu.scala 161:34]
-  reg  reg_dest_is_w; // @[mu_exu.scala 164:42]
+  wire  rem_is_0 = reg_rem == 65'h0;
+  wire  rem_is_neg_div = reg_rem == neg_divisor;
+  wire  rem_is_div = reg_rem == reg_divisor;
+  wire  is_need_correct = (!reg_ready) & ((reg_rem[64] ^ reg_dividend[65]) & ~rem_is_0 | rem_is_neg_div | rem_is_div);
+  reg  reg_dest_is_w;
   wire [65:0] _reg_dividend_T = {dividend,1'h0}; // @[Cat.scala 33:92]
+
   wire [64:0] _reg_rem_T_4 = rem + divisor; // @[mu_exu.scala 181:92]
+
   wire [64:0] _reg_rem_T_5 = ~divisor; // @[mu_exu.scala 181:106]
   wire [64:0] _reg_rem_T_7 = rem + _reg_rem_T_5; // @[mu_exu.scala 181:104]
   wire [64:0] _reg_rem_T_9 = _reg_rem_T_7 + 65'h1; // @[mu_exu.scala 181:115]
-  wire [65:0] _GEN_1 = io_valid ? _reg_dividend_T : 66'h0; // @[mu_exu.scala 178:36 169:41 180:49]
-  wire  _GEN_4 = io_valid ? 1'h0 : 1'h1; // @[mu_exu.scala 178:36 172:49 183:57]
+
+  wire [65:0] _q_valid = io_valid ? _reg_dividend_T : 66'h0; // @[mu_exu.scala 178:36 169:41 180:49]
+  wire  _ready_valid = io_valid ? 1'h0 : 1'h1; // @[mu_exu.scala 178:36 172:49 183:57]
   wire [6:0] _reg_cnt_T_1 = reg_cnt + 7'h1; // @[mu_exu.scala 189:68]
-  wire [66:0] _reg_q_T_5 = {reg_q, 1'h0}; // @[mu_exu.scala 196:82]
-  wire [66:0] _reg_q_T_7 = _reg_q_T_5 + 67'h1; // @[mu_exu.scala 196:88]
-  wire [66:0] _reg_q_T_11 = _temp_result_T_4 ? _reg_q_T_7 : _reg_q_T_7; // @[mu_exu.scala 196:47]
-  wire [64:0] _reg_rem_T_13 = reg_rem + reg_divisor; // @[mu_exu.scala 212:68]
-  wire [65:0] _reg_q_T_13 = reg_q - 66'h1; // @[mu_exu.scala 213:66]
-  wire [64:0] _reg_rem_T_15 = reg_rem + neg_divisor; // @[mu_exu.scala 215:68]
-  wire [65:0] _reg_q_T_15 = reg_q + 66'h1; // @[mu_exu.scala 216:66]
-  wire [64:0] _GEN_7 = _temp_result_T_4 ? _reg_rem_T_13 : _reg_rem_T_15; // @[mu_exu.scala 211:74 212:57 215:57]
-  wire [65:0] _GEN_8 = _temp_result_T_4 ? _reg_q_T_13 : _reg_q_T_15; // @[mu_exu.scala 211:74 213:57 216:57]
-  wire [64:0] _GEN_9 = is_need_correct ? _GEN_7 : reg_rem; // @[mu_exu.scala 145:42 210:54]
-  wire [65:0] _GEN_10 = is_need_correct ? _GEN_8 : reg_q; // @[mu_exu.scala 146:50 210:54]
-  wire [65:0] _GEN_17 = 2'h3 == reg_state ? _GEN_10 : reg_q; // @[mu_exu.scala 166:26 146:50]
+
+  wire [66:0] _reg_q_T_5 = {reg_q, 1'h1}; //(reg_q<<1.U)+1.U)
+  wire [65:0] _reg_q_T_13 = reg_q - 66'h1;
+  wire [65:0] _reg_q_T_15 = reg_q + 66'h1;
+  wire [65:0] _GEN_8 = _temp_result_T_4 ? _reg_q_T_13 : _reg_q_T_15;
+  wire [65:0] _q_correct = is_need_correct ? _GEN_8 : reg_q;
+  wire [65:0] _q_state3 = 2'h3 == reg_state ? _q_correct : reg_q;
+  wire [66:0] _q_state2 = 2'h2 == reg_state ? _reg_q_T_5 : {{1'd0}, _q_state3};
+  wire [66:0] _q_state1 = 2'h1 == reg_state ? {{1'd0}, temp_result[65:0]} : _q_state2;
+  wire [66:0] _q_state0 = 2'h0 == reg_state ? {{1'd0}, _q_valid} : _q_state1;
+  wire [66:0] _q_reset = reset ? 67'h0 : _q_state0;
+  wire [66:0] _q_reset = reset ? 67'h0 : _q_state0;
+
+  wire [64:0] _reg_rem_T_13 = reg_rem + reg_divisor;
+  wire [64:0] _reg_rem_T_15 = reg_rem + neg_divisor;
+  wire [64:0] _GEN_7 = _temp_result_T_4 ? _reg_rem_T_13 : _reg_rem_T_15;
+  wire [64:0] _GEN_9 = is_need_correct ? _GEN_7 : reg_rem;
+
+  wire  _ready_state3 = 2'h3 == reg_state | reg_ready; // @[mu_exu.scala 166:26 154:42]
+
+ // @[mu_exu.scala 166:26 146:50]
   wire [64:0] _GEN_18 = 2'h3 == reg_state ? _GEN_9 : reg_rem; // @[mu_exu.scala 166:26 145:42]
-  wire  _GEN_19 = 2'h3 == reg_state | reg_ready; // @[mu_exu.scala 166:26 154:42]
+
   wire [1:0] _GEN_21 = 2'h3 == reg_state ? 2'h0 : reg_state; // @[mu_exu.scala 166:26 151:42]
   wire [6:0] _GEN_22 = 2'h3 == reg_state ? 7'h0 : reg_cnt; // @[mu_exu.scala 166:26 152:50]
-  wire [66:0] _GEN_23 = 2'h2 == reg_state ? _reg_q_T_11 : {{1'd0}, _GEN_17}; // @[mu_exu.scala 166:26 196:41]
-  wire  _GEN_25 = 2'h2 == reg_state ? reg_ready : _GEN_19; // @[mu_exu.scala 166:26 198:41]
-  wire [66:0] _GEN_30 = 2'h1 == reg_state ? {{1'd0}, temp_result[65:0]} : _GEN_23; // @[mu_exu.scala 166:26 190:41]
-  wire  _GEN_33 = 2'h1 == reg_state ? reg_ready : _GEN_25; // @[mu_exu.scala 166:26 193:41]
-  wire  _GEN_39 = 2'h0 == reg_state ? _GEN_4 : _GEN_33; // @[mu_exu.scala 166:26]
-  wire [66:0] _GEN_41 = 2'h0 == reg_state ? {{1'd0}, _GEN_1} : _GEN_30; // @[mu_exu.scala 166:26]
+
+  wire  _ready_state2 = 2'h2 == reg_state ? reg_ready : _ready_state3; // @[mu_exu.scala 166:26 198:41]
+  wire  _ready_state1 = 2'h1 == reg_state ? reg_ready : _ready_state2; // @[mu_exu.scala 166:26 193:41]
+  wire  _ready_state0 = 2'h0 == reg_state ? _ready_valid : _ready_state1; // @[mu_exu.scala 166:26]
+
   wire  reg_is_32 = reg_exuType[0]; // @[mu_exu.scala 226:46]
   wire  reg_is_rem = reg_exuType[3]; // @[mu_exu.scala 227:46]
   wire [31:0] _rem_adjust_T_2 = reg_rem[31] ? 32'hffffffff : 32'h0; // @[Bitwise.scala 77:12]
@@ -253,7 +264,7 @@ module DIV(
   wire [31:0] _q_adjust_T_2 = reg_q[31] ? 32'hffffffff : 32'h0; // @[Bitwise.scala 77:12]
   wire [63:0] _q_adjust_T_4 = {_q_adjust_T_2,reg_q[31:0]}; // @[Cat.scala 33:92]
   wire [63:0] q_adjust = reg_is_32 ? _q_adjust_T_4 : reg_q[63:0]; // @[mu_exu.scala 229:38]
-  wire [66:0] _GEN_45 = reset ? 67'h0 : _GEN_41; // @[mu_exu.scala 146:{50,50}]
+
   assign io_dest_data = reg_is_rem ? rem_adjust : q_adjust; // @[mu_exu.scala 230:39]
   assign io_dest_is_w = reg_dest_is_w; // @[mu_exu.scala 231:33]
   assign io_ready = reg_ready; // @[mu_exu.scala 232:41]
@@ -297,7 +308,7 @@ module DIV(
     end else if (!(2'h2 == reg_state)) begin // @[mu_exu.scala 166:26]
       reg_rem <= _GEN_18;
     end
-    reg_q <= _GEN_45[65:0]; // @[mu_exu.scala 146:{50,50}]
+    reg_q <= _q_reset[65:0]; // @[mu_exu.scala 146:{50,50}]
     if (reset) begin // @[mu_exu.scala 151:42]
       reg_state <= 2'h0; // @[mu_exu.scala 151:42]
     end else if (2'h0 == reg_state) begin // @[mu_exu.scala 166:26]
@@ -333,7 +344,7 @@ module DIV(
         reg_exuType <= 7'h0; // @[mu_exu.scala 173:49]
       end
     end
-    reg_ready <= reset | _GEN_39; // @[mu_exu.scala 154:{42,42}]
+    reg_ready <= reset | _ready_state0; // @[mu_exu.scala 154:{42,42}]
     if (reset) begin // @[mu_exu.scala 164:42]
       reg_dest_is_w <= 1'h0; // @[mu_exu.scala 164:42]
     end else if (2'h0 == reg_state) begin // @[mu_exu.scala 166:26]
