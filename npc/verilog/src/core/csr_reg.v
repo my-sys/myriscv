@@ -47,12 +47,13 @@ module CsrRegCtrl(
   reg [63:0] reg_mtval; // @[regsfile.scala 72:34]
   reg [63:0] reg_mcycle; // @[regsfile.scala 74:34]
   reg [63:0] reg_minstret; // @[regsfile.scala 75:35]
-  wire [63:0] _reg_mstatus_T = reg_mstatus & 64'hffffffffffffff77; // @[regsfile.scala 87:45]
-  wire [63:0] _reg_mstatus_T_2 = reg_mstatus[3] ? 64'h1880 : 64'h1800; // @[regsfile.scala 87:78]
-  wire [63:0] _reg_mstatus_T_3 = _reg_mstatus_T | _reg_mstatus_T_2; // @[regsfile.scala 87:72]
-  wire [4:0] _reg_mcause_T = io_in_time_irq ? 5'h7 : 5'h3; // @[regsfile.scala 90:73]
-  wire [63:0] _reg_mcause_T_1 = {59'h400000000000000,_reg_mcause_T}; // @[Cat.scala 33:92]
-  wire  _reg_mepc_T_1 = io_in_csr_addr == 12'h341; // @[regsfile.scala 95:63]
+  wire [63:0] _reg_mstatus_T = reg_mstatus & 64'hffffffffffffff77;
+  wire [63:0] _reg_mstatus_T_2 = reg_mstatus[3] ? 64'h1880 : 64'h1800;
+  wire [63:0] _reg_mstatus_T_3 = _reg_mstatus_T | _reg_mstatus_T_2;
+
+  wire [4:0] _reg_mcause_T = io_in_time_irq ? 5'h7 : 5'h3;
+  wire [63:0] _reg_mcause_T_1 = {59'h400000000000000,_reg_mcause_T};
+  wire  _reg_mepc_T_1 = io_in_csr_addr == 12'h341;
   wire [63:0] _reg_mepc_T_2 = io_in_csr_addr == 12'h341 ? io_in_csr_data : reg_mepc; // @[regsfile.scala 95:47]
   wire [63:0] _reg_mcause_T_3 = io_in_csr_addr == 12'h342 ? io_in_csr_data : reg_mcause; // @[regsfile.scala 96:47]
   wire [63:0] _reg_mtval_T_1 = io_in_csr_addr == 12'h343 ? io_in_csr_data : reg_mtval; // @[regsfile.scala 97:47]
@@ -60,16 +61,17 @@ module CsrRegCtrl(
   wire [63:0] _reg_mstatus_T_9 = io_in_csr_addr == 12'h300 ? io_in_csr_data : reg_mstatus; // @[regsfile.scala 98:43]
   wire  _reg_mie_T = io_in_csr_addr == 12'h304; // @[regsfile.scala 104:63]
   wire  _reg_mtvec_T = io_in_csr_addr == 12'h305; // @[regsfile.scala 105:63]
+
   wire [63:0] _reg_mcycle_T_2 = reg_mcycle + 64'h1; // @[regsfile.scala 115:112]
   wire [63:0] _reg_minstret_T_2 = reg_minstret + 64'h1; // @[regsfile.scala 116:125]
-  wire [63:0] _reg_minstret_T_3 = io_in_commit ? _reg_minstret_T_2 : reg_minstret; // @[regsfile.scala 116:98]
-  wire [63:0] _csr_rdata_T_9 = 12'h300 == io_r_csr_raddr ? reg_mstatus : 64'h0; // @[Mux.scala 81:58]
-  wire [63:0] _csr_rdata_T_11 = 12'h301 == io_r_csr_raddr ? 64'h0 : _csr_rdata_T_9; // @[Mux.scala 81:58]
-  wire [63:0] _csr_rdata_T_13 = 12'h302 == io_r_csr_raddr ? 64'h0 : _csr_rdata_T_11; // @[Mux.scala 81:58]
-  wire [63:0] _csr_rdata_T_15 = 12'h303 == io_r_csr_raddr ? 64'h0 : _csr_rdata_T_13; // @[Mux.scala 81:58]
-  wire [63:0] _csr_rdata_T_17 = 12'h304 == io_r_csr_raddr ? reg_mie : _csr_rdata_T_15; // @[Mux.scala 81:58]
-  wire [63:0] _csr_rdata_T_19 = 12'h305 == io_r_csr_raddr ? reg_mtvec : _csr_rdata_T_17; // @[Mux.scala 81:58]
-  wire [63:0] _csr_rdata_T_21 = 12'h306 == io_r_csr_raddr ? 64'h0 : _csr_rdata_T_19; // @[Mux.scala 81:58]
+  wire [63:0] _reg_minstret_T_3 = io_in_commit ? _reg_minstret_T_2 : reg_minstret;
+  wire [63:0] _csr_rdata_T_9 = 12'h300 == io_r_csr_raddr ? reg_mstatus : 64'h0;
+  wire [63:0] _csr_rdata_T_11 = 12'h301 == io_r_csr_raddr ? 64'h0 : _csr_rdata_T_9;
+  wire [63:0] _csr_rdata_T_13 = 12'h302 == io_r_csr_raddr ? 64'h0 : _csr_rdata_T_11;
+  wire [63:0] _csr_rdata_T_15 = 12'h303 == io_r_csr_raddr ? 64'h0 : _csr_rdata_T_13;
+  wire [63:0] _csr_rdata_T_17 = 12'h304 == io_r_csr_raddr ? reg_mie : _csr_rdata_T_15;
+  wire [63:0] _csr_rdata_T_19 = 12'h305 == io_r_csr_raddr ? reg_mtvec : _csr_rdata_T_17;
+  wire [63:0] _csr_rdata_T_21 = 12'h306 == io_r_csr_raddr ? 64'h0 : _csr_rdata_T_19;
   wire [63:0] _csr_rdata_T_23 = 12'h340 == io_r_csr_raddr ? reg_mscratch : _csr_rdata_T_21; // @[Mux.scala 81:58]
   wire [63:0] _csr_rdata_T_25 = 12'h341 == io_r_csr_raddr ? reg_mepc : _csr_rdata_T_23; // @[Mux.scala 81:58]
   wire [63:0] _csr_rdata_T_27 = 12'h342 == io_r_csr_raddr ? reg_mcause : _csr_rdata_T_25; // @[Mux.scala 81:58]

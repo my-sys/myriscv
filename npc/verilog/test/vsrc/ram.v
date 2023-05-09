@@ -20,11 +20,12 @@ module RAMCtrl(
     input [63:0]    wmask,
     input           wen
 );
+reg [63:0] tem_data;
 wire [63:0] t_rdata;
 	always @(posedge clock)begin 
 		ramCtrl(raddr,t_rdata,rflag,waddr,wdata,wmask,wen);
 		tem_data <= t_rdata;
 	end
-reg [63:0] tem_data;
+
 assign rdata = tem_data;
 endmodule

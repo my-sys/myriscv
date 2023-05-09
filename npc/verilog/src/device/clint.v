@@ -15,17 +15,27 @@ module Clint(
   reg [63:0] reg_mtimecmp; // @[clint.scala 24:42]
   reg  reg_ready; // @[clint.scala 25:42]
   reg [63:0] red_rdata; // @[clint.scala 26:42]
-  wire [63:0] _reg_mtime_T_1 = reg_mtime + 64'h1; // @[clint.scala 27:32]
-  reg  reg_state; // @[clint.scala 29:32]
+
+  wire [63:0] _reg_mtime_T_1 = reg_mtime + 64'h1;
+  reg  reg_state; 
+
+	// val temp_data = MuxLookup(io.bits.addr(15,0),0.U(64.W),List(
+	// 	"h0000".U	->reg_msip,
+	// 	"h4000".U ->reg_mtimecmp,
+	// 	"hbff8".U ->reg_mtime
+	// ))
+
   wire [63:0] _temp_data_T_2 = 16'h0 == io_bits_addr[15:0] ? {{63'd0}, reg_msip} : 64'h0; // @[Mux.scala 81:58]
   wire [63:0] _temp_data_T_4 = 16'h4000 == io_bits_addr[15:0] ? reg_mtimecmp : _temp_data_T_2; // @[Mux.scala 81:58]
   wire  is_misp = io_bits_addr[15:0] == 16'h0; // @[clint.scala 35:43]
   wire  is_mtimecmp = io_bits_addr[15:0] == 16'h4000; // @[clint.scala 36:47]
   wire  _reg_msip_T_1 = is_misp ? io_bits_wdata[0] : reg_msip; // @[clint.scala 43:71]
   wire [63:0] _reg_mtimecmp_T = is_mtimecmp ? io_bits_wdata : reg_mtimecmp; // @[clint.scala 44:63]
+
   wire  _GEN_5 = io_valid | reg_state; // @[clint.scala 29:32 41:39 47:43]
   wire  _GEN_6 = io_valid | reg_ready; // @[clint.scala 41:39 25:42 48:43]
-  wire  _T_2 = io_valid & io_ready; // @[clint.scala 16:40]
+
+  wire  io_fire = io_valid & io_ready; // @[clint.scala 16:40]
   assign io_bits_rdata = red_rdata; // @[clint.scala 60:25]
   assign io_ready = reg_ready; // @[clint.scala 59:33]
   assign io_soft_irq = reg_msip; // @[clint.scala 62:25]
@@ -62,7 +72,7 @@ always @(posedge clock)begin
       reg_ready <= _GEN_6;
 	  reg_state <= _GEN_5;
     end else if (reg_state) begin // @[clint.scala 39:26]
-      if (_T_2) begin // @[clint.scala 52:38]
+      if (io_fire) begin // @[clint.scala 52:38]
         reg_ready <= 1'h0; // @[clint.scala 54:43]
 		reg_state <= 1'h0;
       end
