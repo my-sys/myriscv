@@ -105,16 +105,18 @@ class Vriscv_soc___024root final : public VerilatedModule {
         CData/*0:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__io_cache_bus_b_fire;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT__w_locked;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT__w_lockId;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT___T;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT___T_1;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT__un_w_locked;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT__bus2_w_is_valid;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT__w_chosen;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT___GEN_4;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT___GEN_5;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT__reg_r_cnt;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT__r_lockId;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT___T_4;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT___T_6;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT__un_r_locked;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT__bus2_r_is_valid;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT___GEN_10;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT__r_chosen;
-        CData/*1:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT___reg_r_cnt_T_5;
+        CData/*1:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT__r_cnt_sub_1;
         CData/*1:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT___GEN_23;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT__reg_aw_ok;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__cross_bar__DOT__reg_ar_ok;
@@ -147,10 +149,10 @@ class Vriscv_soc___024root final : public VerilatedModule {
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu_io_br_info_valid;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu_io_br_info_mispredict;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu_io_get_pre_info_valid;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mem_exu_io_valid;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mem_exu_io_bus_valid;
     };
     struct {
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mem_exu_io_valid;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mem_exu_io_bus_valid;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mem_exu_io_bus_bits_is_w;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu_io_valid;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__system_exu_io_valid;
@@ -213,10 +215,10 @@ class Vriscv_soc___024root final : public VerilatedModule {
         CData/*1:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_state;
         CData/*6:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_exuType;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_dest_is_w;
-        CData/*6:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_cnt;
-        CData/*6:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT___reg_cnt_T_1;
     };
     struct {
+        CData/*6:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT__reg_cnt;
+        CData/*6:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT___reg_cnt_T_1;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__mul__DOT___ready_0;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__execute__DOT__system_exu__DOT__is_ret;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__decode__DOT__reg_valid;
@@ -279,10 +281,10 @@ class Vriscv_soc___024root final : public VerilatedModule {
         VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__dividend;
         VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT___divisor_T;
         VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__divisor;
-        VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__rem;
-        VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_divisor;
     };
     struct {
+        VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__rem;
+        VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_divisor;
         VlWide<3>/*65:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_dividend;
         VlWide<3>/*64:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_rem;
         VlWide<3>/*65:0*/ riscv_soc__DOT__core__DOT__execute__DOT__mu_exu__DOT__div__DOT__reg_q;
@@ -345,10 +347,10 @@ class Vriscv_soc___024root final : public VerilatedModule {
         QData/*63:0*/ riscv_soc__DOT__core__DOT__d_cache__DOT__temp_addr;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__br_predictor_io_pre_next_pc;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__reg_pc_0;
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__reg_next_pc;
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT___reg_pc_0_T_2;
     };
     struct {
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT__reg_next_pc;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__fetch__DOT___reg_pc_0_T_2;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu_io_br_info_target_next_pc;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu_io_op_data1;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__execute__DOT__alu_exu_io_op_data2;
@@ -411,10 +413,10 @@ class Vriscv_soc___024root final : public VerilatedModule {
         QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT___reg_mstatus_T_9;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT___reg_mcycle_T_2;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__commit__DOT__csr_reg__DOT___reg_minstret_T_3;
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT__reg_mtime;
-        QData/*63:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT__reg_mtimecmp;
     };
     struct {
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT__reg_mtime;
+        QData/*63:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT__reg_mtimecmp;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT__red_rdata;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT___reg_mtime_T_1;
         QData/*63:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT___reg_mtimecmp_T;
