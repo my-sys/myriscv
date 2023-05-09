@@ -146,42 +146,39 @@ module DIV(
   output        io_dest_is_w,
   output        io_ready
 );
-  wire  is_32 = io_exuType[0]; // @[mu_exu.scala 132:53]
-  wire  is_signed = ~io_exuType[2]; // @[mu_exu.scala 133:35]
-  wire [32:0] _dividend_T_2 = io_rs1_data[31] ? 33'h1ffffffff : 33'h0; // @[Bitwise.scala 77:12]
-  wire [64:0] _dividend_T_4 = {_dividend_T_2,io_rs1_data[31:0]}; // @[Cat.scala 33:92]
-  wire [64:0] _dividend_T_7 = {33'h0,io_rs1_data[31:0]}; // @[Cat.scala 33:92]
-  wire [64:0] _dividend_T_8 = is_signed ? _dividend_T_4 : _dividend_T_7; // @[mu_exu.scala 135:58]
-  wire [64:0] _dividend_T_11 = {io_rs1_data[63],io_rs1_data}; // @[Cat.scala 33:92]
-  wire [64:0] _dividend_T_13 = {1'h0,io_rs1_data}; // @[Cat.scala 33:92]
-  wire [64:0] _dividend_T_14 = is_signed ? _dividend_T_11 : _dividend_T_13; // @[mu_exu.scala 136:52]
-  wire [64:0] _dividend_T_15 = is_32 ? _dividend_T_8 : _dividend_T_14; // @[mu_exu.scala 135:48]
-  wire [64:0] dividend = io_valid ? _dividend_T_15 : 65'h0; // @[mu_exu.scala 135:38]
-  wire [32:0] _divisor_T_2 = io_rs2_data[31] ? 33'h1ffffffff : 33'h0; // @[Bitwise.scala 77:12]
-  wire [64:0] _divisor_T_4 = {_divisor_T_2,io_rs2_data[31:0]}; // @[Cat.scala 33:92]
-  wire [64:0] _divisor_T_7 = {33'h0,io_rs2_data[31:0]}; // @[Cat.scala 33:92]
-  wire [64:0] _divisor_T_8 = is_signed ? _divisor_T_4 : _divisor_T_7; // @[mu_exu.scala 138:66]
-  wire [64:0] _divisor_T_11 = {io_rs2_data[63],io_rs2_data}; // @[Cat.scala 33:92]
-  wire [64:0] _divisor_T_13 = {1'h0,io_rs2_data}; // @[Cat.scala 33:92]
-  wire [64:0] _divisor_T_14 = is_signed ? _divisor_T_11 : _divisor_T_13; // @[mu_exu.scala 139:52]
-  wire [64:0] _divisor_T_15 = is_32 ? _divisor_T_8 : _divisor_T_14; // @[mu_exu.scala 138:56]
-  wire [64:0] divisor = io_valid ? _divisor_T_15 : 65'h0; // @[mu_exu.scala 138:46]
-  wire [64:0] _rem_T_2 = io_rs1_data[31] ? 65'h1ffffffffffffffff : 65'h0; // @[Bitwise.scala 77:12]
-  wire [64:0] _rem_T_3 = is_signed ? _rem_T_2 : 65'h0; // @[mu_exu.scala 141:66]
-  wire [64:0] _rem_T_6 = io_rs1_data[63] ? 65'h1ffffffffffffffff : 65'h0; // @[Bitwise.scala 77:12]
-  wire [64:0] _rem_T_7 = is_signed ? _rem_T_6 : 65'h0; // @[mu_exu.scala 141:107]
-  wire [64:0] _rem_T_8 = is_32 ? _rem_T_3 : _rem_T_7; // @[mu_exu.scala 141:56]
-  wire [64:0] rem = io_valid ? _rem_T_8 : 65'h0; // @[mu_exu.scala 141:46]
-  reg [64:0] reg_divisor; // @[mu_exu.scala 143:42]
-  reg [65:0] reg_dividend; // @[mu_exu.scala 144:42]
-  reg [64:0] reg_rem; // @[mu_exu.scala 145:42]
-  reg [65:0] reg_q; // @[mu_exu.scala 146:50]
-  wire [64:0] _neg_divisor_T = ~reg_divisor; // @[mu_exu.scala 149:36]
-  wire [64:0] neg_divisor = _neg_divisor_T + 65'h1; // @[mu_exu.scala 149:50]
+  wire  is_32 = io_exuType[0];
+  wire  is_signed = ~io_exuType[2];
+  wire [32:0] _dividend_T_11 = io_rs1_data[31] ? 33'h1ffffffff : 33'h0;
+  wire [64:0] _dividend_T_1 = is_signed ?{_dividend_T_11,io_rs1_data[31:0]} :{33'h0,io_rs1_data[31:0]};
+  wire [64:0] _dividend_T_2 = is_signed ?{io_rs1_data[63],io_rs1_data}:{1'b0,io_rs1_data};
+  wire [64:0] _dividend_T_1_2 = is_32? _dividend_T_1: _dividend_T_2;
+
+  wire [32:0] _divisor_T_11 = io_rs2_data[31] ? 33'h1ffffffff : 33'h0;
+  wire [64:0] _divisor_T_1 = is_signed ?{_divisor_T_11,io_rs2_data[31:0]} :{33'h0,io_rs2_data[31:0]};
+  wire [64:0] _divisor_T_2 = is_signed ?{io_rs2_data[63],io_rs2_data}:{1'b0,io_rs2_data};
+  wire [64:0] _divisor_T_1_2 = is_32? _divisor_T_1: _divisor_T_2;
+
+  wire [64:0] _rem_T_11 = io_rs1_data[31] ? 65'h1ffffffffffffffff : 65'h0;
+  wire [64:0] _rem_T_22 = io_rs1_data[63] ? 65'h1ffffffffffffffff : 65'h0;
+  wire [64:0] _rem_T_1  = is_signed? _rem_T_11: 65'h0;
+  wire [64:0] _rem_T_2  = is_signed? _rem_T_22: 65'h0;
+  wire [64:0] _rem_T_1_2 = is_32?_rem_T_1:_rem_T_2;
+
+
+  wire [64:0] dividend = io_valid ? _dividend_T_1_2 : 65'h0;
+  wire [64:0] divisor = io_valid ? _divisor_T_1_2 : 65'h0;
+  wire [64:0] rem = io_valid ? _rem_T_1_2 : 65'h0;
+  reg [64:0] reg_divisor;
+  reg [65:0] reg_dividend; 
+  reg [64:0] reg_rem;
+  reg [65:0] reg_q;
+  wire [64:0] neg_divisor = (~reg_divisor) + 65'h1; // @[mu_exu.scala 149:50]
   reg [1:0] reg_state; // @[mu_exu.scala 151:42]
   reg [6:0] reg_cnt; // @[mu_exu.scala 152:50]
   reg [6:0] reg_exuType; // @[mu_exu.scala 153:42]
   reg  reg_ready; // @[mu_exu.scala 154:42]
+
+
   wire [130:0] _temp_result_T = {reg_rem,reg_q}; // @[Cat.scala 33:92]
   wire [131:0] _temp_result_T_1 = {_temp_result_T, 1'h0}; // @[mu_exu.scala 155:68]
   wire  _temp_result_T_4 = reg_rem[64] ^ reg_divisor[64]; // @[mu_exu.scala 155:90]
@@ -190,141 +187,85 @@ module DIV(
   wire [130:0] _temp_result_T_7 = reg_rem[64] ^ reg_divisor[64] ? _temp_result_T_5 : _temp_result_T_6; // @[mu_exu.scala 155:78]
   wire [131:0] _GEN_44 = {{1'd0}, _temp_result_T_7}; // @[mu_exu.scala 155:74]
   wire [131:0] _temp_result_T_9 = _temp_result_T_1 + _GEN_44; // @[mu_exu.scala 155:74]
+
   wire [131:0] temp_result = !reg_ready ? _temp_result_T_9 : 132'h0; // @[mu_exu.scala 155:38]
   wire  rem_is_0 = reg_rem == 65'h0; // @[mu_exu.scala 158:33]
   wire  rem_is_neg_div = reg_rem == neg_divisor; // @[mu_exu.scala 159:39]
   wire  rem_is_div = reg_rem == reg_divisor; // @[mu_exu.scala 160:39]
   wire  is_need_correct = (!reg_ready) & ((reg_rem[64] ^ reg_dividend[65]) & ~rem_is_0 | rem_is_neg_div | rem_is_div); // @[mu_exu.scala 161:34]
   reg  reg_dest_is_w; // @[mu_exu.scala 164:42]
-  wire [65:0] _reg_dividend_T = {dividend,1'h0}; // @[Cat.scala 33:92]
-  wire [64:0] _reg_rem_T_4 = rem + divisor; // @[mu_exu.scala 181:92]
-  wire [64:0] _reg_rem_T_5 = ~divisor; // @[mu_exu.scala 181:106]
-  wire [64:0] _reg_rem_T_7 = rem + _reg_rem_T_5; // @[mu_exu.scala 181:104]
-  wire [64:0] _reg_rem_T_9 = _reg_rem_T_7 + 65'h1; // @[mu_exu.scala 181:115]
-  wire [65:0] _GEN_1 = io_valid ? _reg_dividend_T : 66'h0; // @[mu_exu.scala 178:36 169:41 180:49]
-  wire  _GEN_4 = io_valid ? 1'h0 : 1'h1; // @[mu_exu.scala 178:36 172:49 183:57]
-  wire [6:0] _reg_cnt_T_1 = reg_cnt + 7'h1; // @[mu_exu.scala 189:68]
-  wire [66:0] _reg_q_T_5 = {reg_q, 1'h0}; // @[mu_exu.scala 196:82]
-  wire [66:0] _reg_q_T_7 = _reg_q_T_5 + 67'h1; // @[mu_exu.scala 196:88]
-  wire [66:0] _reg_q_T_11 = _temp_result_T_4 ? _reg_q_T_7 : _reg_q_T_7; // @[mu_exu.scala 196:47]
-  wire [64:0] _reg_rem_T_13 = reg_rem + reg_divisor; // @[mu_exu.scala 212:68]
-  wire [65:0] _reg_q_T_13 = reg_q - 66'h1; // @[mu_exu.scala 213:66]
-  wire [64:0] _reg_rem_T_15 = reg_rem + neg_divisor; // @[mu_exu.scala 215:68]
-  wire [65:0] _reg_q_T_15 = reg_q + 66'h1; // @[mu_exu.scala 216:66]
-  wire [64:0] _GEN_7 = _temp_result_T_4 ? _reg_rem_T_13 : _reg_rem_T_15; // @[mu_exu.scala 211:74 212:57 215:57]
-  wire [65:0] _GEN_8 = _temp_result_T_4 ? _reg_q_T_13 : _reg_q_T_15; // @[mu_exu.scala 211:74 213:57 216:57]
-  wire [64:0] _GEN_9 = is_need_correct ? _GEN_7 : reg_rem; // @[mu_exu.scala 145:42 210:54]
-  wire [65:0] _GEN_10 = is_need_correct ? _GEN_8 : reg_q; // @[mu_exu.scala 146:50 210:54]
-  wire [65:0] _GEN_17 = 2'h3 == reg_state ? _GEN_10 : reg_q; // @[mu_exu.scala 166:26 146:50]
-  wire [64:0] _GEN_18 = 2'h3 == reg_state ? _GEN_9 : reg_rem; // @[mu_exu.scala 166:26 145:42]
-  wire  _GEN_19 = 2'h3 == reg_state | reg_ready; // @[mu_exu.scala 166:26 154:42]
-  wire [1:0] _GEN_21 = 2'h3 == reg_state ? 2'h0 : reg_state; // @[mu_exu.scala 166:26 151:42]
-  wire [6:0] _GEN_22 = 2'h3 == reg_state ? 7'h0 : reg_cnt; // @[mu_exu.scala 166:26 152:50]
-  wire [66:0] _GEN_23 = 2'h2 == reg_state ? _reg_q_T_11 : {{1'd0}, _GEN_17}; // @[mu_exu.scala 166:26 196:41]
-  wire  _GEN_25 = 2'h2 == reg_state ? reg_ready : _GEN_19; // @[mu_exu.scala 166:26 198:41]
-  wire [66:0] _GEN_30 = 2'h1 == reg_state ? {{1'd0}, temp_result[65:0]} : _GEN_23; // @[mu_exu.scala 166:26 190:41]
-  wire  _GEN_33 = 2'h1 == reg_state ? reg_ready : _GEN_25; // @[mu_exu.scala 166:26 193:41]
-  wire  _GEN_39 = 2'h0 == reg_state ? _GEN_4 : _GEN_33; // @[mu_exu.scala 166:26]
-  wire [66:0] _GEN_41 = 2'h0 == reg_state ? {{1'd0}, _GEN_1} : _GEN_30; // @[mu_exu.scala 166:26]
+
   wire  reg_is_32 = reg_exuType[0]; // @[mu_exu.scala 226:46]
   wire  reg_is_rem = reg_exuType[3]; // @[mu_exu.scala 227:46]
+
   wire [31:0] _rem_adjust_T_2 = reg_rem[31] ? 32'hffffffff : 32'h0; // @[Bitwise.scala 77:12]
   wire [63:0] _rem_adjust_T_4 = {_rem_adjust_T_2,reg_rem[31:0]}; // @[Cat.scala 33:92]
   wire [63:0] rem_adjust = reg_is_32 ? _rem_adjust_T_4 : reg_rem[63:0]; // @[mu_exu.scala 228:38]
   wire [31:0] _q_adjust_T_2 = reg_q[31] ? 32'hffffffff : 32'h0; // @[Bitwise.scala 77:12]
   wire [63:0] _q_adjust_T_4 = {_q_adjust_T_2,reg_q[31:0]}; // @[Cat.scala 33:92]
   wire [63:0] q_adjust = reg_is_32 ? _q_adjust_T_4 : reg_q[63:0]; // @[mu_exu.scala 229:38]
-  wire [66:0] _GEN_45 = reset ? 67'h0 : _GEN_41; // @[mu_exu.scala 146:{50,50}]
   assign io_dest_data = reg_is_rem ? rem_adjust : q_adjust; // @[mu_exu.scala 230:39]
   assign io_dest_is_w = reg_dest_is_w; // @[mu_exu.scala 231:33]
   assign io_ready = reg_ready; // @[mu_exu.scala 232:41]
-  always @(posedge clock) begin
-    if (reset) begin // @[mu_exu.scala 143:42]
-      reg_divisor <= 65'h0; // @[mu_exu.scala 143:42]
-    end else if (2'h0 == reg_state) begin // @[mu_exu.scala 166:26]
-      if (io_valid) begin // @[mu_exu.scala 178:36]
-        if (io_valid) begin // @[mu_exu.scala 138:46]
-          reg_divisor <= _divisor_T_15;
-        end else begin
-          reg_divisor <= 65'h0;
-        end
-      end else begin
-        reg_divisor <= 65'h0; // @[mu_exu.scala 168:41]
-      end
-    end
-    if (reset) begin // @[mu_exu.scala 144:42]
-      reg_dividend <= 66'h0; // @[mu_exu.scala 144:42]
-    end else if (2'h0 == reg_state) begin // @[mu_exu.scala 166:26]
-      if (io_valid) begin // @[mu_exu.scala 178:36]
-        reg_dividend <= _reg_dividend_T; // @[mu_exu.scala 180:49]
-      end else begin
-        reg_dividend <= 66'h0; // @[mu_exu.scala 169:41]
-      end
-    end
-    if (reset) begin // @[mu_exu.scala 145:42]
-      reg_rem <= 65'h0; // @[mu_exu.scala 145:42]
-    end else if (2'h0 == reg_state) begin // @[mu_exu.scala 166:26]
-      if (io_valid) begin // @[mu_exu.scala 178:36]
-        if (divisor[64] ^ dividend[64]) begin // @[mu_exu.scala 181:63]
-          reg_rem <= _reg_rem_T_4;
-        end else begin
-          reg_rem <= _reg_rem_T_9;
-        end
-      end else begin
-        reg_rem <= 65'h0; // @[mu_exu.scala 170:49]
-      end
-    end else if (2'h1 == reg_state) begin // @[mu_exu.scala 166:26]
-      reg_rem <= temp_result[130:66]; // @[mu_exu.scala 191:41]
-    end else if (!(2'h2 == reg_state)) begin // @[mu_exu.scala 166:26]
-      reg_rem <= _GEN_18;
-    end
-    reg_q <= _GEN_45[65:0]; // @[mu_exu.scala 146:{50,50}]
-    if (reset) begin // @[mu_exu.scala 151:42]
-      reg_state <= 2'h0; // @[mu_exu.scala 151:42]
-    end else if (2'h0 == reg_state) begin // @[mu_exu.scala 166:26]
-      if (io_valid) begin // @[mu_exu.scala 178:36]
-        reg_state <= 2'h1; // @[mu_exu.scala 182:57]
-      end else begin
-        reg_state <= 2'h0; // @[mu_exu.scala 171:49]
-      end
-    end else if (2'h1 == reg_state) begin // @[mu_exu.scala 166:26]
-      if (reg_cnt == 7'h40) begin // @[mu_exu.scala 192:69]
-        reg_state <= 2'h2;
-      end
-    end else if (2'h2 == reg_state) begin // @[mu_exu.scala 166:26]
-      reg_state <= 2'h3; // @[mu_exu.scala 197:41]
-    end else begin
-      reg_state <= _GEN_21;
-    end
-    if (reset) begin // @[mu_exu.scala 152:50]
-      reg_cnt <= 7'h0; // @[mu_exu.scala 152:50]
-    end else if (2'h0 == reg_state) begin // @[mu_exu.scala 166:26]
-      reg_cnt <= 7'h0; // @[mu_exu.scala 176:49]
-    end else if (2'h1 == reg_state) begin // @[mu_exu.scala 166:26]
-      reg_cnt <= _reg_cnt_T_1; // @[mu_exu.scala 189:41]
-    end else if (!(2'h2 == reg_state)) begin // @[mu_exu.scala 166:26]
-      reg_cnt <= _GEN_22;
-    end
-    if (reset) begin // @[mu_exu.scala 153:42]
-      reg_exuType <= 7'h0; // @[mu_exu.scala 153:42]
-    end else if (2'h0 == reg_state) begin // @[mu_exu.scala 166:26]
-      if (io_valid) begin // @[mu_exu.scala 178:36]
-        reg_exuType <= io_exuType; // @[mu_exu.scala 184:57]
-      end else begin
-        reg_exuType <= 7'h0; // @[mu_exu.scala 173:49]
-      end
-    end
-    reg_ready <= reset | _GEN_39; // @[mu_exu.scala 154:{42,42}]
-    if (reset) begin // @[mu_exu.scala 164:42]
-      reg_dest_is_w <= 1'h0; // @[mu_exu.scala 164:42]
-    end else if (2'h0 == reg_state) begin // @[mu_exu.scala 166:26]
-      reg_dest_is_w <= 1'h0; // @[mu_exu.scala 177:41]
-    end else if (!(2'h1 == reg_state)) begin // @[mu_exu.scala 166:26]
-      if (!(2'h2 == reg_state)) begin // @[mu_exu.scala 166:26]
-        reg_dest_is_w <= 2'h3 == reg_state | reg_dest_is_w;
-      end
-    end
-  end
+
+always @(posedge clock)begin 
+	if(reset)begin 
+		reg_divisor		<= 65'h0;
+		reg_dividend 	<= 66'h0;
+		reg_rem			<= 65'h0;
+		reg_state		<= 2'h0;
+		reg_ready		<= 1'h1;
+		reg_exuType		<= 7'h0;
+		reg_q			<= 66'h0;
+		reg_cnt			<= 7'h0;
+		reg_dest_is_w	<= 1'b0;
+		reg_ready		<= 1'b1;
+	end else begin 
+		case (reg_state)
+			2'h0:begin 
+				reg_dest_is_w <= 1'b0;
+				if(io_valid)begin 
+					reg_divisor	<= divisor;
+					reg_dividend <= {dividend,1'b0};
+					reg_rem		<= (divisor[64]^dividend[64])?(rem+divisor):(rem+(~divisor)+65'h1);
+					reg_state	<= 2'h1;
+					reg_ready   <= 1'b0;
+					reg_exuType	<= io_exuType;
+					reg_q		<= {dividend,1'b0};
+					reg_cnt 	<= 7'h0;
+				end 
+			end 
+			2'h1:begin 
+				reg_cnt <= reg_cnt + 7'h1;
+				reg_q	<= temp_result[65:0];
+				reg_rem <= temp_result[130:66];
+				reg_state <= (reg_cnt == 7'h40)?2'h2:reg_state;
+				//reg_ready
+			end 
+			2'h2:begin 
+				reg_q <= {reg_q[64:0],1'b0}+66'h1;
+				reg_state <= 2'h3;
+				//reg_ready
+			end 
+			2'h3:begin 
+				if(is_need_correct)begin 
+					if(reg_rem[64]^reg_divisor[64])begin 
+						reg_rem <= reg_rem + reg_divisor;
+						reg_q 	<= reg_q - 66'h1;
+					end else begin 
+						reg_rem <= reg_rem + neg_divisor;
+						reg_q 	<= reg_q + 66'h1;
+					end 
+				end
+				reg_ready <= 1'b1;
+				reg_dest_is_w <= 1'b1;
+				reg_state  <= 2'h0;
+				reg_cnt    <= 7'h0;
+			end
+			default:;
+		endcase
+	end
+end 
 endmodule
 module MU_EXU(
   input         clock,
