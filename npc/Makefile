@@ -79,14 +79,16 @@ clean:
 
 compile:$(VSRCS) $(CSRCS) 
 	@echo "------------VERILATE--------------"
-	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) verilator_config.vlt $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
+#	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) verilator_config.vlt $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
+	verilator $(VERILATOR_FLAGS) -top $(TOPNAME) $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
 	@echo "--- BUILD ---------"
 	make -j3 -C obj_dir -f V$(TOPNAME).mk 
 #	obj_dir/V$(TOPNAME) +trace
 
 compile1:$(VSRCS) $(CSRCS) 
 	@echo "------------VERILATE--------------"
-	verilator $(VERILATOR_FLAGS) --gdb -top $(TOPNAME) verilator_config.vlt $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
+#	verilator $(VERILATOR_FLAGS) --gdb -top $(TOPNAME) verilator_config.vlt $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
+	verilator $(VERILATOR_FLAGS) --gdb -top $(TOPNAME) $^  -CFLAGS "$(CFLAGS)" -LDFLAGS "$(LDFLAGS)" -I$(abspath $(BUILD_DIR))
 	@echo "--- BUILD ---------"
 	make -j3 -C obj_dir -f V$(TOPNAME).mk 
 
