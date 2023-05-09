@@ -1134,7 +1134,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
         }
         if (vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT__reg_state) {
             if (vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT__reg_state) {
-                if (vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT___T_2) {
+                if (vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT__io_fire) {
                     vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT__reg_ready = 0U;
                     __Vdly__riscv_soc__DOT__core__DOT__clint_de__DOT__reg_state = 0U;
                 }
@@ -5200,7 +5200,7 @@ VL_INLINE_OPT void Vriscv_soc___024root___nba_sequent__TOP__0(Vriscv_soc___024ro
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__valid_next_pc 
         = ((1U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_opType)) 
            & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____VdfgTmp_hf728dcb9__0[2U]);
-    vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT___T_2 
+    vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT__io_fire 
         = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar_1_io_clint_bus_valid) 
            & (IData)(vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT__reg_ready));
     vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT___GEN_6 

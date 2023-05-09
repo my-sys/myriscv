@@ -1927,7 +1927,7 @@ VL_ATTR_COLD void Vriscv_soc___024root___stl_sequent__TOP__0(Vriscv_soc___024roo
     vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT__valid_next_pc 
         = ((1U == (IData)(vlSelf->riscv_soc__DOT__core__DOT__decode__DOT__reg_opType)) 
            & vlSelf->riscv_soc__DOT__core__DOT__execute__DOT__alu_exu__DOT____VdfgTmp_hf728dcb9__0[2U]);
-    vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT___T_2 
+    vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT__io_fire 
         = ((IData)(vlSelf->riscv_soc__DOT__core__DOT__cross_bar_1_io_clint_bus_valid) 
            & (IData)(vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT__reg_ready));
     vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT___GEN_6 
@@ -2676,7 +2676,7 @@ VL_ATTR_COLD void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vl
     vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT___reg_mtimecmp_T = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT___GEN_5 = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT___GEN_6 = VL_RAND_RESET_I(1);
-    vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT___T_2 = VL_RAND_RESET_I(1);
+    vlSelf->riscv_soc__DOT__core__DOT__clint_de__DOT__io_fire = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_raddr = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_rlen = VL_RAND_RESET_I(4);
     vlSelf->riscv_soc__DOT__axi_ram__DOT__reg_ar_ready = VL_RAND_RESET_I(1);
@@ -2690,8 +2690,8 @@ VL_ATTR_COLD void Vriscv_soc___024root___ctor_var_reset(Vriscv_soc___024root* vl
     vlSelf->riscv_soc__DOT__axi_ram__DOT__io_ram_bus_ar_fire = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__axi_ram__DOT__io_ram_bus_aw_fire = VL_RAND_RESET_I(1);
     vlSelf->riscv_soc__DOT__axi_ram__DOT__io_ram_bus_w_fire = VL_RAND_RESET_I(1);
-    vlSelf->riscv_soc__DOT__axi_ram__DOT__mem__DOT__t_rdata = VL_RAND_RESET_Q(64);
     vlSelf->riscv_soc__DOT__axi_ram__DOT__mem__DOT__tem_data = VL_RAND_RESET_Q(64);
+    vlSelf->riscv_soc__DOT__axi_ram__DOT__mem__DOT__t_rdata = VL_RAND_RESET_Q(64);
     VL_RAND_RESET_W(128, vlSelf->riscv_soc__DOT__sram0__DOT__Q);
     for (int __Vi0 = 0; __Vi0 < 64; ++__Vi0) {
         VL_RAND_RESET_W(128, vlSelf->riscv_soc__DOT__sram0__DOT__sram[__Vi0]);

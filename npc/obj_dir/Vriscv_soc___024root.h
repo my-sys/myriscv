@@ -242,7 +242,7 @@ class Vriscv_soc___024root final : public VerilatedModule {
         CData/*0:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT___reg_msip_T_1;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT___GEN_5;
         CData/*0:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT___GEN_6;
-        CData/*0:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT___T_2;
+        CData/*0:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT__io_fire;
         CData/*3:0*/ riscv_soc__DOT__axi_ram__DOT__reg_rlen;
         CData/*0:0*/ riscv_soc__DOT__axi_ram__DOT__reg_ar_ready;
         CData/*0:0*/ riscv_soc__DOT__axi_ram__DOT__reg_r_valid;
@@ -422,8 +422,8 @@ class Vriscv_soc___024root final : public VerilatedModule {
         QData/*63:0*/ riscv_soc__DOT__core__DOT__clint_de__DOT___reg_mtimecmp_T;
         QData/*63:0*/ riscv_soc__DOT__axi_ram__DOT__reg_raddr;
         QData/*63:0*/ riscv_soc__DOT__axi_ram__DOT__reg_w_addr;
-        QData/*63:0*/ riscv_soc__DOT__axi_ram__DOT__mem__DOT__t_rdata;
         QData/*63:0*/ riscv_soc__DOT__axi_ram__DOT__mem__DOT__tem_data;
+        QData/*63:0*/ riscv_soc__DOT__axi_ram__DOT__mem__DOT__t_rdata;
         VlUnpacked<QData/*63:0*/, 4> riscv_soc__DOT__core__DOT__fetch__DOT__pre_info_fifo;
         VlUnpacked<CData/*0:0*/, 4> riscv_soc__DOT__core__DOT__fetch__DOT__is_pre_fifo;
         VlUnpacked<QData/*63:0*/, 4> riscv_soc__DOT__core__DOT__fetch__DOT__ibuf__DOT__ibuf_pc;
