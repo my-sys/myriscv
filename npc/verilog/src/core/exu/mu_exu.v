@@ -1,4 +1,5 @@
 //尝试将此文件按照正常verilog编写，而不是采用chisel生成，但速度直接变慢了40S，
+//
 //两分半时间变成了3分钟,无法接受。
 //如果换一台性能更强劲的CPU，速度应该还可以提升一倍，AMD7700X。现在的烦恼也就不存在了
 module MUL(
@@ -218,12 +219,16 @@ module DIV(
   wire [65:0] _reg_dividend_T = {dividend,1'h0}; // @[Cat.scala 33:92]
 
   wire [64:0] _reg_rem_T_4 = rem + divisor; // @[mu_exu.scala 181:92]
-
   wire [64:0] _reg_rem_T_5 = ~divisor; // @[mu_exu.scala 181:106]
   wire [64:0] _reg_rem_T_7 = rem + _reg_rem_T_5; // @[mu_exu.scala 181:104]
   wire [64:0] _reg_rem_T_9 = _reg_rem_T_7 + 65'h1; // @[mu_exu.scala 181:115]
 
-  wire [65:0] _q_valid = io_valid ? _reg_dividend_T : 66'h0; // @[mu_exu.scala 178:36 169:41 180:49]
+  wire [64:0] _reg_rem_T_13 = reg_rem + reg_divisor;
+  wire [64:0] _reg_rem_T_15 = reg_rem + neg_divisor;
+  wire [64:0] _GEN_7 = _temp_result_T_4 ? _reg_rem_T_13 : _reg_rem_T_15;
+  wire [64:0] rem_correct = is_need_correct ? _GEN_7 : reg_rem;
+  wire [64:0] rem_state3 = 2'h3 == reg_state ? rem_correct : reg_rem; // @[mu_exu.scala 166:26 145:42]
+
   wire  _ready_valid = io_valid ? 1'h0 : 1'h1; // @[mu_exu.scala 178:36 172:49 183:57]
   wire [6:0] _reg_cnt_T_1 = reg_cnt + 7'h1; // @[mu_exu.scala 189:68]
 
@@ -235,39 +240,33 @@ module DIV(
   wire [65:0] _q_state3 = 2'h3 == reg_state ? _q_correct : reg_q;
   wire [66:0] _q_state2 = 2'h2 == reg_state ? _reg_q_T_5 : {{1'd0}, _q_state3};
   wire [66:0] _q_state1 = 2'h1 == reg_state ? {{1'd0}, temp_result[65:0]} : _q_state2;
+  wire [65:0] _q_valid = io_valid ? _reg_dividend_T : 66'h0;
   wire [66:0] _q_state0 = 2'h0 == reg_state ? {{1'd0}, _q_valid} : _q_state1;
   wire [66:0] _q_reset = reset ? 67'h0 : _q_state0;
   wire [66:0] _q_reset = reset ? 67'h0 : _q_state0;
 
-  wire [64:0] _reg_rem_T_13 = reg_rem + reg_divisor;
-  wire [64:0] _reg_rem_T_15 = reg_rem + neg_divisor;
-  wire [64:0] _GEN_7 = _temp_result_T_4 ? _reg_rem_T_13 : _reg_rem_T_15;
-  wire [64:0] _GEN_9 = is_need_correct ? _GEN_7 : reg_rem;
-
   wire  _ready_state3 = 2'h3 == reg_state | reg_ready; // @[mu_exu.scala 166:26 154:42]
-
- // @[mu_exu.scala 166:26 146:50]
-  wire [64:0] _GEN_18 = 2'h3 == reg_state ? _GEN_9 : reg_rem; // @[mu_exu.scala 166:26 145:42]
-
-  wire [1:0] _GEN_21 = 2'h3 == reg_state ? 2'h0 : reg_state; // @[mu_exu.scala 166:26 151:42]
-  wire [6:0] _GEN_22 = 2'h3 == reg_state ? 7'h0 : reg_cnt; // @[mu_exu.scala 166:26 152:50]
-
   wire  _ready_state2 = 2'h2 == reg_state ? reg_ready : _ready_state3; // @[mu_exu.scala 166:26 198:41]
   wire  _ready_state1 = 2'h1 == reg_state ? reg_ready : _ready_state2; // @[mu_exu.scala 166:26 193:41]
   wire  _ready_state0 = 2'h0 == reg_state ? _ready_valid : _ready_state1; // @[mu_exu.scala 166:26]
 
-  wire  reg_is_32 = reg_exuType[0]; // @[mu_exu.scala 226:46]
-  wire  reg_is_rem = reg_exuType[3]; // @[mu_exu.scala 227:46]
-  wire [31:0] _rem_adjust_T_2 = reg_rem[31] ? 32'hffffffff : 32'h0; // @[Bitwise.scala 77:12]
-  wire [63:0] _rem_adjust_T_4 = {_rem_adjust_T_2,reg_rem[31:0]}; // @[Cat.scala 33:92]
-  wire [63:0] rem_adjust = reg_is_32 ? _rem_adjust_T_4 : reg_rem[63:0]; // @[mu_exu.scala 228:38]
-  wire [31:0] _q_adjust_T_2 = reg_q[31] ? 32'hffffffff : 32'h0; // @[Bitwise.scala 77:12]
-  wire [63:0] _q_adjust_T_4 = {_q_adjust_T_2,reg_q[31:0]}; // @[Cat.scala 33:92]
-  wire [63:0] q_adjust = reg_is_32 ? _q_adjust_T_4 : reg_q[63:0]; // @[mu_exu.scala 229:38]
 
-  assign io_dest_data = reg_is_rem ? rem_adjust : q_adjust; // @[mu_exu.scala 230:39]
-  assign io_dest_is_w = reg_dest_is_w; // @[mu_exu.scala 231:33]
-  assign io_ready = reg_ready; // @[mu_exu.scala 232:41]
+
+  wire [1:0] state_state3 = 2'h3 == reg_state ? 2'h0 : reg_state; // @[mu_exu.scala 166:26 151:42]
+  wire [6:0] cnt_state3 = 2'h3 == reg_state ? 7'h0 : reg_cnt; // @[mu_exu.scala 166:26 152:50]
+
+  wire  reg_is_32 = reg_exuType[0]; 
+  wire  reg_is_rem = reg_exuType[3];
+  wire [31:0] _rem_adjust_T_2 = reg_rem[31] ? 32'hffffffff : 32'h0;
+  wire [63:0] _rem_adjust_T_4 = {_rem_adjust_T_2,reg_rem[31:0]};
+  wire [63:0] rem_adjust = reg_is_32 ? _rem_adjust_T_4 : reg_rem[63:0];
+  wire [31:0] _q_adjust_T_2 = reg_q[31] ? 32'hffffffff : 32'h0;
+  wire [63:0] _q_adjust_T_4 = {_q_adjust_T_2,reg_q[31:0]};
+  wire [63:0] q_adjust = reg_is_32 ? _q_adjust_T_4 : reg_q[63:0];
+
+  assign io_dest_data = reg_is_rem ? rem_adjust : q_adjust;
+  assign io_dest_is_w = reg_dest_is_w;
+  assign io_ready = reg_ready;
   always @(posedge clock) begin
     if (reset) begin // @[mu_exu.scala 143:42]
       reg_divisor <= 65'h0; // @[mu_exu.scala 143:42]
@@ -306,7 +305,7 @@ module DIV(
     end else if (2'h1 == reg_state) begin // @[mu_exu.scala 166:26]
       reg_rem <= temp_result[130:66]; // @[mu_exu.scala 191:41]
     end else if (!(2'h2 == reg_state)) begin // @[mu_exu.scala 166:26]
-      reg_rem <= _GEN_18;
+      reg_rem <= rem_state3;
     end
     reg_q <= _q_reset[65:0]; // @[mu_exu.scala 146:{50,50}]
     if (reset) begin // @[mu_exu.scala 151:42]
@@ -324,7 +323,7 @@ module DIV(
     end else if (2'h2 == reg_state) begin // @[mu_exu.scala 166:26]
       reg_state <= 2'h3; // @[mu_exu.scala 197:41]
     end else begin
-      reg_state <= _GEN_21;
+      reg_state <= state_state3;
     end
     if (reset) begin // @[mu_exu.scala 152:50]
       reg_cnt <= 7'h0; // @[mu_exu.scala 152:50]
@@ -333,7 +332,7 @@ module DIV(
     end else if (2'h1 == reg_state) begin // @[mu_exu.scala 166:26]
       reg_cnt <= _reg_cnt_T_1; // @[mu_exu.scala 189:41]
     end else if (!(2'h2 == reg_state)) begin // @[mu_exu.scala 166:26]
-      reg_cnt <= _GEN_22;
+      reg_cnt <= cnt_state3;
     end
     if (reset) begin // @[mu_exu.scala 153:42]
       reg_exuType <= 7'h0; // @[mu_exu.scala 153:42]
