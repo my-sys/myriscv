@@ -153,6 +153,7 @@ void SDL_UpdateRect(SDL_Surface *s, int x, int y, int w, int h) {
   //   NDL_DrawRect(s->pixels,x,y,w,h);
   // }
   //printf("SDL_UpdateRect zz\n");
+  //NDL_DrawRect(color_buf,200,150,w,h); //
   NDL_DrawRect(color_buf,x,y,w,h);
   free(color_buf);
 }
