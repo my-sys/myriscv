@@ -59,7 +59,7 @@ void do_syscall(Context *c) {
       //printf("seek 0x%x, 0x%x, 0x%x, value = %d\n",a[1],a[2],a[3],c->gpr[10]);
     break;
     case SYS_gettimeofday:
-      c->gpr[10]=gettimeofday((struct timeval *)a[1],(struct timezone *)a[2]);
+      c->gpr[10]=gettimeofday1((struct timeval1 *)a[1],(struct timezone1 *)a[2]);
     break;
 	case SYS_execve:
       c->gpr[10]= 0;naive_uload(NULL,(const char *)a[1]);

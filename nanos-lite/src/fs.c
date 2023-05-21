@@ -93,7 +93,7 @@ int fs_close(int fd){
 }
 
 
-int gettimeofday(struct timeval *tv, struct timezone *tz)
+int gettimeofday1(struct timeval1 *tv, struct timezone1 *tz)
 {
   uint64_t us = io_read(AM_TIMER_UPTIME).us;
   tv->tv_sec = us/1000000;
