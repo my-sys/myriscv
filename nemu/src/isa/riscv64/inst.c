@@ -58,6 +58,9 @@ void ftrace(word_t next_pc, word_t pc,bool flag){
 }
 
 static int decode_exec(Decode *s) {
+#ifdef CALL_TRACE
+	s->call_trace = false;
+#endif 
   word_t dest = 0, src1 = 0, src2 = 0, csr_value = 0, csr_addr = 0;
   s->dnpc = s->snpc;
 
@@ -142,8 +145,14 @@ static int decode_exec(Decode *s) {
   INSTPAT("0000001 ????? ????? 110 ????? 01110 11", remw   , R, int32_t temp1 = src1; int32_t temp2 = src2; R(dest) = SEXT((temp1 % temp2),32));
   INSTPAT("0001000 00101 00000 000 00000 11100 11", wfi    , N, );
 
-  INSTPAT("??????? ????? ????? ??? ????? 11011 11", jal    , J, s->dnpc = s->pc + src1; R(dest) = s->pc + 4;ftrace(s->dnpc, s->pc,true));
-  INSTPAT("??????? ????? ????? 000 ????? 11001 11", jalr   , I, s->dnpc = (src1 + src2) & 0xfffffffffffffffe; R(dest) = s->pc + 4;ftrace(s->dnpc, s->pc,(s->isa.inst.val != 0x00008067)));
+#ifdef CALL_TRACE
+  INSTPAT("??????? ????? ????? ??? ????? 11011 11", jal, J, s->dnpc = s->pc + src1; R(dest) = s->pc + 4; ftrace(s->dnpc, s->pc, true);if(dest == 1){s->call_trace=true;});
+  INSTPAT("??????? ????? ????? 000 ????? 11001 11", jalr, I, s->dnpc = (src1 + src2) & 0xfffffffffffffffe; R(dest) = s->pc + 4; ftrace(s->dnpc, s->pc, (s->isa.inst.val != 0x00008067));if(dest == 1){s->call_trace=true;});
+#else
+  INSTPAT("??????? ????? ????? ??? ????? 11011 11", jal, J, s->dnpc = s->pc + src1; R(dest) = s->pc + 4; ftrace(s->dnpc, s->pc, true));
+  INSTPAT("??????? ????? ????? 000 ????? 11001 11", jalr, I, s->dnpc = (src1 + src2) & 0xfffffffffffffffe; R(dest) = s->pc + 4; ftrace(s->dnpc, s->pc, (s->isa.inst.val != 0x00008067)));
+#endif
+
   INSTPAT("0000000 00001 00000 000 00000 11100 11", ebreak , N, NEMUTRAP(s->pc, R(10))); // R(10) is $a0
   INSTPAT("??????? ????? 00000 000 00000 00011 11", fence  , N, );
   INSTPAT("0000000 00000 00000 001 00000 00011 11", fence_i, N, );

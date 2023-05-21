@@ -11,6 +11,14 @@
  */
 #define MAX_INST_TO_PRINT 10
 
+//----------------------------------------------CALL TRACE-------------------
+
+#ifdef CALL_TRACE
+static int call_number = 0;
+static uint64_t callpcbuf[16] = {0};
+
+#endif
+
 CPU_state cpu = {};
 uint64_t g_nr_guest_inst = 0;
 static uint64_t g_timer = 0; // unit: us
@@ -108,6 +116,11 @@ static void exec_once(Decode *s, vaddr_t pc) {
   disassemble(p, s->logbuf + sizeof(s->logbuf) - p,
       MUXDEF(CONFIG_ISA_x86, s->snpc, s->pc), (uint8_t *)&s->isa.inst.val, ilen);
 #endif
+
+#ifdef CALL_TARCE
+	if(s->calltrace){callpcbuf[call_number%16] = s->pc;call_number++}
+#endif
+
 //   xingk_iringbuf(s,pc);
 }
 
@@ -132,6 +145,15 @@ static void statistic() {
   Log("total guest instructions = " NUMBERIC_FMT, g_nr_guest_inst);
   if (g_timer > 0) Log("simulation frequency = " NUMBERIC_FMT " inst/s", g_nr_guest_inst * 1000000 / g_timer);
   else Log("Finish running in less than 1 us and can not calculate the simulation frequency");
+#ifdef CALL_TRACE
+  for(int i = 0; i<16; i++){
+      if((call_number % 16) == i){
+          printf("call pc:0x%lx   <------ \n",callpcbuf[i]);
+      }else{
+          printf("call pc:0x%lx\n",callpcbuf[i]);
+      }
+  }
+#endif
 }
 
 void assert_fail_msg() {
