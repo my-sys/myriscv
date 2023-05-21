@@ -3,7 +3,7 @@
 
 #include <isa.h>
 
-#define CALL_TRACE
+//#define CALL_TRACE
 
 typedef struct Decode {
   vaddr_t pc;
